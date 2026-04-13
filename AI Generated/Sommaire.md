@@ -1,17 +1,19 @@
-# Sommaire — AI Generated
+# Sommaire - AI Generated
 
 Contenu généré par Claude (sessions, conversations). Tous les fichiers ici ont `source: ai` dans leur frontmatter.
 
 ---
 
 ## Sessions
+
 Recaps de sessions de travail, organisés par projet.
 
-| Projet | Lien |
-|--------|------|
-| obsidian-vault | [[AI Generated/Sessions/obsidian-vault/]] |
+| Projet         | Lien                 |
+| -------------- | -------------------- |
+| obsidian-vault | [[2026-04-12_20-50]] |
 
 ## Conversations
+
 Synthèses de conversations générées via `/wrap`.
 
 | Date | Titre |
