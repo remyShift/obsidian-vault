@@ -1,5 +1,5 @@
 > [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto #LectureNote
+> #SoftwareCraft 
 
 # Code Smells
 

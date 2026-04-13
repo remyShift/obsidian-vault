@@ -1,5 +1,5 @@
 > [!info]- Tags
-> #SoftwareCraft #DesignPatterns #LectureNote
+> #SoftwareCraft
 
 # Design Patterns — Behavioral
 

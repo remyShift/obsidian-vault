@@ -1,5 +1,5 @@
 > [!info]- Tags
-> #SoftwareCraft #CleanCode #LectureNote
+> #SoftwareCraft
 
 # Loi de Déméter
 

@@ -1,5 +1,5 @@
 > [!info]- Tags
-> #SoftwareCraft #Tests #TDD #LectureNote
+> #SoftwareCraft #Tests #TDD
 
 # TDD Outside-In vs Inside-Out
 
