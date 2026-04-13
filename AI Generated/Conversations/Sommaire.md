@@ -8,3 +8,4 @@ Synthèses de conversations générées via `/wrap`.
 | ---------- | -------------------------------------------------------------------------- |
 | 2026-04-12 | [[AI Generated/Conversations/2026-04-12 — Préparation talk LyonCraft]] |
 | 2026-04-12 | [[AI Generated/Conversations/2026-04-12 — Restructuration Obsidian]]   |
+| 2026-04-13 | [[AI Generated/Conversations/2026-04-13 — Audit et enrichissement notes Clean Code & Craft]] |
