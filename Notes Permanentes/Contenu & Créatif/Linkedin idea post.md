@@ -15,7 +15,7 @@
 - [x] Zoom dans le nav ? Post Linkedin ? Se renseigner
 - [x] Suggestion follow twitter
 - [x] Avantage du passé en commerce pour être dev https://www.linkedin.com/posts/remy-cassagne_commercial-code-development-activity-7242803737801494529-DW3q?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
-- [ ] Apprentissage threeJS
+- [x] Apprentissage threeJS
 - [x] réfléchir en mode dev sur tout sujet en mode dev dans la vie de tout les jours
 - [x] Test tech tatoueur
 - [x] Feed Back Jonathan
@@ -28,5 +28,6 @@
 - [x] Retour vacances / nouvelle anné📅
 - [ ] [Instagram](https://www.instagram.com/reel/DRfG2jNCMaw/?igsh=MXRsb3dqOXUxempydQ==)
 - [ ] Trouver nom de branche
-- [ ] TA le wagon
+- [ ] App coréenne valide le mail pendant le signup
+- [ ] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse 
 - [x] réponse question entretien par rapport à l’ia
