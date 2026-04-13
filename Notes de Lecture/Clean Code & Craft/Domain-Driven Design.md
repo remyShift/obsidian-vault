@@ -31,6 +31,9 @@ DDD propose de **combler ce fossé** en faisant du code le reflet direct du doma
 
 ---
 
+> [!note] Notes dédiées à créer
+> Les concepts suivants auront chacun leur propre note : [[Ubiquitous Language]] `#TODO`, [[Bounded Context]] `#TODO`, [[Domain Model]] `#TODO`, [[Entity]] `#TODO`, [[Value Object]] `#TODO`, [[Aggregate]] `#TODO`, [[Repository (DDD)]] `#TODO`, [[Domain Service]] `#TODO`.
+
 ## Les deux niveaux du DDD
 
 Eric Evans distingue deux parties dans son approche :
