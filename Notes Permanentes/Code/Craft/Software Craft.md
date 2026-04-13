@@ -21,7 +21,7 @@ SoftwareCraft comprend une sélection de techniques afin de parvenir à un déve
 - [[TDD|Le TDD]],
 - [[Le BDD]],
 - [[Clean Code]],
-- Domain-Driven Design `#TODO`,
+- [[Domain-Driven Design]],
 - [[Code Legacy]],
 - [[Programmation collaborative]],
 - Techniques de Refactoring `#TODO`,
