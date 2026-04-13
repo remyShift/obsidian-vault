@@ -1,14 +1,18 @@
 > [!info]- Tags
 > #SoftwareCraft #CleanCode #Refacto 
 
-Ils existent différents patterns de refacto, en voici quelques uns :
-- [[Le Renommage]],
-- [[L'Extraction]],
-- [[L'inversion des lignes]],
-- [[Réécriture]],
-- [[Move]],
-- [[Inlining]],
+Cette note est le sommaire des techniques de refactoring disponibles. Chaque pattern est une brique — on les utilise seuls ou combinés selon ce que le code demande.
 
-**NB :** Refactorer est généralement utile pour faire émerger / avoir un design pattern.
+## Les patterns
 
-De plus on peut aussi [[Combiner les patterns]].
+- [[Le Renommage]]
+- [[L'Extraction]]
+- [[L'inversion des lignes]]
+- [[Réécriture]]
+- [[Move]]
+- [[Inlining]]
+- [[Combiner les patterns]]
+
+## Prolongement
+
+Le refactoring fait souvent émerger un besoin de structure plus large. C'est à ce moment que les [[Design Patterns]] deviennent pertinents, ils ne sont pas un point de départ mais une destination naturelle après plusieurs cycles de refacto.
