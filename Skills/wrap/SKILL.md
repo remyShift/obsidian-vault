@@ -50,9 +50,9 @@ Include only if relevant:
 - **Actions à faire** — concrete next steps with checkboxes
 - **À intégrer dans** — which permanent notes could absorb this content
 
-### Step 5 — Update the AI Generated sommaire
-- Read `/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Sommaire.md`
-- In the **Conversations** table, check if an entry for this file already exists
+### Step 5 — Update the Conversations sommaire
+- Read `/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Conversations/Sommaire.md`
+- In the table, check if an entry for this file already exists
 - If not, add a new row: `| {YYYY-MM-DD} | [[AI Generated/Conversations/{YYYY-MM-DD} — {Titre}]] |`
 - If updating an existing file, the entry should already exist — skip this step
 - Rewrite the sommaire with the updated table
