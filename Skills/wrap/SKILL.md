@@ -50,7 +50,14 @@ Include only if relevant:
 - **Actions à faire** — concrete next steps with checkboxes
 - **À intégrer dans** — which permanent notes could absorb this content
 
-### Step 5 — Confirm
+### Step 5 — Update the AI Generated sommaire
+- Read `/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Sommaire.md`
+- In the **Conversations** table, check if an entry for this file already exists
+- If not, add a new row: `| {YYYY-MM-DD} | [[AI Generated/Conversations/{YYYY-MM-DD} — {Titre}]] |`
+- If updating an existing file, the entry should already exist — skip this step
+- Rewrite the sommaire with the updated table
+
+### Step 6 — Confirm
 Tell the user whether the file was created or updated, with its exact name.
 
 ---
