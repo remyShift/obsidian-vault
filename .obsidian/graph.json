@@ -1,0 +1,156 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag:#Agilité  ",
+      "color": {
+        "a": 1,
+        "rgb": 16185499
+      }
+    },
+    {
+      "query": "tag:#Informatique  ",
+      "color": {
+        "a": 1,
+        "rgb": 10648905
+      }
+    },
+    {
+      "query": "tag:#KicksFolio  ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "tag:#SoftwareCraft  ",
+      "color": {
+        "a": 1,
+        "rgb": 16749824
+      }
+    },
+    {
+      "query": "tag:#Tests  ",
+      "color": {
+        "a": 1,
+        "rgb": 2883328
+      }
+    },
+    {
+      "query": "tag:#Veille  ",
+      "color": {
+        "a": 1,
+        "rgb": 15635700
+      }
+    },
+    {
+      "query": "tag:#Perso  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "tag:#WebDevKnowledge  ",
+      "color": {
+        "a": 1,
+        "rgb": 40447
+      }
+    },
+    {
+      "query": "tag:#CodeKnowledge  ",
+      "color": {
+        "a": 1,
+        "rgb": 11596459
+      }
+    },
+    {
+      "query": "tag:#DevTools  ",
+      "color": {
+        "a": 1,
+        "rgb": 12212826
+      }
+    },
+    {
+      "query": "tag:#NextJS  ",
+      "color": {
+        "a": 1,
+        "rgb": 0
+      }
+    },
+    {
+      "query": "tag:#React  ",
+      "color": {
+        "a": 1,
+        "rgb": 1966335
+      }
+    },
+    {
+      "query": "tag:#BugSolved  ",
+      "color": {
+        "a": 1,
+        "rgb": 4416825
+      }
+    },
+    {
+      "query": "tag:#Ruby  ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "tag:#JS  ",
+      "color": {
+        "a": 1,
+        "rgb": 15135786
+      }
+    },
+    {
+      "query": "tag:#ThreeJS  ",
+      "color": {
+        "a": 1,
+        "rgb": 8716392
+      }
+    },
+    {
+      "query": "tag:#ReactNative  ",
+      "color": {
+        "a": 1,
+        "rgb": 9756671
+      }
+    },
+    {
+      "query": "tag:#LangagesDeProgs  ",
+      "color": {
+        "a": 1,
+        "rgb": 10389760
+      }
+    },
+    {
+      "query": "tag:#Korea  ",
+      "color": {
+        "a": 1,
+        "rgb": 16252861
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -2.6,
+  "nodeSizeMultiplier": 1.12678819444444,
+  "lineSizeMultiplier": 1.01449652777778,
+  "collapse-forces": false,
+  "centerStrength": 0.221006944444444,
+  "repelStrength": 10.8368055555556,
+  "linkStrength": 0.564756944444445,
+  "linkDistance": 146,
+  "scale": 0.3655642703370181,
+  "close": true
+}

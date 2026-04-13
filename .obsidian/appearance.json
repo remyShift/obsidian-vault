@@ -1,0 +1,11 @@
+{
+  "accentColor": "#7359f8",
+  "cssTheme": "AnuPpuccin",
+  "translucency": false,
+  "nativeMenus": false,
+  "baseFontSize": 14,
+  "textFontFamily": "",
+  "enabledCssSnippets": [
+    "large"
+  ]
+}

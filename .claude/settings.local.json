@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r Sessions/obsidian-vault \"AI Generated/Sessions/obsidian-vault\")",
+      "Bash(cp \"Conversations/2026-04-12 — Préparation talk LyonCraft.md\" \"AI Generated/Conversations/\")",
+      "Bash(cp \"Conversations/2026-04-12 — Restructuration Obsidian.md\" \"AI Generated/Conversations/\")",
+      "Bash(cp \"Conversations/_template.md\" \"AI Generated/Conversations/\")"
+    ]
+  }
+}
