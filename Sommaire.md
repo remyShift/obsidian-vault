@@ -26,14 +26,29 @@ LIMIT 15
 
 ---
 
-## Notes orphelines
+## Notes orphelines (zéro inlink)
 
-Notes sans backlink (candidates à intégrer au graphe via `/link`) :
+Notes que personne ne cite (zéro backlink entrant).
+⚠️ Une note peut apparaître ici **tout en étant connectée dans la graphe** : si elle a des outlinks (elle pointe vers d'autres), la graphe la montre reliée, mais elle reste orpheline au sens "personne ne me cite". La chasse aux orphelines vise ce cas-là — c'est ce qui tue l'émergence d'un vrai graphe.
 
 ```dataview
 LIST
-FROM "" AND -"AI Generated" AND -"Sommaire"
+FROM "" AND -"AI Generated" AND -"Sommaire" AND -"Notes de Lecture/Inbox"
 WHERE length(file.inlinks) = 0
+SORT file.name ASC
+LIMIT 20
+```
+
+---
+
+## Notes totalement déconnectées
+
+Les vraies perdues : ni inlinks ni outlinks. Priorité absolue pour `/link`.
+
+```dataview
+LIST
+FROM "" AND -"AI Generated" AND -"Sommaire" AND -"Notes de Lecture/Inbox"
+WHERE length(file.inlinks) = 0 AND length(file.outlinks) = 0
 SORT file.name ASC
 LIMIT 20
 ```
