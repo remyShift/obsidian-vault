@@ -91,7 +91,7 @@ Retour sur la thèse. Ce qu'il ferait pareil, ce qu'il ferait différemment. La 
 
 ## Actions à faire
 
-- [ ] Partager les titres et messages de fond avec le mentor
+- [x] Partager les titres et messages de fond avec le mentor
 - [ ] Valider le format final (45 min ou 20 min) avec Colin
 - [ ] Commencer à rédiger le document de pré-écriture complet (méthode podcast)
 - [ ] Identifier des exemples concrets pour l'Acte 1 (lien vente → mission actuelle)

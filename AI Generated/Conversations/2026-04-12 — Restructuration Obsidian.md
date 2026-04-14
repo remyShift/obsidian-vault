@@ -39,9 +39,9 @@ Images/
 - **Protocole B** : toute conversation se termine par une synthèse écrite dans `Conversations/`, peu importe le sujet
 
 ## Ce qui reste à faire manuellement
-- [ ] Supprimer `Random Notes/` (contient encore `Todo.md`, `Work/`, `💶 Dépenses/`)
-- [ ] Supprimer `Sommaire.md`
-- [ ] Ajouter les couleurs de dossiers via le plugin Iconize
+- [x] Supprimer `Random Notes/` (contient encore `Todo.md`, `Work/`, `💶 Dépenses/`)
+- [x] Supprimer `Sommaire.md`
+- [x] Ajouter les couleurs de dossiers via le plugin Iconize
 
 ## À intégrer dans
 - Rien pour l'instant — cette note est meta, elle documente le système lui-même
