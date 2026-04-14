@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Rappel décrire le "comment" plutôt que le "quoi",
 	- Manipulation de données au travers de fonctions,

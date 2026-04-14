@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - _sous paradigme de prog l'impérative donc tout langage impératif peut faire de la POO_
 

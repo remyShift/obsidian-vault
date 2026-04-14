@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Tests 
+---
+tags: [Tests]
+---
 
 Le problème des tests unitaires est que souvent on risque d’être confronté à des dépendances qui vont venir casser nos principes FIRST.
 

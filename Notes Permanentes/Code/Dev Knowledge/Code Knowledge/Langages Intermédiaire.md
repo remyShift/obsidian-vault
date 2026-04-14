@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Langages intermédiaire : Java, C#, Python ...
 - Mélange entre compilation et interprétation : Bytecode,

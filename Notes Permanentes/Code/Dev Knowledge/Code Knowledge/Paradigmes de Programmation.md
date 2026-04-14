@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Classifications des langages de programmations selon leur caractéristiques techniques et utilisation,
 	- Permets de choisir un langage approprié selon nos besoins.

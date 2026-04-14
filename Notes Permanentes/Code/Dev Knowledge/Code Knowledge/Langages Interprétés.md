@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Langage compilé : JS, Ruby … 
 - Compilation faites ligne par ligne du code directement lors de l'exécution,

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Langages synchrones : C, Java ...
 - Les langages synchrones vont être utilisés dans des domaines précis,

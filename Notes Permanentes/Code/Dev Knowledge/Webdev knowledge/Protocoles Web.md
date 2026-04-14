@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #WebDevKnowledge 
+---
+tags: [WebDevKnowledge]
+---
 
 - Différents protocoles régissent les connections entre appareils ou à certains réseaux comme Internet, ils sont évidemment appliqué aux [[Pages Web]] pour gérer leur relation [[Organisation Client Serveur |client / serveur]].
 

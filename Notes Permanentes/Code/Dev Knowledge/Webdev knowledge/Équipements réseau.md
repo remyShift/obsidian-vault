@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #WebDevKnowledge 
+---
+tags: [WebDevKnowledge]
+---
+
 #### Répéteur :
 - amplifie les signaux du réseau pour étendre la portée d'un réseau local, transmets des données à tout le monde.
 #### Commutateur :

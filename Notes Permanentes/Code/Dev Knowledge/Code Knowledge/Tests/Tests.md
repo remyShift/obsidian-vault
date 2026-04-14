@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Tests 
+---
+tags: [Tests]
+---
 
 - Les tests visent à vérifier que chaque composant du logiciel fonctionne comme prévu, à détecter les erreurs et les bugs potentiels, et à s'assurer que les nouvelles fonctionnalités n'impactent pas négativement les fonctionnalités existantes,
 - Ils sont la vitrine de notre code et la propreté de notre code n’est pas exclu aux test —> lorsqu’on fait une review de code, arrive sur une nouvel base de code … on commence par regarder les tests car si ils sont propres et bien fait il nous servent de documentations fonctionnels sur comment le code qu’on va lire fonctionne.

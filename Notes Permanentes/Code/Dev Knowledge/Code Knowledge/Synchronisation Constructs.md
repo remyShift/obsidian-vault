@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 ==> Outils mis à disposition par un langage pour programmer volontairement en asynchrone
 

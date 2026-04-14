@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
+
 #### Introduction à la Programmation Fonctionnelle
 La programmation fonctionnelle est un paradigme de programmation qui traite le calcul comme l'évaluation de fonctions mathématiques et évite les changements d'état et les données mutables. Ce paradigme favorise l'expression des opérations en termes de fonctions, d'application de fonctions et de composition de fonctions.
 #### Caractéristiques Clés

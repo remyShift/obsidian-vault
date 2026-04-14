@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Tests 
+---
+tags: [Tests]
+---
 
 - Il existe différents types de tests, dont voici quelques-uns :
 	- [[Tests Unitaires]],

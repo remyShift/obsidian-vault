@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Tests
+---
+tags: [Tests]
+---
 
 Test est définis à la fois par son nom et ce qu’il contient —> être soigneux sur ces 2 points
 

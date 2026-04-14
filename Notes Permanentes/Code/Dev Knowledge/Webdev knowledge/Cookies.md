@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #WebDevKnowledge 
+---
+tags: [WebDevKnowledge]
+---
 
 - Un **cookie HTTP** (également appelé cookie web ou cookie de navigateur) est une donnée de petite taille envoyée par le serveur au navigateur web de l'utilisatrice ou de l'utilisateur. Le navigateur peut alors enregistrer le cookie et le renvoyer au serveur lors des requêtes ultérieures.
 

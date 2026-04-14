@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Les structures d'exécution décrivent comment les instructions du programme sont exécutées par l'ordinateur.
 - Elles définissent l'ordre dans lequel les instructions sont exécutées, ainsi que les mécanismes de contrôle de flux tels que les boucles, les conditions, les appels de fonction, etc.

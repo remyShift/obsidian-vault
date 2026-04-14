@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Langage compilé : C, C++ ...  
 - Compilation : transforme du code compréhensible pour l'Homme par du code compréhensible par un ordi,

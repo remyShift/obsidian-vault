@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 - Langages Asynchrones : Python, JS, Swift ...
 - Exécution qui se fait sur plusieurs threads à la fois,

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #WebDevKnowledge 
+---
+tags: [WebDevKnowledge]
+---
 
 - Les page web se construisent grâce à 3 langages principaux :
 	- [[HTML-Global | HTML]] : Pour structurer la page et définissant ce qu'elle contient,

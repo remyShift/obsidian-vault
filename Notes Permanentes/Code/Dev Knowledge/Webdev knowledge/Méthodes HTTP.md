@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #WebDevKnowledge 
+---
+tags: [WebDevKnowledge]
+---
 
 
 Les méthodes HTTP sont utilisées pour interagir avec les ressources d'un serveur web dans une architecture RESTful. Voici les principales méthodes, leur rôle et leurs usages courants :

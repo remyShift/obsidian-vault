@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Informatique 
+---
+tags: [Informatique]
+---
 
 Ensemble physique de composants (ex : ordi, téléphone, ....).
 
