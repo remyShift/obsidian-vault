@@ -2,7 +2,8 @@
 date: 2026-04-14
 type: reference
 projet: Oli's Lab
-tags: [standards, patterns, olis-lab]
+tags:
+  - olis-lab
 ---
 
 # Standards & Patterns - Oli's Lab
