@@ -1,0 +1,40 @@
+/*
+  Payload admin brand theme — Olis Lab
+  Targets [data-theme="light"] since payload.config.ts forces theme: 'light'.
+
+  Variable names come from Payload v3 internals — use DevTools to verify/tune
+  if anything looks off after the first load.
+*/
+
+:root,
+[data-theme='light'] {
+  /* --- Backgrounds (elevation scale, light = 0, dark = 1000) --- */
+  --theme-elevation-0: #f7f6e6; /* off-white — main page bg */
+  --theme-elevation-50: #ebe6d5; /* background-dark — cards, sidebars */
+  --theme-elevation-100: #ddd8c5;
+  --theme-elevation-150: #d6d3d1; /* border */
+  --theme-elevation-200: #ccb9a7; /* muted */
+  --theme-elevation-250: #b8a898;
+  --theme-elevation-300: #a39383;
+  --theme-elevation-350: #8f7f70;
+  --theme-elevation-400: #7f6f64; /* clay */
+  --theme-elevation-500: #7e7063; /* ceramic */
+  --theme-elevation-600: #5b5146; /* brown */
+  --theme-elevation-700: #44403b; /* muted-foreground */
+  --theme-elevation-800: #292524; /* primary */
+  --theme-elevation-900: #1c1917; /* charcoal */
+  --theme-elevation-1000: #0d0b0a;
+
+  /* --- Text --- */
+  --theme-text: #1c1917; /* charcoal */
+
+  /* --- Borders & inputs --- */
+  --theme-border-color: #d6d3d1;
+  --theme-input-bg: #ebebeb;
+
+  /* --- Semantic --- */
+  --theme-error-500: #dc2626;
+  --theme-error-400: #ef4444;
+  --theme-success-500: #16a34a;
+  --theme-warning-500: #ca8a04;
+}
