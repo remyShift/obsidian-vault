@@ -2,7 +2,8 @@
 date: 2026-04-14
 type: chantier
 projet: Oli's Lab
-tags: [analytics, event-tracking, chantier, olis-lab]
+tags:
+  - olis-lab
 ---
 
 # Chantier : Event Tracking & Analytics

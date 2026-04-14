@@ -2,7 +2,8 @@
 date: 2026-04-14
 type: reference
 projet: Oli's Lab
-tags: [bugs, decisions, olis-lab]
+tags:
+  - olis-lab
 ---
 
 # Bugs & Décisions - Oli's Lab
@@ -97,11 +98,11 @@ Le groupement commercial est implémenté via un mapper dans le backend (solutio
 
 ---
 
-### `inchlist` ne doit jamais être écrasé (janvier 2026)
+### `inciList` ne doit jamais être écrasé (janvier 2026)
 
-Le champ `inchlist` sur les produits shop est géré par l'automation Notion. Le réécrire depuis un script (ex. le split scientifique INCI) cause des problèmes de formatage côté shop et sera de toute façon écrasé par la prochaine exécution de l'automation.
+Le champ `inciList` sur les produits shop est géré par l'automation Notion. Le réécrire depuis un script (ex. le split scientifique INCI) cause des problèmes de formatage côté shop et sera de toute façon écrasé par la prochaine exécution de l'automation.
 
-Règle : pour le projet scientifique, créer un champ dédié `inchlist_scientific_split`. Le split n'est nécessaire que pendant le calcul du scoring ; après, les données sont lues depuis la collection `matches`.
+Règle : pour le projet scientifique, créer un champ dédié `incilist_scientific_split`. Le split n'est nécessaire que pendant le calcul du scoring ; après, les données sont lues depuis la collection `matches`.
 
 **Source :** [[2026-01-20 Product Recommendation Release]]
 

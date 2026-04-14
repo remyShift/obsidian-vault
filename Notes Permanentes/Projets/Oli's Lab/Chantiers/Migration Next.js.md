@@ -2,7 +2,8 @@
 date: 2026-04-14
 type: chantier
 projet: Oli's Lab
-tags: [nextjs, checkout, chantier, olis-lab]
+tags:
+  - olis-lab
 ---
 
 # Chantier : Migration Next.js (inclut Checkout v2)
