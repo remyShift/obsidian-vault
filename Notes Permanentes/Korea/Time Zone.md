@@ -1,6 +1,6 @@
-> [!info]- Tags
-> #Korea 
-> 
+---
+tags: [Korea]
+---
 
 Comparaison de l’heure à Séoul par rapport à :
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Korea 
+---
+tags: [Korea]
+---
 
 ## Gangnam - 강남
 

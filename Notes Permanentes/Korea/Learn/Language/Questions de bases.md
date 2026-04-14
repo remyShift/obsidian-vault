@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Korea 
+---
+tags: [Korea]
+---
 
 - **Comment tu t’appelles ?**  
     👉🏼 이름이 뭐예요 ?  

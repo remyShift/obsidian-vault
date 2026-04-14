@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Korea 
+---
+tags: [Korea]
+---
 
 ## Statut du projet
 > Mise à jour : 2026-04

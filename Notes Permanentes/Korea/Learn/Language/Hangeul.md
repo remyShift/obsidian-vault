@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Korea 
+---
+tags: [Korea]
+---
 
 ## Les voyelles simples
 
