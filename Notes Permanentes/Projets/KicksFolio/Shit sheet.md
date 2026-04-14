@@ -1,4 +1,5 @@
-> [!info]- Tags
-> #KicksFolio 
+---
+tags: [KicksFolio]
+---
 
 - voir discogz 

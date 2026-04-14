@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #Perso 
+---
+tags: [Perso]
+---
+
 # Programme hebdomadaire pour devenir la meilleur version de moi même !
 
 ## Sports  : 

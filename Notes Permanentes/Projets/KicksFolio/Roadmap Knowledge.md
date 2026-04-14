@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #KicksFolio 
+---
+tags: [KicksFolio]
+---
+
 # Roadmap pour Développer l'Application "KicksFolio"
 
 ## 1. Maîtriser React 

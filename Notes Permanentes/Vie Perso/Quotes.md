@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Perso #Quotes
+---
+tags: [Perso, Quotes]
+---
 
 - Work smart, not hard
 - Chaque défi est une opportunité d'apprendre

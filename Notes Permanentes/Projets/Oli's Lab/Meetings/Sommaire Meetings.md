@@ -1,3 +1,7 @@
+---
+tags: [olis-lab]
+---
+
 # Sommaire - Meetings Oli's Lab
 
 Huddles et réunions thématiques entre membres de l'équipe.

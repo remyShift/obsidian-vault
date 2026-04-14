@@ -1,3 +1,7 @@
+---
+tags: [olis-lab]
+---
+
 # Sommaire - Tech Weeklies Oli's Lab
 
 Réunions techniques hebdomadaires de l'équipe Oli's Lab.

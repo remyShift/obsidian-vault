@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #Perso 
+---
+tags: [Perso]
+---
+
 ## Outfit 1 :
 
 - Tee **?**
