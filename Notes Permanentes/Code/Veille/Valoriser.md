@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge #Veille  
+---
+tags: [CodeKnowledge, Veille]
+---
 
 **Valeur** = Apport de connaissance + diminution de risques + feedback utile
 

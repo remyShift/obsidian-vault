@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge #Veille  
+---
+tags: [CodeKnowledge, Veille]
+---
 
 - Sourcer = alimenter sa veille
 - Choisir des ressources diverses (livres, newsletter, article, conférence, podcast …)

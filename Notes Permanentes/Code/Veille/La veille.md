@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge #Veille  
+---
+tags: [CodeKnowledge, Veille]
+---
 
 - Veille = temps investis à sa montée en compétences sur divers sujets tech. Néanmoins le temps est précieux donc nécessité de structurer et optimiser sa veille.
 - Veille = ensemble des habitudes et des processus qui permettent d’apprendre en continue

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge #Veille  
+---
+tags: [CodeKnowledge, Veille]
+---
 
 ## Théorie de la Résidualité dans le Développement Logiciel
 

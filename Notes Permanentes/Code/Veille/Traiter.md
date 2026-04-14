@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge #Veille  
+---
+tags: [CodeKnowledge, Veille]
+---
 
 - Traiter = Consommer sa veille
 
