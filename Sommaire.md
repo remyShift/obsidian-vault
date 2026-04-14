@@ -43,7 +43,7 @@ LIMIT 20
 
 ## Notes totalement déconnectées
 
-Les vraies perdues : ni inlinks ni outlinks. Priorité absolue pour `/link`.
+Les vraies perdues : ni inlinks ni outlinks. Priorité absolue à rattacher manuellement au graphe.
 
 ```dataview
 LIST
