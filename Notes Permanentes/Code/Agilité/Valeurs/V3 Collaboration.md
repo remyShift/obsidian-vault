@@ -1,5 +1,7 @@
- > [!info]- Tags
-> #Agilité
+---
+tags: [Agilité]
+---
+
 ### 3. La collaboration avec les clients plutôt que la négociation contractuelle
 
 - Utilisateur doit être au centre du processus de création

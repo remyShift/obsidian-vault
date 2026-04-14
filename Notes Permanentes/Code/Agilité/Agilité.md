@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Agilité
+---
+tags: [Agilité]
+---
 
 L’agilité viens d’un manifeste (Le Manifeste Agile) publié en 2001 par des développeurs qui grâce à leur expérience avaient définis des valeurs et principes à suivre afin de révolutionner les processus de développement logiciel.
 

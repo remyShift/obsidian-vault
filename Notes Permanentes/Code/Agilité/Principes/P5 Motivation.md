@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #Agilité
+---
+tags: [Agilité]
+---
+
 ### 5. Travailler entre personne motivées 
 - **« Réalisez les projets avec des personnes motivées. Fournissez-leur l'environnement et le soutien dont ils ont besoin et faites-leur confiance pour atteindre les objectifs fixés. »**
 	- Confiance mutuelle --> transparence entre manager et équipe de dev

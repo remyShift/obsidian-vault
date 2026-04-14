@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #Agilité 
+---
+tags: [Agilité]
+---
+
 ### 2. Intégrer les demandes de changement
 - **« Accueillez positivement les changements de besoins, même tard dans le projet. Les processus Agile exploitent le changement pour donner un avantage compétitif au client. »**
 	- Changement ≠ négatif, au contraire changement = positif

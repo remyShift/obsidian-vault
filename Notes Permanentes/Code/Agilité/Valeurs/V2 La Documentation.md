@@ -1,5 +1,7 @@
- > [!info]- Tags
-> #Agilité
+---
+tags: [Agilité]
+---
+
 ### 2. Des logiciels opérationnels plus qu’une documentation exhaustive
 
 - La documentation c’est la vie néanmoins de la bonne doc

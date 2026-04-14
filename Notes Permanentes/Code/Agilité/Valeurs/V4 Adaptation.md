@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #Agilité
+---
+tags: [Agilité]
+---
+
 ### 4. L’adaptation au changement plutôt que le suivis d’un plan
 
 - Accepter le changement même tard sur le développement du produit
