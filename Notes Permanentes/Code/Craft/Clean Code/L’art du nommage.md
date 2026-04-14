@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft 
+---
+tags: [SoftwareCraft]
+---
 
 L’art du nommage = avoir des noms (de fonctions, variables, méthodes, fichiers …) qui sont explicite quant à l’intention voulu
 - Importance donc de connaître le métier et l’objectif pour un meilleur nommage et plus pertinent et en lien avec le métier 

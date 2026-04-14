@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode 
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 **⚠️ Il faut consommer les commentaires avec modération ⚠️**
 
