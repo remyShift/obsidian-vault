@@ -11,6 +11,7 @@
 
 ## 🗂 Projets
 - [[KicksFolio]]
+- [[Intro Oli's Lab]]
 
 ---
 

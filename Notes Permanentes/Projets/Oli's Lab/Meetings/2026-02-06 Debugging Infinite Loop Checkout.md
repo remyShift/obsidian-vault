@@ -3,11 +3,6 @@ date: 2026-02-06
 type: meeting
 projet: Oli's Lab
 tags:
-  - debugging
-  - react
-  - performance
-  - useeffect
-  - profiler
   - olis-lab
 participants:
   - Diego

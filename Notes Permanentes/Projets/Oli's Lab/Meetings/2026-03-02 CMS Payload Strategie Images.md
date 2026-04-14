@@ -2,8 +2,16 @@
 date: 2026-03-02
 type: meeting
 projet: Oli's Lab
-tags: [cms, payload, images, s3, nextjs, olis-lab]
-participants: [Diego, Kyle, Michele]
+tags:
+  - cms
+  - payload
+  - images
+  - s3
+  - olis-lab
+participants:
+  - Diego
+  - Kyle
+  - Michele
 notion:
 ---
 

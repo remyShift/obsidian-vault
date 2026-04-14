@@ -53,7 +53,7 @@
       "query": "tag:#Perso  ",
       "color": {
         "a": 1,
-        "rgb": 16777215
+        "rgb": 16497852
       }
     },
     {
@@ -137,20 +137,27 @@
       "query": "tag:#Korea  ",
       "color": {
         "a": 1,
-        "rgb": 16252861
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "tag:#olis-lab  ",
+      "color": {
+        "a": 1,
+        "rgb": 14869174
       }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -2.6,
   "nodeSizeMultiplier": 1.12678819444444,
   "lineSizeMultiplier": 1.01449652777778,
   "collapse-forces": false,
-  "centerStrength": 0.221006944444444,
+  "centerStrength": 0,
   "repelStrength": 10.8368055555556,
   "linkStrength": 0.564756944444445,
   "linkDistance": 146,
-  "scale": 0.16597146471586124,
-  "close": true
+  "scale": 0.08139400155135199,
+  "close": false
 }
