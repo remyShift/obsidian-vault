@@ -3,12 +3,11 @@ date: 2026-03-02
 type: meeting
 projet: Oli's Lab
 tags: [tech-weekly, olis-lab]
+participants: [Michele, Diego, Kyle, Rémy, Patrick, Lucas, Ante]
+notion: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 ---
 
 # Tech Weekly - 2 mars 2026
-
-**Participants :** Michele, Diego, Kyle, Rémy, Patrick, Lucas, Ante
-**Lien Notion :** https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 

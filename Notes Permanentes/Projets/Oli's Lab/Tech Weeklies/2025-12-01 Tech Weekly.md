@@ -3,12 +3,11 @@ date: 2025-12-01
 type: meeting
 projet: Oli's Lab
 tags: [tech-weekly, olis-lab]
+participants: [Michele, Diego, Lucas, Rémy, Patrick]
+notion: https://www.notion.so/olislab/Tech-Weekly-2bc4bf4c7fa1805ba795d64a9fb085e2
 ---
 
 # Tech Weekly - 1er décembre 2025
-
-**Participants :** Michele, Diego, Lucas, Rémy, Patrick
-**Lien Notion :** https://www.notion.so/olislab/Tech-Weekly-2bc4bf4c7fa1805ba795d64a9fb085e2
 
 ---
 
