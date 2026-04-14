@@ -7,7 +7,8 @@
       "Bash(cp \"Conversations/_template.md\" \"AI Generated/Conversations/\")",
       "mcp__obsidian__list_directory",
       "mcp__obsidian__read_multiple_files",
-      "mcp__obsidian__search_files"
+      "mcp__obsidian__search_files",
+      "mcp__obsidian__read_file"
     ]
   }
 }
