@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
  Imagine que tu es en train de construire une application web, comme un site de vente en ligne, et tu veux que les utilisateurs puissent naviguer entre différentes pages : une page d'accueil, une page de produits, une page de détails d'un produit spécifique, et une page de panier. Pour gérer cette navigation, tu vas avoir besoin de quelque chose qui peut diriger les utilisateurs vers les bonnes pages en fonction de ce qu'ils veulent voir. C'est là que React Router entre en jeu.
 

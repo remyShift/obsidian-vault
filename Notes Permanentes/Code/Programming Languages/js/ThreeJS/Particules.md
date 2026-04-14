@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Les particules peuvent être utilisées pour créer des étoiles, de la fumée, de la pluie, de la poussière, du feu, etc etc ... On peut en avoir des milliers avec un frame rate raisonnable et donc elles impactent peu les performances si elles sont bien implements.
 

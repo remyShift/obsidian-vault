@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS
+---
+tags: [LangagesDeProgs, JS]
+---
 
 -  JavaScript est un langage de programmation souvent utilisé pour rendre les pages web interactives. Imagine-le comme un ouvrier polyvalent chargé de donner vie à ton site web. Voici quelques points clés :
 #### Interactivité :

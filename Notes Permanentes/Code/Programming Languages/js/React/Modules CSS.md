@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Les modules CSS en React sont une manière de structurer et d'utiliser le CSS de manière à éviter les conflits de nommage et à rendre le code plus maintenable et modulaire. Voici une explication simple de leur fonctionnement et de leur utilisation :
 

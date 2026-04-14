@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipDOM
+---
+tags: [LangagesDeProgs, JS, ManipDOM]
+---
 
 Les événements sont des actions qui sont déclenché lors d'une interaction avec le user depuis notre page web *(clique sur un bouton, envoie d'un formulaire etc ...)*.
 

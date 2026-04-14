@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Voici une liste des commandes courantes que tu utiliseras avec Expo CLI pendant le développement de ton application :
 

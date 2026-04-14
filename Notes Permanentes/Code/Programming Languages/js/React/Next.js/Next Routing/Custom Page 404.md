@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Par défaut Next fournis une page 404, si on accede à un path qui n'existe pas, qui ressemble à ceci :
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Les fragments en React sont une fonctionnalité qui permet de grouper une liste de plusieurs éléments sans ajouter un élément supplémentaire au DOM. Ils sont particulièrement utiles lorsque vous voulez retourner plusieurs éléments d'un composant sans encapsuler ces éléments dans une balise conteneur supplémentaire (comme un `<div>`), ce qui pourrait créer des balises inutiles et perturber la structure du DOM.
 

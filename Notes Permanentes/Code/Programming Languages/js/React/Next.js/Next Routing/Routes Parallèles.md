@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #NextJS 
+---
+tags: [LangagesDeProgs, NextJS]
+---
 
 Les routes parallèles sont un moyen de regrouper plusieurs `page.tsx` et de les afficher en même temps dans un seul et même layout.
 

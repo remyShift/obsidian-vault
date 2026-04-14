@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Le component `<Button />`permets d'ajouter facilement des boutons fonctionnels dans une application ReactNative. Il prends 1 seule propriété obligatoire qui est le title (le texte display dans le bouton).
 

@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
+
 ## Container
 ```jsx
 import Calculation from "./Calculation"

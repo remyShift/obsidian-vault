@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipStr #ManipArr
+---
+tags: [LangagesDeProgs, JS, ManipStr, ManipArr]
+---
+
 ## includes(searchString, position)
 
 Détermine si une chaîne contient une sous-chaîne à partir de la position donnée (par défaut 0).

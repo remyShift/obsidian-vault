@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Framework 
+---
+tags: [LangagesDeProgs, React, Framework]
+---
 
 - React est une librairie de JS le plus utilisé.
 - C'est une librairie déclarative :

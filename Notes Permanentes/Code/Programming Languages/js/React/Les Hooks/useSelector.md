@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks 
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 #### Qu'est-ce que `useSelector` ?
 - **`useSelector`** est un hook fourni par la bibliothèque **React-Redux**.

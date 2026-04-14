@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 L'API de Contexte (Context API) de React permet de partager des valeurs et des états entre différents composants sans avoir à passer explicitement les props à chaque niveau de l'arborescence des composants. C'est particulièrement utile pour gérer des données globales comme les thèmes, les préférences utilisateur, ou l'authentification.
 

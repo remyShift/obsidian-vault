@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks 
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 - `useRef` est un autre Hook de React qui te permet de créer une référence mutable qui persiste à travers les rendus du composant. C'est une variable manipulable qui ne provoquera pas de re-render lors de sa mise à jour. Imagine-le comme une étiquette que tu mets sur un objet et que tu peux utiliser pour le suivre ou le manipuler.
 

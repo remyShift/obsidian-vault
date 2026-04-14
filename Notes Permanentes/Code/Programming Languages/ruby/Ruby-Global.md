@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby
+---
+tags: [LangagesDeProgs, Ruby]
+---
 
 **Ruby** est un langage de programmation open-source, simple et intuitif. Il est apprécié pour sa **simplicité** et son **élégance**, tout en restant puissant.
 

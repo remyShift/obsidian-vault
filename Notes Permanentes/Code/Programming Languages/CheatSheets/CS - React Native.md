@@ -1,6 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #CheatSheet #ReactNative 
-> 
+---
+tags: [LangagesDeProgs, CheatSheet, ReactNative]
+---
 
 [Fiche de Révision React Native](https://www.amaliamaturana.com/fr/guide-de-revision-react-native-preparation-entretien-technique/)
 

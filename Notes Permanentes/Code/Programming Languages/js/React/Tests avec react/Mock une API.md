@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
 
 Pour "mock" une API on aura besoin de **MSW** ([Doc msw](https://mswjs.io/docs/getting-started)) qui est une librairie qui le permets.
 

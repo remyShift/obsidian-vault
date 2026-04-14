@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Faire de l'animation en ThreeJS est comme faire du *stop motion* --> les animations seront 60 images qui se succéderont en 1 seconde (// FPS | fréquence gérer par notre ordinateur)
 - Le but est que nos animations soient les mêmes peu importe le framerate.

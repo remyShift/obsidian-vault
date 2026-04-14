@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #Async 
+---
+tags: [LangagesDeProgs, JS, Async]
+---
 
 ## setInterval(callback, interval)
 

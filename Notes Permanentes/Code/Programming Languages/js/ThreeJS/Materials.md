@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Les **Materials** servent a mettre de la couleur sur chaque *pixel* visible de notre `geometry`. Les algos qui permettent de calculer et savoir quelle couleur mettre sur chaque pixel sont appelés **shaders**.
 - ThreeJS vient déjà avec plusieurs **shaders** built-in.

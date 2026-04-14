@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 ThreeJS est une librairie Javascript qui permets de créer des expériences 3D dans le web.
 - Sous le capot ça utilise WebGL qui est une API Javascript permettant justement de faire de la 3D

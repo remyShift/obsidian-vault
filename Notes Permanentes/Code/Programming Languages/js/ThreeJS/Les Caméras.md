@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 `Camera` est une classe abstraite dont on a pas besoin d'utiliser. Toutes les cameras de ThreeJS hériteront de celle-ci, comme :
 - `ArrayCamera` qui permets de render la scène depuis plusieurs cameras sur des portions spécifiques du render,

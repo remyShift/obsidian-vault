@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
 
 **NB :** Le fichier de test de notre composant doit être en `tsx` ou `jsx` étant donné qu'on va simuler le rendu de notre composant.
 

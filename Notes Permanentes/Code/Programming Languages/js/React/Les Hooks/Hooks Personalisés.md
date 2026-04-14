@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 Les hooks personnalisés en React permettent de réutiliser de la logique d’état ou des effets entre différents composants sans dupliquer du code. Ils sont créés en utilisant les hooks de base de React (comme `useState`, `useEffect`, etc.) et en les encapsulant dans une fonction.
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Les ombres sont toujours un point compliqué lorsqu'on fait des rendus 3D en temps réel.
 - Mais ThreeJS à des solutions built-in, chaque scène qui comporte des lumières il va faire avant le 1er render qu'on voit un render spécial **pour chaque lumières** de notre scène.

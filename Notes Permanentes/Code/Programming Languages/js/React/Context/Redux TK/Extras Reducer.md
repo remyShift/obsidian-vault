@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 ```js
 export const fruits = createSlice({

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 En ReactNative on ne peut pas mettre du texte en dur dans un component. On est obliger de passer par le le component `<Text />`.
 - C'est l'élément par défaut pour afficher du text en ReactNative.

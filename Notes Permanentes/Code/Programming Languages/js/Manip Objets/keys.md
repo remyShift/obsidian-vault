@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipObj 
+---
+tags: [LangagesDeProgs, JS, ManipObj]
+---
 
 ## Object.keys(obj)
 Retourne un tableau contenant les clés (noms des propriétés) d'un objet.

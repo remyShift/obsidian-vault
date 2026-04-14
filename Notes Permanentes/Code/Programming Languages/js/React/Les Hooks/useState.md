@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks 
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 ```jsx
 import { useState } from "react"

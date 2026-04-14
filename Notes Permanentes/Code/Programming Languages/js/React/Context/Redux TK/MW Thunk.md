@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
+
 \
 
 Le MW Thunk permet l'appel de gérer les appels API. Jusqu'à maintenant lorsqu'on envoie une action à notre store c'était un objet mais pour trigger le MW Thunk on va envoyer désormais une fonction qu'il va exécuter (généralement la fonction est un appel API), lorsqu'on a les données / résultat de notre fonction on va pouvoir dispatch cette réponse.

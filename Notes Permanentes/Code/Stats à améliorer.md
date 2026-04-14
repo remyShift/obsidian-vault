@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 **NB :** Kata a faire en TDD
 # Algorithmic :

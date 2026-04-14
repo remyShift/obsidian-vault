@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 On pourrait se coder la physique à la main et faire nous même nos calculs etc, mais si on veut un résultat plus réaliste avec de la friction, de la tension, des contraintes etc etc c'est plus pratique d'utiliser une librairie.
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Pour permettre de naviguer entre des client component Next nous fournis des **Link component**.
 

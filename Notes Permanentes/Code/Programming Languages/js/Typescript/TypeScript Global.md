@@ -1,4 +1,5 @@
-> [!info]- Tags
-> #LangagesDeProgs #TS #Framework 
+---
+tags: [LangagesDeProgs, TS, Framework]
+---
 
 [[Le type map]]

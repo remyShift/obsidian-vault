@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 `useRouter` est un hook très utile en NextJS, car il nous permets de gérer de la navigation de manière programmatique.
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 
 Intercepter les routes nous permets de display de l'UI lié à la route de destination par dessus le contenu de la route actuel. Cela nous permets de :

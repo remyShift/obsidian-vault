@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipArr 
+---
+tags: [LangagesDeProgs, Ruby, ManipArr]
+---
 
 ## select
 

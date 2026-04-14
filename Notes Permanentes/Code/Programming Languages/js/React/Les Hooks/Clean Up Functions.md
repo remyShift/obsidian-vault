@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 En React, les "clean up functions" (fonctions de nettoyage) sont des fonctions utilisées pour nettoyer ou annuler des effets secondaires lorsqu'un composant est démonté ou lorsque certains paramètres changent. Elles sont souvent utilisées avec le hook `useEffect`.
 

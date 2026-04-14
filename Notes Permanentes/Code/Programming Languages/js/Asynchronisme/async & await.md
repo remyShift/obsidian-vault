@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #Async 
+---
+tags: [LangagesDeProgs, JS, Async]
+---
 
 Les mots-clés `async` et `await` permettent de travailler avec des promesses de manière plus lisible et structurée.
 

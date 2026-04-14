@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Le component `<ScrollView>` permets d'afficher un contenue défilable dans une application ReactNative.
 - Il va encapsuler différents composant pour pouvoir scroll.

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Les routes imbriquées dans React Router permettent de créer une hiérarchie de routes, ce qui est particulièrement utile pour organiser les sections de ton application qui partagent une structure ou un layout commun. Par exemple, une page de profil d'utilisateur pourrait avoir des sous-pages comme les informations personnelles, les paramètres de compte, etc. Avec les routes imbriquées, tu peux définir une route parent et plusieurs routes enfants.
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 Le hook `useEffect` en React est utilisé pour effectuer des effets de bord dans vos composants fonctionnels. Les effets de bord incluent les opérations telles que la récupération de données, la manipulation du DOM, la souscription à des événements, etc. `useEffect` permet d'exécuter une fonction après le rendu du composant et peut être configuré pour s'exécuter uniquement lorsque certaines dépendances changent.
 

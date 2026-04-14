@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 **NextJS =** [[React Basics | React]] Framework pour faire des web apps. Ce qui veut dire qu'il utilise React pour l'UI mais il comprends d'autres features plus facile a mettre à mettre en place qu'en React, où on aurait du installer des packages externes, comme :
 - Routing,

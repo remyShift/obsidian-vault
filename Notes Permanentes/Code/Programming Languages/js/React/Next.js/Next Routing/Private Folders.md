@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 ⚠️ Un private folder sera exclu de notre routing.
 

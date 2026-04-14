@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Redux Toolkit (RTK) est une bibliothèque puissante et pratique pour gérer l'état global des applications JavaScript, en particulier celles utilisant React. RTK simplifie l'utilisation de Redux en offrant une série d'outils et de fonctions préconfigurées qui réduisent le code boilerplate et améliorent l'expérience développeur.
 

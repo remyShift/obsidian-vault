@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
+
 #### Qu'est-ce que `useContext` ?
 - **`useContext`** est un hook fourni par React qui permet d'accéder à un contexte dans un composant fonctionnel.
 - Un **contexte** en React est un mécanisme permettant de partager des données entre différents composants sans avoir à passer ces données explicitement via les props, en particulier lorsqu'il y a plusieurs niveaux de composants.

@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
+
 > \
 
 `fireEvent` permet de simuler des actions utilisateurs en lien avec des éléments de notre DOM.

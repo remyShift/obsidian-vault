@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipStr
+---
+tags: [LangagesDeProgs, JS, ManipStr]
+---
+
 ## chartAt(index)
 Retourne le caractère à l'index spécifié.
 

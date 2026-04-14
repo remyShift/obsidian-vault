@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Un **Raycaster** est un rayon envoyé dans une direction précise et va tester quels objets il va traverser ainsi. Ça permets différentes choses :
 - Savoir si il y a un mur en face d'un joueur,

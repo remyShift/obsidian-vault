@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #CheatSheet
+---
+tags: [LangagesDeProgs, CheatSheet]
+---
+
  
  Sommaire des cheatsheet :
  - [[CS - React]],

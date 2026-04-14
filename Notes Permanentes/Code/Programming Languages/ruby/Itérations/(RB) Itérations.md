@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #Itérations
+---
+tags: [LangagesDeProgs, Ruby, Itérations]
+---
 
 Les méthodes d'itérations permettent d'itérer sur chaque élément d'un objet :
 - [[each]],

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Pour créer des routes dynamiques il suffit de mettre le nom de notre fichier entre `[ ]`. Par exemple :
 ![[Exemple Routes Dynamiques NextJS.png]]

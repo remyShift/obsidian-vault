@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Les Metadata sont des informations qui sont affichées lorsque nos pages sont partagées ou indexées.
 - Elles permettent une optimisation du SEO.

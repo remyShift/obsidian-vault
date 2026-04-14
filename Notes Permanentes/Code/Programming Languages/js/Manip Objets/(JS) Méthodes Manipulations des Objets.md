@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipObj
+---
+tags: [LangagesDeProgs, JS, ManipObj]
+---
 
 En JavaScript, les objets sont des structures de données composées de propriétés, qui sont des paires clé-valeur. Les méthodes de manipulations d'objets permettent d'interagir / modifier / influer directement sur un objet, on retrouve notamment :
 - [[keys]],

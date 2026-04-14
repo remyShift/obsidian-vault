@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipArr 
+---
+tags: [LangagesDeProgs, Ruby, ManipArr]
+---
+
 ## drop
 
 Supprime les premiers n éléments du tableau.

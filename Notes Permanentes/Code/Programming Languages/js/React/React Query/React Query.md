@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
  React Query est une bibliothèque pour la gestion des requêtes de données (fetching) et la synchronisation du cache dans les applications React. Elle simplifie le processus d'extraction, de mise à jour, et de synchronisation des données, tout en offrant une expérience utilisateur fluide.
 

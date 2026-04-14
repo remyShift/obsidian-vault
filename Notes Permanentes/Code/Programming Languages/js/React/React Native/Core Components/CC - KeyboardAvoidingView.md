@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Le composant `<KeyboardAvoidingView>` fonctionne comme une [[CC - View]] mais permets d'ajuster au travers de différentes props l'affichage de l'écran selon l'apparition d'un clavier virtuel sur ce dernier.
 

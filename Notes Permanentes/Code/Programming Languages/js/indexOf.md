@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipStr #ManipArr 
+---
+tags: [LangagesDeProgs, JS, ManipStr, ManipArr]
+---
 
 ## indexOf(searchValue, fromIndex)
 

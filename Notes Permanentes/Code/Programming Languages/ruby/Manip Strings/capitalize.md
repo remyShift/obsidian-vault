@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipStr 
+---
+tags: [LangagesDeProgs, Ruby, ManipStr]
+---
 
 ## capitalize
 

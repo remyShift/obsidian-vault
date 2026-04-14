@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #CheatSheet #React 
+---
+tags: [LangagesDeProgs, CheatSheet, React]
+---
 
 [Fiche de révision React](https://www.amaliamaturana.com/fr/fiche-de-revision-react/)
 # 🧠 Fiche de révision React

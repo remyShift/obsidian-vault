@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 React Native est un framework basé sur [[React Basics|React]] pour du développement mobile le plus proche possible du développement mobile natif.
 - Son écosystème, notamment avec Expo lui permette d'être assez simple d'utilisation.

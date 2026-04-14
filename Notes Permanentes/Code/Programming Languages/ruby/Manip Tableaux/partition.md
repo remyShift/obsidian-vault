@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipArr 
+---
+tags: [LangagesDeProgs, Ruby, ManipArr]
+---
+
 ## partition
 
 Divise le tableau en deux tableaux selon une condition.

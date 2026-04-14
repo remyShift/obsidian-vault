@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Les **middlewares** sont des extensions qui interagissent avec le dispatch des actions avant qu'elles n'atteignent les reducers. Ils sont utilisés pour la gestion des effets secondaires (comme les requêtes API).
 Ils peuvent changer l'action, la modifier ou encore effectuer des appels api.

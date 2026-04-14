@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
 
 ## Créer le dossier du projet :
 ```

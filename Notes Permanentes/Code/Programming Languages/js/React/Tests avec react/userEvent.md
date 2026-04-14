@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
 
 **NB :** `userEvent` permets une plus grande précision que `fireEvent`. En effet quand `fireEvent` va changer du text dans un input il va directement le remplacer dans le DOM, tandis que `userEvent` va simuler le fait qu'on tape lettre par lettre.
 - Ce qui veut dire que le `fireEvent` est synchrone contrairement au `userEvent`qui est asynchrone.

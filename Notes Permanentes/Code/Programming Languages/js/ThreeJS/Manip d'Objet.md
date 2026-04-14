@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Notre objet camera et notre objet mesh hérite de la classe `Object3D` en ThreeJS, ce qui veut dire qu'on a plusieurs possibilitées pour les transformer au travers de ces propriétés :
 - `position`

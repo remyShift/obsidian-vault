@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Voici quelques règles à respecter pour Next interprète bien notre routing files :
 - Toutes les routes doivent être dans le dossier `src/app`,

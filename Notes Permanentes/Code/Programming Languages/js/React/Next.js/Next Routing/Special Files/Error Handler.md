@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Les files `error.tsx` seront ceux qui seront display à notre user au cas une erreur est throw par une de nos pages.
 

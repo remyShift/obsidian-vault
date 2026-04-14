@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 Le hook `useParams` en React est un outil pratique fourni par la bibliothèque React Router. Il est utilisé pour extraire les paramètres de l'URL dans une application React, facilitant ainsi la gestion des routes dynamiques. Voici une explication simple de son fonctionnement et de son utilisation :
 

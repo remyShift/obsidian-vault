@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 Créer une page 404 avec React Router est assez simple. La page 404 est une page d'erreur qui s'affiche lorsque l'utilisateur tente de naviguer vers une route qui n'existe pas. Voici comment tu peux ajouter une page 404 à ton application React.
 

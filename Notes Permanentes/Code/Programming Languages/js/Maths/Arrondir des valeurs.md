@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #Maths 
+---
+tags: [LangagesDeProgs, JS, Maths]
+---
 
 ## Math.abs(x)
 

@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipStr 
+---
+tags: [LangagesDeProgs, Ruby, ManipStr]
+---
+
 ## concat
 
 Concatène une autre chaîne.

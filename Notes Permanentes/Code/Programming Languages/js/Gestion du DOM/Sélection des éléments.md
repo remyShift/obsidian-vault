@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipDOM
+---
+tags: [LangagesDeProgs, JS, ManipDOM]
+---
 
 ## document.getElementBy
 ### document.getElementById(id)

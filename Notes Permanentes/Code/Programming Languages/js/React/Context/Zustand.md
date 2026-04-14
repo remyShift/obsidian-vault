@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 **Zustand** = même principe de store que RTK.
 - plus "léger" que RTK

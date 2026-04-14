@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Les modèles permettent d'avoir accès à des formes plus complexes que juste des cubes et des sphères.
 - On peut soit faire nous même nos propres modèles sur un logiciel 3D soit utiliser des modèles déjà fait qu'on importe.

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 - Les Hooks de React sont une fonctionnalité incroyablement puissante qui a révolutionné la façon dont nous construisons des composants dans React. Plutôt que de dépendre uniquement des classes, les Hooks permettent d'ajouter des fonctionnalités d'état et de cycle de vie aux composants fonctionnels. Cela simplifie le code, le rendant plus lisible et plus facile à maintenir. Avec les Hooks, tu peux gérer l'état local, effectuer des effets de manière plus propre et même créer des fonctionnalités réutilisables avec des Hooks personnalisés. En bref, les Hooks de React ouvrent de nouvelles possibilités passionnantes pour les développeurs React, offrant une approche plus fonctionnelle et expressive pour construire des interfaces utilisateur dynamiques.
 

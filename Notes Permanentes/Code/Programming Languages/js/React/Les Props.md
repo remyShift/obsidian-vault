@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React 
+---
+tags: [LangagesDeProgs, React]
+---
 
 - Les props (propriétés) sont l'un des concepts fondamentaux de React. Elles permettent de passer des données d'un composant parent à un composant enfant. // arguments d'un component.
 - De plus depuis un component enfant on peut modifier à l'aide de [[useState]] le state du component parent.

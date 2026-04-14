@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipStr
+---
+tags: [LangagesDeProgs, JS, ManipStr]
+---
 
 ## split(separator, limit)
 

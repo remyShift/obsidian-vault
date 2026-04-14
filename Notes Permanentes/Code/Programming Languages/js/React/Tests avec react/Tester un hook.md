@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Tests 
+---
+tags: [LangagesDeProgs, React, Tests]
+---
 
 Imaginons que nous ayons un un hook custom qui nous servirait de compteur :
 

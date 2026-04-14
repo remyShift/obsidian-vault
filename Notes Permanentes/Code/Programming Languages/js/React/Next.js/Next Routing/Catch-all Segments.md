@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Catch-all segments est une autre manière de faire du routing qui va permettre de faire des routes du types `http://monApp.com/docs/features1/example1`. On va "catch" tout les paths qui suivent "docs".
 

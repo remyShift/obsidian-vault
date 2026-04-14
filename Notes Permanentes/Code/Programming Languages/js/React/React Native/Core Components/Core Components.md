@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Les Core Components permettent de créer des interfaces intuitives aussi bien pour le mobile que pour le web.
 - Ce sont les briques de bases fournis par ReactNative qui permettent de construire des interfaces adaptées au app android, ios et même au web.

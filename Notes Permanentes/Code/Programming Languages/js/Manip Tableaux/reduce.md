@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipArr 
+---
+tags: [LangagesDeProgs, JS, ManipArr]
+---
 
 ## reduce(callback)
 

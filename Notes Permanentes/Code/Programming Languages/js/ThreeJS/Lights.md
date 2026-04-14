@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Ajouter des lumières à une scène est tout aussi simple que d'y ajouter un mesh. On instantie avec la bonne classe et y ajoute à la scène.
 

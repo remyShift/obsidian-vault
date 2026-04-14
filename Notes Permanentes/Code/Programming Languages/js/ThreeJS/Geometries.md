@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Geometries = tout ce qui est composé de *vertices* (point de coordonnées dans un espace 3D) et de faces (triangles de webgl qui relie les vertices pour créer de la surface),
 - Les geometries peuvent être utiliser pour les mesh mais aussi pour les particules,

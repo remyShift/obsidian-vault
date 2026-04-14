@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Le components `<View>` est un des composants principaux de ReactNative car il sert de container au même titre que `<div>` en HTML.
 - Il va permettre d'englober d'autres éléments pour les organiser à l'écran et structurer ainsi notre interface.

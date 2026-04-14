@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Pour le moment on a seulement un cube avec des couleurs pour chaque face mais sans texture particulière.
 

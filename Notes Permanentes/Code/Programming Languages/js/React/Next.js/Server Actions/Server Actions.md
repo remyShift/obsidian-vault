@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 NextJS permets de faire des actions RESTful sur le serveur au travers des différentes [[Méthodes HTTP]].
 

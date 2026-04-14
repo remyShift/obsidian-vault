@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #CheatSheet #TypeScript
+---
+tags: [LangagesDeProgs, CheatSheet, TypeScript]
+---
 
 # 🧠 Fiche de révision TypeScript
 

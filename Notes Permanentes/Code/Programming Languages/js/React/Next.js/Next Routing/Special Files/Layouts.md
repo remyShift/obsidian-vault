@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 **Layouts** == UI partagée entre différentes pages (*ex : header / footer*).
 

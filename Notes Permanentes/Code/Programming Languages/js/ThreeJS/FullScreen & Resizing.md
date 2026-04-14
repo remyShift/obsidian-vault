@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Pour faire en sorte que notre canva prenne toute la taille de notre écran / de notre page on peut faire comme suis :
 ```js

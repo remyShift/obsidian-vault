@@ -1,2 +1,3 @@
-> [!info]- Tags
-> #LangagesDeProgs #Framework #TailwindCSS
+---
+tags: [LangagesDeProgs, Framework, TailwindCSS]
+---

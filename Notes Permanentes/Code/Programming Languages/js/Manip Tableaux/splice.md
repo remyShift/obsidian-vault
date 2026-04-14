@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipArr
+---
+tags: [LangagesDeProgs, JS, ManipArr]
+---
 
 ## splice(start, deleteCount, item1, item2, ..., itemN)
 

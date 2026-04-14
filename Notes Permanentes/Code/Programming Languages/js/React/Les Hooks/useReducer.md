@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #Hooks 
+---
+tags: [LangagesDeProgs, React, Hooks]
+---
 
 Le hook `useReducer` en React est utilisé pour gérer l'état d'un composant de manière plus complexe que `useState`. Il est particulièrement utile quand l'état de votre composant dépend de plusieurs actions ou quand la logique de mise à jour de l'état est complexe.
 

@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipArr 
+---
+tags: [LangagesDeProgs, Ruby, ManipArr]
+---
+
 ## group_by
 
 Regroupe les éléments selon une clé produite par le bloc.

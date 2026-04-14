@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
+
 ### Post Method
 ```ts
 export async function PATCH(

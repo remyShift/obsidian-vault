@@ -1,4 +1,5 @@
-> [!info]- Tags
-> #LangagesDeProgs #CSS
+---
+tags: [LangagesDeProgs, CSS]
+---
 
 - [[TailwindCSS]]

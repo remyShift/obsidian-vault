@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #JS #ManipObj 
+---
+tags: [LangagesDeProgs, JS, ManipObj]
+---
 
 ## Objeect.freeze(obj)
 

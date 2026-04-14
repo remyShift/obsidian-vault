@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 Le composant `<Image />` permets d'afficher des images venant d'internet ou de ressources statiques (fichiers temporaire ou image stockée localement).
 

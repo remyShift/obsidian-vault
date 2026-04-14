@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipStr #ManipArr #ManipObj 
+---
+tags: [LangagesDeProgs, Ruby, ManipStr, ManipArr, ManipObj]
+---
 
 ## count
 

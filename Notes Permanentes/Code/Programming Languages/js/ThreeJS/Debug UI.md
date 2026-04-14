@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Une debug UI permets de changer des valeurs facilement et rapidement,
 - Ça peut être aussi pour le designer, le développeur et même et le client,

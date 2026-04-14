@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 React Server Components (*RSC*) ajoute une nouvelle manière de créer des composants en les dissociant en 2 catégories :
 ## Server Components

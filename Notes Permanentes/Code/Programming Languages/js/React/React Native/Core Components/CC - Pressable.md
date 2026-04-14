@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ReactNative #Framework 
+---
+tags: [LangagesDeProgs, ReactNative, Framework]
+---
 
 
 Le components `<Pressable>` permets de gérer les interactions tactiles dans une app ReactNative.

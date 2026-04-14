@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #React #NextJS 
+---
+tags: [LangagesDeProgs, React, NextJS]
+---
 
 Ce fichier nous permets de créer des pages qui seront rendu à l'user quand on attends une réponse (// des loaders).
 - Cela permets à l'user d'être sur que la requête a bien été faites.

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #ThreeJS #Framework 
+---
+tags: [LangagesDeProgs, ThreeJS, Framework]
+---
 
 Pour faire du texte en 3D avec ThreeJS nous devons utiliser la classe `TextBufferGeometry` ainsi qu'un type de font en particulier appelée *typeface*.
 - **NB :** On peut convertir la plupart des font en font typeface.

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #Work #Perso 
+---
+tags: [Work, Perso]
+---
 
 - [x] Fonctionnalitées Linkedin
 - [x] Avis maquette portfolio

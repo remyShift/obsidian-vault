@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #BugSolved
+---
+tags: [BugSolved]
+---
 
 🏞️ **Contexte :** Lorsque je faisais mon portfolio
 

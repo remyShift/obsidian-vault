@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #BugSolved 
+---
+tags: [BugSolved]
+---
 
 - [[Overflow]],
 - 

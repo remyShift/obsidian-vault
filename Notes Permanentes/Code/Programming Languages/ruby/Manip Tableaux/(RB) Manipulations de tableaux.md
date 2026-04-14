@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #LangagesDeProgs #Ruby #ManipArr 
+---
+tags: [LangagesDeProgs, Ruby, ManipArr]
+---
 
 Les méthodes de manipulations de strings permettent d'interagir / modifier / influer directement sur un tableau, on retrouve notamment :
 - [[push - pop - shift]],

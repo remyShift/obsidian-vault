@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #CodeKnowledge 
+---
+tags: [CodeKnowledge]
+---
 
 Le "code" désigne le texte écrit dans un [[Langages de Programmations]]. Ce texte contient des instructions et des algorithmes qui définissent le comportement d'un programme informatique. Le code est ensuite traduit en langage machine par un compilateur ou un interpréteur pour être exécuté par un ordinateur. Il permets donc de donner des instructions à l'[[Hardware]] via des [[Software]] et fait le lien entre les deux.
 
