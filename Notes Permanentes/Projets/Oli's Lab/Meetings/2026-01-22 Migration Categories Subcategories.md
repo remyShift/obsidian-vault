@@ -2,8 +2,15 @@
 date: 2026-01-22
 type: meeting
 projet: Oli's Lab
-tags: [categories, schema, refactoring, migration, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - categories
+  - schema
+  - refactoring
+  - migration
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

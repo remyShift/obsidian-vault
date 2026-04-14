@@ -2,8 +2,16 @@
 date: 2026-01-27
 type: meeting
 projet: Oli's Lab
-tags: [categories, subcategories, architecture, product-recommendation, olis-lab]
-participants: [Diego, Michele, R\u00e9my]
+tags:
+  - categories
+  - subcategories
+  - architecture
+  - product-recommendation
+  - olis-lab
+participants:
+  - Diego
+  - Michele
+  - Remy
 notion:
 ---
 

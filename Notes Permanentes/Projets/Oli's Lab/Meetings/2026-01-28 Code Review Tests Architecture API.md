@@ -2,8 +2,16 @@
 date: 2026-01-28
 type: meeting
 projet: Oli's Lab
-tags: [code-review, architecture, testing, api, olis-lab]
-participants: [R\u00e9my, Diego, Michele]
+tags:
+  - code-review
+  - architecture
+  - testing
+  - api
+  - olis-lab
+participants:
+  - Diego
+  - Michele
+  - Remy
 notion:
 ---
 

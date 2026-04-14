@@ -2,8 +2,14 @@
 date: 2025-12-30
 type: meeting
 projet: Oli's Lab
-tags: [react-query, refactoring, caching, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - react-query
+  - refactoring
+  - caching
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

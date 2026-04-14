@@ -2,8 +2,16 @@
 date: 2026-02-25
 type: meeting
 projet: Oli's Lab
-tags: [ui, search, mobile, safari, localization, olis-lab]
-participants: [R\u00e9my, Michele]
+tags:
+  - ui
+  - search
+  - mobile
+  - safari
+  - localization
+  - olis-lab
+participants:
+  - Michele
+  - Remy
 notion:
 ---
 

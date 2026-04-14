@@ -2,8 +2,15 @@
 date: 2025-12-23
 type: meeting
 projet: Oli's Lab
-tags: [code-review, state-management, jotai, refactoring, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - code-review
+  - state-management
+  - jotai
+  - refactoring
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

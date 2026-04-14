@@ -2,8 +2,16 @@
 date: 2026-03-26
 type: meeting
 projet: Oli's Lab
-tags: [cms, payload, migration, products, schema, olis-lab]
-participants: [R\u00e9my, Michele]
+tags:
+  - cms
+  - payload
+  - migration
+  - products
+  - schema
+  - olis-lab
+participants:
+  - Michele
+  - Remy
 notion:
 ---
 

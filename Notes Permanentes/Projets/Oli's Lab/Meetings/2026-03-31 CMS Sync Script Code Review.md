@@ -2,8 +2,15 @@
 date: 2026-03-31
 type: meeting
 projet: Oli's Lab
-tags: [cms, payload, sync-script, code-review, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - cms
+  - payload
+  - sync-script
+  - code-review
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

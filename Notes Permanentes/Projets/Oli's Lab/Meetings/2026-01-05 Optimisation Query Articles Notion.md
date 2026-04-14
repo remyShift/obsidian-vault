@@ -2,8 +2,11 @@
 date: 2026-01-05
 type: meeting
 projet: Oli's Lab
-tags: [backend, notion-api, query-optimization, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - olis-lab
+participants:
+  - Remy
+  - Diego
 notion:
 ---
 

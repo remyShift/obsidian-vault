@@ -2,8 +2,16 @@
 date: 2025-12-17
 type: meeting
 projet: Oli's Lab
-tags: [backend, validation, joi, refactoring, article-sync, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - backend
+  - validation
+  - joi
+  - refactoring
+  - article-sync
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

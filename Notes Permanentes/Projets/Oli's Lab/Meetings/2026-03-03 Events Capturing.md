@@ -2,8 +2,14 @@
 date: 2026-03-03
 type: meeting
 projet: Oli's Lab
-tags: [analytics, event-tracking, olis-lab]
-participants: [Michele, Kyle, R\u00e9my]
+tags:
+  - analytics
+  - event-tracking
+  - olis-lab
+participants:
+  - Michele
+  - Kyle
+  - Remy
 notion: https://www.notion.so/olislab/Events-Capturing-3184bf4c7fa18081b304e967cf9cad58
 ---
 

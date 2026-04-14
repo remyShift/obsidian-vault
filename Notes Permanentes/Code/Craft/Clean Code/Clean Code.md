@@ -9,4 +9,6 @@ Ce qu’on entends par **Clean Code** va être toute les techniques permettant d
 
 Un des piliers du clean code sont [[Les Principes SOLID]] qui sont un ensemble de bonne pratique pour de la programmation orienté objets.
 
+De plus le Clean Code part du principe que si on s'en tiens a tout ces principes on peut drastiquement limiter [[L’utilisation des commentaires]].
+
 **NB :** Le Clean Code comme les autres pratiques Craft va être un processus itératif qu’on risque de ne pas atteindre en une seule fois.

@@ -2,8 +2,16 @@
 date: 2026-01-20
 type: meeting
 projet: Oli's Lab
-tags: [product-recommendation, deploy, olis-lab]
-participants: [Michele, Patrick, Diego, Lucas, R\u00e9my]
+tags:
+  - product-recommendation
+  - deploy
+  - olis-lab
+participants:
+  - Michele
+  - Patrick
+  - Diego
+  - Lucas
+  - Remy
 notion: https://www.notion.so/olislab/Product-Recommendation-Release-2ee4bf4c7fa180f78948d63a0e4962d2
 ---
 

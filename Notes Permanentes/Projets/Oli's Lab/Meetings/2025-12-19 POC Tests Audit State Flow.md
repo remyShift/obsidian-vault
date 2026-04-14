@@ -2,8 +2,15 @@
 date: 2025-12-19
 type: meeting
 projet: Oli's Lab
-tags: [state-management, testing, audit, jotai, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - state-management
+  - testing
+  - audit
+  - jotai
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

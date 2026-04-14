@@ -2,8 +2,15 @@
 date: 2026-02-11
 type: meeting
 projet: Oli's Lab
-tags: [cms, payload, poc, data-modeling, olis-lab]
-participants: [R\u00e9my, Diego]
+tags:
+  - cms
+  - payload
+  - poc
+  - data-modeling
+  - olis-lab
+participants:
+  - Diego
+  - Remy
 notion:
 ---
 

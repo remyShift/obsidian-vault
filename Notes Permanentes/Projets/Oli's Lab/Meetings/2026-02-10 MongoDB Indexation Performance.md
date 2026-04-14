@@ -2,8 +2,17 @@
 date: 2026-02-10
 type: meeting
 projet: Oli's Lab
-tags: [mongodb, indexing, performance, database, olis-lab]
-participants: [Diego, R\u00e9my, Patrick, Michele]
+tags:
+  - mongodb
+  - indexing
+  - performance
+  - database
+  - olis-lab
+participants:
+  - Diego
+  - Patrick
+  - Michele
+  - Remy
 notion:
 ---
 

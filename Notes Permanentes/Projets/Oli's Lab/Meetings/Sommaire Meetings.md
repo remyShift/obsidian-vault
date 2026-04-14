@@ -43,10 +43,11 @@ Huddles et réunions thématiques entre membres de l'équipe.
 
 ## Features & Product
 
-| Date | Titre | Participants |
-|---|---|---|
-| [[2026-01-20 Product Recommendation Release]] | Product Recommendation - plan de release | Michele, Patrick, Diego, Lucas, Rémy |
-| [[2026-03-03 Events Capturing]] | Architecture event tracking | Michele, Kyle, Rémy |
+| Date                                              | Titre                                                | Participants                         |
+| ------------------------------------------------- | ---------------------------------------------------- | ------------------------------------ |
+| [[2026-01-20 Product Recommendation Release]]     | Product Recommendation - plan de release             | Michele, Patrick, Diego, Lucas, Rémy |
+| [[2026-03-03 Events Capturing]]                   | Architecture event tracking                          | Michele, Kyle, Rémy                  |
+| [[2026-01-05 Optimisation Query Articles Notion]] | Optimisation des query pour les Articles dans Notion | Diego, Remy                          |
 
 ---
 
