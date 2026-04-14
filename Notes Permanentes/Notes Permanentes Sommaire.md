@@ -24,7 +24,7 @@
 ---
 
 ## 💶 Finances
-- [[Template Dépenses]]
+- Template Dépenses.usheet
 
 ---
 
