@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 Lorsqu’on écrit du code on fait en sorte qu’il soit compréhensible par notre machine pour qu’il marche mais on a facilement tendance à oublier que notre code va être plus souvent lu par des humains qu’écrit. C’est dans cette dynamique de lisibilité que s’inscrit un des piliers du SoftwareCraft : **Le Clean Code**, une manière d’écrire où on pense aux futurs développeurs qui liront notre code.
 

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #Tests #TDD
+---
+tags: [SoftwareCraft, Tests, TDD]
+---
 
 TDD = Test Driven Development 
 - Technique efficace pour développer des fonctionnalités complexes et permet de réduire les peurs et frustrations de par le cadre qu'il apporte

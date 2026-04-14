@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #BDD
+---
+tags: [SoftwareCraft, BDD]
+---
 
 1ere technique de BDD = définir 3 personnes qui auront un rôle spécifique et qui vont discuter des fonctionnalités à construire :
 - la personne qui représente le besoin, le quoi = Product Owner

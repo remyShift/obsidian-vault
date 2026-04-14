@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #BDD
+---
+tags: [SoftwareCraft, BDD]
+---
 
 **BDD** = **B**ehavior-**D**riven **D**evelopment ==> développement dirigé par les comportements
 - améliore l’efficacité de la collaboration entre spécialiste métier et spécialiste technique // ceux qui savent « quoi » construire et ceux qui savent « comment »

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft 
+---
+tags: [SoftwareCraft]
+---
 
 ## Enjeux mis en avant dans le SC
 

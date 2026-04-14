@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 Intervertir certaines lignes permets de :
 - ne pas faire de couper / coller,

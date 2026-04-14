@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 Écrire du code simple et pas superflu le fera tendre vers du code compréhensible par tous. Le code ne doit pas être plus dur à comprendre que la fonction métier dont il s'occupe.
 

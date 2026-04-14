@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto 
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 
 L'extraction permet de pallier à plusieurs besoins comme :

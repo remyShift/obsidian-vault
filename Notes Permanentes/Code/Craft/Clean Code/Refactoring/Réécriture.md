@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
+
 ## Réécriture d’instructions conditionnelles :
 
 Réécrire des instructions conditionnelles peut être fait de manière varié :

@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #SoftwareCraft #Tests #TDD
+---
+tags: [SoftwareCraft, Tests, TDD]
+---
+
 #### Refactor :
 
 Ici on va chercher à améliorer notre code —> le rendre plus lisible, plus maintenable et pour aider l’ajout de futur fonctionnalités

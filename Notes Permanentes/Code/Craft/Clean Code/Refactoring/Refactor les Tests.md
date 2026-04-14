@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto #Tests
+---
+tags: [SoftwareCraft, CleanCode, Refacto, Tests]
+---
 
 
 Refactorer nos tests est d'autant plus important car c'est généralement le point d'entrée d'une personne sur du code qu'elle ne connaît pas.

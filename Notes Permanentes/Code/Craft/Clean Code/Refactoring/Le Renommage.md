@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto 
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 Voir [[L’art du nommage]] pour les principes de fond.
 

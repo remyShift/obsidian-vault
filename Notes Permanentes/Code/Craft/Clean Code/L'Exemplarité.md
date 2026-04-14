@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 En sociologie, la **théorie de la vitre brisé** veut que lorsqu’il y a une dégradation qui n’est pas vite réparer l’être humain aura tendance à entraîner d’autres dégradations successives et rapides vis à vis du bâtiment. 
 L’humain a une tendance au laisser aller dans un environnement dégradé et l’inverse et vraie aussi, il éprouvera plus facilement des scrupules à dégrader / ne pas respecter les règles d’un endroit bien entretenu.

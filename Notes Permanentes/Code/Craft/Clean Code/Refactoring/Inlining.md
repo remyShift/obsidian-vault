@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 ≈ l’inverse de l’extraction
 - On va ici insérer un morceau de code référencé aux endroits qui y font références.

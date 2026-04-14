@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode 
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 Structurer son code est un concept clé du Clean Code qui passe avant tout par l'art du storytelling.
 - Lorsqu'on raconte une histoire on suit une trame, avec un début un milieu et une fin et on déroule notre histoire en suivant cette trame sans partir dans pleins de directions différentes. Il faut appliquer cette logique lorsqu'on code, on ne veut pas perdre notre lecteur lorsqu'il lit notre code on doit lui raconter une histoire en lien avec le problème métier que le code résout.

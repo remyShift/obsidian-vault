@@ -1,5 +1,7 @@
-> [!info]- Tags
-> #SoftwareCraft #Tests #TDD
+---
+tags: [SoftwareCraft, Tests, TDD]
+---
+
 #### Red :
 
 Pour commencer une fonctionnalité on écrit un test qui correspond au comportement attendu mais qui échoue car pas de code encore écrit qui le valide, donc en rouge dans notre IDE.

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto 
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 Enchaîner des refactos avec différents patterns permets d’avoir une meilleure vision de notre code jusqu’à petit à petit avoir un forme satisfaisante.
 

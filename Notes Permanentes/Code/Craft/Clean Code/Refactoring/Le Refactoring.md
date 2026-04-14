@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode #Refacto
+---
+tags: [SoftwareCraft, CleanCode, Refacto]
+---
 
 **Rappel :** Tendre vers du Clean Code se fait via des itérations et n'est jamais / rarement atteint du premier coup.
 - Tout comme le Clean Code et ses techniques, le refactoring n'y échappe c'est aussi un travail d'itérations.

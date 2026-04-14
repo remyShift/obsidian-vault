@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CleanCode 
+---
+tags: [SoftwareCraft, CleanCode]
+---
 
 Les principes **SOLID** sont cinq bonnes pratiques en **programmation orientée objet** qui visent à rendre le code plus **maintenable**, **flexible** et **facile à faire évoluer**.
 

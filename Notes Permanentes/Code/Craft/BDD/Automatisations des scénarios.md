@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #BDD 
+---
+tags: [SoftwareCraft, BDD]
+---
 
 Les scénarios concrets en langages métier issu des atelier de spécifications sont déjà une base solide sur laquelle s’appuyer pour automatiser les tests de non régression.
 - Ils ont déjà tout les détails métiers concrets et pertinents.

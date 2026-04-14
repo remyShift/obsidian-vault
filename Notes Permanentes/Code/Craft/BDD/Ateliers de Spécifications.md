@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #BDD 
+---
+tags: [SoftwareCraft, BDD]
+---
 
 = atelier d’échange des 3 amigos
 - lors des ces ateliers ils vont partir d’une / plusieurs user stories 
