@@ -46,7 +46,7 @@ Fleeting notes en attente de tri :
 
 ```dataview
 TABLE file.ctime AS "Créé"
-FROM "Inbox"
+FROM "Notes de Lecture/Inbox"
 WHERE !contains(file.name, "_template")
 SORT file.ctime DESC
 ```
