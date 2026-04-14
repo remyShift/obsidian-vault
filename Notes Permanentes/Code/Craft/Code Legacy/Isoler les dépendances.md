@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 Une fois la dépendance repérée on va essayer de réduire son impact sur le code en l’isolant. 
 - On veut avoir de l’abstraction entre la dite dépendance et le code qu’on veut tester afin d’avoir comme un tampon entre les deux,

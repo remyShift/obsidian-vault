@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 « Ce qui est important n’est pas ce que le code est supposé faire mais ce qu’il fait réellement. », *SoftwareCraft mais citation d’Arnaud Lemaire*
 

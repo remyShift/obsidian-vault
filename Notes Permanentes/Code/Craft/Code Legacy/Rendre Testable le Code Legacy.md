@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 Lorsqu’on veut tester du code legacy il est courant que lors de l’exécution du test des erreurs soient déclenchées. Et lorsqu’on essaye d’y résoudre on fait face à plusieurs problèmes :
 - le code dépends d’un accès à une ressource externe,

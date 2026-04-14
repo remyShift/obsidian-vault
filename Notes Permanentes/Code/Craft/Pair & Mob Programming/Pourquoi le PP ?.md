@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #PairProgramming
+---
+tags: [SoftwareCraft, PairProgramming]
+---
 
 ## Pourquoi binômer ?
 

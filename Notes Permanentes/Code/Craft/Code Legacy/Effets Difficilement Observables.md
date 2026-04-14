@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 De plus il se peut que nous n’arrivions pas à construire notre Golden Master tout simplement car le code à tester est difficilement observable / difficile d’accès. On est donc dans une impasse : soit on ne sait pas quoi vérifier soit comment accéder à l’état qu’on veut vérifier.
 - Par exemple :

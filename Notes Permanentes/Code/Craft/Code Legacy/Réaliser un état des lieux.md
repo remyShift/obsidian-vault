@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy 
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 ⚠️  On attaque pas directement à refactor notre code legacy ni même à toucher ne serait ce qu’une seule ligne de code.
 

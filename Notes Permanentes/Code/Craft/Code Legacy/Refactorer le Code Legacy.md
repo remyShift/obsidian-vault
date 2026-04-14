@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy 
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 Lorsqu’on observe du code legacy il est facile de voir des morceaux de code facilement « refactorable » (beaucoup de duplication à mettre dans une méthode / fonction, des extractions évidentes …).
 - Si on se jette tête baissé dans cette refactorisation de lecture on risque de passer à côté de duplication de plus haut niveau.

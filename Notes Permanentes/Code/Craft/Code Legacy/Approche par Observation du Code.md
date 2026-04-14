@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy 
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 
 **NB :** pour cette note se référer à la résolution du Gilded Rose Kata dans le livre SoftwareCraft p97.

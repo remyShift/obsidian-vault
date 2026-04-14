@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 On va adopter une approche contre intuitive mais redoutablement efficace !
 - On va se dire que le code marche, fait ce qu’on veut et tourne en prod. 

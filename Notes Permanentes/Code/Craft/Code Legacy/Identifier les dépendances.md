@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 Les dépendances peuvent avoir plusieurs formes et certaines peuvent être plus discrète que d’autre d’où l’intérêt de savoir les identifier efficacement.
 

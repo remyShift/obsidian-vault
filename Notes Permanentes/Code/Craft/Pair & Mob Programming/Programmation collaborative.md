@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #PairProgramming 
+---
+tags: [SoftwareCraft, PairProgramming]
+---
 
 **Collaborer** ==> mieux réussir / avoir un meilleur résultat à plusieurs que seul
 

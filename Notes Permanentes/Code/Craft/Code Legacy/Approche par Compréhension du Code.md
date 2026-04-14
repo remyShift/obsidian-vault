@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 Si le code est relativement claire et peu volumineux on peut commencer à introduire des tests basés sur notre compréhension.
 - Mais par où commencer ?

@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 Dans l’imaginaire collectif **code legacy** = code vieux, mal écrit et pleins de bugs.
 

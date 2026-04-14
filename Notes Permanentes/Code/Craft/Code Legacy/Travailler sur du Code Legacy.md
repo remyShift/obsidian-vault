@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy 
+---
+tags: [SoftwareCraft, CodeLegacy]
+---
 
 ![[Code Legacy Diagram.jpg]]
 Comme le montre se diagramme on va suivre différentes étapes pour travailler efficacement sur du code legacy :

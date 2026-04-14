@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #PairProgramming 
+---
+tags: [SoftwareCraft, PairProgramming]
+---
 
 Ils existent différentes manière de fonctionner en pair programming comme :
 - Le ping-pong,

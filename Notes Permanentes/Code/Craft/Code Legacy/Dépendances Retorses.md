@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #CodeLegacy #Tests 
+---
+tags: [SoftwareCraft, CodeLegacy, Tests]
+---
 
 Dans la plupart des cas le code dépends d’autres choses (// des dépendances), qu’elles soient facilement identifiables ou non.
 - Code de prod impossible à tester en l’état à cause des dépendances.

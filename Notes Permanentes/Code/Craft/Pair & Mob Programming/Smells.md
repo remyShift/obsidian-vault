@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #PairProgramming 
+---
+tags: [SoftwareCraft, PairProgramming]
+---
 
 
 **NB :** *smells* ==> mauvaises odeurs ==> mauvais signes

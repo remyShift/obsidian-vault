@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #MobProgramming
+---
+tags: [SoftwareCraft, MobProgramming]
+---
 
 Mob programming // *ensemble programming* —> avoir une équipe entière sur 1 seule tâche.
 - De plus chaque membre de l’équipe ne travaille pas sur son propre poste, comme pour le pair programming l’équipe est réunis autour d’un seul et même ordinateur.

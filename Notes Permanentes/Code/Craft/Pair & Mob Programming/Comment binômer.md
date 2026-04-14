@@ -1,5 +1,6 @@
-> [!info]- Tags
-> #SoftwareCraft #PairProgramming
+---
+tags: [SoftwareCraft, PairProgramming]
+---
 
 ### 2 rôles distincts :
 
