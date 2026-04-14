@@ -1,3 +1,10 @@
+---
+date: 2025-10-20
+type: meeting
+projet: Oli's Lab
+tags: [tech-weekly, olis-lab]
+---
+
 # Tech Weekly - 20 octobre 2025
 
 **Participants :** Michele, Patrick, Diego, Lucas (absent/malade), Rémy, Ante

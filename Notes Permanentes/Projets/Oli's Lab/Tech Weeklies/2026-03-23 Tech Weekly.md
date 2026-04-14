@@ -1,3 +1,10 @@
+---
+date: 2026-03-23
+type: meeting
+projet: Oli's Lab
+tags: [tech-weekly, olis-lab]
+---
+
 # Tech Weekly - 23 mars 2026
 
 **Participants :** Michele, Diego (absent cette semaine), Kyle, Rémy, Patrick, Lucas, Ante

@@ -1,3 +1,10 @@
+---
+date: 2026-03-09
+type: meeting
+projet: Oli's Lab
+tags: [tech-weekly, olis-lab]
+---
+
 # Tech Weekly - 9 mars 2026
 
 **Participants :** Michele, Diego, Kyle, Rémy, Patrick, Lucas, Ante

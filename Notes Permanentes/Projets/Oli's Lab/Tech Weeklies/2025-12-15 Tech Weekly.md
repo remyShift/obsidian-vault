@@ -1,3 +1,10 @@
+---
+date: 2025-12-15
+type: meeting
+projet: Oli's Lab
+tags: [tech-weekly, olis-lab]
+---
+
 # Tech Weekly - 15 décembre 2025
 
 **Participants :** Michele, Diego, Lucas, Rémy, Patrick, Ante
