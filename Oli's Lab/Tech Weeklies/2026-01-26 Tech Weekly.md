@@ -5,148 +5,138 @@
 
 ---
 
-## Migration catégories et sous-catégories
+## Migration catégories / sous-catégories
 
 ### Problème
 - Les produits et bundles contiennent encore les anciens labels de catégories/sous-catégories
-- Risque : si on met à jour une image ou un contenu via l'automation Notion, l'automation écrase les catégories avec des traductions incorrectes
+- Risque principal : quand l'automation met à jour un produit (images notamment), elle peut écraser les catégories avec des traductions incorrectes
+- Les traductions actuelles des produits ont déjà été corrigées manuellement la semaine dernière
+- La nouvelle liste de labels fournie par Cindy et Louis n'est pas encore implémentée : Rémy attend la nouvelle structure de collections pour le faire là, plus sûr et plus scoped
 
-### Situation actuelle
-- Les traductions actuelles ont été corrigées manuellement la semaine dernière (suite à l'appel avec Louis)
-- La liste de nouveaux labels fournie par Cindy et Louis n'est PAS encore implémentée : Rémy préfère attendre la nouvelle structure de collections pour le faire en un seul endroit et limiter les risques d'erreur
+### Solution court terme
+- Rémy fait une PR aujourd'hui : ajout d'un check sur les endpoints produit et bundle pour ne pas re-traduire une catégorie si une traduction existe déjà
+- Si une nouvelle catégorie apparaît (nouveau produit avec une catégorie inconnue), elle passera en anglais uniquement, ce qui est acceptable temporairement
+- Si les mises à jour produits restent rares entre-temps, les corrections manuelles en DB sont suffisantes comme filet de sécurité
 
-### Plan de migration (en 3 étapes)
-1. **Peupler les nouvelles collections** `categories` et `subcategories` dans MongoDB
-   - Rémy a un script avec un objet "hierarchy" qui évite les doublons et gère les traductions proprement
-   - Chaque produit sera lié à une sous-catégorie, la catégorie est déduite de la sous-catégorie
-2. **Validation par l'équipe produit**
-   - Exporter depuis MongoDB un CSV avec : SKU, titre produit, catégorie EN, catégorie FR, sous-catégorie EN, sous-catégorie FR
-   - Passer le CSV en revue avec Cindy, Louis et Suze
-3. **Mettre à jour tous les endroits qui lisent les catégories**
-   - Pages produit, recherche, filtres du menu, bundles
-   - La navbar/menu sera le cas d'usage réel pour tester la lecture des nouvelles collections
+### Plan de migration complet (3 étapes)
 
-### Gestion de la période de transition
-- MongoDB gère les changements de schéma session par session : les 25 utilisateurs connectés au moment du deploy ne verront aucune disruption
-- Stratégie : peupler la base d'abord, déployer la nouvelle logique de lecture ensuite. Zéro downtime.
-- L'automation Notion continuera d'écrire dans les anciens champs, mais on lira uniquement les nouveaux. Pas de conflit tant qu'on n'ajoute pas de nouvelles catégories.
-- Si une nouvelle catégorie doit être ajoutée pendant la transition : l'ajouter directement dans la nouvelle collection (plus simple que de passer par Notion + automation + traduction)
+**Étape 1** : Remplir les nouvelles collections `categories` et `subcategories` dans MongoDB
+- Rémy a déjà un script avec un objet `hierarchy` qui mappe les catégories/sous-catégories sans doublons et gère les traductions proprement
+
+**Étape 2** : Exporter une table de validation (CSV) depuis MongoDB
+- Colonnes : SKU, titre produit, catégorie EN, catégorie FR, sous-catégorie EN, sous-catégorie FR
+- À valider par Cindy, Louis et Suze avant de passer à l'étape 3
+
+**Étape 3** : Mettre à jour tous les endroits qui lisent les catégories/sous-catégories pour pointer vers les nouvelles collections
+- Pages produit
+- Recherche (oublié initialement, à ajouter)
+- Filtres du menu
+- Bundles
+
+**Note déploiement :** MongoDB gère les changements de schéma par session. Les utilisateurs actifs au moment du deploy ne verront aucune disruption. Idéalement : DB entièrement peuplée avant de déployer le nouveau code de lecture.
 
 ### Bundles
-- Bug identifié : l'automation bundles utilisait des types différents de ceux des produits pour les catégories/sous-catégories côté Notion
-- Solution décidée : calculer les catégories d'un bundle à partir des produits qu'il contient (unique sur les sous-catégories des produits du bundle), puis les stocker en les recalculant à chaque création/update
-- Bundles traités en phase 2, après les produits
-- Statut actuel : traductions bundles correctes en Notion (fix manuel la semaine dernière)
+- Bug trouvé : l'automation des bundles utilisait des types différents pour catégories/sous-catégories par rapport aux produits (incohérence côté Notion)
+- Solution retenue : calculer les catégories/sous-catégories d'un bundle depuis les produits qu'il contient (unique sur les sous-catégories de tous les produits du bundle), recomputer à chaque création/mise à jour
+- Bundles traités en **phase 2** après les produits
+- En attendant : sous-catégories et traductions des bundles correctes dans Notion (corrigées manuellement la semaine dernière)
 
-### Automation Notion / CMS
-- Idée discutée : ajouter un flag "update images only" ou "update content without translation" dans Make pour éviter le retraitement inutile des traductions à chaque update d'image
-- Décision : pas d'investissement supplémentaire sur l'automation Notion si le projet CMS démarre bientôt. À réévaluer selon la décision sur le CMS cette semaine.
-
----
-
-## Navbar et menu
-
-- Lucas a commencé la partie UI
-- Rémy prend le relais pour la logique et l'intégration, y compris la recherche
-- Ce projet servira de vrai cas d'usage pour lire les catégories/sous-catégories depuis les nouvelles collections
-- Rémy reste focus sur le chantier catégories/sous-catégories encore une semaine avant de basculer sur la navbar
+### CMS et automation
+- La migration CMS pourrait démarrer plus tôt que prévu : Michele ne veut pas sur-investir dans l'automation Notion actuelle
+- Idée discutée mais non prioritaire : ajouter un flag "update images only" dans Make pour éviter de déclencher la traduction lors d'une simple mise à jour d'image
+- Décision selon ce qui sera décidé cette semaine sur le CMS
 
 ---
 
-## Checkout et feature flags (Diego)
-
-- Diego travaille sur les corrections du checkout et des feature flags
-- Question ouverte : les questions du quiz sont-elles sous feature flag ?
-  - Si non, les utilisateurs ne verront pas le survey PostHog lié au feature flag
-  - Patrick doit vérifier. Si besoin : wrapper toutes les questions du quiz sous le même feature flag
-- Feature flag sur la page collection : confirmé en place
-- Michele veut ajouter un quick survey PostHog sur le flux quiz pour collecter du feedback, lié au feature flag
+## Navbar / Menu (Rémy + Lucas)
+- Lucas a commencé la partie UI des composants
+- Rémy prend la suite pour l'intégration, la logique et la recherche
+- Ce projet servira de **cas réel** pour tester la lecture depuis les nouvelles collections catégories/sous-catégories
+- Priorité cette semaine : Rémy reste focus sur les catégories/sous-catégories, navbar en parallèle dès que possible
 
 ---
 
-## Projet scientifique : fin des scripts manuels (Patrick)
+## Checkout & Feature Flags (Diego)
 
-### Problème
-- Cindy fait des modifications dans staging (ajout/suppression de fonctions sur des produits) qui impactent le scoring
-- Patrick doit relancer des scripts manuellement à chaque fois pour recalculer
+- Diego travaille sur les corrections du checkout et les feature flags
+- **Point à vérifier :** les questions du quiz ne sont peut-être pas sous feature flag. Si c'est le cas, le survey PostHog post-quiz ne s'affichera pas (le survey est lié au feature flag + aux événements trackés par Rémy)
+- La collection page a bien son feature flag en place, confirmé
+- Patrick devra wrapper toutes les questions du quiz sous le même feature flag si ce n'est pas déjà fait
+- Diego notifiera l'équipe quand le feature flag mis à jour sera prêt à tester
+
+---
+
+## Site scientifique (Patrick)
+
+### Problème actuel
+- Cindy fait des modifications dans le staging scientifique (ajout/suppression de fonctions sur des produits) qui impactent les scores
+- Cela oblige Patrick à relancer des scripts manuellement sur sa machine, encore et encore
 
 ### Solution proposée
-- Créer des endpoints dans l'app scientifique pour déclencher le scoring depuis une interface, sans script
-- Interface possible : Retool ou AppSmith connecté à MongoDB, avec des boutons qui appellent les endpoints
-- Fonctionnalités cibles :
-  - Lancer le scoring en batch
-  - Sélectionner un ingrédient et rescorer tous les produits qui le contiennent
-  - CRUD propre pour éditer les ingrédients et leurs fonctions
+- Créer dans le site scientifique des endpoints dédiés à la place des scripts locaux
+- Interface possible via **Retool ou AppSmith** connectés à MongoDB : Cindy peut déclencher un re-scoring depuis l'UI sans passer par Patrick
+- Fonctionnalités à ajouter :
+  - Lancer un scoring en batch
+  - Sélectionner un ingrédient et re-scorer tous les produits qui le contiennent
+  - Meilleur CRUD pour éditer les ingrédients et leurs fonctions
 
-### Nouvelle règle : aucun script en production
-- **Règle officielle :** aucun script ne doit être lancé en production sans approbation explicite de Michele ou communication dans le channel tech
-- Si un script doit absolument être lancé : le committer dans un dossier `/scripts` du repo concerné (web app ou scientific) pour avoir un historique de ce qui a été lancé, par qui, et quelle version
-- L'idée de sauvegarder l'état pré-script pour rollback a été rejetée : trop lourd à maintenir, la DB va grossir
+### Règle nouvelle : aucun script en production
+- **Plus aucun script ne doit tourner en production sans approbation de Michele ou communication préalable à l'équipe**
+- Process si script nécessaire : le committer dans un dossier `/scripts` dans le repo concerné (web app ou scientifique) pour garder une trace de ce qui a été exécuté, par qui, et quelle version
+- Idée de sauvegarder l'état pré-script pour rollback : rejetée (DB trop grosse, pas une bonne pratique)
 
 ---
 
-## Inconsistances Notion vs base de données (actifs)
+## Incohérences Notion vs base de données
 
-### Constat
-- Après le script de la semaine dernière (introduction du statut "published" sur les collections), Michele a découvert des écarts significatifs entre Notion et la DB
-- Exemple : actifs = ~170 entrées dans Notion, ~130 en base. 40 de différence.
-- Cause probable : des items ont été ajoutés à Notion mais l'automation ne les a jamais envoyés en base
-
-### Risque actuel
-- Si un item est édité dans Notion, il repasse en statut "offline" par défaut (le champ est offline par défaut dans Notion)
-- Pour les actifs, le risque est limité car ils ne sont pas encore fortement utilisés côté web. Pour les produits, une seule différence serait critique.
+### Problème découvert
+- Après le script qui a introduit le `published_status` sur les collections, des écarts importants ont été constatés entre Notion et la DB
+- Exemple : ingrédients actifs : ~170 sur Notion, ~130 en DB. Différence de ~40 items.
+- Cause probable : des items ont été ajoutés dans Notion mais jamais envoyés en DB
+- Risque actuel : si un item est édité dans Notion, il passera en `offline` par défaut (le champ est offline par défaut dans Notion)
 
 ### Décision
-- Ne pas construire une intégration Make/Notion complexe maintenant si la migration CMS est à quelques semaines
-- Rémy et Michele exportent les deux listes (Notion + DB) et les comparent pour identifier les entrées manquantes
-- Cindy sera consultée sur les actifs manquants
-- Sujet à reprendre lors de la migration CMS
+- Ne pas construire une intégration Make complexe maintenant si la migration CMS est à quelques semaines
+- Pour les actifs spécifiquement : pas d'urgence, c'est moins critique que les produits
+- Rémy et Michele vont exporter Notion + DB et comparer pour identifier les écarts sur les actifs, avec l'aide de Cindy
 
-### Besoin long terme identifié
-- Même après le CMS, il faudra un mécanisme de **bulk update / bulk reset** : Suze travaille régulièrement sur des exports CSV pour analyser les produits et voudra repousser les changements en base
-- Pas résolu maintenant, mais à anticiper dans la conception du CMS
+### Besoin long terme
+- Même après la migration CMS, il faudra un mécanisme de **bulk update** : quand Suze fait une analyse dans Excel/CSV et veut pousser les changements en masse, on doit pouvoir le faire proprement
+- À intégrer dans le plan CMS
 
 ---
 
-## Feature "Recommended For Me" (Patrick)
+## Feature "Recommended For Me" (Patrick + Diego + Rémy)
 
-### Loading screen
-- Patrick a ajouté un état de chargement dans le bouton de soumission du formulaire
-- Problème de wording : "saving results" peut être confus car les utilisateurs non connectés voient aussi "save my analysis"
-- **Solution décidée :** utiliser "Submitting the form" suivi de "Computing your products" / "Finding products" à l'ouverture de la page de recommandations
+### Loading screen (Patrick)
+- Patrick a ajouté un loading state sur le bouton de submit du formulaire
+- Problème de wording : "Saving results" est ambigu pour les utilisateurs non connectés (qui voient aussi "Save my analysis")
+- **Wording décidé :** "Submitting the form" puis "Computing your products" / "Finding products" lors du chargement de la page de recommandations
 
 ### Bugs identifiés
-- Certains produits ne remontent pas dans les recommandations pour des raisons inconnues
-- Michele va créer des tickets séparés pour chaque problème identifié
+- Certains produits n'apparaissent pas dans les recommandations pour des raisons inconnues
+- Michele va créer des tickets séparés pour chaque problème
 
-### Scripts Python (Diego)
-- Diego peut écrire des scripts Python pour calculer les scores en ~1 heure
-- Seuil d'âge actuel : 25 ans (un seul seuil)
+### Seuil d'âge
+- Actuellement un seul seuil : 25 ans (au-dessus ou en-dessous)
+- Diego va écrire des scripts Python pour tester les calculs sur ce seuil
 
 ---
 
 ## Actions
 
-- [ ] **Rémy** - PR pour ajouter des checks sur les endpoints produit et bundle (ne pas retraduire si traduction déjà existante)
-- [ ] **Rémy** - Peupler les nouvelles collections `categories` et `subcategories` dans MongoDB
-- [ ] **Rémy** - Créer le CSV d'export (SKU, titre, catégorie EN/FR, sous-catégorie EN/FR) pour validation par Cindy/Louis/Suze
-- [ ] **Rémy** - Mettre à jour tous les endroits qui lisent catégories/sous-catégories (search, menu, filtres, bundles)
-- [ ] **Rémy** - Continuer la navbar/menu encore une semaine (intégration logique + search)
-- [ ] **Rémy + Michele** - Exporter et comparer les listes Notion vs DB pour les actifs, identifier les écarts
-- [ ] **Diego** - Finaliser les corrections checkout et feature flags, notifier l'équipe quand prêt pour les tests
-- [ ] **Diego** - Créer les scripts Python pour les calculs produits (seuil d'âge : 25 ans)
-- [ ] **Patrick** - Vérifier si les questions du quiz sont sous feature flag, wrapper si besoin
-- [ ] **Patrick** - Développer les endpoints pour le scoring scientifique (batch scoring, rescore par ingrédient)
-- [ ] **Patrick** - Finaliser le loading screen avec le wording "Submitting the form" / "Computing your products"
+- [ ] **Rémy** - PR avec checks anti-re-traduction sur les endpoints produit et bundle
+- [ ] **Rémy** - Peupler les nouvelles collections `categories` et `subcategories` en MongoDB
+- [ ] **Rémy** - Créer le CSV d'export (SKU, titre, catégorie EN/FR, sous-catégorie EN/FR) pour validation
+- [ ] **Rémy** - Mettre à jour tous les endroits qui lisent catégories/sous-catégories (search, menu, filtres, etc.)
+- [ ] **Rémy** - Continuer le travail navbar/menu (encore une semaine focus catégories d'abord)
+- [ ] **Rémy + Michele** - Exporter et comparer Notion vs DB pour les ingrédients actifs, identifier les écarts
+- [ ] **Diego** - Finaliser les corrections checkout et feature flags, notifier l'équipe pour tests
+- [ ] **Diego** - Scripts Python pour les calculs de recommandations (seuil d'âge 25 ans)
+- [ ] **Patrick** - Vérifier si les questions du quiz sont sous feature flag, wrapper si nécessaire
+- [ ] **Patrick** - Développer les endpoints pour le site scientifique (scoring sans scripts locaux)
+- [ ] **Patrick** - Finaliser le loading screen avec le wording "Submitting form" / "Computing products"
 - [ ] **Michele** - Appel demain sur les mises à jour de pages
-- [ ] **Michele** - Créer des tickets séparés pour les problèmes de recommandations identifiés
-- [ ] **Toute l'équipe** - Reviewer le flow de recommandation de produits sur staging
-- [ ] **Cindy** - Être consultée sur les écarts d'actifs entre Notion et la DB
-
----
-
-## Notes complémentaires
-
-- La question d'un **bulk update/reset** de la base de données sera un besoin récurrent, avec ou sans CMS : à anticiper dans la conception
-- L'automation Notion et la DB sont désynchronisées sur plusieurs collections (actifs confirmés, autres à vérifier). Le CMS doit résoudre ce problème structurellement.
-- Règle de prod rappelée : tout script lancé en production doit être approuvé par Michele et committé dans le repo
+- [ ] **Michele** - Créer les tickets séparés pour les bugs de recommandations produit
+- [ ] **Cindy** - Être consultée sur les écarts ingrédients actifs entre Notion et DB
+- [ ] **Toute l'équipe** - Tester le flow "Recommended For Me" sur staging
