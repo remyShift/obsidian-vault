@@ -6,7 +6,6 @@
   "obsidian-icon-folder",
   "obsidian-file-color",
   "obsidian-auto-link-title",
-  "obsidian-tasks-plugin",
   "markdown-table-editor",
   "colored-text",
   "table-checkboxes",
@@ -17,6 +16,5 @@
   "univer",
   "obsidian-local-rest-api",
   "mcp-tools",
-  "obsidian-git",
-  "3d-graph"
+  "obsidian-git"
 ]
