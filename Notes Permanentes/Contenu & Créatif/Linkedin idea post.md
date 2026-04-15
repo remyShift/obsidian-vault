@@ -33,4 +33,5 @@ tags: [Work, Perso]
 - [ ] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse 
 - [ ] Setup maison obsidian + claude
 - [ ] claude-mem
+- [ ] Lyon Craft
 - [x] réponse question entretien par rapport à l’ia
