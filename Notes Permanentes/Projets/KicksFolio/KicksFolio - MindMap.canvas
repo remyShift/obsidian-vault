@@ -1,8 +1,8 @@
 {
 	"nodes":[
-		{"id":"01d9013746ba7e7f","type":"file","file":"Notes Permanentes/Code/KicksFolio/Roadmap Knowledge.md","x":583,"y":390,"width":677,"height":950,"color":"2"},
-		{"id":"eeac80f32555e6f1","x":1480,"y":-85,"width":677,"height":950,"color":"5","type":"file","file":"Notes Permanentes/Code/KicksFolio/KicksFolio.md"},
-		{"id":"86e5be2bb21f30fc","x":2320,"y":628,"width":677,"height":492,"type":"file","file":"Notes Permanentes/Code/KicksFolio/Brainstorming- CdC.md"}
+		{"id":"01d9013746ba7e7f","type":"file","file":"Notes Permanentes/Projets/KicksFolio/Roadmap Knowledge.md","x":583,"y":390,"width":677,"height":950,"color":"2"},
+		{"id":"eeac80f32555e6f1","type":"file","file":"Notes Permanentes/Projets/KicksFolio/KicksFolio.md","x":1480,"y":-85,"width":677,"height":950,"color":"5"},
+		{"id":"86e5be2bb21f30fc","type":"file","file":"Notes Permanentes/Projets/KicksFolio/Brainstorming- CdC.png","x":2320,"y":628,"width":677,"height":450}
 	],
 	"edges":[
 		{"id":"7ec5861785902cae","fromNode":"eeac80f32555e6f1","fromSide":"left","toNode":"01d9013746ba7e7f","toSide":"right","color":"#ff0000"},
