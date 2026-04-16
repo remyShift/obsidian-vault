@@ -1,3 +1,8 @@
+---
+source: ai
+---
+
+
 # 2026-04-12 — Restructuration Obsidian
 
 **Domaine :** Workflow / Organisation personnelle  

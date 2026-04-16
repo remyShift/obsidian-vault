@@ -1,3 +1,7 @@
+---
+source: ai
+---
+
 # 2026-04-12 — Préparation talk LyonCraft
 
 **Domaine :** Créatif / Carrière
