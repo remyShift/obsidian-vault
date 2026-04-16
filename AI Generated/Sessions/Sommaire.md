@@ -11,3 +11,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | obsidian-vault | [[AI Generated/Sessions/obsidian-vault/2026-04-14_21-52]] |
 | olis-lab       | [[AI Generated/Sessions/olis-lab/2026-04-14_10-58]] |
 | olis-lab       | [[AI Generated/Sessions/olis-lab/2026-04-15_11-27]] |
+| olis-lab       | [[AI Generated/Sessions/olis-lab/2026-04-16_10-51]] |
