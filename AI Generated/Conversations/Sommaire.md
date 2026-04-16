@@ -1,4 +1,4 @@
-# Sommaire — Conversations
+# Sommaire - Conversations
 
 Synthèses de conversations générées via `/wrap`.
 
