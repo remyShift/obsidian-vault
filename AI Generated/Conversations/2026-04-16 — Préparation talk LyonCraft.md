@@ -115,6 +115,8 @@ Parce que ce qui nous forge en tant que développeur, ce n'est pas la formation 
 - Mention Rothschild dans l'accroche écartée → name-dropping, fragilise la crédibilité
 - Structure en 3 actes + intro + conclusion validée
 - Les points entre parenthèses dans les incontournables sont des obligatoires, pas des options
+- System prompt Claude rédigé en anglais pour le projet LyonCraft — positionne Claude comme coach conférencier tech, intègre tout le contexte du talk
+- Bon path Obsidian confirmé : `AI Generated/Conversations/` et non `Conversations/` à la racine
 
 ---
 
