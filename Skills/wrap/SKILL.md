@@ -1,6 +1,6 @@
 ---
 name: wrap
-description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at Conversations/YYYY-MM-DD — Title.md via MCP. Always use this skill when the user types "/wrap", without exception.
+description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at AI Generated/Conversations/YYYY-MM-DD — Title.md via MCP. Always use this skill when the user types "/wrap", without exception.
 ---
 
 # Wrap Skill
@@ -14,6 +14,16 @@ Only `/wrap` — no variants.
 `AI Generated/Conversations/YYYY-MM-DD — Titre court.md`
 - Date = today's date
 - Title = short, descriptive, in French, reflecting the main topic
+
+## CRITICAL — Correct full path
+**Always use this exact base path for every read and write operation:**
+`/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Conversations/`
+
+**Never write to:**
+- `/Users/remy_mac/Desktop/everything/Obsidian Vault/Conversations/` ← WRONG
+- Any other path ← WRONG
+
+Use `vault:write_file` with the full correct path. Do not use `obsidian:write_file` unless `vault:write_file` is unavailable.
 
 ---
 
@@ -101,3 +111,4 @@ source: ai
 - Omit sections that have no content (e.g. no action items → no "Actions à faire")
 - Never merge two different conversations into the same file, even if they share the same date
 - When updating, always rewrite the full note — never just append
+- Never use this '—' prefer use '-'
