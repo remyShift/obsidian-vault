@@ -1,5 +1,6 @@
 ---
-tags: [workflow, claude, obsidian, outils]
+tags:
+  - Perso
 ---
 
 # Workflow Claude + Obsidian
@@ -24,6 +25,3 @@ tags: [workflow, claude, obsidian, outils]
 
 ## Principe de design
 Commandes manuelles volontairement : rester maître de ce qui est conservé, éviter que tout finisse dans les notes. Discipline > automatisation fragile.
-
-## Liens
-- [[Parcours & Narrative professionnelle]]
