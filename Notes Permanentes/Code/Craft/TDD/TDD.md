@@ -31,4 +31,4 @@ Le développement d'une fonctionnalité va se faire en itérations à savoir : [
 
 Pour résumer l'objectif du TDD est de définir un objectif / besoin sous la forme d'un test qu'on veut faire passer au vert avec le minimum de code possible avant de passer à essayer de rendre notre code plus lisible.
 
-En pratique, selon le contexte et le type de système qu'on développe, deux approches existent : TDD Outside-In vs Inside-Out. #ToDo 
+En pratique, selon le contexte et le type de système qu'on développe, deux approches existent : [[TDD Outside-In vs Inside-Out]].

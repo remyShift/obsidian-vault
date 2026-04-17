@@ -24,5 +24,6 @@ SoftwareCraft comprend une sélection de techniques afin de parvenir à un déve
 - [[Clean Code]],
 - [[Code Legacy]],
 - [[Programmation collaborative]],
-- Techniques de Refactoring #ToDo ,
-- DDD #ToDo 
+- [[Le Refactoring]],
+- [[Domain-Driven Design|DDD]],
+- [[Design Patterns]]
