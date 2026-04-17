@@ -12,3 +12,4 @@ Synthèses de conversations générées via `/wrap`.
 | 2026-04-14 | [[2026-04-14 — Construction base de connaissance Oli's Lab]]                                 |
 | 2026-04-16 | [[AI Generated/Conversations/2026-04-16 - Ghostwriter LinkedIn - System Prompt]]             |
 | 2026-04-16 | [[AI Generated/Conversations/2026-04-16 - Post LinkedIn Setup Claude + Obsidian]]            |
+| 2026-04-16 | [[2026-04-16 — Préparation talk LyonCraft]]                                                  |

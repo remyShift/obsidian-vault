@@ -8,143 +8,59 @@
   "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "tag:#Agilité  ",
+      "query": "path:\"Notes Permanentes/Code\"  ",
       "color": {
         "a": 1,
-        "rgb": 16185499
+        "rgb": 15765442
       }
     },
     {
-      "query": "tag:#Informatique  ",
+      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
       "color": {
         "a": 1,
-        "rgb": 10648905
+        "rgb": 16745605
       }
     },
     {
-      "query": "tag:#KicksFolio  ",
+      "query": "path:\"Notes Permanentes/Finances\"  ",
       "color": {
         "a": 1,
-        "rgb": 16711680
+        "rgb": 8411995
       }
     },
     {
-      "query": "tag:#SoftwareCraft  ",
-      "color": {
-        "a": 1,
-        "rgb": 16749824
-      }
-    },
-    {
-      "query": "tag:#Tests  ",
-      "color": {
-        "a": 1,
-        "rgb": 2883328
-      }
-    },
-    {
-      "query": "tag:#Veille  ",
-      "color": {
-        "a": 1,
-        "rgb": 15635700
-      }
-    },
-    {
-      "query": "tag:#Perso  ",
-      "color": {
-        "a": 1,
-        "rgb": 16497852
-      }
-    },
-    {
-      "query": "tag:#WebDevKnowledge  ",
-      "color": {
-        "a": 1,
-        "rgb": 40447
-      }
-    },
-    {
-      "query": "tag:#CodeKnowledge  ",
-      "color": {
-        "a": 1,
-        "rgb": 11596459
-      }
-    },
-    {
-      "query": "tag:#DevTools  ",
-      "color": {
-        "a": 1,
-        "rgb": 12212826
-      }
-    },
-    {
-      "query": "tag:#NextJS  ",
-      "color": {
-        "a": 1,
-        "rgb": 0
-      }
-    },
-    {
-      "query": "tag:#React  ",
-      "color": {
-        "a": 1,
-        "rgb": 1966335
-      }
-    },
-    {
-      "query": "tag:#BugSolved  ",
-      "color": {
-        "a": 1,
-        "rgb": 4416825
-      }
-    },
-    {
-      "query": "tag:#Ruby  ",
-      "color": {
-        "a": 1,
-        "rgb": 16711680
-      }
-    },
-    {
-      "query": "tag:#JS  ",
-      "color": {
-        "a": 1,
-        "rgb": 15135786
-      }
-    },
-    {
-      "query": "tag:#ThreeJS  ",
-      "color": {
-        "a": 1,
-        "rgb": 8716392
-      }
-    },
-    {
-      "query": "tag:#ReactNative  ",
-      "color": {
-        "a": 1,
-        "rgb": 9756671
-      }
-    },
-    {
-      "query": "tag:#LangagesDeProgs  ",
-      "color": {
-        "a": 1,
-        "rgb": 10389760
-      }
-    },
-    {
-      "query": "tag:#Korea  ",
+      "query": "path:\"Notes Permanentes/Korea\"  ",
       "color": {
         "a": 1,
         "rgb": 16777215
       }
     },
     {
-      "query": "tag:#olis-lab  ",
+      "query": "path:\"Notes Permanentes/Projets/KicksFolio\"  ",
       "color": {
         "a": 1,
-        "rgb": 14869174
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Projets/Oli's Lab\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15727012
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Vie Perso\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 9079551
+      }
+    },
+    {
+      "query": "path:\"AI Generated\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16755768
       }
     }
   ],
@@ -154,10 +70,10 @@
   "nodeSizeMultiplier": 1.12678819444444,
   "lineSizeMultiplier": 1.01449652777778,
   "collapse-forces": false,
-  "centerStrength": 0.180558853795615,
-  "repelStrength": 20,
-  "linkStrength": 0.462677115491174,
-  "linkDistance": 221,
-  "scale": 0.33404940046991094,
+  "centerStrength": 0.28156415736563,
+  "repelStrength": 8.48729517929233,
+  "linkStrength": 0.518404179529803,
+  "linkDistance": 156,
+  "scale": 0.49423816975595536,
   "close": true
 }
