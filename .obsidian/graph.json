@@ -18,7 +18,42 @@
       "query": "path:Skills  ",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 16749824
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Vie Perso\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Code\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 1114367
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16745605
+      }
+    },
+    {
+      "query": "path",
+      "color": {
+        "a": 1,
+        "rgb": 16711592
+      }
+    },
+    {
+      "query": "",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
       }
     }
   ],
@@ -32,6 +67,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4315142427210729,
+  "scale": 0.5273115513168466,
   "close": false
 }
