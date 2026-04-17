@@ -31,7 +31,7 @@ tags: [Work, Perso]
 - [ ] Trouver nom de branche
 - [ ] App coréenne valide le mail pendant le signup
 - [ ] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse 
-- [ ] Setup maison obsidian + claude
+- [x] Setup maison obsidian + claude
 - [ ] claude-mem
 - [ ] Lyon Craft
 - [x] réponse question entretien par rapport à l’ia
