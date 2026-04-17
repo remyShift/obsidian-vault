@@ -116,14 +116,14 @@ Un modèle anémique = violation du SRP + [[Code Smells|Feature Envy]] général
 
 ## DDD et les autres pratiques Craft
 
-| Pratique | Lien avec DDD |
-|---|---|
-| **Ubiquitous Language** | Application directe de l'intention (Clean Code, [[L'art du nommage]]) |
-| **Value Objects** | Éliminent la Primitive Obsession ([[Code Smells]]) |
-| **Aggregates** | Application du SRP et de la [[Loi de Déméter]] |
-| **Repository** | Application du DIP ([[Les Principes SOLID]]) |
-| **Bounded Contexts** | Faible couplage entre sous-systèmes ([[Coupling & Cohesion]]) |
-| **TDD** | [[TDD Outside-In vs Inside-Out\|Outside-In]] est naturel en DDD : on part du comportement attendu du domaine |
+| Pratique                | Lien avec DDD                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Ubiquitous Language** | Application directe de l'intention (Clean Code, [[L’art du nommage]])                                        |
+| **Value Objects**       | Éliminent la Primitive Obsession ([[Code Smells]])                                                           |
+| **Aggregates**          | Application du SRP et de la [[Loi de Déméter]]                                                               |
+| **Repository**          | Application du DIP ([[Les Principes SOLID]])                                                                 |
+| **Bounded Contexts**    | Faible couplage entre sous-systèmes ([[Coupling & Cohesion]])                                                |
+| **TDD**                 | [[TDD Outside-In vs Inside-Out\|Outside-In]] est naturel en DDD : on part du comportement attendu du domaine |
 
 ---
 

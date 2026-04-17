@@ -64,7 +64,7 @@ Les smells ne demandent pas tous un refactoring immédiat. Ils **informent** une
 
 ## Smells liés aux commentaires
 
-**Comments as Deodorant** — un commentaire qui explique *ce que* fait le code. Le code devrait s'expliquer lui-même. Fix : renommer, extraire une fonction bien nommée. Cf. [[L'art du nommage]], [[L'utilisation des commentaires]].
+**Comments as Deodorant** — un commentaire qui explique *ce que* fait le code. Le code devrait s'expliquer lui-même. Fix : renommer, extraire une fonction bien nommée. Cf. [[L’art du nommage]], [[L’utilisation des commentaires]].
 
 ---
 
