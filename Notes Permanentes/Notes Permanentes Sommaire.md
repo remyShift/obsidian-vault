@@ -20,6 +20,7 @@
 - [[Films à voir]]
 - [[Quotes]]
 - [[Daily Notes Intro|Daily Notes]]
+- [[Parcours & Narrative professionnelle]]
 
 ---
 
