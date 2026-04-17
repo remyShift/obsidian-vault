@@ -19,7 +19,7 @@
 - [[Life Program 2024]]
 - [[Films à voir]]
 - [[Quotes]]
-- [[Outfits Shooting]]
+- [[Daily Notes Intro|Daily Notes]]
 
 ---
 
