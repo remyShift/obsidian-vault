@@ -23,6 +23,6 @@ Néanmoins, si on suit les règles du TDD on peut réduire les 4 règles précé
 - **Réduire la duplication**
 
 Écrire du code simple permet notamment d'exprimer d'une manière plus claire l'intention. On cherche à expliquer ce qu'on veut faire et pourquoi on le fait plutôt que le comment. Pour y arriver on va chercher à suivre 3 principes à savoir :
-- [[L'art du nommage]],
+- [[L’art du nommage]],
 - [[Structurer le code]],
-- [[L'utilisation des commentaires]]
+- [[L’art du nommage]]
