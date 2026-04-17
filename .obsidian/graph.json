@@ -6,74 +6,17 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [
-    {
-      "query": "path:\"Notes Permanentes/Code\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 15765442
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16745605
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Finances\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 8411995
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Korea\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Projets/KicksFolio\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16711680
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Projets/Oli's Lab\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 15727012
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Vie Perso\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 9079551
-      }
-    },
-    {
-      "query": "path:\"AI Generated\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16755768
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": -2.6,
-  "nodeSizeMultiplier": 1.12678819444444,
-  "lineSizeMultiplier": 1.01449652777778,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.28156415736563,
-  "repelStrength": 8.48729517929233,
-  "linkStrength": 0.518404179529803,
-  "linkDistance": 156,
-  "scale": 0.49423816975595536,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 2.6628232824583895,
   "close": true
 }

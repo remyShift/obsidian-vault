@@ -11,10 +11,14 @@
   "table-checkboxes",
   "colored-tags-wrangler",
   "obsidian-vault-statistics-plugin",
-  "obsidian-style-settings",
   "recent-files-obsidian",
   "univer",
   "obsidian-local-rest-api",
   "mcp-tools",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-style-settings",
+  "graph-banner",
+  "sync-graph-settings",
+  "emoji-shortcodes",
+  "periodic-notes"
 ]

@@ -1,5 +1,5 @@
 {
-  "accentColor": "#7359f8",
+  "accentColor": "#d90202",
   "cssTheme": "AnuPpuccin",
   "translucency": false,
   "nativeMenus": false,
@@ -7,5 +7,6 @@
   "textFontFamily": "",
   "enabledCssSnippets": [
     "large"
-  ]
+  ],
+  "theme": "obsidian"
 }
