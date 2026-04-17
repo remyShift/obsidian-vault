@@ -29,10 +29,10 @@
       }
     },
     {
-      "query": "path:\"Notes Permanentes/Code\"  ",
+      "query": "path:\"Notes Permanentes/Code/Craft\"  ",
       "color": {
         "a": 1,
-        "rgb": 1114367
+        "rgb": 65284
       }
     },
     {
@@ -55,6 +55,13 @@
         "a": 1,
         "rgb": 16711680
       }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Code\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 262399
+      }
     }
   ],
   "collapse-display": true,
@@ -67,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.1709461291391827,
+  "scale": 2.033856096475722,
   "close": true
 }
