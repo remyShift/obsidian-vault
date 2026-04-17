@@ -14,7 +14,9 @@
       "Bash(OBSIDIAN_API_KEY=\"9d44da468128bf6c8ca3c3152648b890f3df069705148b3db094881dcb9dd753\" \"/Users/remy_mac/Desktop/everything/Obsidian Vault/.obsidian/plugins/mcp-tools/bin/mcp-server\")",
       "mcp__vault__read_file",
       "mcp__vault__list_directory",
-      "mcp__vault__list_allowed_directories"
+      "mcp__vault__list_allowed_directories",
+      "Skill(evolve)",
+      "Skill(evolve:*)"
     ]
   }
 }
