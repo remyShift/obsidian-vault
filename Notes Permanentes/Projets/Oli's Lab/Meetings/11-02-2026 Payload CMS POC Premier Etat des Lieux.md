@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0AEC9KFYG6
 ---
 
 # Huddle : Payload CMS POC - Premier état des lieux
