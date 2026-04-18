@@ -10,7 +10,7 @@ Vente de surgelés porte-à-porte après un bac non obtenu, deux piscines à 42 
 
 ---
 
-Le [[Korea/Overview|projet Seoul]] structure les prochains mois, 3 mois sur place pour tester si un move long terme est viable, entre freelance à distance, apprentissage du coréen et vie quotidienne.
+Le [[Korea Overview|projet Seoul]] structure les prochains mois, 3 mois sur place pour tester si un move long terme est viable, entre freelance à distance, apprentissage du coréen et vie quotidienne.
 
 Le [[Life Program 2024|programme hebdomadaire]] pose les bases concrètes : sport, routine, les choses qui tiennent quand tout le reste bouge.
 

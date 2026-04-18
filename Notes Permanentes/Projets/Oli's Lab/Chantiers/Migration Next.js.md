@@ -164,9 +164,9 @@ Une collection `sales_offers` a été créée pour gérer les remises par marque
 
 ## Réunions source
 
-- [[2026-03-02 Tech Weekly]] - split équipe, milestones Next.js, checkout blockers
-- [[2026-03-09 Tech Weekly]] - checkout live, bugs cart, remises Brain Ray
-- [[2026-03-23 Tech Weekly]] - dépendances PDP, linter Next.js, event tracking bloquant
-- [[2026-01-28 Code Review Tests Architecture API]] - architecture API v2, pattern load/execute/return
-- [[2026-02-06 Debugging Infinite Loop Checkout]] - debugging React Profiler
-- [[2026-02-25 QA Search UI Mobile Safari]] - mobile-first, breakpoints
+- [[02-03-2026 Tech Weekly]] - split équipe, milestones Next.js, checkout blockers
+- [[09-03-2026 Tech Weekly]] - checkout live, bugs cart, remises Brain Ray
+- [[23-03-2026 Tech Weekly]] - dépendances PDP, linter Next.js, event tracking bloquant
+- [[28-01-2026 Code Review Tests Architecture API]] - architecture API v2, pattern load/execute/return
+- [[06-02-2026 Debugging Infinite Loop Checkout]] - debugging React Profiler
+- [[25-02-2026 QA Search UI Mobile Safari]] - mobile-first, breakpoints

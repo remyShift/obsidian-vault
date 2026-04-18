@@ -5,7 +5,7 @@
 
 ---
 ## 🇰🇷 Korea
-- [[Overview]]
+- [[Korea Overview]]
 
 ---
 

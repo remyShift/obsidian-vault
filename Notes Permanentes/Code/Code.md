@@ -12,5 +12,3 @@ Un bon développeur est un développeur à jour et pour être à jour il faut fa
 Pour suivre ta progression pense à faire régulièrement des exos / katas ou mini projets pour savoir où te situer techniquement tu pourras retrouver ce suivis dans [[Stats à améliorer]].
 
 La liste des bug résolus se trouve dans [[Bug Solved]], une liste à garder sous le coude et complétée à chaque résolution de bug.
-
-Mon premier projet ambitieux et que j'espère aboutir : [[KicksFolio]].

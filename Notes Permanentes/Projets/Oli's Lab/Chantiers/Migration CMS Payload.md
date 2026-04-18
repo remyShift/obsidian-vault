@@ -189,11 +189,11 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 
 ## Réunions source
 
-- [[2026-02-11 Payload CMS POC Premier Etat des Lieux]]
-- [[2026-02-17 CMS Infrastructure Image Upload]]
-- [[2026-02-20 Categories Slug Routing]]
-- [[2026-03-02 CMS Payload Strategie Images]]
-- [[2026-03-26 Migration Produits Payload Schemas]]
-- [[2026-03-31 CMS Sync Script Code Review]]
-- [[2026-03-02 Tech Weekly]]
-- [[2026-03-23 Tech Weekly]]
+- [[11-02-2026 Payload CMS POC Premier Etat des Lieux]]
+- [[17-02-2026 CMS Infrastructure Image Upload]]
+- [[20-02-2026 Categories Slug Routing]]
+- [[02-03-2026 CMS Payload Strategie Images]]
+- [[26-03-2026 Migration Produits Payload Schemas]]
+- [[31-03-2026 CMS Sync Script Code Review]]
+- [[02-03-2026 Tech Weekly]]
+- [[23-03-2026 Tech Weekly]]

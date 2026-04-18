@@ -150,7 +150,7 @@ Idéal à terme : tracker les events transactionnels depuis le serveur, où la v
 
 ## Réunions source
 
-- [[2026-03-03 Events Capturing]] - architecture, deux patterns, hotfixes
-- [[2026-03-02 Tech Weekly]] - purchase event trade-off, supervision Kyle
-- [[2026-03-23 Tech Weekly]] - Apple Pay bloqué, checkout v2 bloqué, approche hybride CRA/Next.js
-- [[2025-10-07 Tech Weekly]] - premières décisions : wrapper async, pas de CSS selectors
+- [[03-03-2026 Events Capturing]] - architecture, deux patterns, hotfixes
+- [[02-03-2026 Tech Weekly]] - purchase event trade-off, supervision Kyle
+- [[23-03-2026 Tech Weekly]] - Apple Pay bloqué, checkout v2 bloqué, approche hybride CRA/Next.js
+- [[07-10-2025 Tech Weekly]] - premières décisions : wrapper async, pas de CSS selectors
