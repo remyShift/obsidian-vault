@@ -7,7 +7,7 @@ tags:
 participants:
   - Remy
   - Diego
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0A7QD0A8P2
 ---
 
 # Huddle : Optimisation Query Articles - Logique Inverse
