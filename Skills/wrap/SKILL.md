@@ -1,6 +1,6 @@
 ---
 name: wrap
-description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at AI Generated/Conversations/YYYY-MM-DD — Title.md via MCP. Always use this skill when the user types "/wrap", without exception.
+description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at AI Generated/Conversations/DD-MM-YYYY — Title.md via MCP. Always use this skill when the user types "/wrap", without exception.
 ---
 
 # Wrap Skill
@@ -11,7 +11,7 @@ Generates a structured French synthesis of the current conversation and writes o
 Only `/wrap` — no variants.
 
 ## Output location
-`AI Generated/Conversations/YYYY-MM-DD — Titre court.md`
+`AI Generated/Conversations/DD-MM-YYYY — Titre court.md`
 - Date = today's date
 - Title = short, descriptive, in French, reflecting the main topic
 
@@ -39,7 +39,7 @@ Use the Obsidian MCP to list the contents of `AI Generated/Conversations/`.
 
 ### Step 2a — Create a new file
 Write a new synthesis file to:
-`/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Conversations/YYYY-MM-DD — Titre.md`
+`/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Conversations/DD-MM-YYYY — Titre.md`
 
 ### Step 2b — Update an existing file
 Read the existing file first, then rewrite it entirely with an updated synthesis reflecting the full conversation up to this point. Do not append — rewrite the whole note so it stays coherent.
@@ -63,7 +63,7 @@ Include only if relevant:
 ### Step 5 — Update the Conversations sommaire
 - Read `/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Conversations/Sommaire.md`
 - In the table, check if an entry for this file already exists
-- If not, add a new row: `| {YYYY-MM-DD} | [[AI Generated/Conversations/{YYYY-MM-DD} — {Titre}]] |`
+- If not, add a new row: `| {DD-MM-YYYY} | [[AI Generated/Conversations/{DD-MM-YYYY} — {Titre}]] |`
 - If updating an existing file, the entry should already exist — skip this step
 - Rewrite the sommaire with the updated table
 
@@ -79,7 +79,7 @@ Tell the user whether the file was created or updated, with its exact name.
 source: ai
 ---
 
-# YYYY-MM-DD — Titre
+# DD-MM-YYYY — Titre
 
 **Domaine :** Code / Korea / Vie Perso / Finances / Créatif / Workflow
 **Statut :** Synthèse brute → à intégrer dans les notes permanentes si pertinent
