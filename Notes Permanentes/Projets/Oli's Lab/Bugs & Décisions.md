@@ -29,7 +29,7 @@ useEffect(() => { checkProviderAvailability() }, [providersAvailable])
 useEffect(() => { checkProviderAvailability() }, [providersAvailable.length])
 ```
 
-**Source :** [[2026-02-06 Debugging Infinite Loop Checkout]]
+**Source :** [[06-02-2026 Debugging Infinite Loop Checkout]]
 
 ---
 
@@ -41,7 +41,7 @@ useEffect(() => { checkProviderAvailability() }, [providersAvailable.length])
 
 **Fix envisagé :** désactiver `autoIndex` dans la config Mongoose. Contrepartie : synchronisation manuelle des index à chaque modification. Non encore implémenté à la date du meeting.
 
-**Source :** [[2026-02-10 MongoDB Indexation Performance]]
+**Source :** [[10-02-2026 MongoDB Indexation Performance]]
 
 ---
 
@@ -53,7 +53,7 @@ useEffect(() => { checkProviderAvailability() }, [providersAvailable.length])
 
 **Fix :** créer une route backend unique qui reçoit tous les items et fait un seul appel consolidé à BigBlue.
 
-**Source :** [[2026-03-02 Tech Weekly]]
+**Source :** [[02-03-2026 Tech Weekly]]
 
 ---
 
@@ -65,7 +65,7 @@ useEffect(() => { checkProviderAvailability() }, [providersAvailable.length])
 
 **Fix :** ne jamais utiliser les class names CSS comme sélecteurs d'événements PostHog. Utiliser des IDs stables ou des événements explicites déclenchés dans le code.
 
-**Source :** [[2025-10-07 Tech Weekly]]
+**Source :** [[07-10-2025 Tech Weekly]]
 
 ---
 
@@ -79,7 +79,7 @@ useEffect(() => { checkProviderAvailability() }, [providersAvailable.length])
 
 **Problème résiduel :** Apple Pay n'a pas accès aux items du cart dans le contexte de la success page → l'event Apple Pay est tracké sans les items, uniquement avec la valeur et le `logistic_order_id`.
 
-**Source :** [[2026-03-03 Events Capturing]]
+**Source :** [[03-03-2026 Events Capturing]]
 
 ---
 
@@ -94,7 +94,7 @@ Deux niveaux de catégorisation coexistent pour des raisons différentes :
 
 Le groupement commercial est implémenté via un mapper dans le backend (solution court terme). La solution long terme est une collection dédiée avec nom traduit et image.
 
-**Source :** [[2026-01-27 Restructuration Categories Subcategories]]
+**Source :** [[27-01-2026 Restructuration Categories Subcategories]]
 
 ---
 
@@ -104,7 +104,7 @@ Le champ `inciList` sur les produits shop est géré par l'automation Notion. Le
 
 Règle : pour le projet scientifique, créer un champ dédié `incilist_scientific_split`. Le split n'est nécessaire que pendant le calcul du scoring ; après, les données sont lues depuis la collection `matches`.
 
-**Source :** [[2026-01-20 Product Recommendation Release]]
+**Source :** [[20-01-2026 Product Recommendation Release]]
 
 ---
 
@@ -115,7 +115,7 @@ La décision de tracker tous les events "le plus proche possible du clic" est co
 - **Events comportementaux** (`view_item`, `begin_checkout`, `add_address`) → client-side, proche du clic, PostHog suffit
 - **Events transactionnels** (`purchase`, modifications de valeur du cart) → doivent refléter la réalité backend, pas le clic. À terme : côté serveur.
 
-**Source :** [[2026-03-03 Events Capturing]]
+**Source :** [[03-03-2026 Events Capturing]]
 
 ---
 
@@ -125,7 +125,7 @@ Dans la migration vers Payload CMS, le statut "staged" des produits est abandonn
 
 Le draft Payload remplace fonctionnellement le statut "staged" : production ne lit que les `published`, staging peut lire les drafts via le paramètre API.
 
-**Source :** [[2026-03-26 Migration Produits Payload Schemas]]
+**Source :** [[26-03-2026 Migration Produits Payload Schemas]]
 
 ---
 
@@ -138,4 +138,4 @@ Architecture retenue :
 - Server (backend) : routes statiques séparées par collection (`/internal/sync/brands`, `/internal/sync/categories`, etc.)
 - Un controller dédié par collection, pas de `if` dans un controller générique
 
-**Source :** [[2026-03-31 CMS Sync Script Code Review]]
+**Source :** [[31-03-2026 CMS Sync Script Code Review]]
