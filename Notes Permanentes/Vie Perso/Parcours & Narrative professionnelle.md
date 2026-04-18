@@ -1,36 +1,23 @@
 ---
 tags:
   - Perso
+  - Sommaire
 ---
 
 # Parcours & Narrative professionnelle
 
-## Timeline
-- Vente de surgelés porte à porte (Maximo) après le bac (non obtenu)
-- 42 : deux piscines → deux refus sans feedback
-- Ada Tech School → arrêt volontaire / viré (décalage valeurs/réalité)
-- 6 mois autoformation solo (TS, React, Next.js) + Software Crafters Lyon, livres Craft en parallèle d'un boulot alimentaire
-- Le Wagon → arrivée avec longueur d'avance, Ruby/Rails comme vraie découverte
-- CDD Spash : outil debug IA sur vidéos padel, en autonomie
-- Période creuse 6 mois → KicksFolio (app mobile, en store) + post LinkedIn pour s'entraîner aux entretiens → agenda rempli
-- Septembre 2025 deux offres simultanées → refus de la première (mauvais feeling) → choix Oli's Lab
-- Aujourd'hui : migration Next.js + Payload CMS, 6 mois de mission
+Vente de surgelés porte-à-porte après un bac non obtenu, deux piscines à 42 sans retour, Ada Tech School arrêtée pour décalage de valeurs, puis six mois d'autoformation seul avec des livres de Craft et Software Crafters Lyon. Le Wagon m'a confirmé que j'avais rattrapé le niveau. Un CDD en autonomie sur un outil IA, six mois sans mission pendant lesquels j'ai sorti KicksFolio sur les stores et rempli mon agenda avec des posts LinkedIn, puis deux offres simultanées en septembre 2025 et le choix d'Oli's Lab. La mécanique est toujours la même : un blocage, une réponse autonome, une progression mesurable.
 
-**Mécanique centrale :** Blocage → réponse autonome → progression mesurable (pattern répété)
+---
 
-## Messages de fond
+Le [[Korea/Overview|projet Seoul]] structure les prochains mois : 3 mois sur place pour tester si un move long terme est viable, entre freelance à distance, apprentissage du coréen et vie quotidienne.
 
-- "Ce qui fait un bon dev, ce n'est pas ce qu'il a appris c'est ce qu'il a traversé."
-- "On ne devient pas développeur le jour où on apprend à coder."
-- "Chaque porte fermée m'a appris quelque chose qu'aucune formation n'aurait pu m'enseigner."
+Le [[Life Program 2024|programme hebdomadaire]] pose les bases concrètes : sport, routine, les choses qui tiennent quand tout le reste bouge.
 
-## Ce que la vente a apporté (fondation, pas parenthèse)
+Les [[Quotes|citations que je garde]] ne sont pas de la décoration — elles résument les principes que je reviens chercher quand je doute.
 
-- Définir un besoin avant d'agir
-- Poser les bonnes questions vite
-- Ne pas avoir peur de l'inconnu
+Le [[Workflow Claude + Obsidian|workflow Claude + Obsidian]] documente comment j'ai organisé mon système de pensée externe, entre IA et prise de notes.
 
-## Liens
-- [[LyonCraft 2026 - Talk]]
-- [[Linkedin idea post]]
-- [[Workflow Claude + Obsidian]]
+Les [[Films à voir|films à voir]] sont la liste en cours, à cocher au fur et à mesure.
+
+Les [[Daily/Daily Notes Intro|daily notes]] sont le journal de bord quotidien — ce qui s'est passé, ce que j'ai remarqué, ce qui doit avancer.

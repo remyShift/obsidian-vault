@@ -2,4 +2,4 @@ Prise de notes quotidiennes, afin de capturer une réflexion, un évènement mar
 
 
 - [[Notes Permanentes/Vie Perso/Daily/_template|_template]]
-- 
+- [[18-04-2026]]
