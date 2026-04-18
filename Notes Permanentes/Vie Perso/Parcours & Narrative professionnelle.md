@@ -33,3 +33,4 @@ tags:
 ## Liens
 - [[LyonCraft 2026 - Talk]]
 - [[Linkedin idea post]]
+- [[Workflow Claude + Obsidian]]
