@@ -12,7 +12,7 @@ participants:
   - Diego
   - Michele
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0AB61BR6HK
 ---
 
 # Huddle : Restructuration Catégories/Sous-catégories

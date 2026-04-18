@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0APJSFTLUX
 ---
 
 # Huddle : CMS Sync Script - Code Review

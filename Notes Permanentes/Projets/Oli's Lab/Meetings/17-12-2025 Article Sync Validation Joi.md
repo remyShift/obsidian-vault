@@ -12,7 +12,7 @@ tags:
 participants:
   - Diego
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0A4LKLH70R
 ---
 
 # Huddle : Article Sync - Validation & Joi Middleware

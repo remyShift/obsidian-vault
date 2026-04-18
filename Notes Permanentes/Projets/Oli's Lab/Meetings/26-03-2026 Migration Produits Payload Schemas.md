@@ -12,7 +12,7 @@ tags:
 participants:
   - Michele
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0AP77KMUUC
 ---
 
 # Huddle : Migration Produits vers Payload & Schémas CMS

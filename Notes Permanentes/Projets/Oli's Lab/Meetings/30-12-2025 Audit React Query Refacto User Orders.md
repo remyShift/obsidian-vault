@@ -10,7 +10,7 @@ tags:
 participants:
   - Diego
   - Remy
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0A5PL69QVD
 ---
 
 # Huddle : Audit React Query & Refacto User Orders
