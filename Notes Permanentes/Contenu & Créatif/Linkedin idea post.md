@@ -35,4 +35,4 @@ tags: [Work, Perso]
 - [ ] claude-mem
 - [ ] Lyon Craft
 - [x] réponse question entretien par rapport à l’ia
-- [ ] le tirer de l’ia —
+- [ ] le tiret de l’ia —
