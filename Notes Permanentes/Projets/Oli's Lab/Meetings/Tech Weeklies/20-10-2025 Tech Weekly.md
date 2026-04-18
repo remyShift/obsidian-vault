@@ -12,7 +12,7 @@ participants:
   - Lucas
   - Ante
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-2924bf4c7fa181c9b19dceabe2580a34
+lien: https://www.notion.so/olislab/Tech-Weekly-2924bf4c7fa181c9b19dceabe2580a34
 ---
 
 # Tech Weekly - 20 octobre 2025

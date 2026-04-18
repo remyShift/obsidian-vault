@@ -12,7 +12,7 @@ participants:
   - Patrick
   - Ante
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-2ca4bf4c7fa180c1a126fe3a8b723c61
+lien: https://www.notion.so/olislab/Tech-Weekly-2ca4bf4c7fa180c1a126fe3a8b723c61
 ---
 
 # Tech Weekly - 15 décembre 2025

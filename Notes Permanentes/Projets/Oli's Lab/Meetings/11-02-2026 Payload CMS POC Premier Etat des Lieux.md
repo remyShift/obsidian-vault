@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Payload CMS POC - Premier état des lieux

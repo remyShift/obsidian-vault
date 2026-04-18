@@ -13,7 +13,7 @@ participants:
   - Lucas
   - Ante
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
+lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 ---
 
 # Tech Weekly - 2 mars 2026

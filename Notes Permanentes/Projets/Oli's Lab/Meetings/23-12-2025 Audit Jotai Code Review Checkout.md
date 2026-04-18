@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Audit Jotai & Code Review PR Checkout/Mapbox

@@ -11,7 +11,7 @@ participants:
   - Lucas
   - Patrick
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-2f44bf4c7fa180ef89dad53508715174
+lien: https://www.notion.so/olislab/Tech-Weekly-2f44bf4c7fa180ef89dad53508715174
 ---
 
 # Tech Weekly - 26 janvier 2026

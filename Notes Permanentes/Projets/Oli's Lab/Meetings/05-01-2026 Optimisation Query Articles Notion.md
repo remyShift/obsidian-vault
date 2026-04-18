@@ -7,7 +7,7 @@ tags:
 participants:
   - Remy
   - Diego
-notion:
+lien:
 ---
 
 # Huddle : Optimisation Query Articles - Logique Inverse

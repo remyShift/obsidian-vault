@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Planification - Migration Catégories/Sous-catégories

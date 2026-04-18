@@ -10,7 +10,7 @@ participants:
   - Lucas
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Debugging - Infinite Loop au Checkout

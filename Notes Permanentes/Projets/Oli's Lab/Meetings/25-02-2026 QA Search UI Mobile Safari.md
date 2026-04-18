@@ -12,7 +12,7 @@ tags:
 participants:
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : QA Search UI - Mobile, Safari, Localisation

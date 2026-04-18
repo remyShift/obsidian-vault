@@ -10,7 +10,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Audit React Query & Refacto User Orders

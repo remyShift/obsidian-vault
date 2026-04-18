@@ -12,7 +12,7 @@ participants:
   - Diego
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Code Review PR Checkout API - Tests & Architecture

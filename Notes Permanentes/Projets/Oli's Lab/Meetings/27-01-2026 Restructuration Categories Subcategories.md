@@ -12,7 +12,7 @@ participants:
   - Diego
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Restructuration Catégories/Sous-catégories

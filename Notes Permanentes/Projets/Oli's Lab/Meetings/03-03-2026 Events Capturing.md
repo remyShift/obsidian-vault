@@ -10,7 +10,7 @@ participants:
   - Michele
   - Kyle
   - Remy
-notion: https://www.notion.so/olislab/Events-Capturing-3184bf4c7fa18081b304e967cf9cad58
+lien: https://www.notion.so/olislab/Events-Capturing-3184bf4c7fa18081b304e967cf9cad58
 ---
 
 # Events Capturing

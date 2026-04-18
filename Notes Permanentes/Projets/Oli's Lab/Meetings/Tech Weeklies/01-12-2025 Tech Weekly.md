@@ -11,7 +11,7 @@ participants:
   - Lucas
   - Patrick
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-2bc4bf4c7fa1805ba795d64a9fb085e2
+lien: https://www.notion.so/olislab/Tech-Weekly-2bc4bf4c7fa1805ba795d64a9fb085e2
 ---
 
 # Tech Weekly - 1er décembre 2025

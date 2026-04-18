@@ -13,7 +13,7 @@ participants:
   - Patrick
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : MongoDB - Indexation et performance des requêtes

@@ -12,7 +12,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Article Sync - Validation & Joi Middleware

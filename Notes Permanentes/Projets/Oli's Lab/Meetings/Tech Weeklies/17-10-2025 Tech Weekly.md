@@ -13,7 +13,7 @@ participants:
   - Ante
   - Andy
   - Remy
-notion: https://www.notion.so/olislab/Tech-Weekly-28f4bf4c7fa181bfbd3fe56cd2ccd3b5
+lien: https://www.notion.so/olislab/Tech-Weekly-28f4bf4c7fa181bfbd3fe56cd2ccd3b5
 ---
 
 # Tech Weekly - 17 octobre 2025

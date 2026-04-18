@@ -11,7 +11,7 @@ tags:
 participants:
   - Diego
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Deux projets - POC Tests & Audit State Flow

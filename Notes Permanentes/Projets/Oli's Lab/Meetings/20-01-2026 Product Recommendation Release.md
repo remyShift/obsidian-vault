@@ -12,7 +12,7 @@ participants:
   - Diego
   - Lucas
   - Remy
-notion: https://www.notion.so/olislab/Product-Recommendation-Release-2ee4bf4c7fa180f78948d63a0e4962d2
+lien: https://www.notion.so/olislab/Product-Recommendation-Release-2ee4bf4c7fa180f78948d63a0e4962d2
 ---
 
 # Product Recommendation Release

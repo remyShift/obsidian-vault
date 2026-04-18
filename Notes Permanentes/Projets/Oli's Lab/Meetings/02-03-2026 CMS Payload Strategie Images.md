@@ -12,7 +12,7 @@ participants:
   - Diego
   - Kyle
   - Michele
-notion:
+lien:
 ---
 
 # Huddle : CMS Payload - Stratégie images & optimisation

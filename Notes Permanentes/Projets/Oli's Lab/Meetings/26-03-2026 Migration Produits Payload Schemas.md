@@ -12,7 +12,7 @@ tags:
 participants:
   - Michele
   - Remy
-notion:
+lien:
 ---
 
 # Huddle : Migration Produits vers Payload & Schémas CMS
