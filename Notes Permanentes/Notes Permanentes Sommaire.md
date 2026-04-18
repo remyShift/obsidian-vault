@@ -16,11 +16,7 @@
 ---
 
 ## 👤 Vie Perso
-- [[Life Program 2024]]
-- [[Films à voir]]
-- [[Quotes]]
-- [[Daily Notes Intro|Daily Notes]]
-- [[Parcours & Narrative professionnelle]]
+- [[Ma vie]]
 
 ---
 

@@ -43,4 +43,4 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - [ ] Faire les diapos
 
 ## Liens
-- [[Parcours & Narrative professionnelle]]
+- [[Ma vie]]

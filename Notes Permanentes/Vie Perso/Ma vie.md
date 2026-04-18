@@ -20,4 +20,4 @@ Le [[Workflow Claude + Obsidian|workflow Claude + Obsidian]] documente comment j
 
 Les [[Films à voir|films à voir]] sont la liste en cours, à cocher au fur et à mesure.
 
-Les [[Daily/Daily Notes Intro|daily notes]] sont le journal de bord quotidien — ce qui s'est passé, ce que j'ai remarqué, ce qui doit avancer.
+Les [[Daily/Daily Notes Intro|daily notes]] sont le journal de bord quotidien, ce qui s'est passé, ce que j'ai remarqué, ce qui doit avancer.
