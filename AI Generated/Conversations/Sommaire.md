@@ -6,11 +6,11 @@ Synthèses de conversations générées via `/wrap`.
 
 | Date       | Titre                                                                                        |
 | ---------- | -------------------------------------------------------------------------------------------- |
-| 2026-04-12 | [[AI Generated/Conversations/2026-04-12 — Préparation talk LyonCraft]]                       |
-| 2026-04-12 | [[AI Generated/Conversations/2026-04-12 — Restructuration Obsidian]]                         |
-| 2026-04-13 | [[AI Generated/Conversations/2026-04-13 — Audit et enrichissement notes Clean Code & Craft]] |
-| 2026-04-14 | [[2026-04-14 — Construction base de connaissance Oli's Lab]]                                 |
-| 2026-04-16 | [[AI Generated/Conversations/2026-04-16 - Ghostwriter LinkedIn - System Prompt]]             |
-| 2026-04-16 | [[AI Generated/Conversations/2026-04-16 - Post LinkedIn Setup Claude + Obsidian]]            |
-| 2026-04-16 | [[2026-04-16 — Préparation talk LyonCraft]]                                                  |
-| 2026-04-17 | [[2026-04-17 — Bio LyonCraft]]                                                               |
+| 12-04-2026 | [[AI Generated/Conversations/12-04-2026 — Préparation talk LyonCraft]]                       |
+| 12-04-2026 | [[AI Generated/Conversations/12-04-2026 — Restructuration Obsidian]]                         |
+| 13-04-2026 | [[AI Generated/Conversations/13-04-2026 — Audit et enrichissement notes Clean Code & Craft]] |
+| 14-04-2026 | [[14-04-2026 — Construction base de connaissance Oli's Lab]]                                 |
+| 16-04-2026 | [[AI Generated/Conversations/16-04-2026 - Ghostwriter LinkedIn - System Prompt]]             |
+| 16-04-2026 | [[AI Generated/Conversations/16-04-2026 - Post LinkedIn Setup Claude + Obsidian]]            |
+| 16-04-2026 | [[16-04-2026 — Préparation talk LyonCraft]]                                                  |
+| 17-04-2026 | [[17-04-2026 — Bio LyonCraft]]                                                               |
