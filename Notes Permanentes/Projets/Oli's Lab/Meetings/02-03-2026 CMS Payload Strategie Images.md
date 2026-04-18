@@ -12,7 +12,7 @@ participants:
   - Diego
   - Kyle
   - Michele
-lien:
+lien: https://olislab.slack.com/docs/T06E4T3H87M/F0AHKMQ59EK
 ---
 
 # Huddle : CMS Payload - Stratégie images & optimisation
