@@ -15,4 +15,4 @@ Synthèses de conversations générées via `/wrap`.
 | 16-04-2026 | [[16-04-2026 — Préparation talk LyonCraft]]                                                  |
 | 17-04-2026 | [[17-04-2026 — Bio LyonCraft]]                                                               |
 | 18-04-2026 | [[AI Generated/Conversations/18-04-2026 - ADR Oli's Lab]]                                   |
-| 19-04-2026 | [[AI Generated/Conversations/19-04-2026 - Post LinkedIn Claude-Mem]]                         |
+| 19-04-2026 | [[AI Generated/Conversations/19-04-2026 - Posts LinkedIn]]                                   |
