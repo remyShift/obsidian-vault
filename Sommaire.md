@@ -9,9 +9,13 @@ Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques
 - [[Notes Permanentes Sommaire|📚 Notes Permanentes]]
 - [[AI Sommaire|🤖 AI Generated]]
 - [[Notes de Lecture/Sommaire|📖 Notes de Lecture]]
+- [[TODO|⌛ TODO !]]
 
 ---
 
+## Skills
+
+- [[SKILL|wrap]]
 ## Activité récente
 
 Notes modifiées ces 7 derniers jours (hors AI Generated) :
