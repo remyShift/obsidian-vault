@@ -28,8 +28,8 @@ Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, 
 
 ## Apprentissage
 → [[Langue]] --> progression coréen
-→ [[Hangeul]] --> bases de l'écriture
 → [[Questions de bases]] --> phrases pratiques
+→ [[Grammaire]] --> notions de grammaire étudiées
 
 ---
 
