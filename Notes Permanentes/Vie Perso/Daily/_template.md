@@ -2,7 +2,7 @@
 
 - 
 
-## Quel est l'objectif du jour ?
+## Qu'est ce que tu  dois faire aujourd'hui ?
 
 - 
 
