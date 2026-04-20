@@ -20,6 +20,7 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 ### Terminaisons verbales
 
 [[습니다-습니까]] --> Les terminaisons formelles du coréen, pour s'exprimer de manière soutenue et polie.
+ [[-겠-]] -->  s'insère entre la base du verbe et la terminaison finale et sert à exprimer l'état mental du locuteur
 
 ---
 
