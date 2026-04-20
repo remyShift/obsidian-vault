@@ -8,7 +8,13 @@ tags:
 - [ ] Korean lesson to obsidian
 
 ---
+## Work
+
+- [ ] Articles POC feedback
+- [ ] 
+
+---
 
 ## Courses
 
-- [ ] Dentifrice 
+- [ ]  
