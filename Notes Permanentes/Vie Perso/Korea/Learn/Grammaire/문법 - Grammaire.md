@@ -48,3 +48,9 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 
 [[살]] --> Compter les années d'âge, avec les nombres coréens natifs.
 [[명]] --> Compter les personnes, en version neutre (et 분 en version polie au resto).
+
+---
+
+## Mots interrogatifs
+
+[[의문사]] --> 뭐, 누구, 어느, 무슨, 몇, 어디 — tous les mots question vus jusqu'ici, avec la différence 어느 vs 무슨.
