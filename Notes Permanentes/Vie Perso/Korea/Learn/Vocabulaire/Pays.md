@@ -1,5 +1,5 @@
 Voici comment interdis certains pays en coréen :
 
-> [!tip]
+> [!example]
 > > 한국 
 
