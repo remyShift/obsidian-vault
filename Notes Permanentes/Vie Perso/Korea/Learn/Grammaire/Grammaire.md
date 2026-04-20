@@ -16,7 +16,13 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 [[이-가 아니다]] --> Sa négation : *ne pas être*, pour nier une identité ou une appartenance.
 
 ---
+### Terminaisons verbales
 
+[[습니다-습니까]] --> Les terminaisons formelles du coréen, pour s'exprimer de manière soutenue et polie.
+
+---
+
+## Particules
 ### Particules de sujet
 
 [[은-는]] --> Marque le thème de la phrase, ce dont on parle de manière générale.
@@ -35,9 +41,3 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 [[과-하고]] --> Relie deux noms comme *et*, en version polie (과/와) ou courante (하고).
 [[의]] --> Indique la possession, comme le *de* français ou le *'s* anglais.
 [[도]] --> Ajoute un élément à ce qui vient d'être dit : *aussi*, *également*.
-
----
-
-### Terminaisons verbales
-
-[[습니다-습니까]] --> Les terminaisons formelles du coréen, pour s'exprimer de manière soutenue et polie.
