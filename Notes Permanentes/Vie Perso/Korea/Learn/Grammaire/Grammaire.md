@@ -14,6 +14,8 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 
 [[이다]] -->Le verbe *être*, pour décrire ou identifier quelque chose à l'aide d'un nom.
 [[이-가 아니다]] --> Sa négation : *ne pas être*, pour nier une identité ou une appartenance.
+[[있다]] --> Verbe-adjectif à double sens : *avoir* quelque chose, ou *se trouver* quelque part.
+[[없다]] --> Sa négation : *ne pas avoir* ou *ne pas se trouver*, à ne pas confondre avec 이/가 아니다.
 
 ---
 ### Terminaisons verbales
