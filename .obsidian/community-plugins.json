@@ -20,5 +20,8 @@
   "graph-banner",
   "sync-graph-settings",
   "emoji-shortcodes",
-  "periodic-notes"
+  "periodic-notes",
+  "table-editor-obsidian",
+  "obsidian-annotator",
+  "pretty-properties"
 ]
