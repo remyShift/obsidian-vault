@@ -1,5 +1,9 @@
 Voici comment interdis certains pays en coréen :
 
-> [!example]
-> > 한국 
+> [!info]- 한국 
+> Corée
+
+> [!info]- 프랑스 
+> France
+
 
