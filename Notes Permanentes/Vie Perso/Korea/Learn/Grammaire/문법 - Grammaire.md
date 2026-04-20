@@ -41,3 +41,10 @@ Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant
 [[과-하고]] --> Relie deux noms comme *et*, en version polie (과/와) ou courante (하고).
 [[의]] --> Indique la possession, comme le *de* français ou le *'s* anglais.
 [[도]] --> Ajoute un élément à ce qui vient d'être dit : *aussi*, *également*.
+
+---
+
+## Quantifieurs
+
+[[살]] --> Compter les années d'âge, avec les nombres coréens natifs.
+[[명]] --> Compter les personnes, en version neutre (et 분 en version polie au resto).
