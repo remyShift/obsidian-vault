@@ -29,7 +29,7 @@ Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, 
 ## Apprentissage
 → [[Langue]] --> progression coréen
 → [[Questions de bases]] --> phrases pratiques
-→ [[Grammaire]] --> notions de grammaire étudiées
+→ [[문법 - Grammaire]] --> notions de grammaire étudiées
 
 ---
 

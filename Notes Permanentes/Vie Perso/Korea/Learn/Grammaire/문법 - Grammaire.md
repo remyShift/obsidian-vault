@@ -2,8 +2,6 @@
 tags:
   - Korea
 ---
-# 문법 - Grammaire
-
 Notes de grammaire coréenne construites au fil des leçons. Chaque note couvre un point précis comme ce qu'il fait, comment il se forme, et un exemple en contexte.
 
 Pour la conjugaison tu trouveras un tableau de [[Verbes - Adjectifs kr]] courant et conjugués pour t'aider.
