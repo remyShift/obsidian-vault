@@ -11,6 +11,7 @@ tags:
 ## Work
 
 - [ ] Articles POC feedback
+- [ ] GCM separate stage / prod research
 - [ ] 
 
 ---
