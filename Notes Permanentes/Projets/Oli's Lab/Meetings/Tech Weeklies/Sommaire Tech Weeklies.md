@@ -19,3 +19,4 @@ Réunions techniques hebdomadaires de l'équipe Oli's Lab.
 | [[02-03-2026 Tech Weekly]] | Split équipe CRA/Next.js (Kyle arrivée), SEO Controls, Next.js Foundation, checkout blockers, event tracking |
 | [[09-03-2026 Tech Weekly]] | Templates Notion projets/tâches, remises Brain Ray, checkout live, bugs cart, CMS Payload hébergement        |
 | [[23-03-2026 Tech Weekly]] | Dashboard Notion, event tracking Apple Pay, CMS PRs (bridge script), INCI score, audit Shop All              |
+| [[08-10-2025 Tech Weekly]] |                                                                                                              |

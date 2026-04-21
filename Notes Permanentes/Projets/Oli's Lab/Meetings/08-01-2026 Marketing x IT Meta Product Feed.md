@@ -10,12 +10,12 @@ tags:
   - tiktok
   - olis-lab
 participants:
-  - Rémy
   - Michele
   - Nicolas
   - Juliette
   - Suze
   - Diego
+  - Remy
 lien: https://www.notion.so/olislab/Marketing-x-IT-2e24bf4c7fa180fb8d56f8f9de5bf328?pvs=189#2e24bf4c7fa180a48e3ec9c96ff6d4ee
 ---
 

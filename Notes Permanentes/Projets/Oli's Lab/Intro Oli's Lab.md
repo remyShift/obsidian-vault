@@ -103,3 +103,4 @@ MongoDB avec deux namespaces logiques dans la même DB :
 - [[Chantiers/Migration CMS Payload]] - état de la migration Payload
 - [[Chantiers/Migration Next.js]] - état de la migration Next.js + Checkout v2
 - [[Chantiers/Event Tracking Analytics]] - architecture event tracking
+- [[Migration Merchant API|Chantiers/Migration Merchant API]] - migration des API merchant + klaviyo + gestion du stock
