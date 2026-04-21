@@ -1,3 +1,8 @@
+---
+tags:
+  - Perso
+  - DailyNotes
+---
 ## Qu'est ce que tu as accomplis hier ?
 
 - 
