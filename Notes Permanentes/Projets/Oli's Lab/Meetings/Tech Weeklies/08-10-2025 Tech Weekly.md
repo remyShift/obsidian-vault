@@ -7,7 +7,7 @@ tags:
   - analytics
   - posthog
   - traductions
-  - inchi-scanner
+  - inci-scanner
   - olis-lab
 participants:
   - Michele
@@ -91,7 +91,7 @@ lien: https://www.notion.so/olislab/Tech-Standup-2864bf4c7fa181398a28db44826305a
 - Évaluation Strapi à mener. Si setup facile, migration envisageable.
 - Michele veut réorganiser les pages Notion et construire des vues CMS structurées en attendant.
 
-### InchiScanner (feature post-novembre)
+### InciScanner (feature post-novembre)
 
 Feature existante à réviser et relancer. Principe : scanner le code barre ou l'étiquette d'un produit pour obtenir une notation et l'explication détaillée (ingrédients, règles appliquées).
 
@@ -111,7 +111,7 @@ Feature existante à réviser et relancer. Principe : scanner le code barre ou l
 
 **Vision future :** si la BDD de produits et d'ingrédients devient suffisamment riche, ouverture d'une API publique (freemium ou payante). Sujet légal à anticiper.
 
-### Recommandations personnalisées (post-InchiScanner)
+### Recommandations personnalisées (post-InciScanner)
 - Permettre à l'utilisateur de construire une routine ou un bundle personnalisé
 - Recommandations basées sur les problèmes de peau déclarés
 - Homepage et profil de plus en plus personnalisés
