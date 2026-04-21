@@ -10,28 +10,25 @@ source: ai
 ---
 
 ## Contexte
-Session de travail autour de la mise en place d'une base de notes coréennes structurée dans Obsidian. Point de départ : migrer un PDF de verbes existant (verbes-kr.pdf) vers une note formatée avec le plugin Obsidian Sheets, puis construire progressivement un vault de grammaire coréenne à partir des 4 premières leçons du manuel Sejong.
+Session de travail autour de la mise en place et de l'amélioration d'une base de notes coréennes structurée dans Obsidian. La session précédente avait posé les fondations (notes de grammaire, verbes, particules). Cette session a ajouté une nouvelle note sur les adjectifs et refondé le système de callouts sur l'ensemble du vault.
 
 ---
 
 ## Points clés
 
-- Migration du PDF verbes-kr en note Obsidian Sheets avec tableau fusionné (headers sur 2 colonnes, couleurs par catégorie verbe/adjectif), fidèle à l'état de complétion de Rémy jusqu'à la ligne 40
-- Extraction des blocs de grammaire des leçons 1 à 4 en notes dédiées, chacune avec le même format que la note 이다 existante : explication courte, structure formelle, tableau 받침 O/X, callout dépliable [!info]- Exemple
-- Notes créées : 은-는, 이-가, 이-가 아니다, 습니다-습니까, 을-를, 도, 과-하고, 의
-- Notes ajoutées hors PDF : 있다 et 없다 (verbes-adjectifs à double sens, traités en profondeur avec distinction avoir/se trouver et négation vs 이/가 아니다)
-- Note 모르다 créée avec traitement de -겠- et de l'expression 잘 모르겠어요 - puis 겠 extrait en note dédiée pour couvrir tous ses cas d'usage (incertitude, compréhension, intention, déduction)
-- Note 의문사 regroupant tous les mots interrogatifs vus en cours (뭐, 누구, 어느, 무슨, 몇, 어디) + 5 ajouts (왜, 어떻게, 언제, 얼마, 얼마나)
-- Notes quantifieurs : 살 (âge) et 명 (personnes), avec mention de 분 comme forme honorifique au restaurant
-- Sommaire 문법 - Grammaire.md mis à jour à chaque ajout, organisé par catégories (verbes, terminaisons, particules, quantifieurs, mots interrogatifs)
+- Explication complète des adjectifs coréens (형용사) : ils se comportent comme des verbes d'état, se conjuguent de la même façon (base + 다, mêmes terminaisons 해요체/합쇼체), et portent eux-mêmes le sens du verbe "être" - pas besoin de 이다 séparé
+- Différence clé avec les verbes d'action : les adjectifs ne prennent pas la particule objet 을/를, ils prennent 이/가 (sujet) - directement lié à la distinction 좋다 vs 좋아하다 déjà vue
+- Création de la note `Grammaire/Verbes - Adjectifs kr.md` avec format standard, tableaux de conjugaison en 해요체 et 합쇼체, et liens internes vers 이/가 et 을/를
+- Mise à jour de l'index `문법 - Grammaire.md` pour pointer vers cette note avec une description qui mentionne 형용사
+- Refonte complète du système de callouts sur toutes les notes de grammaire : `[!info]- Exemple` remplacé par `[!question]- phrase coréenne` avec la traduction à l'intérieur - objectif : transformer les exemples en mini-exercices d'entraînement
+- Correction du regroupement : chaque phrase coréenne a désormais son propre callout distinct (plus de plusieurs phrases dans un seul bloc)
+- Notes concernées : do, 은-는, 이-가, 을-를, 습니다-습니까, 과-하고, 의, 의문사, -겠-, 모르다, 없다, 이-가 아니다, 있다, 명, 살
 
 ## Décisions prises
 
-- Les exemples sont systématiquement mis en callout dépliable [!info]- Exemple avec le coréen sur une ligne et la traduction sur la suivante
-- Les conjugaisons utilisent le tableau sheet d'Obsidian Sheets avec colonnes présent/passé informel/formel, cellules passé laissées vides si non encore étudiées
-- -겠- a sa propre note dédiée plutôt que d'être noyé dans 모르다, avec un lien de référence depuis celle-ci
-- Les quantifieurs sont dans un sous-dossier dédié Quantifieurs/
-- Les verbes sont dans un sous-dossier dédié Verbes/
+- Format callout standardisé sur tout le vault : `[!question]- phrase coréenne` / traduction à l'intérieur, jamais de regroupement de plusieurs phrases dans un seul callout
+- Les callouts qui contiennent des tableaux (ex : 이다) ne sont pas convertis en [!question] - ça n'aurait pas de sens
+- Un callout par phrase, même quand les variantes (poli/familier, sens 1/sens 2) se ressemblent
 
 ## À intégrer dans
-- Les notes de grammaire existantes dans Notes Permanentes/Vie Perso/Korea/Learn/Grammaire/ - déjà en place
+- Les notes de grammaire existantes dans `Notes Permanentes/Vie Perso/Korea/Learn/Grammaire/` - déjà en place
