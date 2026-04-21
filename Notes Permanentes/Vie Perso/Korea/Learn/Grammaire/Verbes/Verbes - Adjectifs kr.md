@@ -38,7 +38,7 @@
 | 19 | 하다 ~ .verbe | faire         | 해요          | 합니다     |               |              |
 | 20 | 좋아하다 ~ .verbe | aimer     | 좋아해요      | 좋아합니다 |               |              |
 | 21 | 요리하다 ~ .verbe | cuisiner  | 요리해요      | 요리합니다 |               |              |
-| 22 | 운동하다 ~ .verbe | s'entraîner | 운동해요    | 운동합니다 |               |              |
+| 22 | 운동하다 ~ .verbe | faire du sport | 운동해요    | 운동합니다 |               |              |
 | 23 | 청소하다 ~ .verbe | nettoyer  | 청소해요      | 청소합니다 |               |              |
 | 24 | 공부하다 ~ .verbe | étudier   | 공부해요      | 공부합니다 |               |              |
 | 25 | 일하다 ~ .verbe | travailler  | 일해요        | 일합니다   |               |              |
