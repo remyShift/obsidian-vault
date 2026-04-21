@@ -44,7 +44,7 @@
 | 25 | 일하다 ~ .verbe | travailler  | 일해요        | 일합니다   |               |              |
 | 26 | 전화하다 ~ .verbe | téléphoner | 전화해요     |            |               |              |
 | 27 | 여행하다 ~ .verbe | voyager   | 여행해요      |            |               |              |
-| 28 | 좋다 ~ .adjectif | être bon  | 좋이요        | 좋습니다   |               |              |
+| 28 | 좋다 ~ .adjectif | être bon  | 좋아요        | 좋습니다   |               |              |
 | 29 | 나쁘다 ~ .adjectif | être mauvais | 나빠요   |            |               |              |
 | 30 | 크다 ~ .adjectif | être gros/grand | 커요   | 큽니다     |               |              |
 | 31 | 작다 ~ .adjectif | être petit  | 작아요        | 작습니다   |               |              |
