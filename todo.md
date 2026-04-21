@@ -10,7 +10,7 @@ tags:
 - [x] Korean lesson to obsidian
 - [x] 2 notes de meetings à intégrer à obsidian
 - [ ] adjectifs en coréen ne peuvent pas prendre de particule d'objet -을 / -를
-- [ ] -안 / -지 않-
+- [ ] -안 / -지 않다
 
 ---
 ## Work
