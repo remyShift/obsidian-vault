@@ -59,8 +59,9 @@ Les adjectifs ne prennent **pas** la particule objet 을/를, un état n'a pas d
 
 C'est directement lié à la distinction [[이-가]] (sujet) vs [[을-를]] (objet), et à la différence entre 좋다 et 좋아하다.
 
-> [!question]- Exemple
-> 가: 서울이 커요?
-> 나: 네, 서울이 아주 커요. 그리고 한국 음식이 정말 맛있어요.
+> [!question]- 가: 서울이 커요?
+> Est-ce que Séoul est grande ? 
+
+> [!question]- 나: 네, 서울이 아주 커요. 그리고 한국 음식이 정말 맛있어요.
 >
-> Est-ce que Séoul est grande ? / Oui, Séoul est très grande. Et la cuisine coréenne est vraiment délicieuse.
+> Oui, Séoul est très grande. Et la cuisine coréenne est vraiment délicieuse.

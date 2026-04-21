@@ -5,12 +5,13 @@ tags:
 ## TODO
 
 - [ ] graph ql et diff avec Rest ?
-- [ ] Korean lesson to obsidian
+- [x] Korean lesson to obsidian
+- [ ] 2 notes de meetings à intégrer à obsidian
 
 ---
 ## Work
 
-- [ ] Articles POC feedback
+- [x] Articles POC feedback
 - [ ] GCM separate stage / prod research
 - [ ] 
 
