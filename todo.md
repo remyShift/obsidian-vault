@@ -5,8 +5,10 @@ tags:
 ## TODO
 
 - [ ] graph ql et diff avec Rest ?
+- [ ] notes free mind
+- [ ] continuer prépa lyon craft
 - [x] Korean lesson to obsidian
-- [ ] 2 notes de meetings à intégrer à obsidian
+- [x] 2 notes de meetings à intégrer à obsidian
 
 ---
 ## Work
