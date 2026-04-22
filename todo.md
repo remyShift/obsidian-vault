@@ -19,7 +19,7 @@ tags:
 - [x] Plan merchant catalog handling + audit current state
 - [x] Plan Stock handling + audit current state
 - [ ] GCM separate stage / prod research
-- [ ] Search page --> groomin --> plan --> implement
+- [ ] Search page --> grooming --> plan --> implement
 - [ ] NextJS : check avec Kyle comment ne pas être couplé a payload et changer facilement de CMS (migration de la page skintype)
 
 ---

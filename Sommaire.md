@@ -16,6 +16,8 @@ Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques
 ## Skills
 
 - [[SKILL|wrap]]
+
+---
 ## Activité récente
 
 Notes modifiées ces 7 derniers jours (hors AI Generated) :
@@ -33,7 +35,7 @@ LIMIT 15
 ## Notes orphelines (zéro inlink)
 
 Notes que personne ne cite (zéro backlink entrant).
-⚠️ Une note peut apparaître ici **tout en étant connectée dans la graphe** : si elle a des outlinks (elle pointe vers d'autres), la graphe la montre reliée, mais elle reste orpheline au sens "personne ne me cite". La chasse aux orphelines vise ce cas-là — c'est ce qui tue l'émergence d'un vrai graphe.
+⚠️ Une note peut apparaître ici **tout en étant connectée dans la graphe** : si elle a des outlinks (elle pointe vers d'autres), la graphe la montre reliée, mais elle reste orpheline au sens "personne ne me cite". La chasse aux orphelines vise ce cas-là, c'est ce qui tue l'émergence d'un vrai graphe.
 
 ```dataview
 LIST
