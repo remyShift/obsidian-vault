@@ -34,3 +34,4 @@ tags:
 	- klaviyo
 	- AWS
 	- 
+- NextJS : comment ne pas être couplé a payload et changer facilement de CMS
