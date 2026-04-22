@@ -30,4 +30,7 @@ tags:
       
 ---
 
-- 
+- LEARN
+	- klaviyo
+	- AWS
+	- 
