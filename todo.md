@@ -35,3 +35,4 @@ tags:
 	- AWS
 	- 
 - NextJS : comment ne pas être couplé a payload et changer facilement de CMS
+- Search page --> plan --> implement
