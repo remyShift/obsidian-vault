@@ -18,7 +18,7 @@ La différenciation centrale d'Oli's Lab, c'est la **dimension scientifique** : 
 
 | Personne    | Rôle                                                                       |
 | ----------- | -------------------------------------------------------------------------- |
-| **Michele** | CTO / PM, lead technique et produit, arbitre final des décisions           |
+| **Michele** | CTO / PM, lead produit, arbitre final des décisions                        |
 | **Diego**   | Tech Lead, Senior dev, architecture, code reviews, backend, infrastructure |
 | **Kyle**    | Senior dev (arrivé mars 2026), owner migration Next.js Foundation          |
 | **Rémy**    | Dev fullstack, CMS Payload, checkout, analytics                            |
