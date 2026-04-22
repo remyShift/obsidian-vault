@@ -16,6 +16,8 @@ tags:
 ## Work
 
 - [x] Articles POC feedback
+- [x] Plan merchant catalog handling + audit current state
+- [x] Plan Stock handling + audit current state
 - [ ] GCM separate stage / prod research
 - [ ] 
 
