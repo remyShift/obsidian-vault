@@ -4,10 +4,6 @@
 - [[Code]]
 
 ---
-## 🇰🇷 Korea
-- [[Korea Overview]]
-
----
 
 ## 🗂 Projets
 - [[KicksFolio]]
