@@ -17,3 +17,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab       | [[AI Generated/Sessions/olis-lab/17-04-2026_10-20]] |
 | olis-lab       | [[AI Generated/Sessions/olis-lab/20-04-2026_11-07]] |
 | olis-lab       | [[AI Generated/Sessions/olis-lab/21-04-2026_15-50]] |
+| Portfolio-GameBoy-Next | [[AI Generated/Sessions/Portfolio-GameBoy-Next/23-04-2026_11-13]] |
