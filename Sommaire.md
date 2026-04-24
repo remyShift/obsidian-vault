@@ -53,7 +53,7 @@ Les vraies perdues : ni inlinks ni outlinks. Priorité absolue à rattacher manu
 
 ```dataview
 LIST
-FROM "" AND -"AI Generated" AND -"Sommaire" AND -"Notes de Lecture/Inbox"
+FROM ""
 WHERE length(file.inlinks) = 0 AND length(file.outlinks) = 0
 SORT file.name ASC
 LIMIT 20
