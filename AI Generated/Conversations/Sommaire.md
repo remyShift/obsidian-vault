@@ -18,3 +18,4 @@ Synthèses de conversations générées via `/wrap`.
 | 19-04-2026 | [[AI Generated/Conversations/19-04-2026 - Posts LinkedIn]]                                   |
 | 21-04-2026 | [[AI Generated/Conversations/21-04-2026 - Construction base de notes Korean]]                |
 | 21-04-2026 | [[AI Generated/Conversations/21-04-2026 - Intégration meetings Oli's Lab vault]]             |
+| 24-04-2026 | [[AI Generated/Conversations/24-04-2026 - Notes grammaire coréenne négation]]                |
