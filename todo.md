@@ -2,7 +2,7 @@
 tags:
   - Perso
 ---
-## TODO
+하지만 ## TODO
 
 - [ ] graph ql et diff avec Rest ?
 - [x] notes free mind
