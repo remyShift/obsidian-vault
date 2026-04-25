@@ -1,8 +1,8 @@
 # Sommaire - Evolve
 
-Recaps de sessions de travail, organisés par projet et générés par la commande `/evovle`.
+Rapports générés par la commande `/evolve`, du plus récent au plus ancien.
 
-
-| 17-04-2026 | [[17-04-2026_evolve]] |
-| ---------- | --------------------- |
-|            |                       |
+| Date       | Rapport                |
+| ---------- | ---------------------- |
+| 25-04-2026 | [[25-04-2026_evolve]]  |
+| 17-04-2026 | [[17-04-2026_evolve]]  |
