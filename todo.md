@@ -2,7 +2,7 @@
 tags:
   - Perso
 ---
-하지만 ## TODO
+## TODO
 
 - [ ] graph ql et diff avec Rest ?
 - [x] notes free mind
@@ -11,10 +11,8 @@ tags:
 - [x] 2 notes de meetings à intégrer à obsidian
 - [x] adjectifs en coréen ne peuvent pas prendre de particule d'objet -을 / -를
 - [x] -안 / -지 않다
-- [ ] portfolio : parallax a améliorer (ombre + plusieurs layers)
-- [ ] /evolve
-
----
+- [x] portfolio : parallax a améliorer (ombre + plusieurs layers)
+- [x] /evolve
 ## Work
 
 - [x] Articles POC feedback
