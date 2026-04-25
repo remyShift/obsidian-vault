@@ -34,6 +34,6 @@ Session courte centrée sur deux points de grammaire coréenne : la négation ve
 
 ## À intégrer dans
 
-- [[Adjectifs]] - déjà à jour
-- [[을-를]] - déjà à jour
-- [[Négation - 안 et 지 않다]] - créée cette session
+- Adjectifs - déjà à jour
+- 을-를 - déjà à jour
+- Négation - 안 et 지 않다 - créée cette session
