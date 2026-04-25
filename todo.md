@@ -11,6 +11,8 @@ tags:
 - [x] 2 notes de meetings à intégrer à obsidian
 - [x] adjectifs en coréen ne peuvent pas prendre de particule d'objet -을 / -를
 - [x] -안 / -지 않다
+- [ ] portfolio : parallax a améliorer (ombre + plusieurs layers)
+- [ ] /evolve
 
 ---
 ## Work
