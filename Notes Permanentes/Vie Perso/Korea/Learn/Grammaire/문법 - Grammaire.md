@@ -49,10 +49,9 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 
 ---
 
-## Nombres et quantifieurs
+## Nombres et classificateurs
 
-[[Nombres]] --> Les deux systèmes (sino-coréen et natif), quand utiliser lequel, l'heure, les prix.
-[[Quantifieurs]] --> 개, 명, 살, 권, 잔, 병, 장 — comment compter des objets, personnes, et plus.
+[[Nombres]] --> Les deux systèmes (sino-coréen et natif), l'heure, les prix, et le hub vers tous les classificateurs.
 
 ---
 

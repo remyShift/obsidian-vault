@@ -3,8 +3,6 @@ tags: [Korea, coréen, grammaire]
 ---
 Il existe **deux systèmes de nombres** en coréen. Ils ne sont pas interchangeables — chaque contexte en impose un.
 
-Pour les quantifieurs (개, 명, 살...) qui utilisent ces nombres, voir [[Quantifieurs]].
-
 ---
 
 ## 1. Les nombres sino-coréens (한자어 수사)
@@ -141,6 +139,30 @@ Les prix utilisent toujours les sino-coréens + **원**.
 > [!question]- 아메리카노 한 잔에 얼마예요?
 > Un americano, c'est combien ?
 > → 사천오백 원이에요. (4 500 wons)
+
+---
+
+## 5. Les classificateurs (의존 명사)
+
+En coréen, on ne dit pas "deux livres" directement. On intercale un classificateur entre le nombre et le nom.
+
+Structure : **Nom + Nombre (natif) + Classificateur**
+
+> 사과 두 개 — deux pommes (et pas ~~두 사과~~)
+
+| Classificateur | Ce qu'il compte | Note |
+|----------------|-----------------|------|
+| [[개]] | objets (général) | Par défaut si tu ne connais pas le bon |
+| [[명]] | personnes | Version polie : 분 |
+| [[살]] | âge | 스물 → 스무 devant 살 |
+| [[권]] | livres, cahiers | |
+| [[잔]] | boissons dans un verre ou une tasse | |
+| [[병]] | bouteilles | |
+| [[장]] | feuilles, photos, billets | Tout ce qui est plat et fin |
+
+**Pour demander la quantité :**
+> 몇 + classificateur + 이에요?
+> 몇 개예요? / 몇 명이에요? / 몇 살이에요?
 
 ---
 
