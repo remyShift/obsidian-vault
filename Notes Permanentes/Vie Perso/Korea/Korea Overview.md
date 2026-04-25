@@ -30,7 +30,7 @@ Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, 
 → [[Langue]] --> progression coréen
 → [[Questions de bases]] --> phrases pratiques
 → [[문법 - Grammaire]] --> notions de grammaire étudiées
-→ [[Verbes - Adjectifs kr]] --> verbes et adjectifs courants
+→ [[Verbes - Adjectifs]] --> verbes et adjectifs courants
 
 ---
 
