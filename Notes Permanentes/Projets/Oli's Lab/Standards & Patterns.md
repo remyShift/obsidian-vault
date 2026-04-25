@@ -182,6 +182,44 @@ Si un nouveau besoin émerge (ex. split scientifique des ingrédients) → crée
 
 ---
 
+## Logging serveur
+
+Logger uniquement au sommet (controller), jamais aux niveaux intermédiaires (utils → adapter → service). Les erreurs remontent enrichies, le controller capture `error.stack`.
+
+**Why:** Sur Lambda, chaque `console.error` déclenche une alerte Slack individuelle. Pattern "log + rethrow" à chaque couche = 1 erreur racine → 6 alertes. Constaté sur le flow `sync-all-live-products` (20/04).
+
+```ts
+// ❌ couche utils/adapter/service
+console.error('Bigblue failed', error)
+throw error
+
+// ✅ controller uniquement
+} catch (error) {
+  console.error('syncAllLiveProducts failed', error.stack)
+  return res.status(500).json({ error: error.message })
+}
+```
+
+---
+
+## Documentation technique
+
+### Audits
+GitHub permalinks pinned à un commit SHA (`https://github.com/.../blob/<sha>/path#L42`), jamais de références locales `file:line`. Les liens ne pourrissent pas dans le temps.
+
+### Format des notes de décision
+Template ticket Notion : **Context / Acceptance Criteria / Scope & Boundaries / Implementation Notes / Dependencies**. La note EST le ticket d'action, pas un méta-plan.
+
+Audits, décisions, plans = **anglais** (audience Michele + Diego). Pas d'em-dashes (—), phrases factuelles, ton parlé.
+
+### Documenter avant d'implémenter
+Pour les chantiers structurants : audit état actuel + note de décision + questions ouvertes **avant** le plan d'implémentation. ADR rétrospectifs valables (formaliser l'implicite).
+
+### Priorisation des PRs
+Les PRs CMS sont triées dans Notion par ordre de dépendance (ex : brands → bridge brands → products → bridge products). Ajouter les priorités à chaque PR.
+
+---
+
 ## Process & PRs
 
 ### Avant de coder
