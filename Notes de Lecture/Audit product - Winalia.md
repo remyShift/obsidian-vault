@@ -16,12 +16,7 @@ Le bon côté est que tout est rattrapable en **quelques semaines (1 à 3 je dir
 
 La sécurité du compte utilisateur repose normalement sur deux barrières : un mot de passe et un code à 6 chiffres (2FA, comme ton appli bancaire). Aujourd'hui, **la deuxième barrière est désactivée** : le code peut être deviné en quelques secondes. Le bouton existe, l'utilisateur croit être protégé, mais la porte est ouverte.
 
-Plusieurs autres garde-fous attendus sur une plateforme financière sont absents ou désactivés. Conséquence concrète : un attaquant motivé peut **vider des wallets** sans déclencher d'alerte. Et comme il n'y a aucun système de surveillance (cf. point 3), nous ne le saurions qu'**après coup, par les plaintes des utilisateurs**.
-
-**Coût en cas d'incident** : plusieurs milliers à plusieurs dizaines de milliers d'euros remboursés aux utilisateurs (légalement obligatoire), plus la perte de confiance.
-
-**Délai de remédiation** : 1 semaine.
-
+Plusieurs autres garde-fous attendus sur une plateforme financière sont absents ou désactivés. Conséquence concrète est qu'un attaquant motivé peut **vider des wallets** sans déclencher d'alerte. Et comme il n'y a aucun système de surveillance (cf. point 3), nous ne le saurions qu'**après coup, par les plaintes des utilisateurs**.
 ### 2. Le statut juridique de la plateforme n'est pas tranché
 
 Winalia propose des matchs en argent réel (`winamatch`), du ranked avec récompenses, des dépôts et retraits. En France, dès qu'on parle d'enjeu en argent et d'une part d'incertitude sur le résultat, on peut basculer dans le régime de la **loi sur les jeux d'argent en ligne** (autorité ANJ). C'est une frontière fine, qui dépend du niveau de skill vs hasard, du modèle économique, et du marketing utilisé.
