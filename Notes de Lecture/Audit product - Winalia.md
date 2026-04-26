@@ -42,6 +42,7 @@ Aujourd'hui, ni l'un ni l'autre n'est en place. Il manque notamment :
 
 Une plateforme de production a normalement trois choses :
 - une **surveillance automatique** des erreurs (Sentry ou équivalent),
+- un environnement dit **"stage"** --> la pré production (pour faire du QA manuel en plus des tests automatisé avant de passer en prod)
 - des **tests automatiques** qui empêchent un développeur de casser l'existant en ajoutant une feature,
 - une **chaîne de validation** avant que du code n'arrive en prod (revue de code, vérifications automatiques).
 
@@ -79,23 +80,23 @@ C'est une base solide pour un produit en construction. Le problème n'est pas l'
 Trois raisons :
 1. **Plus le produit grandit, plus la dette devient chère.** Refondre la sécurité quand il y a 142 fonctionnalités coûte 4 semaines. Quand il y en aura 300, ce sera 3 mois.
 2. **Les premiers utilisateurs sont les plus visibles.** Un incident sur 10 utilisateurs détruit autant la réputation qu'un incident sur 10 000. Et les premiers utilisateurs sont les plus susceptibles de poster sur Reddit/Twitter.
-3. **Une amende RGPD ne s'applique pas seulement aux grandes entreprises.** La CNIL a sanctionné des startups françaises de moins de 10 employés pour absence de bandeau cookies (5 000 à 50 000 €).
+3. **Une amende RGPD ne s'applique pas seulement aux grandes entreprises.** La CNIL a sanctionné des startups françaises de moins de 10 employés pour absence de bandeau cookies.
 
 ---
 
-## Plan d'action — 6 semaines
+## Plan d'action
 
-### Semaines 1-2 : Stop the bleeding (sécurité critique)
+### top the bleeding (sécurité critique)
 **Gel des nouvelles features pendant cette période.**
 - Réparer le 2FA.
 - Brancher les protections de sécurité standards (équivalent du verrou sur la porte d'entrée).
 - Supprimer les portes laissées ouvertes pendant le développement.
-- Empêcher les retraits de wallet en double (race condition).
+- Empêcher les retraits de wallet en double.
 - Empêcher les paiements crédités deux fois (replay des webhooks).
 - Audit complet de qui peut lire/écrire dans la base de données.
 
-### Semaines 3-4 : Outillage industriel
-- Mettre en place une **surveillance d'erreurs** (Sentry, ~30 €/mois).
+### Outillage industriel
+- Mettre en place une **surveillance d'erreurs** (Sentry, Posthog ...).
 - Mettre en place un **système de validation automatique** avant chaque mise en prod.
 - Nettoyer la base de données : ramener les **57 fichiers SQL en désordre** à un système propre et versionné (la situation actuelle empêche de savoir ce qui tourne réellement en prod).
 - Mettre en place un **plan de sauvegarde** documenté (que faire si la base de données est perdue).
