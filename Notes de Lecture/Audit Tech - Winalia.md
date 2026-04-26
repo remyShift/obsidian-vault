@@ -18,7 +18,7 @@ C'est une plateforme financière (argent réel) avec : (1) 2FA volontairement by
 2. 🔴 `middleware-security.ts` n'est jamais appelé depuis `middleware.ts` → CSP, HSTS, anti-clickjacking absents en prod malgré le code écrit.
 3. 🔴 Aucun test sur les flux wallet/KYC/withdrawals + zéro CI + 1 seul commit = un bug en prod = blast radius non maîtrisé sur l'argent des users.
 
-**Orientation stratégique** : la fragilité ci-dessus est un symptôme, pas la cause. La cause, c'est l'absence de couche domaine isolée (modèle anémique généralisé, 142 routes qui parlent directement à Supabase). **Refonte d'architecture progressive (Hexagonal + DDD + patterns financiers) à enclencher en parallèle des sprints sécurité.** Détails en §7.
+**Orientation stratégique** : la fragilité ci-dessus est un symptôme, pas la cause. La cause, c'est l'absence de couche domaine isolée (modèle anémique généralisé, 142 routes qui parlent directement à Supabase). **Refonte d'architecture progressive (Hexagonal + DDD + patterns financiers) à enclencher en parallèle des sprints sécurité.**
 
 ---
 
