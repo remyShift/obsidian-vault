@@ -23,3 +23,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | portfolio-gameboy-next | [[24-04-2026_10-45]]                                      |
 | portfolio-game-boy-next | [[AI Generated/Sessions/portfolio-game-boy-next/25-04-2026_02-13]] |
 | portfolio-gameboy-next | [[AI Generated/Sessions/portfolio-gameboy-next/25-04-2026_18-41]] |
+| winalia                | [[AI Generated/Sessions/winalia/26-04-2026_11-49]]                |

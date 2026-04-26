@@ -86,7 +86,7 @@ Trois raisons :
 
 ## Plan d'action
 
-### top the bleeding (sécurité critique)
+### 1. Stop the bleeding (sécurité critique)
 **Gel des nouvelles features pendant cette période.**
 - Réparer le 2FA.
 - Brancher les protections de sécurité standards (équivalent du verrou sur la porte d'entrée).
@@ -95,40 +95,28 @@ Trois raisons :
 - Empêcher les paiements crédités deux fois (replay des webhooks).
 - Audit complet de qui peut lire/écrire dans la base de données.
 
-### Outillage industriel
+### 2. Outillage industriel
 - Mettre en place une **surveillance d'erreurs** (Sentry, Posthog ...).
 - Mettre en place un **système de validation automatique** avant chaque mise en prod.
 - Nettoyer la base de données : ramener les **57 fichiers SQL en désordre** à un système propre et versionné (la situation actuelle empêche de savoir ce qui tourne réellement en prod).
 - Mettre en place un **plan de sauvegarde** documenté (que faire si la base de données est perdue).
 
-### Semaines 5-6 : Tests + qualité
+### 3. Tests + qualité
 - Couvrir les flux financiers critiques (dépôt, retrait, KYC, 2FA) par des tests automatiques.
 - Réécrire les 5 plus gros morceaux de code (composants de 1000 lignes qui sont impossibles à maintenir).
-- Documenter le projet pour qu'un nouveau développeur puisse contribuer en moins d'une semaine.
+- Documenter le projet pour qu'un nouveau développeur puisse contribuer plus vite et efficacement plutôt que d'avancer à tâtons.
 
-### Au-delà — Conformité et structure
+### 4. Conformité et structure
 - Bandeau cookies + mentions légales + page de conformité.
 - Implémenter la vérification d'âge.
-- Si le statut gambling est confirmé : démarrer la procédure ANJ (compter 6 à 12 mois).
+- Si le statut gambling est confirmé : démarrer la procédure ANJ.
 - Mettre en place un journal d'audit immuable (qui a fait quoi, quand, sur les actions sensibles).
-
----
-
-## Décisions à prendre maintenant
-
-| Décision | Coût | Délai | Recommandation |
-|---|---|---|---|
-| **Avis juridique gambling** | 3 000-8 000 € | 2 sem | Indispensable. À lancer cette semaine. |
-| **Gel des nouvelles features 6 sem** | Coût d'opportunité produit | 6 sem | Indispensable. Sinon les correctifs sont avalés par les nouveautés. |
-| **Outils de surveillance et de qualité** | ~50 €/mois total | 1 jour à mettre en place | Évident. |
-| **2e développeur senior (CDI ou freelance)** | 4 000-7 000 €/mois | 1-2 mois recrutement | À évaluer. Le bus factor actuel (1 dev) est un risque opérationnel majeur. |
-| **Budget audit sécurité externe avant launch** | 5 000-15 000 € | 1 sem d'audit + 2 sem correctifs | Recommandé avant tout marketing payant. |
 
 ---
 
 ## Indicateurs simples pour suivre la remédiation
 
-À reporter chaque semaine au CEO :
+À reporter chaque semaine :
 
 | Indicateur | Aujourd'hui | Cible 6 sem |
 |---|---|---|
