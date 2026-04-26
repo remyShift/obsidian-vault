@@ -2,7 +2,7 @@
 parents: "[[Audit Tech - Winalia]]"
 date: 2026-04-26
 ---
-## Verdict en 1 minute
+## TL;DR
 
 Le produit fonctionne (beaucoup de fonctionnalités livrées), mais les fondations qui protègent l'argent des utilisateurs et la responsabilité légale de l'entreprise ne sont **pas en place**. Lancer dans cet état expose la société à trois types de pertes simultanées : financière (vol direct sur les wallets), juridique (RGPD, statut gambling non clarifié), et de réputation (un seul incident détruit la confiance d'une plateforme financière).
 
@@ -118,40 +118,26 @@ Trois raisons :
 
 À reporter chaque semaine :
 
-| Indicateur | Aujourd'hui | Cible 6 sem |
-|---|---|---|
-| 2FA réellement fonctionnel | Non | Oui |
-| Headers de sécurité (note Mozilla Observatory) | F | A |
-| Surveillance d'erreurs en place | Non | Oui |
-| Plan de sauvegarde documenté | Non | Oui |
-| Tests automatiques sur les flux argent | 0 % | 60 % |
-| Mises en prod passant par une chaîne de validation | Non | Oui |
-| Bandeau cookies | Non | Oui |
-| Avis juridique gambling | À demander | Reçu, statut tranché |
-| Vérification d'âge 18+ | Non | Oui |
+| Indicateur                                         | Aujourd'hui | Cible                |
+| -------------------------------------------------- | ----------- | -------------------- |
+| 2FA réellement fonctionnel                         | Non         | Oui                  |
+| Headers de sécurité (note Mozilla Observatory)     | F           | A                    |
+| Surveillance d'erreurs en place                    | Non         | Oui                  |
+| Plan de sauvegarde documenté                       | Non         | Oui                  |
+| Tests automatiques sur les flux argent             | 0 %         | 60 %                 |
+| Mises en prod passant par une chaîne de validation | Non         | Oui                  |
+| Bandeau cookies                                    | Non         | Oui                  |
+| Avis juridique gambling                            | À demander  | Reçu, statut tranché |
+| Vérification d'âge 18+                             | Non         | Oui                  |
 
 ---
 
 ## Ce qu'on ne fait pas
 
 Pour cadrer les attentes : ces 6 semaines **ne couvriront pas** :
-- l'obtention d'une licence ANJ (6-12 mois si nécessaire),
-- la refonte complète de l'architecture (chantier de plusieurs mois, à étaler ensuite),
+- l'obtention d'une licence ANJ,
+- la refonte complète de l'architecture,
 - le multi-langue / lancement EU multi-pays,
-- les optimisations de performance fines (à faire sur la base d'une charge réelle, pas en théorie).
+- les optimisations de performance fines.
 
-L'objectif des 6 semaines est de **passer d'un produit dangereux à mettre en prod, à un produit qu'on peut mettre en prod sans honte ni risque démesuré**. Pas de viser la perfection.
-
----
-
-## Recommandation finale
-
-Trois oui à obtenir cette semaine :
-
-1. **Oui** au gel des nouvelles features pour 6 semaines.
-2. **Oui** au lancement de l'avis juridique sur le statut gambling.
-3. **Oui** au budget mensuel récurrent pour l'outillage (~50 €) et au budget ponctuel pour l'audit externe avant launch (~10 000 €).
-
-Sans ces trois oui, le risque est qu'on continue à empiler des features sur une base instable, et que l'incident finisse par arriver en plein lancement marketing. À ce moment-là, le coût de réparation sera multiplié par 5 ou 10, et la fenêtre commerciale sera ratée.
-
-Avec ces trois oui, Winalia est en état d'aller chercher ses 1 000 premiers utilisateurs sereinement dans 6 à 8 semaines.
+L'objectif des 6 semaines est de passer d'un produit dangereux à mettre en prod, à un produit qu'on peut mettre en prod sans honte ni risque démesuré. Pas de viser la perfection.
