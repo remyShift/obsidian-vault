@@ -28,7 +28,7 @@ Winalia propose des matchs en argent réel (`winamatch`), du ranked avec récomp
 - gels de comptes bancaires.
 
 **Si la plateforme reste dans le skill gaming :**
-- obligations RGPD pleines (vérification d'âge, consentement cookies, droit à l'oubli),
+- obligations RGPD (vérification d'âge, consentement cookies, droit à l'oubli),
 - transparence sur les conditions de retrait,
 - mentions légales claires.
 
@@ -38,8 +38,6 @@ Aujourd'hui, ni l'un ni l'autre n'est en place. Il manque notamment :
 - les **mentions légales** (éditeur, hébergeur, contact RGPD),
 - les **limites de dépôt et auto-exclusion** (jeu responsable).
 
-**Action prioritaire** : prendre rendez-vous avec un avocat spécialisé jeu/numérique avant tout investissement marketing significatif. Budget à prévoir : 3 000 à 8 000 € pour une consultation cadrante. Délai : 2 semaines pour avoir une réponse écrite.
-
 ### 3. Aucun système de surveillance ni de garde-fou en cas de bug
 
 Une plateforme de production a normalement trois choses :
@@ -47,7 +45,7 @@ Une plateforme de production a normalement trois choses :
 - des **tests automatiques** qui empêchent un développeur de casser l'existant en ajoutant une feature,
 - une **chaîne de validation** avant que du code n'arrive en prod (revue de code, vérifications automatiques).
 
-Winalia n'a **aucun de ces trois éléments**. Un bug en prod n'est détecté que par les utilisateurs qui ouvrent un ticket. Toute correction part directement en prod sans relecture. Tout l'historique du projet tient sur un seul commit (l'équivalent d'avoir tout écrit en une nuit, sans trace de qui a fait quoi).
+Winalia n'a **aucun de ces trois éléments**. Un bug en prod n'est détecté que par les utilisateurs qui ouvrent un ticket. Toute correction part directement en prod sans relecture.
 
 Concrètement, cela veut dire :
 - si une feature paye plus que prévu, on ne le verra pas avant la fin du mois,
@@ -60,7 +58,7 @@ C'est le risque le moins visible mais le plus structurant : **plus on ajoute de 
 
 ## Ce qui marche bien (à préserver)
 
-Il faut souligner ce qui a été bien fait — c'est ce qui rend la remédiation possible :
+Il faut souligner ce qui a été bien fait et c'est ce qui rend la remédiation possible :
 
 | Domaine | État |
 |---|---|
@@ -76,10 +74,9 @@ C'est une base solide pour un produit en construction. Le problème n'est pas l'
 
 ---
 
-## Pourquoi c'est urgent même avant le lancement public
+## Pourquoi c'est urgent même avant le lancement public ?
 
 Trois raisons :
-
 1. **Plus le produit grandit, plus la dette devient chère.** Refondre la sécurité quand il y a 142 fonctionnalités coûte 4 semaines. Quand il y en aura 300, ce sera 3 mois.
 2. **Les premiers utilisateurs sont les plus visibles.** Un incident sur 10 utilisateurs détruit autant la réputation qu'un incident sur 10 000. Et les premiers utilisateurs sont les plus susceptibles de poster sur Reddit/Twitter.
 3. **Une amende RGPD ne s'applique pas seulement aux grandes entreprises.** La CNIL a sanctionné des startups françaises de moins de 10 employés pour absence de bandeau cookies (5 000 à 50 000 €).
