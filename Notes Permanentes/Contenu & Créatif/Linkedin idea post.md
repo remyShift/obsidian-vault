@@ -32,7 +32,7 @@ tags: [Work, Perso]
 - [ ] App coréenne valide le mail pendant le signup
 - [ ] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse 
 - [x] Setup maison obsidian + claude
-- [ ] claude-mem
-- [ ] Lyon Craft
+- [x] claude-mem
+- [x] Lyon Craft
 - [x] réponse question entretien par rapport à l’ia
-- [ ] le tiret de l’ia —
+- [x] le tiret de l’ia —
