@@ -111,6 +111,9 @@ Trois raisons :
 - Implémenter la vérification d'âge.
 - Si le statut gambling est confirmé : démarrer la procédure ANJ.
 - Mettre en place un journal d'audit immuable (qui a fait quoi, quand, sur les actions sensibles).
+  
+
+Une fois que tout ça c'est fait on pourra à nouveau bosser sur l'implémentation des features manquantes.
 
 ---
 

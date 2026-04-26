@@ -18,6 +18,8 @@ C'est une plateforme financière (argent réel) avec : (1) 2FA volontairement by
 2. 🔴 `middleware-security.ts` n'est jamais appelé depuis `middleware.ts` → CSP, HSTS, anti-clickjacking absents en prod malgré le code écrit.
 3. 🔴 Aucun test sur les flux wallet/KYC/withdrawals + zéro CI + 1 seul commit = un bug en prod = blast radius non maîtrisé sur l'argent des users.
 
+**Orientation stratégique** : la fragilité ci-dessus est un symptôme, pas la cause. La cause, c'est l'absence de couche domaine isolée (modèle anémique généralisé, 142 routes qui parlent directement à Supabase). **Refonte d'architecture progressive (Hexagonal + DDD + patterns financiers) à enclencher en parallèle des sprints sécurité.** Détails en §7.
+
 ---
 
 ## 1. Sécurité — Verdict : 🔴 CRITIQUE
@@ -483,6 +485,337 @@ async function validateWithdrawal(
 
 ---
 
+## 7. Refonte d'architecture cible — Verdict : 🔴 INDISPENSABLE
+
+> Réf : Domain-Driven Design.md, Les Principes SOLID.md, Coupling & Cohesion.md, Loi de Déméter.md, Software Craft.md.
+> Justification : sur une plateforme à argent réel, les patches incrémentaux ne suffisent pas. Le coût d'un bug financier ≫ le coût d'une bonne architecture. Cible : **plateforme auditable, testable à 100% sur le domaine, réversible sur les providers, robuste aux pannes (idempotence + outbox)**.
+
+### 7.1 — Pourquoi une vraie refonte (et pas juste un service layer)
+
+L'option « créer un `service.ts` par contexte » mentionnée en 3.14 est le minimum vital. Mais sur une plateforme financière, ce n'est pas suffisant pour trois raisons :
+
+1. **La logique métier reste invisible.** Avec un simple service qui appelle Supabase, les invariants critiques (« on ne peut pas retirer plus que la balance », « KYC obligatoire au-delà de 100€ », « pas de double crédit ») restent dilués dans des routes HTTP, des RPC PL/pgSQL, et des composants React. Un nouveau dev ne peut pas lire un seul dossier pour comprendre les règles du wallet.
+
+2. **Tester revient à tester Supabase.** Sans isolation domaine, chaque test unitaire devient un test d'intégration. C'est lent, fragile, et on finit par ne pas tester du tout (situation actuelle : 0 test).
+
+3. **Pas de réversibilité.** Si Viva ou Xsolla ferme demain, ou si on doit changer pour Stripe Connect, on touche à toute l'app. Idem si on quitte Supabase pour du Postgres direct.
+
+La cible : **Hexagonal Architecture (Ports & Adapters)** + **DDD tactique** + **patterns financiers obligatoires** (idempotence, outbox, audit signé, optionnel : event sourcing wallet).
+
+### 7.2 — Structure monorepo cible
+
+```
+winalia/
+├── apps/
+│   ├── web/                  ← Next.js 16, UI + route handlers fins (parse + auth + délégation)
+│   ├── admin/                ← Next.js back-office, idem
+│   └── workers/              ← (NOUVEAU) Worker dédié : cron, dispatch outbox, jobs idempotents
+│                              (Bun ou Node, ou Supabase Edge Functions)
+├── packages/
+│   ├── domain/               ← Couche domaine PURE — zéro dep externe (pas de Supabase, pas de Next, pas de Zod)
+│   │   ├── wallet/
+│   │   │   ├── Wallet.ts                 (Aggregate Root)
+│   │   │   ├── Money.ts                  (Value Object — montant + devise + opérations)
+│   │   │   ├── WithdrawalRequest.ts      (Entity)
+│   │   │   ├── events.ts                 (DepositCredited, WithdrawalRequested, WithdrawalApproved...)
+│   │   │   ├── policies.ts               (KycRequiredAbove100, DailyLimitPolicy, ChargebackWindow...)
+│   │   │   └── errors.ts                 (InsufficientBalance, KycRequired, DailyLimitExceeded...)
+│   │   ├── ranked/
+│   │   ├── winamatch/
+│   │   ├── kyc/
+│   │   ├── shop/
+│   │   ├── identity/                     (User, Profile, Session, Role)
+│   │   └── shared/
+│   │       ├── DomainEvent.ts
+│   │       ├── AggregateRoot.ts
+│   │       ├── Result.ts                 (Result<T, E> — pas de throw dans le domaine)
+│   │       └── Clock.ts                  (interface — pas de `new Date()` direct)
+│   │
+│   ├── application/           ← Use cases — orchestration, pas de logique métier
+│   │   ├── wallet/
+│   │   │   ├── RequestWithdrawal.usecase.ts
+│   │   │   ├── ProcessVivaDepositWebhook.usecase.ts
+│   │   │   ├── ProcessXsollaDepositWebhook.usecase.ts
+│   │   │   ├── ApproveWithdrawal.usecase.ts
+│   │   │   └── RejectWithdrawal.usecase.ts
+│   │   ├── kyc/
+│   │   ├── ranked/
+│   │   ├── identity/
+│   │   └── ports/             ← Interfaces que l'infrastructure doit implémenter
+│   │       ├── WalletRepository.ts
+│   │       ├── KycRepository.ts
+│   │       ├── EventBus.ts
+│   │       ├── IdempotencyStore.ts
+│   │       ├── AuditLog.ts
+│   │       ├── Clock.ts
+│   │       └── PaymentProvider.ts        (interface VivaProvider/XsollaProvider implémentent)
+│   │
+│   ├── infrastructure/        ← Adapters concrets — c'est ici que vit Supabase, Viva, Xsolla, Resend
+│   │   ├── supabase/
+│   │   │   ├── client.ts
+│   │   │   ├── WalletSupabaseRepository.ts
+│   │   │   ├── KycSupabaseRepository.ts
+│   │   │   └── AuditLogSupabase.ts
+│   │   ├── outbox/
+│   │   │   └── OutboxDispatcher.ts       (cron : lit outbox_events, publie, marque dispatched)
+│   │   ├── payment/
+│   │   │   ├── VivaProvider.ts
+│   │   │   └── XsollaProvider.ts
+│   │   ├── idempotency/
+│   │   │   └── UpstashIdempotencyStore.ts
+│   │   ├── notification/
+│   │   │   └── ResendAdapter.ts
+│   │   └── monitoring/
+│   │       └── SentryLogger.ts
+│   │
+│   ├── contracts/             ← Schémas Zod — contrats HTTP publics (web ↔ admin ↔ external)
+│   │   ├── wallet.ts          (WithdrawRequestSchema, DepositResponseSchema, ...)
+│   │   ├── auth.ts
+│   │   └── kyc.ts
+│   │
+│   ├── ui/                    ← Composants headless partagés (Button, Input, Modal, Toast, Form)
+│   ├── tsconfig/              ← Presets TS partagés
+│   └── eslint-config/         ← Preset ESLint partagé
+│
+└── supabase/
+    ├── migrations/            ← Versionning officiel — supabase migration new <name>
+    └── functions/             ← Edge Functions (webhooks, cron dispatch)
+```
+
+### 7.3 — Règle de dépendance (Clean Architecture)
+
+```
+domain ←─── application ←─── infrastructure ←─── apps/{web,admin,workers}
+                                      ↑
+                                   contracts (lu par apps + adapters HTTP)
+```
+
+- **`domain`** ne dépend de **rien** d'externe. C'est du TypeScript pur. Testable instantanément, sans Docker, sans réseau.
+- **`application`** ne dépend que de `domain` + ses propres `ports/` (interfaces).
+- **`infrastructure`** implémente les `ports/` en utilisant Supabase, Upstash, Viva, Xsolla, Resend.
+- **`apps/`** câblent les use cases avec leurs adapters et exposent l'HTTP/UI.
+
+Conséquence : **on peut changer Supabase, Viva ou Xsolla sans toucher au domaine.** On peut tester `RequestWithdrawal.usecase.ts` avec un `InMemoryWalletRepository` en 5 ms par test.
+
+### 7.4 — Patterns financiers obligatoires sur cette plateforme
+
+#### a. Idempotency keys
+
+Toute mutation argent (`POST /wallet/withdraw`, `POST /shop/purchase`, `POST /wallet/deposit/intent`) prend un header `Idempotency-Key: <uuid>`. Stocké côté Upstash Redis (déjà installé) avec TTL 24h.
+
+```ts
+// application/ports/IdempotencyStore.ts
+interface IdempotencyStore {
+  remember<T>(key: string, ttlSec: number, fn: () => Promise<T>): Promise<T>;
+}
+
+// usage dans le use case
+return this.idempotency.remember(`withdraw:${key}`, 86400, async () => {
+  return this.executeWithdrawal(...);
+});
+```
+
+Replay = même réponse, pas de double traitement.
+
+#### b. Outbox Pattern
+
+Toute écriture wallet est atomique avec l'event qui la suit :
+
+```sql
+BEGIN;
+UPDATE wallets SET balance = balance + 50 WHERE user_id = $1;
+INSERT INTO transactions (...) VALUES (...);
+INSERT INTO outbox_events (event_type, payload, created_at)
+  VALUES ('DepositCredited', $event_json, now());
+COMMIT;
+```
+
+Un worker (`apps/workers/`) lit `outbox_events WHERE dispatched_at IS NULL`, publie vers (Resend email, Sentry, audit log signé, analytics), marque dispatched. Garantit la cohérence : pas de cas où le wallet est crédité mais l'utilisateur n'est jamais notifié, ou inversement.
+
+#### c. Audit log immuable signé (chaîne de hash)
+
+Pour KYC approve, withdrawal approve/reject, role change, password reset, 2FA enable/disable :
+
+```sql
+audit_log (
+  id uuid PRIMARY KEY,
+  action text NOT NULL,
+  actor_user_id uuid NOT NULL,
+  target_user_id uuid,
+  payload jsonb NOT NULL,
+  prev_hash text NOT NULL,
+  current_hash text NOT NULL,  -- sha256(prev_hash || payload || timestamp || HMAC_SECRET)
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+
+-- Triggers BEFORE UPDATE/DELETE qui RAISE EXCEPTION 'audit_log is append-only'
+-- RLS DELETE/UPDATE = forbidden, même service_role
+```
+
+Toute modification ultérieure rend la chaîne incohérente et détectable. Job de vérification quotidien qui re-calcule la chaîne sur les 24h.
+
+C'est aussi un check **obligatoire pour l'ANJ** si la plateforme tombe sous ce régime.
+
+#### d. Repository pattern strict
+
+**Aucun appel `supabase.from('wallets')` n'existe en dehors de `infrastructure/supabase/WalletSupabaseRepository.ts`.** Règle ESLint `no-restricted-imports` interdit `@supabase/supabase-js` dans `domain/` et `application/`.
+
+#### e. Result type — pas de throw dans le domaine
+
+```ts
+// domain/wallet/errors.ts
+export type WithdrawalError =
+  | { type: 'KycRequired' }
+  | { type: 'InsufficientBalance'; available: Money; requested: Money }
+  | { type: 'DailyLimitExceeded'; limit: Money; alreadySpent: Money }
+  | { type: 'AccountClosed' };
+
+// domain/wallet/Wallet.ts
+requestWithdrawal(amount: Money, kycStatus: KycStatus): Result<WithdrawalRequest, WithdrawalError> {
+  if (amount.greaterThan(Money.of(100, 'EUR')) && kycStatus !== 'approved') {
+    return Result.err({ type: 'KycRequired' });
+  }
+  if (this.balance.lessThan(amount)) {
+    return Result.err({ type: 'InsufficientBalance', available: this.balance, requested: amount });
+  }
+  // ...
+  return Result.ok(WithdrawalRequest.create(this.userId, amount));
+}
+```
+
+L'application HTTP convertit `Result.err` en réponse HTTP appropriée. Force la gestion explicite, pas d'erreur métier qui devient un 500.
+
+#### f. CQRS léger — séparation reads / writes
+
+- **Writes** passent par les use cases + aggregates (transactionnel, validé).
+- **Reads** publics et heavy (leaderboard ranked, historique de transactions, stats dashboard) = vues SQL dénormalisées ou projections cachées.
+- Permet de scaler les leaderboards (cache Redis) sans toucher au modèle d'écriture.
+
+#### g. Saga pour flux multi-étapes
+
+Exemple `winamatch_dispute` : `MatchDisputed` → `EvidenceCollected` → `AdminReviewed` → soit `RefundIssued` soit `WinnerConfirmed`. Chaque étape = handler async, idempotent, avec compensation en cas d'échec partiel. Implémenté via `outbox_events` + workers.
+
+#### h. Event Sourcing du wallet (recommandé, optionnel à l'étape 1)
+
+Au lieu de stocker `wallets.balance` (état mutable), stocker `wallet_events` append-only :
+
+```sql
+wallet_events (
+  id uuid,
+  user_id uuid,
+  event_type text,           -- 'Deposited', 'Withdrawn', 'WonMatch', 'PaidShopItem', 'Refunded'
+  amount_cents bigint,
+  currency text,
+  reference jsonb,           -- transaction_id, match_id, shop_item_id...
+  created_at timestamptz
+);
+```
+
+Solde = projection (`SUM(amount_cents) WHERE user_id = $1`). Cache la projection dans `wallet_balances_view` matérialisée pour la perf.
+
+Avantages :
+- Audit complet sans table séparée.
+- Reconstruction d'un solde corrompu = re-projeter.
+- Détection de fraude par analyse temporelle (3 retraits en 5 min depuis 3 IPs différentes…).
+- Réconciliation comptable trivial pour l'expert-comptable.
+
+Inconvénient : un peu plus complexe au début. Sur une plateforme à argent, le coût est très inférieur au gain.
+
+### 7.5 — Migration progressive (Strangler Fig — Martin Fowler)
+
+Refondre 142 routes en big bang = catastrophe garantie. Approche progressive : on laisse l'ancien tourner pendant qu'on construit le nouveau, avec feature flag pour basculer.
+
+#### Étape 1 — Mettre en place l'infrastructure (1 sem)
+
+- Créer `packages/domain`, `packages/application`, `packages/infrastructure`, `packages/contracts`, `packages/ui`, `packages/tsconfig`, `packages/eslint-config`.
+- Étendre `pnpm-workspace.yaml` à `packages/*`.
+- Setup Vitest, ESLint avec `no-restricted-imports`, build TS.
+- Aucune ligne de logique métier déplacée encore. C'est de la plomberie.
+
+#### Étape 2 — Refondre Wallet (3 sem) — **PRIORITÉ ABSOLUE**
+
+C'est le plus critique (argent réel). On commence par là pour valider l'approche.
+
+- **Domaine** : `Wallet`, `Money`, `WithdrawalRequest`, `Transaction`, events, policies, errors. Tests unitaires 100 % invariants.
+- **Application** : `RequestWithdrawal`, `ProcessVivaDepositWebhook`, `ProcessXsollaDepositWebhook`, `ApproveWithdrawal`, `RejectWithdrawal`. Tests use cases avec repo in-memory.
+- **Infrastructure** :
+  - `WalletSupabaseRepository` (atomicité via `BEGIN; … FOR UPDATE; … COMMIT;`).
+  - `UpstashIdempotencyStore`.
+  - `OutboxDispatcher` (worker).
+  - `AuditLogSupabase` avec hash chaîné.
+  - `VivaProvider` + `XsollaProvider` (HMAC, idempotency, anti-replay).
+- **Apps** : routes `wallet/withdraw`, `wallet/webhooks/viva`, `wallet/webhooks/xsolla`, `wallet/admin/*` ré-écrites en couche fine (parse Zod + auth + délégation use case + map Result vers HTTP).
+- **Tests intégration** : routes contre Supabase test container (`supabase start`).
+- **Feature flag** : `WALLET_USE_NEW_DOMAIN=true`. Bascule progressive, fallback possible.
+- **Observation pendant 2 semaines** : Sentry + dashboards. Confirmation comportement identique sur le replay des webhooks récents.
+
+#### Étape 3 — KYC (1 sem)
+
+Plus simple que Wallet. Use cases : `SubmitIdentityDocuments`, `ApproveKyc`, `RejectKyc`, `RevokeKyc`. Audit log signé obligatoire sur ces actions.
+
+#### Étape 4 — Identity / Auth (2 sem)
+
+`User`, `Profile`, `Session`, `Role`, `TwoFactorAuth` (avec le vrai `otplib` enfin), `PasswordHistory`. Politiques de mot de passe, lockout, rate limit unifié.
+
+#### Étape 5 — Ranked (2 sem)
+
+`Match`, `RankedSeason`, `EloRating`, `LeaderboardProjection`. C'est ici qu'on peut envisager event sourcing complet (chaque match résulte en `MatchPlayed` → projection ELO).
+
+#### Étape 6 — Winamatch (1.5 sem)
+
+Saga complète : `MatchProposed` → `MatchAccepted` → `MatchPlayed` → `ResultDeclared` → soit `Settled` soit `Disputed` → `Resolved`.
+
+#### Étape 7 — Shop, Battle Pass, Premium (2 sem)
+
+Catalog + Order + Inventory. Integrations Stripe Subscription pour Premium.
+
+#### Étape 8 — Dépréciation progressive PL/pgSQL (continu, en parallèle)
+
+Les RPC restent comme moyen d'atomicité (`SELECT FOR UPDATE` + INSERT), mais la logique métier (KYC required, daily limit, etc.) repasse en TS. Petit à petit, les RPC deviennent des wrappers minimalistes.
+
+**Total : ~12-13 semaines de chantier architectural,** avec features non-bloquées sur les contextes pas encore refondus.
+
+### 7.6 — Ce qu'on gagne concrètement
+
+| Avant | Après |
+|---|---|
+| Logique métier éparpillée en TS + SQL + RPC + composants React | 1 dossier `packages/domain/<context>/` = toutes les règles, lisible en 30 min |
+| 0 test unitaire (impossible à écrire vu le couplage Supabase) | Domaine 100% testable, < 5 ms par test, sans Docker |
+| `validateWithdrawal(supabase: any, …)` non typé, fragile | `RequestWithdrawal.execute(input)` typé, prouvé par les tests |
+| TOCTOU sur balance, double crédit possible | Idempotency + outbox + Result type → impossibilité prouvée |
+| Webhook replay = double crédit | Idempotency store + audit log signé → détection automatique |
+| Audit ANJ / contrôle fiscal = panique | `audit_log` immuable + event sourcing wallet = export en 1 commande |
+| Onboarding nouveau dev = 2 semaines | Lecture `packages/domain/` puis use cases = 2 jours |
+| Changement de provider = 142 routes à toucher | Nouvel adapter dans `infrastructure/payment/` = 200 lignes |
+| Wallet corrompu = ticket support manuel | Re-projection des events = retour automatique à l'état correct |
+
+### 7.7 — Coûts à anticiper
+
+- **3 mois de dev architectural en parallèle des features**, pas un freeze total.
+- **Courbe d'apprentissage DDD** si l'équipe découvre ces patterns. Prévoir 1-2 sessions formation interne (lecture commune de `packages/domain/wallet/` après l'étape 2 = meilleur séminaire possible).
+- **Plus de fichiers, plus d'imports.** L'architecture demande de la discipline. ESLint `no-restricted-imports` automatise une partie.
+- **Tests à écrire.** Mais c'est un investissement : 1 jour d'écriture = des semaines de bugs économisés en prod.
+
+### 7.8 — Ce qu'on ne fait pas
+
+- ❌ Microservices. Pas le bon problème à la bonne échelle. Monolithe modulaire suffit largement (et reste recommandé jusqu'à plusieurs centaines de milliers d'utilisateurs).
+- ❌ Event sourcing partout. Seulement Wallet (et éventuellement Ranked). Le reste reste en CRUD propre.
+- ❌ Réécrire la couche UI. Le découpage des composants monstres (3.13) est un chantier à part, parallèle à l'archi.
+- ❌ Quitter Supabase. Postgres + Auth + Realtime + Storage = excellente fit. On gagne juste la possibilité de partir si nécessaire.
+- ❌ Quitter Next.js. Next 16 + RSC + Edge = bon choix. On rend juste les route handlers triviaux.
+
+### 7.9 — Premier pas concret cette semaine (avant le Sprint 1 archi)
+
+1. Créer `packages/domain/wallet/` avec **un seul fichier d'exemple** : `Money.ts` (Value Object simple : amount + currency + opérations + immuabilité). 80 lignes max.
+2. Écrire 10 tests unitaires Vitest dessus (`should_add_two_amounts_in_same_currency`, `should_throw_when_currencies_differ`, `should_be_immutable_after_construction`, etc.).
+3. Ouvrir une PR. Faire relire l'approche.
+
+Si ça passe, on enchaîne sur `Wallet` aggregate et on déroule l'étape 2 du plan ci-dessus. Si ça ne passe pas (équipe pas prête, autre orientation), on rediscute l'orientation avant d'avoir investi 3 mois.
+
+> Réf : Software Craft.md, P9 Excellence Technique.md, P10 Simplicité.md (la simplicité est l'art de minimiser le travail inutile — ici, refonte = travail le plus utile possible).
+
+---
+
 ## Plan de remédiation priorisé
 
 ### Sprint 1 (1 semaine) — Bloquants sécurité
@@ -508,23 +841,48 @@ async function validateWithdrawal(
 16. ✅ **Standardiser pnpm** : supprimer `package-lock.json`, harmoniser `engines.packageManager`.
 17. ✅ **Choisir Zod 3 OU Zod 4** dans les deux apps. Idem Tailwind 3 OU 4.
 
-### Sprint 3 (2 semaines) — Tests + refonte archi
+### Sprint 3 (1 semaine) — Plomberie de la refonte (cf. §7.5 étape 1)
 
-18. ✅ **Implémenter `packages/shared/`** : types Supabase générés (`supabase gen types`), schémas Zod partagés, types métier (User, Wallet, Match, Withdrawal, Transaction).
-19. ✅ **Service layer** : pour chaque bounded context (wallet, auth, ranked, winamatch, kyc, shop), créer `lib/(app)/<context>/service.ts`. Routes API = délégation pure.
-20. ✅ **Tests unitaires Vitest** : 1 test minimum par fonction de service. Cible 60 % couverture sur les services métier.
-21. ✅ **Tests d'intégration** : routes wallet/auth/kyc contre une DB Supabase locale (`supabase start`).
-22. ✅ **Refactor des composants > 400 lignes** : commencer par TeamsClient (1049L) et ProfileOverview (880L).
+18. ✅ **Créer les packages** : `packages/domain`, `packages/application`, `packages/infrastructure`, `packages/contracts`, `packages/ui`, `packages/tsconfig`, `packages/eslint-config`.
+19. ✅ **Étendre `pnpm-workspace.yaml` à `packages/*`**, supprimer `packages/shared-types/` (remplacé par `contracts` + `domain`).
+20. ✅ **Configurer Vitest** au niveau workspace (rapport coverage par package).
+21. ✅ **ESLint `no-restricted-imports`** : interdire `@supabase/supabase-js`, `next/*` dans `domain/` et `application/`.
+22. ✅ **Premier pas pédagogique** (cf. §7.9) : `Money.ts` Value Object + 10 tests unitaires. Faire relire en PR pour valider l'approche avant d'aller plus loin.
+23. ✅ **Génération types Supabase en CI** : `npx supabase gen types typescript` injecté dans `infrastructure/supabase/database.types.ts` à chaque migration.
 
-### Sprint 4+ — Conformité, DDD, monitoring fin
+### Sprint 4 (3 semaines) — Refonte Wallet (cf. §7.5 étape 2) — **PRIORITÉ ABSOLUE**
 
-23. ✅ **Cookie banner RGPD** + page `/legal`.
-24. ✅ **Audit log immuable** (constraints + triggers).
-25. ✅ **`audit_log` table append-only**, exposée à l'admin via UI.
-26. ✅ **PR templates, CODEOWNERS, CONTRIBUTING.md, RUNBOOK.md**.
-27. ✅ **Génération automatique types Supabase en CI**.
-28. ✅ **Performance DB** : `EXPLAIN ANALYZE` des top 20 queries, indexes manquants.
-29. ✅ **Bouger toutes les RPC métier vers TS service** (réduire la dépendance PL/pgSQL pour la testabilité).
+24. ✅ **Domaine Wallet** : `Wallet` (Aggregate Root), `Money`, `WithdrawalRequest`, events, policies, errors. 100 % testé unitairement (cible : ≥ 50 tests).
+25. ✅ **Use cases Wallet** : `RequestWithdrawal`, `ProcessVivaDepositWebhook`, `ProcessXsollaDepositWebhook`, `ApproveWithdrawal`, `RejectWithdrawal`. Tests avec `InMemoryWalletRepository`.
+26. ✅ **Adapters infrastructure** : `WalletSupabaseRepository` (atomicité `SELECT FOR UPDATE`), `UpstashIdempotencyStore`, `OutboxDispatcher` (worker), `AuditLogSupabase` (hash chaîné), `VivaProvider` + `XsollaProvider`.
+27. ✅ **Tables nouvelles** : `outbox_events`, `webhook_events` (idempotency providers), `audit_log` (append-only, triggers RAISE EXCEPTION).
+28. ✅ **App `apps/workers/`** : worker dispatch outbox + cron audit log verification.
+29. ✅ **Routes wallet ré-écrites** en couche fine (parse + auth + délégation use case + map Result vers HTTP).
+30. ✅ **Feature flag `WALLET_USE_NEW_DOMAIN`** : bascule progressive, fallback à l'ancien si Sentry détecte une régression.
+31. ✅ **Observation 2 semaines** : compare comportement nouveau/ancien sur le replay des webhooks récents. Décision go/no-go pour la suite.
+
+### Sprint 5 (1 semaine) — Refonte KYC (cf. §7.5 étape 3)
+
+32. ✅ Domaine + use cases + adapter Supabase pour KYC. Audit log signé sur `ApproveKyc`, `RejectKyc`, `RevokeKyc`.
+
+### Sprint 6 (2 semaines) — Refonte Identity / Auth (cf. §7.5 étape 4)
+
+33. ✅ `User`, `Profile`, `Session`, `Role`, `TwoFactorAuth` (avec le vrai `otplib`), `PasswordHistory`.
+34. ✅ Politique de mot de passe + lockout + rate limit unifié dans le domaine.
+
+### Sprint 7-9 (5.5 semaines) — Refonte Ranked, Winamatch, Shop/BattlePass/Premium (cf. §7.5 étapes 5-7)
+
+35. ✅ Ranked + event sourcing ELO (2 sem).
+36. ✅ Winamatch + Saga dispute (1.5 sem).
+37. ✅ Shop + BattlePass + Premium + intégration Stripe Subscription (2 sem).
+
+### En parallèle, continu — Hygiène et qualité de vie
+
+38. ✅ **Cookie banner RGPD** + page `/legal` (CNIL).
+39. ✅ **Refactor composants > 400 lignes** (TeamsClient, ProfileOverview, ranked/[id]/page) en sous-composants ≤ 300 L. Indépendant de la refonte archi.
+40. ✅ **Performance DB** : `EXPLAIN ANALYZE` top 20 queries, indexes manquants.
+41. ✅ **PR templates, CODEOWNERS, CONTRIBUTING.md, RUNBOOK.md** (RPO/RTO documentés).
+42. ✅ **Dépréciation progressive RPC PL/pgSQL** : la logique métier passe en TS, les RPC restent comme wrappers d'atomicité minimaux.
 
 ---
 
@@ -558,6 +916,14 @@ async function validateWithdrawal(
 | Licence gambling (si applicable) | aucune | ANJ ou statut clarifié |
 | Commits | 1 | flux normal |
 | Branches actives | main only | feat/fix/chore par tâche |
+| Couche domaine TypeScript pure | absente | `packages/domain/` ≥ 6 contextes (wallet, kyc, identity, ranked, winamatch, shop) |
+| Use cases isolés (`packages/application/`) | 0 | ≥ 30 (au moins toutes les mutations sensibles) |
+| Repositories abstraits (ports) | 0 | 1 par aggregate root |
+| Idempotency store distribué | absent | actif sur toutes les mutations argent |
+| Outbox pattern (cohérence wallet ↔ events) | absent | actif |
+| Audit log immuable signé (hash chaîné) | absent | actif sur KYC, withdrawal, role, password, 2FA |
+| Routes API en couche fine (parse + auth + délégation) | 0/142 | ≥ 90 % après refontes |
+| Logique métier en PL/pgSQL | 100 % critique (RPC complete_match, request_withdrawal…) | ≤ 20 % (uniquement atomicité minimale) |
 
 ---
 
@@ -565,16 +931,17 @@ async function validateWithdrawal(
 
 - **Ce que tu as fait de bien** : `tsconfig.base.json` strict, validation Zod sur la majorité des routes, séparation `apps/web` vs `apps/admin`, vérification HMAC sur webhooks Viva/Xsolla, routes RGPD `delete-account` et `data-export` présentes, Radix UI (a11y gratuite), DOMPurify côté admin, `removeConsole` en prod.
 - **Ce qui doit s'arrêter immédiatement** : faux 2FA, headers orphelins, routes `/test`, rate limiter mémoire, schemas SQL sans versioning.
-- **Ce qui doit commencer immédiatement** : CI minimum (typecheck + lint + build), Sentry, migrations Supabase officielles, packages partagés.
+- **Ce qui doit commencer immédiatement** : CI minimum (typecheck + lint + build), Sentry, migrations Supabase officielles, packages partagés (`packages/domain`, `packages/application`, `packages/infrastructure`, `packages/contracts`).
 - **Ce qui doit attendre l'avis juridique** : tout investissement marketing massif tant que le statut gambling/skill gaming n'est pas clarifié.
+- **Ce qui doit commencer dès le sprint 3** : la refonte d'architecture cible décrite en §7. Sur une plateforme à argent réel, l'option « patcher l'existant » est plus chère et plus risquée que la refonte progressive avec strangler fig. Premier livrable : `Money.ts` Value Object + 10 tests, en PR cette semaine, comme galon technique pour valider l'approche.
 
-> Référence générale Agilité.md (P9 Excellence Technique, P10 Simplicité, P12 Amélioration Continue) : la quantité de fonctionnalités est impressionnante (142 routes en 1 commit), mais elle est inversement proportionnelle à la solidité des fondations. **La dette est devant le revenu.**
+> Référence générale Agilité.md (P9 Excellence Technique, P10 Simplicité, P12 Amélioration Continue) : la quantité de fonctionnalités est impressionnante (142 routes en 1 commit), mais elle est inversement proportionnelle à la solidité des fondations. **La dette est devant le revenu, et l'architecture est devant la dette.**
 
 ---
 
 ## Vérification end-to-end (proposée)
 
-Une fois les sprints 1-2 livrés :
+### Après les sprints 1-2 (sécurité bloquants + CI/CD/observabilité)
 1. `pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:integration` doit passer.
 2. `curl https://winalia.com -I` doit montrer CSP, HSTS, X-Frame-Options.
 3. Tentative 2FA avec `000000` → 401.
@@ -583,3 +950,17 @@ Une fois les sprints 1-2 livrés :
 6. Mozilla Observatory → grade A minimum.
 7. `supabase db diff` ne montre aucune divergence avec les migrations.
 8. `git log --oneline | wc -l` > 50 (preuve d'un flux normal).
+
+### Après le sprint 4 (refonte Wallet)
+9. `pnpm test --filter=@winalia/domain` → ≥ 50 tests verts, exécution < 2 sec (preuve d'isolation domaine).
+10. `grep -r "supabase.from" packages/domain packages/application` → 0 résultat (preuve d'isolation Supabase).
+11. `RequestWithdrawal.usecase.ts` testable avec `InMemoryWalletRepository` sans Docker.
+12. Replay de N webhooks identiques → 1 seul crédit (preuve idempotence).
+13. Lecture forcée d'`audit_log` modifié → la chaîne de hash est cassée et détectée par le job de vérification.
+14. Bascule `WALLET_USE_NEW_DOMAIN=false` puis `=true` à chaud → comportement identique sur les flux principaux.
+
+### Après les sprints 5-9 (refonte complète)
+15. `packages/domain/` couvre ≥ 6 bounded contexts.
+16. ≤ 20 % de la logique métier reste en PL/pgSQL (uniquement atomicité minimale).
+17. Onboarding nouveau dev mesuré : compréhension des règles wallet en lisant `packages/domain/wallet/` < 30 min, premier PR contribuant en < 1 semaine.
+18. Bascule fictive de provider (Viva → Stripe Connect en POC) faisable sans toucher au domaine ni à `apps/web`.
