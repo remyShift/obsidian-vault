@@ -695,7 +695,7 @@ L'application HTTP convertit `Result.err` en réponse HTTP appropriée. Force la
 
 Exemple `winamatch_dispute` : `MatchDisputed` → `EvidenceCollected` → `AdminReviewed` → soit `RefundIssued` soit `WinnerConfirmed`. Chaque étape = handler async, idempotent, avec compensation en cas d'échec partiel. Implémenté via `outbox_events` + workers.
 
-#### h. Event Sourcing du wallet (recommandé, optionnel à l'étape 1)
+#### h. Event Sourcing du wallet 
 
 Au lieu de stocker `wallets.balance` (état mutable), stocker `wallet_events` append-only :
 
@@ -724,6 +724,8 @@ Inconvénient : un peu plus complexe au début. Sur une plateforme à argent, le
 ### 7.5 — Migration progressive (Strangler Fig — Martin Fowler)
 
 Refondre 142 routes en big bang = catastrophe garantie. Approche progressive : on laisse l'ancien tourner pendant qu'on construit le nouveau, avec feature flag pour basculer.
+
+On test complètement l'existant pour avoir un [[Golden Master]] pour ensuite refactorer l'architecture sereinement.
 
 #### Étape 1 — Mettre en place l'infrastructure (1 sem)
 
