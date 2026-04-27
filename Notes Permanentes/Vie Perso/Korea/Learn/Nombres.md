@@ -3,6 +3,7 @@ tags: [Korea, coréen, grammaire]
 ---
 Il existe **deux systèmes de nombres** en coréen. Ils ne sont pas interchangeables — chaque contexte en impose un.
 
+- [[Numbers.pdf]]
 ---
 
 ## 1. Les nombres sino-coréens (한자어 수사)
