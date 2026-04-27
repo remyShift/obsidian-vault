@@ -2,6 +2,7 @@
 
 Hub vers les notes de lecture par catégorie.
 - [[Audit Tech - Winalia]]
+- [[Talk - 27-04-2026]]
 ---
 ## 📎 Clippings
 
