@@ -136,9 +136,3 @@ lien: https://www.notion.so/olislab/Tech-Weekly-32c4bf4c7fa1806eab9dd46768c54ed1
 
 ### Action items
 - [ ] @Kyle : planifier la rétrospective de fin de semaine (FigJam)
-
----
-
-## Transcript
-
-[[Transcript - 25-04-2026 Tech Weekly]]

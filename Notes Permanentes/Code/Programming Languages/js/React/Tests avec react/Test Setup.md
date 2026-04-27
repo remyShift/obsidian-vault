@@ -60,4 +60,4 @@ export default defineConfig({
 } as UserConfig);
 ```
 
-Désormais on peut [[Tester un hook]] ou [[Tester un composant]] ainsi que [[Mock une API]].
+Désormais on peut [[Tester un hook]], [[Tester un composant]], [[Tester un no-flash effect en React]] ainsi que [[Mock une API]].

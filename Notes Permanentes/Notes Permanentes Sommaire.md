@@ -6,6 +6,7 @@
 ---
 
 ## 🗂 Projets
+- [[Idées de projets]]
 - [[KicksFolio]]
 - [[Intro Oli's Lab]]
 
