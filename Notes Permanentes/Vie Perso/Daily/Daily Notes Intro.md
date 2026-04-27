@@ -19,3 +19,4 @@ Prise de notes quotidiennes, afin de capturer une réflexion, un évènement mar
 - [[24-04-2026]]
 - [[25-04-2026]]
 - [[26-04-2026]]
+- [[27-04-2026]]
