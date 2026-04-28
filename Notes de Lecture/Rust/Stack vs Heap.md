@@ -39,10 +39,8 @@ cap: 11
 
 Sur le stack, tu as juste un pointeur, une longueur, une capacité. Les données réelles sont sur le heap. Quand tu fais `let b = a` avec une `String`, seule la partie stack est copiée. C'est pour ça que Rust interdit d'utiliser `a` après : il n'y a pas deux copies des données heap, juste deux pointeurs vers les mêmes données. Et si les deux essayaient de libérer la mémoire : double free, bug critique.
 
-C'est exactement le problème que l'ownership résout : [[Ownership]].
+C'est exactement le problème que l'[[Ownership]].
 
 ---
 
-**A lire** : [The Rust Book - What is Ownership?](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html) section "Memory and Allocation"
-
-**Question** : quand tu fais `let b = a` avec une `String`, qu'est-ce que Rust copie exactement ? Est-ce que les données du heap sont dupliquées ? Pourquoi Rust fait ce choix plutôt que de copier systématiquement tout ?
+**Ressource** : [The Rust Book - What is Ownership?](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html) section "Memory and Allocation"
