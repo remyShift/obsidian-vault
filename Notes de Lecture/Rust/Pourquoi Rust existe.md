@@ -17,10 +17,8 @@ Rust prend une troisième voie et garantit la sécurité mémoire **à la compil
 
 C'est pour ça que Rust est utilisé dans les OS, le WebAssembly, les CLIs critiques, les moteurs de jeux, les serveurs haute performance. Partout où tu as besoin de vitesse ET de fiabilité en même temps.
 
-Le mécanisme central qui permet tout ça s'appelle l'ownership. C'est là que tout commence : [[Ownership]].
+Le mécanisme central qui permet tout ça s'appelle l'[[Ownership]]. C'est là que tout commence.
 
 ---
 
-**A lire** : [The Rust Book - Introduction](https://doc.rust-lang.org/book/ch00-00-introduction.html)
-
-**Question** : en JS, qui libère la mémoire à ta place quand tu fais `let x = { a: 1 }` dans une fonction ? Et que se passe-t-il si le GC fait une pause au mauvais moment dans un jeu vidéo à 60fps ?
+**Ressource :** [The Rust Book - Introduction](https://doc.rust-lang.org/book/ch00-00-introduction.html)

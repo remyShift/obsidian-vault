@@ -1,14 +1,17 @@
-# Ownership
-
-Tags: #rust #ownership #memoire
-
+---
+tags:
+  - Rust
+  - LangagesDeProgs
+---
 L'ownership est le mécanisme central de Rust. C'est lui qui permet d'éliminer le GC tout en garantissant qu'aucune mémoire n'est utilisée après avoir été libérée, et qu'aucune mémoire n'est libérée deux fois. Tout le reste du langage en découle.
 
-Pour comprendre pourquoi ce mécanisme existe, le modèle mémoire aide beaucoup : [[Stack vs Heap]].
+Pour comprendre pourquoi ce mécanisme existe, le modèle mémoire aide beaucoup, [[Stack vs Heap]].
 
 ## Les trois règles
 
-Chaque valeur en mémoire a un **unique owner**. Il ne peut y en avoir qu'un à la fois. Quand l'owner sort du scope, la valeur est **automatiquement libérée** (on dit qu'elle est "dropped").
+1. Chaque valeur en mémoire a un **unique owner**. 
+2. Il ne peut y en avoir qu'un à la fois. 
+3. Quand l'owner sort du scope, la valeur est **automatiquement libérée** (on dit qu'elle est "dropped").
 
 ## Ce que ça change par rapport à JS
 
