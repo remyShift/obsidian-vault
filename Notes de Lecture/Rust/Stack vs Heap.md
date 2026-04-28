@@ -1,8 +1,8 @@
 ---
 tags:
+  - Rust
+  - LangagesDeProgs
 ---
-
-
 Pour comprendre l'ownership, il faut d'abord avoir le bon modèle mental de la mémoire. En JS, tu n'y penses jamais. En Rust, c'est explicite et ça détermine directement le comportement du compilateur.
 
 **Le stack** est une mémoire à taille fixe, organisée en pile. Ultra rapide, gérée automatiquement. Quand une fonction est appelée, une "frame" est empilée. Quand elle retourne, la frame est dépilée.
