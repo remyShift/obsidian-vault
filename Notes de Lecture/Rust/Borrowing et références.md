@@ -1,10 +1,9 @@
-# Borrowing et références
-
-Tags: #rust #borrowing #references
-
-Si chaque assignation transfère l'ownership, comment passer une valeur à une fonction sans la perdre définitivement ? C'est le problème que le borrowing résout : tu prêtes la valeur au lieu de la céder.
-
-Avant d'aller plus loin, l'ownership est la base de tout ça : [[Ownership]].
+---
+tags:
+  - Rust
+  - LangagesDeProgs
+---
+Si chaque assignation transfère l'ownership, comment passer une valeur à une fonction sans la perdre définitivement ? C'est le problème que le borrowing résout, tu prêtes la valeur au lieu de la céder.
 
 ## Référence immutable
 
