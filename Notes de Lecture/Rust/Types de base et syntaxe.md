@@ -34,7 +34,9 @@ let s2: String = String::from("hello"); // alloué sur le heap, owned, modifiabl
 ```
 
 - `&str` est une référence vers une séquence de bytes quelque part en mémoire.
+	- en paramètre de fonction quand tu lis seulement, parce que ça accepte **les deux** : un literal ET une `String` existante
 - `String` est une chaîne dont tu es propriétaire, que tu peux modifier.
+	- quand tu as besoin de posséder la donnée ou de la modifier
 
 ## Fonctions
 
@@ -44,7 +46,9 @@ fn add(x: i32, y: i32) -> i32 {
 }
 ```
 
-Rust distingue **expressions** (produisent une valeur) et **statements** (ne produisent rien). La dernière ligne sans `;` est une expression, elle est retournée automatiquement. Avec `;` elle devient un statement et ne retourne rien.
+Rust distingue **expressions** (produisent une valeur) et **statements** (ne produisent rien). 
+- La dernière ligne sans `;` est une expression, elle est retournée automatiquement. 
+- Avec `;` elle devient un statement et ne retourne rien.
 
 ## Le if est une expression
 
@@ -52,10 +56,8 @@ Rust distingue **expressions** (produisent une valeur) et **statements** (ne pro
 let result = if x > 5 { "grand" } else { "petit" };
 ```
 
-En Rust, `if` retourne une valeur. C'est l'équivalent de l'opérateur ternaire JS, mais en beaucoup plus lisible. Les deux branches doivent retourner le même type.
+En Rust, `if` retourne une valeur. C'est l'équivalent de l'opérateur ternaire JS, mais en beaucoup plus lisible en plus **les deux branches doivent retourner le même type**.
 
 ---
 
-**A lire** : [The Rust Book - Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)
-
-**Question** : en JS, `const` empêche la réassignation mais pas la mutation (`const obj = {}; obj.a = 1` fonctionne). Est-ce que `let` en Rust empêche aussi la mutation, ou seulement la réassignation ? Essaie avec une `String` pour le savoir.
+**Ressource** : [The Rust Book - Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)

@@ -1,10 +1,13 @@
-# Result et Option
+---
+tags:
+  - Rust
+  - LangagesDeProgs
+---
+En JS tu gères les erreurs avec `try/catch` et les valeurs absentes avec `null` ou `undefined`.
 
-Tags: #rust #error-handling
+Rust n'a ni l'un ni l'autre, à la place, les erreurs et l'absence de valeur sont des types ordinaires que le compilateur t'oblige à gérer explicitement.
 
-En JS tu gères les erreurs avec `try/catch` et les valeurs absentes avec `null` ou `undefined`. Rust n'a ni l'un ni l'autre. À la place, les erreurs et l'absence de valeur sont des types ordinaires que le compilateur t'oblige à gérer explicitement.
-
-C'est directement lié à la philosophie de Rust : si quelque chose peut mal se passer, ça doit être visible dans la signature de la fonction. Pas de surprise à l'exécution.
+C'est directement lié à la philosophie de Rust : si quelque chose peut mal se passer, ça doit être visible dans la signature de la fonction comme ça pas de surprise à l'exécution.
 
 ## Option : une valeur qui peut ne pas exister
 
