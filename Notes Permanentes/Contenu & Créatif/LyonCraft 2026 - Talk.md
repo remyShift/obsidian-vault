@@ -78,12 +78,10 @@ Deux refus, une école abandonnée, un bootcamp, six mois sans mission. Et me vo
 
 **Les trois compétences que tu en as tirées, avec exemples concrets de ta mission actuelle :**
 
-- **Définir le besoin avant d'agir** : en vente, tu pitches pas ton produit sans comprendre ce que le client veut vraiment. Chez Oli's Lab, c'est pareil — avant de toucher une ligne de code, tu poses des questions. "C'est quoi l'objectif métier derrière cette feature ?" Les devs qui foncent sans poser cette question créent de la dette inutile.
-    
-- **Poser les bonnes questions vite** : en vente tu as 30 secondes pour qualifier un prospect. En mission, tu as peu de temps pour comprendre une codebase legacy avant de devoir agir dessus. Même réflexe : aller à l'essentiel, pas tout lire, identifier les noeuds.
-    
-- **Ne pas avoir peur de l'inconnu** : taper des portes d'inconnus, ça forge. Aujourd'hui tu hérites d'une codebase sans tests, sans doc, sans filet — et tu ne panique pas. Ce n'est pas du courage, c'est de l'habitude.
-    
+1. **Définir le besoin avant d'agir** : en vente, tu pitches pas ton produit sans comprendre ce que le client veut vraiment (pose des questions pour définir le besoin). Chez Oli's Lab, c'est pareil avant de toucher une ligne de code, tu poses des questions. "C'est quoi l'objectif métier derrière cette feature ?". 
+2. **Poser les bonnes questions vite** : en vente tu as 30 secondes pour qualifier un prospect. En mission, tu as peu de temps pour comprendre une codebase legacy avant de devoir agir dessus. Même réflexe : aller à l'essentiel, pas tout lire, identifier les noeuds.
+3. **Ne pas avoir peur de l'inconnu** : taper des portes d'inconnus, ça forge. Aujourd'hui tu hérites d'une codebase sans tests, sans doc, sans filet — et tu ne panique pas. Ce n'est pas du courage, c'est de l'habitude.
+
 
 **Transition vers l'Acte 2 :** _"Mais avant d'arriver là, il y a eu beaucoup de portes — et pas celles que j'avais choisies de frapper."_
 
