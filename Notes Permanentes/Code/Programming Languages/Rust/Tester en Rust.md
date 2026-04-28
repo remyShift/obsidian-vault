@@ -112,10 +112,6 @@ cargo test -- --nocapture     # affiche les println! pendant les tests
 
 En JS, tu peux tester du code mal structuré. Tu peux mocker n'importe quoi, contourner les dépendances, patcher des modules au runtime. En Rust, le compilateur t'oblige à structurer ton code de façon testable dès le départ : pas d'effets de bord cachés, pas d'état global implicite. Si une fonction est difficile à tester, c'est un signal que sa conception est mauvaise, pas qu'il faut un meilleur outil de mock. C'est ça, le craft en Rust.
 
-L'ownership et le borrowing ([[Ownership]], [[Borrowing et références]]) forcent à penser en termes de responsabilités claires, ce qui rend les tests naturellement simples.
-
 ---
 
-**A lire** : [The Rust Book - Writing Automated Tests](https://doc.rust-lang.org/book/ch11-00-testing.html)
-
-**Exercice** : écris une fonction `fn est_pair(n: i32) -> bool` et trois tests pour elle : un qui passe avec un nombre pair, un avec un nombre impair, et un avec zéro. Lance `cargo test` et observe le format de sortie. Qu'est-ce qui te surprend par rapport à Vitest ?
+**Ressource** : [The Rust Book - Writing Automated Tests](https://doc.rust-lang.org/book/ch11-00-testing.html)
