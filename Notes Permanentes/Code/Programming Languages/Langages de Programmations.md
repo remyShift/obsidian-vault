@@ -12,3 +12,4 @@ tags: [LangagesDeProgs]
 	- Java,
 	- C,
 	- [[Ruby-Global |Ruby]],
+	- [[Rust Intro]]
