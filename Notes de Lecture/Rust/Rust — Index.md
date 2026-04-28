@@ -16,6 +16,10 @@ L'ownership est le concept central de Rust, celui qui élimine le GC : [[Ownersh
 
 Pour passer des valeurs sans en perdre le contrôle, le borrowing : [[Borrowing et références]].
 
+Rust n'a pas de `null` ni de `try/catch`. Les erreurs et l'absence de valeur sont des types explicites : [[Result et Option]].
+
+Parce que le compilateur force une bonne structure, les tests sont naturellement propres : [[Tester en Rust]].
+
 ---
 
 **Ressources**
@@ -30,4 +34,3 @@ Pour passer des valeurs sans en perdre le contrôle, le borrowing : [[Borrowing 
 - Pattern matching
 - Lifetimes (suite du borrowing)
 - Traits
-- Error handling avec `Result` et `Option`
