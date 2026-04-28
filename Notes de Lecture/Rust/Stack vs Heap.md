@@ -1,6 +1,7 @@
-# Stack vs Heap
+---
+tags:
+---
 
-Tags: #rust #memoire
 
 Pour comprendre l'ownership, il faut d'abord avoir le bon modèle mental de la mémoire. En JS, tu n'y penses jamais. En Rust, c'est explicite et ça détermine directement le comportement du compilateur.
 
