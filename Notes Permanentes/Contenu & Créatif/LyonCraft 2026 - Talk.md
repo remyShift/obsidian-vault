@@ -64,9 +64,19 @@ Comment passe-t-on de vendeur de surgelés en porte à porte à développeur ful
 
 Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. Je vais vous expliquer pourquoi tout ce qui n'a pas marché est exactement ce qui m'a construit.
 
-#### V2
+#### V2 - anecdote
 
-*anecdote vie de commercial plutôt ?*
+C'est un mardi matin, il pleut, je dois faire la tournée de Vaulx-en-Velin / Villeurbanne, 80 clients à voir, 36 commandes à ramener.
+
+J'ai mes mes catalogues, et une liste d'adresses que je connais pas.
+
+J'enchaîne toute la journée des refus 
+
+Ce que je savais pas à l'époque, c'est que cette journée-là m'apprenait quelque chose que je mettrais des années à formuler : comment naviguer dans l'inconnu, comment qualifier un besoin en 30 secondes, et comment ne pas paniquer quand la porte se ferme.
+
+Aujourd'hui je fais tourner une migration Next.js en production pour un e-commerce. Et honnêtement ? Certains matins ressemblent exactement à ce mardi pluvieux.
+
+_[Thèse]_ Ce qui m'a construit comme développeur, c'est pas la formation que j'ai suivie. C'est tout ce que j'ai traversé avant, pendant, et autour.
 
 ---
 
