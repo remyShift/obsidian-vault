@@ -141,23 +141,38 @@ On finit avec un super projet musicale qui lors de la présentation de fins d'é
 
 ## ACTE 3 : Arriver en prod sans filet
 
-**Objectif :** montrer ce que ça coûte vraiment de livrer — et pourquoi le parcours t'y a préparé mieux que n'importe quelle formation.
+**Objectif :** montrer ce que ça coûte vraiment de livrer et pourquoi le parcours m'y a préparé mieux que n'importe quelle formation.
 
-**KicksFolio (4 min)** Pendant la période creuse post-Spash, tu codes KicksFolio. App mobile sneakers — scanner un code-barres, gérer sa collection, la partager. Deux centres d'intérêt qui se rejoignent.
+---
 
-Tu vas jusqu'au bout. Tu la publies sur les stores. Et c'est là que tu découvres ce que "finir" veut vraiment dire : la prod, c'est pas juste le code. C'est les edge cases, les permissions, les crashes silencieux, les reviews d'app store. Personne pour valider derrière toi. Tu es seul responsable.
+**KicksFolio + Le post linkedin + la période creuse ===> tout en parallèle**
 
-_"KicksFolio m'a appris ce qu'aucun bootcamp n'enseigne : le coût réel d'aller jusqu'au bout."_
+---
+#### KicksFolio
 
-**Le post LinkedIn (3 min)** Période creuse. Six mois sans mission. Tu bloques pas sur la technique — tu bloques sur comment te présenter, raconter ton parcours atypique sans le défendre.
+Pendant la période creuse post-Spash, tu codes KicksFolio. App mobile sneakers, scanner un code-barres, gérer sa collection, la partager. Deux centres d'intérêt qui se rejoignent.
 
-Tu fais un post LinkedIn. Public. Tu demandes de l'aide.
+Je vais jusqu'au bout. Je la publies sur les stores. Et c'est là que je découvres ce que "finir" veut vraiment dire : la prod, c'est pas juste le code. C'est les edge cases, les permissions, les crashes silencieux, les reviews d'app store. Personne pour valider derrière toi. Je suis seul responsable.
 
-En quelques jours, ton agenda est plein. Plus d'une dizaine de personnes. Des échanges, des simulations d'entretien, des retours francs. Colin Damon en fait partie.
+KicksFolio m'a appris ce qu'aucun bootcamp n'enseigne : le coût réel d'aller jusqu'au bout.
 
-_"Demander de l'aide publiquement, c'est contre-intuitif quand on a passé des mois à apprendre seul. Mais c'est ce post qui a tout débloqué."_
+#### Le post LinkedIn
 
-**Oli's Lab — le choix et l'arrivée (3 min)** Deux offres arrivent quasiment en même temps. Tu es en galère financièrement. La première, tu ne la sens pas — les signaux faibles sont là. Tu la refuses quand même.
+Période creuse, six mois sans mission. Je bloques pas sur la technique, je bloques sur comment te présenter, raconter ton parcours atypique sans le défendre.
+
+Je fais un post LinkedIn, je demandes de l'aide.
+
+En quelques jours, mon agenda est plein. Plus d'une dizaine de personnes. Des échanges, des simulations d'entretien, des retours francs.
+
+(remercier tout le monde)
+
+Demander de l'aide publiquement, c'est contre-intuitif quand on a passé des mois à apprendre seul. Mais c'est ce post qui a tout débloqué.
+
+##### Oli's Lab le choix et l'arrivée
+
+ Deux offres arrivent quasiment en même temps, au moment où je remettais tout en question, où je voulais reprendre un taff alimentaire plutôt que continuer à mettre autant d'énergie dans la recherche d'emplois. 
+ 
+ La première, tu ne la sens pas, les signaux faibles sont là --> je la refuses quand même.
 
 La deuxième arrive via le Slack du Wagon. Le feeling est différent. Tu choisis Oli's Lab.
 
