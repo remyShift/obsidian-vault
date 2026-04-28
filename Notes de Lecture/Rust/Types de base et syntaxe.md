@@ -1,15 +1,16 @@
-# Types de base et syntaxe
-
-Tags: #rust #types #syntaxe
-
-Avant d'arriver à ce qui rend Rust unique, il faut se familiariser avec la syntaxe de base. La première chose qui surprend venant de JS : les variables sont **immutables par défaut**.
+---
+tags:
+  - Rust
+  - LangagesDeProgs
+---
+Avant d'arriver à ce qui rend Rust unique, il faut se familiariser avec la syntaxe de base. La première chose qui surprend venant de JS c'est que les variables sont **immutables par défaut**.
 
 ```rust
 let x = 5;        // immutable, tu ne peux pas réécrire x après
 let mut y = 5;    // mutable, le mot-clé mut est obligatoire
 ```
 
-En JS, `let` est mutable par défaut et `const` empêche la réassignation. Rust fait l'inverse : `let` est immutable, et tu dois explicitement demander la mutabilité avec `mut`. C'est un choix philosophique fort : rendre le changement d'état visible dans le code.
+En JS, `let` est mutable par défaut et `const` empêche la réassignation. Rust fait l'inverse : `let` est immutable, et tu dois explicitement demander la mutabilité avec `mut`. C'est un choix philosophique fort, rendre le changement d'état visible dans le code.
 
 ## Les types scalaires
 
@@ -32,7 +33,8 @@ let s1: &str = "hello";              // string literal, stocké directement dans
 let s2: String = String::from("hello"); // alloué sur le heap, owned, modifiable
 ```
 
-`&str` est une référence vers une séquence de bytes quelque part en mémoire. `String` est une chaîne dont tu es propriétaire, que tu peux modifier. Cette distinction fait directement écho au modèle d'ownership : [[Ownership]].
+- `&str` est une référence vers une séquence de bytes quelque part en mémoire.
+- `String` est une chaîne dont tu es propriétaire, que tu peux modifier.
 
 ## Fonctions
 

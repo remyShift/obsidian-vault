@@ -30,7 +30,7 @@ let mut s = String::from("hello");
 change(&mut s);
 ```
 
-Et là, la règle critique : **une seule référence mutable à la fois**.
+Et là, la règle critique, **une seule référence mutable à la fois**.
 
 ```rust
 let r1 = &mut s;
@@ -42,16 +42,15 @@ let r2 = &mut s; // ERREUR : tu ne peux pas avoir deux &mut en même temps
 Ce n'est pas arbitraire. Si deux parties du code peuvent modifier la même mémoire simultanément, tu as un **data race** : comportement non déterministe, bugs impossibles à reproduire. Rust l'interdit structurellement, à la compilation.
 
 Les règles complètes :
-
 - Plusieurs références immutables (`&T`) en même temps : ok
 - Une seule référence mutable (`&mut T`) à la fois : ok
 - Une référence mutable ET une immutable en même temps : interdit
 
-L'intuition : si quelqu'un est en train de modifier, personne d'autre ne peut lire ou modifier. Si tout le monde lit, personne ne peut modifier.
+Si quelqu'un est en train de modifier, personne d'autre ne peut lire ou modifier. Si tout le monde lit, personne ne peut modifier.
 
 ## Ce qui se passe si la valeur disparaît avant la référence
 
-C'est ce que Rust appelle une **dangling reference**. En C, c'est un bug classique : tu retournes un pointeur vers une variable locale qui n'existe plus. Rust refuse de compiler ce cas.
+C'est ce que Rust appelle une **dangling reference**. En C, c'est un bug classique, tu retournes un pointeur vers une variable locale qui n'existe plus. Rust refuse de compiler ce cas.
 
 ```rust
 fn dangle() -> &String { // ERREUR
@@ -64,6 +63,4 @@ Le compilateur appelle ça un problème de **lifetime**. C'est le prochain conce
 
 ---
 
-**A lire** : [The Rust Book - References and Borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
-
-**Question** : qu'est-ce qui se passe dans ta tête quand tu vois une erreur "does not live long enough" ? Essaie de reproduire l'exemple `dangle()` ci-dessus et lis le message d'erreur du compilateur. Qu'est-ce qu'il t'explique exactement ?
+**Ressource :** : [The Rust Book - References and Borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
