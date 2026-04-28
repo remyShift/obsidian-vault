@@ -62,7 +62,7 @@ Comment passe-t-on de vendeur de surgelés en porte à porte à développeur ful
 
 ...
 
-Deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. Je vais vous expliquer pourquoi tout ce qui n'a pas marché est exactement ce qui m'a construit.
+Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. Je vais vous expliquer pourquoi tout ce qui n'a pas marché est exactement ce qui m'a construit.
 
 #### V2
 
@@ -168,36 +168,34 @@ En quelques jours, mon agenda est plein. Plus d'une dizaine de personnes. Des é
 
 Demander de l'aide publiquement, c'est contre-intuitif quand on a passé des mois à apprendre seul. Mais c'est ce post qui a tout débloqué.
 
-##### Oli's Lab le choix et l'arrivée
+#### Oli's Lab le choix et l'arrivée
 
  Deux offres arrivent quasiment en même temps, au moment où je remettais tout en question, où je voulais reprendre un taff alimentaire plutôt que continuer à mettre autant d'énergie dans la recherche d'emplois. 
  
- La première, tu ne la sens pas, les signaux faibles sont là --> je la refuses quand même.
+La première, tu ne la sens pas, les signaux faibles sont là --> je la refuses quand même.
 
-La deuxième arrive via le Slack du Wagon. Le feeling est différent. Tu choisis Oli's Lab.
+La deuxième arrive via le Slack du Wagon (au final ça m'apporte pas juste un diplôme), le feeling est différent et le choix évident --> je choisis Oli's Lab.
 
-Tu arrives sur une codebase legacy, sans tests, sans doc. Migration Next.js en cours. Mise en place d'un CMS Payload à construire de zéro. Seul sur ces sujets.
+J'arrives sur une codebase legacy, sans tests, sans doc, migration Next.js de prévu mais pas commencée, une gestion du contenu du site bancale --> mise en place d'un CMS Payload à construire de zéro (seul sur ce sujet).
 
-Et là — la boucle se ferme. "Ne pas avoir peur de l'inconnu" appris en sonnant des portes, c'est exactement ce qui te permet de naviguer dans cette codebase sans paniquer.
+Et là, la boucle se ferme. Ne pas avoir peur de l'inconnu appris en sonnant des portes, c'est exactement ce qui te permet de naviguer dans cette codebase sans paniquer.
 
 ---
 
-## CONCLUSION — 5 min
+## CONCLUSION
 
 **Objectif :** fermer les boucles, laisser une phrase dans la tête de chaque personne dans la salle.
 
-Tu reviens sur la thèse. Pas en la répétant mécaniquement — en la prouvant par les faits que tu viens de raconter.
+*Je reviens sur la thèse. Pas en la répétant mécaniquement, en la prouvant par les faits que tu viens de raconter.*
 
-_"Deux refus, une école abandonnée, six mois sans mission. À chaque fois, la même réponse : creuser seul. Et à chaque fois, une progression que personne ne m'aurait donnée autrement."_
+Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. 
 
-Puis la boucle Colin — à amener sobrement, pas comme un effet de manche :
+À chaque fois, la même réponse ne pas abandonner, continuer et creuser seul. Et à chaque fois, une progression que personne ne m'aurait donnée autrement.
 
-_"Pendant ces périodes, j'ai lu un bouquin écrit par quelqu'un de cette communauté. Aujourd'hui c'est cette même communauté qui m'invite à monter sur cette scène. Je ne pense pas que c'est un hasard — je pense que c'est exactement ce que le craft fait : il crée des cercles où les gens se retrouvent."_
+*Puis la boucle Colin à amener sobrement :*
 
-Phrase de sortie — la dernière chose que la salle entend :
+Pendant ces périodes, j'ai lu un bouquin écrit par quelqu'un de cette communauté. Aujourd'hui c'est cette même communauté qui m'invite à monter sur cette scène. Je ne pense pas que c'est un hasard, je pense que c'est exactement ce que le craft fait en dehors des lignes de codes : il crée des cercles où les gens se retrouvent.
 
-**"Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie. C'est la culture qu'on se crée en route."**
+*Phrase de sortie la dernière chose que la salle entend :*
 
----
-
-C'est un talk solide. La structure tient, les transitions sont naturelles, et chaque acte a un rôle précis. Ce qu'il reste à faire : trouver tes exemples concrets pour l'Acte 1 — les moments spécifiques chez Oli's Lab où tu as appliqué les réflexes de la vente. Tu veux qu'on creuse ça ?
+Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie. C'est la culture qu'on se crée en route.
