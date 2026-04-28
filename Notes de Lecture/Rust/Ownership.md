@@ -41,15 +41,17 @@ En JS, tu ne sais pas quand le GC va passer. En Rust, tu sais exactement quand l
 } // s est dropped ici, mémoire libérée immédiatement
 ```
 
-C'est déterministe. Prévisible. Pas de pause GC.
+C'est déterministe, prévisible, pas de pause GC.
 
 ## Les types Copy ne sont pas concernés
 
-Les types simples comme `i32`, `bool`, `char` vivent entièrement sur le stack (voir [[Stack vs Heap]]). Rust peut les copier instantanément, donc il le fait automatiquement. Ces types implémentent le trait `Copy` et le move ne s'applique pas à eux.
+Les types simples comme `i32`, `bool`, `char` vivent entièrement sur le stack (voir [[Stack vs Heap]]). Rust peut les copier instantanément, donc il le fait automatiquement.
+
+Ces types implémentent le trait `Copy` et le move ne s'applique pas à eux.
 
 ## Comment passer une valeur sans en perdre l'ownership
 
-Le move force à réfléchir : si tu passes une `String` à une fonction, est-ce que tu veux lui céder ou juste lui prêter ? Pour prêter sans céder, Rust a le borrowing : [[Borrowing et références]].
+Le move force à réfléchir, si tu passes une `String` à une fonction, est-ce que tu veux lui céder ou juste lui prêter ? Pour prêter sans céder, Rust a le [[Borrowing et références]].
 
 ---
 
