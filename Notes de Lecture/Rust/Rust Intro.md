@@ -11,8 +11,6 @@ On commence par voir les [[Types de base et syntaxe]] qui sont la bases de Rust.
 
 La mémoire fonctionne différemment qu'en JS, et tout le reste en dépend, [[Stack vs Heap]].
 
-Pour passer des valeurs sans en perdre le contrôle, on utilise le [[Borrowing et références]]
-
 Rust n'a pas de `null` ni de `try/catch`, les erreurs et l'absence de valeur sont des types explicites tel que [[Result et Option]].
 
 Parce que le compilateur force une bonne structure, les tests sont naturellement propres [[Tester en Rust]].

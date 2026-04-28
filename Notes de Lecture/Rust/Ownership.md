@@ -55,14 +55,4 @@ Le move force à réfléchir, si tu passes une `String` à une fonction, est-ce 
 
 ---
 
-**A lire** : [The Rust Book - Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
-
-**Question** : pourquoi ce code ne compile pas ? Explique précisément ce que Rust protège ici.
-
-```rust
-fn main() {
-    let s1 = String::from("hello");
-    let s2 = s1;
-    println!("{}", s1);
-}
-```
+**Ressource :** : [The Rust Book - Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
