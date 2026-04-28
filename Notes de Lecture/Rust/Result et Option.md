@@ -82,6 +82,4 @@ Quand tu testes du code Rust, tu vas souvent tester des fonctions qui retournent
 
 ---
 
-**A lire** : [The Rust Book - Error Handling](https://doc.rust-lang.org/book/ch09-00-error-handling.html)
-
-**Question** : en JS, qu'est-ce qui se passe si tu oublies de gérer un `null` ? Et qu'est-ce qui se passe en Rust si tu oublies de gérer un `None` ? Quelle approche te semble plus fiable, et pourquoi ?
+**Ressource** : [The Rust Book - Error Handling](https://doc.rust-lang.org/book/ch09-00-error-handling.html)

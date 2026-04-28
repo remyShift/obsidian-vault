@@ -1,8 +1,9 @@
-# Tester en Rust
-
-Tags: #rust #tests #craft
-
-Rust a un système de tests intégré dans le langage, pas besoin d'installer Vitest ou Jest. `cargo test` suffit. Et parce que Rust t'oblige à modéliser les erreurs explicitement avec `Result` et `Option` (voir [[Result et Option]]), les tests sont souvent plus précis qu'en JS : tu vérifies non seulement que ça fonctionne, mais que ça échoue exactement comme prévu.
+---
+tags:
+  - Rust
+  - LangagesDeProgs
+---
+Rust a un système de tests intégré dans le langage, pas besoin d'installer Vitest ou Jest. `cargo test` suffit. Et parce que Rust t'oblige à modéliser les erreurs explicitement avec [[Result et Option]], les tests sont souvent plus précis qu'en JS : tu vérifies non seulement que ça fonctionne, mais que ça échoue exactement comme prévu.
 
 ## La structure d'un test
 
