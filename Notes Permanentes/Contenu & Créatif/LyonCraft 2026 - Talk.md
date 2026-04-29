@@ -111,7 +111,7 @@ Je découvres 42 après la vente pour essayer. Déclic intellectuel immédiat. J
 
 C'est là que le pattern se pose pour la première fois : le blocage ne t'arrête pas --> il te redirige.
 
-#### Séquence 2 - Ada Tech School + 6 mois solo
+[^7]#### Séquence 2 - Ada Tech School + 6 mois solo
 
 J'intègres Ada Tech School. Je poses les bases du web, JavaScript, le front, premiers frameworks, premiers projets web. 
 
@@ -224,3 +224,5 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 [^5]: Moment fort à inclure : quand je quitte le taff de commercial --> refuse achat appartement a 1 mois de la remise des clés chez le notaire
 
 [^6]: Savoir vendre c'est bien, savoir se vendre c'est mieux
+
+[^7]: PORTFOLIO
