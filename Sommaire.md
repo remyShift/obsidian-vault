@@ -15,7 +15,7 @@ Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques
 
 ## Skills
 
-- [[SKILL|wrap]]
+- [[Skills/wrap/SKILL|wrap]]
 
 ---
 ## Activité récente
