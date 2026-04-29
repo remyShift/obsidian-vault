@@ -82,10 +82,10 @@ Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une écol
 2. **Poser les bonnes questions vite** : en vente on a 30 secondes pour qualifier un prospect. Quand j'ai commencé ma mission, j'ai eu peu de temps pour comprendre une codebase legacy avant de devoir agir dessus --> Même réflexe : aller à l'essentiel, pas tout lire, identifier les noeuds.
 
 3. **Ne pas avoir peur de l'inconnu** : taper des portes d'inconnus, ça forge (parfois même taper la porte de son voisin on a du mal). Aujourd'hui j'hérites d'une codebase sans tests, sans doc, sans filet et ... je ne panique pas. Ce n'est pas du courage, c'est de l'habitude.
-	- Poser une question ouverte : sincère 
+	- Poser une question ouverte : sincère
 
 
-**Transition vers l'Acte 2 :** Mais avant d'arriver là, il y a eu beaucoup de portes et pas celles que j'avais choisies de frapper.
+[^5]**Transition vers l'Acte 2 :** Mais avant d'arriver là, il y a eu beaucoup de portes et pas celles que j'avais choisies de frapper.
 
 ---
 
@@ -162,7 +162,7 @@ KicksFolio m'a appris ce qu'aucun bootcamp n'enseigne : le coût réel d'aller j
 
 #### Le post LinkedIn
 
-Période creuse, six mois sans mission. Je bloques pas sur la technique, je bloques sur comment te présenter, raconter ton parcours atypique sans le défendre.
+[^6]Période creuse, six mois sans mission. Je bloques pas sur la technique, je bloques sur comment te présenter, raconter ton parcours atypique sans le défendre.
 
 Je fais un post LinkedIn, je demandes de l'aide.
 
@@ -209,8 +209,8 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 - Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
 - Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
 	- Boire de l'eau aide pour laisser des pauses
-- Préciser 
-  
+- Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
+
 ---
 
 [^1]: Pousser les questions que je me pose, comment ? quel questions ? pourquoi ?
@@ -220,3 +220,7 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 [^3]: Formulation trop complexe à simplifier || Expliquer à l'oral si je le sens / si nécessaires + pause
 
 [^4]: Visuelle / Slide / Screens
+
+[^5]: Moment fort à inclure : quand je quitte le taff de commercial --> refuse achat appartement a 1 mois de la remise des clés chez le notaire
+
+[^6]: Savoir vendre c'est bien, savoir se vendre c'est mieux
