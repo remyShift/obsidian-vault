@@ -99,6 +99,7 @@ Ce qui m'a construit comme développeur, c'est pas la formation que j'ai suivie.
 2. **Poser les bonnes questions vite** : en vente on a 30 secondes pour qualifier un prospect. Quand j'ai commencé ma mission, j'ai eu peu de temps pour comprendre une codebase legacy avant de devoir agir dessus --> Même réflexe : aller à l'essentiel, pas tout lire, identifier les noeuds.
 
 3. **Ne pas avoir peur de l'inconnu** : taper des portes d'inconnus, ça forge (parfois même taper la porte de son voisin on a du mal). Aujourd'hui j'hérites d'une codebase sans tests, sans doc, sans filet et ... je ne panique pas. Ce n'est pas du courage, c'est de l'habitude.
+	- Poser une question ouverte : sincère  
 
 
 **Transition vers l'Acte 2 :** Mais avant d'arriver là, il y a eu beaucoup de portes et pas celles que j'avais choisies de frapper.
