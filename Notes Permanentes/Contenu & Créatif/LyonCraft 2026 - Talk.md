@@ -140,7 +140,7 @@ Ce n'est pas un abandon, c'est une décision. Je sais ce que je veux et je refus
 
 S'ensuit 6 mois seul en attendant la formation du Wagon. En parallèle d'un boulot alimentaire j'attaques TypeScript, puis React, puis Next.js. Quelques mini projets pour consolider les connaissances et je construis un portfolio. Je ne suis pas un cursus, je construis ta propre progression.
 
-Pendant cette période en parallèle de l'apprentissage du code je continue de m'initier aux pratiques Craft, d'essayer de les comprendre, d'essayer de les pratiquer, pour ça je lis Software Craft de Cyril Martraire et autres devs français, quelques extraits de Clean Code d'Uncle Bob, et Itération Product(ives) de Colin Damon. 
+Pendant cette période en parallèle de l'apprentissage du code je continue de m'initier aux pratiques Craft, d'essayer de les comprendre, d'essayer de les pratiquer, pour ça je lis Software Craft de Cyril Martraire et autres devs français, quelques extraits de Clean Code [^2]d'Uncle Bob, et Itération Product(ives) de Colin Damon. 
 
 Je ne suis pas en train de "suivre une formation", je suis en train de construire une culture technique.
 
@@ -226,3 +226,5 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 - Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
 
 [^1]: Pousser les questions que je me pose, comment ? quel questions ? pourquoi ?
+
+[^2]: Robert C. Martin
