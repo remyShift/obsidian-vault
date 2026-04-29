@@ -124,7 +124,7 @@ Je découvres 42 après la vente pour essayer. Déclic intellectuel immédiat. J
 
 **Un an plus tard, deuxième piscine :** Je suis meilleur, je le sais, je le sens. Plus rapide, plus structuré. Refusé à nouveau. Toujours sans feedback.
 
-42 ne m'explique pas pourquoi. Je dois vivre avec l'absence de réponse. Et décider quand même de continuer. --> te pousse à faire de l'introspection forte
+[^1]42 ne m'explique pas pourquoi. Je dois vivre avec l'absence de réponse. Et décider quand même de continuer. --> te pousse à faire de l'introspection forte 
 
 C'est là que le pattern se pose pour la première fois : le blocage ne t'arrête pas --> il te redirige.
 
@@ -224,3 +224,5 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 ## Tips
 
 - Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
+
+[^1]: Pousser les questions que je me pose, comment ? quel questions ? pourquoi ?
