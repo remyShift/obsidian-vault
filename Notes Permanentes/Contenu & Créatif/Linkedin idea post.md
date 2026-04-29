@@ -30,7 +30,7 @@ tags: [Work, Perso]
 - [ ] [Instagram](https://www.instagram.com/reel/DRfG2jNCMaw/?igsh=MXRsb3dqOXUxempydQ==)
 - [ ] Trouver nom de branche
 - [ ] App coréenne valide le mail pendant le signup
-- [ ] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse 
+- [x] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse
 - [x] Setup maison obsidian + claude
 - [x] claude-mem
 - [x] Lyon Craft
