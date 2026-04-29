@@ -20,6 +20,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab               | [[AI Generated/Sessions/olis-lab/21-04-2026_15-50]]       |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/24-04-2026_11-27]]       |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/28-04-2026_21-21]]       |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/29-04-2026_11-04]]       |
 | portfolio-gameboy-next | [[AI Generated/Sessions/portfolio-gameboy-next/23-04-2026_11-13]] |
 | portfolio-gameboy-next | [[AI Generated/Sessions/portfolio-gameboy-next/24-04-2026_10-45]] |
 | portfolio-gameboy-next | [[AI Generated/Sessions/portfolio-gameboy-next/25-04-2026_02-13]] |
