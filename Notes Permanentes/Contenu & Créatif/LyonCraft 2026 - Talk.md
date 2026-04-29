@@ -209,6 +209,7 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 - Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
 - Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
 	- Boire de l'eau aide pour laisser des pauses
+- 
   
 ---
 
