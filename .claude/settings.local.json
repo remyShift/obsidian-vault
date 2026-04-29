@@ -16,7 +16,9 @@
       "mcp__vault__list_directory",
       "mcp__vault__list_allowed_directories",
       "Skill(evolve)",
-      "Skill(evolve:*)"
+      "Skill(evolve:*)",
+      "Skill(recap)",
+      "Skill(recap:*)"
     ]
   }
 }
