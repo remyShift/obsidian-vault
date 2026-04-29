@@ -55,7 +55,6 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 
 ### INTRO
 
-#### V1
 **Objectif :** poser la tension narrative, donner envie de rester.
 
 Comment passe-t-on de vendeur de surgelés en porte à porte à développeur fullstack sur un site e-commerce en production avec des milliers de users de trafic ?
@@ -63,22 +62,6 @@ Comment passe-t-on de vendeur de surgelés en porte à porte à développeur ful
 ...
 
 Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. Je vais vous expliquer pourquoi tout ce qui n'a pas marché est exactement ce qui m'a construit.
-
-#### V2 - anecdote
-
-C'est un mardi matin, il pleut. Mon troisième jour seul sur mon secteur. Vaulx-en-Velin, Villeurbanne, 80 clients à voir, 36 commandes à ramener.
-
-J'ai mes catalogues, ma liste d'adresses, et un GPS peu conciliant. Je passe trois fois devant le même immeuble. Les clients sont mal triés dans ma liste, je fais des allers-retours pour rien. La circulation aide encore moins.
-
-J'enchaîne les refus, pas de réponse, pas intéressé, repassez plus tard, je découvre même que des clients n'habitent plus là.s
-
-Je rentre le soir éreinté, dégouté avec seulement 10 commandes sur 36.
-
-Ce que je savais pas ce soir-là, c'est que cette journée m'apprenait quelque chose que je mettrais des années à formuler : comment tenir quand rien ne marche, comment continuer à sonner quand t'as envie de rentrer chez toi, et comment transformer une journée ratée en information utile pour le lendemain.
-
-Aujourd'hui je fais tourner une migration Next.js en production pour un e-commerce. Et certains matins ressemblent exactement à ce mardi-là.
-
-Ce qui m'a construit comme développeur, c'est pas la formation que j'ai suivie. C'est tout ce que j'ai traversé avant, pendant, et autour.
 
 ---
 
