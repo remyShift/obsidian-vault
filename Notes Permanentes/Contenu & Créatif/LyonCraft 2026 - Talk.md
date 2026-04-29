@@ -162,6 +162,8 @@ On finit avec un super projet musicale qui lors de la présentation de fins d'é
 
 **Objectif :** montrer ce que ça coûte vraiment de livrer et pourquoi le parcours m'y a préparé mieux que n'importe quelle formation.
 
+**TODO :** Ptite intro sur Spash ?
+
 ---
 
 **KicksFolio + Le post linkedin + la période creuse ===> tout en parallèle**
