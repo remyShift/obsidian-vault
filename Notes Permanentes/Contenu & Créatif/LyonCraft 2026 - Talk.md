@@ -112,6 +112,12 @@ Ce qui m'a construit comme développeur, c'est pas la formation que j'ai suivie.
 
 #### Séquence 1 - 42 x2
 
+---
+
+- Poser question pour savoir si ça vaut le de re expliquer la piscine de 42 ce que c'est (aspect social, code, deadline, intensité, duré ...)
+
+---
+
 Je découvres 42 après la vente pour essayer. Déclic intellectuel immédiat. Je fais la piscine, j'accroches tout de suite. Refusé. Pas de feedback. Le vide.
 
 **Réponse :** je retournes vendre, mais je commences à apprendre le C en parallèle. Seul. Sans cours, sans cadre. Juste pour ne pas perdre ce que j'avais trouvé.
@@ -212,3 +218,9 @@ Pendant ces périodes, j'ai lu un bouquin écrit par quelqu'un de cette communau
 *Phrase de sortie la dernière chose que la salle entend :*
 
 Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie. C'est la culture qu'on se crée en route.
+
+
+---
+## Tips
+
+- Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
