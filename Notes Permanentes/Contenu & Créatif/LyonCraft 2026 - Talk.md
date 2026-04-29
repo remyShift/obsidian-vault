@@ -48,6 +48,12 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
   
 
 ---
+## Tips
+
+- Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
+- Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
+	- Boire de l'eau aide pour laisser des pauses
+- Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
 ---
 
 
@@ -204,14 +210,6 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 
 
 ---
-## Tips
-
-- Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
-- Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
-	- Boire de l'eau aide pour laisser des pauses
-- Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
-
----
 
 [^1]: Pousser les questions que je me pose, comment ? quel questions ? pourquoi ?
 
@@ -225,4 +223,4 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 
 [^6]: Savoir vendre c'est bien, savoir se vendre c'est mieux
 
-[^7]: PORTFOLIO
+[^7]: Pendant cette partie j'ai fait mon portfolio aussi (c'est un visuel fort potentiellement inclure)
