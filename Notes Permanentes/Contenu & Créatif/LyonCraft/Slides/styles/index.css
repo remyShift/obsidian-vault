@@ -1,0 +1,189 @@
+/* ============================================================
+   LYONCRAFT 2026 — DA Monstres et Compagnie
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Variables globales --- */
+:root {
+  --factory-bg: #070d1a;
+  --factory-bg-mid: #0d1a2e;
+  --factory-surface: #111d34;
+  --factory-border: #1e3a5f;
+
+  --color-door-green:  #52b788;
+  --color-door-green-dark: #2d6a4f;
+  --color-door-blue:   #4895ef;
+  --color-door-blue-dark:  #1e3a5f;
+  --color-door-red:    #e63946;
+  --color-door-red-dark:   #9b2226;
+  --color-door-gold:   #fcbf49;
+  --color-door-gold-dark:  #f77f00;
+
+  --text-primary: #e8f0fe;
+  --text-secondary: #8faac3;
+  --text-accent: #ffffff;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* --- Fond global --- */
+.slidev-layout {
+  background-color: var(--factory-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Grain subtil sur le fond */
+.slidev-layout::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* --- Typographie --- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  color: var(--text-accent);
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2rem; }
+
+p, li {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* --- Layout cover --- */
+.slidev-layout.cover {
+  background: radial-gradient(ellipse at 30% 60%, #0d2a4a 0%, var(--factory-bg) 70%);
+}
+
+.slidev-layout.cover h1 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 40px rgba(72, 149, 239, 0.3);
+}
+
+/* --- Layout statement --- */
+.slidev-layout.statement {
+  background: var(--factory-bg-mid);
+}
+
+.slidev-layout.statement h1 {
+  font-size: 3.2rem;
+  max-width: 80%;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* --- Layout quote --- */
+.slidev-layout.quote {
+  background: var(--factory-bg-mid);
+}
+
+.slidev-layout.quote blockquote {
+  border-left: 4px solid var(--color-door-gold);
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+/* --- Layout fact --- */
+.slidev-layout.fact {
+  background: var(--factory-bg-mid);
+}
+
+.slidev-layout.fact .fact-number {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--color-door-blue);
+  text-shadow: 0 0 60px rgba(72, 149, 239, 0.4);
+}
+
+/* --- Layout section --- */
+.slidev-layout.section h1 {
+  font-size: 5rem;
+}
+
+/* --- Listes --- */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: '▸ ';
+  color: var(--color-door-blue);
+  font-weight: bold;
+}
+
+/* --- v-click defaults --- */
+.slidev-vclick-target {
+  transition: all 0.4s ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* --- Highlight accent --- */
+.highlight-green  { color: var(--color-door-green); }
+.highlight-blue   { color: var(--color-door-blue); }
+.highlight-red    { color: var(--color-door-red); }
+.highlight-gold   { color: var(--color-door-gold); }
+
+/* --- Tag / badge --- */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-green { background: var(--color-door-green-dark); color: var(--color-door-green); }
+.tag-blue  { background: var(--color-door-blue-dark);  color: var(--color-door-blue); }
+.tag-red   { background: var(--color-door-red-dark);   color: var(--color-door-red); }
+.tag-gold  { background: var(--color-door-gold-dark);  color: var(--color-door-gold); }
+
+/* --- Divider line --- */
+.divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--factory-border), transparent);
+  margin: 1.5rem 0;
+}
+
+/* --- Slide none (plein écran porte) --- */
+.slidev-layout.none {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* --- Two cols override --- */
+.slidev-layout.two-cols .col-left,
+.slidev-layout.two-cols .col-right {
+  padding: 1rem;
+}

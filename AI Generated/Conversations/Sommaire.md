@@ -21,3 +21,4 @@ Synthèses de conversations générées via `/wrap`.
 | 24-04-2026 | [[AI Generated/Conversations/24-04-2026 - Notes grammaire coréenne négation]]                |
 | 28-04-2026 | [[28-04-2026 - Contenu détaillé talk LyonCraft]]                                             |
 | 28-04-2026 | [[AI Generated/Conversations/28-04-2026 - Introduction à Rust]]                              |
+| 29-04-2026 | [[AI Generated/Conversations/29-04-2026 - Débat SEO dans Layout vs Page component]]          |
