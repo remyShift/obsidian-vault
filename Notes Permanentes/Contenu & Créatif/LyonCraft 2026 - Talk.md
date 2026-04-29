@@ -199,7 +199,7 @@ La deuxième arrive via le Slack du Wagon (au final ça m'apporte pas juste un d
 
 J'arrives sur une codebase legacy, sans tests, sans doc, migration Next.js de prévu mais pas commencée, une gestion du contenu du site bancale --> mise en place d'un CMS Payload à construire de zéro (seul sur ce sujet).
 
-Et là, la boucle se ferme. Ne pas avoir peur de l'inconnu appris en sonnant des portes, c'est exactement ce qui te permet de naviguer dans cette codebase sans paniquer.
+Et là, la boucle se ferme. Ne pas avoir peur de l'inconnu appris en sonnant des portes, c'est exactement ce qui me permet de naviguer dans cette codebase sans paniquer.
 
 ---
 
