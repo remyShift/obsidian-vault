@@ -207,7 +207,7 @@ Et là, la boucle se ferme. Ne pas avoir peur de l'inconnu appris en sonnant des
 
 **Objectif :** fermer les boucles, laisser une phrase dans la tête de chaque personne dans la salle.
 
-*Je reviens sur la thèse. Pas en la répétant mécaniquement, en la prouvant par les faits que tu viens de raconter.*
+*Je reviens sur la thèse. Pas en la répétant mécaniquement, en la prouvant par les faits que je viens de raconter.*
 
 Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une école abandonnée, un bootcamp, six mois sans mission avec des centaines de refus. Et me voilà devant vous. 
 
@@ -216,8 +216,6 @@ Pas de bac, pas de diplômes, deux piscines de l'école 42 échouées, une écol
 *Puis la boucle Colin à amener sobrement :*
 
 Pendant ces périodes, j'ai lu un bouquin écrit par quelqu'un de cette communauté. Aujourd'hui c'est cette même communauté qui m'invite à monter sur cette scène. Je ne pense pas que c'est un hasard, je pense que c'est exactement ce que le craft fait en dehors des lignes de codes : il crée des cercles où les gens se retrouvent.
-
-*Phrase de sortie la dernière chose que la salle entend :*
 
 Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie. C'est la culture qu'on se crée en route.
 
