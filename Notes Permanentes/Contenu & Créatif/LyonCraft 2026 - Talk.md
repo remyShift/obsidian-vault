@@ -171,7 +171,7 @@ On finit avec un super projet musicale qui lors de la présentation de fins d'é
 ---
 #### KicksFolio
 
-Pendant la période creuse post-Spash, tu codes KicksFolio. App mobile sneakers, scanner un code-barres, gérer sa collection, la partager. Deux centres d'intérêt qui se rejoignent.
+[^4]Pendant la période creuse post-Spash, tu codes KicksFolio. App mobile sneakers, scanner un code-barres, gérer sa collection, la partager. Deux centres d'intérêt qui se rejoignent.
 
 Je vais jusqu'au bout. Je la publies sur les stores. Et c'est là que je découvres ce que "finir" veut vraiment dire : la prod, c'est pas juste le code. C'est les edge cases, les permissions, les crashes silencieux, les reviews d'app store. Personne pour valider derrière toi. Je suis seul responsable.
 
@@ -234,3 +234,5 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 [^2]: Robert C. Martin
 
 [^3]: Formulation trop complexe à simplifier || Expliquer à l'oral si je le sens / si nécessaires + pause
+
+[^4]: Visuelle / Slide / Screens
