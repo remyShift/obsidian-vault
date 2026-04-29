@@ -6,7 +6,7 @@ tags:
 ---
 **Événement** : LyonCraft, Software Crafters Lyon - 200-300 participants
 **Format** : REX 45 min
-**Organisateur** : Software Crafter Lyon dont Colin Damon (auteur d'"Itération Product(ives)", lu pendant la période creuse de Rémy)
+**Organisateur** : Software Crafter Lyon dont Colin Damon (auteur d'"Itération Product(ives)", lu pendant ma période creuse)
 
 ## Titre
 
