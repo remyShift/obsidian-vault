@@ -150,7 +150,7 @@ Je ne suis pas en train de "suivre une formation", je suis en train de construir
 
 J'arrives au Wagon avec une longueur d'avance. Ce que les autres découvrent, je le connais déjà. Le Wagon t'apporte Ruby et une structure mais l'essentiel, je l'avais construit seul, que ça soit la logique de réflexion pour aborder un problème, l'algorithmie, l'attention au code produit ...
 
-C'est la validation concrète du pattern. L'autodidaxie n'est pas un palliatif, c'est une méthode.
+C'est la validation concrète du pattern. [^3]L'autodidaxie n'est pas un palliatif, c'est une méthode.
 
 On finit avec un super projet musicale qui lors de la présentation de fins d'études avait mis le feu.
 
@@ -228,3 +228,5 @@ Ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a su
 [^1]: Pousser les questions que je me pose, comment ? quel questions ? pourquoi ?
 
 [^2]: Robert C. Martin
+
+[^3]: Formulation trop complexe à simplifier
