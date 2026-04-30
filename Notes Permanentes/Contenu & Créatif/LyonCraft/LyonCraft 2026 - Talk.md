@@ -22,30 +22,13 @@ Durant tout ce temps j’ai appris des choses et j'ai absorbé une culture du cr
 
 Parce que ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie mais la culture qu’on se crée en chemin.
 
-## Structure (45 min)
-
-- Intro 5 min : accroche + thèse
-- Acte 1 : ce que la vente m'a appris avant le code (3 compétences, lien mission actuelle)
-- Acte 2 : les portes fermées comme moteur + le craft dans les marges (42 x2, Ada, 6 mois solo, Software Crafters, les livres)
-- Acte 3 : arriver en prod sans filet (KicksFolio, post LinkedIn, Oli's Lab)
-- Conclusion : boucle Colin / Software Crafters + ce qu'il ferait pareil/différemment
-
 ## Bio speaker
 
 Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à l'extérieur, je m'éduque sur le craft et bonnes pratiques à l'intérieur.
 
-## Statut
-
-- [x] Finaliser le titre (arbitrage entre les options)
-- [x] Envoyer abstract + bio à Colin
-- [x] Remplir la section Structure dans le Google Doc
-- [ ] Rédiger le talk
-- [ ] Faire les diapos
-
 ## Liens
 - [[Ma vie]]
-  
-  
+- [[slides]]
 
 ---
 ## Tips
