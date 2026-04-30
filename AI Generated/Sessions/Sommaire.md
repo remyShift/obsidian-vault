@@ -29,3 +29,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | portfolio-gameboy-next | [[AI Generated/Sessions/portfolio-gameboy-next/28-04-2026_21-53]] |
 | winalia                | [[AI Generated/Sessions/winalia/26-04-2026_11-49]]                |
 | winalia                | [[AI Generated/Sessions/winalia/28-04-2026_11-24]]                |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/30-04-2026_10-20]]       |
