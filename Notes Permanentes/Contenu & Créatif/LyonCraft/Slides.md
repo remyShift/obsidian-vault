@@ -2,11 +2,9 @@
 tags:
   - LyonCraft
   - Talk
-  - Slidev
+  - Work
+  - Perso
 ---
-
-# Slides LyonCraft 2026
-
 Les slides sont dans un repo dédié hors du vault.
 
 ## Liens
@@ -27,7 +25,5 @@ git push          # redéploie automatiquement sur GitHub Pages
 
 ## Stack
 
-- [Slidev](https://sli.dev) — slides as code
+- [Slidev](https://sli.dev) - slides as code
 - Vue 3 + UnoCSS + @vueuse/motion
-- DA Monsters & Cie — 4 portes colorées (vert / bleu / rouge / or)
-- Composants : `Door`, `SkillCompare`, `SequenceBlock`, `TimelineItem`, `Tag`

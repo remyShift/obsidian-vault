@@ -18,7 +18,8 @@
       "Skill(evolve)",
       "Skill(evolve:*)",
       "Skill(recap)",
-      "Skill(recap:*)"
+      "Skill(recap:*)",
+      "Bash(pnpm run *)"
     ]
   }
 }

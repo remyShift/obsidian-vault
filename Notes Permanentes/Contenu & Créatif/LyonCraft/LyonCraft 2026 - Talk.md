@@ -2,7 +2,7 @@
 tags:
   - Work
   - Perso
-  - Talk
+  - LyonCraft
 ---
 **Événement** : LyonCraft, Software Crafters Lyon - 200-300 participants
 **Format** : REX 45 min
