@@ -27,3 +27,10 @@ git push          # redéploie automatiquement sur GitHub Pages
 
 - [Slidev](https://sli.dev) - slides as code
 - Vue 3 + UnoCSS + @vueuse/motion
+  
+
+## TODO :
+
+- [ ] Les todos in code
+- [ ] Slide 3 trucs en parallele lors des 6 mois de vide (kicksfolio + post linkedin + postul)
+- [ ] Slide sur les 2 offres en meme temps
