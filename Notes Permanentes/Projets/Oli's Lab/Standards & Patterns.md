@@ -234,6 +234,23 @@ Les discussions d'architecture restent dans Notion ou en réunion dédiée, pas 
 
 Si une suggestion de review est trop grosse pour être intégrée dans la PR en cours → ouvrir une PR séparée qui démontre l'approche.
 
+### Résolution de conflits de branche
+
+Pour mettre à jour une branche avec les changements de `develop` **sans polluer le diff de la PR** : cherry-pick des commits originaux sur `develop`, jamais `git merge`.
+
+```bash
+# ❌ git merge develop — aspire toute l'historique de develop dans la branche (PR gonflée de 8 → 64 fichiers)
+# ✅ git cherry-pick <sha1> <sha2> — n'embarque que les commits voulus
+```
+
+Après cherry-pick : force-push propre pour ramener la PR à ses commits originaux.
+
+### Composants stateless pour le port Next.js
+
+Les composants du CRA destinés à être portés vers Next.js doivent être **stateless autant que possible** : pas de state local non essentiel, pas de side-effects cachés. La logique de fetching reste dans les hooks, le composant reçoit des props.
+
+Conséquence : le port vers Next.js se réduit à remplacer les hooks de fetching, pas à réécrire les composants.
+
 ### Philosophie startup
 
 Michele : choisir le "bon assez" plutôt que l'idéal. La migration vers la nouvelle API et Next.js prime sur la perfection des tests ou des abstractions maintenant.
