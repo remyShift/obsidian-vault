@@ -24,4 +24,5 @@
 
 ## ✍️ Contenu & Créatif
 - [[Linkedin idea post]]
+- [[LyonCraft 2026 - Talk]]
 

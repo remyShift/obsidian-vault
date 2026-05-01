@@ -26,10 +26,6 @@ Parce que ce qui nous forge en tant que développeur, ce n'est pas la formation 
 
 Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à l'extérieur, je m'éduque sur le craft et bonnes pratiques à l'intérieur.
 
-## Liens
-- [[Ma vie]]
-- [[slides]]
-
 ---
 ## Tips
 
@@ -39,9 +35,9 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
 ---
 
-
 ## Talk :
 
+- [[slides]]
 ### INTRO
 
 **Objectif :** poser la tension narrative, donner envie de rester.
