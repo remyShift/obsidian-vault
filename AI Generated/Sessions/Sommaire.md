@@ -30,3 +30,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | winalia                | [[AI Generated/Sessions/winalia/26-04-2026_11-49]]                |
 | winalia                | [[AI Generated/Sessions/winalia/28-04-2026_11-24]]                |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/30-04-2026_10-20]]       |
+| lyoncraft-2026         | [[AI Generated/Sessions/lyoncraft-2026/01-05-2026_01-21]] |
