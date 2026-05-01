@@ -43,6 +43,7 @@ Huddles et réunions thématiques entre membres de l'équipe.
 | [[30-12-2025 Audit React Query Refacto User Orders]] | Audit React Query & refacto user orders | Rémy, Diego |
 | [[06-02-2026 Debugging Infinite Loop Checkout]] | Debugging infinite loop au checkout (React Profiler) | Diego, Rémy, Patrick, Lucas, Michele |
 | [[25-02-2026 QA Search UI Mobile Safari]] | QA Search UI - mobile, Safari, localisation | Rémy, Michele |
+| [[28-04-2026 Search Support CRA]] | Grooming page de recherche - implémentation CRA avant port Next.js | Kyle, Diego, Rémy |
 
 ---
 
