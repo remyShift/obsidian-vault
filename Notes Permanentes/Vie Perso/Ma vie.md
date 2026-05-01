@@ -3,7 +3,6 @@ tags:
   - Perso
   - Sommaire
 ---
-
 # Parcours & Narrative professionnelle
 
 Vente de surgelés porte-à-porte après un bac non obtenu, deux piscines à 42 sans retour, Ada Tech School arrêtée pour décalage de valeurs, puis six mois d'autoformation seul avec des livres de Craft, des meetups et des cours sur Udemy. Le Wagon m'a confirmé que j'avais rattrapé le niveau. Un CDD en autonomie sur un outil IA, six mois sans mission pendant lesquels j'ai sorti KicksFolio sur les stores et rempli mon agenda avec des posts LinkedIn, puis deux offres simultanées en septembre 2025 et le choix d'Oli's Lab. La mécanique est toujours la même : un blocage, une réponse autonome, une progression mesurable.
