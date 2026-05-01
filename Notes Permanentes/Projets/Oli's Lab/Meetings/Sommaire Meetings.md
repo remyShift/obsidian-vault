@@ -44,6 +44,7 @@ Huddles et réunions thématiques entre membres de l'équipe.
 | [[06-02-2026 Debugging Infinite Loop Checkout]] | Debugging infinite loop au checkout (React Profiler) | Diego, Rémy, Patrick, Lucas, Michele |
 | [[25-02-2026 QA Search UI Mobile Safari]] | QA Search UI - mobile, Safari, localisation | Rémy, Michele |
 | [[28-04-2026 Search Support CRA]] | Grooming page de recherche - implémentation CRA avant port Next.js | Kyle, Diego, Rémy |
+| [[29-04-2026 Search Page Strategie Decision]] | Décision search page CRA vs modal - stratégie de migration | Diego, Michele, Kyle, Ante, Rémy |
 
 ---
 
