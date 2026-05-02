@@ -52,10 +52,10 @@
 | 23 | 청소하다 ~ .verbe | nettoyer  | 청소해요      | 청소합니다 |               |              |
 | 24 | 공부하다 ~ .verbe | étudier   | 공부해요      | 공부합니다 |               |              |
 | 25 | 일하다 ~ .verbe | travailler  | 일해요        | 일합니다   |               |              |
-| 26 | 전화하다 ~ .verbe | téléphoner | 전화해요     |            |               |              |
-| 27 | 여행하다 ~ .verbe | voyager   | 여행해요      |            |               |              |
+| 26 | 전화하다 ~ .verbe | téléphoner | 전화해요     | 전화합니다 |               |              |
+| 27 | 여행하다 ~ .verbe | voyager   | 여행해요      | 여행합니다 |               |              |
 | 28 | 좋다 ~ .adjectif | être bon  | 좋아요        | 좋습니다   |               |              |
-| 29 | 나쁘다 ~ .adjectif | être mauvais | 나빠요   |            |               |              |
+| 29 | 나쁘다 ~ .adjectif | être mauvais | 나빠요   | 나쁩니다   |               |              |
 | 30 | 크다 ~ .adjectif | être gros/grand | 커요   | 큽니다     |               |              |
 | 31 | 작다 ~ .adjectif | être petit  | 작아요        | 작습니다   |               |              |
 | 32 | 많다 ~ .adjectif | être beaucoup | 많아요      | 많습니다   |               |              |
@@ -67,12 +67,12 @@
 | 38 | 재미없다 ~ .adjectif | ne pas être intéressant | 재미없어요 | 재미없습니다 |  |              |
 | 39 | 예쁘다 ~ .adjectif | être joli(e) | 예뻐요      | 예쁩니다   |               |              |
 | 40 | 귀엽다 ~ .adjectif | être mignon | 귀여워요     | 귀엽습니다 |               |              |
-| 41 | 아프다 ~ .adjectif |            |               |            |               |              |
-| 42 | 배고프다 ~ .adjectif |          | 배고파요      |            |               |              |
-| 43 | 쉽다 ~ .adjectif |             |               |            |               |              |
-| 44 | 어렵다 ~ .adjectif |           |               |            |               |              |
-| 45 | 멀다 ~ .adjectif |             |               |            |               |              |
-| 46 | 가깝다 ~ .adjectif |           |               |            |               |              |
-| 47 | 춥다 ~ .adjectif |             |               |            |               |              |
-| 48 | 덥다 ~ .adjectif |             |               |            |               |              |
+| 41 | 아프다 ~ .adjectif | avoir mal / être malade | 아파요 | 아픕니다 |               |              |
+| 42 | 배고프다 ~ .adjectif | avoir faim | 배고파요 | 배고픕니다 |               |              |
+| 43 | 쉽다 ~ .adjectif | être facile | 쉬워요       | 쉽습니다   |               |              |
+| 44 | 어렵다 ~ .adjectif | être difficile | 어려워요  | 어렵습니다 |               |              |
+| 45 | 멀다 ~ .adjectif | être loin   | 멀어요        | 멉니다     |               |              |
+| 46 | 가깝다 ~ .adjectif | être proche | 가까워요     | 가깝습니다 |               |              |
+| 47 | 춥다 ~ .adjectif | avoir froid / être froid | 추워요 | 춥습니다 |               |              |
+| 48 | 덥다 ~ .adjectif | avoir chaud / être chaud | 더워요 | 덥습니다 |               |              |
 ```
