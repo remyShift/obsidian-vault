@@ -1,10 +1,7 @@
 ---
-tags: [meta, index]
+tags:
 updated: 2026-05-02
 ---
-
-# Index — Notes Permanentes
-
 Catalog central. Une ligne par section, description en une phrase.
 Claude : lis ce fichier d'abord, drill dans les pages ensuite. Ne lis pas le vault en aveugle.
 
@@ -50,10 +47,6 @@ Claude : lis ce fichier d'abord, drill dans les pages ensuite. Ne lis pas le vau
 - [[Théorie de la Résidualité]] — Théorie sur la rétention des connaissances
 - [[Whitelist]] — Sources de veille validées
 - [[Code Quotes]] — Citations code mémorables
-
-### Divers
-- [[Stats à améliorer]] — Métriques et compétences à progresser
-- `Code/Bug Résolutions/` — Solutions à des bugs résolus (référence rapide)
 
 ---
 
