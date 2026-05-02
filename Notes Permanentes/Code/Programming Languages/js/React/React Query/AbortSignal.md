@@ -1,9 +1,8 @@
 ---
-tags: [react, react-query, abort, race-condition, axios]
+tags:
+  - React
+  - LangagesDeProgs
 ---
-
-# AbortSignal et React Query
-
 ## Ce que React Query fait automatiquement
 
 React Query passe un `AbortSignal` à chaque `queryFn`. Quand la query key change (ex : nouvelle frappe dans un input de recherche), RQ **annule la requête précédente** via ce signal transmis à axios.

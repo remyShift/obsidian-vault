@@ -30,6 +30,8 @@ npm create vite@latest
 
 - On peut et on doit évidemment faire des tests avec React tu pourras voir comment [[Test Setup]] ça dans cette note.
 
+- Attention où on place les SEO components ne pas confondre (cf [[SEO dans Layout vs Page]]).
+
 - **NB :** Un component React lors de sa création est généralement une div, le soucis peut être qu'une accumulation de div entraine des soucis de performances. La solution pour palier à ça sont [[Les Fragments]] qui sont la majorité du temps utilisé plutôt que des divs. 
 ### Créer une liste :
 ```jsx

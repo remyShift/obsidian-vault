@@ -17,6 +17,8 @@ tags: [LangagesDeProgs, React]
 2. **Mutation** : Représente une modification de données (comme un POST, PUT ou DELETE). Utilise `useMutation` pour envoyer des données.
 3. **QueryClient** : Fournit le contexte pour les queries et les mutations.
 
+On peut aussi cancel une requête en cours avec [[AbortSignal]].
+
 ### Mise en œuvre
 
 #### Installation
