@@ -14,7 +14,7 @@ Les méthodes de manipulations de strings permettent d'interagir / modifier / in
 - [[each_char]],
 - [[empty?]],
 - [[Notes Permanentes/Code/Programming Languages/ruby/Manip Strings/include?|include?]],
-- [[index]],
+- [[Notes Permanentes/Code/Programming Languages/ruby/Manip Strings/index]],
 - [[match]],
 - [[Notes Permanentes/Code/Programming Languages/ruby/Manip Strings/replace|replace]],
 - [[scan - match]],
