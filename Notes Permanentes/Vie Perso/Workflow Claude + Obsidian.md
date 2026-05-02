@@ -6,7 +6,10 @@ tags:
 - MCP entre Claude Code et Obsidian via plugin MCP Tools (binaire stdio, API key Local REST API)
 - Config dans `~/.claude.json` → serveur `obsidian`
 - lean-ctx + symdex configurés en MCPs globaux (`~/.claude.json`)
-- Hook SessionStart : charge les recaps récents du projet au démarrage
+
+## Hook SessionStart
+- Charge les 3 sessions AI Generated les plus récentes liées au projet en cours (récupérées dynamiquement selon le cwd de la session)
+- Fournit le contexte des dernières sessions sans avoir à les relire manuellement
 
 ## Commandes actives
 - `/recap` : résumé session Claude Code → `AI Generated/Sessions/{projet}/`
