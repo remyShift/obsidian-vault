@@ -33,7 +33,12 @@ Utilisé avec un verbe ou un adjectif dans une phrase. Plus informal que -습니
 
 ### -습니다 / -ㅂ니다 (formel)
 
-Utilisé dans les situations formelles : présentations, contextes professionnels, discours. Toujours déclaratif ou interrogatif.
+Utilisé dans les situations formelles : présentations, contextes professionnels, discours.
+
+| Mode | Terminaison |
+| ---- | ----------- |
+| Déclaratif | -습니다 / -ㅂ니다 |
+| Interrogatif | -습니까 / -ㅂ니까 |
 
 | Condition | Exemples | Résultat |
 | --------- | -------- | -------- |
