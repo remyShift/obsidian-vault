@@ -7,24 +7,25 @@ tags: [meta, hot-cache]
 # Hot Cache — claude-obsidian
 
 ## Dernière mise à jour
-02-05-2026 — Amélioration complète du workflow vault : PostCompact hook, hot cache deux niveaux, refactor session-context.sh, /recap mis à jour.
+02-05-2026 — Workflow vault entièrement bouclé : PostCompact, hot cache deux niveaux, /recap, /autoresearch, Sommaire recréé.
 
 ## État du projet
-- Plugin claude-obsidian analysé et comparé au setup Rémy — audit terminé
-- Implémentations de cette session toutes commitées dans les fichiers de config Claude
+- Audit du plugin claude-obsidian et amélioration complète du workflow terminés
+- Tous les fichiers de config modifiés : settings.json, session-context.sh, recap.md, CLAUDE.md
 
 ## Faits récents importants
-- Architecture hot cache deux niveaux : `Sessions/{project}/hot.md` (per-project) + `AI Generated/hot.md` (global fallback)
-- SessionStart charge per-project hot > global + 1 recap (au lieu de 3 sessions)
-- PostCompact hook ajouté : restaure le contexte vault après compaction silencieusement
-- /autoresearch et Index Notes Permanentes pas encore implémentés
+- Hook PostCompact ajouté : contexte vault restauré automatiquement après compaction
+- Hot cache deux niveaux : `Sessions/{projet}/hot.md` (per-project) + `AI Generated/hot.md` (global)
+- /recap met maintenant à jour les deux niveaux automatiquement
+- /autoresearch créé : dépose tout dans Notes de Lecture/, Rémy décide ce qui monte
+- Pas d'Index.md verbose : le Sommaire existant suffit comme point d'entrée Claude
 
 ## Décisions actives
-- Notes Permanentes/ reste le wiki, Notes de Lecture/ reste le raw — pas de duplication de structure
-- /autoresearch déposera dans Notes de Lecture/ uniquement, Rémy trie ensuite
-- PostToolUse auto-commit skippé (plugin Obsidian git déjà en place)
+- SessionStart : per-project hot > global + 1 recap (plus les 3 sessions)
+- /autoresearch → Notes de Lecture/ uniquement
+- PostToolUse auto-commit non ajouté (plugin git Obsidian déjà présent)
 
 ## Prochaines étapes
-- Créer `Notes Permanentes/Index.md` (catalog central par domaine)
-- Configurer skill /autoresearch adapté au vault
-- Tester SessionStart + PostCompact sur une vraie session longue
+- Tester le SessionStart sur une vraie session (olis-lab)
+- Tester le PostCompact en session longue
+- Lancer un /autoresearch sur un vrai sujet

@@ -6,7 +6,7 @@ Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques
 
 ## Sections
 
-- [[Notes Permanentes/Index|📚 Notes Permanentes]]
+- [[Notes Permanentes Sommaire|📚 Notes Permanentes]]
 - [[AI Sommaire|🤖 AI Generated]]
 - [[Notes de Lecture/Sommaire|📖 Notes de Lecture]]
 - [[TODO|⌛ TODO !]]

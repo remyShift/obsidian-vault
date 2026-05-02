@@ -1,5 +1,3 @@
-# Sommaire
-
 ## 🧠 Code
 - [[Code]]
 

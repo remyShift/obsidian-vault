@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Dernière activité
-02-05-2026 — claude-obsidian : audit du plugin et amélioration complète du workflow vault.
+02-05-2026 — claude-obsidian : workflow vault entièrement amélioré et bouclé.
 
 ## Projets actifs
 
 ### claude-obsidian
 - Dernière session : 02-05-2026
-- État : audit terminé, workflow amélioré (PostCompact, hot cache deux niveaux, /recap mis à jour)
-- Prochaine étape : Index Notes Permanentes + /autoresearch
+- État : audit terminé, tout implémenté (PostCompact, hot cache deux niveaux, /recap, /autoresearch, Sommaire)
+- Prochaine étape : tester sur une vraie session projet
 
 ### olis-lab
 - Dernière session : 01-05-2026
@@ -42,4 +42,4 @@ tags: [meta, hot-cache, global]
 - Freelance : mission Oli's Lab long terme
 
 ## Threads ouverts cross-projets
-- Étape 3 et 4 du plan vault (Index + /autoresearch) pas encore implémentées
+- Tester le nouveau workflow SessionStart + PostCompact sur une vraie session longue
