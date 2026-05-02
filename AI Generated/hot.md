@@ -1,28 +1,45 @@
 ---
-updated: 2026-05-02
-tags: [meta, hot-cache]
+updated: 02-05-2026
+tags: [meta, hot-cache, global]
 ---
 
-# Hot Cache
+# Hot Cache — Global
 
-> Cache de contexte global du vault. Max 500 mots. Overwrite complet à chaque /recap.
+> Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
-## Dernière mise à jour
-2026-05-02 — Initialisation du hot cache. Amélioration du workflow Claude + Obsidian : ajout hook PostCompact, hot cache, réduction du SessionStart de 3 sessions à hot.md + 1 session, skill /recap mis à jour.
+## Dernière activité
+02-05-2026 — claude-obsidian : audit du plugin et amélioration complète du workflow vault.
 
-## Contexte actif
-- Projet en cours : claude-obsidian (analyse et amélioration du workflow vault)
-- Mission principale : Oli's Lab (cosmetics e-commerce, Payload CMS + Next.js)
+## Projets actifs
 
-## Faits récents importants
-- Setup vault comparé avec le plugin claude-obsidian — structure déjà solide (Notes Permanentes = wiki, Notes de Lecture = raw, /evolve = synthèse hebdo)
-- Vrais gaps identifiés : pas de hot cache résilient, pas de PostCompact, pas de /autoresearch
-- Hook SessionStart simplifié : hot.md + 1 session au lieu de 3 sessions
-- Hook PostCompact ajouté dans settings.json
+### claude-obsidian
+- Dernière session : 02-05-2026
+- État : audit terminé, workflow amélioré (PostCompact, hot cache deux niveaux, /recap mis à jour)
+- Prochaine étape : Index Notes Permanentes + /autoresearch
 
-## Notes récentes
-- Modifié : [[Workflow Claude + Obsidian]]
+### olis-lab
+- Dernière session : 01-05-2026
+- État : mission freelance en cours (Payload CMS + Next.js, cosmetics e-commerce)
+- Prochaine étape : voir recap 01-05-2026
 
-## Threads ouverts
-- Étape 3 (Index Notes Permanentes) et Étape 4 (/autoresearch) pas encore implémentées
-- Korea move : 3 mois à Seoul à planifier
+### portfolio-gameboy-next
+- Dernière session : 28-04-2026
+- État : portfolio Next.js en cours
+- Prochaine étape : voir recap 28-04-2026
+
+### obsidian-vault
+- Dernière session : 29-04-2026
+- État : vault en maintenance continue
+- Prochaine étape : voir recap 29-04-2026
+
+### lyoncraft-2026
+- Dernière session : 01-05-2026
+- État : projet actif
+- Prochaine étape : voir recap 01-05-2026
+
+## Contexte personnel actif
+- Korea move : test de 3 mois à Seoul à planifier dans les prochains mois
+- Freelance : mission Oli's Lab long terme
+
+## Threads ouverts cross-projets
+- Étape 3 et 4 du plan vault (Index + /autoresearch) pas encore implémentées

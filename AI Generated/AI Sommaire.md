@@ -2,6 +2,8 @@
 
 Contenu généré par Claude (sessions, conversations). Tous les fichiers ici ont `source: ai` dans leur frontmatter.
 
+Hot context : [[AI Generated/hot|hot]]
+
 ---
 ## Sessions
 - [[AI Generated/Sessions/Sommaire|Sommaire Sessions]]
