@@ -2,9 +2,6 @@
 tags:
   - Perso
 ---
-
-# Workflow Claude + Obsidian
-
 ## Architecture
 - MCP entre Claude Code et Obsidian via plugin MCP Tools (binaire stdio, API key Local REST API)
 - Config dans `~/.claude.json` → serveur `obsidian`
