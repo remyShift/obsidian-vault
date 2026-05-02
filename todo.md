@@ -9,7 +9,7 @@ tags:
 - [ ] Verbe coréens tableaux a compléter
 - [ ] 20 phrases en coréens pour le verbe de 30 à la fin
 - [ ] Exercices leçons 5
-- [ ] Continue learning Rust
+- [x] Continue learning Rust
 - [ ] Faire le tri réel insta
 ## Work
 
@@ -19,7 +19,7 @@ tags:
 
 ## Courses
 
-- [ ]   
+- [ ] déo
 
 ---
 
