@@ -1,34 +1,33 @@
 ---
 tags: [Korea]
 ---
+- [ ] Lotte World
+	- Parc d'attraction
+- [ ] Namsan Tower
+- [ ] Haebangchon (해방촌)
+	- Jazz night, bons cafés, à coté de la namsan tower et du namsan botanic garden
+- [ ] Hannam-dong (한남동)
+	- Vintage shopping, vinyl bar, bar à vins, boulangerie / patisserie, cafés ...
+- [ ] Gwangjang Market (광장시장)
+	- Marché traditionnelle de Séoul, street foods...
+- [ ] Mangwon Market (망원)
+	- Street food
+- [ ] Art Museum Gangneung
+- [ ] Startfield Library Suwon
+- [ ] Ihwa Mural Village
+	- Rue colorés et street art
+- [ ] National Folk Museum of Korea
+- [ ] 
 
-## Gangnam - 강남
+## Nature :
 
-Quartier "luxueux" de Séoul, cliniques de beautés, café très instagrammables etc etc ...
-## Itaewon - 
-
-Quartier "international" très cosmopolite avec pas mal de restos et une bonne nightlife avec un mix des cultures.
-
-## Myeondong - 
-
-Paradis pour le shopping, beaucoup de magasin fashion, de cosmétiques et une street food super bonne.
-
-## Dongdaemun - 
-
-Architecture très moderne et design, magasins ouverts jusqu'à tard.
-
-## Hongdae -
-
-Quartier jeune et artistique, pas mal de perfomances de rue, de magasins indé et une nightlife.
-
-## Jongno -
-
-Quartier historique de Séoul avec des palais royaux, musées etc etc
-
-## Ehwa -
-
-Quartier étudiant, shopping accessible, café mignons et pas mal de joli endroit pour faire des photos.
-
-## Insadong -
-
-Quartier avec pas mal de magasins artisanaux, salon de thé et gallerie d'arts
+- [ ] Seoul botanic garden (서울식물원)
+- [ ] Seokchon Lake (석촌호수)
+- [ ] Bulgwangcheon Stream (불광천)
+- [ ] Hongjecheon Artificial Waterfall (홍제폭포)
+- [ ] Haneul park
+- [ ] Cheonggyecheon Stream
+- [ ] Changdeok Secret Garden
+- [ ] Seoul Forest
+- [ ] Namsan Botanic Garden
+- [ ] Heunginjimun Park
