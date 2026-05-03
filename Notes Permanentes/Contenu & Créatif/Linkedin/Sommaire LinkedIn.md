@@ -15,7 +15,7 @@ TABLE
   comments AS "💬 Comms",
   default(impressions, "—") AS "👁️ Impressions"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
-SORT default(impressions, 0) DESC, likes DESC
+SORT default(impressions, 0) ASC
 LIMIT 25
 ```
 
