@@ -8,7 +8,7 @@ tags:
 - [x] continuer prépa lyon craft
 - [x] Verbe coréens tableaux a compléter
 - [ ] 20 phrases en coréens pour le verbe de 30 à la fin
-- [ ] Leçons 5 exercices
+- [x] Leçons 5 exercices
 - [ ] Fiches exercices leçons 5
 - [x] Continue learning Rust
 - [x] Faire le tri réel insta
