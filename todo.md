@@ -12,6 +12,7 @@ tags:
 - [ ] Fiches exercices leçons 5
 - [x] Continue learning Rust
 - [x] Faire le tri réel insta
+- [ ] Portfolio
 ## Work
 
 - [x] Search page --> implement
