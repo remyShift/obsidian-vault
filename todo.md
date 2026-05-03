@@ -6,7 +6,7 @@ tags:
 
 - [ ] graph ql et diff avec Rest ?
 - [x] continuer prépa lyon craft
-- [ ] Verbe coréens tableaux a compléter
+- [x] Verbe coréens tableaux a compléter
 - [ ] 20 phrases en coréens pour le verbe de 30 à la fin
 - [ ] Exercices leçons 5
 - [x] Continue learning Rust
@@ -20,6 +20,8 @@ tags:
 ## Courses
 
 - [ ] déo
+- [ ] croquettes
+- [ ] litière
 
 ---
 
