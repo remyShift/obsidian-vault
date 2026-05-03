@@ -1,10 +1,10 @@
-# Sommaire LinkedIn
+Index de tous mes posts LinkedIn archivés dans Posts/.
 
-Index de tous mes posts LinkedIn archivés dans [[Notes Permanentes/Contenu & Créatif/Linkedin/Posts/]].
+Pour avoir des idées tu peux regarder cette note [[Linkedin idea post]].
 
 ---
 
-## 🏆 Top 15 — Meilleurs posts (impressions & engagement)
+## 🏆 Top 25 - Meilleurs posts (impressions & engagement)
 
 > Tri par impressions décroissantes. Pour les posts anciens sans données d'impressions, le tri se fait sur les likes.
 
@@ -166,7 +166,6 @@ LIMIT 25
 | 2025-01-23 | [[2025-01-23 - recrutement]]    | Post de recherche de mission : présentation du profil, des compétences et des projets                                    |
 | 2025-01-27 | [[2025-01-27 - nike]]           | Explication de la stratégie de Nike pour éliminer les shops de revente en saturant le marché                             |
 | 2025-01-28 | [[2025-01-28 - stage]]          | Update sur le stage : l'outil de debugging secret avance bien, vidéo de présentation prévue                              |
-| 2025-01-31 | [[2025-01-31 - lyoncraft]]      | Appel aux sponsors pour la 3e édition de LyonCraft avec deux packs disponibles                                           |
 | 2025-02-10 | [[2025-02-10 - fait]]           | Retour après une longue absence — aveux honnêtes sur les raisons du silence                                              |
 | 2025-02-17 | [[2025-02-17 - fin]]            | Fin de stage imminente : réflexion sur la transmission du code et du contexte projet                                     |
 | 2025-04-30 | [[2025-04-30 - disent]]         | Retour après un long silence — "sashiburi dana", reprise des posts avec envie                                            |
@@ -274,7 +273,6 @@ LIMIT 25
 | 2025-11-27 | [[2025-11-27 - message]]        | Message de fin de semaine du tech lead sur Slack — reconnaissance et moment de fierté                                    |
 | 2025-11-29 | [[2025-11-29 - comprendrais]]   | Incompréhension face aux gens qui postent mais ne répondent jamais aux commentaires                                      |
 | 2025-12-02 | [[2025-12-02 - viens]]          | Bloqué à nouveau sur LinkedIn — cette fois pour avoir demandé à quelqu'un d'être plus précis dans ses propos             |
-| 2025-12-05 | [[2025-12-05 - cherche]]        | Repost de recherche de stagiaire Front-End à Montpellier dans l'équipe Ledger                                            |
 | 2025-12-05 | [[2025-12-05 - depuis]]         | Solution trouvée à un problème technique traîné depuis la création de l'app — enfin réglé                                |
 | 2025-12-06 | [[2025-12-06 - change]]         | Change my mind : ceux qui disent ne plus savoir coder sans IA ne savaient pas vraiment coder                             |
 | 2025-12-08 | [[2025-12-08 - peu]]            | Vraie question soulevée avec humour : doit-on déployer en production le vendredi ?                                       |
