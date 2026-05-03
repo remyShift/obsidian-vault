@@ -1,0 +1,22 @@
+---
+date: 2025-09-02
+likes: 10
+comments: 10
+reposts: 0
+impressions: 581
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7368530720987848704/"
+---
+
+En attendant que le build de release de KicksFolio soit validé, je prépare déjà la suite.
+
+Nouvelle features, correctifs, petites améliorations d’UX… tout ce qui pourra rendre l’expérience plus fluide dès les premières mises à jour.
+
+Ça me permet de prendre de l’avance et de ne pas subir le fameux “creux” après la sortie.
+
+Parce que lancer une app, ce n’est que la première étape. La vraie partie commence une fois entre les mains des utilisateurs.
+
+Et je veux que KicksFolio évolue vite, dans la bonne direction.
+
+D’ailleurs je cherche un tool d’analytics pour app mobile, et j’avoue que aucun de ce que j’ai pu voir pour le moment, ne m’a séduit.
+
+Si tu as une recommandation à faire sur ce point je suis preneur !

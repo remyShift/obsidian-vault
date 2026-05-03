@@ -1,0 +1,36 @@
+---
+date: 2024-11-25
+likes: 8
+comments: 10
+reposts: 0
+impressions: 912
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7266714767275307009/"
+---
+
+J’ai un soucis pour accéder à une API 👇🏼
+
+
+En décembre je vais faire ma première app mobile avec React Native pour le front et sans doute Ruby on Rails pour le back.
+
+C’est un application autour de ma passion des sneakers et pour la réaliser j’ai besoin de l’API de StockX.
+
+StockX si tu connais pas c’est un des plus gros sites d’achat / revente de sneakers au monde.
+
+Et ils fournissent une API qui m’intéresse pour le côté « stats » qu’elle pourrait fournir à mon app.
+
+Bref pour avoir accès à cette API il faut faire une demande sur leur site en expliquant le projet.
+
+Chose que j’ai faites il y a un bon mois déjà mais je n’ai toujours pas de réponse et la seul info que j’ai est que il n’y pas de décision qui a été encore prise. (cf image)
+
+👉🏼 Je voulais savoir si certains d’entre vous avez déjà été confronté à ce genre de problème ? Et comment tu ferais à ma place ?
+
+Dit le moi en commentaires !
+
+Commençant mon app dans 2 semaines après ma formation j’aimerais que ça accélère un peu 🥲
+
+- - -
+
+🚀 De noob à expert suis mon parcours pour rejoindre le monde des développeurs au travers de mes posts et avec 
+#Road2BeDev !
+
+- - -

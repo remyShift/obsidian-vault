@@ -1,0 +1,45 @@
+---
+date: 2024-11-22
+likes: 12
+comments: 10
+reposts: 0
+impressions: 842
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7265649208538415104/"
+---
+
+HairBnB touche à sa fin ! 🎉
+
+
+Pour rappel cette semaine on devait faire un clone de AirBnB.
+
+Notre groupe a décidé de partir sur HairBnB et louer des perruques.
+
+Les fonctionnalités présente :
+
+- Création de compte,
+- Explorer les "Wigs", et possibilitées de les triers par locations et attributs / nom,
+ - Aujourd'hui on ajoute des boutons de pré-search,
+- Une fois connecté on peut nous même ajouter une wig à louer,
+- On peut louer une wig postée par quelqu'un d'autre,
+- On a une page profil avec nos wig louées et celle qu'on a loué pour nous,
+- On peut voir toutes les wigs sur une map tout en pouvant cliquer sur le marqueur pour nous amener sur la page de la wig,
+- A la fin de la période de location on peut ajouter une review à la wig,
+
+Aujourd'hui on peaufine les derniers détails.
+
+Et ce soir on présente ça devant nos camarades de batch.
+
+Trop content de ce qu'on a pu faire sur cette semaine intense je vous partagerais le lien ce soir une fois que tout sera propre !
+
+La semaine prochaine on attaque notre projet de fin de batch : BeatMachine.
+
+👉🏼 Dit moi ce que t'en pense en commentaires ! Ton avis m'intéresse.
+
+(oui les photos sont creepy mais y a pas 800 photos de perruques cohérente sur internet, merci l'IA)
+
+- - -
+
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
+#Road2BeDev !
+
+- - -

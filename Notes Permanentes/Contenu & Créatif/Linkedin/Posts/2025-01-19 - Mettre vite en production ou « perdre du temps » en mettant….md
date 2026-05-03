@@ -1,0 +1,41 @@
+---
+date: 2025-01-19
+likes: 26
+comments: 60
+reposts: 0
+impressions: 3049
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7286684680223916032/"
+---
+
+Mettre vite en production ou « perdre du temps » en mettant des tests en place ? 👇🏼
+
+
+Petit retour d’expérience sur KicksFolio ou j’ai choisi la première option.
+
+Même si c’est encore en bêta test j’ai quand même choisi de vouloir avancer vite pour avoir vite des retours de la part de mes utilisateurs.
+
+Le problème ?
+
+Si je veux implémenter une nouvelle feature aujourd’hui je dois marcher sur des œufs.
+
+Le code n’étant pas couvert par des tests la moindre nouvelle feature devient une épreuve du combattant.
+
+Je n’estimais pas que le fait d’apprendre la techno et apprendre à faire des tests avec serait pertinent et pensais que ça allait réduire ma vitesse d’apprentissage.
+
+Après coup aujourd’hui avec un peu de recul je me rends compte que ça aurait structuré mon apprentissage, et certainement pas réduit la vitesse à laquelle je produis.
+
+Alors ça me rappelle un certains débat qui avait fait du bruit sur Linkedin : TDD vs SDD, ça te rappelle quelques choses ?
+
+Après avoir essayé de faire du « SDD » je me rends compte que finalement pour faire scale mon app le TDD aurait été plus avantageux.
+
+Mettre des tests après coup c’est jamais une partie de plaisir.
+
+Désormais quand j’apprendrais une nouvelle techno je regarderais d’abord comment tester avec cette dernière.
+
+👉🏼 Alors toi t’en pense quoi ? Qu’est ce t’aurais fait à ma place ?
+
+- - -
+
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts.
+
+- - -

@@ -1,0 +1,44 @@
+---
+date: 2024-11-03
+likes: 18
+comments: 10
+reposts: 0
+impressions: 1290
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7258745975375114240/"
+---
+
+Dimanche confession : la question qu'on me pose le plus durant ma formation c'est "Mais pourquoi t'es là ? Pourquoi t'as pas trouvé un taff avant ?" 👇🏼
+
+
+Pour y répondre il faut déjà comprendre plusieurs choses.
+
+Dans un premier temps, pourquoi les personnes qui m'entourent durant ma formation au Wagon me la pose ?
+
+Tout simplement, et en toute humilité je suis plus que conscient de n'être qu'au début de mon apprentissage, car techniquement je survole les exercices ainsi que les exercices optionnels.
+
+Mais ça me laisse du temps pour en prendre pour aider mes camarades de batch et leur expliquer les choses sans pour autant leur donner la réponse.
+
+Ça m'oblige à paraphraser à chaque explication et donc de mieux comprendre la notion et ainsi mieux m'en imprégner, au final c'est un cercle vertueux.
+
+Ensuite, quand j'explique que n'ayant pas de diplôme il m'en fallait un on me réponds "T'as qu'à mettre sur ton CV que t'es ingé personne viendra vérifier et tu passeras le même test technique derrière".
+
+Sur le papier je suis d'accord quand j'appelle un plombier je lui demande pas son diplôme. 
+
+Mais dans le fond je préfère être honnête avec moi même ainsi que les futurs personnes avec qui je vais travailler. Je vais pas leur vendre une personne qui a fait X études alors qu'en vérité non. 
+
+Autant que mon futur emploi commence sur une base de confiance mutuelle.
+
+Et aussi n'ayant pas le bac cette certification me permettrais de m'assurer une certaines sécurité et sérénité si demain je veux faire des études poussées ou me reconvertir dans un autre domaine, on ne sait pas de quoi la vie est faites.
+
+Au final si je fais cette formation c'est surtout pour être droit dans mes baskets.
+
+👉🏼 Et toi t'aurais fais quoi ? Mentir sur ton CV ou obtenir le diplôme nécessaire pour exercer ?
+
+- - -
+
+🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
+
+De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
+#Road2BeDev !
+
+- - -

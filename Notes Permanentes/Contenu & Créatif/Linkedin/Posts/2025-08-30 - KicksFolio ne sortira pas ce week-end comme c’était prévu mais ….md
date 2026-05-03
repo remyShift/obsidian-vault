@@ -1,0 +1,33 @@
+---
+date: 2025-08-30
+likes: 26
+comments: 6
+reposts: 0
+impressions: 1235
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7367443459479195648/"
+---
+
+KicksFolio ne sortira pas ce week-end comme c’était prévu mais …
+
+
+De base j’avais comme deadline ce week-end pour sortir KicksFolio.
+
+Mais je risque d’être un peu en retard et ça devrait être sur l’app store plutôt début de semaine prochaine.
+
+En plus Apple avait déjà accepté mes précédents builds et j’avais juste à cliquer sur un bouton pour que ça soit sur les stores.
+
+Mais j’ai découvert des petits bugs par ci par là de dernière minutes que j’ai réglé et j’ai fait un dernier build hier soir.
+
+Le temps qu’il soit accepté je doute que l’app puisse sortir ce week-end.
+
+Donc c’est juste une question de temps ahah !
+
+Pour ce qui est du google play store j’avais carrément oublié que Google demandais qu’on ait 12 bêtas testeurs qui ont installé l’app pendant 14j.
+
+Et tout mes bêtas testeurs étaient évidemment sur un Iphone.
+
+J’ai donc trouvé des bêtas testeurs de dernière minute et pour que l’app soit disponible sur le Google Play Store ça attendre 2 semaines.
+
+Ça me laisse un petit délais pour corriger les quelques soucis de layout spécifique à Android que je pouvais avoir de différent avec mon iphone, mais rien de bien méchant.
+
+Bref j’en vois le bout ! 🙇🏻‍♂️

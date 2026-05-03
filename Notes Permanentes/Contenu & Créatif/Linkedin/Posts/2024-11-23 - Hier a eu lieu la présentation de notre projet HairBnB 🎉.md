@@ -1,0 +1,31 @@
+---
+date: 2024-11-23
+likes: 15
+comments: 11
+reposts: 0
+impressions: 1609
+url: "https://www.linkedin.com/feed/update/urn:li:activity:7266053329741299712/"
+---
+
+Hier a eu lieu la présentation de notre projet HairBnB 🎉
+
+On s'est amusé et c'est ce qui compte. On a mis dans notre seed des photos de nous avec un montage cheap comme si on avait des perruques.
+
+Et vous pourrez retrouver le lien vers notre projet en commentaire ! Mais avec une seed classique ;)
+
+Le site est responsive à 90% je dirais j'ai essayé de régler les 2-3 soucis ce matin.
+
+Après une semaine intense à faire un clone de AirBnB on voit enfin le bout du tunnel !
+
+Cette semaine a été l'occasion de se roder sur Git et notre organisation de groupe pour être prêt sur notre projet de fin de batch : Beat Machine !
+
+Plus qu'à ajouter ce projet à mon portfolio ! 🚀
+
+👉🏼 J'attends vos retours en commentaires sur notre projet ! Et vos conseils sur la suite !
+
+- - -
+
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
+#Road2BeDev !
+
+- - -
