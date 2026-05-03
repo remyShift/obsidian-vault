@@ -25,31 +25,82 @@ LIMIT 25
 
 | Date | Note | Résumé |
 |------|------|--------|
-| 2023-11-30 | [[2023-11-30 - adatech]] | Repost d'Ada Tech School : masterclass sur les métiers du dev avec des experts de chez Doctolib et Criteo |
-| 2023-11-30 | [[2023-11-30 - salaires]] | Co-animation d'une masterclass pour la promo lyonnaise d'Ada Tech School sur les contrats, salaires et entretiens |
+| 2023-11-30 | [[2023-11-30 - lea]] | Il y a une semaine, Léa Coston et moi avons eu l’occasion d’animer une Masterclass (c’est le terme c |
+| 2023-11-30 | [[2023-11-30 - mercredi]] | Ce mercredi à Ada Tech School, c'était |
 | 2023-12-01 | [[2023-12-01 - dataviz]] | Présentation du projet de dataviz "la visible invisibilité" — place des femmes dans les noms de rues lyonnaises |
-| 2023-12-04 | [[2023-12-04 - jeu]] | Court post fun, invitation à jouer |
-| 2023-12-16 | [[2023-12-16 - chatgpt]] | Repost d'une interview publiée dans Le Monde sur ChatGPT et son impact sur les études |
-| 2023-12-25 | [[2023-12-25 - noel]] | Post sans texte (image uniquement) |
-| 2023-12-29 | [[2023-12-29 - webdesign]] | Repost humoristique sur le webdesign |
-| 2023-12-31 | [[2023-12-31 - entretien]] | Repost de conseils pour réussir les entretiens techniques de coding |
+| 2023-12-04 | [[2023-12-04 - bonjour]] | Bonjour, qui a envie de jouer ? 😂 |
+| 2023-12-16 | [[2023-12-16 - post]] | [IA & |
+| 2023-12-25 | [[2023-12-25 - post]] | — |
+| 2023-12-29 | [[2023-12-29 - truth]] | Truth has to be told |
+| 2023-12-31 | [[2023-12-31 - only]] | Only those who dare to fail greatly can achieve great things. Don't be afraid to fail. Don't waste e |
 | 2024-01-18 | [[2024-01-18 - lyonjs]] | Compte-rendu enthousiaste du premier meetup LyonJS de l'année |
 | 2024-07-19 | [[2024-07-19 - arretez]] | Post viral court (1 444 likes) — réaction à quelque chose observé sur LinkedIn |
+| 2024-07-24 | [[2024-07-24 - salut]] | 🚀 Salut à tous, |
+| 2024-07-25 | [[2024-07-25 - toujours]] | 🚀 Toujours dans ma quête de connaissance, j'ai regardé la conférence Devoxx "Voyage au centre de la  |
+| 2024-07-29 | [[2024-07-29 - apres]] | 🚀 Après un mois intense à apprendre React (tout en travaillant dans l’alimentaire à côté), je suis r |
+| 2024-07-29 | [[2024-07-29 - etant]] | Étant actuellement entrain de lire ce livre (recommandé par Colin Damon) 👇🏼 |
+| 2024-07-31 | [[2024-07-31 - toujours]] | 🚀 Toujours on my |
+| 2024-08-02 | [[2024-08-02 - prendre]] | Ne pas prendre de notes, c'est comme essayer de remplir une passoire d'eau : bon courage pour reteni |
+| 2024-08-05 | [[2024-08-05 - nouvel]] | Nouvel semaine = Nouveaux objectifs ! |
+| 2024-08-06 | [[2024-08-06 - toujours]] | Toujours on my |
+| 2024-08-08 | [[2024-08-08 - pensez]] | Si vous pensez qu'un bon développeur travaille mieux seul, c'est que vous n'avez jamais réellement c |
+| 2024-08-11 | [[2024-08-11 - clavier]] | Mon clavier commence à se faire vieux si vous avez des recommandations de bon claviers je dis pas no |
+| 2024-08-12 | [[2024-08-12 - nouvelle]] | Nouvelle semaine = Nouveaux objectifs ! 👇🏼 |
+| 2024-08-13 | [[2024-08-13 - vois]] | Je vois passer beaucoup de posts dissociant le 'Free' dans freelance comme de la liberté ultime… mai |
+| 2024-08-14 | [[2024-08-14 - quoi]] | C’est quoi ce nuage de 200 points ? Une nouvelle constellation à des années-lumière de chez nous ? P |
+| 2024-08-15 | [[2024-08-15 - connaissezvous]] | Connaissez-vous la théorie des vitres brisées ? Laissez-moi vous expliquer et comment cela s'appliqu |
+| 2024-08-17 | [[2024-08-17 - sais]] | Je sais enfin faire des tests, et c'est grâce aux vidéos de David Grammatico ! |
 | 2024-08-18 | [[2024-08-18 - tbd]] | Explication du Trunk-Based Development : développer sur le tronc pour itérer vite et réduire la dette de merge |
 | 2024-08-19 | [[2024-08-19 - objectifs]] | Objectifs hebdomadaires : Next.js, katas, Software Craft et sport |
 | 2024-08-20 | [[2024-08-20 - linkedin]] | Bilan d'un mois à poster sur LinkedIn : les bénéfices inattendus de partager en public |
 | 2024-08-21 | [[2024-08-21 - portfolio]] | Demande de feedback sur la maquette Figma d'un portfolio original en forme de Gameboy |
 | 2024-08-22 | [[2024-08-22 - nextjs]] | Découverte du routing file-based de Next.js : simplicité et magie des routes imbriquées |
+| 2024-08-23 | [[2024-08-23 - voulez]] | Vous voulez sécuriser votre site mais ne savez pas par où commencer ? Laissez-moi vous guider 👇🏼 |
+| 2024-08-25 | [[2024-08-25 - dimanche]] | Dimanche confession : et si je vous disais que je n'ai jamais ressenti le syndrome de l'imposteur ?👇 |
+| 2024-08-26 | [[2024-08-26 - nouvelle]] | 🚀 Nouvelle Semaine = Nouveaux objectifs ! Let’s go ! |
+| 2024-08-27 | [[2024-08-27 - comment]] | Comment la discipline a transformé mon corps et boosté mon apprentissage ? 🏋‍💻 |
+| 2024-08-28 | [[2024-08-28 - toujours]] | Toujours dans mon apprentissage de NextJS, aujourd’hui au menu c’est les Metadata 🍷 |
+| 2024-08-29 | [[2024-08-29 - certifie]] | Être certifié ne rime pas avec compétences. |
+| 2024-08-29 | [[2024-08-29 - viens]] | Je viens de regarder cette vidéo : https://lnkd.in/eSPsAFUy et c’était super interessant je te dis ç |
+| 2024-08-30 | [[2024-08-30 - viens]] | Je viens de désinstaller le dernier jeu que j’avais sur mon mac je t’explique le contexte 👇🏼 |
+| 2024-08-31 | [[2024-08-31 - voulu]] | J'ai voulu me challenger sur une landing page et je suis plutôt satisfait, je t'explique comment j'e |
+| 2024-09-01 | [[2024-09-01 - dimanche]] | Dimanche confession : et si je vous disais que la paire qu’il y a en photo est à moi ? 👇🏼 |
+| 2024-09-02 | [[2024-09-02 - nouvelle]] | 🚀 Nouvelle semaine = Nouveaux objectifs ! Learn in public tel est mon nindo ! |
+| 2024-09-03 | [[2024-09-03 - code]] | Le code legacy ça te fait peur ? Aller viens je t’explique comment bien l’appréhender ! 👇🏼 |
+| 2024-09-04 | [[2024-09-04 - toujours]] | Toujours sur mon apprentissage de NextJS aujourd’hui on parle  special file  ! 👇🏼 |
+| 2024-09-05 | [[2024-09-05 - apiculteur]] | Un apiculteur du nom de Ibrahim Sedef a gérer des ours qui s’en prenaient à ses ruches. Je t’expliqu |
+| 2024-09-06 | [[2024-09-06 - savez]] | Vous savez comment faire une racine carrée inverse ? Et surtout, pourquoi c’est utile dans les jeux  |
 | 2024-09-07 | [[2024-09-07 - calculatrice]] | Réalisation d'une calculatrice UI iPhone en React + Zustand pour continuer à pratiquer |
 | 2024-09-07 | [[2024-09-07 - diplome]] | Dilemme : continuer à travailler pour financer une formation avec diplôme ou plonger dans le code à temps plein |
 | 2024-09-08 | [[2024-09-08 - features]] | Liste des fonctionnalités manquantes ou bugguées sur LinkedIn, avec un CTA humoristique |
 | 2024-09-09 | [[2024-09-09 - objectifs]] | Objectifs hebdomadaires : portfolio, katas quotidiens, Software Craft et salle de sport |
+| 2024-09-10 | [[2024-09-10 - hello]] | Hello le réseau je me posais une question vous utilisez quoi comme plateforme pour trouver un emploi |
 | 2024-09-10 | [[2024-09-10 - zevent]] | Idée de side project inspirée d'un bug de classement des dons lors du ZEvent — une course visuelle interactive |
+| 2024-09-11 | [[2024-09-11 - beaucoup]] | Pour beaucoup les tests sont une perte de temps, mais laissez moi vous expliquer en quoi ils sont in |
+| 2024-09-12 | [[2024-09-12 - intercepter]] | Intercepter une route en NextJS, mais pourquoi et comment ? Je t’explique ça 👇🏼 |
+| 2024-09-13 | [[2024-09-13 - saviez]] | Vous saviez que     ? Je vous explique ça 👇🏼 |
+| 2024-09-14 | [[2024-09-14 - aujourd]] | Aujourd’hui je te donne les pièges à éviter pour améliorer le nommage dans ton code 👇🏼 |
+| 2024-09-15 | [[2024-09-15 - finis]] | J'ai finis le template globale qui me servira sur la plupart de mes pages de mon portfolio ! 🎉 |
+| 2024-09-16 | [[2024-09-16 - lundi]] | C’est Lundi et comme chaque Lundi —> Nouvelle semaine = nouveaux objectifs 🚀 |
+| 2024-09-17 | [[2024-09-17 - apporte]] | J’ai     par   et voici ce que ça m’a apporté ! 👇🏼 |
+| 2024-09-18 | [[2024-09-18 - vos]] | Est ce que vous aussi vos (side) projets finissent par vous dégoûter quand vous y passer trop de tem |
+| 2024-09-19 | [[2024-09-19 - non]] | Non c'est pas la vidéo qui est de mauvaise qualité, le fond gris est bien granuleux et en mouvement  |
+| 2024-09-20 | [[2024-09-20 - comment]] | Comment mon expérience de commercial sera un plus en tant que développeur ? 👇🏼 |
+| 2024-09-21 | [[2024-09-21 - quelques]] | Il y a quelques choses que j’ai du mal à saisir : l’intérêt du no code ? |
+| 2024-09-24 | [[2024-09-24 - non]] | Non j'ai pas quitté Linkedin, j'ai simplement passé la 4ème pour enfin finir ce projet qui traîne de |
+| 2024-09-24 | [[2024-09-24 - soucis]] | Bon j’ai un soucis sur mon portfolio et j’ai besoin d’aide ! 👇🏼 |
+| 2024-09-25 | [[2024-09-25 - fais]] | J'ai fais un breadcrumb sans m'en rendre compte, je t'explique ça ! 👇🏼 |
 | 2024-09-26 | [[2024-09-26 - first]] | Explication des principes FIRST pour écrire de bons tests unitaires (Fast, Isolated, Repeatable, Self-verifying, Timely) |
 | 2024-09-27 | [[2024-09-27 - mockup]] | Découverte d'un outil de génération de mockups propres pour présenter ses projets sur différents devices |
 | 2024-09-28 | [[2024-09-28 - formation]] | Soulagement : la formation Le Wagon finalement maintenue malgré un problème de financement CPF |
 | 2024-09-29 | [[2024-09-29 - accessibilite]] | Question ouverte sur la gestion du zoom navigateur dans l'accessibilité web |
 | 2024-09-30 | [[2024-09-30 - objectifs]] | Dernier jour de travail alimentaire : objectifs de la semaine avant le début de la formation |
+| 2024-09-30 | [[2024-09-30 - stagiaire]] | Le stagiaire d’instagram a encore fait des siennes : |
+| 2024-10-01 | [[2024-10-01 - piliers]] | Un des piliers du Clean Code c’est la simplicité, mais c’est quoi un code simple pour vous ? |
+| 2024-10-02 | [[2024-10-02 - demande]] | Je me demande encore si prendre l’air fais plus de bien à lui qu’à moi ? 😂 |
+| 2024-10-02 | [[2024-10-02 - seulement]] | Ça fait seulement 2 jours que je pratique des Katas avec Ruby et j'avoue je commence à vraiment bien |
+| 2024-10-03 | [[2024-10-03 - menu]] | Au menu du jour la simplicité de mise en place de requêtes HTTP en NextJS ! 👇🏼 |
+| 2024-10-05 | [[2024-10-05 - savais]] | Tu savais qu'on utilise le terme "mock" à tord et à travers ? |
 | 2024-10-06 | [[2024-10-06 - confession]] | Confession du dimanche : passion pour le design neobrutalism et son utilisation dans ses projets |
 | 2024-10-07 | [[2024-10-07 - cest]] | Premier jour de retour en formation au Wagon — retour après quelques mois de pause |
 | 2024-10-08 | [[2024-10-08 - petit]] | Post tardif sur les bases de Ruby vues en formation, avec exemples pratiques |
@@ -98,11 +149,11 @@ LIMIT 25
 | 2024-12-15 | [[2024-12-15 - non]] | BIP KicksFolio — pas un post sur Chris Scholly, mais le vrai lancement du Build in Public |
 | 2024-12-17 | [[2024-12-17 - build]] | BIP KicksFolio Jour 2 — routes API terminées, premier jour de backend fonctionnel |
 | 2024-12-18 | [[2024-12-18 - build]] | BIP KicksFolio Jour 3 — cœur des routes API et schéma de données expliqué |
-| 2024-12-19 | [[2024-12-19 - kicksfolio]] | BIP KicksFolio Jour 4.5 — React Native et Expo configurés, backend à mettre en prod |
 | 2024-12-19 | [[2024-12-19 - build]] | BIP KicksFolio Jour 4 — backend à 80–90% terminé |
+| 2024-12-19 | [[2024-12-19 - kicksfolio]] | BIP KicksFolio Jour 4.5 — React Native et Expo configurés, backend à mettre en prod |
 | 2024-12-20 | [[2024-12-20 - certification]] | Annonce de l'obtention de la certification Le Wagon, prêt pour rejoindre le monde des devs |
-| 2024-12-21 | [[2024-12-21 - kicksfolio]] | BIP KicksFolio Jour 6 — premiers composants React Native en cours, besoin d'un émulateur Android |
 | 2024-12-21 | [[2024-12-21 - focus]] | Difficulté à décrocher du projet KicksFolio pour faire de la veille — comment trouver l'équilibre ? |
+| 2024-12-21 | [[2024-12-21 - kicksfolio]] | BIP KicksFolio Jour 6 — premiers composants React Native en cours, besoin d'un émulateur Android |
 | 2024-12-23 | [[2024-12-23 - kicksfolio]] | BIP KicksFolio Jour 7 — premiers visuels, Animated views, objectif login et session |
 | 2024-12-24 | [[2024-12-24 - build]] | BIP KicksFolio Jour 8 — réflexion sur l'esprit du Build in Public et partage authentique |
 | 2024-12-25 | [[2024-12-25 - build]] | BIP KicksFolio Jour 9 — pas de code ce jour de Noël, retour sur l'avancement |
