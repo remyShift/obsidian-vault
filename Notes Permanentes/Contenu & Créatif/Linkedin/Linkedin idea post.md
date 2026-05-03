@@ -1,7 +1,7 @@
 ---
-tags: [Work, Perso]
+tags:
+  - Linkedin
 ---
-
 - [x] Fonctionnalitées Linkedin
 - [x] Avis maquette portfolio
 - [x] Mise au sport / perte de poids suite à perte de motivation
