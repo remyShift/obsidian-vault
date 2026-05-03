@@ -42,3 +42,5 @@ Pour le moment cette semaine il va être un peu en pause j’ai un test techniqu
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQEEnnqyFQWvDQ/feedshare-shrink_1280/B4EZkmFdwfHoAs-/0/1757280591486?e=1779321600&v=beta&t=fAMe3lp1VjPFwCZhPiWtwvFaNtHCc0FYVVmEkv7hwyw)

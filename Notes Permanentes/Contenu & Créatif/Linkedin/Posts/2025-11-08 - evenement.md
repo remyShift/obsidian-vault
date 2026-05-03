@@ -10,3 +10,5 @@ tags:
 ---
 
 Une journée riche en apprentissage malgré les failles du sujets merci aux orgas ! 🙌🏼
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQEPVI2QQcBjAg/feedshare-shrink_800/B4EZpkmwsvIwAg-/0/1762624474948?e=1779321600&v=beta&t=P0h87nT0rTbTRaV319gBe1Tbk0N0twvUB6JUQyxm9GQ)

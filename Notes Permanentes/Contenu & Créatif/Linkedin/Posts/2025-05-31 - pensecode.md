@@ -51,3 +51,5 @@ Je suis curieux de voir si je suis seul à faire ça… ou si on est toute une a
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQFH6xHqmnRyHg/feedshare-shrink_800/B4EZcjLTBxHcAg-/0/1748641854805?e=1779321600&v=beta&t=hcB_PzKJm7WQYpq0ZzIO4GOo3pJF0cE4nAknzViY56s)

@@ -43,3 +43,5 @@ De noob à expert suis mon aventure au travers de mes posts pour un jour rejoind
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQFt-UmT_Yp0EA/feedshare-shrink_800/feedshare-shrink_800/0/1730313861350?e=1779321600&v=beta&t=Hp07py9qxu8h569MOYGyWZSYHDPujK19k-z6E4D5B10)

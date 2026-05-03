@@ -53,3 +53,5 @@ Suis mon aventure pour un jour rejoindre le monde des développeurs avec
 #Road2BeDev.
 
 - - -
+
+![](https://media.licdn.com/dms/image/sync/v2/D4E27AQHDAUUkriOz7w/articleshare-shrink_160/articleshare-shrink_160/0/1745119363141?e=1778446800&v=beta&t=JKGcUqLn1HzW9jVK5RSbTb-dFD14BXbTar4NBrbfc-0)

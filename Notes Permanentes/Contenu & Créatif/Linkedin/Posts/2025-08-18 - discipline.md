@@ -36,3 +36,5 @@ D’autant que je suis conscient que je peux parfois procrastiner et que sans m�
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQF0jDF_JhYBRA/feedshare-image-high-res/B4EZi5uvWmGYAs-/0/1755462695668?e=1779321600&v=beta&t=JpNbKf123AmFm1oPFMtSDX7Ss-RZYVuulKuTset9T2Q)

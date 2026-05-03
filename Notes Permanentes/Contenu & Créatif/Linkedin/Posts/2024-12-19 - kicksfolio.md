@@ -34,3 +34,5 @@ Celui qui allie le mieux simplicité et scalabilité.
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4D22AQFA8PKCznNCGA/feedshare-image-high-res/B4DZPexGmDG0A0-/0/1734609235227?e=1779321600&v=beta&t=35rclW9cg8zTSYwMrevSc2A5mqRiX9paMc3a05NIv5o)

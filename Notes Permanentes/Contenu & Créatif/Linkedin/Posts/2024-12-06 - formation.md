@@ -44,3 +44,5 @@ Le responsive étant douteux et vu qu’à 4j de la fin on a du switcher toute n
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQFeLhEkpGPVMg/feedshare-shrink_800/feedshare-shrink_800/0/1733471482223?e=1779321600&v=beta&t=xgmC3pzEkwcVcaXgxxWQWyFzHQ6e4hKvWfSwIrCcvQ0)

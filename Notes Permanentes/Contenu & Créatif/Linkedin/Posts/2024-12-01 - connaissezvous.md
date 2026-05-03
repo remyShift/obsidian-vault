@@ -42,3 +42,5 @@ La citation d’Uncle Bob prends pleinement son sens désormais !
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQGzY11CF4ndgw/feedshare-shrink_800/feedshare-shrink_800/0/1733008014990?e=1779321600&v=beta&t=9hubB8iYAU6_rqWmtPs2AOR1VfpS_bah8_LQ92Ez_rk)

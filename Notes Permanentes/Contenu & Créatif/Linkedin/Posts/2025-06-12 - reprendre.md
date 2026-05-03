@@ -65,3 +65,5 @@ PS : Oui je suis un psychopathe et trie mes applications par couleurs.
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQGDeDtW1_ACqA/feedshare-image-high-res/B4EZdhSR9XHYAw-/0/1749683872558?e=1779321600&v=beta&t=Nb8Hy07h89YlKVmGB8cHN630zbxIvQXtx1uvFm2ZjQY)

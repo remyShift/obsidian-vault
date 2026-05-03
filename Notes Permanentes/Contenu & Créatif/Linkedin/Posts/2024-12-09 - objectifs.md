@@ -39,3 +39,5 @@ Et ça sera déjà suffisant !
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQHfrvHWNyttRw/feedshare-shrink_800/feedshare-shrink_800/0/1733728889468?e=1779321600&v=beta&t=9klu0XNcy61pQENV6jT1mXVhXBrqeDPVsSZGnTdkoKY)

@@ -28,3 +28,6 @@ Travailler dans une équipe bienveillante qui valorise l’apprentissage,
 #JobSearch 
 #Recrutement 
 #Belgium
+
+![](https://media.licdn.com/dms/image/v2/D4E35AQHLMIZaVUFSAA/profile-framedphoto-shrink_100_100/B4EZt_QvLPIgAk-/0/1767366652935?e=1778446800&v=beta&t=mlYP58TEQqrb9EvxIUWIc0BE15a7bUjKIKQ1NOW9NQM)
+![](https://media.licdn.com/dms/image/sync/v2/D4E27AQGCLG9shCW3yw/articleshare-shrink_160/B4EZpeR7baJgAk-/0/1762518350127?e=1778446800&v=beta&t=uiWl2v0x5V51b5Au8FHy1C7Wlq9q-TbOeYyFWn8xcb0)

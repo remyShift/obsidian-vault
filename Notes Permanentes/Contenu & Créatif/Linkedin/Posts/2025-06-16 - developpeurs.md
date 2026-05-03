@@ -46,3 +46,5 @@ Merci d’avance à celles et ceux qui prendront 2 min pour partager leur vécu 
 🚀 De noob à expert suis mon parcours pour rejoindre le monde des développeurs et sortir ma première app mobile : KicksFolio !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQGztujQHPA-Ng/feedshare-shrink_800/B4EZd3n_zMG4Ag-/0/1750058664785?e=1779321600&v=beta&t=yG3MMvTjP-bIVs7rVAQHD1isV2wHfZnKbXOdxSw53Ik)

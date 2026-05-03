@@ -20,3 +20,5 @@ Quel est la suite maintenant ?
 On verra plus tard pour le moment je profite de la sortie !
 
 Si tu veux essayer l’app et me faire un feedback hésite pas !
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQGlKv_qJTJFMw/feedshare-image-high-res/B4EZkXWmYCHEAo-/0/1757033425355?e=1779321600&v=beta&t=Wx0hEAQpTwj1zKrpzh81oKKjkfhApyiGSamJOD_gS3s)

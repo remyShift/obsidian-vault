@@ -36,3 +36,5 @@ L’étape suivante et de tester complètement chacune de mes features dans leur
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQEP0_CxGPI4HA/feedshare-image-high-res/B4EZcd63YlHkA0-/0/1748553660716?e=1779321600&v=beta&t=7eC0YzzFQxFGPG1f1u6vepukiCgjz5wizZN4684Eey4)

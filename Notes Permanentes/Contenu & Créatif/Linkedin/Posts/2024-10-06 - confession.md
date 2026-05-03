@@ -37,3 +37,5 @@ Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des déve
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQGg199G2qc4FA/feedshare-shrink_800/feedshare-shrink_800/0/1728163728618?e=1779321600&v=beta&t=lO4CxZMEBUoZdoRnycf_0j_YvUtr5L3WUoENfvAEu0Y)

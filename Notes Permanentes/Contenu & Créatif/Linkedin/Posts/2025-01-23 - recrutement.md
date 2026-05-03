@@ -33,3 +33,5 @@ PS : Sur mon portfolio il n’y pas encore mon app mobile ni mon projet de stage
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4D22AQGPuh2Pyn3uGg/feedshare-shrink_800/B4DZSSBqA9HUAk-/0/1737616700125?e=1779321600&v=beta&t=lYPbPdebX5i4blkjgnMZtPBd63nRC6yVEkrZUvtu3K4)

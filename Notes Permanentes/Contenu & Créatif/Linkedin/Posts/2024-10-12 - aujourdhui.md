@@ -73,3 +73,5 @@ De noob à expert suis mon apprentissage pour un jour rejoindre le monde des dé
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E10AQGGYwKnXVFyhg/image-shrink_800/image-shrink_800/0/1728714601627?e=1778446800&v=beta&t=XwIJQxp0vY8Ci8hSDfKgdf6ZDdAm_oaQ8LpCerIM0Sw)

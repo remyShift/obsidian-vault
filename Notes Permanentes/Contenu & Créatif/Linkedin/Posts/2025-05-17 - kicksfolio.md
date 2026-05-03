@@ -33,3 +33,5 @@ Notamment le trie de la collection selon les attributs, l'estimation de la valeu
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4D22AQGJTqSQQeoASQ/feedshare-shrink_800/B4DZbbJvBmIEAk-/0/1747433484834?e=1779321600&v=beta&t=8hukav18A1ZqBpnZlNw5FlGW4Fksmk4d3KdqEtqF5j4)

@@ -38,3 +38,5 @@ De noob à expert suis mon aventure rejoindre le monde des développeurs au trav
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQFU-U-eXnUg9g/feedshare-shrink_1280/feedshare-shrink_1280/0/1728805225745?e=1779321600&v=beta&t=Yyx_KW-KimwcqY5UPtkB25bI8FWqIULZCgr0OSzpOXc)

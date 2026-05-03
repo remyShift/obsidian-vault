@@ -45,3 +45,5 @@ Bref, un super mix entre jeu de réflexion et kata d’optimisation.
 #Road2BeDev !
 
 - - -
+
+![](https://media.licdn.com/dms/image/v2/D4E22AQH3ZlTcHLlECg/feedshare-shrink_800/B4EZcs1D9FH0Ag-/0/1748803797800?e=1779321600&v=beta&t=pag9KHYIySMEbsVJI8fJbiscmF8EfaxDpBDlQQ3JgE4)
