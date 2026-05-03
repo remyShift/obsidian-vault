@@ -60,5 +60,5 @@ Conversation autour de la pratique des Architecture Decision Records (ADR) : ce 
 
 ## À intégrer dans
 
-- [[Standards & Patterns]] - mentionner les ADR comme pratique à mettre en place sur le projet
-- [[Intro Oli's Lab]] - référencer le dossier `docs/adr/` dans les liens utiles
+- Standards & Patterns - mentionner les ADR comme pratique à mettre en place sur le projet
+- Intro Oli's Lab - référencer le dossier `docs/adr/` dans les liens utiles
