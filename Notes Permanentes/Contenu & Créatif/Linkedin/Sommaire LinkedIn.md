@@ -1,6 +1,6 @@
-# Sommaire LinkedIn
+Index de tous mes posts LinkedIn archivés dans Posts/.
 
-Index de tous mes posts LinkedIn archivés dans [[Notes Permanentes/Contenu & Créatif/Linkedin/Posts/]].
+Pour trouver des idées c'est dans [[Linkedin idea post|idea posts]].
 
 ---
 

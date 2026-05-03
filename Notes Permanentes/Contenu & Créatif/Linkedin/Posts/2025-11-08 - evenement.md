@@ -4,7 +4,9 @@ likes: 6
 comments: 0
 reposts: 0
 impressions: 509
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7392998964540784640/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7392998964540784640/
+tags:
+  - Linkedin
 ---
 
 Une journée riche en apprentissage malgré les failles du sujets merci aux orgas ! 🙌🏼

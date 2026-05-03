@@ -4,7 +4,9 @@ likes: 40
 comments: 39
 reposts: 0
 impressions: 6899
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7238226197292208128/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7238226197292208128/
+tags:
+  - Linkedin
 ---
 
 Bon au delà du dilemme auquel je suis confronté (cf mon post précédent) c'est pas pour autant que je vais arrêter de grind !

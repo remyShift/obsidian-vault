@@ -4,7 +4,9 @@ likes: 5
 comments: 0
 reposts: 0
 impressions: 286
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7257655068676472832/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7257655068676472832/
+tags:
+  - Linkedin
 ---
 
 Si vous pensez qu'un bon développeur travaille mieux seul, c'est que vous n'avez jamais réellement collaboré. Je t’explique pourquoi 👇🏼

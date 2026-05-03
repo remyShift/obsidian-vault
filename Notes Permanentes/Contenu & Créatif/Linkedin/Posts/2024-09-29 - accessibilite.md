@@ -4,7 +4,9 @@ likes: 5
 comments: 10
 reposts: 0
 impressions: 448
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7246051094986985472/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7246051094986985472/
+tags:
+  - Linkedin
 ---
 
 Je me demandais si vous preniez en compte ce point dans l’accessibilité de votre site 👇🏼

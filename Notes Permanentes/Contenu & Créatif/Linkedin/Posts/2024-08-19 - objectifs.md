@@ -4,7 +4,9 @@ likes: 6
 comments: 0
 reposts: 0
 impressions: 447
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7231191744153882624/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7231191744153882624/
+tags:
+  - Linkedin
 ---
 
 #LearnInPublic Nouvelle semaine = Nouveaux objectifs let’s go ! 👇🏼

@@ -4,7 +4,9 @@ likes: 16
 comments: 4
 reposts: 0
 impressions: 500
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7238799542777761793/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7238799542777761793/
+tags:
+  - Linkedin
 ---
 
 🚀 Nouvelle semaine = nouveaux objectifs !

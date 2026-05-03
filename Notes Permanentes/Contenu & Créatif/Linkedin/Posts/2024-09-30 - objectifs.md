@@ -4,7 +4,9 @@ likes: 18
 comments: 8
 reposts: 0
 impressions: 698
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7246409706502504449/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7246409706502504449/
+tags:
+  - Linkedin
 ---
 
 La semaine dernière j’ai omis ce post pour sortir mon portfolio mais cette semaine on reprends les bonnes habitudes !

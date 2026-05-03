@@ -4,7 +4,9 @@ likes: 23
 comments: 2
 reposts: 0
 impressions: 693
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7344613032691482625/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7344613032691482625/
+tags:
+  - Linkedin
 ---
 
 KicksFolio, à la base, je l’ai créé pour moi.

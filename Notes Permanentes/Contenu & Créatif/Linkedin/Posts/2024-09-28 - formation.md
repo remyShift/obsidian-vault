@@ -4,7 +4,9 @@ likes: 20
 comments: 5
 reposts: 0
 impressions: 665
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7245705944007938048/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7245705944007938048/
+tags:
+  - Linkedin
 ---
 
 J’ai le plaisir de vous annoncer que j’ai finalement réussi à maintenir ma formation ! 

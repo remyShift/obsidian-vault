@@ -4,7 +4,9 @@ likes: 34
 comments: 8
 reposts: 0
 impressions: 1774
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7288095657590972417/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7288095657590972417/
+tags:
+  - Linkedin
 ---
 
 Mon stage se finissant dans un peu plus d’1 mois, j’ai commencé activement à chercher un nouveau projet auquel contribuer ! 👇🏼

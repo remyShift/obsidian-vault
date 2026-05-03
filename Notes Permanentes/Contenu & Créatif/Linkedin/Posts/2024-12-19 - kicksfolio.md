@@ -4,7 +4,9 @@ likes: 12
 comments: 8
 reposts: 0
 impressions: 921
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7275478459127132161/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7275478459127132161/
+tags:
+  - Linkedin
 ---
 
 Build In Public - KicksFolio - Jour 4.5 👟

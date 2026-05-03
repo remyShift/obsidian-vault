@@ -4,7 +4,9 @@ likes: 7
 comments: 4
 reposts: 0
 impressions: 562
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7334103801424961536/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7334103801424961536/
+tags:
+  - Linkedin
 ---
 
 Bon hier j’ai passé toute ma journée à essayer de (re)faire tourner KicksFolio sur mon tel …

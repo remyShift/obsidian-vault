@@ -4,7 +4,9 @@ likes: 29
 comments: 7
 reposts: 0
 impressions: 826
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7380851883688640512/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7380851883688640512/
+tags:
+  - Linkedin
 ---
 
 KicksFolio se refait une beauté et pas que ...

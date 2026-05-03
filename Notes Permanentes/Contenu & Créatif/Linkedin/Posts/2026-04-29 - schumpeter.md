@@ -4,7 +4,9 @@ likes: 10
 comments: 9
 reposts: 0
 impressions: 950
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7455144397983318017/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7455144397983318017/
+tags:
+  - Linkedin
 ---
 
 Tout le monde a peur que l’IA supprime des postes. 

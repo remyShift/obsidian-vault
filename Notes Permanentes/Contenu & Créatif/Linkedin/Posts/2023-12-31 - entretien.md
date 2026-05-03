@@ -3,8 +3,10 @@ date: 2023-12-31
 likes: 263
 comments: 2
 reposts: 0
-impressions: null
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7147331727944810496/"
+impressions:
+url: https://www.linkedin.com/feed/update/urn:li:activity:7147331727944810496/
+tags:
+  - Linkedin
 ---
 
 Only those who dare to fail greatly can achieve great things. Don't be afraid to fail. Don't waste energy trying to hide failure. Learn from your failures and move on to the next challenge.

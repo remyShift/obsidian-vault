@@ -4,7 +4,9 @@ likes: 41
 comments: 34
 reposts: 0
 impressions: 6028
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7355847057200291840/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7355847057200291840/
+tags:
+  - Linkedin
 ---
 
 Entretien technique… frustrant, j’irais pas à Barcelone 😅

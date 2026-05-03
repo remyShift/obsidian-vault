@@ -4,7 +4,9 @@ likes: 12
 comments: 12
 reposts: 0
 impressions: 702
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7334469943666606081/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7334469943666606081/
+tags:
+  - Linkedin
 ---
 
 Est-ce qu’il t’arrive aussi de “penser code” dans la vie de tous les jours ?

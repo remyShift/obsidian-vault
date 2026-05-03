@@ -4,7 +4,9 @@ likes: 9
 comments: 2
 reposts: 0
 impressions: 481
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7335014770959421440/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7335014770959421440/
+tags:
+  - Linkedin
 ---
 
 Comment allier logique, fun et code minimaliste ?

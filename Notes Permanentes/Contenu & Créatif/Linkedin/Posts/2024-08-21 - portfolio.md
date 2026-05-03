@@ -4,7 +4,9 @@ likes: 14
 comments: 11
 reposts: 0
 impressions: 1045
-url: "https://www.linkedin.com/feed/update/urn:li:activity:7231928283037143040/"
+url: https://www.linkedin.com/feed/update/urn:li:activity:7231928283037143040/
+tags:
+  - Linkedin
 ---
 
 Cher réseau, aujourd’hui je vous sollicite 👇🏼
