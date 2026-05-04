@@ -43,6 +43,7 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - écrire la question à main levée dans les notes (slide 7)
 - Mettre les notes dans l'ordre dans lequel je dois en parler
 - Revoir notes slide 10 (transition)
+- Compteur de refus dans un coin des slides
 - 
 
 ---
