@@ -1,5 +1,3 @@
-# Sommaire
-
 Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques.
 
 ---
