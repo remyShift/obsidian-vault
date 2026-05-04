@@ -44,7 +44,7 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - Mettre les notes dans l'ordre dans lequel je dois en parler
 - Revoir notes slide 10 (transition)
 - Compteur de refus dans un coin des slides
-- 
+- Entre Slide 10 et 11 --> slide de transition projet immo (gif fast and furious)
 
 ---
 
