@@ -39,6 +39,10 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - Ralentir débit de parole mettre + de pauses
 	- prendre le temps d'aller vite
 - slides 18 - 19 --> faire une slide au milieu dédié à Spash
+- taper des portes = toquer à des portes (expression peut être mal interprêté donc à définir)
+- écrire la question à main levée dans les notes (slide 7)
+- Mettre les notes dans l'ordre dans lequel je dois en parler
+- 
 
 ---
 
