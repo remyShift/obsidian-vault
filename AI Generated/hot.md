@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Dernière activité
-04-05-2026 — olis-lab : architecture XML feeds catalogue (GMC / Meta / Klaviyo) planifiée.
+04-05-2026 — olis-lab : SearchPage étendue à 4 onglets (Products, Articles, Bundles, Actives), pattern map mis en place.
 
 ## Projets actifs
 
 ### olis-lab
 - Dernière session : 04-05-2026
-- État : architecture 3 feeds XML définie (gmc, meta, klaviyo sur S3+CloudFront), POC sandbox à faire avant migration Content API v2.1
-- Prochaine étape : implémenter `feedGenerator` + POC sandbox GMC DataSources
+- État : SearchPage 4 onglets opérationnelle + architecture 3 feeds XML (gmc, meta, klaviyo) planifiée, POC sandbox à faire
+- Prochaine étape : tester les 4 onglets visuellement + implémenter `feedGenerator`
 
 ### claude-obsidian
 - Dernière session : 02-05-2026
