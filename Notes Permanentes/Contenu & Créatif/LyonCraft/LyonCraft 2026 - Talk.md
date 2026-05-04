@@ -33,6 +33,13 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
 	- Boire de l'eau aide pour laisser des pauses
 - Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
+
+---
+
+- Ralentir débit de parole mettre + de pauses
+	- prendre le temps d'aller vite
+- 
+
 ---
 
 ## Talk :
