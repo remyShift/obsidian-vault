@@ -33,6 +33,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | lyoncraft-2026         | [[AI Generated/Sessions/lyoncraft-2026/01-05-2026_01-21]]         |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/01-05-2026_11-16]]               |
 | claude-obsidian        | [[AI Generated/Sessions/claude-obsidian/02-05-2026_12-55]]        |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/04-05-2026_10-39]]               |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |

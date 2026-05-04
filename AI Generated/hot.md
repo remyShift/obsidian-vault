@@ -1,5 +1,5 @@
 ---
-updated: 02-05-2026
+updated: 04-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,19 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Dernière activité
-02-05-2026 — claude-obsidian : workflow vault entièrement amélioré et bouclé.
+04-05-2026 — olis-lab : architecture XML feeds catalogue (GMC / Meta / Klaviyo) planifiée.
 
 ## Projets actifs
+
+### olis-lab
+- Dernière session : 04-05-2026
+- État : architecture 3 feeds XML définie (gmc, meta, klaviyo sur S3+CloudFront), POC sandbox à faire avant migration Content API v2.1
+- Prochaine étape : implémenter `feedGenerator` + POC sandbox GMC DataSources
 
 ### claude-obsidian
 - Dernière session : 02-05-2026
 - État : audit terminé, tout implémenté (PostCompact, hot cache deux niveaux, /recap, /autoresearch, Sommaire)
 - Prochaine étape : tester sur une vraie session projet
-
-### olis-lab
-- Dernière session : 01-05-2026
-- État : mission freelance en cours (Payload CMS + Next.js, cosmetics e-commerce)
-- Prochaine étape : voir recap 01-05-2026
 
 ### portfolio-gameboy-next
 - Dernière session : 28-04-2026
@@ -39,7 +39,8 @@ tags: [meta, hot-cache, global]
 
 ## Contexte personnel actif
 - Korea move : test de 3 mois à Seoul à planifier dans les prochains mois
-- Freelance : mission Oli's Lab long terme
+- Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 août 2026
 
 ## Threads ouverts cross-projets
+- Migration Content API v2.1 → Merchant API (deadline 18/08/2026) : architecture acée, implémentation à lancer
 - Tester le nouveau workflow SessionStart + PostCompact sur une vraie session longue
