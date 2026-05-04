@@ -39,6 +39,6 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | Projet          | Hot Notes                                     |
 | --------------- | --------------------------------------------- |
 | claude-obsidian | [[AI Generated/Sessions/claude-obsidian/hot]] |
-|                 |                                               |
+| olis-lab        | [[AI Generated/Sessions/olis-lab/hot]]        |
 |                 |                                               |
 |                 |                                               |
