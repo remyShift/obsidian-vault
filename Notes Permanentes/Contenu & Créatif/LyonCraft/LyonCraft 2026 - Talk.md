@@ -38,7 +38,7 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 
 - Ralentir débit de parole mettre + de pauses
 	- prendre le temps d'aller vite
-- 
+- slides 18 - 19 --> faire une slide au milieu dédié à Spash
 
 ---
 
