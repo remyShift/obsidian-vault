@@ -22,8 +22,8 @@ tags:
 ## Courses
 
 - [ ] déo
-- [ ] croquettes
-- [ ] litière
+- [x] croquettes
+- [x] litière
 
 ---
 
