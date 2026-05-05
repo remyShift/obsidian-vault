@@ -135,3 +135,5 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 프랑스는 한국을 멀어요.
 > La France est loin de la Corée.
 
+> [!question]- 저는 자주 
+>
