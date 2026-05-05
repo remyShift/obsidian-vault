@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-05-2026 — olis-lab : Onglet Brands ajoute a la SearchPage + refactore vers le bon controller/router serveur.
+05-05-2026 — olis-lab : Plan refacto search page redige et soumis a l'equipe (endpoint unifie recommande).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 05-05-2026
-- Etat : SearchPage 5 onglets operationnels (Brands endpoint sur `/brands/search/:query`), tests checkout a implementer
-- Prochaine etape : corriger chemin Playwright, implementer tests unitaires checkout
+- Etat : SearchPage 5 onglets operationnels, plan search refactor soumis a l'equipe (Option A = endpoint unifie `GET /search?q=&lang=`), tests checkout a implementer
+- Prochaine etape : attendre decision equipe sur search refactor, corriger chemin Playwright, implementer tests unitaires checkout
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -43,5 +43,6 @@ tags: [meta, hot-cache, global]
 
 ## Threads ouverts cross-projets
 - Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : architecture posee, implementation a lancer
+- Search refactor olis-lab : plan pret, en attente decision equipe
 - Tests checkout olis-lab : US produites (unit + E2E), implementation a faire prochaine session
 - Feeds XML (GMC, Meta, Klaviyo) : structure definie, implementation a lancer
