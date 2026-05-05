@@ -8,38 +8,17 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"AI Generated\"  ",
+      "query": "path:\"AI Generated\"",
       "color": {
         "a": 1,
         "rgb": 16749824
       }
     },
     {
-      "query": "path:Skills  ",
+      "query": "tag:#Agilité tag:#SoftwareCraft  ",
       "color": {
         "a": 1,
-        "rgb": 16749824
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16418181
-      }
-    },
-    {
-      "query": "tag:#Perso  ",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
-      }
-    },
-    {
-      "query": "path:\"Notes Permanentes/Code\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 1266086
+        "rgb": 11657298
       }
     }
   ],
@@ -53,6 +32,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 148,
-  "scale": 0.015971464250792208,
-  "close": true
+  "scale": 0.03730155255285101,
+  "close": false
 }
