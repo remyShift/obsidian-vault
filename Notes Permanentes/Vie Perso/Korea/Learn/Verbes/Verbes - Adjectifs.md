@@ -149,3 +149,6 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 꽃이 예뻐요.
 > Les fleurs sont jolies.
 
+> [!question]- 정치의는 재미없어요
+> La politique c'est pas intéressant.
+
