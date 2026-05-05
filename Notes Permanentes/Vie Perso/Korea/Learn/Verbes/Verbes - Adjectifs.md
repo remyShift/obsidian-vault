@@ -146,3 +146,6 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 내 고양이는 귀여워요.
 > Mon chat est mignon.
 
+> [!question]- 꽃이 예뻐요.
+> Les fleurs sont jolies.
+
