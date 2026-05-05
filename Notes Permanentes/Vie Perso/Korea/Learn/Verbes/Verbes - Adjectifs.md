@@ -123,4 +123,11 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 ```
 
 
-- 여름엔 더워요
+> [!question]- 여름에는 더워요
+> Il fait chaud en été
+
+> [!question]- 겨울에는 추워요
+> Il fait froid en hiver
+
+> [!question]- 
+>
