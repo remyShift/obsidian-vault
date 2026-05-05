@@ -152,3 +152,6 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 정치의는 재미없어요
 > La politique c'est pas intéressant.
 
+> [!question]- 한국어는 재미있어요
+> La langue coréenne est intéressante.
+
