@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-05-2026 — olis-lab : US tests checkout produites + SEO OpenAI via plugin natif confirme operationnel.
+05-05-2026 — olis-lab : Onglet Brands ajoute a la SearchPage + refactore vers le bon controller/router serveur.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 05-05-2026
-- Etat : SEO OpenAI operationnel, US unit tests (13) + E2E (5) checkout definies, pret pour implementation des tests
-- Prochaine etape : corriger chemin Playwright, verifier exports, implementer les tests
+- Etat : SearchPage 5 onglets operationnels (Brands endpoint sur `/brands/search/:query`), tests checkout a implementer
+- Prochaine etape : corriger chemin Playwright, implementer tests unitaires checkout
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
