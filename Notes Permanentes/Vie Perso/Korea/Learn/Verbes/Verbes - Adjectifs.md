@@ -129,5 +129,5 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 겨울에는 추워요
 > Il fait froid en hiver
 
-> [!question]- 
+> [!question]- 저는 여동
 >
