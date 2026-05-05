@@ -15,10 +15,59 @@
       }
     },
     {
-      "query": "tag:#Agilité tag:#SoftwareCraft  ",
+      "query": "tag:#Agilité",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 65297
+      }
+    },
+    {
+      "query": "path:Skills  ",
+      "color": {
+        "a": 1,
+        "rgb": 16487680
+      }
+    },
+    {
+      "query": "tag:#SoftwareCraft ",
+      "color": {
+        "a": 1,
+        "rgb": 5766414
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Code\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 1266086
+      }
+    },
+    {
+      "query": "tag:#Korea  ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Vie Perso\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Projets/Oli's Lab\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15727012
+      }
+    },
+    {
+      "query": "",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
       }
     }
   ],
@@ -32,6 +81,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 148,
-  "scale": 0.03730155255285101,
+  "scale": 0.08369406321745315,
   "close": false
 }
