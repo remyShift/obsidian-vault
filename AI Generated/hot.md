@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-05-2026 — olis-lab : US tests unitaires + E2E checkout produites et validees (flow-focused, pas UI).
+05-05-2026 — olis-lab : US tests checkout produites + SEO OpenAI via plugin natif confirme operationnel.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 05-05-2026
-- Etat : US unit tests (13) + E2E (5) checkout definies, pret pour implementation des deux couches de tests
-- Prochaine etape : corriger chemin Playwright (`/secure-checkout`), verifier exports, implementer les tests
+- Etat : SEO OpenAI operationnel, US unit tests (13) + E2E (5) checkout definies, pret pour implementation des tests
+- Prochaine etape : corriger chemin Playwright, verifier exports, implementer les tests
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -44,4 +44,4 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : architecture posee, implementation a lancer
 - Tests checkout olis-lab : US produites (unit + E2E), implementation a faire prochaine session
-- Tester le nouveau workflow SessionStart + PostCompact sur une vraie session longue
+- Feeds XML (GMC, Meta, Klaviyo) : structure definie, implementation a lancer
