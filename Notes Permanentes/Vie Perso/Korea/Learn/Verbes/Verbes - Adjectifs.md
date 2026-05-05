@@ -129,5 +129,9 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 겨울에는 추워요
 > Il fait froid en hiver
 
-> [!question]- 저는 여동
->
+> [!question]- 저는 여동생의 가까워요
+> Je suis proche de ma petite soeur.
+
+> [!question]- 프랑스는 한국을 멀어요.
+> La France est loin de la Corée.
+
