@@ -2,6 +2,8 @@
 
 Synthèses de conversations générées via `/wrap`.
 
+[[AI Generated/Conversations/_template|_template]] de chaque note.
+
 ---
 
 | Date       | Titre                                                                                        |

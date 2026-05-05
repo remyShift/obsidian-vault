@@ -1,3 +1,7 @@
+---
+tags:
+  - Korea
+---
 ## Verbes et adjectifs de base
 
 [[이다]] --> Le verbe *être*, pour décrire ou identifier quelque chose à l'aide d'un nom.

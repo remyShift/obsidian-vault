@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:\"AI Generated\"",
@@ -46,7 +46,7 @@
       "query": "tag:#Korea  ",
       "color": {
         "a": 1,
-        "rgb": 16711680
+        "rgb": 0
       }
     },
     {
@@ -64,23 +64,30 @@
       }
     },
     {
-      "query": "",
+      "query": "path:\"Notes Permanentes/Projets/KicksFolio\"  ",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16418181
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.7,
-  "nodeSizeMultiplier": 1.4284651310061,
-  "lineSizeMultiplier": 1.22366817066413,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.29193382411145,
+  "lineSizeMultiplier": 0.71167576980923,
   "collapse-forces": true,
   "centerStrength": 0.567165360563603,
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 148,
-  "scale": 0.08369406321745315,
+  "scale": 0.08165411579620689,
   "close": false
 }

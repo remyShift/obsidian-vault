@@ -1,8 +1,7 @@
 # Sommaire — Notes de Lecture
 
 Hub vers les notes de lecture par catégorie.
-- [[Audit Tech - Winalia]]
-- [[Talk - 27-04-2026]]
+
 ---
 ## 📎 Clippings
 
@@ -10,4 +9,4 @@ Hub vers les notes de lecture par catégorie.
 
 ## 📥 Inbox
 
-Fleeting notes en attente de tri → [[Sommaire|Sommaire principal]] pour la vue dataview.
+Fleeting notes en attente de tri → [[Sommaire|Sommaire principal]] pour la vue dataview avec son [[Notes de Lecture/Inbox/_template|_template]].
