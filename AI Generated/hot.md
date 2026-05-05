@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-05-2026 — olis-lab : user stories tests unitaires checkout produites (price engine, schemas custom, step machine).
+05-05-2026 — olis-lab : US tests unitaires + E2E checkout produites et validees (flow-focused, pas UI).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 05-05-2026
-- Etat : SearchPage 4 onglets OK + US tests checkout definies, pret pour implementation des tests
-- Prochaine etape : verifier exports puis implementer `price-engine.test.ts`, `schemas.test.ts`, `useCheckoutSteps.test.ts`
+- Etat : US unit tests (13) + E2E (5) checkout definies, pret pour implementation des deux couches de tests
+- Prochaine etape : corriger chemin Playwright (`/secure-checkout`), verifier exports, implementer les tests
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -43,5 +43,5 @@ tags: [meta, hot-cache, global]
 
 ## Threads ouverts cross-projets
 - Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : architecture posee, implementation a lancer
-- Tests unitaires checkout olis-lab : US produites cette session, implementation a faire
+- Tests checkout olis-lab : US produites (unit + E2E), implementation a faire prochaine session
 - Tester le nouveau workflow SessionStart + PostCompact sur une vraie session longue
