@@ -129,11 +129,16 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 겨울에는 추워요
 > Il fait froid en hiver
 
-> [!question]- 저는 여동생의 가까워요
+> [!question]- 저는 여동생과 가까워요.
 > Je suis proche de ma petite soeur.
+> 
+> Pourquoi "과" ?
 
-> [!question]- 프랑스는 한국을 멀어요.
+> [!question]- 프랑스는 한국에서 멀어요.
 > La France est loin de la Corée.
 
-> [!question]- 저는 자주 
+> [!question]- 저는 자주 배고파요
+> J'ai souvent faim.
+
+> [!question]- 저는 드문 아파요
 >
