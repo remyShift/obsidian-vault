@@ -22,17 +22,24 @@
       }
     },
     {
-      "query": "path:\"Notes Permanentes/Projets/KicksFolio\"  ",
+      "query": "path:\"Notes Permanentes/Contenu & Créatif\"  ",
       "color": {
         "a": 1,
-        "rgb": 16711680
+        "rgb": 16418181
+      }
+    },
+    {
+      "query": "tag:#Perso  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
       }
     },
     {
       "query": "path:\"Notes Permanentes/Code\"  ",
       "color": {
         "a": 1,
-        "rgb": 262399
+        "rgb": 1266086
       }
     }
   ],
@@ -46,6 +53,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 148,
-  "scale": 0.06976858767013144,
-  "close": false
+  "scale": 0.028172533096915822,
+  "close": true
 }
