@@ -122,36 +122,45 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 | 48 | 덥다 ~ .adjectif | avoir chaud / être chaud | 더워요 | 덥습니다 |               |              |
 ```
 
-
+1
 > [!question]- 여름에는 더워요
 > Il fait chaud en été
 
+2
 > [!question]- 겨울에는 추워요
 > Il fait froid en hiver
 
+3
 > [!question]- 저는 여동생과 가까워요.
 > Je suis proche de ma petite soeur.
 > 
 > Pourquoi "과" ?
 
+4
 > [!question]- 프랑스는 한국에서 멀어요.
 > La France est loin de la Corée.
 
+5
 > [!question]- 저는 자주 배고파요
 > J'ai souvent faim.
 
+6
 > [!question]- 할머니는 아파요
 > Ma grand mère est malade
 
+7
 > [!question]- 내 고양이는 귀여워요.
 > Mon chat est mignon.
 
+8
 > [!question]- 꽃이 예뻐요.
 > Les fleurs sont jolies.
 
+9
 > [!question]- 정치의는 재미없어요
 > La politique c'est pas intéressant.
 
+10
 > [!question]- 한국어는 재미있어요
 > La langue coréenne est intéressante.
 
