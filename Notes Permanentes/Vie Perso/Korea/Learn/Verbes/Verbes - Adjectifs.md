@@ -123,4 +123,4 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 ```
 
 
-- 
+- 여름엔 더워요
