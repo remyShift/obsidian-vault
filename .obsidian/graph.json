@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"AI Generated\"",
@@ -36,10 +36,10 @@
       }
     },
     {
-      "query": "path:\"Notes Permanentes/Code\"  ",
+      "query": "tag:#Tests  ",
       "color": {
         "a": 1,
-        "rgb": 1266086
+        "rgb": 5766414
       }
     },
     {
@@ -76,18 +76,25 @@
         "a": 1,
         "rgb": 16418181
       }
+    },
+    {
+      "query": "path:\"Notes Permanentes/Code\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 1266086
+      }
     }
   ],
-  "collapse-display": false,
-  "showArrow": false,
+  "collapse-display": true,
+  "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.29193382411145,
-  "lineSizeMultiplier": 0.71167576980923,
+  "lineSizeMultiplier": 1.08713686376949,
   "collapse-forces": true,
-  "centerStrength": 0.567165360563603,
+  "centerStrength": 0.727380669674662,
   "repelStrength": 20,
   "linkStrength": 1,
-  "linkDistance": 148,
-  "scale": 0.08165411579620689,
-  "close": false
+  "linkDistance": 30,
+  "scale": 1.4831167215597927,
+  "close": true
 }
