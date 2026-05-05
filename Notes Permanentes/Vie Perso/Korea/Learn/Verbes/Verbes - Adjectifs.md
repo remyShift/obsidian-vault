@@ -140,5 +140,9 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 저는 자주 배고파요
 > J'ai souvent faim.
 
-> [!question]- 저는 드문 아파요
->
+> [!question]- 할머니는 아파요
+> Ma grand mère est malade
+
+> [!question]- 내 고양이는 귀여워요.
+> Mon chat est mignon.
+
