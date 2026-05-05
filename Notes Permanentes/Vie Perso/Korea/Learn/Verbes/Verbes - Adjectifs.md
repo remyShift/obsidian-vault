@@ -121,3 +121,6 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 | 47 | 춥다 ~ .adjectif | avoir froid / être froid | 추워요 | 춥습니다 |               |              |
 | 48 | 덥다 ~ .adjectif | avoir chaud / être chaud | 더워요 | 덥습니다 |               |              |
 ```
+
+
+- 
