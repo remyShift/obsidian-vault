@@ -2,7 +2,7 @@
 tags:
   - Perso
 ---
-## TODO
+## Perso
 
 - [ ] graph ql et diff avec Rest ?
 - [x] continuer prépa lyon craft
@@ -15,15 +15,13 @@ tags:
 - [ ] Portfolio
 ## Work
 
-- [x] Search page --> implement
+- [ ] 
 
 ---
 
 ## Courses
 
-- [ ] déo
-- [x] croquettes
-- [x] litière
+- [ ]  
 
 ---
 
