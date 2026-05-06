@@ -35,6 +35,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | claude-obsidian        | [[AI Generated/Sessions/claude-obsidian/02-05-2026_12-55]]        |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/04-05-2026_10-39]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/05-05-2026_13-06]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/06-05-2026_18-12]]               |
 | obsidian-vault         | [[05-05-2026_17-31]]                                              |
 ## Hot notes :
 

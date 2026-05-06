@@ -1,5 +1,5 @@
 ---
-updated: 05-05-2026
+updated: 06-05-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,37 +7,30 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-05-05-2026 — Plan de refacto search page redige et soumis a l'equipe (3 options, Option A recommandee).
+06-05-2026 — Feed GMC XML implémenté dans xmlController, bug double déclaration XML sur S3 non résolu.
 
 ## Etat du projet
-- SearchPage : 5 onglets operationnels (Products, Articles, Bundles, Actives, Brands)
-- Brands endpoint : `GET /brands/search/:query` dans `notionBrandsController` / `notionBrandsRouter` (monte sur `/brands`)
-- SEO CMS : `@payloadcms/plugin-seo` avec `generateTitle`/`generateDescription` branchees sur OpenAI — operationnel
-- Tests unitaires checkout : 13 US definies (price engine, schemas custom, step machine), implementation a faire
-- Tests E2E checkout : 5 US definies (flow-focused, pas UI), Playwright a configurer dans apps/web
-- Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
-- Search refactor : plan soumis a l'equipe, en attente de decision
+- Feed GMC : `generateGmcFeed` implémenté, route `GET /sitemap/gmc-feed` exposée, upload sur `feeds/gmc.xml`
+- Bug actif : double déclaration XML (`<?xml ...?><?xml ...?>`) sur le fichier S3 — fichier illisible par parser XML
+- SearchPage : 5 onglets opérationnels, plan search refactor soumis à l'équipe
+- Migration Content API v2.1 → Merchant API avant le 18 août 2026
 
 ## Faits recents importants
-- `searchBrands` est dans `notionBrandsController.js` (pas `products.controller.js`) — le brands router est monte sur `/brands`
-- `ProductsApi.ts` appelle `/brands/search/:query` (pas `/products/search/brands/:query`)
-- `validateInput.js` existe dans le serveur mais est vide — prevu comme middleware de validation partage, jamais implemente
-- Les 5 endpoints search actuels : pas de validation Joi, nommage incoherent, 5 requetes paralleles cote client
-- Le checkout est dans `apps/web/app/secure-checkout/` (pas `checkout-guest/`) — le plan Playwright a le mauvais chemin
+- `getAllInventoryFromBigblue()` retourne `'in stock'` (espaces) → conversion en `'in_stock'` (underscores) nécessaire pour GMC XML, faite dans l'implémentation
+- `.limit(1)` a été ajouté par le linter sur la query Mongo dans `generateGmcFeed` — à retirer avant prod
+- `invalidateCloudFrontCache` importé et utilisé dans `updateXml` par le linter — l'import existe déjà dans s3Utils
+- Route montée sur `/sitemap` dans server.js → endpoint complet : `GET /sitemap/gmc-feed`
+- Clé S3 : `feeds/gmc.xml`, même bucket que le sitemap
 
 ## Decisions actives
-- Search refactor : Option A recommandee — endpoint unifie `GET /search?q=&lang=`, `validateInput.js` a implementer, anciens endpoints inchanges
-- Analytics search : tracker uniquement les counts par categorie, pas la query brute (GDPR)
-- Brands : liste de liens simples, pas de cards, query sans `lang`
-- Perimetre tests unitaires : price engine + form validation custom + step machine (payload builder exclu)
-- Perimetre tests E2E : happy path, edition d'etape, voucher, carte refusee, livraison gratuite (flow uniquement)
-- SEO : plugin officiel uniquement, pas de plugin tiers
-- 3 feeds XML distincts depuis Payload (gmc, meta, klaviyo) sur S3 + CloudFront
+- Comportement strict : throw si traduction FR manquante (pas de skip silencieux)
+- `g:price` = originalPrice si discount, `g:sale_price` = prix calculé final
+- `g:google_product_category` hardcodée `Health & Beauty > Skin Care`
+- `g:product_type` = `translations.fr.categories` en complément
+- 3 feeds distincts (gmc, meta, klaviyo) depuis une source Payload unique
 
 ## Prochaines etapes
-- Attendre decision equipe sur le refacto search, puis implementer (plan pret)
-- Corriger le chemin Playwright (`/secure-checkout` pas `/checkout-guest`)
-- Verifier exports (`createStepReducer`, `canContinue`) avant les tests unitaires
-- Implementer : `price-engine.test.ts`, `schemas.test.ts`, `useCheckoutSteps.test.ts`
-- Configurer Playwright dans `apps/web/` et implementer `checkout-guest.spec.ts`
-- Implémenter le service `feedGenerator` (Payload -> XML x3)
+- Resoudre le bug de double declaration XML sur S3 (priorite immediate)
+- Retirer `.limit(1)` dans `generateGmcFeed`
+- Valider le feed dans GMC Sandbox (DataSources)
+- Implementer feed Meta (`feeds/meta.xml`) et Klaviyo (`feeds/klaviyo.xml`)

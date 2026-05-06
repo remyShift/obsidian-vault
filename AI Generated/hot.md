@@ -1,5 +1,5 @@
 ---
-updated: 05-05-2026
+updated: 06-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-05-2026 — olis-lab : Plan refacto search page redige et soumis a l'equipe (endpoint unifie recommande).
+06-05-2026 — olis-lab : Feed GMC XML implémenté, bug double déclaration XML S3 à résoudre.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 05-05-2026
-- Etat : SearchPage 5 onglets operationnels, plan search refactor soumis a l'equipe (Option A = endpoint unifie `GET /search?q=&lang=`), tests checkout a implementer
-- Prochaine etape : attendre decision equipe sur search refactor, corriger chemin Playwright, implementer tests unitaires checkout
+- Derniere session : 06-05-2026
+- Etat : Feed GMC implémenté (`GET /sitemap/gmc-feed`), bug double déclaration XML sur S3 non résolu, feeds Meta + Klaviyo à faire
+- Prochaine etape : corriger le bug XML S3, retirer `.limit(1)`, valider dans GMC Sandbox
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -42,7 +42,7 @@ tags: [meta, hot-cache, global]
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 
 ## Threads ouverts cross-projets
-- Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : architecture posee, implementation a lancer
+- Feed GMC XML olis-lab : implémenté, bug S3 à corriger + feeds Meta/Klaviyo à faire
+- Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : en cours
 - Search refactor olis-lab : plan pret, en attente decision equipe
-- Tests checkout olis-lab : US produites (unit + E2E), implementation a faire prochaine session
-- Feeds XML (GMC, Meta, Klaviyo) : structure definie, implementation a lancer
+- Tests checkout olis-lab : US produites, implementation a faire
