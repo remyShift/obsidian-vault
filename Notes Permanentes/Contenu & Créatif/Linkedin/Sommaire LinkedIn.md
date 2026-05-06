@@ -298,5 +298,5 @@ LIMIT 25
 | [[21-04-2026 - speaker]]        | Annonce de sa participation comme speaker à LyonCraft — moins de 2 ans de dev, zéro diplôme technique                    |
 | [[24-04-2026 - cadratin]]       | Le tiret cadratin « — » comme marqueur visible d'un contenu IA copié-collé sans relecture ni appropriation               |
 | [[29-04-2026 - schumpeter]]     | L'IA comme destruction créatrice (Schumpeter) : elle détruit des emplois mais en génère d'autres encore sans nom         |
-| [[04-05-2026 - talk]]           | Retour sur le fait de s'écouter sois même lors de la préparation de mon talk.                                            |
+|                                 | Retour sur le fait de s'écouter sois même lors de la préparation de mon talk.                                            |
 |                                 |                                                                                                                          |
