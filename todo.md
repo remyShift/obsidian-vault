@@ -12,7 +12,11 @@ tags:
 - [ ] Fiches exercices leçons 5
 - [x] Continue learning Rust
 - [x] Faire le tri réel insta
-- [ ] Portfolio
+- [x] Portfolio
+- [ ] Portfolio : host les apps qui ne sont plus host
+- [ ] Portfolio son
+- [ ] Portfolio musique d'ambiance
+- [ ] Portfolio settings pour gérer la musiques et volumes des sons
 ## Work
 
 - [ ] 
