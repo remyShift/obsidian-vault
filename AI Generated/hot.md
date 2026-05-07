@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-07-05-2026 — olis-lab : Plan CategoriesFilter dans SearchPage (vue combinee produits + bundles) redige et valide.
+07-05-2026 — lyoncraft-2026 : Bug CI pnpm v10 resolu en pinnant a v9 dans le workflow GitHub Actions.
 
 ## Projets actifs
 
@@ -16,6 +16,11 @@ tags: [meta, hot-cache, global]
 - Derniere session : 07-05-2026
 - Etat : Feeds GMC + Klaviyo operationnels, feed Meta a faire, bug S3 ouvert, plan SearchPage filtre pret
 - Prochaine etape : implementer SearchPage CategoriesFilter (adapter + fusion + layout sidebar)
+
+### lyoncraft-2026
+- Derniere session : 07-05-2026
+- Etat : CI fixe (pnpm v9 en CI), slides en cours de finalisation
+- Prochaine etape : remplacer placeholders (slide 19 KicksFolio, slide 22 post LinkedIn) + verifier rendu visuel
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -31,11 +36,6 @@ tags: [meta, hot-cache, global]
 - Derniere session : 29-04-2026
 - Etat : vault en maintenance continue
 - Prochaine etape : voir recap 29-04-2026
-
-### lyoncraft-2026
-- Derniere session : 01-05-2026
-- Etat : projet actif
-- Prochaine etape : voir recap 01-05-2026
 
 ## Contexte personnel actif
 - Korea move : test de 3 mois a Seoul a planifier dans les prochains mois
