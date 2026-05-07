@@ -40,13 +40,10 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 	- prendre le temps d'aller vite
 	- conscientiser
 	- les blancs / silences c'est ok
-- Entre slide 18 et 19 --> faire une slide au milieu dédié à Spash ?? // ou parler de Spash moins longtemps
+
 - taper des portes = toquer à des portes (expression peut être mal interprêté donc à définir)
-- écrire la question à main levée dans les notes (slide 7)
-- Mettre les notes dans l'ordre dans lequel je dois en parler
+
 - Revoir notes slide 10 (transition)
-- Compteur de refus dans un coin des slides
-- Entre slide 10 et 11 --> slide de transition projet immo (gif fast and furious)
 
 ---
 
