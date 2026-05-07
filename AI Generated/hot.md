@@ -1,5 +1,5 @@
 ---
-updated: 06-05-2026
+updated: 07-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-06-05-2026 — olis-lab : Feed GMC XML implémenté, bug double déclaration XML S3 à résoudre.
+07-05-2026 — olis-lab : Plan CategoriesFilter dans SearchPage (vue combinee produits + bundles) redige et valide.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 06-05-2026
-- Etat : Feed GMC implémenté (`GET /sitemap/gmc-feed`), bug double déclaration XML sur S3 non résolu, feeds Meta + Klaviyo à faire
-- Prochaine etape : corriger le bug XML S3, retirer `.limit(1)`, valider dans GMC Sandbox
+- Derniere session : 07-05-2026
+- Etat : Feeds GMC + Klaviyo operationnels, feed Meta a faire, bug S3 ouvert, plan SearchPage filtre pret
+- Prochaine etape : implementer SearchPage CategoriesFilter (adapter + fusion + layout sidebar)
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -42,7 +42,7 @@ tags: [meta, hot-cache, global]
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 
 ## Threads ouverts cross-projets
-- Feed GMC XML olis-lab : implémenté, bug S3 à corriger + feeds Meta/Klaviyo à faire
+- Feeds XML olis-lab : GMC + Klaviyo faits, Meta a faire, bug S3 a corriger
 - Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : en cours
-- Search refactor olis-lab : plan pret, en attente decision equipe
+- SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir (adapter BundleSearchResult -> ShopProduct, vue combinee produits+bundles)
 - Tests checkout olis-lab : US produites, implementation a faire

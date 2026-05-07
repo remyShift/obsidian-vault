@@ -1,5 +1,5 @@
 ---
-updated: 06-05-2026
+updated: 07-05-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,30 +7,39 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-06-05-2026 — Feed GMC XML implémenté dans xmlController, bug double déclaration XML sur S3 non résolu.
+07-05-2026 — Plan d'integration du CategoriesFilter dans la SearchPage (vue combinee produits + bundles) redigé et validé.
 
 ## Etat du projet
-- Feed GMC : `generateGmcFeed` implémenté, route `GET /sitemap/gmc-feed` exposée, upload sur `feeds/gmc.xml`
-- Bug actif : double déclaration XML (`<?xml ...?><?xml ...?>`) sur le fichier S3 — fichier illisible par parser XML
-- SearchPage : 5 onglets opérationnels, plan search refactor soumis à l'équipe
-- Migration Content API v2.1 → Merchant API avant le 18 août 2026
+- Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`, cle S3 `feeds/gmc-${lang}.xml`
+- Feed Klaviyo : operationnel, route `GET /sitemap/klaviyo-feed?lang=fr`, cle S3 `feeds/klaviyo-${lang}.xml`
+- Feed Meta : pas encore implemente
+- Bug S3 double declaration XML : toujours ouvert
+- Validation Joi : `validations/xmlValidation.js`
+- Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
+- SearchPage : plan CategoriesFilter pret, implementation en attente
 
 ## Faits recents importants
-- `getAllInventoryFromBigblue()` retourne `'in stock'` (espaces) → conversion en `'in_stock'` (underscores) nécessaire pour GMC XML, faite dans l'implémentation
-- `.limit(1)` a été ajouté par le linter sur la query Mongo dans `generateGmcFeed` — à retirer avant prod
-- `invalidateCloudFrontCache` importé et utilisé dans `updateXml` par le linter — l'import existe déjà dans s3Utils
-- Route montée sur `/sitemap` dans server.js → endpoint complet : `GET /sitemap/gmc-feed`
-- Clé S3 : `feeds/gmc.xml`, même bucket que le sitemap
+- `#fetchLiveProductsWithInventory(fields)` est une methode statique privee JS (`#`) dans `XmlController`
+- Fetch produits + BigBlue en parallele via `Promise.all`
+- `validateFeedQuery` middleware Joi applique sur `/gmc-feed` et `/klaviyo-feed` — default lang `'fr'`
+- Klaviyo : tous les champs toujours presents, `sale_price>n/a` si pas de discount
+- `CategoriesFilter` (2440 lignes) accepte `ShopProduct[]` et gere les bundles via `isBundle: true`
+- `BundleSearchResult` (SearchPage) est un type different de `ShopProduct` — adapter necessaire
+- Plan SearchPage sauvegarde dans `.claude/plans/`
 
 ## Decisions actives
-- Comportement strict : throw si traduction FR manquante (pas de skip silencieux)
-- `g:price` = originalPrice si discount, `g:sale_price` = prix calculé final
-- `g:google_product_category` hardcodée `Health & Beauty > Skin Care`
-- `g:product_type` = `translations.fr.categories` en complément
-- 3 feeds distincts (gmc, meta, klaviyo) depuis une source Payload unique
+- Pattern langue : `?lang=fr|en`, cle S3 `feeds/{platform}-${lang}.xml`
+- Validation mutualisee via middleware Joi, pas inline dans les controllers
+- Methode privee `#fetchLiveProductsWithInventory` dans la classe XmlController
+- Klaviyo format flat XML (sans namespace), prix decimal pur sans devise
+- Throw and abort si traduction manquante (pas de skip silencieux)
+- SearchPage : vue combinee produits + bundles avec sidebar CategoriesFilter, onglet bundles separe supprime
+- Adapter `bundleSearchResultToShopProduct` a creer dans `src/utils/`
 
 ## Prochaines etapes
-- Resoudre le bug de double declaration XML sur S3 (priorite immediate)
-- Retirer `.limit(1)` dans `generateGmcFeed`
-- Valider le feed dans GMC Sandbox (DataSources)
-- Implementer feed Meta (`feeds/meta.xml`) et Klaviyo (`feeds/klaviyo.xml`)
+- Implementer SearchPage CategoriesFilter (adapter + fusion + layout sidebar + reset filtres) — priorite
+- Resoudre le bug de double declaration XML sur S3
+- Valider feed GMC dans GMC Sandbox (DataSources)
+- Valider feed Klaviyo dans l'interface Klaviyo (catalog feed URL)
+- Implementer feed Meta (`feeds/meta-${lang}.xml`) — RSS 2.0, `in stock` avec espaces
+- Configurer S3 + CloudFront pour exposition publique des feeds
