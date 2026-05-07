@@ -37,14 +37,17 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 ---
 
 - Ralentir débit de parole mettre + de pauses
+	- ⚠️ commencer doucement pas à balle
 	- prendre le temps d'aller vite
 	- conscientiser
 	- les blancs / silences c'est ok
 
 - Revoir notes de manière globale
 	- Revoir notes slide 10 (transition)
+	- Notes slides 7 questions
 
-- 
+- C'est Ok de reprendre et d'assumer qu'on sait plus où on en est
+- Faire pipi avant
 
 ---
 
