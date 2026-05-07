@@ -48,6 +48,7 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 
 - C'est Ok de reprendre et d'assumer qu'on sait plus où on en est
 - Faire pipi avant
+- Ne pas chercher à tout justifier --> légerté
 
 ---
 
