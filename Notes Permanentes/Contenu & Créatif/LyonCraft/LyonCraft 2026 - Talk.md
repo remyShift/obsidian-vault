@@ -41,9 +41,10 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 	- conscientiser
 	- les blancs / silences c'est ok
 
-- taper des portes = toquer à des portes (expression peut être mal interprêté donc à définir)
+- Revoir notes de manière globale
+	- Revoir notes slide 10 (transition)
 
-- Revoir notes slide 10 (transition)
+- 
 
 ---
 
