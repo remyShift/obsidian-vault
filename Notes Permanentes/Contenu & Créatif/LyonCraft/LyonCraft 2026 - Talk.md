@@ -29,14 +29,8 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 ---
 ## Tips
 
-- Poser question pour que les gens répondent en levant la main --> joindre le geste à la parole
-- Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
+ - Faire des pauses --> calme le débit --> marque l'attention / l'attente / suspens / permets de digérer les infos (très utilisé en politique) || Avant un mot important : créer de l'attente | Après un mot important : permets de laisser digérer
 	- Boire de l'eau aide pour laisser des pauses
-- Pas minimiser le facteur chance --> elle se provoque (se créer du réseau, events seuls, linkedin, ...)
-
----
-
-- Ralentir débit de parole mettre + de pauses
 	- ⚠️ commencer doucement pas à balle
 	- prendre le temps d'aller vite
 	- conscientiser
@@ -48,7 +42,7 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 
 - C'est Ok de reprendre et d'assumer qu'on sait plus où on en est
 - Faire pipi avant
-- Ne pas chercher à tout justifier --> légerté
+- Ne pas chercher à tout justifier --> légèreté
 
 ---
 
