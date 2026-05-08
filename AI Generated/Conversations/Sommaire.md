@@ -26,3 +26,4 @@ Synthèses de conversations générées via `/wrap`.
 | 29-04-2026 | [[AI Generated/Conversations/29-04-2026 - Débat SEO dans Layout vs Page component]]          |
 | 06-05-2026 | [[AI Generated/Conversations/06-05-2026 - Organisation posts LinkedIn Obsidian]]             |
 | 08-05-2026 | [[AI Generated/Conversations/08-05-2026 - Posts LinkedIn - Analyse et idées]]                |
+| 08-05-2026 | [[AI Generated/Conversations/08-05-2026 - Rust Roadmap et notes fondations]]                 |
