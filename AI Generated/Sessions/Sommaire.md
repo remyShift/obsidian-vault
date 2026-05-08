@@ -47,4 +47,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | claude-obsidian | [[AI Generated/Sessions/claude-obsidian/hot]] |
 | olis-lab        | [[AI Generated/Sessions/olis-lab/hot]]        |
 | obsidian-vault  | [[AI Generated/Sessions/obsidian-vault/hot]]  |
-|                 |                                               |
+| lyoncraft-2026  | [[AI Generated/Sessions/lyoncraft-2026/hot]]  |

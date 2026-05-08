@@ -21,3 +21,5 @@ Contrairement à React qui n'est que de l'UI (// que du front), Next ajoute la p
 NextJS inclu la possibilité d'avoir un[[Routing NextJS | routing]] entre les pages fait via notre organisation de fichier.
 
 De plus NextJS permets de gérer les [[Server Actions]] directement grâce aux servers components.
+
+Où mettre les SEO components ? C'est ce à quoi répond : [[SEO Layout vs Page]].

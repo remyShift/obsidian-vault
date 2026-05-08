@@ -1,9 +1,6 @@
 ---
 tags: [next-js, architecture, seo, components]
 ---
-
-# Next.js : SEO dans Layout, données dans Page
-
 ## Le pattern
 
 Dans une app Next.js avec l'App Router, la responsabilité est séparée selon le type :

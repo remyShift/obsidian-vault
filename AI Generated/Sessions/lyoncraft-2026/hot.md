@@ -3,9 +3,6 @@ updated: 07-05-2026
 project: lyoncraft-2026
 tags: [meta, hot-cache]
 ---
-
-# Hot Cache — lyoncraft-2026
-
 ## Derniere mise a jour
 07-05-2026 — Bug CI GitHub Actions resolu : pnpm v10 bloquait les build scripts en environnement vierge, fixe en pinnant pnpm a v9 dans le workflow.
 
