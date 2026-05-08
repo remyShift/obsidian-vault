@@ -19,6 +19,7 @@ Huddles et réunions thématiques entre membres de l'équipe.
 | [[26-03-2026 Migration Produits Payload Schemas]] | Migration produits + schémas skin types/actives | Rémy, Michele |
 | [[31-03-2026 CMS Sync Script Code Review]] | Code review sync script Payload → MongoDB | Rémy, Diego |
 | [[30-04-2026 Automated Translation SEO Plugin]] | Plugin traduction automatique & SEO auto-génération | Diego, Michele, Rémy |
+| [[07-05-2026 TypeScript Type Inference Payload CMS]] | Type inference incorrect sur les relations Payload | Diego, Rémy |
 
 ---
 
