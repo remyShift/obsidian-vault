@@ -175,4 +175,4 @@ De zéro à Rust avancé, avec une pratique constante du craft et de l'architect
 
 ---
 
-*Dernière mise à jour :* [[2026-05-08]]
+*Dernière mise à jour :* 08-05-2026
