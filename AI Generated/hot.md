@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-08-05-2026 — olis-lab : Plan Payload type narrowing finalise — `typeSafeDepth` ecartee (PR ouverte), Option A (guards partages) retenue comme seule solution viable.
+08-05-2026 — olis-lab : Plan Payload narrowing finalise, Option A (guards partages) seule solution viable confirmee par communaute et collegue.
 
 ## Projets actifs
 
@@ -45,6 +45,6 @@ tags: [meta, hot-cache, global]
 
 ## Threads ouverts cross-projets
 - XML feed olis-lab : architecture RSS 2.0 decidee, POC plan a rediger, HMAC Bigblue fix prerequis
-- Payload type narrowing olis-lab : plan finalise, Option A retenue (guards centralises), implementation a venir
+- Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
 - SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission

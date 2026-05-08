@@ -7,34 +7,34 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-08-05-2026 — Plan Payload narrowing finalise apres recherche communautaire : `typeSafeDepth` (PR ouverte) ecartee, Payload SDK documente, consensus sur pattern `assertPopulated` confirme.
+08-05-2026 — SearchPage : fusion tabs produits+bundles implementee, bug handleAddToBag bundles corrige, QuickAddToBagPopup utilise pour les bundles (pattern shopAll).
 
 ## Etat du projet
 - Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`, cle S3 `feeds/gmc-${lang}.xml`
-- Feed Klaviyo : operationnel, route `GET /sitemap/klaviyo-feed?lang=fr`, cle S3 `feeds/klaviyo-${lang}.xml`
+- Feed Klaviyo : operationnel
 - Feed Meta : pas encore implemente
 - Bug S3 double declaration XML : toujours ouvert
 - Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
-- SearchPage : plan CategoriesFilter pret, implementation en attente
-- Payload type narrowing : plan finalise dans `.claude/plans/2026-05-08-payload-type-narrowing.md`, implementation en attente
+- SearchPage : fusion produits+bundles faite, prochaine etape = CategoriesFilter sidebar
+- Payload type narrowing : plan finalise, Option A retenue, implementation en attente
 
 ## Faits recents importants
-- Pas de solution officielle pour les types generes Payload (`url?: string | null`, `string | T`) — limite fondamentale du generateur
-- `typeSafeDepth` (PR #9782) : toujours ouverte, non disponible — ecartee du plan
-- Payload SDK (PR #9463, mergee) : resout `string | T` cote REST uniquement, pas pour hooks CMS (Local API)
-- Communaute Payload converge universellement sur pattern `deref`/`assertPopulated` — c'est le standard de facto
-- `product.ts` a deja `assertPopulated` en local — a centraliser dans `packages/shared/src/payload/guards.ts`
+- `QuickAddToBagPopup` gere nativement les bundles (branche `isBundle` dans `checkAvailability`)
+- `handleAddToBag` bundles cherchait dans `rawProducts` au lieu de `bundlesQuery.data` — bug silencieux corrige
+- `BundleSearchResult` castee en `ShopProduct` via `as unknown as ShopProduct` + `isBundle: true` ajoutee
+- `mapBundleSearchResult` locale dans `SearchPage.tsx` — convertit `BundleSearchResult` en `MappedProduct`
+- `combinedProducts = [...mappedBundles, ...mappedProducts]` — bundles en premier
+- Clé i18n `searchPage.tabs.bundles` supprimee dans fr/en/es/it
+- Pas de solution officielle pour les types Payload — `deref`/`assertPopulated` = standard de facto
 
 ## Decisions actives
-- Pattern langue : `?lang=fr|en`, cle S3 `feeds/{platform}-${lang}.xml`
-- Payload narrowing : Option A retenue — centraliser dans `packages/shared/src/payload/guards.ts`
-- 4 utilities : `isPopulated`, `assertPopulated`, `WithUrl<T>`, `assertUrl`
-- Spike `typeSafeDepth` abandonne — PR pas mergee
-- XML feed : RSS 2.0 + namespace g:* unique pour GMC + Meta + Klaviyo, cron 4h, S3
+- SearchPage : bundles via `QuickAddToBagPopup` (pas navigate), cohérent avec shopAll
+- SearchPage : combining logic inline dans `SearchPage.tsx` (pas de hook intermediaire)
+- Payload narrowing : `packages/shared/src/payload/guards.ts` avec 4 utilities
+- Pattern langue feeds : `?lang=fr|en`, cle S3 `feeds/{platform}-${lang}.xml`
 
 ## Prochaines etapes
+- Implementer SearchPage CategoriesFilter sidebar (prochaine etape du plan)
 - Implementer `packages/shared/src/payload/guards.ts` + migrer `product.ts` et `computeCartSnapshot.ts`
-- Implementer SearchPage CategoriesFilter (adapter + fusion + layout sidebar + reset filtres) — priorite
-- Resoudre le bug de double declaration XML sur S3
-- Valider feed GMC dans GMC Sandbox (DataSources)
+- Resoudre bug S3 double declaration XML
 - Implementer feed Meta (`feeds/meta-${lang}.xml`) — RSS 2.0
