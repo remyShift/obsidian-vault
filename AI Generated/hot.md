@@ -1,5 +1,5 @@
 ---
-updated: 07-05-2026
+updated: 08-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-07-05-2026 — lyoncraft-2026 : Bug CI pnpm v10 resolu en pinnant a v9 dans le workflow GitHub Actions.
+08-05-2026 — olis-lab : Analyse du probleme de typage Payload CMS, plan de centralisation des type guards rédige.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 07-05-2026
-- Etat : Feeds GMC + Klaviyo operationnels, feed Meta a faire, bug S3 ouvert, plan SearchPage filtre pret
-- Prochaine etape : implementer SearchPage CategoriesFilter (adapter + fusion + layout sidebar)
+- Derniere session : 08-05-2026
+- Etat : Feeds GMC + Klaviyo operationnels, feed Meta a faire, bug S3 ouvert, plan SearchPage pret, plan Payload type narrowing rédige
+- Prochaine etape : implementer `packages/shared/src/payload/guards.ts` + migrer les deux fichiers pilotes
 
 ### lyoncraft-2026
 - Derniere session : 07-05-2026
@@ -44,5 +44,6 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - Feeds XML olis-lab : GMC + Klaviyo faits, Meta a faire, bug S3 a corriger
 - Migration Content API v2.1 -> Merchant API (deadline 18/08/2026) : en cours
-- SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir (adapter BundleSearchResult -> ShopProduct, vue combinee produits+bundles)
+- SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir
+- Payload type narrowing olis-lab : plan valide, implementation a venir (guards centralises + spike typeSafeDepth)
 - Tests checkout olis-lab : US produites, implementation a faire
