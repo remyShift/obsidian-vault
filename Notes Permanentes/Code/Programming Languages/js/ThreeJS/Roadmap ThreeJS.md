@@ -1,32 +1,17 @@
-# Roadmap Three.js — De zéro à l'expertise créative
-
 > Inspiré de la structure Three.js Journey, calibré pour toi : tu as les bases en tête mais rouillées. L'objectif n'est pas de mémoriser l'API. C'est de reconstruire l'intuition 3D et de développer un oeil créatif en parallèle.
 >
 > Règle : **make it work → make it right → make it beautiful**
 
----
-
-## Comment lire cette roadmap
-
-Chaque phase a :
-- Des **concepts** à maîtriser (avec les notes liées)
-- Un **projet checkpoint** à compléter avant de passer à la suite
-- Un **parallèle craft** : ce que ce chapitre t'apprend sur le travail créatif en général
-
-Les projets ne sont pas optionnels. Ce sont les seuls vrais tests de compréhension.
 
 ---
 
-## Phase 1 — Reconstruire les fondations
-
-> Ce que tu as déjà noté mais qui est flou. On repart du début mais vite.
-
+## Phase 1 - Reconstruire les fondations
 ### Concepts
 
-- [ ] La triade scène / caméra / renderer — pourquoi les 3 sont nécessaires
+- [ ] La triade scène / caméra / renderer : pourquoi les 3 sont nécessaires
 - [ ] Mesh = Geometry + Material, pas juste "un objet"
 - [ ] `requestAnimationFrame` et pourquoi c'est une boucle infinie récursive
-- [ ] `THREE.Clock` vs `Date.now()` vs `Timer` — la notion de delta time
+- [ ] `THREE.Clock` vs `Date.now()` vs `Timer` : la notion de delta time
 - [ ] `Object3D` : position, rotation, scale, group
 - [ ] `AxesHelper` et `CameraHelper` pour ne pas être aveugle dans l'espace
 - [ ] `OrbitControls` avec damping
@@ -35,7 +20,7 @@ Les projets ne sont pas optionnels. Ce sont les seuls vrais tests de compréhens
 ### Notes liées
 `ThreeJS Intro` | `Animation Intro` | `Manip d'Objet` | `Les Caméras` | `FullScreen & Resizing` | `Debug UI`
 
-### Checkpoint Projet 1 — La Scène de Base
+### Checkpoint Projet 1 - La Scène de Base
 **Construire de zéro, sans copier les notes :**
 - Une scène avec fond sombre
 - Un cube qui tourne en continue (framerate-independent avec Clock)
@@ -44,14 +29,9 @@ Les projets ne sont pas optionnels. Ce sont les seuls vrais tests de compréhens
 - Fullscreen au double-click, resize propre
 - AxesHelper visible uniquement en mode debug
 
-> Ne passe pas à la Phase 2 si tu dois ouvrir les notes pour faire ce projet.
-
-### Parallèle craft
-Mettre en place une scène c'est exactement comme poser les fondations d'un projet client : si le setup est bancal (resize cassé, pixel ratio ignoré, pas de debug), tout le reste sera douloureux. Les bons artisans préparent leur espace de travail avant de commencer.
-
 ---
 
-## Phase 2 — Matière et lumière
+## Phase 2 - Matière et lumière
 
 > La différence entre un cube rouge et quelque chose qui ressemble à quelque chose.
 
@@ -59,8 +39,8 @@ Mettre en place une scène c'est exactement comme poser les fondations d'un proj
 
 - [ ] Les types de textures : color, alpha, normal, height, roughness, metalness, AO
 - [ ] `TextureLoader` et `LoadingManager`
-- [ ] UV mapping — pourquoi une texture peut être étirée ou mal placée
-- [ ] PBR (Physically Based Rendering) — le standard actuel, pourquoi il existe
+- [ ] UV mapping : pourquoi une texture peut être étirée ou mal placée
+- [ ] PBR (Physically Based Rendering) : le standard actuel, pourquoi il existe
 - [ ] `MeshBasicMaterial` vs `MeshStandardMaterial` vs `MeshPhysicalMaterial`
 - [ ] `MeshMatcapMaterial` pour des rendus stylisés sans lumière
 - [ ] `AmbientLight`, `DirectionalLight`, `PointLight`, `SpotLight`
@@ -72,7 +52,7 @@ Mettre en place une scène c'est exactement comme poser les fondations d'un proj
 ### Notes liées
 `Textures` | `Materials` | `Lights` | `Shadows`
 
-### Checkpoint Projet 2 — La Salle Éclairée
+### Checkpoint Projet 2 - La Salle Éclairée
 **Construire :**
 - Un plan horizontal (le sol) + 3 objets différents (sphere, cube, tore)
 - Chaque objet a un `MeshStandardMaterial` avec au moins color + roughness + metalness
@@ -81,23 +61,17 @@ Mettre en place une scène c'est exactement comme poser les fondations d'un proj
 - lil-gui pour tweaker les intensités et la roughness en temps réel
 - Shadow map optimisée (mapSize 1024, near/far bien ajustés)
 
-### Parallèle craft
-La lumière est ce qui rend les choses réelles. En design, en photo, en 3D, c'est toujours vrai. Avant d'ajouter plus de géométrie, les bons artistes comprennent d'abord la lumière. Un cube bien éclairé est plus intéressant qu'une scène complexe mal éclairée.
-
 ---
 
-## Phase 3 — L'espace et ses règles
-
-> Comprendre comment l'espace 3D fonctionne vraiment, pas juste en surface.
-
+## Phase 3 - L'espace et ses règles
 ### Concepts
 
-- [ ] `BufferGeometry` — vertices, faces, attributs
-- [ ] `Float32Array` et `BufferAttribute` — pourquoi des tableaux typés
+- [ ] `BufferGeometry` : vertices, faces, attributs
+- [ ] `Float32Array` et `BufferAttribute` : pourquoi des tableaux typés
 - [ ] Géométrie custom : construire un triangle, puis des formes quelconques
-- [ ] `PerspectiveCamera` en profondeur : FOV, near, far, aspect ratio — l'impact de chaque paramètre
-- [ ] `OrthographicCamera` — quand l'utiliser et pourquoi
-- [ ] Quaternion vs Euler — juste comprendre que ça existe et que le quaternion évite le gimbal lock
+- [ ] `PerspectiveCamera` en profondeur : FOV, near, far, aspect ratio : l'impact de chaque paramètre
+- [ ] `OrthographicCamera` : quand l'utiliser et pourquoi
+- [ ] Quaternion vs Euler :  juste comprendre que ça existe et que le quaternion évite le gimbal lock
 - [ ] `raycaster` : principe, `intersectObjects`, distance, point de collision
 - [ ] Raycaster + mouse : coordonnées normalisées (-1 à 1), `setFromCamera`
 - [ ] Hover et click sur des objets 3D
@@ -105,7 +79,7 @@ La lumière est ce qui rend les choses réelles. En design, en photo, en 3D, c'e
 ### Notes liées
 `Geometries` | `Les Caméras` | `Raycaster`
 
-### Checkpoint Projet 3 — L'Explorateur Interactif
+### Checkpoint Projet 3 - L'Explorateur Interactif
 **Construire :**
 - Une grille de 20 cubes disposés en matrice 4x5
 - Chaque cube a une couleur aléatoire au chargement
@@ -118,13 +92,10 @@ L'interactivité ne s'ajoute pas à la fin, elle se conçoit dès le départ. Ex
 
 ---
 
-## Phase 4 — Importer le monde réel
-
-> Travailler avec des assets vrais, pas juste des primitives.
-
+## Phase 4 - Importer le monde réel
 ### Concepts
 
-- [ ] Formats 3D : GLTF, GLB, Draco — différences, quand utiliser quoi
+- [ ] Formats 3D : GLTF, GLB, Draco : différences, quand utiliser quoi
 - [ ] `GLTFLoader` : la structure de `gltf.scene`, `gltf.animations`, `gltf.cameras`
 - [ ] `DRACOLoader` : le coût de la compression vs le gain en poids
 - [ ] `AnimationMixer`, `AnimationClip`, `AnimationAction`
@@ -138,7 +109,7 @@ L'interactivité ne s'ajoute pas à la fin, elle se conçoit dès le départ. Ex
 ### Notes liées
 `Import Modèle` | `Environment map` | `Rendu Réaliste`
 
-### Checkpoint Projet 4 — Le Showcase de Produit
+### Checkpoint Projet 4 - Le Showcase de Produit
 **Construire :**
 - Importer un modèle GLTF de ton choix (chercher sur Sketchfab)
 - Une environment map HDR comme fond et source de lumière principale
@@ -154,13 +125,13 @@ Importer un asset c'est comme intégrer le travail de quelqu'un d'autre dans ton
 
 ---
 
-## Phase 5 — À grande échelle
+## Phase 5 - À grande échelle
 
 > Des milliers d'éléments. Le début de ce qui impressionne.
 
 ### Concepts
 
-- [ ] `Points` vs `Mesh` — la différence fondamentale
+- [ ] `Points` vs `Mesh` : la différence fondamentale
 - [ ] `PointsMaterial` : `size`, `sizeAttenuation`, `color`, `map`, `alphaMap`
 - [ ] `BufferGeometry` custom pour les particules
 - [ ] Animer les particules : modifier `positions.array` dans le tick + `needsUpdate`
@@ -171,7 +142,7 @@ Importer un asset c'est comme intégrer le travail de quelqu'un d'autre dans ton
 ### Notes liées
 `Particules` | `3D Text`
 
-### Checkpoint Projet 5 — La Galaxie
+### Checkpoint Projet 5 - La Galaxie
 **Construire :**
 - Un générateur de galaxie spirale en particules (8000-50000 points)
 - Paramètres dans lil-gui : nombre de particules, rayon, branches, spin, randomness, couleur intérieure / extérieure
@@ -185,7 +156,7 @@ Penser en systèmes plutôt qu'en objets individuels. La galaxie n'est pas 50000
 
 ---
 
-## Phase 6 — La physique
+## Phase 6 - La physique
 
 > Quand les objets ont du poids.
 
@@ -193,7 +164,7 @@ Penser en systèmes plutôt qu'en objets individuels. La galaxie n'est pas 50000
 
 - [ ] Le principe des deux mondes : world physique (Cannon) + rendu (Three.js)
 - [ ] `CANNON.World`, gravité, `world.step()`
-- [ ] `Body`, `Shape`, `mass` — la différence entre statique (mass 0) et dynamique
+- [ ] `Body`, `Shape`, `mass` : la différence entre statique (mass 0) et dynamique
 - [ ] `SAPBroadphase` et `allowSleep` pour les performances
 - [ ] `applyForce`, `applyImpulse`, `applyLocalForce`
 - [ ] Synchroniser positions Cannon → Three.js dans le tick
@@ -203,7 +174,7 @@ Penser en systèmes plutôt qu'en objets individuels. La galaxie n'est pas 50000
 ### Notes liées
 `Physics`
 
-### Checkpoint Projet 6 — La Piscine à balles
+### Checkpoint Projet 6 - La Piscine à balles
 **Construire :**
 - Un sol + 4 murs (bodies statiques)
 - Un bouton "lancer" qui crée une sphere à une position aléatoire en hauteur
@@ -216,7 +187,7 @@ Le monde physique invisible qui pilote le rendu visible. C'est une métaphore ut
 
 ---
 
-## Phase 7 — Shaders : parler directement au GPU
+## Phase 7 - Shaders : parler directement au GPU
 
 > Le saut qualitatif le plus important. Tout ce qui est vraiment original en creative dev passe par là.
 
@@ -230,9 +201,9 @@ Le monde physique invisible qui pilote le rendu visible. C'est une métaphore ut
 - [ ] `attributes` : données par vertex (position, uv, normal)
 - [ ] Écrire un shader de dégradé basique
 - [ ] Écrire un shader de vague (sin + uniforms de temps)
-- [ ] Noise GLSL : classic noise, simplex noise — créer de l'organique
+- [ ] Noise GLSL : classic noise, simplex noise, créer de l'organique
 
-### Checkpoint Projet 7 — L'Eau Vivante
+### Checkpoint Projet 7 - L'Eau Vivante
 **Construire :**
 - Un plan subdivisé (128x128 segments minimum)
 - Un `ShaderMaterial` custom
@@ -247,7 +218,7 @@ Les shaders sont l'équivalent de travailler directement avec le matériau brut 
 
 ---
 
-## Phase 8 — Post-processing et polish
+## Phase 8 - Post-processing et polish
 
 > La différence entre un bon rendu et un rendu qui marque.
 
@@ -259,7 +230,7 @@ Les shaders sont l'équivalent de travailler directement avec le matériau brut 
 - [ ] Écrire un custom `ShaderPass`
 - [ ] Performance avec le post-processing : draw calls, résolution
 
-### Checkpoint Projet 8 — Le Portail
+### Checkpoint Projet 8 - Le Portail
 **Construire :**
 - Une scene avec un objet central lumineux (baked light texture simulée)
 - Un bloom sur les parties lumineuses seulement
@@ -268,7 +239,7 @@ Les shaders sont l'équivalent de travailler directement avec le matériau brut 
 
 ---
 
-## Phase 9 — Aller plus loin (en cours)
+## Phase 9 - Aller plus loin (en cours)
 
 > Ce qu'on n'a pas encore dans les notes et qu'on construira ensemble.
 
@@ -283,22 +254,6 @@ Les shaders sont l'équivalent de travailler directement avec le matériau brut 
 
 ---
 
-## Tableau de progression
-
-| Phase | Sujet | Status | Projet |
-|-------|-------|--------|--------|
-| 1 | Fondations | A revoir | Scène de Base |
-| 2 | Matière et lumière | A revoir | Salle Éclairée |
-| 3 | Espace et interactivité | A revoir | Explorateur Interactif |
-| 4 | Assets et rendu réaliste | A revoir | Showcase Produit |
-| 5 | Particules et texte 3D | A revoir | Galaxie |
-| 6 | Physique | A revoir | Piscine à balles |
-| 7 | Shaders | Non commencé | Eau Vivante |
-| 8 | Post-processing | Non commencé | Le Portail |
-| 9 | Expert | Non commencé | TBD |
-
----
-
 ## Règles de session
 
 1. On ne passe pas à la phase suivante sans avoir terminé le projet checkpoint
@@ -306,8 +261,3 @@ Les shaders sont l'équivalent de travailler directement avec le matériau brut 
 3. Le lil-gui est obligatoire sur chaque projet. Tweaker en temps réel c'est apprendre par le feedback direct
 4. Commenter le code uniquement pour les parties non évidentes. Pas de comment-spam
 5. Chaque projet doit tourner sans erreur console avant d'être considéré terminé
-
----
-
-*Note créée avec Bruno — Three.js Journey, Phase de re-démarrage*
-*Basé sur les notes existantes : 19 fichiers couvrant les Phases 1-6*
