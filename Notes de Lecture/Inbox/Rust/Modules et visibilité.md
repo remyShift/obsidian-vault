@@ -2,17 +2,7 @@
 tags:
   - Rust
   - LangagesDeProgs
-  - ToProcess
 ---
-
-# Modules et visibilité
-
-> Note en attente de traitement. Lire, expérimenter, puis déplacer dans Notes Permanentes.
-
-**Ressource principale** : [The Rust Book - Ch. 7 : Managing Growing Projects with Packages, Crates, and Modules](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
-
----
-
 ## Ce qu'il faut comprendre
 
 En JS/Node tu organises ton code avec des fichiers et des `import/export`. En Rust, le système de modules est plus explicite et directement lié à la visibilité du code.
@@ -109,3 +99,7 @@ Les tests d'intégration dans `tests/` importent depuis `lib.rs`, pas depuis `ma
 - Quelle est la différence entre `use crate::`, `use super::`, et `use self::` ?
 - Comment structurerais-tu en modules le projet CLI todo list du checkpoint 1 ?
 - Pourquoi séparer `main.rs` et `lib.rs` est une pratique de craft et pas juste une convention ?
+
+---
+
+**Ressource principale** : [The Rust Book - Ch. 7 : Managing Growing Projects with Packages, Crates, and Modules](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)

@@ -2,17 +2,7 @@
 tags:
   - Rust
   - LangagesDeProgs
-  - ToProcess
 ---
-
-# Structs et méthodes
-
-> Note en attente de traitement. Lire, expérimenter, puis déplacer dans Notes Permanentes.
-
-**Ressource principale** : [The Rust Book - Ch. 5 : Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)
-
----
-
 ## Ce qu'il faut comprendre
 
 Une `struct` en Rust regroupe des données nommées sous un même type. Pas de classes, pas d'héritage. Juste des données, et séparément, des comportements attachés via `impl`.
@@ -83,3 +73,7 @@ let weight = Kilograms(10.5);
 - Pourquoi Rust sépare la définition de la struct et le bloc `impl` ? Qu'est-ce que ça dit sur la philosophie du langage ?
 - Comment l'ownership s'applique quand une struct contient des `String` ? Qu'est-ce qui se passe si tu moves une struct dans une fonction ?
 - En quoi `User::new()` diffère d'un `constructor` en JavaScript ?
+
+---
+
+**Ressource principale** : [The Rust Book - Ch. 5 : Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)

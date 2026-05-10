@@ -2,17 +2,7 @@
 tags:
   - Rust
   - LangagesDeProgs
-  - ToProcess
 ---
-
-# Enums et pattern matching
-
-> Note en attente de traitement. Lire, expérimenter, puis déplacer dans Notes Permanentes.
-
-**Ressource principale** : [The Rust Book - Ch. 6 : Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)
-
----
-
 ## Ce qu'il faut comprendre
 
 Les enums en Rust sont bien plus puissantes qu'en TypeScript ou en Ruby. Chaque variant peut porter des données de types différents. C'est ce qu'on appelle un type algébrique.
@@ -80,3 +70,7 @@ enum Result<T, E> {
 - En quoi un enum Rust avec des données dans ses variants est-il différent d'une union de types TypeScript ?
 - Quand est-ce que tu utilises `match` plutôt que `if let` ?
 - Comment modéliser un état de connexion utilisateur (déconnecté, en attente, connecté avec un token) avec un enum ?
+
+---
+
+**Ressource principale** : [The Rust Book - Ch. 6 : Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)

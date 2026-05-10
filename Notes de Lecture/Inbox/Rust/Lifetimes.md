@@ -2,17 +2,7 @@
 tags:
   - Rust
   - LangagesDeProgs
-  - ToProcess
 ---
-
-# Lifetimes
-
-> Note en attente de traitement. Lire, expérimenter, puis déplacer dans Notes Permanentes.
-
-**Ressource principale** : [The Rust Book - Ch. 10.3 : Validating References with Lifetimes](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)
-
----
-
 ## Ce qu'il faut comprendre
 
 Les lifetimes ne sont pas un concept nouveau que Rust invente : toute référence a une durée de vie. Ce que Rust fait, c'est rendre cette durée de vie vérifiable à la compilation. Le compilateur doit être capable de garantir qu'une référence ne pointera jamais vers de la mémoire qui a déjà été libérée.
@@ -81,3 +71,7 @@ Attention : quand le compilateur te suggère d'ajouter `'static` pour corriger u
 - Quelle est la différence entre une lifetime et un scope ? Est-ce la même chose ?
 - Dans quel cas tu préfèrerais que ta struct possède une `String` plutôt que de contenir une référence `&str` avec une lifetime ?
 - Que signifie concrètement qu'une lifetime `'a` est la "plus courte" entre deux lifetimes ?
+
+---
+
+**Ressource principale** : [The Rust Book - Ch. 10.3 : Validating References with Lifetimes](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)
