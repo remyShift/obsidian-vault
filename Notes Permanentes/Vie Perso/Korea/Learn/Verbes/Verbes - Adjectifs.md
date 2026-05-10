@@ -168,3 +168,15 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > [!question]- 한국어는 재미있어요
 > La langue coréenne est intéressante.
 
+11
+> [!question]- 꽃상추는 맛없어요
+> Les endives ne sont pas délicieuses.
+
+12
+> [!question]- 비빔밥은 맛있어요.
+>  Le bibimbap est délicieux.
+
+13
+> [!question]-  고양이는 자주 피곤해요
+> Le chat est souvent fatigué.
+
