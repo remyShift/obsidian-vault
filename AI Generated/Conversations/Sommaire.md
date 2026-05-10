@@ -27,3 +27,5 @@ Synthèses de conversations générées via `/wrap`.
 | 06-05-2026 | [[AI Generated/Conversations/06-05-2026 - Organisation posts LinkedIn Obsidian]]             |
 | 08-05-2026 | [[AI Generated/Conversations/08-05-2026 - Posts LinkedIn - Analyse et idées]]                |
 | 08-05-2026 | [[AI Generated/Conversations/08-05-2026 - Rust Roadmap et notes fondations]]                 |
+| 09-05-2026 | [[AI Generated/Conversations/09-05-2026 - Three.js Roadmap et reprise]]                      |
+| 10-05-2026 | [[AI Generated/Conversations/10-05-2026 - Priorisation ThreeJS vs Rust]]                     |
