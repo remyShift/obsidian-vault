@@ -1,27 +1,35 @@
 ---
-updated: 07-05-2026
+updated: 12-05-2026
 project: lyoncraft-2026
 tags: [meta, hot-cache]
 ---
+
+# Hot Cache — lyoncraft-2026
+
 ## Derniere mise a jour
-07-05-2026 — Bug CI GitHub Actions resolu : pnpm v10 bloquait les build scripts en environnement vierge, fixe en pinnant pnpm a v9 dans le workflow.
+12-05-2026 — Systeme dark/light theme complet implemente : CSS variables centralisees, bloc light theme, composants migres, toggle natif Slidev active.
 
 ## Etat du projet
 - Build CI / deploy GitHub Pages fonctionnel
+- Theming dark/light operationnel avec toggle natif Slidev (bouton soleil/lune dans la barre)
 - Slides en cours de finalisation (contenu, placeholders a remplacer)
 
 ## Faits recents importants
-- pnpm v10 introduit un systeme d'approbation strict des build scripts (`ERR_PNPM_IGNORED_BUILDS`) qui ne fonctionne pas en CI meme avec `onlyBuiltDependencies` dans package.json
-- Solution : `version: 9` dans `.github/workflows/deploy.yml` — pnpm v9 n'a pas ce systeme, le lockfile format `9.0` est compatible v9/v10
-- Les tentatives `--no-frozen-lockfile` et `settings.onlyBuiltDependencies` dans le lockfile n'ont pas fonctionne
+- pnpm v10 bloquait les build scripts en CI — fixe en pinnant pnpm v9 dans le workflow
+- `colorSchema: auto` dans `slides.md` active le toggle dark/light natif Slidev — rien d'autre a coder
+- Slidev ajoute la classe `dark` sur `html`, donc `html:not(.dark)` suffit pour le theme light
+- Variables renommees de `-dark` vers `-bg` (ex: `--color-door-green-bg`) pour clarte semantique
+- `color-mix(in srgb, var(--color) X%, transparent)` remplace les rgba hardcodes dans les composants
+- `--text-context` est une variable semantique pour la couleur cyan du SkillCompare (intentionnelle)
 
 ## Decisions actives
 - pnpm v9 en CI, pnpm v10 en local (coexistence sans friction)
 - `onlyBuiltDependencies` reste dans package.json pour la securite locale
+- Couleurs de props dynamiques de `Door.vue` maintenues hardcodees dans les slides (couleurs de contenu, pas de theme)
 
 ## Prochaines etapes
 - Remplacer placeholder KicksFolio (slide 19) par vraies screenshots
 - Remplacer `{PLACEHOLDER_POST_LINKEDIN}` (slide 22) par le vrai texte
-- Verifier rendu visuel complet avec `pnpm run dev`
+- Verifier rendu visuel complet light + dark sur toutes les slides (`pnpm run dev`)
 - Chronometrer chaque acte (objectif : 45 min total)
 - Decider si slide "Splash" dans l'Acte 3

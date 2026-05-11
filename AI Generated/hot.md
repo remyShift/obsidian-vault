@@ -1,5 +1,5 @@
 ---
-updated: 11-05-2026
+updated: 12-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,19 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-11-05-2026 — olis-lab : Plugin traduction `@payload-enchants/translator` installé et configuré avec OpenAI.
+12-05-2026 — lyoncraft-2026 : Systeme dark/light theme complet implemente avec CSS variables et toggle natif Slidev.
 
 ## Projets actifs
 
+### lyoncraft-2026
+- Derniere session : 12-05-2026
+- Etat : theming dark/light operationnel, slides en cours de finalisation
+- Prochaine etape : remplacer placeholders (KicksFolio slide 19, LinkedIn slide 22), chronometrer les actes
+
 ### olis-lab
 - Derniere session : 11-05-2026
-- Etat : Feeds GMC + Klaviyo opérationnels, plugin traduction fonctionnel, bug S3 + auth = bloquants avant prod automatisation
-- Prochaine etape : corriger bug S3 double déclaration XML, puis implémenter CRON node-cron
-
-### lyoncraft-2026
-- Derniere session : 07-05-2026
-- Etat : talk completement reoriente (parcours vendeur->dev, 4 actes finalises), slides en cours
-- Prochaine etape : script complet + chronometre par acte + remplacer placeholders slides
+- Etat : Feeds GMC + Klaviyo operationnels, plugin traduction fonctionnel, bug S3 + auth = bloquants avant prod automatisation
+- Prochaine etape : corriger bug S3 double declaration XML, puis implementer CRON node-cron
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -41,11 +41,11 @@ tags: [meta, hot-cache, global]
 - Korea move : test de 3 mois a Seoul a planifier dans les prochains mois
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 - LinkedIn ghostwriting : 2 posts rediges (reconversion valide, coreen/React en attente validation)
-- LyonCraft 2026 : contenu finalise, script + timing restant
+- LyonCraft 2026 : theming done, contenu finalise, script + timing restant
 
 ## Threads ouverts cross-projets
-- XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiée (CRON), bug S3 bloquant
-- Feed Meta olis-lab : pas encore implémenté
-- Traduction auto olis-lab : plugin installé, workflow manuel retenu, seed Legacy → Payload non fait
+- XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
+- Feed Meta olis-lab : pas encore implemente
+- Traduction auto olis-lab : plugin installe, workflow manuel retenu, seed Legacy → Payload non fait
 - Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
