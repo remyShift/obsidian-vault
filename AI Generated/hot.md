@@ -8,13 +8,13 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-11-05-2026 — olis-lab : Plan automatisation feeds XML rédigé, CRON + admin button retenus.
+11-05-2026 — olis-lab : Plugin traduction `@payload-enchants/translator` installé et configuré avec OpenAI.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 11-05-2026
-- Etat : Feeds GMC + Klaviyo opérationnels, plan automatisation rédigé (CRON + admin button), bug S3 + auth = bloquants avant prod
+- Etat : Feeds GMC + Klaviyo opérationnels, plugin traduction fonctionnel, bug S3 + auth = bloquants avant prod automatisation
 - Prochaine etape : corriger bug S3 double déclaration XML, puis implémenter CRON node-cron
 
 ### lyoncraft-2026
@@ -46,6 +46,6 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiée (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implémenté
+- Traduction auto olis-lab : plugin installé, workflow manuel retenu, seed Legacy → Payload non fait
 - Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
-- SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
