@@ -1,5 +1,5 @@
 ---
-updated: 08-05-2026
+updated: 11-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-08-05-2026 — olis-lab : Plan Payload narrowing finalise, Option A (guards partages) seule solution viable confirmee par communaute et collegue.
+11-05-2026 — olis-lab : Plan automatisation feeds XML rédigé, CRON + admin button retenus.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 08-05-2026
-- Etat : Feeds GMC + Klaviyo operationnels, plan Payload narrowing finalise (Option A), SearchPage CategoriesFilter en attente
-- Prochaine etape : implementer `packages/shared/src/payload/guards.ts` + migrer les deux fichiers pilotes
+- Derniere session : 11-05-2026
+- Etat : Feeds GMC + Klaviyo opérationnels, plan automatisation rédigé (CRON + admin button), bug S3 + auth = bloquants avant prod
+- Prochaine etape : corriger bug S3 double déclaration XML, puis implémenter CRON node-cron
 
 ### lyoncraft-2026
 - Derniere session : 07-05-2026
@@ -44,7 +44,8 @@ tags: [meta, hot-cache, global]
 - LyonCraft 2026 : contenu finalise, script + timing restant
 
 ## Threads ouverts cross-projets
-- XML feed olis-lab : architecture RSS 2.0 decidee, POC plan a rediger, HMAC Bigblue fix prerequis
+- XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiée (CRON), bug S3 bloquant
+- Feed Meta olis-lab : pas encore implémenté
 - Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
 - SearchPage CategoriesFilter olis-lab : plan valide, implementation a venir
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
