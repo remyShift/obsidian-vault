@@ -1,13 +1,8 @@
 ---
-created: 2026-05-11 09:30
-type: fleeting
-status: to-process
-tags: [inbox, startup, produit, architecture, podcast, code-quality]
-source: Podcast épisode 1 (intervenants non identifiés)
+tags:
+  - CodeKnowledge
+lien: https://youtu.be/fUZQeChUfD4?si=1YIExSagzvebX96M
 ---
-
-# Faut-il bien coder dès le jour 1 d'une start-up ? - Notes de podcast
-
 ## Idée brute
 
 La question "faut-il bien coder dès le départ ?" est mal posée. Le vrai sujet c'est : au jour 1, tu ne devrais probablement pas coder du tout. Et quand tu commences à construire, "bien construire" dépend entièrement de l'horizon de vie du produit.
@@ -29,7 +24,7 @@ Au stade zéro (pas de clients, pas de product-market fit, pas d'équipe) :
 2. **Coût de validation proche de zéro** : waiting list, no-code, no-scale (email manuel, formulaires), tout ce qui permet de répondre à la question sans construire
 3. **Ne pas confondre "j'ai vendu" avec "les gens en ont besoin"** : le churn post-achat est le vrai indicateur
 
-Référence mentionnée : **The E-Myth** (le mythe de l'entrepreneur) - le succès des entreprises repose sur la systématisation des process, des règles et métriques explicites. Pas de place pour l'interprétation.
+Référence mentionnée : **The E-Myth** (le mythe de l'entrepreneur) --> le succès des entreprises repose sur la systématisation des process, des règles et métriques explicites. Pas de place pour l'interprétation.
 
 ### Une fois la traction établie
 

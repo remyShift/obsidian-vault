@@ -1,13 +1,8 @@
 ---
-created: 2026-05-11 09:00
-type: fleeting
-status: to-process
-tags: [inbox, technique, podcast, dette-technique, refactoring]
-source: Podcast (intervenants non identifiés)
+tags:
+  - CodeKnowledge
+lien: https://youtu.be/Yl0q3k5HwYM?si=Yzr3Bc4xw-y0pFkm
 ---
-
-# Dette Technique - Notes de podcast
-
 ## Idée brute
 
 La dette technique c'est une pression dont l'origine est le code, qui impacte la vitesse, la compréhension, la cohérence et le bien-être des développeurs. Elle peut être contractée volontairement (et documentée) ou accidentellement (et donc invisible, donc plus dangereuse).
