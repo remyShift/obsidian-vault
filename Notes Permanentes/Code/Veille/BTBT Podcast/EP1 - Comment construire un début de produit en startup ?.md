@@ -73,20 +73,11 @@ Un professeur de primaire, de collège et d'université n'ont pas les mêmes enj
 
 - Le point sur **l'exécutant pur** me touche directement. La tendance à foncer dans l'implémentation avant de valider l'approche, c'est exactement ce pattern.
 - Le point sur **la sur-explicitation** s'applique à chaque discussion technique avec Michele et Diego : assumer qu'on parle de la même chose sans aligner explicitement les définitions, c'est une source directe de friction.
-- L'idée que **la tech est un comment d'un quoi** est à garder en tête pour les discussions de renegociation de taux : ma valeur se mesure à ma capacité à aligner mes décisions techniques sur les objectifs business d'Oli's Lab, pas seulement à la qualité intrinsèque du code.
+- L'idée que **la tech est un comment d'un quoi** est à garder en tête pour les discussions de renégociations de taux : ma valeur se mesure à ma capacité à aligner mes décisions techniques sur les objectifs business d'Oli's Lab, pas seulement à la qualité intrinsèque du code.
 - Référence à explorer : **The E-Myth** (Michael Gerber) - déjà mentionné positivement par un des intervenants
-
-## Sujets ouverts dans le podcast (à traiter dans des épisodes suivants)
-
-- Architecture logicielle à l'étape post-PMF
-- Dette technique dans un produit qui grossit
-- Loi de Conway et mirror architecture
-- Dynamiques humaines lors d'un changement d'équipe en cours de route
 
 ## À faire
 
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
 - [ ] Lire ou relire The E-Myth
 - [ ] Chercher Code Complete de Steve McConnell
-- [ ] Relier à la note sur la dette technique (épisode 2 du même podcast)
 - [ ] Réfléchir à l'application du point "sur-expliciter" dans le contexte Oli's Lab

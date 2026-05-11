@@ -14,4 +14,9 @@ tags: [CodeKnowledge, Veille]
 - [[Traiter]],
 - [[Valoriser]]
 
+Voici des notes prises lors de ma veille :
+- [[EP1 - Comment construire un début de produit en startup ?]]
+- [[EP2 - La Dette Technique]]
+- [[Théorie de la Résidualité]]
+
 **Bonus :** quelques cheatsheet pour t'aider : [[Notes Permanentes/Code/Programming Languages/CheatSheets/Sommaire|sommaire]].

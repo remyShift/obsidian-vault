@@ -20,7 +20,7 @@ La clé n'est pas de l'éliminer, mais de la gérer activement, en continu, sans
 
 Elle le devient quand elle est inconsciente, ou quand on refuse de la regarder en face. Contracter de la dette volontairement dans le bon contexte (valider un MVP, répondre à une urgence business) est une décision d'ingénierie légitime.
 
-Référence mentionnée : **Design Stamina Hypothesis de Martin Fowler** - sans design, la vélocité monte vite puis décline inexorablement. Avec design, elle démarre plus lentement mais se stabilise à un niveau élevé et prévisible.
+Référence mentionnée : **Design Stamina Hypothesis de Martin Fowler** --> sans design, la vélocité monte vite puis décline inexorablement. Avec design, elle démarre plus lentement mais se stabilise à un niveau élevé et prévisible.
 
 Métaphore parlante : construire les Porsches VS construire l'usine qui fabrique des Porsches.
 
@@ -29,7 +29,7 @@ Métaphore parlante : construire les Porsches VS construire l'usine qui fabrique
 Le point central du podcast : la dette technique se gère **au fil de l'eau, au quotidien**, pas par des sprints dédiés tous les 6 mois. Quand on attend trop, on tombe dans le piège du refactoring superficiel (on améliore les symptômes, pas la cause), ou de la branche de refonte qui ne merge jamais.
 
 **Règles évoquées :**
-- Boy Scout Rule (Uncle Bob, Clean Code) : laisser le code plus propre qu'on ne l'a trouvé
+- Boy Scout Rule (Uncle Bob, Clean Code) : laisser le code plus propre qu'on ne l'a trouvé (cf [[L'Exemplarité]])
 - Ygor Bugayenko : laisser le code avec plus de tests qu'on ne l'a trouvé
 
 ### Comment gérer concrètement
@@ -52,8 +52,8 @@ Ce pattern fonctionne mieux quand le système est modulaire. Sur du spaghetti, t
 
 ### Indicateurs de dette
 
-- **Quantitatif** : croiser le "churn" (fréquence de modification git) avec la taille des fichiers - les grosses bouboules sur ce graphique = hotspots de dette. Référence mentionnée : outil "SALT" (à vérifier).
-- **Qualitatif** : demander aux devs "dans quel module tu détestes travailler ?" - les réponses convergent et sont souvent révélatrices.
+- **Quantitatif** : croiser le "churn" (fréquence de modification git) avec la taille des fichiers --> les grosses bouboules sur ce graphique = hotspots de dette. Référence mentionnée : outil "SALT" (*à vérifier)*.
+- **Qualitatif** : demander aux devs "dans quel module tu détestes travailler ?" --> les réponses convergent et sont souvent révélatrices.
 
 ### Dynamiques organisationnelles
 
@@ -63,15 +63,12 @@ Ce pattern fonctionne mieux quand le système est modulaire. Sur du spaghetti, t
 
 ## Ce que ça m'évoque / liens avec ma situation
 
-- Sur Oli's Lab : pas de tests, pas de TypeScript strict, base de code héritée. La dette est là, probablement accidentelle en bonne partie.
+- Sur Oli's Lab : pas de tests, pas de TypeScript strict, codebase héritée --> la dette est là.
 - Le point sur les **branches longues** résonne directement : toute branche qui survit plus d'un ou deux jours est déjà un signal d'alarme.
-- Le **strangler pattern** est applicable progressivement, même sur Payload CMS, même sans "permission" du produit.
+- Le **strangler pattern** est applicable progressivement, et c'est ce qu'on fait avec NextJS : on écrit le nouveau frontend en cohabitation avec l'ancien en React.
 - La **frustration comme signal** : noter les endroits du code où j'éprouve de la résistance. Ce sont les candidats prioritaires.
 
 ## À faire
 
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
 - [ ] Chercher la référence "SALT" et le talk sur les hotspots (probablement Sandi Metz ou une chercheuse OOP)
 - [ ] Chercher le talk de Martin Fowler sur le Design Stamina Hypothesis
-- [ ] Identifier les 3 modules sur Oli's Lab où je ressens le plus de friction
-- [ ] Relier à une note sur le Strangler Fig Pattern si elle existe
