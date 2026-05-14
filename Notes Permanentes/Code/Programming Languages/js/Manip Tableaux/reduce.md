@@ -20,4 +20,4 @@ let arr = [1, 2, 3, 4];
 let sum = arr.reduceRight((acc, x) => acc + x, 0); // 10
 ```
 
-![[Pasted image 20251215202033.png]]
+![[Reduce.png]]

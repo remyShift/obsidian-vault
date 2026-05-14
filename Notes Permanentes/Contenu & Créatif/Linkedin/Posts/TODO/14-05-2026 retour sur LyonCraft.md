@@ -32,4 +32,4 @@ Je savais pas que les galères pouvaient mener là.
 
 Merci LyonCraft, merci les [Software Crafters Lyon](https://www.linkedin.com/feed/update/urn:li:activity:7460581070703509504/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287460588287515242496%2Curn%3Ali%3Aactivity%3A7460581070703509504%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287460590587277099008%2Curn%3Ali%3Aactivity%3A7460581070703509504%29#), merci à tout ceux qui m’ont accorder du temps et m’ont aidé quand j’en avais besoin, merci à tous pour vos retours.
 
-![[Pasted image 20260514101502.png]]
+![[Moi a LyonCraft.png]]

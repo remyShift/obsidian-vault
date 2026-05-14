@@ -20,4 +20,4 @@ Si tu y seras aussi, dis-moi ce que tu ne veux pas rater.
 
 Fun fact : toutes mes slides ont été faites en code grâce à un mini framework sli.dev un mélange de markdown et de VueJS.
 
-![[Pasted image 20260511121029.png]]
+![[Screen slide 1.png]]
