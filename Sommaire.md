@@ -57,6 +57,14 @@ SORT file.name ASC
 LIMIT 20
 ```
 
+### Debug — outlinks de la note LyonCraft
+
+```dataview
+TABLE file.inlinks, file.outlinks, file.embeds
+FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts/TODO"
+WHERE file.name = "14-05-2026 retour sur LyonCraft"
+```
+
 ---
 
 ## Notes à intégrer (Inbox)
