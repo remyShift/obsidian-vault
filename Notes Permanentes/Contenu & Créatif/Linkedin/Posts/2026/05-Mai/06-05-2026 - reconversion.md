@@ -1,9 +1,9 @@
 ---
 date: 2026-05-06
-likes:
-comments:
+likes: 19
+comments: 19
 reposts:
-impressions:
+impressions: 1246
 url: https://www.linkedin.com/posts/remy-cassagne_se-reconvertir-dans-la-tech-sans-dipl%C3%B4me-share-7457355382294798337-753Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin

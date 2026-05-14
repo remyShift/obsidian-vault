@@ -1,9 +1,9 @@
 ---
 date: 2026-05-04
-likes:
-comments:
-reposts:
-impressions:
+likes: 17
+comments: 8
+reposts: 1
+impressions: 1064
 url: https://www.linkedin.com/posts/remy-cassagne_samedi-je-me-suis-enregistr%C3%A9-en-train-de-activity-7456957035239309312--bi-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
