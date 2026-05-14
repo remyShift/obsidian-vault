@@ -60,7 +60,7 @@ LIMIT 50
 ### Debug — outlinks de la note LyonCraft
 
 ```dataview
-TABLE file.inlinks, file.outlinks, file.embeds
+TABLE map(file.outlinks, (l) => l.path) AS "l.path", map(file.outlinks, (l) => string(l)) AS "string(l)", map(file.outlinks, (l) => contains(l.path, ".png")) AS "contains(.png)?", all(file.outlinks, (l) => contains(l.path, ".png")) AS "all png?"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts/TODO"
 WHERE file.name = "14-05-2026 retour sur LyonCraft"
 ```
