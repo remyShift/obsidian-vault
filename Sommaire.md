@@ -52,7 +52,7 @@ Les vraies perdues : ni inlinks ni outlinks. Priorité absolue à rattacher manu
 ```dataview
 LIST
 FROM ""
-WHERE length(file.inlinks) = 0 AND (length(file.outlinks) = 0 OR all(file.outlinks, (l) => contains(l.path, ".png") OR contains(l.path, ".jpg") OR contains(l.path, ".jpeg") OR contains(l.path, ".gif") OR contains(l.path, ".svg") OR contains(l.path, ".webp") OR contains(l.path, ".bmp") OR contains(l.path, ".tiff") OR contains(l.path, ".mp4") OR contains(l.path, ".mp3") OR contains(l.path, ".pdf")))
+WHERE length(file.inlinks) = 0 AND (length(file.outlinks) = 0 OR all(file.outlinks, (l) => contains(string(l), ".png") OR contains(string(l), ".jpg") OR contains(string(l), ".jpeg") OR contains(string(l), ".gif") OR contains(string(l), ".svg") OR contains(string(l), ".webp") OR contains(string(l), ".bmp") OR contains(string(l), ".tiff") OR contains(string(l), ".mp4") OR contains(string(l), ".mp3") OR contains(string(l), ".pdf")))
 SORT file.name ASC
 LIMIT 50
 ```
