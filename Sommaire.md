@@ -52,9 +52,9 @@ Les vraies perdues : ni inlinks ni outlinks. Priorité absolue à rattacher manu
 ```dataview
 LIST
 FROM ""
-WHERE length(file.inlinks) = 0 AND length(filter(file.outlinks, (l) => !contains(l.path, ".png") AND !contains(l.path, ".jpg") AND !contains(l.path, ".jpeg") AND !contains(l.path, ".gif") AND !contains(l.path, ".svg") AND !contains(l.path, ".webp") AND !contains(l.path, ".bmp") AND !contains(l.path, ".tiff") AND !contains(l.path, ".mp4") AND !contains(l.path, ".mp3") AND !contains(l.path, ".pdf"))) = 0
+WHERE length(file.inlinks) = 0 AND (length(file.outlinks) = 0 OR all(file.outlinks, (l) => contains(l.path, ".png") OR contains(l.path, ".jpg") OR contains(l.path, ".jpeg") OR contains(l.path, ".gif") OR contains(l.path, ".svg") OR contains(l.path, ".webp") OR contains(l.path, ".bmp") OR contains(l.path, ".tiff") OR contains(l.path, ".mp4") OR contains(l.path, ".mp3") OR contains(l.path, ".pdf")))
 SORT file.name ASC
-LIMIT 20
+LIMIT 50
 ```
 
 ### Debug — outlinks de la note LyonCraft
