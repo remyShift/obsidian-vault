@@ -52,7 +52,7 @@ Les vraies perdues : ni inlinks ni outlinks. Priorité absolue à rattacher manu
 ```dataview
 LIST
 FROM ""
-WHERE length(file.inlinks) = 0 AND length(file.outlinks) = 0
+WHERE length(file.inlinks) = 0 AND length(filter(file.outlinks, (l) => !regexmatch(".*\.(png|jpg|jpeg|gif|svg|webp|bmp|tiff)$", l.path))) = 0
 SORT file.name ASC
 LIMIT 20
 ```
