@@ -31,3 +31,4 @@ Synthèses de conversations générées via `/wrap`.
 | 10-05-2026 | [[AI Generated/Conversations/10-05-2026 - Priorisation ThreeJS vs Rust]]                     |
 | 11-05-2026 | [[AI Generated/Conversations/11-05-2026 - Post LinkedIn LyonCraft]]                          |
 | 11-05-2026 | [[AI Generated/Conversations/11-05-2026 - Notes de veille BTBT Podcast]]                     |
+| 12-05-2026 | [[AI Generated/Conversations/12-05-2026 - LyonCraft - Jour J et suites]]                     |
