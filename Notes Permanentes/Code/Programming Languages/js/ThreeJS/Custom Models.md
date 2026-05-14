@@ -18,7 +18,7 @@ C'est pourquoi on va utiliser **Blender**. Il est gratuit, à de bonnes performa
 Blender se compose de différentes *areas* :
 
 #### 3D Viewport 
-![[Pasted image 20250601111824.png]]
+![[Cube Blender.png]]
 
 C'est ce qui prends le plus de place de blender et c'est notre scène 3D.
 
@@ -75,12 +75,12 @@ On peut aussi switch sur le mode de *shading* avec `z` où on a 4 options :
 Pour générer un render de notre scène il faut appuyer sur `f12`.
 
 #### Timeline
-![[Pasted image 20250601112003.png]]
+![[Blender Timeline.png]]
 
 Juste en dessous de notre viewport on a la timeline pour faire des animation.
 
 #### Outliner
-![[Pasted image 20250601112126.png]]
+![[Blender Scene Collection.png]]
 
 Dans le coin haut droit, c'est notre la structure de notre scène et la liste des objet qui la compose.
 
@@ -90,7 +90,7 @@ On peut :
 
 
 #### Properties
-![[Pasted image 20250601112444.png]]
+![[Blender Properties.png]]
 
 Situé en bas à droite cette area va contenir les informations comme les coordonnées de nos objets, leur rotation, leur scale etc etc et on va pouvoir les tweak depuis cette area.
 - Quasiment toutes les propriétés de notre scène et nos objets sont ici et on peut les tweaks.
