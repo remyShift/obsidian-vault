@@ -7,7 +7,7 @@ ThreeJS est une librairie Javascript qui permets de créer des expériences 3D d
 	- WebGL va juste render des triangles à des vitesses différentes et extrêmement rapide afin de donner l'aspect de différentes textures et shapes en utilisant notre GPU. Néanmoins WebGL peut être verbeux, compliqué et nécessité beaucoup de configuration et d'optimisation.
 		- ThreeJS vient permettre de s'abstraire de ça tout en gardant une flexibilité, ThreeJS est juste au dessus de WebGL ce qui nous permets de créer nos propres shaders etc.
 	- **NB :** On peut aussi très bien faire de la 2D avec WebGL aussi.
-
+- [[Roadmap ThreeJS|Roadmap]] avec projets et validations des connaissances à avoir.
 ## Setup :
 
 ```
