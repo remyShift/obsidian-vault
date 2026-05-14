@@ -1,16 +1,21 @@
 ---
-updated: 12-05-2026
+updated: 14-05-2026
 tags: [meta, hot-cache, global]
 ---
 
 # Hot Cache — Global
 
-> Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
+> Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-12-05-2026 — lyoncraft-2026 : Systeme dark/light theme complet implemente avec CSS variables et toggle natif Slidev.
+14-05-2026 — obsidian-vault : Correction query Dataview orphelines avec `string(l)` pour les outlinks media.
 
 ## Projets actifs
+
+### obsidian-vault
+- Derniere session : 14-05-2026
+- Etat : vault stable, query "notes deconnectees" corrigee (string(l) pour filtrer les medias)
+- Prochaine etape : aucune action specifique, maintenance continue
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
@@ -46,6 +51,6 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Traduction auto olis-lab : plugin installe, workflow manuel retenu, seed Legacy → Payload non fait
+- Traduction auto olis-lab : plugin installe, workflow manuel retenu, seed Legacy Payload non fait
 - Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
