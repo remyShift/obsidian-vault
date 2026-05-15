@@ -1,18 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, architecture, cqrs, event-sourcing, ddd, craft, lyon-craft-2025]
-sources:
-  - https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
-  - https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing
-  - https://developer.confluent.io/courses/event-sourcing/cqrs/
-  - https://mia-platform.eu/blog/understanding-event-sourcing-and-cqrs-pattern/
-  - CQRS Documents (PDF) - Greg Young (référence fondatrice)
+tags:
 ---
-
-# CQRS / Event Sourcing
-
 ## Deux patterns distincts, souvent combinés
 
 CQRS et Event Sourcing sont deux patterns indépendants qui fonctionnent très bien ensemble. Il est possible d'utiliser CQRS sans Event Sourcing, et vice-versa, mais leur combinaison est la plus courante en pratique.
@@ -143,11 +131,3 @@ Les événements du Write side sont consommés de façon asynchrone pour constru
 - Event Sourcing Pattern (Microsoft Azure Docs) : https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing
 - Confluent (exemple shopping cart détaillé) : https://developer.confluent.io/courses/event-sourcing/cqrs/
 - Greg Young : *CQRS Documents* (PDF) - référence fondatrice du pattern
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Value Object" et "DTO"
-- [ ] Comprendre si Payload CMS a un modèle qui se rapprocherait de ces patterns

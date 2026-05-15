@@ -72,10 +72,3 @@ En tant que freelance, avoir un Bus Factor faible sur ta mission peut être un a
 - [Bus Factor \| Laws of Software Engineering](https://lawsofsoftwareengineering.com/laws/bus-factor/)
 - [Bus Factor: A Human-Centered Risk Metric in the Software Supply Chain](https://www.cesarsotovalero.net/blog/bus-factor-a-human-centered-risk-metric-in-the-software-supply-chain.html)
 
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Loi de Goodhart"
-- [ ] Évaluer honnêtement le Bus Factor sur ma mission actuelle
