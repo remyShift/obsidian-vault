@@ -1,12 +1,9 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-
-## Principe
-
 Au lieu de stocker l'état actuel d'une entité dans la base de données, on stocke la **séquence chronologique des événements** qui ont amené à cet état.
 
-L'état actuel se reconstruit en "rejouant" les événements dans l'ordre. En [[Domain-Driven Design|DDD]], les événements correspondent aux faits du domaine — ce qui s'est passé, exprimé dans l'Ubiquitous Language.
+L'état actuel se reconstruit en "rejouant" les événements dans l'ordre. En [[Domain-Driven Design|DDD]], les événements correspondent aux faits du domaine ce qui s'est passé, exprimé dans l'Ubiquitous Language.
 
 ---
 
@@ -30,7 +27,7 @@ Un compte bancaire en Event Sourcing :
 ]
 ```
 
-Le solde de 1250 se calcule en rejouant ces trois événements. L'historique est complet et inviolable. Les valeurs dans les payloads — comme `amount` — se prêtent naturellement à des [[Value Object|Value Objects]] : immuables, sans identité, définis uniquement par leurs valeurs.
+Le solde de 1250 se calcule en rejouant ces trois événements. L'historique est complet et inviolable. Les valeurs dans les payloads, comme `amount`, se prêtent naturellement à des [[Value Object|Value Objects]] : immuables, sans identité, définis uniquement par leurs valeurs.
 
 ---
 
@@ -47,14 +44,14 @@ Le solde de 1250 se calcule en rejouant ces trois événements. L'historique est
 
 - Traçabilité totale : chaque changement d'état est enregistré avec son contexte
 - Capacité à reconstruire l'état à n'importe quel point dans le temps
-- Débogage facilité : on peut rejouer exactement ce qui s'est passé
+- Déboggage facilité : on peut rejouer exactement ce qui s'est passé
 - Possibilité de créer de nouvelles projections a posteriori à partir des événements existants
 
 ---
 
 ## Inconvénients et points de vigilance
 
-- **Reconstruction coûteuse** : reconstruire l'état depuis des millions d'événements peut être lent — on résout ça avec des snapshots ou en combinant avec [[CQRS + Event Sourcing|CQRS]]
+- **Reconstruction coûteuse** : reconstruire l'état depuis des millions d'événements peut être lent, on résout ça avec des snapshots ou en combinant avec [[CQRS + Event Sourcing|CQRS]]
 - **Versioning des events** : si le schéma d'un événement change, il faut gérer la compatibilité avec les anciens événements stockés
 - **Paradigme différent** : demande un changement de façon de penser, courbe d'apprentissage réelle
 - **Pas adapté partout** : inutilement complexe pour des données sans besoin d'historique

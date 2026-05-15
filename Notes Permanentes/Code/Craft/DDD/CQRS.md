@@ -1,9 +1,6 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-
-## Principe
-
 Séparer les opérations d'**écriture** (Commands) des opérations de **lecture** (Queries) en deux modèles distincts.
 
 Règle fondamentale : une méthode soit lit des données, soit les modifie. Jamais les deux en même temps.

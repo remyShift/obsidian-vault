@@ -18,11 +18,11 @@ Dans la plupart des projets, il existe un fossé entre ce que les experts métie
 
 ## Les deux niveaux du DDD
 
-**DDD Stratégique** — comment découper et organiser un système complexe à grande échelle (Bounded Contexts, Context Mapping).
+**DDD Stratégique** --> comment découper et organiser un système complexe à grande échelle (Bounded Contexts, Context Mapping).
 
-**DDD Tactique** — comment modéliser le domaine dans le code (Entities, Value Objects, Aggregates...).
+**DDD Tactique** --> comment modéliser le domaine dans le code (Entities, Value Objects, Aggregates...).
 
-La plupart des équipes sautent au tactique. Erreur — le stratégique donne du sens au tactique.
+La plupart des équipes sautent au tactique ce qui est une erreur, le stratégique donne du sens au tactique.
 
 ---
 
@@ -59,9 +59,9 @@ Représentation en code des concepts, règles et comportements du métier. Ce n'
 
 ## Blocs de construction tactiques
 
-**Entity** — objet défini par son **identité**, pas ses attributs. Deux entités avec les mêmes attributs mais des IDs différents sont deux objets distincts. Elles encapsulent leur propre logique métier.
+**Entity** : objet défini par son **identité**, pas ses attributs. Deux entités avec les mêmes attributs mais des IDs différents sont deux objets distincts. Elles encapsulent leur propre logique métier.
 
-**[[Value Object]]** — objet défini par ses **valeurs**, sans identité propre. Immuable. Deux Value Objects avec les mêmes valeurs sont interchangeables. Puissants pour éliminer la [[Code Smells|Primitive Obsession]].
+**[[Value Object]]** : objet défini par ses **valeurs**, sans identité propre. Immuable. Deux Value Objects avec les mêmes valeurs sont interchangeables. Puissants pour éliminer la [[Code Smells|Primitive Obsession]].
 
 ```js
 class Money {
@@ -77,11 +77,11 @@ class Money {
 }
 ```
 
-**Aggregate** — groupe d'Entities et Value Objects traité comme une unité. Il a une **racine (Aggregate Root)** — la seule entité accessible de l'extérieur. On ne modifie les objets d'un Aggregate qu'en passant par sa racine. Application directe de la [[Loi de Déméter]].
+**Aggregate** : groupe d'Entities et Value Objects traité comme une unité. Il a une **racine (Aggregate Root)** — la seule entité accessible de l'extérieur. On ne modifie les objets d'un Aggregate qu'en passant par sa racine. Application directe de la [[Loi de Déméter]].
 
-**Repository** — abstraction qui isole la logique métier de la persistance. Le domaine ne sait pas si les données viennent d'une BDD SQL, d'une API, d'un cache. Application directe du DIP ([[Les Principes SOLID]]).
+**Repository** : abstraction qui isole la logique métier de la persistance. Le domaine ne sait pas si les données viennent d'une BDD SQL, d'une API, d'un cache. Application directe du DIP ([[Les Principes SOLID]]).
 
-**Domain Service** — logique métier qui n'appartient naturellement à aucune Entity ou Value Object. À utiliser avec parcimonie.
+**Domain Service** : logique métier qui n'appartient naturellement à aucune Entity ou Value Object. À utiliser avec parcimonie.
 
 ---
 
@@ -129,7 +129,6 @@ Un modèle anémique = violation du SRP + [[Code Smells|Feature Envy]] général
 
 ## À explorer ensuite
 
-- **Context Mapping** — comment les Bounded Contexts communiquent. Patterns : Shared Kernel, Anti-Corruption Layer, Open Host Service.
-- **Domain Events** — `OrderConfirmed`, `PaymentReceived`. Lien avec le pattern [[Design Patterns Behavioral|Observer]] et les architectures event-driven — formalisés dans [[Event Sourcing]].
-- **[[CQRS]]** — séparer les opérations de lecture (Query) des opérations d'écriture (Command).
-- **Aggregate design** — les 4 règles de Vaughn Vernon : protéger les invariants, regrouper par transaction, référencer par ID entre Aggregates, viser de petits Aggregates.
+- **Context Mapping** --> comment les Bounded Contexts communiquent. Patterns : Shared Kernel, Anti-Corruption Layer, Open Host Service.
+- **Domain Events** --> `OrderConfirmed`, `PaymentReceived`. Lien avec le pattern [[Design Patterns Behavioral|Observer]] et les architectures event-driven, formalisés dans [[Event Sourcing]].
+- **Aggregate design** --> les 4 règles de Vaughn Vernon : protéger les invariants, regrouper par transaction, référencer par ID entre Aggregates, viser de petits Aggregates.

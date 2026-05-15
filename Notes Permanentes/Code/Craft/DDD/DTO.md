@@ -1,9 +1,6 @@
 ---
 tags: [SoftwareCraft, Architecture]
 ---
-
-## Définition
-
 Un DTO (Data Transfer Object) est un objet dont le seul rôle est de **transporter des données d'un contexte à un autre**, sans logique métier.
 
 Il définit un contrat explicite entre deux couches ou deux systèmes, indépendamment de leurs représentations internes respectives.
@@ -90,14 +87,6 @@ class OrderResponseDTO {
 ```
 
 ---
-
-## DTO vs autres concepts
-
-| Concept | Rôle | Logique métier |
-|---|---|---|
-| **Entity** | Représente un objet du domaine avec identité | Oui |
-| **[[Value Object]]** | Représente une valeur immuable du domaine | Oui (invariants) |
-| **DTO** | Transporte des données entre couches ou systèmes | Non |
 
 Un DTO est "bête" par design. Il ne sait pas valider des règles métier, il ne sait pas comment il est stocké. Un [[Value Object]] peut vivre à l'intérieur d'un DTO, mais l'inverse n'est pas vrai.
 

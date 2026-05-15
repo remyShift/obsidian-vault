@@ -114,4 +114,4 @@ class Money {
 - Les règles métier sont centralisées dans l'objet, pas dispersées dans les services
 - Les tests sont plus simples : on teste le Value Object une seule fois, pas à chaque endroit où il est utilisé
 
-Dans un contexte [[CQRS]], les Value Objects apparaissent naturellement dans les payloads des Commands et des Events — immuables par nature, comme les messages qu'ils transportent.
+Dans un contexte [[CQRS]], les Value Objects apparaissent naturellement dans les payloads des Commands et des Events, immuables par nature, comme les messages qu'ils transportent.
