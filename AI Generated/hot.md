@@ -8,9 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-15-05-2026 — obsidian-vault : Intégration de 15 notes Inbox dans Notes Permanentes, nouveau dossier Infra/ créé.
+15-05-2026 — piqure : premiere session, deux contributions TDD (has() + circular dep detection), deux PRs prets a ouvrir.
 
 ## Projets actifs
+
+### piqure
+- Derniere session : 15-05-2026
+- Etat : lib comprise, branches has() et circular-deps prets a PR
+- Prochaine etape : ouvrir les deux PRs, envisager une contribution sur les messages d'erreur
 
 ### obsidian-vault
 - Derniere session : 15-05-2026
