@@ -53,6 +53,8 @@ Ces deux objectifs se renforcent mutuellement. Une classe qui fait trop de chose
 | **Stamp coupling** | On passe un objet entier alors qu'on n'a besoin que d'un champ |
 | **Data coupling** | On passe uniquement les données nécessaires — idéal |
 
+Réduire le couplage ne signifie pas supprimer toutes les dépendances — [[Dépendance sans Couplage]] précise exactement cette distinction.
+
 ---
 
 ## Lien avec SOLID

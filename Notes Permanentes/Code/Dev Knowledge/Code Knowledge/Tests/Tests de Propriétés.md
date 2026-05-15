@@ -1,13 +1,11 @@
 ---
-tags:
+tags: [SoftwareCraft, Tests]
 ---
-## Principe
-
 Les tests de propriétés (ou PBT, Property-Based Testing) sont une approche dans laquelle on ne définit pas des exemples précis d'entrées/sorties, mais des **propriétés** : des invariants qui doivent toujours être vrais, quelle que soit l'entrée.
 
 Le framework génère alors automatiquement des centaines ou milliers de valeurs aléatoires et vérifie que la propriété tient dans tous les cas.
 
-L'idée centrale : **décrire ce qui doit toujours être vrai plutôt que de lister des exemples**.
+L'idée centrale est de **décrire ce qui doit toujours être vrai plutôt que de lister des exemples**.
 
 ---
 
@@ -15,7 +13,7 @@ L'idée centrale : **décrire ce qui doit toujours être vrai plutôt que de lis
 
 | Tests classiques (example-based) | Tests de propriétés |
 |---|---|
-| Entrées et sorties codées en dur | Entrées générées aléatoirement |
+| Entrées et sorties codées en dur, comme dans les [[Tests Paramétriques]] | Entrées générées aléatoirement |
 | Couvrent les cas qu'on a pensé à écrire | Couvrent des cas qu'on n'aurait pas imaginés |
 | Faciles à lire et à comprendre | Nécessitent de penser en invariants |
 | Maintenance manuelle des cas | Maintenance de la propriété uniquement |
@@ -47,7 +45,6 @@ Chaque run utilise un seed. En cas d'échec, le seed est affiché pour pouvoir r
 ```typescript
 import { testProp, fc } from 'fast-check';
 
-// Propriété : inverser un tableau deux fois retourne le tableau original
 testProp(
   'reverse(reverse(arr)) === arr',
   [fc.array(fc.integer())],
@@ -97,12 +94,3 @@ C'est le défi principal. Quelques patterns courants :
 - Révèle des bugs dans des cas limites qu'on n'aurait jamais écrit manuellement (entiers négatifs, tableaux vides, chaînes Unicode, etc.)
 - Pousse à mieux comprendre les invariants du code qu'on écrit
 - Complémentaire aux tests classiques, pas un remplacement
-
----
-
-## Sources
-
-- https://fast-check.dev/docs/introduction/what-is-property-based-testing/
-- https://fast-check.dev/docs/introduction/why-property-based/
-- https://dlow.dev/blog/property-based-testing/
-- https://medium.com/criteo-engineering/introduction-to-property-based-testing-f5236229d237

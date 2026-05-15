@@ -9,7 +9,9 @@ tags: [Tests]
 	- [[Tests de Performance]],
 	- [[Tests de Sécurité]],
 	- [[Tests d'Acceptance]],
-	- [[Tests de Régression]].
+	- [[Tests de Régression]],
+	- [[Tests Paramétriques]],
+	- [[Tests de Propriétés]]
 
 - Les regrouper dans une Pyramide de Tests :
 	- Plus on monte dans la pyramide plus les tests sont long à faire et plus ils coûtent chère.

@@ -1,11 +1,9 @@
 ---
-tags:
+tags: [SoftwareCraft, Tests]
 ---
-## Principe
-
 Un test paramétrique est un test qui exécute la même logique plusieurs fois avec des données d'entrée différentes. Au lieu de dupliquer le même test pour chaque cas, on définit une structure unique qui accepte des paramètres et on lui passe un tableau de jeux de données.
 
-L'idée centrale : **séparer la structure du test de ses données**.
+L'idée centrale est de **séparer la structure du test de ses données**.
 
 ---
 
@@ -77,10 +75,4 @@ it.each([
 - Ajout d'un nouveau cas = ajouter une ligne dans le tableau
 - Le rapport de test montre clairement quel jeu de données a échoué
 
----
-
-## Sources
-
-- https://medium.com/@torresgmarina/all-you-need-to-know-about-parameterized-tests-493af4705508
-- https://coderpad.io/blog/development/writing-a-parameterized-test-in-junit-with-examples/
-- https://www.getxray.app/blog/test-parameterization-techniques
+Ils couvrent uniquement les cas qu'on a pensé à définir, les [[Tests de Propriétés]] complètent cette approche en générant automatiquement des valeurs aléatoires pour trouver des cas qu'on n'aurait pas imaginés.
