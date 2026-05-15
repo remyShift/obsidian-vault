@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-15-05-2026 — piqure : premiere session, deux contributions TDD (has() + circular dep detection), deux PRs prets a ouvrir.
+15-05-2026 — piqure : deux PRs prêtes (has() en attente de merge, circular deps à ouvrir), reviewer répondu, squash appris.
 
 ## Projets actifs
 
 ### piqure
 - Derniere session : 15-05-2026
-- Etat : lib comprise, branches has() et circular-deps prets a PR
-- Prochaine etape : ouvrir les deux PRs, envisager une contribution sur les messages d'erreur
+- Etat : PR has() en attente de squash/merge, PR circular deps prête à ouvrir
+- Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
 - Derniere session : 15-05-2026

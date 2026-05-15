@@ -7,23 +7,24 @@ tags: [meta, hot-cache]
 # Hot Cache — piqure
 
 ## Dernière mise à jour
-15-05-2026 — Première session : exploration de la lib, deux contributions TDD réalisées (has() et circular dep detection)
+15-05-2026 — Deux contributions TDD prêtes à merger, reviewer de la PR has() répondu, squash commits appris.
 
 ## État du projet
-- Deux branches prêtes à PR : `has(key)` et détection de dépendances circulaires
-- Lib comprise en profondeur : architecture Map + Value wrappers (StaticValue / LazyValue)
+- PR `has()` en attente de squash + merge (reviewer convaincu)
+- PR circular dep detection prête à ouvrir
+- Toutes les implémentations sont sur des branches séparées
 
 ## Faits récents importants
-- `has()` : délègue à `Map.has()`, une ligne, interface `Piqure` mise à jour
-- Circular deps : `Set resolving` dans la closure de `piqure()`, check avant chaque résolution lazy, throw clair avec le nom de la clé
-- Le `resolving.delete(key)` doit être dans un `finally` pour gérer les providers qui throwent pour d'autres raisons
-- Branche `has()` et branche circular deps sont indépendantes — normal qu'elles ne partagent pas les mêmes tests
+- `has()` : une ligne, délègue à `Map.has()`, maintenu face à l'alternative `key<T | undefined>` du reviewer
+- Circular deps : `Set resolving` dans la closure, `finally` pour le cleanup, détecte direct et indirect
+- `--force-with-lease` à utiliser après `git rebase -i` pour le squash en local
+- `key<T | undefined>` est ambigu : ne distingue pas "non enregistré" de "enregistré avec undefined"
 
 ## Décisions actives
-- Contributions séparées par branche = PRs indépendantes, plus facile à reviewer
-- TDD strict : RED observable (stack overflow ou erreur absente) avant tout code
+- Branches séparées pour chaque contribution : pas de mélange de features dans une même PR
+- TDD strict maintenu : RED observable avant tout code
 
 ## Prochaines étapes
-- Ouvrir les deux PRs
-- Prochaine contribution envisagée : meilleurs messages d'erreur sur `inject()` (lister les clés enregistrées)
-- Contribution async providers : plus complexe, à planifier
+- Squash + merge PR `has()`
+- Ouvrir PR circular dep detection
+- Prochaine contribution envisagée : meilleurs messages d'erreur sur `inject()` manquant
