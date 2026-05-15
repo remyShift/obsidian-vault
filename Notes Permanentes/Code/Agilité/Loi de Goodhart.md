@@ -1,8 +1,6 @@
 ---
-tags:
+tags: [SoftwareCraft, Agilité]
 ---
-## Formulation
-
 > "When a measure becomes a target, it ceases to be a good measure."
 > - Charles Goodhart, économiste britannique
 
@@ -27,18 +25,22 @@ L'exemple classique : **l'effet cobra en Inde**. Le gouvernement britannique col
 ## Exemples concrets en développement
 
 ### Story points
+
 Objectif initial : estimer la complexité relative.
 Dégradation : le management mesure la "productivité" en story points. Les développeurs gonflent leurs estimations. Les story points montent, la productivité réelle stagne.
 
 ### Coverage de tests
+
 Objectif initial : mesurer la couverture du code par les tests.
 Dégradation : l'objectif est "80% de coverage". Les devs écrivent des tests vides ou sans assertions pour atteindre le chiffre. Le coverage monte, la qualité des tests reste nulle.
 
 ### Nombre de commits / lignes de code
+
 Objectif initial : mesurer l'activité.
 Dégradation : on écrit du code verbeux et redondant pour gonfler les lignes. On crée des microfixes pour gonfler les commits.
 
 ### Tickets fermés
+
 Objectif initial : mesurer la résolution des problèmes.
 Dégradation : on ferme des tickets non résolus, ou on split un bug en 5 sous-tickets pour gonfler le nombre.
 
@@ -48,7 +50,10 @@ Dégradation : on ferme des tickets non résolus, ou on split un bug en 5 sous-t
 
 Une métrique est utile comme **indicateur**, pas comme **cible**. Dès qu'elle devient une cible avec des conséquences, elle se corrompt.
 
+Le [[Bus Factor]] en est un bon exemple : utile comme indicateur de risque, il se dégrade dès qu'il devient un objectif d'équipe avec une valeur à atteindre.
+
 Quelques principes pour résister à la loi de Goodhart :
+
 - Combiner plusieurs métriques complémentaires plutôt qu'une seule
 - Lier les métriques à des **outcomes** (résultats business, satisfaction utilisateur) plutôt qu'à des outputs (lignes de code, tickets fermés)
 - Ne jamais traiter une métrique comme une vérité absolue, toujours l'interpréter en contexte
@@ -59,12 +64,3 @@ Quelques principes pour résister à la loi de Goodhart :
 ## Application au travail en équipe
 
 La loi de Goodhart est aussi un outil de lecture des organisations. Quand tu vois une équipe optimiser pour des chiffres au détriment du vrai travail, c'est souvent la loi de Goodhart à l'œuvre. La question à poser : quel comportement ce système de mesure est-il en train d'incentiver réellement ?
-
----
-
-## Sources
-
-- https://lawsofsoftwareengineering.com/laws/goodharts-law/
-- https://axify.io/blog/goodhart-law
-- https://jellyfish.co/blog/goodharts-law-in-software-engineering
-- https://www.teksidia.com/articles/metrics--goodharts-law-in-software-development.html

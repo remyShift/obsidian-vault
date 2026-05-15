@@ -1,18 +1,11 @@
 ---
-tags:
+tags: [SoftwareCraft, Agilité]
 ---
-
-# Bus Factor
-
-## Définition
-
 Le Bus Factor (aussi appelé "Truck Factor" ou "Lottery Factor") est le **nombre minimal de personnes qui devraient quitter un projet pour le faire s'effondrer** faute de connaissance.
 
 > Si cette personne se faisait renverser par un bus demain, que se passerait-il ?
 
 Un Bus Factor de **1** est la situation la plus critique : une seule personne porte une connaissance essentielle que personne d'autre ne peut reprendre.
-
-L'origine du terme remonte à 1994, lors de discussions sur Python : que se passerait-il si Guido van Rossum (créateur du langage) disparaissait ?
 
 ---
 
@@ -27,9 +20,11 @@ Ajouter des personnes ne résout pas automatiquement un Bus Factor faible. Si le
 ## Exemples concrets
 
 ### Développement
+
 Alice est la seule à comprendre le système de base de données legacy. Elle connaît le schéma, les optimisations non documentées, les bugs connus et leurs workarounds. Si Alice part, personne ne peut maintenir ce système.
 
 ### Open source
+
 L'incident **left-pad** de 2016 : un développeur unique a retiré un package NPM minuscule. Des milliers de projets dans le monde ont cassé. Bus Factor de 1 pour une dépendance critique de tout l'écosystème JS.
 
 ---
@@ -51,6 +46,9 @@ Des outils d'analyse Git peuvent calculer le Bus Factor en mesurant la concentra
 - **Code review** : forcer plusieurs personnes à lire et comprendre chaque partie du code
 - **Rotation** : faire tourner les responsabilités sur les différentes parties du système
 - **Tests** : un code bien testé est plus facile à reprendre par quelqu'un qui ne le connaît pas
+- **Graphes de refactoring** : le graphe d'une [[Méthode Mikado]] réduit directement le Bus Factor sur une transformation complexe, il documente les dépendances et rend le travail compréhensible par tous
+
+Attention : si le Bus Factor devient une métrique officielle avec une cible à atteindre, la [[Loi de Goodhart]] s'applique, les gens documenteront pour cocher la case sans vraiment partager la connaissance.
 
 ---
 
@@ -59,27 +57,3 @@ Des outils d'analyse Git peuvent calculer le Bus Factor en mesurant la concentra
 Le Bus Factor joue dans les deux sens. Être la seule personne à maîtriser une partie critique d'un système peut sembler une position de force, mais c'est aussi une fragilité pour le projet et parfois une pression implicite pour rester. Le vrai signe de séniorité, c'est de rendre son savoir partageable.
 
 En tant que freelance, avoir un Bus Factor faible sur ta mission peut être un argument de mission (tu es indispensable), mais c'est un risque réel si tu pars ou si tu es indisponible.
-
----
-
-## Lien avec d'autres concepts
-
-- **Loi de Goodhart** : si on mesure le Bus Factor comme une cible, les gens documenteront pour cocher la case sans vraiment partager la connaissance
-- **Méthode Mikado** : un refactoring bien graphé et documenté réduit le Bus Factor sur cette transformation
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Loi de Goodhart"
-- [ ] Évaluer honnêtement le Bus Factor sur ma mission actuelle
-
----
-
-## Sources
-
-- https://contributoriq.com/blog/what-is-bus-factor-how-to-calculate-measure
-- https://swimm.io/learn/developer-experience/what-is-the-bus-factor-why-it-matters-and-how-to-increase-it
-- https://lawsofsoftwareengineering.com/laws/bus-factor/
-- https://www.cesarsotovalero.net/blog/bus-factor-a-human-centered-risk-metric-in-the-software-supply-chain.html
