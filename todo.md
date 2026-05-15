@@ -19,6 +19,7 @@ tags:
 - [ ] Portfolio settings pour gérer la musiques et volumes des sons
 - [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
 - [ ] primitives
+- [ ] memoize
 ## Work
 
 - [ ] 
