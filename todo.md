@@ -20,6 +20,7 @@ tags:
 - [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
 - [ ] primitives
 - [ ] memoize
+- [ ] event driven
 ## Work
 
 - [ ] 
