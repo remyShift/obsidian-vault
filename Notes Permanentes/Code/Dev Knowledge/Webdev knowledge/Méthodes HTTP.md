@@ -86,3 +86,5 @@ Les méthodes HTTP sont utilisées pour interagir avec les ressources d'un serve
 - **GET** : Ne jamais utiliser pour envoyer des données sensibles (ex. mots de passe), car elles peuvent apparaître dans l'URL.
 - **POST, PUT, PATCH** : Utiliser ces méthodes lorsque des modifications de ressources sont nécessaires.
 - **DELETE** : S'assurer que l'opération est bien intentionnelle, car elle supprime définitivement la ressource.
+
+Quand un service expose une API REST, un [[SDK]] peut encapsuler ces appels pour gérer automatiquement l'auth, les erreurs et la sérialisation.

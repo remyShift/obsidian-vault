@@ -1,8 +1,6 @@
 ---
-tags:
+tags: [DevKnowledge, Infra]
 ---
-## Qu'est-ce que c'est
-
 Terraform est un outil d'**Infrastructure as Code (IaC)** créé par HashiCorp en 2014. Il permet de définir, provisionner et gérer des infrastructures cloud dans des fichiers de configuration texte, versionnables comme du code source.
 
 ---
@@ -42,17 +40,21 @@ Terraform fonctionne avec des centaines de providers : AWS, GCP, Azure, Cloudfla
 ## Concepts clés
 
 ### Resources
+
 Les unités de base : une instance EC2, un bucket S3, un enregistrement DNS, une base de données. Chaque resource est gérée par un provider.
 
 ### Providers
+
 Les plugins qui connectent Terraform aux APIs des services. HashiCorp maintient les providers officiels ; la communauté en publie des centaines d'autres sur le Terraform Registry.
 
 ### State File
+
 Terraform maintient un fichier d'état (`terraform.tfstate`) qui représente la réalité actuelle de l'infrastructure. C'est grâce à ce fichier qu'il sait ce qui existe et ce qui doit changer.
 
 En équipe : le state file doit être stocké dans un backend distant (S3, Terraform Cloud) pour éviter les conflits.
 
 ### Modules
+
 Des composants réutilisables. Au lieu de redéfinir un VPC dans chaque projet, on crée un module VPC standard que toute l'équipe peut importer.
 
 ---
@@ -91,22 +93,12 @@ resource "aws_s3_bucket_versioning" "assets_versioning" {
 
 ---
 
-## Avantages
-
-- Infrastructure reproductible et versionnable
-- Visibilité sur les changements avant application (plan)
-- Un seul workflow pour tous les cloud providers
-- Collaboratif (via remote state)
-- Standard de l'industrie : large communauté, beaucoup de modules disponibles
-
----
-
 ## Points de vigilance
 
 - Le **state file** est critique : le corrompre ou le perdre peut compliquer la gestion de l'infrastructure
 - Les **opérations destructives** (destroy, remplacement de resources) sont irréversibles
-- En équipe : ne jamais lancer terraform apply sans plan ni review
-- La gestion des secrets (clés API, mots de passe) ne doit jamais être codée en dur dans les .tf
+- En équipe : ne jamais lancer `terraform apply` sans plan ni review
+- La gestion des secrets (clés API, mots de passe) ne doit jamais être codée en dur dans les `.tf`
 
 ---
 
@@ -119,12 +111,3 @@ resource "aws_s3_bucket_versioning" "assets_versioning" {
 | **AWS CloudFormation** | IaC AWS uniquement |
 | **Pulumi** | IaC avec des langages de programmation classiques (TypeScript, Python) |
 | **Kubernetes** | Orchestration de conteneurs (souvent géré via Terraform) |
-
----
-
-## Sources
-
-- https://developer.hashicorp.com/terraform/intro
-- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
-- https://www.pluralsight.com/resources/blog/cloud/what-is-terraform-infrastructure-as-code-iac
-- https://www.firefly.ai/academy/terraform-iac
