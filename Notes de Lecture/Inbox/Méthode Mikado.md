@@ -1,11 +1,6 @@
 ---
 tags:
 ---
-- https://www.vintasoftware.com/blog/the-mikado-method
-- https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
-- https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
-- https://www.methodsandtools.com/archive/mikado.php
-- Livre : "The Mikado Method" - Ola Ellnestam & Daniel Brolund (Manning)
 ## Origine
 
 Créée par **Ola Ellnestam et Daniel Brolund**, formalisée dans leur livre *The Mikado Method* (Manning). Le nom vient du jeu de mikado (pick-up sticks) : tu ne peux pas attraper un bâton sans faire bouger les autres. Si tu forces, tu perds. La bonne approche c'est de comprendre ce qui bloque, et de commencer par là.
@@ -120,12 +115,3 @@ La méthode pousse à ne faire **que ce qui est nécessaire** pour atteindre l'o
 - Article Vinta Software (exemple Django détaillé) : https://www.vintasoftware.com/blog/the-mikado-method
 - Article Matthias Noback (nuance sur le scope) : https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
 - Article Martin Reigosa (exemple migration de module) : https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à des notes existantes si pertinent
-- [ ] Essayer sur un vrai cas de refactoring sur la mission
-- [ ] Envisager de lire le livre source
