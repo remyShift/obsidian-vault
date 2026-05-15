@@ -17,7 +17,8 @@ tags:
 - [ ] Portfolio son
 - [ ] Portfolio musique d'ambiance
 - [ ] Portfolio settings pour gérer la musiques et volumes des sons
-- [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smelss
+- [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
+- [ ] primitives
 ## Work
 
 - [ ] 
