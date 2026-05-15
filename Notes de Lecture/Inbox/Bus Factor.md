@@ -2,6 +2,8 @@
 tags:
 ---
 
+# Bus Factor
+
 ## Définition
 
 Le Bus Factor (aussi appelé "Truck Factor" ou "Lottery Factor") est le **nombre minimal de personnes qui devraient quitter un projet pour le faire s'effondrer** faute de connaissance.
@@ -64,11 +66,20 @@ En tant que freelance, avoir un Bus Factor faible sur ta mission peut être un a
 
 - **Loi de Goodhart** : si on mesure le Bus Factor comme une cible, les gens documenteront pour cocher la case sans vraiment partager la connaissance
 - **Méthode Mikado** : un refactoring bien graphé et documenté réduit le Bus Factor sur cette transformation
-  
+
+---
+
+## À faire
+
+- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
+- [ ] Relier à "Loi de Goodhart"
+- [ ] Évaluer honnêtement le Bus Factor sur ma mission actuelle
+
+---
+
 ## Sources
 
-- [Bus Factor: Definition, Meaning, and How to Calculate It for Software Teams \| ContributorIQ Blog](https://contributoriq.com/blog/what-is-bus-factor-how-to-calculate-measure)
-- [What Is the Bus Factor, Why It Matters and How to Increase It - Swimm](https://swimm.io/learn/developer-experience/what-is-the-bus-factor-why-it-matters-and-how-to-increase-it)
-- [Bus Factor \| Laws of Software Engineering](https://lawsofsoftwareengineering.com/laws/bus-factor/)
-- [Bus Factor: A Human-Centered Risk Metric in the Software Supply Chain](https://www.cesarsotovalero.net/blog/bus-factor-a-human-centered-risk-metric-in-the-software-supply-chain.html)
-
+- https://contributoriq.com/blog/what-is-bus-factor-how-to-calculate-measure
+- https://swimm.io/learn/developer-experience/what-is-the-bus-factor-why-it-matters-and-how-to-increase-it
+- https://lawsofsoftwareengineering.com/laws/bus-factor/
+- https://www.cesarsotovalero.net/blog/bus-factor-a-human-centered-risk-metric-in-the-software-supply-chain.html

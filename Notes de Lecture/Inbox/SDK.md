@@ -1,12 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, architecture, sdk, api, craft, lyon-craft-2025]
+tags:
 ---
-
-# SDK - Software Development Kit
-
 ## Définition
 
 Un SDK (Software Development Kit) est un ensemble d'outils, de bibliothèques, de documentation et d'exemples fournis par un service ou une plateforme pour permettre aux développeurs de l'intégrer plus facilement dans leur propre code.
@@ -107,11 +101,3 @@ Intégrer un service tiers via son SDK plutôt qu'en appelant directement l'API 
 
 - **DTO** : les types retournés par un SDK sont des formes de DTOs
 - **API** : un SDK est une couche au-dessus d'une API
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "DTO"
-- [ ] Faire l'inventaire des services tiers sur la mission : lesquels ont un SDK ? Lesquels sont appelés en HTTP brut ?

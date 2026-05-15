@@ -1,12 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, architecture, couplage, dependance, craft, lyon-craft-2025]
+tags:
 ---
-
-# Systèmes peuvent être dépendants sans être couplés
-
 ## Le concept
 
 **Dépendance** et **couplage** sont deux notions distinctes que l'on confond souvent. Un système peut avoir besoin du résultat d'un autre système sans être couplé à son implémentation.
@@ -99,11 +93,3 @@ En pratique : favoriser les interfaces, les abstractions, et les événements su
 
 - **CQRS/ES** : un exemple concret de découplage via événements entre le Write side et le Read side
 - **DTO** : un contrat d'échange qui permet de découpler la représentation interne d'un objet de sa représentation externe
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "CQRS/ES" et "DTO"
-- [ ] Repérer sur la mission des endroits où le couplage fort est un problème actuel

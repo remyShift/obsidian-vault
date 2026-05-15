@@ -1,17 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, infrastructure, terraform, iac, devops, craft, lyon-craft-2025]
-sources:
-  - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
-  - https://developer.hashicorp.com/terraform/intro
-  - https://www.pluralsight.com/resources/blog/cloud/what-is-terraform-infrastructure-as-code-iac
-  - https://www.firefly.ai/academy/terraform-iac
+tags:
 ---
-
-# Terraform
-
 ## Qu'est-ce que c'est
 
 Terraform est un outil d'**Infrastructure as Code (IaC)** créé par HashiCorp en 2014. Il permet de définir, provisionner et gérer des infrastructures cloud dans des fichiers de configuration texte, versionnables comme du code source.
@@ -110,6 +99,8 @@ resource "aws_s3_bucket_versioning" "assets_versioning" {
 - Collaboratif (via remote state)
 - Standard de l'industrie : large communauté, beaucoup de modules disponibles
 
+---
+
 ## Points de vigilance
 
 - Le **state file** est critique : le corrompre ou le perdre peut compliquer la gestion de l'infrastructure
@@ -131,15 +122,9 @@ resource "aws_s3_bucket_versioning" "assets_versioning" {
 
 ---
 
-## Ressources
+## Sources
 
-- Documentation officielle HashiCorp : https://developer.hashicorp.com/terraform
-- Tutoriel "What is IaC with Terraform" : https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Comprendre si la mission utilise Terraform ou un autre outil pour l'infra
-- [ ] Explorer un tutoriel hands-on pour avoir une vision concrète du workflow
+- https://developer.hashicorp.com/terraform/intro
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
+- https://www.pluralsight.com/resources/blog/cloud/what-is-terraform-infrastructure-as-code-iac
+- https://www.firefly.ai/academy/terraform-iac

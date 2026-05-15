@@ -1,16 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, testing, tests-parametriques, craft, lyon-craft-2025]
-sources:
-  - https://medium.com/@torresgmarina/all-you-need-to-know-about-parameterized-tests-493af4705508
-  - https://coderpad.io/blog/development/writing-a-parameterized-test-in-junit-with-examples/
-  - https://www.getxray.app/blog/test-parameterization-techniques
+tags:
 ---
-
-# Tests Paramétriques
-
 ## Principe
 
 Un test paramétrique est un test qui exécute la même logique plusieurs fois avec des données d'entrée différentes. Au lieu de dupliquer le même test pour chaque cas, on définit une structure unique qui accepte des paramètres et on lui passe un tableau de jeux de données.
@@ -89,8 +79,8 @@ it.each([
 
 ---
 
-## À faire
+## Sources
 
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à des notes existantes si pertinent
-- [ ] Identifier un endroit concret sur la mission où ce pattern serait utile
+- https://medium.com/@torresgmarina/all-you-need-to-know-about-parameterized-tests-493af4705508
+- https://coderpad.io/blog/development/writing-a-parameterized-test-in-junit-with-examples/
+- https://www.getxray.app/blog/test-parameterization-techniques

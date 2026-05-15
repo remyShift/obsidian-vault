@@ -1,12 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, architecture, dto, patterns, craft, lyon-craft-2025]
+tags:
 ---
-
-# DTO - Data Transfer Object
-
 ## Définition
 
 Un DTO (Data Transfer Object) est un objet dont le seul rôle est de **transporter des données d'un contexte à un autre**, sans logique métier.
@@ -135,11 +129,3 @@ Un DTO est "bête" par design. Il ne sait pas valider des règles métier, il ne
 - **Value Object** : un DTO peut contenir des Value Objects, mais un VO n'est pas un DTO
 - **CQRS** : les Commands et Queries du côté Write sont des DTOs ; les projections du côté Read aussi
 - **Mapped Types TypeScript** : on peut dériver des DTO types depuis les types de domaine sans réécriture manuelle
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Value Object", "CQRS/ES", "Mapped Types TypeScript"
-- [ ] Vérifier si l'API Payload sur la mission fait bien la distinction entre les types de domaine et ce qui est renvoyé au client

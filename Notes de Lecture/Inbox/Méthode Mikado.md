@@ -109,9 +109,9 @@ La méthode pousse à ne faire **que ce qui est nécessaire** pour atteindre l'o
 
 ---
 
-## Ressources
+## Sources
 
-- Livre : *The Mikado Method* - Ola Ellnestam & Daniel Brolund (Manning) - source primaire
-- Article Vinta Software (exemple Django détaillé) : https://www.vintasoftware.com/blog/the-mikado-method
-- Article Matthias Noback (nuance sur le scope) : https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
-- Article Martin Reigosa (exemple migration de module) : https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
+- Livre : *The Mikado Method* - Ola Ellnestam & Daniel Brolund (Manning)
+- https://www.vintasoftware.com/blog/the-mikado-method
+- https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
+- https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718

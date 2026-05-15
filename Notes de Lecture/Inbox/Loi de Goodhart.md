@@ -1,17 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, management, metrics, loi-de-goodhart, craft, lyon-craft-2025]
-sources:
-  - https://lawsofsoftwareengineering.com/laws/goodharts-law/
-  - https://axify.io/blog/goodhart-law
-  - https://jellyfish.co/blog/goodharts-law-in-software-engineering
-  - https://www.teksidia.com/articles/metrics--goodharts-law-in-software-development.html
+tags:
 ---
-
-# Loi de Goodhart
-
 ## Formulation
 
 > "When a measure becomes a target, it ceases to be a good measure."
@@ -73,8 +62,9 @@ La loi de Goodhart est aussi un outil de lecture des organisations. Quand tu voi
 
 ---
 
-## À faire
+## Sources
 
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Bus Factor" (deux lois liées à la gestion d'équipe)
-- [ ] Réfléchir aux métriques utilisées sur la mission et lesquelles pourraient se corrompre
+- https://lawsofsoftwareengineering.com/laws/goodharts-law/
+- https://axify.io/blog/goodhart-law
+- https://jellyfish.co/blog/goodharts-law-in-software-engineering
+- https://www.teksidia.com/articles/metrics--goodharts-law-in-software-development.html

@@ -1,12 +1,9 @@
 ---
 tags:
 ---
-## Idée brute
+## Gamble TDD
 
-### Gamble TDD
-Variante du TDD classique basée sur le pari : avant de lancer les tests, on parie sur leur résultat (passent / échouent).
-- si on gagne le pari il se passe rien
-- si on perd le pari on revert
+Variante du TDD classique basée sur le pari : avant de lancer les tests, on parie sur leur résultat (passent / échouent). Peu importe le résultat, on commit.
 
 Effets recherchés :
 - Encourage les **baby steps** : petites transformations atomiques
@@ -18,7 +15,8 @@ Contraintes self-imposées :
 - Pas de valeurs par défaut dans le code de prod
 - 1 transformation = modifier environ 1 ligne
 
-### Méthode Mikado
+## Méthode Mikado
+
 Technique pour aborder une transformation trop grosse pour être faite d'un coup.
 
 Processus :

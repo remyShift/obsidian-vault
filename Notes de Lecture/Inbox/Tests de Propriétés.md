@@ -1,17 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, testing, tests-de-proprietes, property-based-testing, craft, lyon-craft-2025]
-sources:
-  - https://fast-check.dev/docs/introduction/what-is-property-based-testing/
-  - https://fast-check.dev/docs/introduction/why-property-based/
-  - https://dlow.dev/blog/property-based-testing/
-  - https://medium.com/criteo-engineering/introduction-to-property-based-testing-f5236229d237
+tags:
 ---
-
-# Tests de Propriétés (Property-Based Testing)
-
 ## Principe
 
 Les tests de propriétés (ou PBT, Property-Based Testing) sont une approche dans laquelle on ne définit pas des exemples précis d'entrées/sorties, mais des **propriétés** : des invariants qui doivent toujours être vrais, quelle que soit l'entrée.
@@ -111,8 +100,9 @@ C'est le défi principal. Quelques patterns courants :
 
 ---
 
-## À faire
+## Sources
 
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Tests Paramétriques"
-- [ ] Explorer fast-check sur un cas réel
+- https://fast-check.dev/docs/introduction/what-is-property-based-testing/
+- https://fast-check.dev/docs/introduction/why-property-based/
+- https://dlow.dev/blog/property-based-testing/
+- https://medium.com/criteo-engineering/introduction-to-property-based-testing-f5236229d237

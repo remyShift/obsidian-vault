@@ -1,17 +1,6 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, ddd, value-object, architecture, craft, lyon-craft-2025]
-sources:
-  - https://wempe.dev/blog/domain-driven-design-entities-value-objects
-  - https://www.milanjovanovic.tech/blog/value-objects-in-dotnet-ddd-fundamentals
-  - https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects
-  - Livre : "Domain-Driven Design" - Eric Evans
+tags:
 ---
-
-# Value Object
-
 ## Origine
 
 Concept issu du **Domain-Driven Design (DDD)** formalisé par Eric Evans dans son livre *Domain-Driven Design: Tackling Complexity in the Heart of Software* (2003). Popularisé également par Martin Fowler.
@@ -139,16 +128,9 @@ class Money {
 
 ---
 
-## Ressources
+## Sources
 
-- Livre : *Domain-Driven Design* - Eric Evans (référence fondatrice)
-- Milan Jovanovic (exemples pratiques .NET) : https://www.milanjovanovic.tech/blog/value-objects-in-dotnet-ddd-fundamentals
-- Microsoft Docs (implémentation) : https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "CQRS/ES" et à "DTO"
-- [ ] Identifier des concepts sur la mission qui mériteraient d'être des Value Objects (email, prix, statut)
+- Livre : *Domain-Driven Design* - Eric Evans
+- https://wempe.dev/blog/domain-driven-design-entities-value-objects
+- https://www.milanjovanovic.tech/blog/value-objects-in-dotnet-ddd-fundamentals
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects
