@@ -1,18 +1,11 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, refactoring, methode-mikado, craft, lyon-craft-2025]
-sources:
-  - https://www.vintasoftware.com/blog/the-mikado-method
-  - https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
-  - https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
-  - https://www.methodsandtools.com/archive/mikado.php
-  - Livre : "The Mikado Method" - Ola Ellnestam & Daniel Brolund (Manning)
+tags:
 ---
-
-# La Méthode Mikado
-
+- https://www.vintasoftware.com/blog/the-mikado-method
+- https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
+- https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
+- https://www.methodsandtools.com/archive/mikado.php
+- Livre : "The Mikado Method" - Ola Ellnestam & Daniel Brolund (Manning)
 ## Origine
 
 Créée par **Ola Ellnestam et Daniel Brolund**, formalisée dans leur livre *The Mikado Method* (Manning). Le nom vient du jeu de mikado (pick-up sticks) : tu ne peux pas attraper un bâton sans faire bouger les autres. Si tu forces, tu perds. La bonne approche c'est de comprendre ce qui bloque, et de commencer par là.

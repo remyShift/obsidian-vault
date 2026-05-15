@@ -1,16 +1,12 @@
 ---
-created: 2025-05-15 00:00
-type: fleeting
-status: to-process
-tags: [inbox, tdd, testing, craft, lyon-craft-2025]
+tags:
 ---
-
-# TDD et au-delà - Gamble TDD & Méthode Mikado
-
 ## Idée brute
 
 ### Gamble TDD
-Variante du TDD classique basée sur le pari : avant de lancer les tests, on parie sur leur résultat (passent / échouent). Peu importe le résultat, on commit.
+Variante du TDD classique basée sur le pari : avant de lancer les tests, on parie sur leur résultat (passent / échouent).
+- si on gagne le pari il se passe rien
+- si on perd le pari on revert
 
 Effets recherchés :
 - Encourage les **baby steps** : petites transformations atomiques
@@ -32,13 +28,3 @@ Processus :
 4. Refactorer pour lever ces contraintes, puis réessayer
 
 L'idée centrale : on ne force pas le changement, on prépare le terrain.
-
-## Contexte
-
-Conférence **Lyon Craft 2025**. Talk sur le TDD et ses extensions pratiques.
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à des notes existantes si pertinent
-- [ ] Définir l'action concrète qui en découle (si applicable)
