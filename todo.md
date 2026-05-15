@@ -23,6 +23,7 @@ tags:
 - [ ] Event driven
 - [ ] Expand DDD
 - [ ] Monad
+- [ ] Immutabilité
 ## Work
 
 - [ ] 
