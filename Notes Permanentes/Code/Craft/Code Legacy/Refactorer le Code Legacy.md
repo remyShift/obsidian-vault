@@ -5,7 +5,7 @@ tags: [SoftwareCraft, CodeLegacy]
 Lorsqu’on observe du code legacy il est facile de voir des morceaux de code facilement « refactorable » (beaucoup de duplication à mettre dans une méthode / fonction, des extractions évidentes …).
 - Si on se jette tête baissé dans cette refactorisation de lecture on risque de passer à côté de duplication de plus haut niveau.
 	- Ou encore on peut passer à côté de duplication qui ne sont pas visible au premier abord au vu de comment est écrit le code.
-- On ne veut pas faire du refactoring satisfaisant mais plutôt s’aventurer plus en profondeur ==> reculer pour mieux sauter.
+- On ne veut pas faire du refactoring satisfaisant mais plutôt s’aventurer plus en profondeur ==> reculer pour mieux sauter. Pour les refactorings trop gros pour tenir en une transformation, la [[Méthode Mikado]] formalise exactement cette approche.
 
 
 ## Dégrader le code temporairement :
