@@ -1,9 +1,6 @@
 ---
 tags:
 ---
-
-# Store et ses limites - vers l'injection de dépendances
-
 ## À quoi sert un Store
 
 Un Store (Redux, Zustand, NgRx, Pinia...) est avant tout une manière de **centraliser l'état dans un seul endroit**. Vision améliorée des variables globales du passé.
@@ -12,8 +9,7 @@ Cas d'usage légitimes :
 - Passer des propriétés à un composant sans traverser toute la hiérarchie (prop drilling)
 - Partager un état mutable entre plusieurs composants
 - Opérations avec cycle de vie global : thème, login, utilisateur connecté
-- Partager des mises à jour en temps réel
-- Synchroniser une app sur plusieurs onglets
+- ...
 
 Avantages réels : DevTools, réactivité, état partagé observable.
 
