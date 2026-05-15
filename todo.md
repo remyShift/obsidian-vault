@@ -22,7 +22,7 @@ tags:
 - [ ] Memoize
 - [ ] Event driven
 - [ ] Expand DDD
-- [ ] Monade
+- [ ] Monad
 ## Work
 
 - [ ] 
