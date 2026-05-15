@@ -61,7 +61,7 @@ Représentation en code des concepts, règles et comportements du métier. Ce n'
 
 **Entity** — objet défini par son **identité**, pas ses attributs. Deux entités avec les mêmes attributs mais des IDs différents sont deux objets distincts. Elles encapsulent leur propre logique métier.
 
-**Value Object** — objet défini par ses **valeurs**, sans identité propre. Immuable. Deux Value Objects avec les mêmes valeurs sont interchangeables. Puissants pour éliminer la [[Code Smells|Primitive Obsession]].
+**[[Value Object]]** — objet défini par ses **valeurs**, sans identité propre. Immuable. Deux Value Objects avec les mêmes valeurs sont interchangeables. Puissants pour éliminer la [[Code Smells|Primitive Obsession]].
 
 ```js
 class Money {
@@ -130,6 +130,6 @@ Un modèle anémique = violation du SRP + [[Code Smells|Feature Envy]] général
 ## À explorer ensuite
 
 - **Context Mapping** — comment les Bounded Contexts communiquent. Patterns : Shared Kernel, Anti-Corruption Layer, Open Host Service.
-- **Domain Events** — `OrderConfirmed`, `PaymentReceived`. Lien avec le pattern [[Design Patterns Behavioral|Observer]] et les architectures event-driven.
-- **CQRS** — séparer les opérations de lecture (Query) des opérations d'écriture (Command).
+- **Domain Events** — `OrderConfirmed`, `PaymentReceived`. Lien avec le pattern [[Design Patterns Behavioral|Observer]] et les architectures event-driven — formalisés dans [[Event Sourcing]].
+- **[[CQRS]]** — séparer les opérations de lecture (Query) des opérations d'écriture (Command).
 - **Aggregate design** — les 4 règles de Vaughn Vernon : protéger les invariants, regrouper par transaction, référencer par ID entre Aggregates, viser de petits Aggregates.
