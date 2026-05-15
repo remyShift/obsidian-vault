@@ -3,105 +3,130 @@ created: 2025-05-15 00:00
 type: fleeting
 status: to-process
 tags: [inbox, refactoring, methode-mikado, craft, lyon-craft-2025]
+sources:
+  - https://www.vintasoftware.com/blog/the-mikado-method
+  - https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
+  - https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
+  - https://www.methodsandtools.com/archive/mikado.php
+  - Livre : "The Mikado Method" - Ola Ellnestam & Daniel Brolund (Manning)
 ---
 
 # La Méthode Mikado
 
+## Origine
+
+Créée par **Ola Ellnestam et Daniel Brolund**, formalisée dans leur livre *The Mikado Method* (Manning). Le nom vient du jeu de mikado (pick-up sticks) : tu ne peux pas attraper un bâton sans faire bouger les autres. Si tu forces, tu perds. La bonne approche c'est de comprendre ce qui bloque, et de commencer par là.
+
+---
+
 ## Principe
 
-La Méthode Mikado est une technique de refactoring pour aborder des transformations trop grosses pour être faites en une seule fois sans tout casser.
-
-Le nom vient du jeu de mikado : tu ne peux pas attraper un bâton sans faire bouger les autres. Si tu essaies de forcer, tu perds. La bonne approche, c'est d'identifier ce qui bloque, et de commencer par là.
+La méthode Mikado permet d'aborder des refactorings trop gros pour être faits en une seule transformation sans tout casser. Elle s'applique particulièrement aux changements qui prennent des jours, des semaines, voire des mois.
 
 L'idée centrale : **ne pas forcer le changement, préparer le terrain.**
+
+Le code doit rester dans un état stable et fonctionnel à chaque étape. Le revert n'est pas un échec, c'est une partie intégrante de la méthode.
 
 ---
 
 ## Le problème qu'elle résout
 
-On veut faire une modification dans le code. On commence, et rapidement on réalise que ça touche à d'autres choses, qui touchent à d'autres choses. On se retrouve avec 10 fichiers ouverts, un build cassé, et une diff illisible.
+On veut faire une modification. On commence, et très vite on réalise que ça touche à d'autres choses, qui touchent à d'autres choses. On se retrouve avec un build cassé, 10 fichiers ouverts, une diff illisible.
 
-Solutions habituelles (mauvaises) :
+Comme le décrit Martin Reigosa : *"whenever we fixed 1 problem, 2 more arose. We found ourselves sinking into quicksand."*
+
+Les réponses habituelles sont mauvaises :
 - Continuer quand même et espérer que ça tienne
-- Tout committer dans un état intermédiaire bancal
-- Abandonner et revenir au point de départ à la main
-
-La méthode Mikado donne une alternative structurée.
+- Committer dans un état intermédiaire bancal
+- Tout annuler à la main en espérant ne rien oublier
 
 ---
 
-## Fonctionnement
-
-### Le cycle de base
+## Le cycle de base
 
 ```
-1. Tenter la transformation souhaitée
-2. Constater ce qui casse ou ce qui bloque
-3. Annoter ces dépendances (dans un graphe ou une liste)
-4. Revenir à l'état initial propre (git checkout / revert)
-5. Traiter une des dépendances identifiées (recommencer depuis 1 sur elle)
-6. Une fois les dépendances résolues, faire la transformation initiale
+1. Définir l'objectif clairement
+2. Tenter la transformation directement
+3. Observer ce qui casse ou bloque
+4. Ajouter ces blocages comme prérequis dans le graphe
+5. Revenir à l'état initial (git reset --hard)
+6. Traiter un prérequis (feuille du graphe) - recommencer depuis 1
+7. Une fois un prérequis complété avec tous les tests au vert : commit
+8. Remonter dans le graphe jusqu'à l'objectif principal
 ```
 
-Le mot clé à l'étape 4 : **revenir proprement**. Pas de "je garde ça quand même", pas de compromis. L'état du code doit être sain à chaque étape.
+Point clé sur les premières itérations : elles servent à **découvrir**, pas à pousser du code. Chaque revert rapporte de l'information sur la structure réelle du problème.
 
-### Le graphe Mikado
+### La contrainte des time slots
 
-On représente les dépendances sous forme d'arbre :
+Vinta Software utilise des blocs de **10 minutes** par itération. Si le goal n'est pas atteint à la fin du timer, on revert et on documente. Cette contrainte n'est pas arbitraire : elle force à rester dans des baby steps et à ne jamais accumuler trop de WIP. C'est le même principe que Kanban appliqué au code.
+
+---
+
+## Le Graphe Mikado
+
+La représentation visuelle des dépendances. On part de l'objectif en haut, et on descend vers les prérequis.
 
 ```
 [Objectif principal]
-  └── [Dépendance A]
-        └── [Dépendance A1]
-        └── [Dépendance A2]
-  └── [Dépendance B]
+  └── [Prérequis A]
+        └── [Prérequis A1]  ← feuille (aucun enfant) : on commence ici
+        └── [Prérequis A2]  ← feuille
+  └── [Prérequis B]         ← feuille
 ```
 
-On commence toujours par les feuilles (les nœuds sans enfants), car ce sont les seules transformations qu'on peut faire sans prérequis.
+**On commence toujours par les feuilles** : ce sont les seules transformations sans dépendances non résolues. Une fois une feuille complète et les tests au vert, on la marque en vert, on commit, et on remonte vers son parent.
+
+Le graphe a aussi un effet secondaire : il constitue une roadmap lisible par les autres membres de l'équipe (voire par des non-techs) pour suivre l'avancement d'un refactoring complexe.
 
 ---
 
-## Exemple concret
+## Exemple concret (tiré de Vinta Software)
 
-**Contexte** : tu veux migrer une fonction utilitaire vers un nouveau module avec une signature différente. Elle est appelée à 15 endroits dans le code.
+**Contexte** : retirer un modèle Django `DailyProcessingStatus` devenu redondant, référencé dans des dizaines de fichiers et de tests.
 
-**Sans Mikado** : tu changes la signature, tu te retrouves avec 15 erreurs, tu commences à corriger en cascade, tu casses d'autres choses, le build est rouge pendant 2 heures.
+**Objectif défini** : chercher `DailyProcessingStatus` dans la codebase ne doit retourner aucun résultat en dehors de la déclaration du modèle lui-même.
 
-**Avec Mikado** :
-
-1. Tu tentes le changement de signature
-2. Tu constates : 15 appels cassés, 3 types à mettre à jour, 1 test d'intégration à revoir
-3. Tu notes ça dans ton graphe :
-
-```
-[Changer signature de formatPrice()]
-  └── [Mettre à jour les 15 appels]
-        └── [Mettre à jour les types associés]
-  └── [Mettre à jour le test d'intégration]
-```
-
-4. Tu reverts tout
-5. Tu commences par les feuilles : mise à jour des types
-6. Commit propre
-7. Tu continues feuille par feuille
-8. À la fin, tu fais la transformation initiale, et elle passe
+**Déroulement** :
+1. Timer 10 min. Tentative de suppression directe. Résultat : plusieurs tests cassés.
+2. On documente les blocages dans le graphe. On revert avec `git reset --hard`.
+3. Plusieurs rounds de 10 min pour cartographier toutes les dépendances.
+4. On commence à traiter les feuilles. Premier commit propre.
+5. On remonte progressivement. Tous les sous-objectifs passent au vert.
+6. L'objectif principal est atteint. La recherche ne retourne plus que la déclaration du modèle.
 
 ---
 
 ## Ce que ça change en pratique
 
-- Le code est **toujours dans un état qui compile et tourne** entre chaque étape
-- Les commits sont **petits, atomiques, lisibles**
-- Tu as une **carte** de ce qu'il reste à faire, pas juste une intuition
-- Le revert n'est pas un échec, c'est **partie intégrante de la méthode**
+- Le code compile et les tests passent **à chaque étape**
+- Les commits sont petits, atomiques, avec des messages qui correspondent exactement à un prérequis du graphe
+- On a une **carte** de ce qu'il reste à faire, pas juste une intuition
+- Les interruptions ne coûtent presque rien : on reprend au dernier nœud en cours
+- Ça facilite les pull requests partielles sur de gros refactorings
+
+---
+
+## Une nuance importante
+
+La méthode pousse à ne faire **que ce qui est nécessaire** pour atteindre l'objectif. Matthias Noback le souligne : certaines tâches qu'on a envie de faire pendant un refactoring (renommer des variables, améliorer la lisibilité ailleurs, uniformiser les conventions) ne sont pas des prérequis. Elles n'apparaissent pas dans le graphe Mikado. Les faire serait du scope creep déguisé.
 
 ---
 
 ## Lien avec d'autres pratiques
 
-- Fonctionne très bien avec le **TDD** : chaque feuille du graphe peut être traitée en cycle rouge/vert/refactor
-- Complémentaire au **Gamble TDD** : les baby steps du Gamble TDD correspondent aux feuilles du graphe Mikado
-- S'appuie sur une maîtrise de **git** : savoir revenir proprement est non-négociable
+- Complémentaire au **TDD** : chaque feuille du graphe peut être traitée en cycle rouge/vert/refactor
+- Même logique que **Kanban** : limiter le WIP à 1 pour maximiser le débit et garder le process sain
+- Complémentaire au **Gamble TDD** : les baby steps correspondent aux feuilles du graphe
+
+---
+
+## Ressources
+
+- Livre : *The Mikado Method* - Ola Ellnestam & Daniel Brolund (Manning) - source primaire
+- Article Vinta Software (exemple Django détaillé) : https://www.vintasoftware.com/blog/the-mikado-method
+- Article Matthias Noback (nuance sur le scope) : https://matthiasnoback.nl/2021/02/refactoring-the-mikado-method/
+- Article Martin Reigosa (exemple migration de module) : https://mreigosa.medium.com/smooth-code-refactors-using-the-mikado-method-a69095988718
 
 ---
 
@@ -110,3 +135,4 @@ On commence toujours par les feuilles (les nœuds sans enfants), car ce sont les
 - [ ] Trier : garder / promouvoir en Note Permanente / supprimer
 - [ ] Relier à des notes existantes si pertinent
 - [ ] Essayer sur un vrai cas de refactoring sur la mission
+- [ ] Envisager de lire le livre source
