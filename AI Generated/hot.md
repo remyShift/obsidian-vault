@@ -1,5 +1,5 @@
 ---
-updated: 14-05-2026
+updated: 15-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,9 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-14-05-2026 — obsidian-vault : Correction query Dataview orphelines avec `string(l)` pour les outlinks media.
+15-05-2026 — olis-lab : Stratégie de test CMS rédigée (27 scénarios Gherkin) + ticket infrastructure DB isolation validé.
 
 ## Projets actifs
+
+### olis-lab
+- Derniere session : 15-05-2026
+- Etat : feeds GMC + Klaviyo operationnels, plugin traduction fonctionnel, stratégie de test rédigée, infra test à valider avec la communauté Payload, bug S3 toujours bloquant
+- Prochaine etape : poster Discord Payload, puis tests unit transformateurs en premier
 
 ### obsidian-vault
 - Derniere session : 14-05-2026
@@ -21,11 +26,6 @@ tags: [meta, hot-cache, global]
 - Derniere session : 12-05-2026
 - Etat : theming dark/light operationnel, slides en cours de finalisation
 - Prochaine etape : remplacer placeholders (KicksFolio slide 19, LinkedIn slide 22), chronometrer les actes
-
-### olis-lab
-- Derniere session : 11-05-2026
-- Etat : Feeds GMC + Klaviyo operationnels, plugin traduction fonctionnel, bug S3 + auth = bloquants avant prod automatisation
-- Prochaine etape : corriger bug S3 double declaration XML, puis implementer CRON node-cron
 
 ### claude-obsidian
 - Derniere session : 02-05-2026
@@ -51,6 +51,5 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Traduction auto olis-lab : plugin installe, workflow manuel retenu, seed Legacy Payload non fait
-- Payload type narrowing olis-lab : plan finalise Option A, implementation a venir
+- Tests CMS olis-lab : stratégie définie (27 scénarios), infra en attente validation Discord Payload
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission

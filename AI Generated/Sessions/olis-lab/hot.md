@@ -1,5 +1,5 @@
 ---
-updated: 11-05-2026
+updated: 15-05-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,7 +7,7 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-11-05-2026 — Plugin traduction `@payload-enchants/translator` installé et fonctionnel avec OpenAI (gpt-4o-mini).
+15-05-2026 — Stratégie de test CMS rédigée (27 scénarios Gherkin, 5 zones) + ticket infrastructure test avec décision DB isolation.
 
 ## Etat du projet
 - Feed GMC : opérationnel, route `GET /sitemap/gmc-feed?lang=fr`, clé S3 `feeds/gmc-${lang}.xml`
@@ -17,25 +17,26 @@ tags: [meta, hot-cache]
 - Bug S3 double déclaration XML : toujours ouvert (bloquant avant automatisation)
 - Migration Content API v2.1 -> Merchant API avant le 18 août 2026
 - Plugin traduction : installé et fonctionnel, bouton "Translate" actif sur 5 collections
+- Tests CMS : stratégie + infrastructure définie, implémentation pas encore démarrée
 
 ## Faits recents importants
-- `@payload-enchants/translator` installé dans `apps/cms`, `OPENAI_API_KEY` required dans Zod (fail fast)
-- Workflow traduction : manuel (bouton UI), Suze relit — pas d'automatisation au save
-- CRON (node-cron) retenu comme trigger primaire feeds — suffisant pour cadence pull Google (1x/jour)
-- Legacy DB accessible (`src/lib/db/legacy.ts`) mais pas de script de seed Legacy → Payload
-- Auth sur `/sitemap/*` identifiée comme prérequis sécurité avant mise en prod du CRON
+- Plan de test rédigé : 27 scénarios Gherkin sur 5 zones critiques (computeCartSnapshot, 2 transformateurs, uniquePerCategory, sync endpoints)
+- `mongodb-memory-server` écarté pour les tests Payload — adapter Mongoose nécessite une vraie connexion
+- Approche retenue : DB dédiée `olis_lab_test` via env var, cleanup par tracking IDs en `afterEach`
+- Payload n'a pas de doc officielle testing pour les app developers
+- Message Discord rédigé pour valider l'approche avec la communauté Payload
 
 ## Decisions actives
-- Traductions : plugin + bouton manuel, gpt-4o-mini, 5 collections (brands, categories, subcategories, product-actives, products)
-- Trigger automatisation feeds : CRON node-cron (primaire) + admin button Payload (fallback manuel)
-- Option A (Payload hook) = évolution future si fraîcheur temps-réel devient un besoin business
+- Tests : dedicated MongoDB test DB, seed via Local API, pas de factories pour l'instant
+- Traductions : plugin + bouton manuel, gpt-4o-mini, 5 collections
+- Trigger automatisation feeds : CRON node-cron (primaire) + admin button Payload (fallback)
 - Shared secret header sur `/sitemap/*` requis avant prod
 - Pattern langue feeds : `?lang=fr|en`, clé S3 `feeds/{platform}-${lang}.xml`
 
 ## Prochaines etapes
+- Poster message Discord Payload + attendre retour Michele avant d'implémenter les tests
+- Une fois validé : commencer par tests unit transformateurs (zéro infra)
 - Résoudre bug S3 double déclaration XML (priorité #1, bloquant)
-- Ajouter shared secret header sur les endpoints feed (sécurité)
-- Implémenter CRON node-cron dans server Express (deux feeds)
-- Ajouter bouton admin Payload "Regenerate feeds"
+- Ajouter shared secret header sur les endpoints feed
+- Implémenter CRON node-cron dans server Express
 - Implémenter feed Meta (`feeds/meta-${lang}.xml`)
-- Valider GMC + Klaviyo dans leurs sandboxes respectifs
