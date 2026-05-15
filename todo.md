@@ -18,9 +18,10 @@ tags:
 - [ ] Portfolio musique d'ambiance
 - [ ] Portfolio settings pour gérer la musiques et volumes des sons
 - [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
-- [ ] primitives
-- [ ] memoize
-- [ ] event driven
+- [ ] Primitives
+- [ ] Memoize
+- [ ] Event driven
+- [ ] Expand DDD
 ## Work
 
 - [ ] 

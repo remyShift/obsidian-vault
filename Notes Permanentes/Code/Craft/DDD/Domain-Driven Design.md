@@ -1,7 +1,6 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-
 Le **Domain-Driven Design** est une approche de conception qui place le **domaine métier** au centre de toutes les décisions techniques. Formalisé par Eric Evans en 2003.
 
 > La complexité d'un logiciel vient rarement de la technique. Elle vient de la **complexité du domaine métier** qu'il modélise.
