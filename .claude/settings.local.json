@@ -19,7 +19,8 @@
       "Skill(evolve:*)",
       "Skill(recap)",
       "Skill(recap:*)",
-      "Bash(pnpm run *)"
+      "Bash(pnpm run *)",
+      "mcp__lean-ctx__ctx_multi_read"
     ]
   }
 }
