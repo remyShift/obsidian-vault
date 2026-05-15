@@ -28,7 +28,7 @@ Un domaine riche peut très bien gérer sa propre logique en pur TypeScript, san
 
 ---
 
-## Le vrai besoin derrière : l'inversion de dépendance
+### Le vrai besoin derrière : l'inversion de dépendance
 
 Ce qu'on cherche réellement avec cette approche c'est l'**inversion de dépendance** : découpler les composants des implémentations concrètes pour pouvoir tester, substituer, isoler.
 
@@ -36,10 +36,10 @@ Utiliser un Store pour faire de l'injection de dépendances, c'est overkill.
 
 ---
 
-## Les limites des outils de DI natifs
+### Les limites des outils de DI natifs
 
 Les trois frameworks principaux proposent des outils de DI, mais chacun a ses limites :
-- **React** : nesting de contextes, typing complexe
+- **React** : nesting de contextes, typing complexe, le context a besoins d'une valeur par défaut
 - **Vue** : null checks, typage imprécis
 - **Angular** : lazy loading (tout est instancié même si pas utilisé)
 
@@ -59,7 +59,7 @@ Chaque approche a ses trade-offs. L'idée : choisir l'outil adapté au problème
 
 ---
 
-## Ce que ça change en architecture front
+### Ce que ça change en architecture front
 
 - Le Store reste utile pour ce qu'il fait bien : état partagé, réactivité, DevTools
 - Le domaine n'a pas à dépendre du Store pour exister
@@ -73,12 +73,3 @@ Chaque approche a ses trade-offs. L'idée : choisir l'outil adapté au problème
 - **Dépendance sans Couplage** : même problématique, appliquée au front
 - **CQRS** : le pattern dispatch/action/reducer du Store ressemble à une implémentation naïve de CQRS - mais sans la rigueur de séparation des responsabilités
 - **DTO** : les payloads d'actions Redux sont des formes de DTOs
-
----
-
-## À faire
-
-- [ ] Trier : garder / promouvoir en Note Permanente / supprimer
-- [ ] Relier à "Dépendance sans Couplage", "CQRS"
-- [ ] Explorer Piqure pour comprendre l'approche DI agnostique framework
-- [ ] Identifier sur la mission les endroits où un Store est utilisé pour de la logique métier
