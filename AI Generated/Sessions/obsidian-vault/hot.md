@@ -1,5 +1,5 @@
 ---
-updated: 14-05-2026
+updated: 15-05-2026
 project: obsidian-vault
 tags: [meta, hot-cache]
 ---
@@ -7,21 +7,27 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Derniere mise a jour
-14-05-2026 — Correction query Dataview orphelines : `string(l)` au lieu de `l.path` pour filtrer les outlinks media.
+15-05-2026 — Intégration complète des 15 notes Inbox dans Notes Permanentes (6 clusters, DDD/Craft/Tests/Legacy/Agilité/Infra).
 
 ## Etat du projet
-- Vault en maintenance continue, pas de chantier structurant actif
-- Queries Dataview Sommaire.md a jour et fonctionnelles
+- Vault en bonne santé : Inbox vidée (hors Rust)
+- Nouveau dossier Code/Dev Knowledge/Infra/ créé avec Terraform.md et Infra.md
+- Réseau de liens dense créé entre les notes DDD (CQRS, Event Sourcing, Value Object, DTO)
 
 ## Faits recents importants
-- `l.path` est null dans Dataview pour les outlinks vers des fichiers non-markdown (images, etc.) — toujours utiliser `string(l)`
-- Pattern fiable pour filtrer les medias dans les outlinks : `all(file.outlinks, (l) => contains(string(l), ".png") OR ...)`
-- ADRs retro n'ont pas de valeur quand l'equipe est deja alignee — bon timing = pendant ou avant la decision
+- `l.path` est null dans Dataview pour les outlinks non-markdown — toujours utiliser `string(l)`
+- Style notes permanentes : liens [[NomNote]] inline dans le texte, jamais de section "Lien avec d'autres concepts"
+- CheckoutProvider olis-lab/apps/web : bon usage de Context (DI, pas state bag, tout memoïsé)
+- Store Jotai olis-lab propre : zéro logique métier, purs conteneurs atomiques
 
 ## Decisions actives
-- Query "Notes totalement deconnectees" : filtre actif avec `string(l)` + extensions media
-- Pas d'ADR standalone : integrer directement dans le plan Notion au moment de la decision
+- Pas de section "Sources" ni "Lien avec d'autres concepts" dans les notes permanentes
+- SDK.md standalone (pas de lien DTO forcé)
+- IaC positionné comme approche de gestion de l'infra, pas comme définition de l'infra
+- Pour les prochaines intégrations Inbox : déplacer avec mv/Write+rm, jamais créer en doublon
 
 ## Prochaines etapes
-- Aucune action vault specifique prioritaire
-- Focus sur olis-lab : bug S3, CRON automatisation, Payload type narrowing
+- Traiter les notes Rust dans Inbox/Rust/
+- Alimenter Infra/ (CI/CD, Docker, Kubernetes)
+- Vérifier consommation de localCartAtom dans olis-lab (re-render potentiel)
+- Focus olis-lab : bug S3, CRON automatisation, Payload type narrowing

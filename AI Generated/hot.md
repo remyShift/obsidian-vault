@@ -8,19 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-15-05-2026 — olis-lab : Stratégie de test CMS rédigée (27 scénarios Gherkin) + ticket infrastructure DB isolation validé.
+15-05-2026 — obsidian-vault : Intégration de 15 notes Inbox dans Notes Permanentes, nouveau dossier Infra/ créé.
 
 ## Projets actifs
+
+### obsidian-vault
+- Derniere session : 15-05-2026
+- Etat : Inbox vidée (hors Rust), réseau de liens DDD dense créé, dossier Infra/ initialisé
+- Prochaine etape : traiter Inbox/Rust/, alimenter Infra/ (CI/CD, Docker, K8s)
 
 ### olis-lab
 - Derniere session : 15-05-2026
 - Etat : feeds GMC + Klaviyo operationnels, plugin traduction fonctionnel, stratégie de test rédigée, infra test à valider avec la communauté Payload, bug S3 toujours bloquant
 - Prochaine etape : poster Discord Payload, puis tests unit transformateurs en premier
-
-### obsidian-vault
-- Derniere session : 14-05-2026
-- Etat : vault stable, query "notes deconnectees" corrigee (string(l) pour filtrer les medias)
-- Prochaine etape : aucune action specifique, maintenance continue
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
@@ -53,3 +53,4 @@ tags: [meta, hot-cache, global]
 - Feed Meta olis-lab : pas encore implemente
 - Tests CMS olis-lab : stratégie définie (27 scénarios), infra en attente validation Discord Payload
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
+- localCartAtom olis-lab : consommation à vérifier (re-render potentiel si trop de composants)
