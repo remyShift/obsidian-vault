@@ -24,6 +24,7 @@ tags:
 - [ ] Expand DDD
 - [ ] Monad
 - [ ] Immutabilité
+- [ ] Coréen note sur 이것 / 저것
 ## Work
 
 - [ ] 
