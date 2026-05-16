@@ -1,7 +1,6 @@
 ---
 tags: [SoftwareCraft, FunctionalProgramming, CleanCode]
 ---
-
 Un objet immuable est un objet dont l'état **ne peut pas être modifié après sa création**. Pour "modifier" quelque chose, on crée un nouvel objet avec les nouvelles valeurs. L'original reste intact.
 
 C'est le comportement natif des [[Primitives|primitives]] en JavaScript, et c'est ce qu'on cherche à reproduire sur nos objets et structures de données.
