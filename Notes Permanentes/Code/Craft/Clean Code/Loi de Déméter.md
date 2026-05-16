@@ -1,7 +1,6 @@
 ---
 tags: [SoftwareCraft, CleanCode]
 ---
-
 La **Loi de Déméter** (Law of Demeter) est aussi appelée **principe de la moindre connaissance**.
 
 > « Ne parle qu'à tes amis immédiats. »
