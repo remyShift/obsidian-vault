@@ -75,7 +75,7 @@ En pratique, les deux créent les mêmes crashs (`Cannot read property of null/u
 const city = user?.address?.city ?? 'Non renseigné';
 ```
 
-L'existence même de `null` et `undefined` en JS est un signal : un retour de fonction qui peut être `null` est souvent le symptôme qu'un [[Monad|Maybe/Option monad]] aurait du sens, pour forcer l'appelant à gérer l'absence explicitement.
+L'existence même de `null` et `undefined` en JS est un signal --> un retour de fonction qui peut être `null`/`undefined` est souvent le symptôme qu'un [[Monad|Maybe/Option monad]] aurait du sens --> on veut forcer l'appelant à gérer l'absence explicitement.
 
 ---
 
