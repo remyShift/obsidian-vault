@@ -16,7 +16,7 @@ tags: [meta, hot-cache]
 
 ## Faits recents importants
 - `l.path` est null dans Dataview pour les outlinks non-markdown — toujours utiliser `string(l)`
-- Style notes permanentes : liens [[NomNote]] inline dans le texte, jamais de section "Lien avec d'autres concepts"
+- Style notes permanentes : Nom Note inline dans le texte, jamais de section "Lien avec d'autres concepts"
 - CheckoutProvider olis-lab/apps/web : bon usage de Context (DI, pas state bag, tout memoïsé)
 - Store Jotai olis-lab propre : zéro logique métier, purs conteneurs atomiques
 

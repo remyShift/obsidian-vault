@@ -1,7 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
-Un commentaire qui explique **ce que** fait le code plutôt que **pourquoi** une décision a été prise. Si le code a besoin d'un commentaire pour être compris, c'est le code qui est mal écrit, pas l'absence de commentaire. Cf. [[L'utilisation des commentaires]], [[L'art du nommage]].
+Un commentaire qui explique **ce que** fait le code plutôt que **pourquoi** une décision a été prise. Si le code a besoin d'un commentaire pour être compris, c'est le code qui est mal écrit, pas l'absence de commentaire. Cf. [[L’utilisation des commentaires]], [[L’art du nommage]].
 
 ```js
 // ❌ Comments as Deodorant — les commentaires masquent un code mal nommé
