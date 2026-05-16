@@ -112,3 +112,4 @@ source: ai
 - Never merge two different conversations into the same file, even if they share the same date
 - When updating, always rewrite the full note — never just append
 - Never use this '—' prefer use '-'
+- Never reference or link an obsidian note in the wrap summary or in any AI Generated/ notes

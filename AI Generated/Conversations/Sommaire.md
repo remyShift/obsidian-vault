@@ -33,3 +33,4 @@ Synthèses de conversations générées via `/wrap`.
 | 11-05-2026 | [[AI Generated/Conversations/11-05-2026 - Notes de veille BTBT Podcast]]                     |
 | 12-05-2026 | [[AI Generated/Conversations/12-05-2026 - LyonCraft - Jour J et suites]]                     |
 | 15-05-2026 | [[AI Generated/Conversations/15-05-2026 - Notes de lecture Lyon Craft]]                      |
+| 16-05-2026 | [[AI Generated/Conversations/16-05-2026 - Notes Craft et atomisation Code Smells]]           |
