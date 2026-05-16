@@ -1,7 +1,8 @@
 ---
-tags: [SoftwareCraft, Architecture, DesignPatterns]
+tags:
+  - SoftwareCraft
+  - DesignPatterns
 ---
-
 Dans une architecture event-driven, les composants ne se parlent pas directement. Un composant **émet un événement** ("quelque chose s'est passé"), d'autres composants **réagissent** à cet événement sans que l'émetteur sache qui les écoute ou combien ils sont.
 
 C'est une application directe du pattern [[Design Patterns Behavioral|Observer]] à l'échelle de l'architecture.
