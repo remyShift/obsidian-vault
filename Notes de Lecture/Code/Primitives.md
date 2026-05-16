@@ -61,7 +61,7 @@ typeof new String("hello") // "object" — wrapper object
 "hello" === new String("hello") // false
 ```
 
-Ne jamais utiliser `new String()`, `new Number()`, `new Boolean()` — aucun intérêt en pratique, source de confusion.
+Ne jamais utiliser `new String()`, `new Number()`, `new Boolean()`, aucun intérêt en pratique, source de confusion.
 
 ---
 
@@ -81,4 +81,4 @@ L'existence même de `null` et `undefined` en JS est un signal : un retour de fo
 
 ## Lien avec l'immutabilité
 
-Les primitives sont **nativement immuables** — on ne peut pas muter `5`, on peut seulement réassigner la variable qui le contenait. C'est le comportement qu'on veut reproduire sur nos objets métier avec `Object.freeze()` ou en rendant les propriétés non-réassignables. Cf. [[Immutabilité]].
+Les primitives sont **nativement immuables**, on ne peut pas muter `5`, on peut seulement réassigner la variable qui le contenait. C'est le comportement qu'on veut reproduire sur nos objets métier avec `Object.freeze()` ou en rendant les propriétés non-réassignables. Cf. [[Immutabilité]].
