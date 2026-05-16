@@ -161,7 +161,7 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 > Les fleurs sont jolies.
 
 9
-> [!question]- 정치의는 재미없어요
+> [!question]- 저는 정치가 재미없어요
 > La politique c'est pas intéressant.
 
 10
