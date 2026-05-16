@@ -179,4 +179,3 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 13
 > [!question]-  고양이는 자주 피곤해요
 > Le chat est souvent fatigué.
-
