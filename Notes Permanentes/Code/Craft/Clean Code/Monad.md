@@ -1,7 +1,7 @@
 ---
-tags: [SoftwareCraft, FunctionalProgramming]
+tags:
+  - SoftwareCraft
 ---
-
 Un Monad est un pattern de programmation fonctionnelle qui permet de **chaîner des opérations sur une valeur encapsulée** tout en gérant automatiquement un contexte particulier : absence de valeur, erreur, asynchronicité.
 
 Le terme fait peur. En pratique, c'est une abstraction que tu utilises déjà sans le savoir.
@@ -26,7 +26,7 @@ Sans `flatMap`, chaîner des `then` qui retournent eux-mêmes des Promises produ
 
 ---
 
-## Maybe / Option — gérer l'absence
+## Maybe / Option - gérer l'absence
 
 Le Monad le plus utile au quotidien. Il encapsule une valeur qui peut être présente (`Some(valeur)`) ou absente (`None`). Il force l'appelant à gérer les deux cas, au lieu de laisser `null` se propager et crasher ailleurs.
 
@@ -63,7 +63,7 @@ Le lien avec [[Primitives]] : là où `null` ou `undefined` peuvent se propager 
 
 ---
 
-## Either — gérer les erreurs sans exceptions
+## Either - gérer les erreurs sans exceptions
 
 Là où `Maybe` gère l'absence, `Either` gère le succès ou l'échec avec information sur l'erreur. Un `Either` est soit un `Right(valeur)` (succès), soit un `Left(erreur)` (échec).
 
@@ -110,4 +110,4 @@ Pour être un vrai Monad, la structure doit respecter trois lois algébriques (i
 
 Pas besoin de librairie fonctionnelle complète pour tirer parti de ces idées. Un `Maybe` maison de 20 lignes peut suffire. Le vrai bénéfice : moins de `null` checks dispersés, moins de bugs silencieux, un code qui **explicite** dans son flux ce qu'il peut ou ne peut pas produire.
 
-À lier avec [[Immutabilité]] : les Monads produisent des nouvelles valeurs à chaque transformation, ils ne mutent jamais leur contenu.
+À lier avec [[Immutabilité]], les Monads produisent des nouvelles valeurs à chaque transformation, ils ne mutent jamais leur contenu.

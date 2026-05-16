@@ -1,5 +1,7 @@
 ---
-tags: [SoftwareCraft, Performance, FunctionalProgramming]
+tags:
+  - SoftwareCraft
+  - CleanCode
 ---
 Memoize = mettre en cache le résultat d'une fonction pour un ensemble d'arguments donnés. Si la fonction est appelée à nouveau avec les mêmes arguments, on retourne le résultat en cache au lieu de recalculer.
 
@@ -57,7 +59,7 @@ La récursion avec memoize sur Fibonacci est l'exemple canonique : sans cache, l
 
 Un cache qui grossit indéfiniment est un memory leak. Sur des fonctions appelées avec beaucoup d'arguments différents, il faut borner le cache.
 
-Stratégies courantes : **LRU** (Least Recently Used — on évicte la valeur la moins récemment utilisée quand on atteint la limite), TTL (time-to-live, on invalide après un délai). La plupart des librairies de memoize sérieuses proposent ces options.
+Stratégies courantes : **LRU** (Least Recently Used, on évicte la valeur la moins récemment utilisée quand on atteint la limite), TTL (time-to-live, on invalide après un délai). La plupart des librairies de memoize sérieuses proposent ces options.
 
 ```js
 // lodash — cache par défaut est une Map sans limite, à utiliser avec précaution
@@ -87,4 +89,4 @@ En Node.js, deux instances du même service ne partagent pas le même memoize. S
 
 `useMemo` et `useCallback` sont des implémentations de memoize au niveau des composants, avec le tableau de dépendances comme clé de cache. La règle de pureté s'applique aussi : `useMemo` ne doit pas avoir d'effets de bord.
 
-La plupart du temps, la vraie optimisation à faire est ailleurs (architecture, requêtes, algorithmes). Ne pas memoize par défaut — profiler d'abord.
+La plupart du temps, la vraie optimisation à faire est ailleurs (architecture, requêtes, algorithmes). Ne pas memoize par défaut, profiler d'abord.

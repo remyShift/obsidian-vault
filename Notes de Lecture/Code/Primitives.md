@@ -1,8 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, DDD]
 ---
-
-En JavaScript, une **primitive** est une valeur non-objet sans méthodes propres : `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`. Elles sont **immuables** et passées **par valeur** — copier une primitive, c'est copier sa valeur, pas une référence.
+En JavaScript, une **primitive** est une valeur non-objet sans méthodes propres : `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`. Elles sont **immuables** et passées **par valeur**, copier une primitive, c'est copier sa valeur, pas une référence.
 
 ```js
 let a = 5;
