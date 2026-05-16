@@ -1,7 +1,6 @@
 ---
 tags: [SoftwareCraft, Performance, FunctionalProgramming]
 ---
-
 Memoize = mettre en cache le résultat d'une fonction pour un ensemble d'arguments donnés. Si la fonction est appelée à nouveau avec les mêmes arguments, on retourne le résultat en cache au lieu de recalculer.
 
 Ce n'est pas de l'optimisation prématurée si c'est appliqué là où c'est justifié : fonctions **pures** avec calcul **coûteux** et **arguments répétitifs**.

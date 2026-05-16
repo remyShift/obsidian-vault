@@ -1,5 +1,7 @@
 ---
-tags: [SoftwareCraft, FunctionalProgramming, CleanCode]
+tags:
+  - SoftwareCraft
+  - CleanCode
 ---
 Un objet immuable est un objet dont l'état **ne peut pas être modifié après sa création**. Pour "modifier" quelque chose, on crée un nouvel objet avec les nouvelles valeurs. L'original reste intact.
 
@@ -103,7 +105,7 @@ const updated = items.map(i => i.id === id ? { ...i, ...changes } : i); // updat
 const updatedUser = { ...user, email: newEmail };
 ```
 
-`push`, `pop`, `splice`, `sort`, `reverse` sont **mutantes** — à éviter sur des données partagées ou qui transitent entre composants.
+`push`, `pop`, `splice`, `sort`, `reverse` sont **mutantes**. à éviter sur des données partagées ou qui transitent entre composants.
 
 ---
 
