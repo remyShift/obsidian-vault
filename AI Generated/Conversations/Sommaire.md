@@ -36,3 +36,4 @@ Synthèses de conversations générées via `/wrap`.
 | 16-05-2026 | [[AI Generated/Conversations/16-05-2026 - Notes Craft et atomisation Code Smells]]           |
 | 18-05-2026 | [[AI Generated/Conversations/18-05-2026 - Atomisation et enrichissement notes DDD]]          |
 | 18-05-2026 | [[AI Generated/Conversations/18-05-2026 - Post LinkedIn LyonCraft après l'événement]]        |
+| 18-05-2026 | [[AI Generated/Conversations/18-05-2026 - Post LinkedIn LyonCraft insights non romantisés]]  |
