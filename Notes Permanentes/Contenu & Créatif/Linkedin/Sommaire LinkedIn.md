@@ -37,9 +37,6 @@ LIMIT 10
 
 ```dataview
 TABLE
-  date AS "📅 Date",
-  likes AS "❤️ Likes",
-  comments AS "💬 Comms"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
 WHERE !impressions
 SORT date DESC
@@ -65,7 +62,7 @@ SORT date DESC
 | [[11-08-2024 - clavier]]            | Mon clavier commence à se faire vieux si vous avez des recommandations de bon claviers je dis pas no                     |
 | [[12-08-2024 - nouvelle]]           | Nouvelle semaine = Nouveaux objectifs ! 👇🏼                                                                             |
 | [[13-08-2024 - vois]]               | Je vois passer beaucoup de posts dissociant le 'Free' dans freelance comme de la liberté ultime… mai                     |
-| [[14-08-2024 - quoi]]               | C’est quoi ce nuage de 200 points ? Une nouvelle constellation à des années-lumière de chez nous ? P                     |
+| [[14-08-2024 - obsidian]]               | C’est quoi ce nuage de 200 points ? Une nouvelle constellation à des années-lumière de chez nous ? P                     |
 | [[15-08-2024 - connaissezvous]]     | Connaissez-vous la théorie des vitres brisées ? Laissez-moi vous expliquer et comment cela s'appliqu                     |
 | [[17-08-2024 - sais]]               | Je sais enfin faire des tests, et c'est grâce aux vidéos de David Grammatico !                                           |
 | [[18-08-2024 - tbd]]                | Explication du Trunk-Based Development : développer sur le tronc pour itérer vite et réduire la dette de merge           |
