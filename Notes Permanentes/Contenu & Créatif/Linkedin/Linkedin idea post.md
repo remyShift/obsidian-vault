@@ -36,3 +36,5 @@ tags:
 - [x] Lyon Craft
 - [x] réponse question entretien par rapport à l’ia
 - [x] le tiret de l’ia —
+- [ ] fausse modestie et accepté les compliments suite à LyonCraft
+- [ ] Parcours avec anecdote non romancés par rapport à LyonCraft
