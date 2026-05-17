@@ -3,7 +3,7 @@ date: 2024-09-05
 likes: 12
 comments: 9
 reposts: 0
-impressions: null
+impressions: 523
 url: https://www.linkedin.com/feed/update/urn:li:activity:7237349986600984576/
 tags:
   - Linkedin

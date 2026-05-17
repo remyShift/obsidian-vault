@@ -6,7 +6,10 @@ Pour avoir des idées tu peux regarder cette note [[Linkedin idea post]].
 
 ## 🏆 Top 10 - Meilleurs posts
 
-> Score pondéré : `impressions + likes × 30 + commentaires × 70`. Un like vaut 30 impressions, un commentaire vaut 70.
+> [!info]- Score pondéré
+>  `impressions + likes × 30 + commentaires × 70`
+> Un like vaut 30 impressions, un commentaire vaut 70. 
+> 
 
 ```dataview
 TABLE
@@ -20,7 +23,7 @@ SORT (default(impressions, 0) * 0.5 + default(likes, 0) * 30 + default(comments,
 LIMIT 10
 ```
 
-## 🏆 Top 10 - Meilleurs posts en termes d'impressions
+### 🏆 Top 10 - Meilleurs posts en termes d'impressions
 
 ```dataview
 TABLE
@@ -32,8 +35,20 @@ FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
 SORT default(impressions, 0) DESC
 LIMIT 10
 ```
+## 💩 Top 10 - Pires posts en termes d'impressions
 
-## 👻 Posts sans impressions
+```dataview
+TABLE
+  date AS "📅 Date",
+  likes AS "❤️ Likes",
+  comments AS "💬 Comms",
+  default(impressions, "—") AS "👁️ Impressions"
+FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
+SORT default(impressions, 0) ASC
+LIMIT 10
+```
+
+### 👻 Posts sans impressions
 
 ```dataview
 TABLE
