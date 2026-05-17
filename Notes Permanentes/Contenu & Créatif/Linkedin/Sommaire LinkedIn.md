@@ -16,7 +16,7 @@ TABLE
   default(impressions, "—") AS "👁️ Impressions"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
 SORT default(impressions, 0) DESC
-LIMIT 25
+LIMIT 20
 ```
 
 ---
