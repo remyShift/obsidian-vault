@@ -6,17 +6,18 @@ Pour avoir des idées tu peux regarder cette note [[Linkedin idea post]].
 
 ## 🏆 Top 25 - Meilleurs posts (impressions & engagement)
 
-> Tri par impressions décroissantes. Pour les posts anciens sans données d'impressions, le tri se fait sur les likes.
+> Score pondéré : `impressions + likes × 30 + commentaires × 70`. Un like vaut 30 impressions, un commentaire vaut 70.
 
 ```dataview
 TABLE
   date AS "📅 Date",
   likes AS "❤️ Likes",
   comments AS "💬 Comms",
-  default(impressions, "—") AS "👁️ Impressions"
+  default(impressions, "—") AS "👁️ Impressions",
+  (default(impressions, 0) + default(likes, 0) * 30 + default(comments, 0) * 70) AS "⭐ Score"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
-SORT default(impressions, 0) DESC
-LIMIT 20
+SORT (default(impressions, 0) + default(likes, 0) * 30 + default(comments, 0) * 70) DESC
+LIMIT 25
 ```
 
 ---
