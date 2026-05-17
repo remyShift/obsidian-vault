@@ -44,6 +44,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab               | [[AI Generated/Sessions/olis-lab/15-05-2026_14-13]]               |
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/15-05-2026_21-35]]         |
 | piqure                 | [[AI Generated/Sessions/piqure/15-05-2026_22-33]]                 |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/18-05-2026_00-34]]         |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |

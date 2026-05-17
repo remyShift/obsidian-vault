@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-15-05-2026 — piqure : deux PRs prêtes (has() en attente de merge, circular deps à ouvrir), reviewer répondu, squash appris.
+18-05-2026 — obsidian-vault : Dataview pondéré LinkedIn + 275 fichiers Posts renommés avec titres descriptifs.
 
 ## Projets actifs
 
@@ -18,9 +18,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 15-05-2026
-- Etat : Inbox vidée (hors Rust), réseau de liens DDD dense créé, dossier Infra/ initialisé
-- Prochaine etape : traiter Inbox/Rust/, alimenter Infra/ (CI/CD, Docker, K8s)
+- Derniere session : 18-05-2026
+- Etat : Sommaire LinkedIn enrichi (score pondéré, section sans impressions), 275 posts renommés
+- Prochaine etape : compléter impressions manquantes, traiter Inbox/Rust/, alimenter Infra/
 
 ### olis-lab
 - Derniere session : 15-05-2026
