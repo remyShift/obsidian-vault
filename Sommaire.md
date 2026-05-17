@@ -1,4 +1,4 @@
-Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques.
+Index principal du vault
 
 ---
 
@@ -8,12 +8,6 @@ Index principal du vault. Hub central vers les sous-sommaires et vues dynamiques
 - [[AI Sommaire|🤖 AI Generated]]
 - [[Notes de Lecture/Sommaire|📖 Notes de Lecture]]
 - [[TODO|⌛ TODO !]]
-
----
-
-## Skills
-
-- [[Skills/wrap/SKILL|wrap]]
 
 ---
 ## Activité récente
