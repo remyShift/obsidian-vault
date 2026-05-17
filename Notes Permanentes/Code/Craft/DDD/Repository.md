@@ -1,21 +1,16 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+Un Repository est une abstraction qui **isole la logique métier de la persistance**. Le domaine ne sait pas si les données viennent de MongoDB, d'une API externe, d'un cache Redis, ou d'un fichier. Il demande un objet, il le reçoit.
 
-Concept issu du [[Domain-Driven Design]]. Un Repository est une abstraction qui **isole la logique métier de la persistance**. Le domaine ne sait pas si les données viennent de MongoDB, d'une API externe, d'un cache Redis, ou d'un fichier. Il demande un objet, il le reçoit.
-
-C'est une application directe du Dependency Inversion Principle ([[Les Principes SOLID]]) : la couche domaine dépend d'une interface abstraite, pas d'une implémentation concrète.
-
----
-
-## Ce que le Repository fait
+C'est une application directe du Dependency Inversion Principle ([[Les Principes SOLID]]) --> la couche domaine dépend d'une interface abstraite, pas d'une implémentation concrète.
 
 Il cache trois choses au domaine :
 - La technologie de persistance (MongoDB, SQL, API...)
 - La structure de stockage (collections, tables, schémas...)
 - Les détails de requêtage (queries, indexes, projections...)
 
-Le domaine ne voit qu'un contrat : "donne-moi un Order par ID", "sauvegarde cet Order".
+Au final le domaine ne voit qu'un contrat comme : "donne-moi un Order par ID", "sauvegarde cet Order".
 
 ---
 
@@ -73,36 +68,13 @@ class MongoOrderRepository implements OrderRepository {
 
 ---
 
-## Application concrète chez Oli's Lab
-
-Le pattern load/execute/return établi par Diego suit exactement cette logique :
-
-```typescript
-// Controller / Use case
-async function confirmOrder(orderId: string): Promise<void> {
-  // load : le repository cache le détail MongoDB
-  const order = await orderRepository.findById(new OrderId(orderId))
-  if (!order) throw new NotFoundError(`Order ${orderId} not found`)
-
-  // execute : logique métier pure, zéro IO
-  order.confirm()
-
-  // return : le repository cache l'upsert MongoDB
-  await orderRepository.save(order)
-}
-```
-
-La logique métier dans `execute` est testable sans toucher à MongoDB. C'est exactement l'objectif du Repository : rendre la couche domaine indépendante de l'infrastructure.
-
----
-
 ## Règles d'un bon Repository
 
-**Un Repository par Aggregate Root :** il n'y a pas de `OrderItemRepository`. Les `OrderItem` ne sont accessibles et modifiables qu'à travers `OrderRepository`, parce qu'ils font partie de l'[[Aggregate]] `Order`.
+**Un Repository par Aggregate Root :** il n'y a pas de `OrderItemRepository`, les `OrderItem` ne sont accessibles et modifiables qu'à travers `OrderRepository`, parce qu'ils font partie de l'[[Aggregate]] `Order`.
 
 **L'interface appartient au domaine, l'implémentation à l'infrastructure :** le dossier `domain/` contient l'interface, le dossier `infrastructure/` contient la classe MongoDB/Mongoose.
 
-**Retourner des objets domaine, pas des documents :** le Repository fait le mapping. Un service ne reçoit jamais un document Mongoose brut, il reçoit une `Order`.
+**Retourner des objets domaine, pas des documents :** le Repository fait le mapping, un service ne reçoit jamais un document Mongoose brut, il reçoit une `Order`.
 
 **Pas de logique métier dans le Repository :** filtrer des commandes selon une règle métier complexe ne se fait pas dans le Repository. On charge les objets, et la logique s'applique sur les objets domaine.
 
@@ -110,7 +82,7 @@ La logique métier dans `execute` est testable sans toucher à MongoDB. C'est ex
 
 ## Ce que ça change pour les tests
 
-Sans Repository, tester la logique métier nécessite une vraie connexion MongoDB. Avec Repository, on mocke l'interface :
+Sans Repository, tester la logique métier nécessite une vraie connexion MongoDB, alors qu'avec un Repository, on mock l'interface :
 
 ```typescript
 // Dans les tests unitaires
@@ -141,10 +113,11 @@ it('should confirm a pending order', async () => {
 
 ---
 
-## Erreurs classiques
+### Les Erreurs classiques
 
-**Injecter directement un model Mongoose dans un service :** `OrderService` qui appelle `OrderModel.findOne(...)` directement. La logique métier est couplée à MongoDB, les tests nécessitent une vraie base.
+**Injecter directement un model Mongoose dans un service :** `OrderService` qui appelle `OrderModel.findOne(...)` directement
+- La logique métier est couplée à MongoDB, les tests nécessitent une vraie base.
 
 **Un Repository fourre-tout :** `findByStatusAndCustomerIdAndDateRange...`. Si les queries deviennent très spécifiques à des besoins d'affichage, c'est souvent le signe qu'on a besoin d'un Read Model séparé ([[CQRS]]).
 
-**Exposer des méthodes qui ne correspondent pas à des opérations métier :** `update(id, partialData)`. Le Repository ne fait pas de PATCH générique. Il sauvegarde un Aggregate entier après que le domaine a appliqué ses règles.
+**Exposer des méthodes qui ne correspondent pas à des opérations métier :** `update(id, partialData)`. Le Repository ne fait pas de PATCH générique, il sauvegarde un Aggregate entier après que le domaine a appliqué ses règles.

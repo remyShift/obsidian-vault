@@ -1,14 +1,10 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+Un Domain Service contient de la **logique métier qui n'appartient naturellement à aucune [[Entity]] ni [[Value Object]]**.
+- Ce n'est pas un service applicatif, ce n'est pas un utilitaire technique, c'est une opération du domaine qui implique plusieurs objets et qui ne peut pas être assignée à l'un d'entre eux sans créer une responsabilité artificielle.
 
-Concept issu du [[Domain-Driven Design]]. Un Domain Service contient de la **logique métier qui n'appartient naturellement à aucune [[Entity]] ni [[Value Object]]**. Ce n'est pas un service applicatif, ce n'est pas un utilitaire technique : c'est une opération du domaine qui implique plusieurs objets et qui ne peut pas être assignée à l'un d'entre eux sans créer une responsabilité artificielle.
-
-A utiliser avec parcimonie. L'erreur classique est d'en créer trop, ce qui revient à faire du [[Domain Model|Modèle Anémique]] avec un nom différent.
-
----
-
-## Quand un Domain Service est justifié
+⚠️ A utiliser avec parcimonie, l'erreur classique est d'en créer trop, ce qui revient à faire du [[Domain Model|Modèle Anémique]] avec un nom différent.
 
 La question à se poser d'abord : est-ce que cette logique peut appartenir à une Entity ou un Value Object existant ? Si oui, elle doit y être.
 
@@ -19,7 +15,7 @@ Un Domain Service est justifié quand :
 
 ---
 
-## Exemple : ce qui n'est PAS un Domain Service
+### Exemple : ce qui n'est PAS un Domain Service
 
 ```typescript
 // Ce n'est pas un Domain Service, c'est de la logique qui appartient à Order
@@ -44,7 +40,7 @@ Si la logique ne concerne qu'un seul objet, elle appartient à cet objet. Un Dom
 
 ## Application concrète chez Oli's Lab
 
-**Cas 1 : Application d'un code promo avec vérification externe**
+#### Cas 1 : Application d'un code promo avec vérification externe
 
 La règle métier : un code promo est valide si son code existe, n'est pas expiré, et n'a pas déjà été utilisé par ce client. Cette règle implique `Order`, `PromoCode`, et `Customer`. Elle ne peut pas appartenir uniquement à `Order` sans que `Order` connaisse `Customer`.
 
@@ -74,7 +70,7 @@ class PromoCodeApplicationService {  // Domain Service
 }
 ```
 
-**Cas 2 : Calcul de la compatibilité produit/profil (domaine scientifique)**
+#### Cas 2 : Calcul de la compatibilité produit/profil (domaine scientifique)
 
 Le calcul d'un score de compatibilité implique un `Product` (pour ses ingrédients) et un `SkinProfile` (pour les concerns et sensibilités). Ce n'est la responsabilité ni du produit ni du profil seul.
 
@@ -133,8 +129,8 @@ class CheckoutService {
 
 ## Erreurs classiques
 
-**Créer un Domain Service pour chaque opération :** `OrderService`, `ProductService`, `CustomerService` qui contiennent toute la logique. C'est du Modèle Anémique habillé en DDD. Les Entities deviennent des sacs de données.
+**Créer un Domain Service pour chaque opération :** `OrderService`, `ProductService`, `CustomerService` qui contiennent toute la logique. C'est du Modèle Anémique habillé en DDD, les Entities deviennent des sacs de données.
 
-**Confondre Domain Service et Application Service :** un Domain Service ne charge pas depuis un Repository, ne répond pas à une requête HTTP, ne logue pas. Il applique une règle métier, c'est tout.
+**Confondre Domain Service et Application Service :** un Domain Service ne charge pas depuis un Repository, ne répond pas à une requête HTTP, ne log pas, il applique une règle métier, c'est tout.
 
-**Nommer le service d'après une entité plutôt que d'après l'opération :** `OrderService` est vague. `PromoCodeApplicationService` ou `CompatibilityScorer` dit exactement ce que le service fait.
+**Nommer le service d'après une entité plutôt que d'après l'opération :** `OrderService` est vague, `PromoCodeApplicationService` ou `CompatibilityScorer` dit exactement ce que le service fait.

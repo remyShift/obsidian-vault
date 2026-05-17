@@ -92,58 +92,6 @@ Maintenant, il est **impossible** de confirmer une commande vide ou d'annuler un
 
 ---
 
-## Application concrète chez Oli's Lab
-
-Le checkout est le flow critique chez Oli's Lab. Un Domain Model riche sécurise ce flow :
-
-```typescript
-class Cart {
-  private items: CartItem[]
-  private promoCode: PromoCode | null
-
-  addProduct(productId: ProductId, quantity: Quantity, price: Money): void {
-    const existing = this.items.find(i => i.productId.equals(productId))
-    if (existing) {
-      existing.updateQuantity(quantity)
-      return
-    }
-    this.items.push(new CartItem(productId, quantity, price))
-  }
-
-  applyPromoCode(promo: PromoCode): void {
-    if (this.promoCode !== null) {
-      throw new DomainError('A promo code is already applied to this cart')
-    }
-    if (!promo.isValid()) {
-      throw new DomainError('This promo code is expired or invalid')
-    }
-    this.promoCode = promo
-  }
-
-  checkout(): CheckoutData {
-    if (this.items.length === 0) {
-      throw new DomainError('Cannot checkout an empty cart')
-    }
-    // Retourne les données nécessaires pour créer une Order
-    // sans coupler Cart à Order directement
-    return new CheckoutData(this.items, this.promoCode, this.total)
-  }
-
-  get total(): Money {
-    const subtotal = this.items.reduce(
-      (sum, item) => sum.add(item.total),
-      Money.zero('EUR')
-    )
-    if (this.promoCode) {
-      return this.promoCode.apply(subtotal)
-    }
-    return subtotal
-  }
-}
-```
-
----
-
 ## Comment évaluer si son modèle est anémique
 
 Questions à se poser :
@@ -155,8 +103,6 @@ Questions à se poser :
 Si la réponse est oui à l'une de ces questions, le modèle est probablement anémique.
 
 ---
-
-## Lien avec les autres concepts
 
 Un Domain Model riche est composé d'[[Entity|Entities]] et de [[Value Object|Value Objects]] avec leur propre logique, organisés en [[Aggregate|Aggregates]] pour garantir la cohérence, accessibles via des [[Repository|Repositories]], et coordonnés par des [[Domain Service|Domain Services]] pour les opérations cross-objets.
 
