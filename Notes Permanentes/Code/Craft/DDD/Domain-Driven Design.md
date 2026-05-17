@@ -1,27 +1,20 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-
 Le **Domain-Driven Design** est une approche de conception qui place le **domaine métier** au centre de toutes les décisions techniques. Formalisé par Eric Evans en 2003.
 
 > La complexité d'un logiciel vient rarement de la technique. Elle vient de la **complexité du domaine métier** qu'il modélise.
 
-Le DDD propose de modéliser cette complexité **explicitement dans le code** — pas de la cacher derrière une architecture.
+Le DDD propose de modéliser cette complexité explicitement dans le code sans la cacher derrière une architecture.
 
----
+Dans la plupart des projets, il existe un fossé entre ce que les experts métier comprennent et ce que les développeurs ont codé.
+- Résultat : logique métier dispersée dans des services, des controllers, des utils, et une base de données que personne ne peut expliquer à un non-développeur.
 
-## Le problème central
+Le DDD se compose de 2 niveaux :
+- **DDD Stratégique** : comment découper et organiser un système complexe à grande échelle.
+- **DDD Tactique** : comment modéliser le domaine dans le code.
 
-Dans la plupart des projets, il existe un fossé entre ce que les experts métier comprennent et ce que les développeurs ont codé. Résultat : logique métier dispersée dans des services, des controllers, des utils, et une base de données que personne ne peut expliquer à un non-développeur.
-
----
-
-## Les deux niveaux du DDD
-
-**DDD Stratégique** : comment découper et organiser un système complexe à grande échelle.
-**DDD Tactique** : comment modéliser le domaine dans le code.
-
-La plupart des équipes sautent au tactique. C'est une erreur : le stratégique donne du sens au tactique.
+La plupart des équipes sautent au tactique et c'est une erreur car le stratégique donne du sens au tactique.
 
 ---
 
@@ -55,11 +48,11 @@ La plupart des équipes sautent au tactique. C'est une erreur : le stratégique 
 
 ## Liens avec les autres pratiques Craft
 
-| Pratique | Lien avec DDD |
-|---|---|
-| **Ubiquitous Language** | Application directe de l'intention (Clean Code, [[L'art du nommage]]) |
-| **Value Objects** | Éliminent la Primitive Obsession ([[Code Smells]]) |
-| **Aggregates** | Application du SRP et de la [[Loi de Déméter]] |
-| **Repository** | Application du DIP ([[Les Principes SOLID]]) |
-| **Bounded Contexts** | Faible couplage entre sous-systèmes ([[Coupling & Cohesion]]) |
-| **TDD** | [[TDD Outside-In vs Inside-Out\|Outside-In]] est naturel en DDD : on part du comportement attendu du domaine |
+| Pratique                | Lien avec DDD                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Ubiquitous Language** | Application directe de l'intention ([[Clean Code]])                                                          |
+| **Value Objects**       | Éliminent la [[Primitive Obsession]]                                                                         |
+| **Aggregates**          | Application du SRP et de la [[Loi de Déméter]]                                                               |
+| **Repository**          | Application du DIP ([[Les Principes SOLID]])                                                                 |
+| **Bounded Contexts**    | Faible couplage entre sous-systèmes ([[Coupling & Cohesion]])                                                |
+| **TDD**                 | [[TDD Outside-In vs Inside-Out\|Outside-In]] est naturel en DDD : on part du comportement attendu du domaine |
