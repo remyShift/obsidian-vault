@@ -9,7 +9,7 @@ L'état actuel se reconstruit en "rejouant" les événements dans l'ordre. En [[
 
 ## Le problème qu'il résout
 
-Dans une architecture classique, une opération de mise à jour écrase l'état précédent. On perd l'historique : impossible de savoir pourquoi le solde est de 1250, qui a fait quoi, ni de revenir en arrière.
+Dans une architecture classique, une opération de mise à jour écrase l'état précédent. On perd l'historique : impossible de savoir pourquoi un score est passé de 78 à 45, qui a modifié quoi, ni de revenir en arrière. C'est acceptable pour des données sans valeur historique. C'est problématique pour un système de scoring dont la formule évolue dans le temps et dont chaque changement doit pouvoir être expliqué et rejoué.
 
 ---
 
@@ -40,6 +40,50 @@ Le solde de 1250 se calcule en rejouant ces trois événements. L'historique est
 
 ---
 
+## Exemple concret
+
+Un système de scoring produit dont la formule évolue régulièrement. Chaque reclassification d'ingrédient est un événement. Si la formule change, on rejoue tous les événements avec le nouvel algorithme et on obtient les nouveaux scores sans perdre l'historique.
+
+```typescript
+type ProductScienceEvent =
+  | {
+      type: 'IngredientReclassified'
+      activeId: string
+      previousRating: number
+      newRating: number
+      reason: string
+      occurredAt: Date
+    }
+  | {
+      type: 'ProductCompatibilityScored'
+      productId: string
+      skinType: string
+      score: number
+      formulaVersion: string
+      occurredAt: Date
+    }
+
+// Reconstruire le score d'un produit à une date donnée
+function reconstructScoreAt(
+  events: ProductScienceEvent[],
+  productId: string,
+  atDate: Date
+): number {
+  return events
+    .filter(e => e.occurredAt <= atDate)
+    .reduce((score, event) => {
+      if (event.type === 'ProductCompatibilityScored' && event.productId === productId) {
+        return event.score
+      }
+      return score
+    }, 0)
+}
+```
+
+La question "pourquoi ce produit avait un score de 78 il y a 3 mois et 45 aujourd'hui ?" devient répondable : on rejoue l'event store jusqu'à cette date et on liste les événements qui expliquent la différence.
+
+---
+
 ## Avantages
 
 - Traçabilité totale : chaque changement d'état est enregistré avec son contexte
@@ -54,78 +98,4 @@ Le solde de 1250 se calcule en rejouant ces trois événements. L'historique est
 - **Reconstruction coûteuse** : reconstruire l'état depuis des millions d'événements peut être lent, on résout ça avec des snapshots ou en combinant avec [[CQRS + Event Sourcing|CQRS]]
 - **Versioning des events** : si le schéma d'un événement change, il faut gérer la compatibilité avec les anciens événements stockés
 - **Paradigme différent** : demande un changement de façon de penser, courbe d'apprentissage réelle
-- **Pas adapté partout** : inutilement complexe pour des données sans besoin d'historique
-
----
-
-## Chez Oli's Lab
-
-Event Sourcing complet sur toute l'app serait du sur-engineering. Mais il y a un domaine où le pattern a une valeur réelle : le **scoring scientifique des produits**.
-
-### Le problème sans Event Sourcing
-
-Aujourd'hui, quand Patrick met à jour le score de compatibilité d'un produit, l'ancien score est écrasé. Si Olivia demande "pourquoi ce produit avait un meilleur score il y a 3 mois ?", personne ne peut répondre. La formule de scoring évolue, les ingrédients sont reclassifiés, mais l'historique est perdu.
-
-### Ce que Event Sourcing apporterait ici
-
-```typescript
-// Event store pour le domaine scientifique
-type ProductScienceEvent =
-  | {
-      type: 'ProductIngredientAdded'
-      productId: string
-      ingredient: { name: string; activeId: string; concentration: number }
-      addedAt: Date
-    }
-  | {
-      type: 'IngredientReclassified'
-      activeId: string
-      previousRating: number
-      newRating: number
-      reason: string
-      reclassifiedAt: Date
-    }
-  | {
-      type: 'ScoringFormulaUpdated'
-      version: string
-      changes: string
-      updatedAt: Date
-    }
-  | {
-      type: 'ProductCompatibilityScored'
-      productId: string
-      skinType: string
-      score: number
-      formulaVersion: string
-      scoredAt: Date
-    }
-
-// Reconstruire le score d'un produit à une date donnée
-function reconstructScoreAt(
-  events: ProductScienceEvent[],
-  productId: string,
-  atDate: Date
-): number {
-  const relevantEvents = events
-    .filter(e => new Date(e.scoredAt ?? e.updatedAt ?? e.addedAt) <= atDate)
-    .filter(e => 'productId' in e ? e.productId === productId : true)
-
-  // Rejouer les événements dans l'ordre pour reconstruire l'état
-  return relevantEvents.reduce((score, event) => {
-    if (event.type === 'ProductCompatibilityScored' && event.productId === productId) {
-      return event.score
-    }
-    return score
-  }, 0)
-}
-```
-
-### Le cas du rating system de Patrick
-
-Patrick travaille sur un système de recommandation produit. Chaque fois qu'un ingrédient est reclassifié (la science avance), tous les scores des produits qui le contiennent doivent être recalculés. Avec Event Sourcing, ce recalcul est possible en rejouant les événements avec la nouvelle classification. Sans historique, il faut recalculer depuis zéro et on ne peut pas expliquer pourquoi un score a changé.
-
-### Ce qui n'a pas besoin d'Event Sourcing chez Oli's Lab
-
-Le catalogue produit (nom, prix, description), les commandes une fois passées, les profils clients : des données CRUD classiques. L'historique n'a pas de valeur métier sur ces objets. Ajouter Event Sourcing là-dessus serait de la complexité gratuite.
-
-La règle : Event Sourcing là où **l'historique a de la valeur métier** et où **rejouer le passé est un besoin réel**.
+- **Pas adapté partout** : inutilement complexe pour des données sans besoin d'historique. Le catalogue produit, les profils clients, les commandes une fois passées : CRUD classique suffit largement. Event Sourcing se justifie là où l'historique a une valeur métier réelle et où rejouer le passé est un besoin concret.

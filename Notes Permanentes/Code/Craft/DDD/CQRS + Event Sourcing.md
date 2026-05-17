@@ -29,71 +29,16 @@ En [[Domain-Driven Design|DDD]], Commands et Events correspondent directement au
 
 ---
 
-## Ce que ça change
+## Exemple concret
 
-### Séparation claire des responsabilités
-
-- Le Write side se concentre sur la validité des opérations et la capture des faits
-- Le Read side se concentre sur la performance des lectures et les besoins de présentation
-
-### Flexibilité des projections
-
-Puisque les événements sont stockés en permanence, on peut créer de nouvelles projections à tout moment en rejouant l'historique. Si on a besoin d'une nouvelle vue des données demain, il suffit de créer une nouvelle projection et de rejouer les événements depuis le début.
-
-### Consistance éventuelle (eventual consistency)
-
-La synchronisation entre le Write side et le Read side est asynchrone. Une lecture juste après une écriture peut ne pas encore refléter le changement. C'est un trade-off à assumer explicitement.
-
----
-
-## Quand utiliser cette combinaison
-
-Pertinent quand :
-
-- Le domaine est complexe avec beaucoup de règles métier à l'écriture
-- L'auditabilité et la traçabilité sont des exigences fortes
-- Les besoins de lecture et d'écriture sont très différents en termes de volume ou de format
-- On a besoin de reconstruire des états passés ou de créer de nouvelles vues a posteriori
-
-Pas pertinent quand :
-
-- L'application est simple, CRUD, sans historique requis
-- La consistance immédiate est non-négociable
-- L'équipe n'a pas l'expérience pour gérer cette complexité
-
----
-
-## Inconvénients de la combinaison
-
-- **Complexité accrue** : deux sides, un event store, des projections, de la synchronisation asynchrone
-- **Versioning des events** : les events stockés sont permanents, leur schéma doit être versionné avec soin
-- **Eventual consistency** : à gérer explicitement dans l'UI et dans les attentes utilisateurs
-- **Courbe d'apprentissage** : paradigme suffisamment différent pour nécessiter une vraie montée en compétences
-
----
-
-## Chez Oli's Lab
-
-La combinaison CQRS + Event Sourcing n'est pas pertinente sur toute l'app, mais il y a un domaine où elle aurait de la valeur réelle : **le système de scoring scientifique produit**.
-
-### Le scénario concret
-
-Patrick fait évoluer la formule de scoring des ingrédients. Chaque évolution doit pouvoir être rejouée pour recalculer les scores de compatibilité de tous les produits. Et on veut pouvoir expliquer à Olivia pourquoi le score d'un produit a changé entre deux versions de la formule.
+Un système de scoring dont la formule évolue régulièrement. Quand un ingrédient est reclassifié, tous les produits qui le contiennent doivent être recalculés. Sans CQRS, ce recalcul bloque les lectures. Avec CQRS, le Write side applique la reclassification et émet un event ; le Read side recalcule les projections de façon asynchrone ; le catalogue reste disponible pendant ce temps.
 
 ```typescript
-// Write side : Command et Event Store
-interface ReclassifyIngredientCommand {
-  activeId: string
-  newRating: number
-  reason: string
-}
-
+// Write side : Command et production d'event
 async function handleReclassifyIngredient(cmd: ReclassifyIngredientCommand): Promise<void> {
-  // Validation domaine
   const active = await activeRepository.findById(cmd.activeId)
   if (!active) throw new NotFoundError(`Active ${cmd.activeId} not found`)
 
-  // Production de l'event (append-only dans l'event store)
   const event = {
     type: 'IngredientReclassified' as const,
     activeId: cmd.activeId,
@@ -104,33 +49,46 @@ async function handleReclassifyIngredient(cmd: ReclassifyIngredientCommand): Pro
   }
 
   await eventStore.append(event)
-
-  // Déclenche la mise à jour asynchrone des projections
-  await eventBus.publish(event)
+  await eventBus.publish(event)  // déclenche la mise à jour des projections
 }
 
-// Read side : projection qui se reconstruit depuis les events
+// Read side : projection reconstruite depuis les events
 async function onIngredientReclassified(event: IngredientReclassifiedEvent): Promise<void> {
-  // Trouver tous les produits qui contiennent cet ingrédient
   const affectedProducts = await productReadModel.findByActiveId(event.activeId)
 
   for (const product of affectedProducts) {
-    // Recalculer le score depuis l'event store
     const allEvents = await eventStore.getEventsForProduct(product.id)
     const newScore = reconstructCompatibilityScore(allEvents)
-
-    // Mettre à jour la projection de lecture
     await productReadModel.updateCompatibilityScore(product.id, newScore)
   }
 }
 ```
 
-### Ce que ça permet concrètement
+Le frontend lit depuis les projections du Read side, qui sont pré-calculées et indexées. Aucune latence de reconstruction à chaque requête.
 
-- Olivia demande "pourquoi le produit X a un score de 45 alors qu'il avait 78 il y a 2 mois ?" : on rejoue l'event store jusqu'à cette date et on lui donne la réponse avec les événements qui expliquent la différence.
-- Patrick sort une nouvelle version de la formule de scoring : on rejoue tous les événements avec le nouvel algorithme et on obtient les nouveaux scores sans perdre l'historique.
-- Le Read side (catalogue, page produit) ne subit aucune latence due aux recalculs : les projections sont pré-calculées de façon asynchrone.
+---
 
-### Pourquoi pas sur le checkout
+## Ce que ça change
 
-Le checkout a besoin de consistance immédiate. Si un client passe commande, il doit voir sa commande confirmée instantanément, pas après que les projections se soient mises à jour. L'eventual consistency du Read side est acceptable sur le catalogue, pas sur le flow de commande. C'est exactement le type de décision à prendre domaine par domaine, pas de façon uniforme sur toute l'app.
+**Séparation claire des responsabilités** : le Write side se concentre sur la validité des opérations et la capture des faits. Le Read side se concentre sur la performance des lectures et les besoins de présentation.
+
+**Flexibilité des projections** : puisque les événements sont stockés en permanence, on peut créer de nouvelles projections à tout moment en rejouant l'historique. Un nouveau besoin d'affichage demain = nouvelle projection + replay, sans modifier le Write side.
+
+**Consistance éventuelle** : la synchronisation entre Write side et Read side est asynchrone. Une lecture juste après une écriture peut ne pas encore refléter le changement. C'est acceptable sur un catalogue produit, pas sur un flow de commande où la confirmation doit être immédiate. Ce trade-off est à évaluer domaine par domaine.
+
+---
+
+## Quand utiliser cette combinaison
+
+Pertinent quand le domaine est complexe avec beaucoup de règles métier à l'écriture, que l'auditabilité est une exigence forte, et que les besoins de lecture et d'écriture sont très différents en volume ou en format.
+
+Pas pertinent sur une app CRUD simple, quand la consistance immédiate est non-négociable, ou quand l'équipe n'a pas encore l'expérience pour gérer cette complexité.
+
+---
+
+## Inconvénients de la combinaison
+
+- **Complexité accrue** : deux sides, un event store, des projections, de la synchronisation asynchrone
+- **Versioning des events** : les events stockés sont permanents, leur schéma doit être versionné avec soin
+- **Eventual consistency** : à gérer explicitement dans l'UI et dans les attentes utilisateurs
+- **Courbe d'apprentissage** : paradigme suffisamment différent pour nécessiter une vraie montée en compétences

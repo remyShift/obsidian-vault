@@ -19,95 +19,7 @@ Sans DTO, on est tenté d'exposer directement les objets de domaine (entités, m
 
 ## Exemple concret
 
-### Sans DTO (exposition directe)
-
-```typescript
-class User {
-  id: number
-  email: string
-  passwordHash: string       // ne doit JAMAIS sortir
-  internalScore: number      // donnée interne
-  stripeCustomerId: string   // donnée sensible
-  createdAt: Date
-  orders: Order[]            // relation ORM, peut être circulaire
-}
-
-app.get('/users/:id', (req, res) => {
-  res.json(user) // problème : on expose tout
-})
-```
-
-### Avec DTO
-
-```typescript
-interface UserResponseDTO {
-  id: number
-  email: string
-  memberSince: string
-}
-
-function toUserResponseDTO(user: User): UserResponseDTO {
-  return {
-    id: user.id,
-    email: user.email,
-    memberSince: user.createdAt.toISOString(),
-  }
-}
-
-app.get('/users/:id', (req, res) => {
-  res.json(toUserResponseDTO(user)) // contrôle total sur ce qui sort
-})
-```
-
----
-
-## Les deux directions
-
-### DTO en entrée (Request DTO / Command)
-
-Ce que le client envoie au serveur. Permet de valider et de contrôler ce qui entre dans le système.
-
-```typescript
-interface CreateOrderDTO {
-  productId: string
-  quantity: number
-}
-```
-
-### DTO en sortie (Response DTO)
-
-Ce que le serveur renvoie au client. Permet de contrôler ce qui est exposé.
-
-```typescript
-interface OrderResponseDTO {
-  id: string
-  status: string
-  total: number
-}
-```
-
----
-
-Un DTO est "bête" par design. Il ne sait pas valider des règles métier, il ne sait pas comment il est stocké. Un [[Value Object]] peut vivre à l'intérieur d'un DTO, mais l'inverse n'est pas vrai.
-
----
-
-## Où on les trouve
-
-- Entre le contrôleur et le service (Request DTO)
-- Entre le service et la réponse HTTP (Response DTO)
-- Dans [[CQRS]] : les Commands et Queries du Write side sont essentiellement des DTOs — les projections du Read side aussi
-- Dans les event payloads : les événements transportent des DTOs
-
----
-
-## Chez Oli's Lab
-
-Oli's Lab a un cas concret et sensible : le domaine scientifique expose des données (`CompatibilityScore`, ingrédients analysés) que le frontend e-commerce n'a pas besoin de voir en détail. Et inversement, le checkout expose des données de paiement qui ne doivent pas traverser toutes les couches.
-
-### Product : deux DTOs pour deux contextes
-
-Le modèle `Product` en base contient à la fois les données e-commerce et les données scientifiques. Selon le contexte, on n'expose pas la même chose.
+Le modèle `Product` en base contient à la fois les données e-commerce, les données scientifiques, les métadonnées CMS et des champs internes. Selon le contexte, on n'expose pas la même chose.
 
 ```typescript
 // Ce que retourne MongoDB (modèle interne)
@@ -118,29 +30,17 @@ interface ProductDocument {
   price: { amount: number; currency: string }
   stock: number
   scientificIngredients: ScientificIngredientRef[]
-  compatibilityScores: Record<string, number>  // par profil skin type
-  internalRatingNotes: string  // notes internes, ne sort jamais
-  payloadCmsId: string         // référence CMS interne
+  internalRatingNotes: string  // ne doit jamais sortir
+  payloadCmsId: string         // référence interne, inutile pour le client
 }
 
-// DTO pour le catalogue e-commerce (page listing, page produit)
+// DTO pour le catalogue : seulement ce dont le listing a besoin
 interface ProductCatalogueDTO {
   id: string
   name: string
   slug: string
   price: { amount: number; currency: string }
   inStock: boolean
-}
-
-// DTO pour la page produit avec dimension scientifique
-interface ProductDetailDTO {
-  id: string
-  name: string
-  slug: string
-  price: { amount: number; currency: string }
-  inStock: boolean
-  compatibilityScore: number | null  // null si pas de profil skin renseigné
-  keyIngredients: { name: string; benefit: string }[]
 }
 
 function toProductCatalogueDTO(doc: ProductDocument): ProductCatalogueDTO {
@@ -154,57 +54,55 @@ function toProductCatalogueDTO(doc: ProductDocument): ProductCatalogueDTO {
 }
 ```
 
-### Checkout : DTO en entrée avec validation Joi
+Le DTO contrôle ce qui sort. `internalRatingNotes` et `payloadCmsId` n'existent pas pour le client.
 
-Le pattern établi chez Oli's Lab (validation en middleware Joi, controller qui orchestre) correspond exactement à l'usage d'un Request DTO.
+---
+
+## Les deux directions
+
+### DTO en entrée (Request DTO)
+
+Ce que le client envoie au serveur. Permet de valider et de contrôler ce qui entre dans le système. Dans le pattern établi chez Oli's Lab, c'est le DTO qui est validé par le middleware Joi avant d'atteindre le controller.
 
 ```typescript
-// Request DTO : ce que le client envoie
 interface AddToCartDTO {
   productId: string
   quantity: number
 }
 
-// Validation Joi du DTO (middleware, pas dans le controller)
 const addToCartSchema = Joi.object<AddToCartDTO>({
   productId: Joi.string().required(),
   quantity: Joi.number().integer().min(1).required(),
 })
-
-// Le controller reçoit un DTO déjà validé
-async function addToCartController(req: Request, res: Response) {
-  const dto: AddToCartDTO = req.body
-  const result = await cartService.addProduct(dto.productId, dto.quantity)
-  res.json(toCartResponseDTO(result))
-}
 ```
 
-### Sync Payload CMS : DTO de transformation
+### DTO en sortie (Response DTO)
 
-Lors de la migration vers Payload CMS, les données viennent du CMS dans un format, et le domaine e-commerce attend un autre format. Le DTO fait la traduction sans polluer ni le CMS ni le domaine.
+Ce que le serveur renvoie au client. Permet de contrôler ce qui est exposé et de découpler la structure interne du domaine du contrat API.
 
 ```typescript
-// Ce que Payload CMS retourne
-interface PayloadProductResponse {
+interface OrderSummaryDTO {
   id: string
-  title: string
-  handle: string
-  variants: { price: number; inventory: number }[]
-  media: { url: string; alt: string }[]
-}
-
-// DTO de transformation vers le format domaine
-function fromPayloadToProductDTO(payload: PayloadProductResponse): ProductCatalogueDTO {
-  const firstVariant = payload.variants[0]
-  return {
-    id: payload.id,
-    name: payload.title,
-    slug: payload.handle,
-    price: { amount: firstVariant.price, currency: 'EUR' },
-    inStock: firstVariant.inventory > 0,
-  }
+  status: string
+  total: { amount: number; currency: string }
+  itemCount: number
+  createdAt: string  // formaté pour l'affichage, pas un objet Date
 }
 ```
+
+---
+
+Un DTO est "bête" par design. Il ne valide pas de règles métier, il ne sait pas comment il est stocké. Un [[Value Object]] peut vivre à l'intérieur d'un DTO, mais l'inverse n'est pas vrai.
+
+---
+
+## Où on les trouve
+
+- Entre le contrôleur et le service (Request DTO)
+- Entre le service et la réponse HTTP (Response DTO)
+- Dans [[CQRS]] : les Commands et Queries du Write side sont essentiellement des DTOs, les projections du Read side aussi
+- Dans les event payloads : les événements transportent des DTOs
+- Dans les scripts de synchronisation : quand Payload CMS publie un produit, la transformation vers le format domaine passe par un DTO de mapping
 
 ---
 
