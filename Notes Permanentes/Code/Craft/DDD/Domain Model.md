@@ -1,10 +1,11 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-Le Domain Model est la représentation en code des **comportements et invariants** du domaine métier. Ce n'est pas un schéma de base de données. Ce n'est pas du CRUD. C'est une modélisation de comment le domaine fonctionne réellement : ses règles, ses contraintes, ses transitions d'état.
+Le Domain Model est la représentation en code des **comportements et invariants** du domaine métier.
+- Ce n'est pas un schéma de base de données, ce n'est pas du CRUD.
+	- C'est une modélisation de comment le domaine fonctionne réellement : ses règles, ses contraintes, ses transitions d'état.
 
 ---
-
 ## L'anti-pattern central : le Modèle Anémique
 
 Le Modèle Anémique (Martin Fowler) est le pattern le plus répandu dans les codebases qui croient faire du DDD sans en appliquer l'esprit. Les classes ne contiennent que des getters et setters, et toute la logique vit dans des services.
