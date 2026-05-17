@@ -1,16 +1,12 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+Un Bounded Context est une **frontière explicite** à l'intérieur de laquelle un modèle de domaine est cohérent et sans ambiguïté. Hors de cette frontière, le même mot peut vouloir dire autre chose.
 
-Concept issu du [[Domain-Driven Design]]. Un Bounded Context est une **frontière explicite** à l'intérieur de laquelle un modèle de domaine est cohérent et sans ambiguïté. Hors de cette frontière, le même mot peut vouloir dire autre chose.
+C'est le concept central du DDD stratégique, il précède et conditionne tous les choix tactiques.
 
-C'est le concept central du DDD stratégique. Il précède et conditionne tous les choix tactiques.
-
----
-
-## Le problème qu'il résout
-
-Dans un système qui grossit, le même terme finit par signifier des choses différentes selon les équipes. "Produit" pour le catalogue e-commerce n'est pas le même objet que "Produit" pour le moteur de scoring scientifique. Si les deux partagent le même modèle, ce modèle finit par être un compromis qui ne convient vraiment à personne.
+Dans un système qui grossit, le même terme finit par signifier des choses différentes selon les équipes. "Produit" pour le catalogue e-commerce n'est pas le même objet que "Produit" pour le moteur de scoring scientifique.
+- Si les deux partagent le même modèle, ce modèle finit par être un compromis qui ne convient vraiment à personne.
 
 Un Bounded Context dit clairement : à l'intérieur de cette frontière, voilà ce que les mots veulent dire et voilà les règles qui s'appliquent.
 
@@ -24,7 +20,7 @@ Un Bounded Context a :
 - Sa propre logique métier
 - Potentiellement sa propre base de données ou collection
 
-Deux contextes peuvent utiliser le même terme (`Product`, `Customer`) pour des objets différents. C'est normal et attendu.
+Deux contextes peuvent utiliser le même terme (`Product`, `Customer`) pour des objets différents et c'est normal et attendu.
 
 ---
 
@@ -43,19 +39,16 @@ Oli's Lab a au moins deux Bounded Contexts clairement identifiables :
 └─────────────────────────────────────┘   └──────────────────────────────────────────┘
 ```
 
-`Product` dans le contexte e-commerce est un objet avec un prix, un stock, un slug, une image. `Product` dans le contexte scientifique est un objet avec des ingrédients, un score de compatibilité, des actifs. Ce sont deux modèles distincts qui servent deux besoins distincts. Les forcer dans un seul modèle crée un objet gonflé qui n'est parfaitement adapté à aucun des deux usages.
-
-Dans la base de données d'Oli's Lab, ça se traduit par les deux namespaces déjà en place : collections `shop_*` pour l'e-commerce, collections scientifiques pour le domaine scientifique. C'est une séparation de Bounded Contexts qui existe déjà, même si elle n'est pas formalisée comme telle.
+`Product` dans le contexte e-commerce est un objet avec un prix, un stock, un slug, une image. `Product` dans le contexte scientifique est un objet avec des ingrédients, un score de compatibilité, des actifs.
+- Ce sont deux modèles distincts qui servent deux besoins distincts. Les forcer dans un seul modèle crée un objet gonflé qui n'est parfaitement adapté à aucun des deux usages.
 
 ---
-
 ## Communication entre Bounded Contexts
 
-Les contextes ne s'ignorent pas : une recommandation scientifique doit pouvoir déclencher un ajout au panier. La question est : comment ils communiquent sans se coupler directement ?
+Les contextes ne s'ignorent pas, une recommandation scientifique doit pouvoir déclencher un ajout au panier. La question est plutôt comment ils communiquent sans se coupler directement ?
 
 Deux approches principales :
-
-**Anti-Corruption Layer (ACL) :** une couche de traduction qui empêche les concepts d'un contexte de "contaminer" l'autre. Le contexte e-commerce ne connaît pas `CompatibilityScore` : il reçoit une liste de `ProductId` recommandés, c'est tout.
+- **Anti-Corruption Layer (ACL) :** une couche de traduction qui empêche les concepts d'un contexte de "contaminer" l'autre. Le contexte e-commerce ne connaît pas `CompatibilityScore` : il reçoit une liste de `ProductId` recommandés, c'est tout.
 
 ```typescript
 // ACL : le contexte e-commerce reçoit uniquement ce dont il a besoin
@@ -66,7 +59,7 @@ interface RecommendationService {
 // Le contexte e-commerce ignore totalement SkinProfile, CompatibilityScore, etc.
 ```
 
-**Domain Events :** un contexte émet un événement, l'autre réagit sans couplage direct.
+- **Domain Events :** un contexte émet un événement, l'autre réagit sans couplage direct.
 
 ```typescript
 // Le contexte scientifique émet

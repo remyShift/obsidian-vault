@@ -1,18 +1,17 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+L'Ubiquitous Language est un langage commun, partagé entre développeurs et experts métier, utilisé partout sans exception : dans les conversations, les tickets, et le code.
 
-Concept issu du [[Domain-Driven Design]]. L'Ubiquitous Language est un langage commun, partagé entre développeurs et experts métier, utilisé partout sans exception : dans les conversations, les tickets, et le code.
+C'est le concept le plus important du DDD... et le plus négligé.
 
-C'est le concept le plus important du DDD. Et le plus négligé.
+Dans la plupart des projets, il existe deux langages parallèles : 
+- celui du métier
+- celui du code. 
 
----
+Les experts parlent de "recommandations produit selon le profil peau", les développeurs codent un `UserProductMatcher` avec un `scoreEngine`. La traduction entre les deux est permanente, coûteuse, et source d'erreurs.
 
-## Le problème qu'il résout
-
-Dans la plupart des projets, il existe deux langages parallèles : celui du métier et celui du code. Les experts parlent de "recommandations produit selon le profil peau", les développeurs codent un `UserProductMatcher` avec un `scoreEngine`. La traduction entre les deux est permanente, coûteuse, et source d'erreurs.
-
-Résultat concret : quand un bug apparaît ou qu'une nouvelle règle métier doit être ajoutée, personne ne sait exactement où regarder dans le code.
+Résultat : quand un bug apparaît ou qu'une nouvelle règle métier doit être ajoutée, personne ne sait exactement où regarder dans le code.
 
 ---
 
@@ -27,7 +26,7 @@ class UserProductMatcher {
   processItems(items: string[], threshold: number): string[] { ... }
 }
 
-// Avec Ubiquitous Language : le code parle le même langage qu'Olivia
+// Avec Ubiquitous Language : le code parle le même langage que les non tech
 class ProductRecommendationEngine {
   scoreProductForSkinProfile(product: Product, profile: SkinProfile): CompatibilityScore { ... }
   filterCompatibleProducts(products: Product[], profile: SkinProfile): Product[] { ... }
@@ -42,9 +41,9 @@ La deuxième version, un expert métier peut la lire et valider que la logique c
 
 Oli's Lab a deux domaines distincts avec leur propre vocabulaire :
 
-**Domaine e-commerce :** `Cart`, `Order`, `Checkout`, `PromoCode`, `Bundle`, `ShippingAddress`
+**Domaine e-commerce :** `Cart`, `Order`, `Checkout`, `PromoCode`, `Bundle`, `ShippingAddress`, ...
 
-**Domaine scientifique :** `SkinProfile`, `CompatibilityScore`, `ScientificIngredient`, `SkinConcern`, `ProductRating`
+**Domaine scientifique :** `SkinProfile`, `CompatibilityScore`, `ScientificIngredient`, `SkinConcern`, `ProductRating`, ...
 
 Ces deux vocabulaires ne doivent pas se mélanger. Une méthode qui calcule un score de compatibilité n'a rien à faire dans une classe `Cart`. C'est exactement le signal qu'il faut un [[Bounded Context]] séparé.
 
@@ -58,9 +57,7 @@ type DomainEvent =
 
 Quand Patrick (dev scientifique) et Rémy (checkout) parlent du même `customerId`, ils utilisent le même terme. Mais la logique métier autour de ce client est différente dans chaque contexte. L'Ubiquitous Language rend cette frontière explicite.
 
----
-
-## Les erreurs classiques
+### Les erreurs classiques
 
 **Nommer selon l'implémentation, pas le domaine :** `processData`, `handleRequest`, `updateItem`. Ces noms ne disent rien de ce que fait le code du point de vue métier.
 
@@ -70,6 +67,4 @@ Quand Patrick (dev scientifique) et Rémy (checkout) parlent du même `customerI
 
 ---
 
-## Lien avec les autres concepts DDD
-
-L'Ubiquitous Language est la base sur laquelle tout repose. Sans lui, les [[Bounded Context|Bounded Contexts]] n'ont pas de frontières claires, les [[Entity|Entities]] ont des noms flous, et les [[Domain Event|Domain Events]] ne correspondent pas aux faits réels du domaine.
+L'Ubiquitous Language est la base sur laquelle tout repose. Sans lui, les [[Bounded Context|Bounded Contexts]] n'ont pas de frontières claires, les [[Entity|Entities]] ont des noms flous, et les events ne correspondent pas aux faits réels du domaine.
