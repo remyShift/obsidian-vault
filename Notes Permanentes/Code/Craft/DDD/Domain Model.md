@@ -1,8 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-
-Concept issu du [[Domain-Driven Design]]. Le Domain Model est la représentation en code des **comportements et invariants** du domaine métier. Ce n'est pas un schéma de base de données. Ce n'est pas du CRUD. C'est une modélisation de comment le domaine fonctionne réellement : ses règles, ses contraintes, ses transitions d'état.
+Le Domain Model est la représentation en code des **comportements et invariants** du domaine métier. Ce n'est pas un schéma de base de données. Ce n'est pas du CRUD. C'est une modélisation de comment le domaine fonctionne réellement : ses règles, ses contraintes, ses transitions d'état.
 
 ---
 

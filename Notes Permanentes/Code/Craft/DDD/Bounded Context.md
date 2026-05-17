@@ -77,10 +77,4 @@ onSkinProfileCompleted(event) {
 
 Sans cette étape, les Aggregates, Entities et Value Objects que tu crées peuvent appartenir au mauvais contexte. Tu te retrouves avec un `Product` qui fait tout, des services qui traversent les frontières sans qu'on le sache, et une logique métier qui s'éparpille.
 
-Le DDD stratégique dit d'abord "où sont les frontières ?". Le DDD tactique dit ensuite "comment modéliser à l'intérieur de ces frontières ?".
-
----
-
-## Lien avec l'architecture
-
-Un Bounded Context peut correspondre à un module, un package, ou même un microservice selon l'échelle du système. Chez Oli's Lab avec la migration en cours, ça se traduit par une séparation claire des routes, services et collections entre le domaine e-commerce et le domaine scientifique, même si tout tourne sur le même serveur.
+Le DDD stratégique dit d'abord "où sont les frontières ?" --> le DDD tactique dit ensuite "comment modéliser à l'intérieur de ces frontières ?".
