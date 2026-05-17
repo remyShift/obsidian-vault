@@ -16,7 +16,7 @@ TABLE
   default(impressions, "—") AS "👁️ Impressions",
   (default(impressions, 0) + default(likes, 0) * 30 + default(comments, 0) * 70) AS "⭐ Score"
 FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
-SORT (default(impressions, 0) + default(likes, 0) * 30 + default(comments, 0) * 70) DESC
+SORT (default(impressions, 0) * 0.5 + default(likes, 0) * 30 + default(comments, 0) * 70) DESC
 LIMIT 25
 ```
 
