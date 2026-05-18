@@ -26,6 +26,12 @@ Parce que ce qui nous forge en tant que développeur, ce n'est pas la formation 
 
 Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à l'extérieur, je m'éduque sur le craft et bonnes pratiques à l'intérieur.
 
+## Feedback
+
+- Serpent quand tu reprends la respiration
+- Quand tu parles on a l'impression que tu poses des questions
+- Prendre des pauses plutôt que de verbaliser le fait que t'es perdu (pas de "1, 2, Rémy...", "je sais plus où j'en suis", "qu'est ce que je voulais dire ?")
+
 ---
 
 ## Talk :
