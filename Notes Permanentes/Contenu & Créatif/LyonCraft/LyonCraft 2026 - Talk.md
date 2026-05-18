@@ -4,15 +4,12 @@ tags:
   - Perso
   - LyonCraft
 ---
-**Événement** : LyonCraft, Software Crafters Lyon - 200-300 participants
+**Événement** : LyonCraft, Software Crafters Lyon
 **Format** : REX 45 min
-**Organisateur** : Software Crafter Lyon dont Colin Damon (auteur d'"Itération Product(ives)", lu pendant ma période creuse)
+**Organisateur** : Software Crafter Lyon
 
-## Titre
-
-"Développeur par obstination, ou comment les galères valent mieux que les filières"
-
-## Abstract
+> Développeur par obstination, ou comment les galères valent mieux que les filières
+### Abstract
 
 Comment il y a trois ans, je vendais des surgelés en porte à porte et aujourd'hui, je fais tourner une migration Next.js en production pour un e-commerce ?
 
@@ -22,7 +19,7 @@ Durant tout ce temps j’ai appris des choses et j'ai absorbé une culture du cr
 
 Parce que ce qui nous forge en tant que développeur, ce n'est pas la formation qu'on a suivie mais la culture qu’on se crée en chemin.
 
-## Bio speaker
+### Bio speaker
 
 Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à l'extérieur, je m'éduque sur le craft et bonnes pratiques à l'intérieur.
 
