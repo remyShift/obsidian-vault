@@ -28,6 +28,9 @@ Ancien commercial, aujourd'hui développeur. Tatouages, casquette et sneakers à
 - Serpent quand tu reprends la respiration
 - Quand tu parles on a l'impression que tu poses des questions
 - Prendre des pauses plutôt que de verbaliser le fait que t'es perdu (pas de "1, 2, Rémy...", "je sais plus où j'en suis", "qu'est ce que je voulais dire ?")
+- Vidéo pour s'améliorer :
+	- [Title Unavailable \| Site Unreachable](https://www.youtube.com/watch?v=ldizQkuWpDE)
+	- [Before you continue to YouTube](https://www.youtube.com/@askvinh)
 
 ---
 
