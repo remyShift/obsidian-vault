@@ -1,7 +1,6 @@
 ---
 tags:
   - LyonCraft
-  - Talk
   - Work
   - Perso
 ---

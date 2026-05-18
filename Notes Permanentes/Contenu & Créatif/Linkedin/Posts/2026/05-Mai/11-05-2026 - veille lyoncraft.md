@@ -3,7 +3,7 @@ date: 2026-05-11
 likes: 16
 comments: 10
 reposts: 1
-impressions: 1392
+impressions: 1580
 url: https://www.linkedin.com/posts/remy-cassagne_demain-jai-la-chance-d%C3%AAtre-%C3%A0-lyoncraft-share-7459545270683533312-oF2l?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
