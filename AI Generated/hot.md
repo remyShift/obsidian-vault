@@ -1,5 +1,5 @@
 ---
-updated: 15-05-2026
+updated: 19-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,24 +8,24 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-18-05-2026 — obsidian-vault : Dataview pondéré LinkedIn + 275 fichiers Posts renommés avec titres descriptifs.
+19-05-2026 — piqure : discussion reviewer sur has() vs Optional monad, position maintenue, merge en attente.
 
 ## Projets actifs
 
+### olis-lab
+- Derniere session : 19-05-2026
+- Etat : infra test en place (branche Diego), 5/5 tests passent, race condition `initPayload()` identifiée, couplage tests/Payload discuté
+- Prochaine etape : retour Diego → fix race condition → unit tests transformateurs → bug S3
+
 ### piqure
-- Derniere session : 15-05-2026
-- Etat : PR has() en attente de squash/merge, PR circular deps prête à ouvrir
+- Derniere session : 19-05-2026
+- Etat : PR has() prête à merger (squash à faire), PR circular deps à ouvrir
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
 - Derniere session : 18-05-2026
 - Etat : Sommaire LinkedIn enrichi (score pondéré, section sans impressions), 275 posts renommés
 - Prochaine etape : compléter impressions manquantes, traiter Inbox/Rust/, alimenter Infra/
-
-### olis-lab
-- Derniere session : 15-05-2026
-- Etat : feeds GMC + Klaviyo operationnels, plugin traduction fonctionnel, stratégie de test rédigée, infra test à valider avec la communauté Payload, bug S3 toujours bloquant
-- Prochaine etape : poster Discord Payload, puis tests unit transformateurs en premier
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
@@ -56,6 +56,5 @@ tags: [meta, hot-cache, global]
 ## Threads ouverts cross-projets
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Tests CMS olis-lab : stratégie définie (27 scénarios), infra en attente validation Discord Payload
+- Tests CMS olis-lab : infra en place, 5/5 passent, race condition a fixer, unit tests transformateurs a ecrire
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
-- localCartAtom olis-lab : consommation à vérifier (re-render potentiel si trop de composants)

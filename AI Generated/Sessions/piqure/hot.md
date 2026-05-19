@@ -1,5 +1,5 @@
 ---
-updated: 15-05-2026
+updated: 19-05-2026
 project: piqure
 tags: [meta, hot-cache]
 ---
@@ -7,22 +7,22 @@ tags: [meta, hot-cache]
 # Hot Cache — piqure
 
 ## Dernière mise à jour
-15-05-2026 — Deux contributions TDD prêtes à merger, reviewer de la PR has() répondu, squash commits appris.
+19-05-2026 — Discussion reviewer sur `has()` vs Optional monad, position maintenue, merge en attente.
 
 ## État du projet
-- PR `has()` en attente de squash + merge (reviewer convaincu)
-- PR circular dep detection prête à ouvrir
-- Toutes les implémentations sont sur des branches séparées
+- PR `has()` : reviewer convaincu, squash + merge à faire
+- PR circular deps : prête à ouvrir
+- Position défendue : `undefined` dans un DI est un anti-pattern
 
 ## Faits récents importants
-- `has()` : une ligne, délègue à `Map.has()`, maintenu face à l'alternative `key<T | undefined>` du reviewer
-- Circular deps : `Set resolving` dans la closure, `finally` pour le cleanup, détecte direct et indirect
-- `--force-with-lease` à utiliser après `git rebase -i` pour le squash en local
-- `key<T | undefined>` est ambigu : ne distingue pas "non enregistré" de "enregistré avec undefined"
+- `Optional<T>` Java != `T | undefined` TS : monade avec ifPresent/map/flatMap, pas disponible nativement en JS
+- `inject()` retourne `T` (pas `T | undefined`) — choix délibéré du design de piqure vs Vue
+- `null` = intentionnel, `undefined` = ambigu — dans un DI, `undefined` ne devrait pas exister
+- Gnuk (auteur) n'a pas d'objection à merger malgré ses réserves théoriques
 
 ## Décisions actives
-- Branches séparées pour chaque contribution : pas de mélange de features dans une même PR
-- TDD strict maintenu : RED observable avant tout code
+- Branches séparées par contribution, PRs indépendantes
+- `has()` maintenu : le pattern `key<T | undefined>` déplace l'optionalité dans les types sans la rendre explicite au niveau du container
 
 ## Prochaines étapes
 - Squash + merge PR `has()`
