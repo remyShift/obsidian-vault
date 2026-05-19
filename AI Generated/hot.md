@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
 
 ## Derniere activite
-19-05-2026 — piqure : discussion reviewer sur has() vs Optional monad, position maintenue, merge en attente.
+19-05-2026 — olis-lab : guards Payload centralisés dans shared, 2 fichiers pilotes migrés, 20 tests verts, PR prête.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 19-05-2026
-- Etat : infra test en place (branche Diego), 5/5 tests passent, race condition `initPayload()` identifiée, couplage tests/Payload discuté
-- Prochaine etape : retour Diego → fix race condition → unit tests transformateurs → bug S3
+- Etat : guards Payload dans `@olis-lab/shared` (createAsserter + assertMedia), product.ts et computeCartSnapshot.ts migrés, PR feat/custom-fix-type-inference-payload prête, tests CMS intégration en attente merge Diego
+- Prochaine etape : ouvrir PR guards, merger branche Diego, fix race condition initPayload(), unit tests transformateurs, bug S3
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -57,4 +57,5 @@ tags: [meta, hot-cache, global]
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
 - Tests CMS olis-lab : infra en place, 5/5 passent, race condition a fixer, unit tests transformateurs a ecrire
+- Guards Payload olis-lab : PR prête, migration 2 fichiers pilotes faite, reste à migrer les autres mappers
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
