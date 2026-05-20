@@ -7,7 +7,7 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-20-05-2026 — Tests CMS finalisés : `checkUniquePerCategory` extraite en fonction pure avec DI, 8 tests unitaires sans mock de contexte Payload, PR description rédigée.
+20-05-2026 — Ticket PostHog iteré suite retour reviewer, reponse de code review redigée (explication defaults + cookieless_mode) ; tests CMS finalises, PR prete.
 
 ## Etat du projet
 - Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`
