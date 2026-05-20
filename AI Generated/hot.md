@@ -1,31 +1,31 @@
 ---
-updated: 19-05-2026
+updated: 20-05-2026
 tags: [meta, hot-cache, global]
 ---
 
 # Hot Cache — Global
 
-> Vue cross-projets. Max 500 mots. Chaque projet a une entrée courte.
+> Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-19-05-2026 — olis-lab : guards Payload centralisés dans shared, 2 fichiers pilotes migrés, 20 tests verts, PR prête.
+20-05-2026 — olis-lab : SearchController backend créé (endpoint unifié products+bundles), frontend en attente résolution problème serveur ; bug PostHog diagnostiqué.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 19-05-2026
-- Etat : guards Payload dans `@olis-lab/shared` (createAsserter + assertMedia), product.ts et computeCartSnapshot.ts migrés, PR feat/custom-fix-type-inference-payload prête, tests CMS intégration en attente merge Diego
-- Prochaine etape : ouvrir PR guards, merger branche Diego, fix race condition initPayload(), unit tests transformateurs, bug S3
+- Derniere session : 20-05-2026
+- Etat : SearchController `/search/products-bundles` créé, frontend non branché (problème serveur bloquant) ; bug PostHog diagnostiqué (posthog-js 1.369.2 + consentement non réappliqué au montage), fix à implémenter ; PR guards Payload prête
+- Prochaine etape : résoudre problème serveur, rebrancher frontend sur endpoint unifié, implémenter fix PostHog
 
 ### piqure
 - Derniere session : 19-05-2026
-- Etat : PR has() prête à merger (squash à faire), PR circular deps à ouvrir
+- Etat : PR has() prete a merger (squash a faire), PR circular deps a ouvrir
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
 - Derniere session : 18-05-2026
-- Etat : Sommaire LinkedIn enrichi (score pondéré, section sans impressions), 275 posts renommés
-- Prochaine etape : compléter impressions manquantes, traiter Inbox/Rust/, alimenter Infra/
+- Etat : Sommaire LinkedIn enrichi (score pondere, section sans impressions), 275 posts renommes
+- Prochaine etape : completer impressions manquantes, traiter Inbox/Rust/, alimenter Infra/
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
@@ -54,8 +54,9 @@ tags: [meta, hot-cache, global]
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant
 
 ## Threads ouverts cross-projets
+- PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
 - Tests CMS olis-lab : infra en place, 5/5 passent, race condition a fixer, unit tests transformateurs a ecrire
-- Guards Payload olis-lab : PR prête, migration 2 fichiers pilotes faite, reste à migrer les autres mappers
+- Guards Payload olis-lab : PR prete, migration 2 fichiers pilotes faite, reste a migrer les autres mappers
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
