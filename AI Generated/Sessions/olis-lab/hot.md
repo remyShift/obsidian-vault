@@ -7,7 +7,7 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-20-05-2026 — Plan page builder Payload blocks rédigé et approuvé (homepage + shop page via Globals) ; SearchController backend créé, bug PostHog diagnostiqué.
+20-05-2026 — Tests CMS finalisés : `checkUniquePerCategory` extraite en fonction pure avec DI, 8 tests unitaires sans mock de contexte Payload, PR description rédigée.
 
 ## Etat du projet
 - Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`
@@ -15,34 +15,31 @@ tags: [meta, hot-cache]
 - Feed Meta : pas encore implemente
 - Bug S3 double declaration XML : toujours ouvert (bloquant avant automatisation)
 - Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
-- Tests CMS integration : infra en place (branche Diego), 5/5 passent, en attente validation merge
+- Tests CMS integration : infra en place, tests unitaires `uniquePerCategory` ecrits, PR prete, attente retour Diego
 - Guards Payload : implementes, testes, 2 fichiers pilotes migres, PR `feat/custom-fix-type-inference-payload` prete
 - PostHog bug : diagnostique, fix code pret, en attente implementation + verification staging
 - SearchController : backend créé (`/search/products-bundles/:query/:lang`), frontend non encore branché (problème serveur bloquant)
 - Page builder Payload blocks : plan approuvé, implémentation à venir
 
 ## Faits recents importants
-- `globals: []` dans `payload.config.ts` — rien de défini, prêt à accueillir Homepage + ShopPage
-- Shop page hardcode "Grown Alchemist" en dur dans `Shop.tsx` — cas d'usage direct pour BrandOfMonthBlock
-- `apps/web` a déjà `PayloadSDK` server-side dans `lib/api/cms.ts` — prêt à consommer des globals via simple `getGlobal()`
-- Payload blocks = union typée en tableau JSON, réorderable drag-and-drop dans l'admin ; Globals = singletons Payload (homepage, shop page)
-- Bug PostHog : `useCookieConsent` ne reapplique jamais le consentement au rechargement — commit coupable `5db5dceee` (bump posthog-js 1.369.2, rend `defaults: 2025-05-24` strict)
-- `searchController.js` : `interleaveProductsAndBundles` (1 bundle / 2 produits) + appels parallèles aux deux modèles
-- `computeCartSnapshot.ts` avait un `else if ())` (condition vide) — corrige en `else`
+- `checkUniquePerCategory(field, value, data, find)` — logique pure extraite de `Subcategories.ts`, testable sans Payload
+- `uniquePerCategory` = wrapper d'une ligne qui branche `req.payload.find` — les seuls casts sont là, centralisés
+- `vitest.unit.config.mts` + `test:unit` dans package.json — 8 tests en 5ms, zéro DB
+- PR description + commentaire `Subcategories.ts` rédigés et prêts
+- Bug PostHog : commit coupable `5db5dceee`, fix = `useEffect` de montage pour re-appliquer consentement stocké
+- `searchController.js` : `interleaveProductsAndBundles` (1 bundle / 2 produits) + appels parallèles
 
 ## Decisions actives
-- Blocks : cibler `apps/web` (Next.js) uniquement, pas `web_client` ; shop page en premier (scope plus petit, ROI immédiat)
-- Blocks : 5 types prévus — HeroBlock, ProductGridBlock, BrandOfMonthBlock, BannerBlock, FeaturesBlock
-- PostHog : ne pas modifier `defaults` ni `cookieless_mode` — RGPD-corrects, seul le re-apply au montage manque
-- SearchController : 1 bundle / 2 produits, `isBundle` dérivé de `type`, pas de `SearchApi.ts` dédié
-- Guards : factory closure, pas classe — evite binding `this`
+- Tests `uniquePerCategory` : unitaires uniquement (pas d'intégration Payload), injection de dépendance explicite
+- Blocks : cibler `apps/web` (Next.js) uniquement, shop page avant homepage
+- Blocks : 5 types — HeroBlock, ProductGridBlock, BrandOfMonthBlock, BannerBlock, FeaturesBlock
+- PostHog : ne pas modifier `defaults` ni `cookieless_mode` — seul le re-apply au montage manque
+- SearchController : 1 bundle / 2 produits, `isBundle` dérivé de `type`
 
 ## Prochaines etapes
-- Résoudre le problème serveur préexistant puis rebrancher le frontend sur `/search/products-bundles`
-- Implementer le fix PostHog dans les deux hooks useCookieConsent + verifier staging
-- Ouvrir PR PostHog + ticket Linear
-- Ouvrir PR `feat/custom-fix-type-inference-payload`
-- Implémenter page builder blocks selon plan `dans-mon-cms-dans-parsed-cocoa.md` (8 étapes)
 - Merger `chore/cms-int-tests-ci` apres retour Diego
+- Implementer fix PostHog dans les deux hooks + verifier staging
+- Ouvrir PR PostHog + ticket Linear
+- Résoudre problème serveur search puis rebrancher frontend
 - Resoudre bug S3 double declaration XML (bloquant)
 - Implementer CRON + feed Meta

@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-05-2026 — olis-lab : plan page builder Payload blocks approuvé (homepage + shop page via Globals CMS).
+20-05-2026 — olis-lab : tests CMS finalisés (`checkUniquePerCategory` en pur unitaire avec DI, PR prête à merger).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 20-05-2026
-- Etat : plan blocks/Globals approuvé ; SearchController backend créé, frontend bloqué (problème serveur) ; bug PostHog diagnostiqué, fix pas encore appliqué ; PR guards Payload prête
-- Prochaine etape : résoudre problème serveur, implémenter fix PostHog, puis démarrer implémentation blocks
+- Etat : tests CMS unitaires ecrits (8 tests, 5ms, zero DB) ; PR `chore/cms-int-tests-ci` prete ; bug PostHog diagnostiqué, fix pas encore appliqué ; SearchController backend créé, frontend bloqué ; PR guards Payload prête
+- Prochaine etape : merger `chore/cms-int-tests-ci`, implémenter fix PostHog, résoudre problème serveur search
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -57,7 +57,7 @@ tags: [meta, hot-cache, global]
 - PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Tests CMS olis-lab : infra en place, 5/5 passent, race condition a fixer, unit tests transformateurs a ecrire
+- Tests CMS olis-lab : unitaires `uniquePerCategory` done, PR prete ; prochaine cible = `computeCartSnapshot` (integration) et transformateurs (unitaires)
 - Guards Payload olis-lab : PR prete, migration 2 fichiers pilotes faite, reste a migrer les autres mappers
 - Page builder olis-lab : plan approuvé, prêt a implémenter quand les sujets bloquants sont résolus
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
