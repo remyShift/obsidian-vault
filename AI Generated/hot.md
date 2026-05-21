@@ -1,5 +1,5 @@
 ---
-updated: 20-05-2026
+updated: 21-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-05-2026 — olis-lab : tests CMS finalisés (`checkUniquePerCategory` en pur unitaire avec DI, PR prête à merger).
+21-05-2026 — olis-lab : migration Cursor -> Zed, configuration Rules Library commit messages.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 20-05-2026
-- Etat : tests CMS unitaires ecrits (8 tests, 5ms, zero DB) ; PR `chore/cms-int-tests-ci` prete ; bug PostHog diagnostiqué, fix pas encore appliqué ; SearchController backend créé, frontend bloqué ; PR guards Payload prête
-- Prochaine etape : merger `chore/cms-int-tests-ci`, implémenter fix PostHog, résoudre problème serveur search
+- Derniere session : 21-05-2026
+- Etat : tests CMS unitaires ecrits (PR prete) ; bug PostHog diagnostique, fix pas encore applique ; SearchController backend cree, frontend bloque ; PR guards Payload prete ; migration Cursor -> Zed en cours
+- Prochaine etape : configurer `.zed/rules/project.md`, merger `chore/cms-int-tests-ci`, implementer fix PostHog
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -48,7 +48,7 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : si mission acceptee — Sprint 1 bloquants secu ; sinon archiver
 
 ## Contexte personnel actif
-- Korea move : test de 3 mois a Seoul a planifier dans les prochains mois
+- Korea move : test de 3 mois a Seoul a planifier dans les prochains mois ; prevoit changer de PC a ce moment
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 - LinkedIn ghostwriting : 2 posts rediges (reconversion valide, coreen/React en attente validation)
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant
@@ -59,5 +59,5 @@ tags: [meta, hot-cache, global]
 - Feed Meta olis-lab : pas encore implemente
 - Tests CMS olis-lab : unitaires `uniquePerCategory` done, PR prete ; prochaine cible = `computeCartSnapshot` (integration) et transformateurs (unitaires)
 - Guards Payload olis-lab : PR prete, migration 2 fichiers pilotes faite, reste a migrer les autres mappers
-- Page builder olis-lab : plan approuvé, prêt a implémenter quand les sujets bloquants sont résolus
+- Page builder olis-lab : plan approuve, pret a implementer quand les sujets bloquants sont resolus
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
