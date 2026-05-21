@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-21-05-2026 — olis-lab : diagnostic et fix regression PR #1700 (BrandsHomePage, Oli's Lab Collectibles).
+21-05-2026 — olis-lab : filtering/sort integre sur le tab Products de la SearchPage (branch feat/add-filtering-search-page).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 21-05-2026
-- Etat : fix regression BrandsHomePage pret (PR a ouvrir) ; plan blocks approuve, alignment Diego en cours ; PostHog fix pret non merge ; SearchController frontend bloque ; PR guards Payload prete
-- Prochaine etape : ouvrir PR fix BrandsHomePage, puis implementer fix PostHog
+- Etat : SearchPage filtering implemente (PR a ouvrir) ; fix BrandsHomePage pret (PR a ouvrir) ; PostHog fix pret non merge ; plan blocks approuve, alignment Diego en cours ; PR guards Payload prete
+- Prochaine etape : ouvrir PR feat/add-filtering-search-page, puis PR fix BrandsHomePage
 
 ### piqure
 - Derniere session : 19-05-2026
