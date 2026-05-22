@@ -1,5 +1,5 @@
 ---
-updated: 21-05-2026
+updated: 22-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-21-05-2026 — olis-lab : filtering/sort integre sur le tab Products de la SearchPage (branch feat/add-filtering-search-page).
+22-05-2026 — olis-lab : LoadingProductsSpinner integre sur toutes les pages listing produits, fix flickering NoFilterResults.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 21-05-2026
-- Etat : SearchPage filtering implemente (PR a ouvrir) ; fix BrandsHomePage pret (PR a ouvrir) ; PostHog fix pret non merge ; plan blocks approuve, alignment Diego en cours ; PR guards Payload prete
-- Prochaine etape : ouvrir PR feat/add-filtering-search-page, puis PR fix BrandsHomePage
+- Derniere session : 22-05-2026
+- Etat : LoadingProductsSpinner sur 7 pages (ShopBundles reste), 4 hooks React Query crees, pattern filteredProducts null applique ; PRs a ouvrir (SearchPage filtering, BrandsHomePage, spinner pages)
+- Prochaine etape : re-appliquer ShopBundles + ouvrir les PRs
 
 ### piqure
 - Derniere session : 19-05-2026

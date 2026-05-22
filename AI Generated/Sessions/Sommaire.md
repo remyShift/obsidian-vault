@@ -49,6 +49,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab               | [[AI Generated/Sessions/olis-lab/20-05-2026_16-26]]               |
 | piqure                 | [[AI Generated/Sessions/piqure/19-05-2026_11-23]]                 |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/21-05-2026_10-53]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/22-05-2026_15-58]]               |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |
