@@ -17,10 +17,11 @@ tags:
 - [ ] Portfolio son
 - [ ] Portfolio musique d'ambiance
 - [ ] Portfolio settings pour gérer la musiques et volumes des sons
-- [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
 - [ ] Expand DDD
+	- [ ] Re lire un coup les notes sur le craft surtout sur le DDD + Code Smells
 	- [ ] Architectures concrètes pour l'appliquer Hexa / Vertical Slices / Clean archi ...
 	- [ ] Note en mode exemple bete et mechant de l'application du TDD sur un context simple
+	- [ ] [Un développeur sous couverture parmi les utilisateurs - YouTube](https://youtu.be/C-zaS_5sGz0)
 - [ ] Refactoring patterns
 	- [ ] Port / Adapters
 - [ ] Coréen note sur 이것 / 저것
