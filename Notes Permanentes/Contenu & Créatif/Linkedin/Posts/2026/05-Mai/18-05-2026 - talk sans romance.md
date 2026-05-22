@@ -1,9 +1,9 @@
 ---
 date: 2026-05-18
-likes:
-comments:
-reposts:
-impressions:
+likes: 22
+comments: 0
+reposts: 1
+impressions: 1503
 url: https://www.linkedin.com/posts/remy-cassagne_sur-sc%C3%A8ne-%C3%A0-lyoncraft-jai-romantis%C3%A9-mon-activity-7462030484278214656-IyI_?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
