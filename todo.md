@@ -19,6 +19,10 @@ tags:
 - [ ] Portfolio settings pour gérer la musiques et volumes des sons
 - [ ] Re lire les notes sur le craft surtout sur le DDD + Code Smells
 - [ ] Expand DDD
+	- [ ] Architectures concrètes pour l'appliquer Hexa / Vertical Slices / Clean archi ...
+	- [ ] Note en mode exemple bete et mechant de l'application du TDD sur un context simple
+- [ ] Refactoring patterns
+	- [ ] Port / Adapters
 - [ ] Coréen note sur 이것 / 저것
 ## Work
 
