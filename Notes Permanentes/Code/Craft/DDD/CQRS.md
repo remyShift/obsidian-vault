@@ -105,4 +105,4 @@ async function handleGetCustomerOrders(
 - **Eventual consistency** : si le Read Model est synchronisé de façon asynchrone, les lectures peuvent être légèrement décalées — à gérer explicitement dans l'UI et dans les attentes utilisateurs
 - **Pas adapté partout** : sur une petite app CRUD simple, c'est du sur-engineering
 
-Associé à [[Event Sourcing]], CQRS résout le problème de reconstruction coûteuse que ce pattern crée — les deux forment alors [[CQRS + Event Sourcing]].
+Associé à [[Event Sourcing]], CQRS résout le problème de reconstruction coûteuse que ce pattern crée, les deux forment alors [[CQRS + Event Sourcing]].
