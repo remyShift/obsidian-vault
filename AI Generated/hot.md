@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-22-05-2026 — olis-lab : LoadingProductsSpinner integre sur toutes les pages listing produits, fix flickering NoFilterResults.
+22-05-2026 — olis-lab : LoadingProductsSpinner sur toutes les pages listing, fix flickering NoFilterResults, skipToken adopte pour hooks nullable.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 22-05-2026
-- Etat : LoadingProductsSpinner sur 7 pages (ShopBundles reste), 4 hooks React Query crees, pattern filteredProducts null applique ; PRs a ouvrir (SearchPage filtering, BrandsHomePage, spinner pages)
-- Prochaine etape : re-appliquer ShopBundles + ouvrir les PRs
+- Etat : LoadingProductsSpinner sur 8 pages, 4 hooks React Query crees, pattern filteredProducts null + skipToken adoptes ; 3 PRs a ouvrir
+- Prochaine etape : ouvrir PR feat/loading-state-plp, puis feat/add-filtering-search-page
 
 ### piqure
 - Derniere session : 19-05-2026
