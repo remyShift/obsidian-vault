@@ -1,9 +1,6 @@
 ---
 tags: [CodeKnowledge, Veille]
 ---
-
-## Théorie de la Résidualité dans le Développement Logiciel
-
 ### 1. Définition et Principes Fondamentaux
 - **Résidualité** :  
   Une bonne architecture naît de l’exposition constante à des stress. Ce concept s’inspire des formes naturelles, comme les montagnes ou les cailloux, façonnées par l’érosion.  
