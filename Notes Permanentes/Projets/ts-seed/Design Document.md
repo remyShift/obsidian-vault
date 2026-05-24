@@ -115,3 +115,23 @@ L'application service orchestre :
 4. BrickBuilder.build(context)               → produit le Patch
 5. ProjectWriter.apply(folder, patch)        → écrit sur le filesystem
 ```
+
+---
+
+## Architecture du projet généré
+
+L'outil peut générer un projet structuré en architecture hexagonale DDD. Ce comportement est porté par une brique dédiée **`hexagonal-structure`**, pas implicite, elle se doit d'être toujours explicite.
+
+Cette brique génère la structure de base dans le projet cible :
+
+```
+src/
+  <context>/
+    domain/
+    application/
+    infrastructure/
+      primary/
+      secondary/
+```
+
+Les briques qui supposent une archi hexagonale (ex: une brique `express` positionnée en adaptateur primaire) déclarent `hexagonal-structure` dans leurs `requiredBricks`. Les briques simples (ex: `docker`, `eslint`...) n'en ont pas besoin.
