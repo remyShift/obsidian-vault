@@ -22,6 +22,7 @@ La plupart des équipes sautent au tactique et c'est une erreur car le stratégi
 
 - [[Ubiquitous Language]] : développeurs et experts métier parlent le même langage, utilisé partout, y compris dans le code.
 - [[Bounded Context]] : frontière explicite à l'intérieur de laquelle le modèle est cohérent.
+- [[Context Map]] : représentation des relations entre Bounded Contexts et de leurs patterns d'intégration.
 
 ---
 
@@ -32,7 +33,15 @@ La plupart des équipes sautent au tactique et c'est une erreur car le stratégi
 - [[Aggregate]] : groupe d'Entities et Value Objects traité comme une unité cohérente.
 - [[Repository]] : abstraction qui isole la logique métier de la persistance.
 - [[Domain Service]] : logique métier qui n'appartient naturellement à aucune Entity ni Value Object.
+- [[Factory]] : encapsule la création d'Aggregates ou d'Entities complexes.
 - [[Domain Model]] : représentation en code des comportements et invariants du domaine.
+- [[Domain Invariants]] : règles qui doivent toujours être vraies, encodées dans les objets du domaine.
+
+---
+
+## Couche applicative
+
+- [[Application Service]] : orchestre un cas d'usage. Charge, délègue au domaine, sauvegarde. Aucune logique métier propre.
 
 ---
 
