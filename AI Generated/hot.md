@@ -1,5 +1,5 @@
 ---
-updated: 22-05-2026
+updated: 24-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-22-05-2026 — olis-lab : LoadingProductsSpinner sur toutes les pages listing, fix flickering NoFilterResults, skipToken adopte pour hooks nullable.
+24-05-2026 — olis-lab : guards Payload implementes, mapper migre, PR feat/custom-fix-type-inference-payload prete, decision Diego confirmee (mapper conserve).
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 22-05-2026
-- Etat : LoadingProductsSpinner sur 8 pages, 4 hooks React Query crees, pattern filteredProducts null + skipToken adoptes ; 3 PRs a ouvrir
-- Prochaine etape : ouvrir PR feat/loading-state-plp, puis feat/add-filtering-search-page
+- Derniere session : 24-05-2026
+- Etat : guards Payload dans shared (createAsserter + assertMedia), 2 fichiers pilotes migres, 20 tests verts, PR prete ; LoadingProductsSpinner sur 8 pages, 3 autres PRs a ouvrir
+- Prochaine etape : ouvrir PR guards, puis PR loading-state-plp, puis SearchPage filtering
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -57,7 +57,7 @@ tags: [meta, hot-cache, global]
 - PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Tests CMS olis-lab : unitaires `uniquePerCategory` done, PR prete ; prochaine cible = `computeCartSnapshot` (integration) et transformateurs (unitaires)
+- Tests CMS olis-lab : unitaires `uniquePerCategory` done, PR prete ; prochaine cible = transformateurs (unitaires)
 - Guards Payload olis-lab : PR prete, migration 2 fichiers pilotes faite, reste a migrer les autres mappers
 - Page builder olis-lab : plan approuve, decision blocks vs Global plat en attente retour Diego/Michele
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission

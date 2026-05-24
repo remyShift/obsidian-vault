@@ -1,5 +1,5 @@
 ---
-updated: 22-05-2026
+updated: 24-05-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,7 +7,7 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-22-05-2026 — LoadingProductsSpinner sur toutes les pages listing + fix flickering NoFilterResults + skipToken sur hooks a parametre nullable.
+24-05-2026 — Guards Payload implementes et testes, mapper migre, singleton assertProduct cree, PR feat/custom-fix-type-inference-payload prete, decision Diego : mapper conserve (selection de champs != type narrowing).
 
 ## Etat du projet
 - Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`
@@ -15,34 +15,30 @@ tags: [meta, hot-cache]
 - Feed Meta : pas encore implemente
 - Bug S3 double declaration XML : toujours ouvert (bloquant avant automatisation)
 - Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
-- Tests CMS integration : infra en place, tests unitaires `uniquePerCategory` ecrits, PR prete, attente retour Diego
-- Guards Payload : implementes, testes, 2 fichiers pilotes migres, PR `feat/custom-fix-type-inference-payload` prete
-- PostHog bug : diagnostique, fix code pret, en attente implementation + verification staging
-- SearchPage filtering : implemente sur branch `feat/add-filtering-search-page`, PR a ouvrir
-- Page builder Payload blocks : plan approuve (5 types, apps/web, shop avant homepage), implementation a venir
-- BrandsHomePage regression : fixee localement, PR a ouvrir
-- LoadingProductsSpinner : implemente sur toutes les pages listing (ShopBestsellers, ShopBundles, CategoriesPage, EditPage, ShopAll, HotBrands, SkinTypesProducts, ShopJustDropped)
+- Tests CMS : unitaires `uniquePerCategory` ecrits, PR prete, attente retour Diego
+- Guards Payload : implementes, testes (20 tests verts), 2 fichiers pilotes migres, PR prete
+- SearchPage filtering : branch `feat/add-filtering-search-page`, PR a ouvrir
+- Page builder Payload blocks : plan approuve, implementation a venir
+- LoadingProductsSpinner : sur toutes les pages listing, PR a ouvrir
 
 ## Faits recents importants
-- Pattern `filteredProducts` : initialiser a `null` (pas `[]`) — distingue "pas encore filtre" vs "filtre actif vide" — applique sur toutes les pages listing
-- 4 nouveaux hooks React Query : `useTopSellingProductsQuery`, `useProductsByCategoryQuery`, `useEditBySlugQuery`, `useAllBundlesQuery`
-- `skipToken` (TanStack Query v5) : pattern retenu pour hooks a parametre nullable — remplace `enabled + !`, type narrow automatique dans le `queryFn`
-- `handleAddToBag` : `filteredProducts ?? products` remplace le ternaire `length > 0` partout
-- ShopBestsellers, CategoriesPage, EditPage : `useEffect` raw remplace par React Query
+- `createAsserter(entity)` factory + `assertMedia<T extends MediaLike>` standalone — generique, zero import Payload
+- `computeCartSnapshot.ts` avait un `else if ())` (condition vide) qui bypassait la resolution du brand — corrige
+- Mapper et asserter sont orthogonaux : asserter = type narrowing, mapper = selection de champs — les deux coexistent
+- Diego confirme : ne pas supprimer de champs dans cette PR, juste brancer l'asserter
+- `as unknown as TProduct` pattern accepte pour les mocks de stories quand le type est trop strict
 
 ## Decisions actives
-- Tests `uniquePerCategory` : unitaires uniquement, injection de dependance explicite
-- Blocks : cibler `apps/web` (Next.js), shop page avant homepage, 5 types (HeroBlock, ProductGridBlock, BrandOfMonthBlock, BannerBlock, FeaturesBlock)
-- PostHog : ne pas modifier `defaults` ni `cookieless_mode` — seul le re-apply au montage manque
-- SearchPage : `ShopProduct` directement, discrimination via `isBundle`
-- Fix BrandsHomePage : `null` initial > booleen `hasActiveFilters` supplementaire
-- Nouveaux hooks nullable : privilegier `skipToken` sur `enabled + !`
+- `assertProduct` singleton dans `apps/web/lib/asserters.ts` — instancie une fois, importe partout
+- `assertMedia` generique `T extends MediaLike` — pas de couplage aux types Payload generes
+- Mapper conserve : responsabilite = selection de champs (pas du type narrowing)
+- Subpath export `./payload` dans `@olis-lab/shared/package.json`
+- Tests `*.test.ts` exclus du build tsc dans `packages/shared/tsconfig.json`
 
 ## Prochaines etapes
-- Ouvrir PR `feat/loading-state-plp` (LoadingProductsSpinner toutes pages)
-- Ouvrir PR `feat/add-filtering-search-page` + tester en staging
-- Ouvrir PR fix BrandsHomePage (regression #1700)
-- Implementer fix PostHog dans les deux hooks + verifier staging
+- Ouvrir PR `feat/custom-fix-type-inference-payload` (message deja redige)
+- Migrer les autres mappers/hooks vers `createAsserter`
 - Merger `chore/cms-int-tests-ci` apres retour Diego
+- Ecrire unit tests transformateurs
 - Resoudre bug S3 double declaration XML (bloquant)
-- Implementer CRON + feed Meta
+- Ouvrir PR LoadingProductsSpinner + SearchPage filtering
