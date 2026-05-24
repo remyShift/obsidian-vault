@@ -45,6 +45,16 @@ La plupart des équipes sautent au tactique et c'est une erreur car le stratégi
 
 ---
 
+## Architectures pour appliquer le DDD
+
+- [[Architectures DDD]] : vue d'ensemble et guide de choix.
+- [[Layered Architecture]] : point de départ classique, couches horizontales avec dépendances vers le bas.
+- [[Hexagonal Architecture]] : domaine au centre, ports et adapters autour. Cible naturelle pour Oli's Lab.
+- [[Clean Architecture]] : variante formalisée de l'hexagonale avec couches concentriques explicites.
+- [[Vertical Slice Architecture]] : organisation par feature plutôt que par couche.
+
+---
+
 ## Patterns avancés
 
 - [[CQRS]] : séparer les opérations d'écriture (Commands) des opérations de lecture (Queries).
