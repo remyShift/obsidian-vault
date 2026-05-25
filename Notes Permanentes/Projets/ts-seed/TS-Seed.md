@@ -1,5 +1,7 @@
-## Vue d'ensemble
-
+---
+tags:
+  - TS-Seed
+---
 TS-Seed est une web app Next.js fullstack pour bootstrapper des projets TypeScript. L'utilisateur choisit des briques depuis un catalogue, configure son projet (versions, package manager, nom ...), et l'outil génère les fichiers dans un dossier cible.
 
 L'outil lui-même suit une architecture hexagonale DDD et produit un projet structuré similaire.

@@ -7,6 +7,7 @@
 - [[Idées de projets]]
 - [[KicksFolio]]
 - [[Intro Oli's Lab]]
+- [[TS-Seed]]
 
 ---
 
