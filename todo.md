@@ -26,6 +26,7 @@ tags:
 	- [ ] Port / Adapters
 - [ ] Coréen note sur 이것 / 저것
 - [ ] Changer adresse EI
+- [ ] Notes Leçon 6 coréen
 ## Work
 
 - [ ] 
