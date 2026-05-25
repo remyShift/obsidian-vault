@@ -2,7 +2,7 @@
 tags: [SoftwareCraft, CleanCode, Refacto]
 ---
 
-Cette note est le sommaire des techniques de refactoring disponibles. Chaque pattern est une brique — on les utilise seuls ou combinés selon ce que le code demande.
+Cette note est le sommaire des techniques de refactoring disponibles. Chaque pattern est une brique, on les utilise seuls ou combinés selon ce que le code demande.
 
 ## Les patterns
 
