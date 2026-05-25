@@ -1,5 +1,5 @@
 ---
-updated: 24-05-2026
+updated: 25-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-24-05-2026 — olis-lab : guards Payload implementes, mapper migre, PR feat/custom-fix-type-inference-payload prete, decision Diego confirmee (mapper conserve).
+25-05-2026 — seed4j : brainstorming + design + plan Phase 1 de TS-Seed, nouveau projet perso bootstrapper TypeScript.
 
 ## Projets actifs
 
+### ts-seed (nouveau)
+- Derniere session : 25-05-2026
+- Etat : design doc valide, plan Phase 1 pret (10 tâches TDD), projet pas encore cree
+- Prochaine etape : creer le projet Next.js et executer le plan Phase 1
+
 ### olis-lab
-- Derniere session : 24-05-2026
-- Etat : guards Payload dans shared (createAsserter + assertMedia), 2 fichiers pilotes migres, 20 tests verts, PR prete ; LoadingProductsSpinner sur 8 pages, 3 autres PRs a ouvrir
-- Prochaine etape : ouvrir PR guards, puis PR loading-state-plp, puis SearchPage filtering
+- Derniere session : 25-05-2026
+- Etat : trading plan CMS planifie (deadline 1er juin) ; page builder blocks approuve (apres deadline) ; 3 PRs en attente d'ouverture (guards, loading-state, search filtering)
+- Prochaine etape : demarrer trading plan phase 1 (Global Payload + backsync), puis ouvrir les 3 PRs
 
 ### piqure
 - Derniere session : 19-05-2026

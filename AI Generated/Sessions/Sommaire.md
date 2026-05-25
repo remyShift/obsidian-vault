@@ -51,6 +51,8 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab               | [[AI Generated/Sessions/olis-lab/21-05-2026_10-53]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/22-05-2026_15-58]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/24-05-2026_11-59]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/25-05-2026_10-38]]               |
+| seed4j                 | [[AI Generated/Sessions/seed4j/25-05-2026_10-54]]                 |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |
@@ -60,3 +62,4 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | obsidian-vault  | [[AI Generated/Sessions/obsidian-vault/hot]]  |
 | lyoncraft-2026  | [[AI Generated/Sessions/lyoncraft-2026/hot]]  |
 | piqure          | [[AI Generated/Sessions/piqure/hot]]          |
+| seed4j          | [[AI Generated/Sessions/seed4j/hot]]          |

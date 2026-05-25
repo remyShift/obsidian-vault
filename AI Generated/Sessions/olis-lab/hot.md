@@ -1,5 +1,5 @@
 ---
-updated: 24-05-2026
+updated: 25-05-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,7 +7,7 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Derniere mise a jour
-24-05-2026 — Guards Payload implementes et testes, mapper migre, singleton assertProduct cree, PR feat/custom-fix-type-inference-payload prete, decision Diego : mapper conserve (selection de champs != type narrowing).
+25-05-2026 — Alignement equipe sur trading plan (3 phases, backsync legacy DB) et page builder blocks ; plans rédigés, PRs en attente d'ouverture.
 
 ## Etat du projet
 - Feed GMC : operationnel, route `GET /sitemap/gmc-feed?lang=fr`
@@ -18,27 +18,28 @@ tags: [meta, hot-cache]
 - Tests CMS : unitaires `uniquePerCategory` ecrits, PR prete, attente retour Diego
 - Guards Payload : implementes, testes (20 tests verts), 2 fichiers pilotes migres, PR prete
 - SearchPage filtering : branch `feat/add-filtering-search-page`, PR a ouvrir
-- Page builder Payload blocks : plan approuve, implementation a venir
-- LoadingProductsSpinner : sur toutes les pages listing, PR a ouvrir
+- LoadingProductsSpinner : sur 8 pages listing, PR a ouvrir (`feat/loading-state-plp`)
+- Trading plan CMS : plan approuve (3 phases), implementation a demarrer avant le 1er juin
+- Page builder blocks : plan approuve, apres deadline trading plan
 
 ## Faits recents importants
-- `createAsserter(entity)` factory + `assertMedia<T extends MediaLike>` standalone — generique, zero import Payload
-- `computeCartSnapshot.ts` avait un `else if ())` (condition vide) qui bypassait la resolution du brand — corrige
-- Mapper et asserter sont orthogonaux : asserter = type narrowing, mapper = selection de champs — les deux coexistent
-- Diego confirme : ne pas supprimer de champs dans cette PR, juste brancer l'asserter
-- `as unknown as TProduct` pattern accepte pour les mocks de stories quand le type est trop strict
+- Trading plan = 3 phases : Global Payload miroir legacy DB + backsync → extension des deux DBs avec champs manquants → CRA lit depuis DB au lieu des valeurs hardcodees
+- Trading plan et page builder sont orthogonaux : trading plan = données métier, page builder = layout/affichage
+- Michele confirme : layout change "sooner than we think", blocks justifiés a terme
+- Backsync Global Payload ↔ legacy DB permet de centraliser l'edition dans Payload sans toucher CRA immediatement
+- `createAsserter(entity)` factory + `assertMedia<T extends MediaLike>` dans `@olis-lab/shared/payload`
 
 ## Decisions actives
-- `assertProduct` singleton dans `apps/web/lib/asserters.ts` — instancie une fois, importe partout
-- `assertMedia` generique `T extends MediaLike` — pas de couplage aux types Payload generes
-- Mapper conserve : responsabilite = selection de champs (pas du type narrowing)
-- Subpath export `./payload` dans `@olis-lab/shared/package.json`
-- Tests `*.test.ts` exclus du build tsc dans `packages/shared/tsconfig.json`
+- Trading plan phase 1 avant le 1er juin (deadline imperative)
+- Page builder dans `apps/web` (Next.js) uniquement, shop page avant homepage
+- Pas de connexion CRA directe au Global Payload pour le page builder
+- Guards : `assertProduct` singleton dans `apps/web/lib/asserters.ts`
+- SearchController : `isBundle` derive de `type`, interleave 1 bundle / 2 produits
 
 ## Prochaines etapes
-- Ouvrir PR `feat/custom-fix-type-inference-payload` (message deja redige)
-- Migrer les autres mappers/hooks vers `createAsserter`
-- Merger `chore/cms-int-tests-ci` apres retour Diego
-- Ecrire unit tests transformateurs
+- Demarrer trading plan phase 1 : Global Payload + backsync legacy DB (urgent, avant 1er juin)
+- Ouvrir PR `feat/custom-fix-type-inference-payload`
+- Ouvrir PR `feat/loading-state-plp`
+- Ouvrir PR `feat/add-filtering-search-page`
+- Implementer fix PostHog (useEffect de montage) + verifier staging
 - Resoudre bug S3 double declaration XML (bloquant)
-- Ouvrir PR LoadingProductsSpinner + SearchPage filtering
