@@ -3,7 +3,7 @@ tags: [SoftwareCraft, DDD]
 ---
 Un invariant de domaine est une règle qui doit **toujours être vraie**, quel que soit le chemin d'exécution, quel que soit l'appelant.
 
-Pas "généralement vraie". Pas "vraie si on y pense". Toujours vraie.
+Pas "généralement vraie", pas "vraie si on y pense", toujours vraie.
 
 ```
 Une commande ne peut pas avoir zéro items.
@@ -18,7 +18,7 @@ Ces règles ne vivent pas dans les services. Elles vivent dans les objets qui le
 
 ## Où encoder les invariants
 
-### Dans les Value Objects : à la création
+### Dans les Value Objects, à la création
 
 Un Value Object invalide ne doit pas pouvoir exister. La validation se fait dans la factory method, jamais dans le constructeur public.
 
@@ -41,7 +41,7 @@ class CompatibilityScore {
 }
 ```
 
-### Dans les Aggregates : à chaque transition d'état
+### Dans les Aggregates, à chaque transition d'état
 
 Chaque méthode qui modifie l'état d'un Aggregate vérifie que l'état résultant est valide.
 

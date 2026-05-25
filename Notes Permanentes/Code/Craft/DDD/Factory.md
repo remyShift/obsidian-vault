@@ -1,14 +1,14 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
-Une Factory encapsule la **logique de création d'un [[Aggregate]] ou d'une [[Entity]] complexe**. Son rôle : garantir qu'un objet est créé dans un état valide, sans disperser cette logique de construction partout dans le code.
+Une Factory encapsule la **logique de création d'un [[Aggregate]] ou d'une [[Entity]] complexe**. Son rôle est garantir qu'un objet est créé dans un état valide, sans disperser cette logique de construction partout dans le code.
 
 La question à se poser : qui est responsable de créer cet objet ?
 - Pas le constructeur : trop de logique, difficile à tester, et le constructeur ne peut pas appeler des repositories.
 - Pas le service applicatif : il ne doit pas connaître les détails de construction d'un Aggregate.
 - Pas le [[Repository]] : il reconstruit depuis la persistance, il ne crée pas à partir de données brutes.
 
-C'est le rôle de la Factory.
+C'est donc le rôle de la Factory.
 
 ---
 
@@ -75,7 +75,7 @@ La règle "on ne peut pas créer une commande depuis un panier vide" est une rè
 
 ---
 
-## Application concrète chez Oli's Lab
+## Application concrète
 
 La création d'un `Order` à partir d'un `Cart` est le cas typique. Le panier contient des `CartItem`, la commande contient des `OrderItem` : ce ne sont pas les mêmes objets, même s'ils portent des données similaires. La Factory gère cette transformation.
 
