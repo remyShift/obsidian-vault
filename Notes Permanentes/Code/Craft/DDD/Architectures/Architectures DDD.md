@@ -18,7 +18,7 @@ L'architecture en couches classique : Presentation, Application, Domain, Infrast
 Ports & Adapters. Le domaine est au centre, entouré de ports (interfaces) et d'adapters (implémentations). Tout ce qui est externe (HTTP, base de données, services tiers) est un adapter. Le domaine ne sait rien du monde extérieur.
 
 #### [[Clean Architecture]]
-Variante de l'hexagonale formalisée par Uncle Bob avec des couches concentriques explicites : Entities, Use Cases, Interface Adapters, Frameworks & Drivers. La règle de dépendance est stricte : les cercles intérieurs ne connaissent jamais les cercles extérieurs.
+Variante de l'hexagonale formalisée par Uncle Bob avec des couches concentriques explicites : Entities, Use Cases, Interface Adapters, Frameworks & Drivers. La règle de dépendance est stricte, les cercles intérieurs ne connaissent jamais les cercles extérieurs.
 
 #### [[Vertical Slice Architecture]]
 Organisation par feature plutôt que par couche technique. Chaque feature (PlaceOrder, ApplyPromoCode, ScoreProduct) est un slice vertical qui traverse toutes les couches. Réduit le couplage horizontal entre features.
