@@ -1,8 +1,7 @@
 ---
 tags: [SoftwareCraft, DesignPatterns]
 ---
-
-Un design pattern est une **solution éprouvée à un problème récurrent** de conception logicielle. Ce n'est pas du code à copier-coller — c'est un **schéma de pensée** applicable selon le contexte.
+Un design pattern est une **solution éprouvée à un problème récurrent** de conception logicielle. Ce n'est pas du code à copier-coller, c'est un **schéma de pensée** applicable selon le contexte.
 
 ---
 
@@ -18,13 +17,10 @@ Un design pattern est une **solution éprouvée à un problème récurrent** de 
 
 ## Pourquoi les connaître ?
 
-**Vocabulaire commun** — dire "c'est un Strategy" est plus clair que décrire 20 lignes d'implémentation.
-
-**Refactoring guidé** — un [[Code Smells|code smell]] mène souvent à un pattern précis comme solution.
-
-**Lire du code existant** — la plupart des frameworks les utilisent massivement : Express middleware = Chain of Responsibility, React Context = Observer.
-
-**Éviter la sur-ingénierie** — connaître un pattern, c'est aussi savoir quand ne **pas** l'utiliser.
+- **Vocabulaire commun** : dire "c'est un Strategy" est plus clair que décrire 20 lignes d'implémentation.
+- **Refactoring guidé** : un [[Code Smells|code smell]] mène souvent à un pattern précis comme solution.
+- **Lire du code existant** : la plupart des frameworks les utilisent massivement : Express middleware = Chain of Responsibility, React Context = Observer.
+- **Éviter la sur-ingénierie** : connaître un pattern, c'est aussi savoir quand ne **pas** l'utiliser.
 
 ---
 
@@ -35,11 +31,3 @@ Un design pattern est une **solution éprouvée à un problème récurrent** de 
 Le bon processus : code simple d'abord (YAGNI, KISS) → smell détecté → refactoring → le pattern **émerge** naturellement. Cf. [[Le Refactoring]].
 
 Ne jamais partir du pattern pour aller vers le code.
-
----
-
-## Liens
-
-- [[Code Smells]] — chaque smell a souvent un pattern comme fix naturel
-- [[Les Principes SOLID]] — les patterns sont des implémentations concrètes de SOLID
-- [[Domain-Driven Design]] — DDD utilise plusieurs patterns tactiques (Repository, Value Object...)

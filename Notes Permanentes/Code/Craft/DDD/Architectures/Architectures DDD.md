@@ -1,7 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD, Architecture]
 ---
-Le DDD définit *quoi* modéliser et *comment* nommer les choses. L'architecture définit *où* les mettre et *comment* les connecter. Les deux sont complémentaires, mais distincts.
+xLe DDD définit *quoi* modéliser et *comment* nommer les choses. L'architecture définit *où* les mettre et *comment* les connecter. Les deux sont complémentaires, mais distincts.
 
 Un bon modèle de domaine dans une mauvaise architecture finit couplé à la base de données et impossible à tester. Une bonne architecture sans modèle de domaine reste du CRUD bien organisé.
 

@@ -1,16 +1,15 @@
 ---
 tags: [SoftwareCraft, DesignPatterns]
 ---
+**Objectif :** Définir comment les objets **communiquent et se répartissent les responsabilités**.
 
-**Objectif :** Définir comment les objets **communiquent et se répartissent les responsabilités**. Cf. [[Design Patterns]] pour la vue d'ensemble.
-
-- [[Strategy]] — algorithmes interchangeables à l'exécution
-- [[Observer]] — réaction en cascade quand un objet change d'état
-- [[Command]] — action encapsulée comme objet, undo/redo, queue
-- [[State]] — comportement qui change selon l'état interne, machine à états
-- [[Template Method]] — squelette d'algorithme avec certaines étapes variables
-- [[Chain of Responsibility]] — pipeline de gestionnaires, chaque maillon peut court-circuiter
-- [[Iterator]] — parcourir une collection sans exposer sa structure (natif en JS)
+- [[Strategy]] : algorithmes interchangeables à l'exécution
+- [[Observer]] : réaction en cascade quand un objet change d'état
+- [[Command]] : action encapsulée comme objet, undo/redo, queue
+- [[State]] : comportement qui change selon l'état interne, machine à états
+- [[Template Method]] : squelette d'algorithme avec certaines étapes variables
+- [[Chain of Responsibility]] : pipeline de gestionnaires, chaque maillon peut court-circuiter
+- [[Iterator]] : parcourir une collection sans exposer sa structure (natif en JS)
 
 | Pattern | Signal d'usage |
 |---|---|
