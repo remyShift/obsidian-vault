@@ -35,7 +35,7 @@ C'est l'architecture implicite de la plupart des projets Express : router, contr
 
 ---
 
-## Application concrète chez Oli's Lab
+## Application concrète
 
 ### Structure de fichiers
 

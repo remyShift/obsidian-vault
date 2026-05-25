@@ -33,8 +33,7 @@ Chaque feature est **auto-contenue**. Pour comprendre ce que fait `placeOrder`, 
 
 ---
 
-## Application concrète chez Oli's Lab
-
+## Application concrète
 ### Structure
 
 ```

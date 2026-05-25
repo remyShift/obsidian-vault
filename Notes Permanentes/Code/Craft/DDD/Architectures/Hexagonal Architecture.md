@@ -35,7 +35,7 @@ Le nom "hexagonal" n'a pas de signification précise sur la forme. Ce qui compte
 
 ---
 
-## Application concrète chez Oli's Lab
+## Application concrète
 
 ### Structure
 
