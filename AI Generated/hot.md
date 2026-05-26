@@ -1,5 +1,5 @@
 ---
-updated: 25-05-2026
+updated: 26-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,18 +8,18 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-25-05-2026 — seed4j : brainstorming + design + plan Phase 1 de TS-Seed, nouveau projet perso bootstrapper TypeScript.
+26-05-2026 — seed4j/ts-seed : projet initialise, repo GitHub cree, pret pour TDD.
 
 ## Projets actifs
 
-### ts-seed (nouveau)
-- Derniere session : 25-05-2026
-- Etat : design doc valide, plan Phase 1 pret (10 tâches TDD), projet pas encore cree
-- Prochaine etape : creer le projet Next.js et executer le plan Phase 1
+### ts-seed
+- Derniere session : 26-05-2026
+- Etat : projet cree (Next.js + vitest), repo public lie, aucun code metier encore
+- Prochaine etape : premier test rouge, laisser l'archi hexagonale emerger du TDD
 
 ### olis-lab
 - Derniere session : 25-05-2026
-- Etat : trading plan CMS planifie (deadline 1er juin) ; page builder blocks approuve (apres deadline) ; 3 PRs en attente d'ouverture (guards, loading-state, search filtering)
+- Etat : trading plan CMS planifie (deadline 1er juin) ; page builder blocks approuve ; 3 PRs en attente d'ouverture (guards, loading-state, search filtering)
 - Prochaine etape : demarrer trading plan phase 1 (Global Payload + backsync), puis ouvrir les 3 PRs
 
 ### piqure
