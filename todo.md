@@ -4,7 +4,7 @@ tags:
 ---
 ## Perso
 
-- [ ] graph ql et diff avec Rest ?
+- [ ] graph ql et diff avec Rest ? Ou 
 - [ ] Portfolio
 	- [ ]  host les apps qui ne sont plus host
 	- [ ] son
