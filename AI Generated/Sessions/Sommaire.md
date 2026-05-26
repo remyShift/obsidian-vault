@@ -1,6 +1,6 @@
 # Sommaire - Sessions
 
-Recaps de sessions de travail, organisés par projet et générés par la commande `/recap`.
+Recaps de sessions de travail, organises par projet et generes par la commande `/recap`.
 
 ---
 
@@ -54,6 +54,7 @@ Recaps de sessions de travail, organisés par projet et générés par la comman
 | olis-lab               | [[AI Generated/Sessions/olis-lab/25-05-2026_10-38]]               |
 | seed4j                 | [[AI Generated/Sessions/seed4j/25-05-2026_10-54]]                 |
 | seed4j                 | [[AI Generated/Sessions/seed4j/26-05-2026_12-30]]                 |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/26-05-2026_18-29]]               |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |

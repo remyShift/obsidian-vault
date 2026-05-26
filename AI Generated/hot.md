@@ -8,19 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-26-05-2026 — seed4j/ts-seed : projet initialise, repo GitHub cree, pret pour TDD.
+26-05-2026 — olis-lab : tests guardProduct ecrits (33 verts), bugs corriges, computeCartSnapshot fixe, audit guards CMS.
 
 ## Projets actifs
+
+### olis-lab
+- Derniere session : 26-05-2026
+- Etat : branch `feat/custom-fix-type-inference-payload` prete (guards + tests + fix) ; prochaine cible = remplacer resolveUploadUrl dans transformers ; deadline trading plan 1er juin
+- Prochaine etape : ouvrir PR guards, puis demarrer trading plan phase 1
 
 ### ts-seed
 - Derniere session : 26-05-2026
 - Etat : projet cree (Next.js + vitest), repo public lie, aucun code metier encore
 - Prochaine etape : premier test rouge, laisser l'archi hexagonale emerger du TDD
-
-### olis-lab
-- Derniere session : 25-05-2026
-- Etat : trading plan CMS planifie (deadline 1er juin) ; page builder blocks approuve ; 3 PRs en attente d'ouverture (guards, loading-state, search filtering)
-- Prochaine etape : demarrer trading plan phase 1 (Global Payload + backsync), puis ouvrir les 3 PRs
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -62,7 +62,7 @@ tags: [meta, hot-cache, global]
 - PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Tests CMS olis-lab : unitaires `uniquePerCategory` done, PR prete ; prochaine cible = transformateurs (unitaires)
-- Guards Payload olis-lab : PR prete, migration 2 fichiers pilotes faite, reste a migrer les autres mappers
-- Page builder olis-lab : plan approuve, decision blocks vs Global plat en attente retour Diego/Michele
+- Guards Payload olis-lab : PR prete, migration computeCartSnapshot faite, reste transformers sync
+- Trading plan CMS olis-lab : plan approuve 3 phases, implementation urgente avant 1er juin
+- Page builder olis-lab : plan approuve, apres deadline trading plan
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
