@@ -26,4 +26,4 @@ On s’y croise ?
 
 Ça faisait longtemps qu’on avait pas vu Volvic ici, photos de nos derniers instants dans cet appart, celui où il a grandis depuis que je l’ai.
 
-
+![[Pasted image 20260526100000.png]]
