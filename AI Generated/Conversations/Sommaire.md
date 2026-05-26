@@ -38,3 +38,4 @@ Synthèses de conversations générées via `/wrap`.
 | 18-05-2026 | [[AI Generated/Conversations/18-05-2026 - Post LinkedIn LyonCraft après l'événement]]        |
 | 18-05-2026 | [[AI Generated/Conversations/18-05-2026 - Post LinkedIn LyonCraft insights non romantisés]]  |
 | 25-05-2026 | [[AI Generated/Conversations/25-05-2026 - Atomisation notes Design Patterns]]                |
+| 26-05-2026 | [[AI Generated/Conversations/26-05-2026 - Tech Weekly Oli's Lab - Ajout vault]]              |

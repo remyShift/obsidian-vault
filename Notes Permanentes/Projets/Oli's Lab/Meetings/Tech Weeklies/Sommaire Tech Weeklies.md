@@ -20,4 +20,5 @@ Réunions techniques hebdomadaires de l'équipe Oli's Lab.
 | [[09-03-2026 Tech Weekly]] | Templates Notion projets/tâches, remises Brain Ray, checkout live, bugs cart, CMS Payload hébergement        |
 | [[23-03-2026 Tech Weekly]] | Dashboard Notion, event tracking Apple Pay, CMS PRs (bridge script), INCI score, audit Shop All              |
 | [[08-10-2025 Tech Weekly]] |                                                                                                              |
-| [[25-04-2026 Tech Weekly]] |                                                                                                              |
+| [[25-04-2026 Tech Weekly]] | Dashboard Notion, event tracking Apple Pay, CMS PRs, INCI score, audit perf Shop All, rétrospective          |
+| [[25-05-2026 Tech Weekly]] | Consent mode / event tracking, SEO language repertoire, PDP finalisation, PLP staging, performance SSG       |
