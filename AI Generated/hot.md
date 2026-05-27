@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-27-05-2026 — olis-lab : fixtures guardProduct refaites (tsc clean, 41 verts), bug apostrophe typographique corrige, TradingPlan Global refactore.
+27-05-2026 — olis-lab : TradingPlan Global finalise (curationSettings restructure, sync Payload->legacy implemente, tsc clean).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 27-05-2026
-- Etat : PR guards prete (tsc clean, 41 verts) ; TradingPlan Global pret ; integration web_client trading plan a executer ; deadline 1er juin
-- Prochaine etape : ouvrir PR guards, puis executer integration trading plan web_client
+- Etat : TradingPlan Global finalise (schema + sync infra) ; types a regenerer ; integration web_client planifiee ; deadline 1er juin
+- Prochaine etape : regenerer types Payload, remplir curationSettings dans admin, tester sync
 
 ### ts-seed
 - Derniere session : 26-05-2026
