@@ -1,5 +1,5 @@
 ---
-updated: 27-05-2026
+updated: 28-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-27-05-2026 — olis-lab : guardProduct finalise (58 tests, tsc clean), TradingPlan Global + sync crees, HowToApply corrige.
+28-05-2026 — olis-lab : commentaires PR adresses (union howToUse, Zod cartProduct, describe.each, stories cast supprime), PR prete a ouvrir.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 27-05-2026
-- Etat : guardProduct 58 tests verts + tsc clean ; PR a ouvrir (`feat/payload-type-inference-issue`) ; TradingPlan Global pret ; types Payload a regenerer ; deadline 1er juin
-- Prochaine etape : ouvrir PR guards, regenerer types, tester sync curationSettings
+- Derniere session : 28-05-2026
+- Etat : guards PR prete (`feat/payload-type-inference-issue`), tsc clean ; types Payload a regenerer ; deadline trading plan 1er juin
+- Prochaine etape : ouvrir PR, regenerer types, tester sync curationSettings
 
 ### ts-seed
 - Derniere session : 26-05-2026
@@ -62,7 +62,7 @@ tags: [meta, hot-cache, global]
 - PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Guards Payload olis-lab : 58 tests, tsc clean, PR a ouvrir ; reste transformers sync + regenerer types
+- Guards Payload olis-lab : PR prete a ouvrir ; reste regenerer types + tester sync curationSettings
 - Trading plan CMS olis-lab : Global pret, integration web_client planifiee, deadline 1er juin
 - Page builder olis-lab : plan approuve, apres deadline trading plan
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
