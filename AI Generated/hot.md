@@ -1,5 +1,5 @@
 ---
-updated: 28-05-2026
+updated: 29-05-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,19 +8,19 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-28-05-2026 — olis-lab : commentaires PR adresses (union howToUse, Zod cartProduct, describe.each, stories cast supprime), PR prete a ouvrir.
+29-05-2026 — ts-seed : docs/skills en anglais, plan TDD detaille pour la premiere brique (typescript) valide.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 28-05-2026
-- Etat : guards PR prete (`feat/payload-type-inference-issue`), tsc clean ; types Payload a regenerer ; deadline trading plan 1er juin
-- Prochaine etape : ouvrir PR, regenerer types, tester sync curationSettings
+- Derniere session : 29-05-2026
+- Etat : integration trading plan CMS -> web_client **mergee** ; guards Payload fixes (60/60) ; reste a remplir le contenu CMS prod + activer le flag `dev_payload_trading_plan`
+- Prochaine etape : remplir trading plan CMS prod + uploader images, activer flag, tester sync curationSettings + cartProduct en/fr
 
 ### ts-seed
-- Derniere session : 26-05-2026
-- Etat : projet cree (Next.js + vitest), repo public lie, aucun code metier encore
-- Prochaine etape : premier test rouge, laisser l'archi hexagonale emerger du TDD
+- Derniere session : 29-05-2026
+- Etat : boilerplate Next.js + vitest, docs/skills en anglais, plan TDD premiere brique valide, zero code metier encore
+- Prochaine etape : implementer TypescriptBrickBuilder via TDD (strings brutes, laisser l'archi emerger du refactor)
 
 ### piqure
 - Derniere session : 19-05-2026
@@ -62,7 +62,7 @@ tags: [meta, hot-cache, global]
 - PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Guards Payload olis-lab : PR prete a ouvrir ; reste regenerer types + tester sync curationSettings
-- Trading plan CMS olis-lab : Global pret, integration web_client planifiee, deadline 1er juin
+- Guards Payload olis-lab : PR `feat/payload-type-inference-issue` prete a ouvrir (fixee cette session)
+- Trading plan CMS olis-lab : PR prete a merger, integration web_client deadline 1er juin
 - Page builder olis-lab : plan approuve, apres deadline trading plan
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
