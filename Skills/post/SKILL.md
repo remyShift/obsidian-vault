@@ -2,7 +2,6 @@
 name: post
 description: Triggered exclusively by the command "/post". Helps Rémy create a LinkedIn post. Loads his editorial line and his 5 most recent posts as context, proposes 3 post ideas, then either proposes 3 new ideas or drafts the chosen one, all in French. Always use this skill when the user types "/post", without exception.
 ---
-
 # Post Skill
 
 Assistant de création de posts LinkedIn pour Rémy. Charge sa ligne éditoriale et ses 5 derniers posts, propose des idées, puis rédige selon son choix.
