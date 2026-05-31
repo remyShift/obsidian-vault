@@ -25,14 +25,17 @@ Salutation passe-partout, pour *bonjour* comme pour *salut*. Trois registres :
 
 ### 안녕히 가세요 / 안녕히 계세요 - Au revoir
 
-⚠️ *pas encore vu en cours*
-
 Deux formes, selon qui bouge :
 - **안녕히 가세요** → à celui qui **part** (litt. *allez en paix*)
 - **안녕히 계세요** → à celui qui **reste** (litt. *restez en paix*)
 
+Si vous partez tous les deux, chacun dit 안녕히 가세요. Plus familier : **또 봐요** (*à bientôt*, litt. *on se revoit*).
+
 > [!question]- 안녕히 가세요.
 > Au revoir. (dit à la personne qui s'en va)
+
+> [!question]- 또 봐요.
+> À bientôt. / On se revoit.
 
 ---
 
@@ -53,14 +56,15 @@ Deux verbes : 감사하다 (origine sino-coréenne, registre plus soutenu) et �
 
 ---
 
-### 천만에요 - De rien
+### 아니에요 / 천만에요 / 별 말씀을요 - De rien
 
-⚠️ *pas encore vu en cours*
+Trois réponses à un remerciement, de la plus courante à la plus soutenue :
+- **아니에요** → *de rien* (litt. *ce n'est rien*), le plus courant
+- **천만에요** → *je vous en prie*
+- **별 말씀을요** → *il n'y a pas de quoi* (plus humble, formel)
 
-Réponse à un remerciement. 아니에요 (*ce n'est rien*) est plus courant à l'oral.
-
-> [!question]- 천만에요.
-> De rien.
+> [!question]- 쯔엉 씨, 고마워요. — 아니에요.
+> Merci, Truong. — De rien.
 
 ---
 
@@ -78,6 +82,15 @@ Deux verbes : 죄송하다 (plus respectueux, envers un supérieur ou un inconnu
 
 > [!question]- 지훈 씨, 미안해요.
 > Désolé, Jihun.
+
+---
+
+### 괜찮다 - Ça va / c'est bon
+
+De 괜찮다. Sert à rassurer (*ce n'est pas grave*, en réponse à une excuse), à dire qu'on va bien, ou à décliner poliment (*non merci, ça va*).
+
+> [!question]- 아니요, 괜찮아요.
+> Non, c'est bon. / Non merci, ça va.
 
 ---
 
