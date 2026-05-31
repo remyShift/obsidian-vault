@@ -140,6 +140,10 @@ De 반갑다 (*être ravi*). 만나서 = *en (vous) rencontrant*. Se dit au mome
 | 7  | 실례하다 ~ .verbe   | déranger / s'excuser | 실례해요     | 실례합니다 |            |        |
 ```
 
+Rappel :
+- Violet : Adjectif
+- Bleu : Verbe
+
 ---
 
 [^1]: forme du dictionnaire (la forme en -다, à conjuguer avant emploi)
