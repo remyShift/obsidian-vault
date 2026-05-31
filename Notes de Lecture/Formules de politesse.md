@@ -29,9 +29,7 @@ Deux formes, selon qui bouge :
 - **안녕히 가세요** → à celui qui **part** (litt. *allez en paix*)
 - **안녕히 계세요** → à celui qui **reste** (litt. *restez en paix*)
 
-Si vous partez tous les deux, chacun dit 안녕히 가세요. 
-
-Plus familier : **또 봐요** (*à bientôt*, litt. *on se revoit*).
+Si vous partez tous les deux, chacun dit 안녕히 가세요. Plus familier : **또 봐요** (*à bientôt*, litt. *on se revoit*).
 
 > [!question]- 안녕히 가세요.
 > Au revoir. (dit à la personne qui s'en va)
@@ -111,5 +109,35 @@ De 반갑다 (*être ravi*). 만나서 = *en (vous) rencontrant*. Se dit au mome
 
 > [!question]- 만나서 반갑습니다.
 > Enchanté. / Ravi de vous rencontrer.
+
+---
+
+### Récapitulatif
+
+```sheet
+{
+    classes: {
+        verbe: {
+            "background-color": "#1a3a5c",
+            "color": "#ffffff"
+        },
+        adjectif: {
+            "background-color": "#3a1a5c",
+            "color": "#ffffff"
+        }
+    }
+}
+---
+| #  | 원형               | <                    | 현재 Présent | <          | 과거 Passé | <      |
+| -- | ------------------ | -------------------- | ------------ | ---------- | ---------- | ------ |
+| -  | infinitif          | français             | informel     | formel     | informel   | formel |
+| 1  | 반갑다 ~ .adjectif  | être ravi            | 반가워요     | 반갑습니다 |            |        |
+| 2  | 감사하다 ~ .verbe   | remercier            | 감사해요     | 감사합니다 |            |        |
+| 3  | 고맙다 ~ .adjectif  | être reconnaissant   | 고마워요     | 고맙습니다 |            |        |
+| 4  | 죄송하다 ~ .adjectif | être désolé (poli)  | 죄송해요     | 죄송합니다 |            |        |
+| 5  | 미안하다 ~ .adjectif | être désolé         | 미안해요     | 미안합니다 |            |        |
+| 6  | 괜찮다 ~ .adjectif  | aller bien / ça va   | 괜찮아요     | 괜찮습니다 |            |        |
+| 7  | 실례하다 ~ .verbe   | déranger / s'excuser | 실례해요     | 실례합니다 |            |        |
+```
 
 [^1]: forme du dictionnaire (la forme en -다, à conjuguer avant emploi)
