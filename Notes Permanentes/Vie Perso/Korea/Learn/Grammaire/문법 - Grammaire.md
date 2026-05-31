@@ -8,8 +8,6 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 
 ---
 
----
-
 ### Terminaisons verbales
 
 [[습니다-습니까]] --> Les terminaisons formelles du coréen, pour s'exprimer de manière soutenue et polie.
@@ -50,3 +48,8 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 ## Mots interrogatifs
 
 [[의문사]] --> 뭐, 누구, 어느, 무슨, 몇, 어디 — tous les mots question vus jusqu'ici, avec la différence 어느 vs 무슨.
+
+--- 
+## Démonstratifs
+
+[[이것-저것]] --> Les trois degrés de distance (이/그/저) et les pronoms 이것/그것/저것, avec les formes contractées.
