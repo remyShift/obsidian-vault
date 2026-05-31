@@ -126,6 +126,28 @@ Utilisé dans les situations formelles : présentations, contextes professionnel
 | 48 | 덥다 ~ .adjectif | avoir chaud / être chaud | 더워요 | 덥습니다 |               |              |
 ```
 
+```sheet
+{
+    classes: {
+        verbe: {
+            "background-color": "#1a3a5c",
+            "color": "#ffffff"
+        },
+        adjectif: {
+            "background-color": "#3a1a5c",
+            "color": "#ffffff"
+        }
+    }
+}
+---
+| #  | 원형            | <                 | 현재 Présent | <        | 과거 Passé  | <      |
+| -- | --------------- | ----------------- | ------------ | -------- | ----------- | ------ |
+| -  | infinitif       | français          | informel     | formel   | informel    | formel |
+| 1  | 쓰다 ~ .verbe   | écrire / utiliser | 써요         | 씁니다   |             |        |
+| 2  | 주다 ~ .verbe   | donner            | 줘요         | 줍니다   |             |        |
+| 3  | 보내다 ~ .verbe | envoyer           | 보내요       | 보냅니다 |             |        |
+```
+
 1
 > [!question]- 여름에는 더워요
 > Il fait chaud en été
