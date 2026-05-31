@@ -36,6 +36,7 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 [[과-하고]] --> Relie deux noms comme *et*, en version polie (과/와) ou courante (하고).
 [[의]] --> Indique la possession, comme le *de* français ou le *'s* anglais.
 [[도]] --> Ajoute un élément à ce qui vient d'être dit : *aussi*, *également*.
+[[에게-한테]] --> Marque le destinataire (objet indirect) : *à qui* on donne, écrit ou envoie. 에게 (écrit), 한테 (oral), 께 (honorifique).
 
 ---
 
