@@ -29,7 +29,9 @@ Deux formes, selon qui bouge :
 - **안녕히 가세요** → à celui qui **part** (litt. *allez en paix*)
 - **안녕히 계세요** → à celui qui **reste** (litt. *restez en paix*)
 
-Si vous partez tous les deux, chacun dit 안녕히 가세요. Plus familier : **또 봐요** (*à bientôt*, litt. *on se revoit*).
+Si vous partez tous les deux, chacun dit 안녕히 가세요. 
+
+Plus familier : **또 봐요** (*à bientôt*, litt. *on se revoit*).
 
 > [!question]- 안녕히 가세요.
 > Au revoir. (dit à la personne qui s'en va)
