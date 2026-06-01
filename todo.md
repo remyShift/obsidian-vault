@@ -12,6 +12,7 @@ tags:
 - [ ] [Un développeur sous couverture parmi les utilisateurs - YouTube](https://youtu.be/C-zaS_5sGz0)
 - [ ] Coréen
 	- [ ] Nombres
+	- [ ] Mots interrogatif --> app flashcard
 	- [ ] 지금
 - [x] Changer adresse EI
 ## Work
