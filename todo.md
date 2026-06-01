@@ -11,10 +11,7 @@ tags:
 	- [ ] settings pour gérer la musiques et volumes des sons
 - [ ] [Un développeur sous couverture parmi les utilisateurs - YouTube](https://youtu.be/C-zaS_5sGz0)
 - [ ] Coréen
-	- [ ] note sur 이것 / 저것
-	- [ ]  exercices leçons 5
-	- [ ] notes grammaire leçon 6
-	- [ ] exercices leçon 6
+	- [ ] Nombres
 - [x] Changer adresse EI
 ## Work
 
