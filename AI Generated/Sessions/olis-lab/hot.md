@@ -1,44 +1,40 @@
 ---
-updated: 29-05-2026
+updated: 01-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
 
 # Hot Cache — olis-lab
 
-## Derniere mise a jour
-29-05-2026 — Integration trading plan CMS -> web_client (CRA) terminee et PR mergee : SDK Payload, hook React Query + schema Zod, prop-ification des composants Home/Shop, image CMS cablee, feature flag PostHog.
+## Dernière mise à jour
+01-06-2026 — Composant `SearchableRelationshipField` (picker relationship multi-champs générique) créé en TDD et branché sur Edits.products. Checks statiques verts, test UI réel restant.
 
-## Etat du projet
-- Feed GMC : operationnel
-- Feed Klaviyo : operationnel
-- Feed Meta : pas encore implemente
-- Bug S3 double declaration XML : toujours ouvert (bloquant avant automatisation)
-- Migration Content API v2.1 -> Merchant API avant le 18 aout 2026
-- Guards Payload : PR `feat/payload-type-inference-issue` fixee, 60/60 tests
-- Trading plan CMS -> web_client : **PR mergee** ; contenu CMS prod a remplir + flag a activer
-- Page builder blocks : plan approuve, prochain gros chantier
+## État du projet
+- Picker Edits : composant générique livré (logique pure 19/19 verts, typecheck/lint clean, importMap régénéré). Pas encore vérifié en runtime (dev server + Mongo + admin).
+- Trading plan CMS -> web_client : PR mergée ; contenu CMS prod à remplir + flag PostHog `dev_payload_trading_plan` à activer.
+- Feed GMC + Klaviyo : opérationnels. Feed Meta : pas implémenté.
+- Bug S3 double déclaration XML : toujours ouvert.
+- Migration Content API v2.1 -> Merchant API avant le 18 août 2026.
+- Page builder blocks : plan approuvé, prochain gros chantier.
 
-## Faits recents importants
-- `@payloadcms/sdk` marche dans le CRA (fetch, pas de dep Node) ; `payload` non
-- Feature flag CRA = PostHog via `useFeatureFlags` (`dev_payload_trading_plan`), pas env var
-- Types props trading plan derives du schema Zod `TTradingPlanViewData` (THeroBanner, TTiles, TBrandOfMonth, TPopularCategories)
-- `tradingPlanSchema.ts` = temporaire, potentiellement remplace par l'asserter
-- Image CMS cablee via CSS var `var(--bg-img, url('fallback'))` + set inline conditionnel
-- Gating flag a la source par ternaire (`flag ? data?.x : undefined`) — jamais `flag && x ?? fallback` (precedence casse les types)
-- `typeof image === 'string'` cote Payload = ID non peuple -> retourner `''`
-- Payload retourne les groupes non remplis comme `{}` (pas `null`)
-- Le `dist/` de `packages/shared` peut devenir stale — rebuilder apres changement de schema
+## Faits récents importants
+- Limite Payload : `relationship` recherche ET affiche via `useAsTitle` cible (Products = `sku`). Pas séparable nativement.
+- Virtual field (afterRead) = pas en DB donc **non searchable** → fausse piste.
+- `clientProps` Payload v3 doivent être sérialisables → rendu riche déclaratif, pas de fonction.
+- `qs-esm`/`lodash` absents des deps cms (pnpm strict) → helpers maison (`stringifyQuery`, getter de chemin).
+- ReactSelect adapter Payload n'expose pas `formatOptionLabel` → override via `components={{ Option }}` (adapter spread `...components` en dernier).
+- Tests unitaires cms : `tests/unit/**/*.test.ts`, script `test:unit` (vitest).
+- `STATUS_OPTIONS = ['Live','Staged','Offline']` (Products + Edits).
 
-## Decisions actives
-- Trading plan : composants dumb (props), pages gerent CMS + fallback i18n, flag explicite dans la page
-- Image heroBanner/tiles/brandOfMonth : CSS var avec fallback asset local (zero regression si CMS vide ou flag off)
-- `curationSettingsFields` : constante partagee ; throw (pas warn) sur refs non peuplees
-- `cartProductSchema.translations.en` et `.fr` requis
+## Décisions actives
+- Picker : composant custom gardant le `relationship` natif (persiste les IDs), **zéro champ ajouté, zéro reprocessing**. Rejet de l'option `adminLabel` persisté et du virtual field.
+- Composant générique + config déclarative (titleField/subtitleFields/badge), réutilisable sur d'autres collections.
+- Chips au `label` string par défaut (pas d'override MultiValueLabel) pour limiter le couplage react-select.
+- Trading plan : composants dumb (props), pages gèrent CMS + fallback i18n, flag explicite dans la page.
 
-## Prochaines etapes
-- Remplir le trading plan dans le CMS prod (valeurs EN/FR fournies) + uploader images
-- Activer le flag PostHog `dev_payload_trading_plan` en prod une fois le contenu valide
-- Tester sync `curationSettings` end-to-end + verifier sync cartProduct en/fr
-- Page builder blocks (prochain gros chantier)
-- Retirer le `console.log(cmsHome)` residuel si pas deja fait
+## Prochaines étapes
+- Tester le picker en réel : dev server + Mongo, doc Edits, recherche marque/sku/concern, save/reload/réordonnancement hasMany.
+- Vérifier forme requêtes REST acceptée + `like` sur `title` localisé.
+- Optionnel : override `MultiValueLabel` si badge voulu dans les chips.
+- Remplir trading plan CMS prod (EN/FR) + activer flag PostHog une fois validé.
+- Page builder blocks (gros chantier).

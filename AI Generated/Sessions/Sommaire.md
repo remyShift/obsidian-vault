@@ -59,6 +59,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/28-05-2026_11-04]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/29-05-2026_11-47]]               |
 | ts-seed                | [[AI Generated/Sessions/ts-seed/29-05-2026_23-03]]                |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/01-06-2026_12-07]]               |
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |

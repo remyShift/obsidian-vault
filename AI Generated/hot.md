@@ -1,5 +1,5 @@
 ---
-updated: 29-05-2026
+updated: 01-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-29-05-2026 — ts-seed : docs/skills en anglais, plan TDD detaille pour la premiere brique (typescript) valide.
+01-06-2026 — olis-lab : composant picker relationship multi-champs generique (TDD) cree et branche sur Edits.products ; checks statiques verts, test UI reel restant.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 29-05-2026
-- Etat : integration trading plan CMS -> web_client **mergee** ; guards Payload fixes (60/60) ; reste a remplir le contenu CMS prod + activer le flag `dev_payload_trading_plan`
-- Prochaine etape : remplir trading plan CMS prod + uploader images, activer flag, tester sync curationSettings + cartProduct en/fr
+- Derniere session : 01-06-2026
+- Etat : picker relationship multi-champs generique cree (TDD, 19/19, typecheck/lint clean) et branche sur Edits.products ; test UI runtime restant. Trading plan CMS mergee, contenu prod + flag a activer
+- Prochaine etape : tester le picker en reel (dev + Mongo), puis remplir trading plan CMS prod + activer flag
 
 ### ts-seed
 - Derniere session : 29-05-2026
