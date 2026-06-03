@@ -1,5 +1,5 @@
 ---
-updated: 01-06-2026
+updated: 02-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-01-06-2026 — olis-lab : composant picker relationship multi-champs generique (TDD) cree et branche sur Edits.products ; checks statiques verts, test UI reel restant.
+02-06-2026 — olis-lab : fix du flickering trading plan (3 etats flag PostHog + fetch eager) implemente, typecheck/lint verts ; verif runtime + commit restants.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 01-06-2026
-- Etat : picker relationship multi-champs generique cree (TDD, 19/19, typecheck/lint clean) et branche sur Edits.products ; test UI runtime restant. Trading plan CMS mergee, contenu prod + flag a activer
-- Prochaine etape : tester le picker en reel (dev + Mongo), puis remplir trading plan CMS prod + activer flag
+- Derniere session : 02-06-2026
+- Etat : fix flickering trading plan code (useTradingPlanQuery + Home + Shop, fonction pure 3 etats + fetch eager + LoadingComponent), typecheck/lint verts, pas commite ni verifie runtime. Picker Edits Option A livre (adminLabel + migration), marche en local mais recherche lente. Branche feat/edits-product-picker-admin-label, rien commite.
+- Prochaine etape : verif runtime du fix flickering (fenetre privee + throttle, flag on/off/erreur) puis commit ; reduire adminLabel + lenteur recherche picker
 
 ### ts-seed
 - Derniere session : 29-05-2026
@@ -59,7 +59,7 @@ tags: [meta, hot-cache, global]
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant
 
 ## Threads ouverts cross-projets
-- PostHog olis-lab : bug identifie (commit 5db5dceee), fix pret, staging a verifier avant merge
+- PostHog olis-lab : flickering trading plan fixe (3 etats flag + fetch eager dans useTradingPlanQuery), verif runtime fenetre privee a faire avant commit. Bug PostHog precedent (commit 5db5dceee) : staging a verifier avant merge.
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
 - Guards Payload olis-lab : PR `feat/payload-type-inference-issue` prete a ouvrir (fixee cette session)
