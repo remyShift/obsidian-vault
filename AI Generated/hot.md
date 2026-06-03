@@ -1,5 +1,5 @@
 ---
-updated: 02-06-2026
+updated: 03-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-02-06-2026 — olis-lab : fix du flickering trading plan (3 etats flag PostHog + fetch eager) implemente, typecheck/lint verts ; verif runtime + commit restants.
+03-06-2026 — olis-lab : adminLabel du picker Edits reduit a `title | brand | sku | subcat > cat` (recherche lente). Plus tot : suppression flag `dev_search_page` + code mort cascade (PR mergee).
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 02-06-2026
-- Etat : fix flickering trading plan code (useTradingPlanQuery + Home + Shop, fonction pure 3 etats + fetch eager + LoadingComponent), typecheck/lint verts, pas commite ni verifie runtime. Picker Edits Option A livre (adminLabel + migration), marche en local mais recherche lente. Branche feat/edits-product-picker-admin-label, rien commite.
-- Prochaine etape : verif runtime du fix flickering (fenetre privee + throttle, flag on/off/erreur) puis commit ; reduire adminLabel + lenteur recherche picker
+- Derniere session : 03-06-2026
+- Etat : picker Edits adminLabel reduit a `title | brand | sku | subcat > cat` (tests verts, a rejouer la migration). Flag `dev_search_page` retire du code + code mort cascade supprime (PR mergee). Fix flickering trading plan code mais pas commite/verifie. Branche picker non commitee.
+- Prochaine etape : rejouer migration + mesurer recherche (sinon scan `like` a traiter) ; commiter branche picker ; archiver flag `dev_search_page` (dashboard) ; verif runtime + commit fix flickering
 
 ### ts-seed
 - Derniere session : 29-05-2026
@@ -59,10 +59,9 @@ tags: [meta, hot-cache, global]
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant
 
 ## Threads ouverts cross-projets
-- PostHog olis-lab : flickering trading plan fixe (3 etats flag + fetch eager dans useTradingPlanQuery), verif runtime fenetre privee a faire avant commit. Bug PostHog precedent (commit 5db5dceee) : staging a verifier avant merge.
+- PostHog olis-lab : flag `dev_search_page` retire du code, a archiver cote dashboard. Flickering trading plan fixe (3 etats flag + fetch eager), verif runtime fenetre privee a faire avant commit.
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente
-- Guards Payload olis-lab : PR `feat/payload-type-inference-issue` prete a ouvrir (fixee cette session)
-- Trading plan CMS olis-lab : PR prete a merger, integration web_client deadline 1er juin
-- Page builder olis-lab : plan approuve, apres deadline trading plan
+- Trading plan CMS olis-lab : PR mergee ; contenu CMS prod a remplir + flag a activer
+- Page builder olis-lab : plan approuve, prochain gros chantier
 - Winalia : statut juridique ANJ = question ouverte determinante avant toute mission
