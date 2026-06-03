@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-03-06-2026 — olis-lab : creation du global Payload `announcement-bar` (barre d'annonce, segments text/link, drafts, RowLabel admin), PR ouverte sur `feat/announce-bar-global`. Plus tot le meme jour : adminLabel picker Edits reduit + suppression search navbar/code mort (PR mergee).
+03-06-2026 — olis-lab : global Payload `announcement-bar` cree (PR ouverte). Plan complet valide pour un futur global `navbar` (planif, pas encore implemente).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 03-06-2026
-- Etat : global Payload `announcement-bar` cree (messages 1-3 -> segments text/link, text localise, drafts, RowLabel), scope CMS only, typecheck vert, PR ouverte `feat/announce-bar-global`. Picker Edits adminLabel reduit (a rejouer migration, branche non commitee). Flag `dev_search_page` retire du code + code mort supprime (PR mergee). Fix flickering trading plan pas commite/verifie.
-- Prochaine etape : verif runtime admin announce bar + tickets suivi cablage TopBanner (next + legacy) ; rejouer migration adminLabel + mesurer recherche ; commiter branche picker ; archiver flag `dev_search_page` (dashboard) ; verif + commit fix flickering
+- Etat : global Payload `announcement-bar` cree (messages 1-3 -> segments text/link, text localise, drafts, RowLabel), scope CMS only, typecheck vert, PR ouverte `feat/announce-bar-global`. Plan navbar complet valide (Hybride : top-level fige + sections array, liens explicites + app, fin scan produits, validate path, tout localise CMS) -- PAS encore implemente, scope = global seul. Picker Edits adminLabel reduit (a rejouer migration, branche non commitee). Flag `dev_search_page` retire (PR mergee). Fix flickering trading plan pas commite/verifie.
+- Prochaine etape : implementer le global navbar (`Navbar.ts` + register + types) + confirmer impact produit "fin scan produits" avec Michele ; verif runtime admin announce bar + tickets cablage TopBanner ; rejouer migration adminLabel + mesurer recherche ; commiter branche picker ; archiver flag `dev_search_page` ; verif + commit fix flickering
 
 ### ts-seed
 - Derniere session : 29-05-2026
