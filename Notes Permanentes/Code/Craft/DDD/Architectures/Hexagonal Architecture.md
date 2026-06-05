@@ -255,6 +255,23 @@ Chaque [[Bounded Context]] a sa propre hexagone. La [[Context Map]] montre comme
 
 ---
 
+## Comment l'hexagone émerge du TDD
+
+L'architecture hexagonale n'est pas un point de départ : c'est un **résultat**. En TDD inside-out (voir [[TDD Outside-In vs Inside-Out]]), chaque port apparaît au **refactor**, quand un test révèle une dépendance que le domaine n'a pas besoin de connaître. On ne pré-crée pas les ports ni les Value Objects.
+
+L'heuristique à se poser à chaque refactor : **« de quoi ce code dépend-il qu'il n'a pas besoin de connaître ? »** La réponse devient un port.
+
+Exemple de séquence d'émergence (bootstrapper ts-seed) :
+1. Premier test avec des strings brutes → on nomme le retour (`Patch`, `BrickFile`) au refactor.
+2. Une string invalide passe silencieusement → un **Value Object** (`BrickVersion`) émerge pour porter l'invariant.
+3. Le test ne doit pas écrire sur le disque → le **port** `ProjectWriter` émerge.
+4. « Qui orchestre builder + writer ? » → un **Application Service** émerge.
+5. Couplage concret dans le service → le **port** `BrickBuilder` émerge.
+
+Pré-designer les abstractions dès le plan TDD est l'anti-pattern : ça impose une architecture au lieu de la laisser se révéler.
+
+---
+
 ### Erreurs classiques
 
 **Ports dans la mauvaise direction :** définir le port côté infrastructure plutôt que côté domaine. Le port appartient au domaine, pas à l'adapter.
