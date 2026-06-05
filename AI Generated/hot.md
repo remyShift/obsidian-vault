@@ -1,5 +1,5 @@
 ---
-updated: 04-06-2026
+updated: 05-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-04-06-2026 — olis-lab : flag `dev_payload_trading_plan` supprime (trading plan 100% Payload) PUIS migration du view-model Zod vers l'asserter partage `assertTradingPlan` (forme resolue imbriquee, TDD). Non commite.
+05-06-2026 — olis-lab : announce bar — fixes review PR #1784 (row, typage generique Payload, RowLabel) + integration CRA sous flag `dev_announcement_bar` (asserter, hook `useTopBannerMessages`, anti-flicker, fallback ancien si CMS vide, uppercase force dans composant `ui`). Non commite.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 04-06-2026
-- Etat : flag `dev_payload_trading_plan` retire (Payload only ; isLoading->LoadingComponent / isError->ErrorPage / sinon data). Fallbacks en dur + SCSS `var(--bg-img)` sans fallback + `home-*.png`/`popular-category-*.png` + cles i18n orphelines (4 locales) supprimes. View-model Zod `tradingPlanSchema.ts` SUPPRIME -> asserter partage `assertTradingPlan` (`packages/shared/.../guardTradingPlan.ts`, forme resolue imbriquee, TDD 8/8), 9 composants lisent `image.url`/`brand.slug`. Props explicites (pas de spread). dist rebuild, typecheck vert. NON commite, branche `refactor/remove-old-tradingplan-integration`. En parallele : announce bar (PR ouverte) ; navbar Hybride PAS implemente ; picker Edits (migration a rejouer).
-- Prochaine etape : BLOQUANT remplir global `trading-plan` prod (EN+FR) avant merge sinon Home/Shop -> ErrorPage ; verif runtime + backgrounds desktop/mobile ; archiver flags `dev_payload_trading_plan` + `dev_search_page` (PostHog) ; traiter 15 echecs pre-existants `guardProduct.test.ts` ; commit ; implementer global navbar ; rejouer migration picker.
+- Derniere session : 05-06-2026
+- Etat : Announce bar (PR #1784, branche `feat/announce-bar-global`) — 3 fixes review appliques (segments en `row`, `condition`/`validate` typés `satisfies Condition/Validate<...,TextField>`, RowLabel via type genere) + integration CRA sous flag `dev_announcement_bar` (asserter `assertAnnouncementBar`, hook `useAnnouncementBarQuery`, builder extrait dans hook `useTopBannerMessages` qui possede tout le contenu bannière, App.tsx allege ~70 lignes). REPLACE + fallback ancien si CMS vide ; anti-flicker (flagsReady + query loading) ; uppercase force dans `packages/ui` TopBanner (rebuild ui requis, dist gitignore). Typechecks verts, NON commite. ⚠️ working dir semblait revenu a un etat sans ces changements en fin de session -> verifier branche avant commit. En parallele : trading plan (refacto Zod->asserter, branche `refactor/remove-old-tradingplan-integration`, contenu prod a remplir) ; navbar Hybride PAS implemente ; picker Edits (migration a rejouer).
+- Prochaine etape : verifier branche/fichiers + commiter announce bar + repondre aux 3 commentaires inline + re-demander review ; verif runtime CRA (flag OFF/ON, CMS vide->fallback, uppercase, liens, flicker) ; suivi integration Next.js TopBanner ; trading plan : remplir global prod (EN+FR) avant merge ; rejouer migration picker.
 
 ### ts-seed
 - Derniere session : 29-05-2026

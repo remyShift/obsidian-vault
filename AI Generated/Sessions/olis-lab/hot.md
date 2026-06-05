@@ -1,5 +1,5 @@
 ---
-updated: 04-06-2026
+updated: 05-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,31 +7,30 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-04-06-2026 — Flag `dev_payload_trading_plan` supprimé (trading plan 100% Payload), SCSS/assets/i18n nettoyés, puis migration du view-model Zod vers l'asserter partagé `assertTradingPlan`. Rien commité.
+05-06-2026 — Announce bar : fixes review PR #1784 (row, typage générique Payload, RowLabel) + intégration CRA sous flag `dev_announcement_bar` (asserter, hook query, builder extrait dans `useTopBannerMessages`, anti-flicker, fallback ancien, fix uppercase composant `ui`). Rien commité.
 
 ## État du projet
-- **Trading plan** : flag retiré (useFeatureFlags, query, Home/Shop). Flow `isLoading→LoadingComponent`, `isError||!data→ErrorPage`, sinon data Payload. Plus aucun fallback en dur (code, SCSS `var(--bg-img)` sans fallback, assets `home-*.png`/`popular-category-*.png` supprimés, clés i18n orphelines retirées 4 locales). View-model Zod `tradingPlanSchema.ts` **supprimé** → `assertTradingPlan` (`packages/shared/src/payload/guardTradingPlan.ts`, forme résolue imbriquée, TDD 8/8). 9 composants lisent `image.url`/`brand.slug`. Branche `refactor/remove-old-tradingplan-integration`, non commité.
-- **Announce bar** : global créé, PR ouverte. Câblage front (2 TopBanner) = tickets de suivi.
-- **Navbar (global Payload)** : plan Hybride validé, PAS implémenté.
+- **Announce bar (PR #1784, branche `feat/announce-bar-global`)** : global Payload OK + 3 fixes review appliqués (segments en `row`, `condition`/`validate` typés `satisfies Condition/Validate<...,TextField>`, RowLabel typé via type généré). Intégration CRA derrière `dev_announcement_bar` (REPLACE + fallback ancien si CMS vide). Hook `apps/web_client/src/hooks/useTopBannerMessages.tsx` possède tout le contenu bannière ; `App.tsx` allégé. Uppercase forcé dans `packages/ui` TopBanner. Typechecks verts. **À commiter + répondre aux commentaires.**
+- **Trading plan** : refacto Zod→asserter `assertTradingPlan` sur branche `refactor/remove-old-tradingplan-integration` (séparée). Contenu prod à remplir avant merge.
 - **Picker Edits** : `adminLabel` raccourci, migration à rejouer, branche non commitée.
 - Migration Content API v2.1 → Merchant API avant le 18 août 2026. Page builder blocks : prochain gros chantier.
 
 ## Faits récents importants
-- **web_client + cms consomment le `dist` de `packages/shared`** → rebuild obligatoire après modif (`pnpm --filter @olis-lab/shared build`).
-- **Node 20.19.x obligatoire** (engines) → `nvm use 20` avant toute commande pnpm, sinon `ERR_PNPM_UNSUPPORTED_ENGINE`.
-- Pattern asserter repo : `createAsserter(entity)` → `.populated/.required/.media` ; `assertMedia` garantit `url`. Un asserter par entité, type `ReturnType<typeof assert...>`, appelé dans le fetch.
-- CSS custom properties : `as React.CSSProperties` requis (un seul cast) ; sans cast → TS2559 via framer-motion (MotionStyle weak type).
-- `ctx_read` peut servir du cache périmé → `fresh=true` si incohérence avec `ctx_search`.
-- Convention Rémy : props nommées explicites, jamais de spread JSX.
+- ⚠️ En fin de session le working dir semblait **revenu à un état sans les changements announce** (payload.config sans AnnouncementBar, ui sans uppercase) → vérifier la branche/les fichiers avant de commiter (`git status`, bonne branche `feat/announce-bar-global`).
+- Types Payload d'un array ne sont **pas** une union discriminée → narrowing via asserter `createAsserter().required` (`packages/shared/src/payload/guard.ts`), pas de Zod.
+- Payload exporte `Condition<TData extends TypeWithID, TSiblingData>`, `Validate<TValue,TData,TSiblingData,TFieldConfig>`, `TextField` ; `satisfies` type les params.
+- `@olis-lab/ui` consommé en **`dist`** (gitignoré), legacy importe `@olis-lab/ui/styles.css` → **rebuild `ui`** après toute modif de composant. `@olis-lab/shared` aussi en dist → rebuild après modif.
+- TopBanner Next.js (composant séparé) force déjà `uppercase` ; le partagé (legacy) comptait sur des chaînes i18n en capitales.
+- Node 20.19.x obligatoire → `source $HOME/.nvm/nvm.sh && nvm use 20` avant pnpm. `rm` aliasé `-i` → `/bin/rm -f`.
+- Flicker flags : `!flagsReady || (flag && isLoading)` (pattern Home/Shop) ; App fait `if (!flagsReady) return <LoadingComponent/>`.
 
 ## Décisions actives
-- Trading plan : erreur CMS → `ErrorPage` (data censée toujours bonne), zéro fallback. Asserter renvoie la forme **résolue imbriquée** (pas d'aplatissement UI dans `shared`).
-- Announce bar : segments structurés, pas de Zod partagé. Navbar : top-level figé, liens explicites + `app`.
+- Announce bar : intégration **REPLACE** sous flag + **fallback ancien** si CMS vide ; scope **CRA only** (Next = suivi) ; lien = URL texte libre (champ `link`, `<Link>` interne/`<a>` externe) ; hook dans `hooks/` (pas `service/cms/`) ; uppercase = propriété du composant ; pas de Zod (asserter).
+- Comportement flag-OFF préservé à l'identique (vieux couplage « GWP gate toute la barre »).
 
 ## Prochaines étapes
-- **Bloquant** : remplir le global `trading-plan` prod (EN+FR) avant merge.
-- Vérif runtime `/` et `/shop` (loading, erreur image non peuplée → ErrorPage) + backgrounds desktop/mobile ; commit.
-- Archiver flag `dev_payload_trading_plan` (PostHog).
-- Traiter les 15 échecs pré-existants `guardProduct.test.ts` (spawn task posée).
-- Implémenter le global navbar ; confirmer « fin scan produits » avec Michele.
-- Picker : rejouer migration + commiter.
+- Vérifier la branche/fichiers, **commiter** announce bar sur `feat/announce-bar-global`, répondre aux 3 commentaires inline, re-demander review despinoz.
+- Vérif runtime CRA (flag OFF/ON, CMS rempli/vide → fallback, uppercase, liens, EN/FR, dismiss, pas de flicker).
+- Corriger l'espacement des segments côté contenu CMS (espace avant le lien).
+- Suivi : intégration Next.js TopBanner ; tokens dynamiques free-shipping ; `'announcement-bar'` dans plugin `translator`.
+- Trading plan : remplir contenu prod + merge ; picker : rejouer migration + commiter.
