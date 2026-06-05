@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-06-2026 — olis-lab : announce bar — fixes review PR #1784 (row, typage generique Payload, RowLabel) + integration CRA sous flag `dev_announcement_bar` (asserter, hook `useTopBannerMessages`, anti-flicker, fallback ancien si CMS vide, uppercase force dans composant `ui`). Non commite.
+05-06-2026 — olis-lab : hook Payload d'auto-generation du SKU produit (branche `feat/sku-hook-products-collection`, PR ouverte) — fonction pure `buildSku` en TDD, hook `beforeValidate`, endpoint + bouton admin, champ `sku` read-only/auto (`sku?: string | null`), guard shared maj. Reste 1 test rouge (ZodError vs wrapper) a arbitrer.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 05-06-2026
-- Etat : Announce bar (PR #1784, branche `feat/announce-bar-global`) — 3 fixes review appliques (segments en `row`, `condition`/`validate` typés `satisfies Condition/Validate<...,TextField>`, RowLabel via type genere) + integration CRA sous flag `dev_announcement_bar` (asserter `assertAnnouncementBar`, hook `useAnnouncementBarQuery`, builder extrait dans hook `useTopBannerMessages` qui possede tout le contenu bannière, App.tsx allege ~70 lignes). REPLACE + fallback ancien si CMS vide ; anti-flicker (flagsReady + query loading) ; uppercase force dans `packages/ui` TopBanner (rebuild ui requis, dist gitignore). Typechecks verts, NON commite. ⚠️ working dir semblait revenu a un etat sans ces changements en fin de session -> verifier branche avant commit. En parallele : trading plan (refacto Zod->asserter, branche `refactor/remove-old-tradingplan-integration`, contenu prod a remplir) ; navbar Hybride PAS implemente ; picker Edits (migration a rejouer).
-- Prochaine etape : verifier branche/fichiers + commiter announce bar + repondre aux 3 commentaires inline + re-demander review ; verif runtime CRA (flag OFF/ON, CMS vide->fallback, uppercase, liens, flicker) ; suivi integration Next.js TopBanner ; trading plan : remplir global prod (EN+FR) avant merge ; rejouer migration picker.
+- Etat : **Hook SKU (PR ouverte, branche `feat/sku-hook-products-collection`)** — auto-generation du SKU reproduisant la formule Notion : `buildSku` pure (TDD, 13 tests cms), hook `generateProductSku` en `beforeValidate` (genere si pas de SKU existant, lit `originalDoc` pour drafts), endpoint `POST /api/generate-sku` + bouton admin `GenerateSkuButton`, champ `sku` read-only/auto (`required` retire -> `sku?: string | null`), guard `guardProduct.ts` shared asserte `sku` (assert.required) + fix wrapper `catch` (15->1 tests rouges). Reste 1 test rouge `cartProduct > ZodError`. En parallele : announce bar (PR #1784, `feat/announce-bar-global`) — fixes review + integration CRA flag `dev_announcement_bar`, a commiter ; trading plan (asserter, contenu prod a remplir).
+- Prochaine etape : SKU — arbitrer test ZodError (test->`cause` ou no-wrap), retirer double assertion `brand` redondante, verif end-to-end admin (Mongo), repondre review PR ; announce bar — commiter + repondre 3 commentaires + re-review.
 
 ### ts-seed
 - Derniere session : 29-05-2026
