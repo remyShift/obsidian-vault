@@ -26,12 +26,22 @@ Originaires du chinois. Utilisés pour compter des choses "abstraites" ou offici
 | 100 | 백 | baek |
 | 1000 | 천 | cheon |
 | 10 000 | 만 | man |
+| 100 000 000 | 억 | eok |
 
 **Formation des nombres composés :**
 - 11 = 십일 (sip-il)
 - 25 = 이십오 (i-sip-o)
 - 200 = 이백, 300 = 삼백...
 - 15 000 = 만 오천
+
+> [!important] Les grands nombres : on compte par paquets de 10 000
+> Piège classique pour un cerveau occidental : le coréen ne se découpe pas par milliers, mais par **만 (10 000)**.
+> - 100 000 = 십만 (10 × 10 000)
+> - 1 000 000 = 백만 (100 × 10 000)
+> - 10 000 000 = 천만
+> - 100 000 000 = 억
+>
+> Réflexe à entraîner : penser en **"paquets de dix mille"**, pas en "mille". C'est ce qui ralentit le plus sur les prix au début.
 
 **Quand utiliser les sino-coréens :**
 - Les prix (돈) → 오천 원 (5 000 wons)
@@ -174,3 +184,6 @@ Structure : **Nom + Nombre (natif) + Classificateur**
 | Prix, minutes, dates, mois, étages | Sino-coréen |
 | Heures, objets comptés, âge | Natif coréen |
 | Au-delà de 99 | Sino-coréen |
+
+
+---
