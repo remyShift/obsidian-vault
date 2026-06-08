@@ -10,4 +10,4 @@ tags:
 ---
 Nous y est [AlpesCraft](https://www.linkedin.com/company/alpescraft/) 2026 !
 
-![[Pasted image 20260608132756.png]]
+![[alpescraft.png]]

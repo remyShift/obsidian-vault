@@ -13,7 +13,7 @@ tags: [meta, hot-cache]
 - **Validation lien mutualisée (commité + poussé, `56d4c03ae` sur `origin/feat/announce-bar-global`)** : `apps/cms/src/lib/validateLink.ts` → `isValidLink(value, { required })` (format `/` ou `http(s)://`, pas d'espace). Appliqué : AnnouncementBar segment `link` (required si `type === 'link'`), TradingPlan `ctaLink` (required). Typecheck cms vert.
 - **Navbar (futur global Payload)** : plan complet validé (`~/.claude/plans/`), PAS encore implémenté. Hybride (top-level figé + sections array), liens explicites + `app`, fin scan produits, validate `path` via `isValidLink`, tout localisé CMS. Branchera depuis `feat/announce-bar-global`.
 - **Hook SKU (PR `feat/sku-hook-products-collection`)** : Design A en working tree (non commité), tests verts. À commiter + vérif admin + review PR #1793.
-- **Subcategories admin label (PR `feat/subcategories-payload-admin-label`)** : champ `adminLabel` localisé + hook + migration backfill (38 locales jouées local). Standalone sur develop.
+- **Subcategories admin label (PR #1798, `feat/subcategories-payload-admin-label`)** : champ `adminLabel` localisé + hook + migration backfill (38 locales jouées local). Standalone sur develop. Review en cours : commentaire Diego sur le nom de migration traité (garder format natif Payload, répondu).
 - **Announce bar (PR #1784, `feat/announce-bar-global`)** : fixes review Kyle appliqués (RowLabel, atoms, extraction `TopBannerContainer`, inversion fetch). Typecheck verts, non commité. **3 arbitrages en attente de Rémy** : `satisfies Condition/Validate`, asserter front `assertAnnouncementBar`, `flagsReady` gate app-level. Question : sortir `useGiftProductQuery` du builder.
 - En parallèle : trading plan (contenu prod EN+FR bloquant).
 - Migration Content API v2.1 → Merchant API avant le 18 août 2026.
@@ -24,6 +24,7 @@ tags: [meta, hot-cache]
 - Navbar : top-level (`shop`/`your-lab`/`learn`/`brands`) codé en dur UI (`TNavItemType`) → figé côté CMS aussi. Champ `app` route next/legacy pendant migration. Pattern global : `TradingPlan.ts`.
 - SKU : champ `required` Payload ne peut PAS être rempli par un hook serveur seul (validation required côté client avant envoi) → `validate` custom relâche à la création. L'asserter ne sert qu'à ce que le type Payload ne peut exprimer, pas aux drafts vides.
 - Node 20.19.x → `nvm use 20`. `rm` aliasé `-i` → `/bin/rm -f`. importMap.js gitignoré. `@olis-lab/ui`/`shared` en dist → rebuild après modif.
+- Nom de migration Payload = format natif `YYYYMMDD_HHMMSS_name` (généré par `migrate:create` via `createMigration.js`). Payload exécute les migrations dans l'ordre **lexicographique du nom** → ne pas remplacer par `Date.now()` (epoch `1...` trierait avant `2026...`).
 
 ## Décisions actives
 - Validation lien mutualisée via `isValidLink`, appliquée announce-bar + trading-plan, navbar branchera dessus. `#` retiré de la regex par Rémy.
@@ -36,4 +37,4 @@ tags: [meta, hot-cache]
 - Navbar : confirmer impact « fin scan produits » avec Michele ; re-poster fil commentaires sur la bonne task.
 - Announce bar : Rémy tranche les 3 arbitrages + sortie gift query ; commiter + répondre Kyle.
 - SKU : commiter Design A + vérif admin + review PR #1793 (reco option 1 resolveBrand).
-- Subcategories : répondre review ; conflit `migrations/index.ts` au merge produit ; backfill prod post-merge.
+- Subcategories : commentaire Diego (migration) répondu ; surveiller autres retours review ; conflit `migrations/index.ts` au merge produit ; backfill prod post-merge.

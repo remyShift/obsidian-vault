@@ -8,9 +8,6 @@ tags:
   - Scoring
   - Architecture
 ---
-
-# Ingredient Manager — Vue d'ensemble
-
 ## Le but du projet
 
 C'est l'outil **interne** d'Oli's Lab qui note les produits cosmétiques à partir de leur liste d'ingrédients (INCI). Concrètement il répond à une question : **"ce produit est-il bien formulé, oui ou non, et avec quel score ?"**

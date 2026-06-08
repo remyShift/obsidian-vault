@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-08-06-2026 — olis-lab : util `isValidLink` extrait (`lib/validateLink.ts`), applique sur AnnouncementBar + TradingPlan ; plan complet du futur global `navbar` valide (Hybride, liens explicites + app, fin scan produits). Plus tot : fixes review announce bar, hook SKU Design A, admin label subcategories.
+08-06-2026 — olis-lab : review PR #1798 subcategories — commentaire Diego sur le nom de migration traite (garder format natif Payload `YYYYMMDD_HHMMSS`, Remy a repondu). Plus tot : util `isValidLink` extrait + applique announce-bar/trading-plan, plan global navbar valide, hook SKU Design A, admin label localise subcategories.
 
 ## Projets actifs
 
@@ -16,7 +16,7 @@ tags: [meta, hot-cache, global]
 - Derniere session : 08-06-2026
 - Etat : **Hook SKU (PR `feat/sku-hook-products-collection`)** — Design A applique en working tree (non commite) : `sku` `required: true` + `validate` custom (relache la creation, le hook `beforeValidate` genere au save) + readOnly, type regenere `sku: string`, `guardProduct` sku retire (rawRest), tests sku guard supprimes, test ZodError corrige (`err.cause instanceof ZodError`), **bouton "Generate SKU" + endpoint supprimes**. typecheck cms+shared OK, 13 tests cms + 68 shared verts. Cle : un champ Payload `required` ne peut pas etre rempli par un hook serveur seul (validation required cote client avant l'envoi) → la validate custom est ce qui permet le one-click publish. **Subcategories admin label (PR `feat/subcategories-payload-admin-label`)** : champ `adminLabel` localise + hook + migration backfill (38 locales local), standalone sur develop. Aussi : review PR #1793 (resolveBrand vs asserter, 4 options, choix Remy en attente) ; announce bar (PR #1784) ; trading plan (contenu prod EN+FR bloquant).
 - Etat (suite) : **validation lien mutualisee** — util `isValidLink` (`lib/validateLink.ts`, format `/` ou `http(s)://`) applique sur AnnouncementBar (`link`) + TradingPlan (`ctaLink`), **commite + pousse** (`56d4c03ae` sur `origin/feat/announce-bar-global`). **Navbar (futur global)** — plan complet valide (`~/.claude/plans/`), PAS implemente : Hybride (top-level fige + sections array), liens explicites + `app`, fin scan produits, validate `path` via `isValidLink`, tout localise CMS, top-level non editable cette iteration (arbitrage Michele). Branchera depuis `feat/announce-bar-global`.
-- Prochaine etape : brancher la navbar depuis `feat/announce-bar-global` puis implementer le global (`Navbar.ts` + register + types) + confirmer "fin scan produits" avec Michele ; SKU — commiter Design A + verif admin + review PR #1793 ; subcategories — repondre review + conflit `migrations/index.ts` au merge + backfill prod ; announce bar — commiter + repondre review.
+- Prochaine etape : brancher la navbar depuis `feat/announce-bar-global` puis implementer le global (`Navbar.ts` + register + types) + confirmer "fin scan produits" avec Michele ; SKU — commiter Design A + verif admin + review PR #1793 ; subcategories (PR #1798) — commentaire Diego migration repondu, surveiller autres retours + conflit `migrations/index.ts` au merge + backfill prod ; announce bar — commiter + repondre review.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
