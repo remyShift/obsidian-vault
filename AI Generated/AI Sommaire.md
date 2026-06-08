@@ -2,8 +2,6 @@
 
 Contenu généré par Claude (sessions, conversations). Tous les fichiers ici ont `source: ai` dans leur frontmatter.
 
-Pour le moment un seul skill : [[SKILL|wrap]].
-
 Hot context : [[AI Generated/hot|hot]]
 
 ---
@@ -15,3 +13,7 @@ Hot context : [[AI Generated/hot|hot]]
 
 ## Evolve reports
 - [[Evolve Sommaire]]
+  
+## Skills
+- [[SKILL|wrap]]
+- [[Skills/post/SKILL|post]]
