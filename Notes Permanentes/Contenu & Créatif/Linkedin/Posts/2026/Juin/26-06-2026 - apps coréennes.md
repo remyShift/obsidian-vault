@@ -1,9 +1,9 @@
 ---
 date: 2026-05-26
-likes:
-comments:
+likes: 5
+comments: 0
 reposts:
-impressions:
+impressions: 1005
 url: https://www.linkedin.com/posts/remy-cassagne_hier-jinstallais-et-configurais-des-apps-share-7464776784811601920-q-Jr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin

@@ -1,9 +1,9 @@
 ---
 date: 2026-05-24
-likes:
-comments:
+likes: 13
+comments: 10
 reposts:
-impressions:
+impressions: 1204
 url: https://www.linkedin.com/posts/remy-cassagne_%C3%A7a-fait-quelques-jours-que-je-nai-rien-post%C3%A9-share-7464047681221488641-XzPy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin

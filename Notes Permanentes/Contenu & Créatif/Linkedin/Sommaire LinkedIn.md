@@ -342,3 +342,9 @@ SORT date DESC
 | [[14-05-2026 - retour sur LyonCraft]]             | Retour sur mon passage à LyonCraft.                                                                                      |
 | [[17-05-2026 - gros mots]]                        | Liste de gros mots que je ramène de LyonCraft                                                                            |
 | [[18-05-2026 - talk sans romance]]                | Anecdotes non romancées de mon parcours                                                                                  |
+| [[24-05-2026 - déménagement]]                     | Déménagement avant de partir en corée                                                                                    |
+|                                                   |                                                                                                                          |
+|                                                   |                                                                                                                          |
+|                                                   |                                                                                                                          |
+|                                                   |                                                                                                                          |
+|                                                   |                                                                                                                          |
