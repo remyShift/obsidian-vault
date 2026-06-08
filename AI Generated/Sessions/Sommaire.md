@@ -75,4 +75,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | piqure          | [[AI Generated/Sessions/piqure/hot]]          |
 | seed4j          | [[AI Generated/Sessions/seed4j/hot]]          |
 | ts-seed         | [[AI Generated/Sessions/ts-seed/hot]]         |
+| ingredient-manager | [[AI Generated/Sessions/ingredient-manager/hot]] |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/04-06-2026_08-04]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/08-06-2026_17-33]]               |
+| ingredient-manager     | [[AI Generated/Sessions/ingredient-manager/08-06-2026_17-49]]     |

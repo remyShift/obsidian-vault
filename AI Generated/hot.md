@@ -8,14 +8,20 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-08-06-2026 — obsidian-vault : passe `/evolve` complete + `--apply` du rapport 05-06 (5 items appliques : memory olis-lab reecrite, `project_ts_seed` + `reference_olis_lab_build_traps` crees, style LinkedIn enrichi, note Hexagonal completee). 3 items audit en attente manuelle.
+08-06-2026 — olis-lab : util `isValidLink` extrait (`lib/validateLink.ts`), applique sur AnnouncementBar + TradingPlan ; plan complet du futur global `navbar` valide (Hybride, liens explicites + app, fin scan produits). Plus tot : fixes review announce bar, hook SKU Design A, admin label subcategories.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 05-06-2026
-- Etat : **Hook SKU (PR ouverte, branche `feat/sku-hook-products-collection`)** — auto-generation du SKU reproduisant la formule Notion : `buildSku` pure (TDD, 13 tests cms), hook `generateProductSku` en `beforeValidate` (genere si pas de SKU existant, lit `originalDoc` pour drafts), endpoint `POST /api/generate-sku` + bouton admin `GenerateSkuButton`, champ `sku` read-only/auto (`required` retire -> `sku?: string | null`), guard `guardProduct.ts` shared asserte `sku` (assert.required) + fix wrapper `catch` (15->1 tests rouges). Reste 1 test rouge `cartProduct > ZodError`. En parallele : announce bar (PR #1784, `feat/announce-bar-global`) — fixes review + integration CRA flag `dev_announcement_bar`, a commiter ; trading plan (asserter, contenu prod a remplir).
-- Prochaine etape : SKU — arbitrer test ZodError (test->`cause` ou no-wrap), retirer double assertion `brand` redondante, verif end-to-end admin (Mongo), repondre review PR ; announce bar — commiter + repondre 3 commentaires + re-review.
+- Derniere session : 08-06-2026
+- Etat : **Hook SKU (PR `feat/sku-hook-products-collection`)** — Design A applique en working tree (non commite) : `sku` `required: true` + `validate` custom (relache la creation, le hook `beforeValidate` genere au save) + readOnly, type regenere `sku: string`, `guardProduct` sku retire (rawRest), tests sku guard supprimes, test ZodError corrige (`err.cause instanceof ZodError`), **bouton "Generate SKU" + endpoint supprimes**. typecheck cms+shared OK, 13 tests cms + 68 shared verts. Cle : un champ Payload `required` ne peut pas etre rempli par un hook serveur seul (validation required cote client avant l'envoi) → la validate custom est ce qui permet le one-click publish. **Subcategories admin label (PR `feat/subcategories-payload-admin-label`)** : champ `adminLabel` localise + hook + migration backfill (38 locales local), standalone sur develop. Aussi : review PR #1793 (resolveBrand vs asserter, 4 options, choix Remy en attente) ; announce bar (PR #1784) ; trading plan (contenu prod EN+FR bloquant).
+- Etat (suite) : **validation lien mutualisee** — util `isValidLink` (`lib/validateLink.ts`, format `/` ou `http(s)://`) applique sur AnnouncementBar (`link`) + TradingPlan (`ctaLink`), **commite + pousse** (`56d4c03ae` sur `origin/feat/announce-bar-global`). **Navbar (futur global)** — plan complet valide (`~/.claude/plans/`), PAS implemente : Hybride (top-level fige + sections array), liens explicites + `app`, fin scan produits, validate `path` via `isValidLink`, tout localise CMS, top-level non editable cette iteration (arbitrage Michele). Branchera depuis `feat/announce-bar-global`.
+- Prochaine etape : brancher la navbar depuis `feat/announce-bar-global` puis implementer le global (`Navbar.ts` + register + types) + confirmer "fin scan produits" avec Michele ; SKU — commiter Design A + verif admin + review PR #1793 ; subcategories — repondre review + conflit `migrations/index.ts` au merge + backfill prod ; announce bar — commiter + repondre review.
+
+### ingredient-manager
+- Derniere session : 08-06-2026
+- Etat : back-office de notation produits Oli's Lab (matching INCI/COSING + scoring 10 regles R01-R10, sources shop/ewg/lancome). TS strict + Zod + Express 5 + Mongo + Next 14. Inspecte + documente en 4 notes de lecture. Dette : `ext-scoring.repo.ts` 3314 lignes (God file), abstraction par source qui fuit (`if shop else ext` dans le service), logique scoring dupliquee dans la couche data.
+- Prochaine etape : si refacto, sortir la logique scoring des repos vers le domaine (point 1 du plan note 03) ; trier les notes Inbox (to-process).
 
 ### ts-seed
 - Derniere session : 29-05-2026
