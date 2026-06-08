@@ -1,5 +1,5 @@
 ---
-updated: 05-06-2026
+updated: 08-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-05-06-2026 — olis-lab : hook Payload d'auto-generation du SKU produit (branche `feat/sku-hook-products-collection`, PR ouverte) — fonction pure `buildSku` en TDD, hook `beforeValidate`, endpoint + bouton admin, champ `sku` read-only/auto (`sku?: string | null`), guard shared maj. Reste 1 test rouge (ZodError vs wrapper) a arbitrer.
+08-06-2026 — obsidian-vault : passe `/evolve` complete + `--apply` du rapport 05-06 (5 items appliques : memory olis-lab reecrite, `project_ts_seed` + `reference_olis_lab_build_traps` crees, style LinkedIn enrichi, note Hexagonal completee). 3 items audit en attente manuelle.
 
 ## Projets actifs
 
@@ -28,9 +28,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 18-05-2026
-- Etat : Sommaire LinkedIn enrichi (score pondere, section sans impressions), 275 posts renommes
-- Prochaine etape : completer impressions manquantes, traiter Inbox/Rust/, alimenter Infra/
+- Derniere session : 08-06-2026
+- Etat : `/evolve` rapport 05-06 applique (memory olis-lab reecrite, ts-seed + build-traps documentes, style LinkedIn enrichi, note Hexagonal completee). 3 audits en attente.
+- Prochaine etape : traiter audits (A1 docs ts-seed perdus ?, A2 recap 22-05 mal range, A3 wikilinks Notes de Lecture/Code) ; prochain /evolve vendredi
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
