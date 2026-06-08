@@ -45,6 +45,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/15-05-2026_21-35]]         |
 | piqure                 | [[AI Generated/Sessions/piqure/15-05-2026_22-33]]                 |
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/18-05-2026_00-34]]         |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/08-06-2026_10-03]]         |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/19-05-2026_11-21]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/20-05-2026_16-26]]               |
 | piqure                 | [[AI Generated/Sessions/piqure/19-05-2026_11-23]]                 |
