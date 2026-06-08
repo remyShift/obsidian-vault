@@ -58,5 +58,3 @@ En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas
 > Natasha est au milieu du terrain de sport.
 
 [^1]: Nom
-
----
