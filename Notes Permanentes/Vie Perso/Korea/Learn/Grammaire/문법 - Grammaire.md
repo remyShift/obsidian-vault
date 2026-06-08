@@ -40,6 +40,12 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 
 ---
 
+### Particules de lieu
+
+[[에-에서]] --> Distingue le lieu où l'on est / où l'on va (에) du lieu où une action se déroule (에서).
+
+---
+
 ## Nombres et classificateurs
 
 [[Nombres]] --> Les deux systèmes (sino-coréen et natif), l'heure, les prix, et le hub vers tous les classificateurs.

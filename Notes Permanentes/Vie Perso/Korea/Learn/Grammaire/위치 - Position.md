@@ -2,7 +2,7 @@
 tags:
   - Korea
 ---
-En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas des prépositions** : ce sont des **noms**. On les place **après** le lieu de référence, puis on attache la particule de lieu **에** au mot de position. Le verbe est 있다 (*se trouver, être quelque part*, à ne pas confondre avec 이다, *être / identité*).
+En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas des prépositions** : ce sont des **noms**. On les place **après** le lieu de référence, puis on attache la particule de lieu **에** au mot de position (voir [[에-에서]]). Le verbe est 있다 (*se trouver, être quelque part*, à ne pas confondre avec 이다, *être / identité*).
 
 > [sujet]이/가 [lieu de référence] [position]**에** 있어요 / 있습니다
 
