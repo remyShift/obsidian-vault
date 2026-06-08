@@ -15,5 +15,5 @@ Hot context : [[AI Generated/hot|hot]]
 - [[Evolve Sommaire]]
   
 ## Skills
-- [[SKILL|wrap]]
+- [[Skills/wrap/SKILL|wrap]]
 - [[Skills/post/SKILL|post]]
