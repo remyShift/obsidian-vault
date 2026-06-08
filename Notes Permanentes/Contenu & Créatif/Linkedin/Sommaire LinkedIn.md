@@ -343,8 +343,8 @@ SORT date DESC
 | [[17-05-2026 - gros mots]]                        | Liste de gros mots que je ramène de LyonCraft                                                                            |
 | [[18-05-2026 - talk sans romance]]                | Anecdotes non romancées de mon parcours                                                                                  |
 | [[24-05-2026 - déménagement]]                     | Déménagement avant de partir en corée                                                                                    |
-|                                                   |                                                                                                                          |
-|                                                   |                                                                                                                          |
+| [[21-05-2026 - retours lyoncraft]]                | Retours sur LyonCraft et comment les accepter                                                                            |
+| [[01-06-2026 - apps coréennes]]                   | Installation apps coréennes différences workflows                                                                        |
 |                                                   |                                                                                                                          |
 |                                                   |                                                                                                                          |
 |                                                   |                                                                                                                          |

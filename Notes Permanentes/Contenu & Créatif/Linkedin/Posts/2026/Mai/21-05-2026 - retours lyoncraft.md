@@ -1,10 +1,10 @@
 ---
 date: 2026-06-08
-likes:
-comments:
+likes: 18
+comments: 11
 reposts:
-impressions:
-url:
+impressions: 1448
+url: https://www.linkedin.com/posts/remy-cassagne_%C3%A7a-fait-une-semaine-que-les-retours-sur-mon-activity-7462392896122527744-jnfT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---
