@@ -54,3 +54,8 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 ## Démonstratifs
 
 [[이것-저것]] --> Les trois degrés de distance (이/그/저) et les pronoms 이것/그것/저것, avec les formes contractées.
+
+--- 
+## Localisation / Position
+
+[[위치 - Position]] --> Les mots de position (앞, 뒤, 옆, 위, 아래) avec la structure [lieu] [position]에 있다, plus 사이에 (*entre*) et 가운데 (*au milieu de*).
