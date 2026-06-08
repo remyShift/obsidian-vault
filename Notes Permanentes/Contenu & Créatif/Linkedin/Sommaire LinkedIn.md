@@ -344,7 +344,9 @@ SORT date DESC
 | [[18-05-2026 - talk sans romance]]                | Anecdotes non romancées de mon parcours                                                                                  |
 | [[24-05-2026 - déménagement]]                     | Déménagement avant de partir en corée                                                                                    |
 | [[21-05-2026 - retours lyoncraft]]                | Retours sur LyonCraft et comment les accepter                                                                            |
-| [[01-06-2026 - apps coréennes]]                   | Installation apps coréennes différences workflows                                                                        |
-|                                                   |                                                                                                                          |
-|                                                   |                                                                                                                          |
+| [[30-05-2026 - apps coréennes]]                   | Installation apps coréennes différences workflows                                                                        |
+| [[31-05-2026 - meme mrbeast]]                     |                                                                                                                          |
+| [[02-06-2026 - ia fait code senior]]              | L'IA donne l'illusion que le code est senior.                                                                            |
+| [[03-06-2026 - question db]]                      | Question sur les relations db many - many                                                                                |
+| [[04-06-2026 - AlpesCraft]]                       | Début de journée AlpesCraft                                                                                              |
 |                                                   |                                                                                                                          |
