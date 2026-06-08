@@ -184,6 +184,3 @@ Structure : **Nom + Nombre (natif) + Classificateur**
 | Prix, minutes, dates, mois, étages | Sino-coréen |
 | Heures, objets comptés, âge | Natif coréen |
 | Au-delà de 99 | Sino-coréen |
-
-
----
