@@ -7,29 +7,27 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-09-06-2026 — Tranché la proposition Michele (plugin Nested Docs) : pas la solution pour les adminLabel. Garder les 2 PRs (subcategories + edits product picker), abandonner Nested Docs. Réponse anglaise rédigée pour le commentaire PR.
+09-06-2026 — Rédigé `PAYLOAD_FRONTEND_TYPING_RFC.md` (racine, EN) pour le call Kyle/Diego sur le non-scaling des guards/asserter (PR #1784, commentaire Kyle `r3373942208`). Plus tôt : tranché les 2 PRs adminLabel (garder, abandonner Nested Docs de Michele).
 
 ## État du projet
-- **adminLabel (2 PRs)** : `feat/subcategories-payload-admin-label` (#1798) + `feat/edits-product-picker-admin-label`. Même but : rendre le relationship picker cherchable via champ `adminLabel` dénormalisé + `useAsTitle`. Products = `title | brand | sku | subcat > cat`, Subcategories = `name > category`. Hook `beforeChange` + migration backfill + tests + escape hatch `skipAdminLabel`. **Correctes, indépendantes, à merger.**
-- **Hook SKU (PR `feat/sku-hook-products-collection`)** : Design A en working tree (non commité), tests verts. À commiter + vérif admin + review PR #1793.
-- **Validation lien mutualisée** : `isValidLink` (`lib/validateLink.ts`) commité + poussé (`56d4c03ae` sur `origin/feat/announce-bar-global`), appliqué announce-bar + trading-plan.
-- **Navbar (futur global)** : plan validé, PAS implémenté. Branchera depuis `feat/announce-bar-global`.
-- **Announce bar (PR #1784)** : fixes review Kyle appliqués, non commité, 3 arbitrages en attente Rémy.
-- Migration GMC Content API → Merchant API avant le 18 août 2026.
+- **RFC typage Payload→frontend (`PAYLOAD_FRONTEND_TYPING_RFC.md`, untracked)** : périmètre = asserter runtime only. Root cause = `apps/cms` déployé séparé → 2 fronts (`web` Next + `web_client` CRA) sur `@payloadcms/sdk` HTTP → union `string|T` non narrow (ni SDK ni Local API, limitation universelle). 6 options, axe de décision = wrapper client (Opt 3) vs DTO serveur (Opt 4). Reco : wrapper SDK typé (depth par méthode) + Zod interne + lint. Éviter wrapper `as`-only.
+- **adminLabel (2 PRs)** : `feat/subcategories-payload-admin-label` (#1798) + `feat/edits-product-picker-admin-label`, champ `adminLabel` dénormalisé + `useAsTitle`. Correctes, indépendantes, à merger. Nested Docs abandonné.
+- **Hook SKU (PR `feat/sku-hook-products-collection`)** : Design A en working tree (non commité), tests verts.
+- **isValidLink** commité/poussé (`56d4c03ae` sur `origin/feat/announce-bar-global`). **Navbar** plan validé, pas implémenté. **Announce bar (PR #1784)** fixes Kyle non commités, 3 arbitrages en attente.
 
 ## Faits récents importants
-- Relationship picker Payload = recherche/affichage sur **un seul** champ (`useAsTitle`). Pas de multi-champs natif → champ label dénormalisé = réponse idiomatique. Nested Docs n'y change rien.
-- Plugin Nested Docs = hiérarchie parent/enfant dans UNE collection (`parent` + `breadcrumbs`). Orthogonal au besoin, inutile pour le label produit.
-- Relation produits↔edits vit sur `Edits.products` (`hasMany`). Aucun champ Product→Edits → Bulk Edit natif ne peut pas assigner depuis la liste Products.
-- Nom migration Payload = format natif `YYYYMMDD_HHMMSS_name` (tri lexicographique, ne pas remplacer par epoch).
+- L'union `string|T` des relations Payload n'est narrow NI par le SDK NI par la Local API, quelle que soit la depth (la depth est runtime, pas typée). D'où le PR communautaire ouvert.
+- Local API = in-process uniquement (app qui possède `payload.config.ts`). Supprime la frontière HTTP + le besoin d'asserter partagé (narrow inline co-localisé), pas le typage de l'union.
+- Donnée traversant le réseau (HTTP) → validation runtime défensive plus justifiée → wrapper `as`-only à proscrire.
+- Picker relationship Payload cherche sur un seul champ (`useAsTitle`) → label dénormalisé = réponse idiomatique. Nested Docs = hiérarchie dans une collection, orthogonal.
 
 ## Décisions actives
-- Garder l'approche adminLabel, abandonner Nested Docs pour cette task.
-- Workflow "multi-select liste Products → assigner Edit" = action bulk custom (`admin.components`), task séparée, pas un plugin. Court terme : assigner depuis le doc Edit avec picker amélioré.
+- RFC = doc de discussion, pas de décision figée ; trancher au call (Opt 3 vs Opt 4 ; Zod comme standard ; horizon migration ; rollout guard-by-guard vs spike Product).
+- Garder adminLabel, abandonner Nested Docs ; workflow bulk multi-select = action custom `admin.components` en task séparée.
 
 ## Prochaines étapes
-- Merger les 2 PRs adminLabel + poster la réponse à Michele.
-- Trancher si l'action bulk custom est prioritaire (qui peuple les Edits ? combien de produits/Edit ?).
+- Partager le RFC à Kyle/Diego, préparer le call. Avant partage : vérifier l'argument migration Merchant API (18 août) + trancher périmètre reshaping du wrapper.
+- Décider si on illustre l'Option 1 du RFC (fil-piège type-level `KnownProductKeys` + `Exclude`).
+- Merger les 2 PRs adminLabel + poster réponse à Michele.
 - SKU : commiter Design A + vérif admin + review PR #1793.
-- Navbar : brancher depuis `feat/announce-bar-global` puis implémenter le global.
-- Announce bar : Rémy tranche les 3 arbitrages + commit.
+- Brancher la navbar depuis `feat/announce-bar-global` ; announce bar — trancher les 3 arbitrages + commit.
