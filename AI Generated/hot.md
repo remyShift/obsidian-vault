@@ -1,5 +1,5 @@
 ---
-updated: 08-06-2026
+updated: 09-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-08-06-2026 — olis-lab : review PR #1798 subcategories — commentaire Diego sur le nom de migration traite (garder format natif Payload `YYYYMMDD_HHMMSS`, Remy a repondu). Plus tot : util `isValidLink` extrait + applique announce-bar/trading-plan, plan global navbar valide, hook SKU Design A, admin label localise subcategories.
+09-06-2026 — olis-lab : tranche la proposition Michele (plugin Nested Docs) — pas la solution pour les adminLabel (picker Payload cherche sur un seul champ, Nested Docs = hierarchie parent/enfant orthogonale). Garder les 2 PRs adminLabel (subcategories + edits product picker), abandonner Nested Docs. Reponse anglaise redigee pour le commentaire PR.
 
 ## Projets actifs
 
