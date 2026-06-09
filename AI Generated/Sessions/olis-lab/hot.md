@@ -1,5 +1,5 @@
 ---
-updated: 08-06-2026
+updated: 09-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,34 +7,29 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-08-06-2026 — Util de validation de lien `isValidLink` extrait (`lib/validateLink.ts`), appliqué sur AnnouncementBar + TradingPlan ; plan complet du futur global `navbar` validé. Plus tôt le même jour : fixes review announce bar (Kyle) ; hook SKU bascule Design A + suppression bouton ; admin label localisé subcategories.
+09-06-2026 — Tranché la proposition Michele (plugin Nested Docs) : pas la solution pour les adminLabel. Garder les 2 PRs (subcategories + edits product picker), abandonner Nested Docs. Réponse anglaise rédigée pour le commentaire PR.
 
 ## État du projet
-- **Validation lien mutualisée (commité + poussé, `56d4c03ae` sur `origin/feat/announce-bar-global`)** : `apps/cms/src/lib/validateLink.ts` → `isValidLink(value, { required })` (format `/` ou `http(s)://`, pas d'espace). Appliqué : AnnouncementBar segment `link` (required si `type === 'link'`), TradingPlan `ctaLink` (required). Typecheck cms vert.
-- **Navbar (futur global Payload)** : plan complet validé (`~/.claude/plans/`), PAS encore implémenté. Hybride (top-level figé + sections array), liens explicites + `app`, fin scan produits, validate `path` via `isValidLink`, tout localisé CMS. Branchera depuis `feat/announce-bar-global`.
+- **adminLabel (2 PRs)** : `feat/subcategories-payload-admin-label` (#1798) + `feat/edits-product-picker-admin-label`. Même but : rendre le relationship picker cherchable via champ `adminLabel` dénormalisé + `useAsTitle`. Products = `title | brand | sku | subcat > cat`, Subcategories = `name > category`. Hook `beforeChange` + migration backfill + tests + escape hatch `skipAdminLabel`. **Correctes, indépendantes, à merger.**
 - **Hook SKU (PR `feat/sku-hook-products-collection`)** : Design A en working tree (non commité), tests verts. À commiter + vérif admin + review PR #1793.
-- **Subcategories admin label (PR #1798, `feat/subcategories-payload-admin-label`)** : champ `adminLabel` localisé + hook + migration backfill (38 locales jouées local). Standalone sur develop. Review en cours : commentaire Diego sur le nom de migration traité (garder format natif Payload, répondu).
-- **Announce bar (PR #1784, `feat/announce-bar-global`)** : fixes review Kyle appliqués (RowLabel, atoms, extraction `TopBannerContainer`, inversion fetch). Typecheck verts, non commité. **3 arbitrages en attente de Rémy** : `satisfies Condition/Validate`, asserter front `assertAnnouncementBar`, `flagsReady` gate app-level. Question : sortir `useGiftProductQuery` du builder.
-- En parallèle : trading plan (contenu prod EN+FR bloquant).
-- Migration Content API v2.1 → Merchant API avant le 18 août 2026.
+- **Validation lien mutualisée** : `isValidLink` (`lib/validateLink.ts`) commité + poussé (`56d4c03ae` sur `origin/feat/announce-bar-global`), appliqué announce-bar + trading-plan.
+- **Navbar (futur global)** : plan validé, PAS implémenté. Branchera depuis `feat/announce-bar-global`.
+- **Announce bar (PR #1784)** : fixes review Kyle appliqués, non commité, 3 arbitrages en attente Rémy.
+- Migration GMC Content API → Merchant API avant le 18 août 2026.
 
 ## Faits récents importants
-- Type juste pour un `validate` Payload sur champ `text` = `string | null | undefined` (pas `string` : null/undefined si vide ; pas `unknown` : trop défensif). Après le garde `value == null`, TS narrow → `typeof` inutile.
-- Pas de dossier `fields/`/`validation/` cms : helpers inline par collection (`requiredUnlessBrand`, `uniquePerCategory`). `lib/validateLink.ts` inaugure le util de validation partagé.
-- Navbar : top-level (`shop`/`your-lab`/`learn`/`brands`) codé en dur UI (`TNavItemType`) → figé côté CMS aussi. Champ `app` route next/legacy pendant migration. Pattern global : `TradingPlan.ts`.
-- SKU : champ `required` Payload ne peut PAS être rempli par un hook serveur seul (validation required côté client avant envoi) → `validate` custom relâche à la création. L'asserter ne sert qu'à ce que le type Payload ne peut exprimer, pas aux drafts vides.
-- Node 20.19.x → `nvm use 20`. `rm` aliasé `-i` → `/bin/rm -f`. importMap.js gitignoré. `@olis-lab/ui`/`shared` en dist → rebuild après modif.
-- Nom de migration Payload = format natif `YYYYMMDD_HHMMSS_name` (généré par `migrate:create` via `createMigration.js`). Payload exécute les migrations dans l'ordre **lexicographique du nom** → ne pas remplacer par `Date.now()` (epoch `1...` trierait avant `2026...`).
+- Relationship picker Payload = recherche/affichage sur **un seul** champ (`useAsTitle`). Pas de multi-champs natif → champ label dénormalisé = réponse idiomatique. Nested Docs n'y change rien.
+- Plugin Nested Docs = hiérarchie parent/enfant dans UNE collection (`parent` + `breadcrumbs`). Orthogonal au besoin, inutile pour le label produit.
+- Relation produits↔edits vit sur `Edits.products` (`hasMany`). Aucun champ Product→Edits → Bulk Edit natif ne peut pas assigner depuis la liste Products.
+- Nom migration Payload = format natif `YYYYMMDD_HHMMSS_name` (tri lexicographique, ne pas remplacer par epoch).
 
 ## Décisions actives
-- Validation lien mutualisée via `isValidLink`, appliquée announce-bar + trading-plan, navbar branchera dessus. `#` retiré de la regex par Rémy.
-- Navbar : Hybride, top-level NON éditable cette itération (arbitrage Michele : ça retarde), liens explicites + `app`, fin scan produits (à confirmer Michele), validate léger `path`.
-- SKU : Design A (required + validate + type `string`), bouton supprimé, hook `beforeValidate` inchangé.
-- Subcategories : standalone sur develop, séparateur ` > `, lectures en draft.
+- Garder l'approche adminLabel, abandonner Nested Docs pour cette task.
+- Workflow "multi-select liste Products → assigner Edit" = action bulk custom (`admin.components`), task séparée, pas un plugin. Court terme : assigner depuis le doc Edit avec picker amélioré.
 
 ## Prochaines étapes
-- Navbar : `isValidLink` déjà commité (`56d4c03ae`) sur announce-bar. Reste à brancher la navbar depuis `feat/announce-bar-global` puis implémenter le global (`Navbar.ts` + register + types). Branche pas encore créée (qui la crée = en attente de Rémy).
-- Navbar : confirmer impact « fin scan produits » avec Michele ; re-poster fil commentaires sur la bonne task.
-- Announce bar : Rémy tranche les 3 arbitrages + sortie gift query ; commiter + répondre Kyle.
-- SKU : commiter Design A + vérif admin + review PR #1793 (reco option 1 resolveBrand).
-- Subcategories : commentaire Diego (migration) répondu ; surveiller autres retours review ; conflit `migrations/index.ts` au merge produit ; backfill prod post-merge.
+- Merger les 2 PRs adminLabel + poster la réponse à Michele.
+- Trancher si l'action bulk custom est prioritaire (qui peuple les Edits ? combien de produits/Edit ?).
+- SKU : commiter Design A + vérif admin + review PR #1793.
+- Navbar : brancher depuis `feat/announce-bar-global` puis implémenter le global.
+- Announce bar : Rémy tranche les 3 arbitrages + commit.
