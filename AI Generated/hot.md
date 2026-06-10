@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-10-06-2026 — olis-lab : fix UX du délai de redirection CRA → PDP Next.js (PR #1804, branche `fix/delay-between-cra-pdp`) — overlay de feedback au clic + `loading.tsx` Next ; `cache()` sur `getProduct` retiré à la demande de Kyle.
+10-06-2026 — olis-lab : QA finale PDP Next avant event 13:00 — 3 micro-fixes (Sélection personnalisée Your Lab réactivée, cursor-pointer navbar MARQUES, unité livraison "2-3 jours" i18n) prêts + typecheck vert, non commités. Plus tôt : fix délai CRA→PDP (PR #1804).
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 10-06-2026
-- Etat : **PR #1804 `fix/delay-between-cra-pdp`** (renommée depuis `fix/navbar-nextjs`) — fix du délai sans feedback au clic produit → PDP Next. Côté `web_client` : `isNavigatingAtom` dédié (`stores/Loading.tsx`) set `true` dans `useAppNavigate.ts` avant `window.location.replace`, `LoadingComponent` plein écran monté racine `App.tsx` (pas de reset, hard nav détruit l'app). Côté `web` : `loading.tsx` dans `app/[locale]/products/[id]/` (calqué `secure-checkout`). Typecheck OK. `cache()` sur `getProduct` **reverté** (Kyle veut valider). Diagnostic : délai = hard nav + Server Component bloquant sans streaming ; `getProduct` appelé 2× (`generateMetadata` + page). **Préférence forte mémorisée : jamais de `Co-Authored-By: Claude`.** Threads antérieurs en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (append vs replace), RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A, announce bar #1784, navbar.
-- Prochaine etape : vérifier le fix en vrai (`pnpm dev`, flag `isDevProductPageV2Enabled`, clic carte listing + Home) ; répondre au commentaire Kyle sur #1804 ; plus tard PR séparée pour dedup `getProduct`. Puis reprendre les threads en attente (commit cart-hook tests, trancher bulk-add, call RFC Kyle/Diego, merger adminLabel).
+- Etat : **2 chantiers sur branche `fix/delay-between-cra-pdp`.** (1) QA finale PDP Next (`apps/web`, **non commité**) — 3 micro-fixes issus d'un thread Slack #tech : section "Sélection personnalisée" (Your Lab) réactivée (`navbarSections.ts`, retrait `sectionDisabled`+badge), `cursor-pointer` sur `NavItem` (curseur "MARQUES"), unité livraison localisée "2-3 days"→"2-3 jours" (`ShippingEstimate.tsx` + clé `daysUnit` dans `public/locales/{en,fr}.json`). Typecheck web vert, message PR rédigé, à relire par Rémy. Icônes non touchées (Kyle), bug switch-locale délégué à Kyle (cause : `NextIntlClientProvider` dans root layout cookie-based, pas re-rendu au `router.replace` ; fix = `router.refresh()`). (2) **PR #1804** fix délai clic→PDP : `isNavigatingAtom` + overlay racine `App.tsx` côté CRA, `loading.tsx` côté Next ; `cache()` getProduct reverté (Kyle valide plus tard). Vrai chemin PDP = `apps/web/app/[locale]/products/[id]/`. **Jamais de `Co-Authored-By: Claude`.** Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (append vs replace), RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A, announce bar #1784.
+- Prochaine etape : relecture Rémy des 3 micro-fixes → commit + push + PR (confirmer "brand"=item MARQUES, image Slack non vue) + vérif manuelle ; vérifier #1804 en vrai (`pnpm dev`, flag `isDevProductPageV2Enabled`) ; plus tard PR dedup `getProduct`. Puis reprendre les threads en attente.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026

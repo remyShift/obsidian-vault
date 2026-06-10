@@ -7,29 +7,31 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-10-06-2026 — Fix UX du délai de redirection CRA → PDP Next.js sur la branche `fix/delay-between-cra-pdp` (PR #1804) : overlay de feedback au clic + `loading.tsx` Next. `cache()` sur `getProduct` retiré à la demande de Kyle.
+10-06-2026 — Session 2 : 3 micro-fixes QA finale PDP Next (avant event 13:00) implémentés + typecheck vert, non commités. Session 1 plus tôt : fix délai CRA→PDP (PR #1804).
 
 ## État du projet
-- **PR #1804 `fix/delay-between-cra-pdp`** (branche renommée depuis `fix/navbar-nextjs`) : fix du délai sans feedback au clic produit vers la PDP Next.
-  - Côté `web_client` : `isNavigatingAtom` (atom dédié, `stores/Loading.tsx`), set `true` dans `useAppNavigate.ts` avant `window.location.replace`, `LoadingComponent` plein écran monté à la racine de `App.tsx`. Pas de reset nécessaire (hard nav détruit l'app).
-  - Côté `web` : nouveau `loading.tsx` dans `app/[locale]/products/[id]/`, calqué sur `secure-checkout/loading.tsx`.
-  - Typecheck OK (`web` 0 erreur ; `web_client` 15 erreurs préexistantes hors fichiers touchés).
-  - **`cache()` sur `getProduct` reverté** (commit `32c0b3f56`, sans co-auteur) : Kyle veut valider l'approche avant.
-- Diagnostic : délai = hard nav (`window.location.replace`) + Server Component bloquant sans streaming. `getProduct` appelé 2× par rendu (`generateMetadata` + page).
+- **QA finale PDP Next (`apps/web`, non commité)** — 3 micro-fixes prêts, branche `fix/delay-between-cra-pdp` :
+  1. Section "Sélection personnalisée" (Your Lab) réactivée → `navbarSections.ts` (retrait `sectionDisabled`+badge `comingSoon`).
+  2. `cursor-pointer` ajouté au `NavItem` navbar (fix curseur "MARQUES") → `NavItem.tsx`.
+  3. Unité de livraison localisée ("2-3 days"→"2-3 jours") → `ShippingEstimate.tsx` + clé `daysUnit` dans `public/locales/{en,fr}.json`.
+  - `tsc --noEmit` web vert. Message de PR (template) déjà rédigé. **À relire par Rémy puis commit/push/PR.**
+- **PR #1804 `fix/delay-between-cra-pdp`** (session 1) — fix délai sans feedback clic produit→PDP Next. `web_client` : `isNavigatingAtom` (`stores/Loading.tsx`) set avant `window.location.replace`, `LoadingComponent` plein écran racine `App.tsx`. `web` : `loading.tsx` dans `app/[locale]/products/[id]/`. `cache()` sur `getProduct` reverté (Kyle veut valider).
+- Vrai chemin PDP Next = `apps/web/app/[locale]/products/[id]/`.
 
 ## Faits récents importants
-- Piège connu : `pnpm --filter ... typecheck` casse sur `engines.node` (Node v25 vs 20.19.x) → `./node_modules/.bin/tsc --noEmit` direct.
-- Rename branche d'une PR ouverte : via UI/API GitHub (la PR suit), JAMAIS delete+recreate. Resync local : `git branch -m` + `git branch -u origin/<nouveau>`.
-- **JAMAIS de `Co-Authored-By: Claude`** dans commits/PRs (préférence Rémy, mémorisée).
-- Commit avec parenthèses/multiligne : utiliser `git commit -F fichier`, pas `-m "$(cat <<EOF)"` (zsh bug).
-- `dist` de `@olis-lab/shared` gitignored → rebuild après checkout/pull sinon `cartProductSchema undefined`.
+- Piège `engines.node` : `pnpm --filter ... typecheck` échoue (Node v25 vs 20.19.x) → `./node_modules/.bin/tsc --noEmit` direct, ou `pnpm typecheck` depuis le dossier de l'app.
+- Bug locale "stuck on switch" (topbanner/navbar/footer FR sous EN) : rien de hardcodé, cause = `NextIntlClientProvider` dans le root layout (cookie), pas de `[locale]/layout.tsx` → pas re-rendu au `router.replace`. Fix = `router.refresh()` dans `Footer/LanguageSelector.tsx`. **Délégué à Kyle.**
+- `deliveryTime` backend toujours en anglais ("2-3 days") ; legacy parsait/traduisait l'unité.
+- Images Slack non téléchargeables via le MCP (URLs authentifiées).
+- **Jamais de `Co-Authored-By: Claude`** dans commits/PRs.
 
 ## Décisions actives
-- Atom de navigation dédié (pas `loadingAtom`) pour ne pas polluer `pendingRequests` de l'intercepteur. Overlay monté à la racine pour feedback partout (Home incluse).
-- Dedup `getProduct` via `cache()` → reportée à une PR dédiée après validation Kyle.
+- 3 micro-fixes = hotfix minimal avant event ; icônes non touchées (Kyle), bug locale chez Kyle.
+- `cache()` getProduct retiré de #1804 → dedup dans une PR séparée après validation Kyle.
+- Atom de navigation dédié, overlay monté racine App.tsx.
 
 ## Prochaines étapes
-- Vérifier le fix en vrai : `pnpm dev`, flag `isDevProductPageV2Enabled` ON, cliquer carte produit (listing + Home) → overlay instantané puis PDP.
-- Répondre au commentaire Kyle sur PR #1804 (clore la boucle).
-- Plus tard : PR séparée pour la dedup `getProduct`.
-- Threads antérieurs : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (trancher append/replace), RFC typage Payload→frontend (call Kyle/Diego), 2 PRs adminLabel à merger, SKU Design A, announce bar 3 arbitrages, navbar.
+- Relecture Rémy des 3 fixes PDP → commit + push + ouvrir la PR (confirmer "brand" = item MARQUES navbar, image non vue).
+- Vérif manuelle des 3 fixes (Your Lab actif / hover MARQUES pointer / PDP FR "2-3 jours").
+- Vérif en vrai du fix délai #1804 (`pnpm dev`, flag `isDevProductPageV2Enabled`, clic carte listing+Home).
+- Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (append vs replace), RFC typage Payload→frontend (call Kyle/Diego), 2 PRs adminLabel, SKU Design A, announce bar #1784.
