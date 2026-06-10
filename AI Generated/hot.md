@@ -1,5 +1,5 @@
 ---
-updated: 09-06-2026
+updated: 10-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-09-06-2026 — olis-lab : tests d'integration du hook `computeCartSnapshot` (8 US, branche `feat/cms-test-cart-hook`) + branchement du schema Zod `cartProductSchema`. Plus tot : bulk-add Products->Edit (plan), RFC `PAYLOAD_FRONTEND_TYPING_RFC.md`, 2 PRs adminLabel.
+10-06-2026 — olis-lab : fix UX du délai de redirection CRA → PDP Next.js (PR #1804, branche `fix/delay-between-cra-pdp`) — overlay de feedback au clic + `loading.tsx` Next ; `cache()` sur `getProduct` retiré à la demande de Kyle.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 09-06-2026
-- Etat : **Tests `computeCartSnapshot` (branche `feat/cms-test-cart-hook`)** — 8 US en tests d'integration purs (`tests/int/computeCartSnapshot.int.spec.ts`, vrai `payload.update`, suite int 15/15). Factory DB `tests/factories/product.ts` (media insere en brut). Hook : `cartProductSchema.parse` hors try (snapshot invalide -> bloque save ; infra error -> log+skip) + `createAsserter` ; `cartProductSchema` exporte runtime depuis shared ; `validate` `== null` field json ; `LOCALES` extrait `src/lib/locales.ts`. **Non commite** (2 commits deja sur la branche). `typescriptSchema` abandonne (mismatch zod 3 shared / zod 4 cms). Piege : `dist` shared gitignored -> rebuild avant `test:int`. Mongoose pluralise (`product-media`->`product-medias`). **Bulk-add Products->Edit (plan)** — `Edits.products` (`hasMany`) existe ; A vs B pas tranche (pivot append vs replace) ; image slots `~/Desktop/products-slots-annotated.png`. **RFC typage Payload->frontend (`PAYLOAD_FRONTEND_TYPING_RFC.md`, racine, untracked)** — asserter runtime ; root cause union `string|T` non narrow (cms separe + 2 fronts HTTP) ; reco wrapper SDK type + Zod + lint ; call Kyle/Diego. **adminLabel (2 PRs #1798 + edits-product-picker)** a merger ; Nested Docs abandonne. **Hook SKU** (Design A non commite). **Announce bar #1784** fixes Kyle non commites + 3 arbitrages. **Navbar** plan valide non implemente.
-- Prochaine etape : relire + commiter `feat/cms-test-cart-hook` (rappeler rebuild shared avant test:int) ; trancher bulk-add (append -> B endpoint `POST /api/edits/:id/add-products` + `AddToEditButton.tsx`) ; partager RFC a Kyle/Diego + call ; merger 2 PRs adminLabel + reponse Michele ; SKU commiter Design A + review #1793 ; announce bar 3 arbitrages + commit ; brancher navbar.
+- Derniere session : 10-06-2026
+- Etat : **PR #1804 `fix/delay-between-cra-pdp`** (renommée depuis `fix/navbar-nextjs`) — fix du délai sans feedback au clic produit → PDP Next. Côté `web_client` : `isNavigatingAtom` dédié (`stores/Loading.tsx`) set `true` dans `useAppNavigate.ts` avant `window.location.replace`, `LoadingComponent` plein écran monté racine `App.tsx` (pas de reset, hard nav détruit l'app). Côté `web` : `loading.tsx` dans `app/[locale]/products/[id]/` (calqué `secure-checkout`). Typecheck OK. `cache()` sur `getProduct` **reverté** (Kyle veut valider). Diagnostic : délai = hard nav + Server Component bloquant sans streaming ; `getProduct` appelé 2× (`generateMetadata` + page). **Préférence forte mémorisée : jamais de `Co-Authored-By: Claude`.** Threads antérieurs en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (append vs replace), RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A, announce bar #1784, navbar.
+- Prochaine etape : vérifier le fix en vrai (`pnpm dev`, flag `isDevProductPageV2Enabled`, clic carte listing + Home) ; répondre au commentaire Kyle sur #1804 ; plus tard PR séparée pour dedup `getProduct`. Puis reprendre les threads en attente (commit cart-hook tests, trancher bulk-add, call RFC Kyle/Diego, merger adminLabel).
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
