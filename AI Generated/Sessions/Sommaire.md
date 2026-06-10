@@ -80,3 +80,4 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/08-06-2026_17-33]]               |
 | ingredient-manager     | [[AI Generated/Sessions/ingredient-manager/08-06-2026_17-49]]     |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/09-06-2026_15-41]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/10-06-2026_12-03]]               |
