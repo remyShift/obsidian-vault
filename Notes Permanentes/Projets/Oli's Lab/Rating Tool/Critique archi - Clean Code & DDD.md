@@ -5,9 +5,6 @@ status: to-process
 tags:
   - OlisLab
   - IngredientManager
-  - CleanCode
-  - DDD
-  - TechDebt
 ---
 > Verdict global : **base saine, intention archi correcte, mais l'implémentation des repos a dérivé en God files et l'abstraction par source fuit.** Rien de bloquant, mais des points à traiter avant que ça devienne ingérable.
 
@@ -66,7 +63,7 @@ Le pattern `shared-*.repo.ts` essaie de factoriser, mais à côté on a deux mon
 import { normalizeNameRule1 } from '../../repos/scoring.repo';
 ```
 
-Un évaluateur (domaine pur) qui dépend d'un **repo** (infrastructure) = **dépendance dans le mauvais sens** au regard de la Clean Architecture (voir [[Clean Architecture]], [[Hexagonal Architecture]]). La normalisation de texte est une **règle de domaine**, elle n'a rien à faire dans un repo Mongo.
+Un évaluateur (domaine pur) qui dépend d'un **repo** (infrastructure) = **dépendance dans le mauvais sens** au regard de la Clean Architecture. La normalisation de texte est une **règle de domaine**, elle n'a rien à faire dans un repo Mongo.
 
 → **Action** : déplacer les helpers de normalisation INCI dans un module domaine (`scoring/inci-cleaner.ts` existe déjà — c'est là que ça doit vivre, pas dans le repo).
 

@@ -5,8 +5,6 @@ status: to-process
 tags:
   - OlisLab
   - IngredientManager
-  - Scoring
-  - Architecture
 ---
 ## Le but du projet
 

@@ -5,7 +5,6 @@ status: to-process
 tags:
   - OlisLab
   - IngredientManager
-  - Scoring
 ---
 ## Le principe
 

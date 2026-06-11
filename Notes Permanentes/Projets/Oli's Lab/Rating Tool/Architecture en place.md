@@ -5,8 +5,6 @@ status: to-process
 tags:
   - OlisLab
   - IngredientManager
-  - Architecture
-  - LayeredArchitecture
 ---
 ## Architecture en couches (Layered)
 
@@ -45,7 +43,7 @@ Il existe une factory par domaine :
 - `match.repo.factory.ts`
 - `scoring.repo.factory.ts`
 
-Chacune expose une **interface commune** (`ProductRepo`, `MatchRepo`, `ScoringRepo`) que les deux mondes (shop / ext) implémentent. C'est un **port** au sens hexagonal (voir [[Hexagonal Architecture]]), et les `*-adapter.ts` sont les adapters.
+Chacune expose une **interface commune** (`ProductRepo`, `MatchRepo`, `ScoringRepo`) que les deux mondes (shop / ext) implémentent. C'est un **port** au sens hexagonal, et les `*-adapter.ts` sont les adapters.
 
 ```
                   ┌──────────────────────┐
