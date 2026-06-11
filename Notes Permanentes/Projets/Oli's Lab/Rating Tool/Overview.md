@@ -39,7 +39,7 @@ Produit (liste INCI brute)
  [5] Évaluation des 10 règles → persistance du score + détail par règle
 ```
 
-Point clé du gate (étape 4) : on **refuse de scorer** un produit tant qu'il reste des ingrédients non matchés (hors `non_ingredient`). C'est volontaire — un score sur des données incomplètes serait faux et trompeur. La validation est dans `validateMatchesBeforeScoring` ([scoring.service.ts](../../../../../Desktop/everything/Code/ingredient-manager/src/services/scoring.service.ts)).
+Point clé du gate (étape 4) : on **refuse de scorer** un produit tant qu'il reste des ingrédients non matchés (hors `non_ingredient`). C'est volontaire — un score sur des données incomplètes serait faux et trompeur. La validation est dans `validateMatchesBeforeScoring`.
 
 ## Les multiples "sources"
 
