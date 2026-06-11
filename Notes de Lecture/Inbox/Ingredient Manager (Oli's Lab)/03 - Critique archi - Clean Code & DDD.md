@@ -9,9 +9,6 @@ tags:
   - DDD
   - TechDebt
 ---
-
-# Ingredient Manager — Critique archi (Clean Code / DDD)
-
 > Verdict global : **base saine, intention archi correcte, mais l'implémentation des repos a dérivé en God files et l'abstraction par source fuit.** Rien de bloquant, mais des points à traiter avant que ça devienne ingérable.
 
 ## ✅ Ce qui est bien
@@ -94,5 +91,3 @@ Deux schémas Mongo distincts (`matches.cosingId` côté shop vs `extMatches.cos
 6. Nettoyage : logs Pino partout, virer fichiers résiduels, commentaires obsolètes.
 
 > **À garder en tête** (réflexe mission Oli's Lab) : pas de "on refactorera plus tard". Le point 1 est le seul vrai chantier ; les autres sont du nettoyage incrémental qu'on peut faire au fil des touches. Le risque réel ici, c'est `ext-scoring.repo.ts` qui continue de grossir.
-
-Voir [[00 - Vue d'ensemble]] · [[01 - Architecture en place]] · [[02 - Le système de scoring]]
