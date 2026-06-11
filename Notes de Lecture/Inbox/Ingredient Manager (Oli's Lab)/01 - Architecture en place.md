@@ -13,7 +13,7 @@ tags:
 
 ## Architecture en couches (Layered)
 
-Le backend suit une **architecture en couches** classique, bien découpée par dossiers. Voir [[Layered Architecture]].
+Le backend suit une **architecture en couches** classique, bien découpée par dossiers
 
 ```
 routes/        → définition des endpoints Express (/api/...)
