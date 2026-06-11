@@ -61,8 +61,6 @@ Intérêt business : pouvoir **comparer** le score des produits maison à des r�
 - **Frontend** : Next.js 14 + MUI + React Query, servi **par le même process Express** (`app.ts` monte Next via `nextApp.getRequestHandler()`).
 - **Scripts** : toute une batterie de scripts batch (`script:ext:*`) pour migrer, re-matcher, re-classifier, recalculer les scores en masse.
 
-NB : contrairement au reste de la mission Oli's Lab (React/Node sans TS, Payload), **ce projet est en TypeScript strict avec Zod partout**. C'est le projet le plus "propre" côté typage.
-
 ## À retenir
 - Outil interne = pipeline **données → matching → scoring**, pas une app client.
 - La donnée la plus précieuse n'est pas le score, c'est le **matching INCI ↔ COSING** correct.
