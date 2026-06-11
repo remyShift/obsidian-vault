@@ -13,18 +13,18 @@ Un produit part d'un score et on lui applique **10 règles**. Les unes ajoutent 
 
 ## Les 10 règles (R01 → R10)
 
-| Règle | Nom | Sens | Max (skin / body) | Ce que ça mesure |
-|---|---|---|---|---|
-| **R01** | Active Ingredient Positioning | bonus | 50 / 50 | Position des actifs dans la liste INCI. Plus un actif est haut (= concentration plus forte), plus il rapporte. Pénalise les actifs **après le parfum** (souvent traces). |
-| **R02** | Excipients Proportion | bonus | 30 / 30 | Proportion d'excipients vs ingrédients classifiables. Barème par tier. |
-| **R03** | Synergistic Formulation | bonus | 20 / 20 | Nombre de **fonctions actives uniques** → récompense une formule qui combine des familles d'actifs (synergie). |
-| **R04** | Special Ingredient Bonuses | bonus | 15 / 15 | Bonus pour ingrédients "spéciaux" / naturels détectés. |
-| **R05** | Skin Irritation & Sensitiveness | malus | 10 / 10 | Pénalise irritants / allergènes. *(2 versions : 1.0.0 et 1.1.0)* |
-| **R06** | Antagonistic Ingredients | malus | 10 / 10 | Paires d'actifs **antagonistes** (qui s'annulent / se déstabilisent). |
-| **R07** | Carcinogenicity | malus | 40 / 30 | Ingrédients cancérigènes. Malus le plus lourd. Modulé par position. |
-| **R08** | Endocrine Disruptors | malus | 20 / 15 | Perturbateurs endocriniens. |
-| **R09** | Reproductive & Development Toxicity | malus | 20 / 15 | Toxicité reproductive / développementale (DRT). |
-| **R10** | First Ingredient Different from Water | bonus | 10 | Récompense un produit dont le **premier ingrédient n'est pas de l'eau** (= plus concentré en actifs). *(2 versions)* |
+| Règle   | Nom                                   | Sens  | Max (skin / body) | Ce que ça mesure                                                                                                                                                         |
+| ------- | ------------------------------------- | ----- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **R01** | Active Ingredient Positioning         | bonus | 50 / 50           | Position des actifs dans la liste INCI. Plus un actif est haut (= concentration plus forte), plus il rapporte. Pénalise les actifs **après le parfum** (souvent traces). |
+| **R02** | Excipients Proportion                 | bonus | 30 / 30           | Proportion d'excipients vs ingrédients classifiables. Barème par tier.                                                                                                   |
+| **R03** | Synergistic Formulation               | bonus | 20 / 20           | Nombre de **fonctions actives uniques** → récompense une formule qui combine des familles d'actifs (synergie).                                                           |
+| **R04** | Special Ingredient Bonuses            | bonus | 15 / 15           | Bonus pour ingrédients "spéciaux" / naturels détectés.                                                                                                                   |
+| **R05** | Skin Irritation & Sensitiveness       | malus | 10 / 10           | Pénalise irritants / allergènes. *(2 versions : 1.0.0 et 1.1.0)*                                                                                                         |
+| **R06** | Antagonistic Ingredients              | malus | 10 / 10           | Paires d'actifs **antagonistes** (qui s'annulent / se déstabilisent).                                                                                                    |
+| **R07** | Carcinogenicity                       | malus | 40 / 30           | Ingrédients cancérigènes. Malus le plus lourd. Modulé par position.                                                                                                      |
+| **R08** | Endocrine Disruptors                  | malus | 20 / 15           | Perturbateurs endocriniens.                                                                                                                                              |
+| **R09** | Reproductive & Development Toxicity   | malus | 20 / 15           | Toxicité reproductive / développementale (DRT).                                                                                                                          |
+| **R10** | First Ingredient Different from Water | bonus | 10                | Récompense un produit dont le **premier ingrédient n'est pas de l'eau** (= plus concentré en actifs). *(2 versions)*                                                     |
 
 Les malus de toxicité (R07/R08/R09) sont **modulés par la position** dans la liste : un cancérigène en tête pèse plus qu'en trace en fin de liste.
 
