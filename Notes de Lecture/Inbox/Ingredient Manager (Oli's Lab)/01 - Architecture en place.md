@@ -8,9 +8,6 @@ tags:
   - Architecture
   - LayeredArchitecture
 ---
-
-# Ingredient Manager — Architecture en place
-
 ## Architecture en couches (Layered)
 
 Le backend suit une **architecture en couches** classique, bien découpée par dossiers
@@ -75,15 +72,3 @@ La partie la plus intéressante côté design.
 - `rule-registry.ts` charge toutes les règles actives au démarrage dans un registre.
 
 C'est un vrai **moteur de règles versionnées**, traçable (chaque score garde le détail des inputs observés). Très bon pattern.
-
-## Frontend
-
-- Next.js 14 (app router) dans `src/app/`, servi par Express.
-- Organisé par **onglets** par source (`TABS_BY_SOURCE` dans `types/global.ts`) : Products / Scoring / Unmatched pour le shop, etc.
-- React Query pour le cache des appels API.
-- Composants lourds : `MatchingTab`, `UnmatchedTab`, `FunctionsTab`, `cosing/page.tsx` (1100 lignes).
-
-## À retenir
-- **Layered** côté couches + **Factory/Adapter par source** côté abstraction = colonne vertébrale.
-- Le scoring est **data-driven + versionné + fonctions pures** : la vraie réussite du design.
-- La faiblesse est dans l'**implémentation** des repos, pas dans l'intention → [[03 - Critique archi - Clean Code & DDD]].

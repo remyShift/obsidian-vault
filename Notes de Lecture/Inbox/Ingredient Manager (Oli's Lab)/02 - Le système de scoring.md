@@ -7,9 +7,6 @@ tags:
   - IngredientManager
   - Scoring
 ---
-
-# Ingredient Manager — Le système de scoring (10 règles)
-
 ## Le principe
 
 Un produit part d'un score et on lui applique **10 règles**. Les unes ajoutent (bonus), les autres retirent (malus). Le total = la note du produit. Les barèmes diffèrent entre **skincare** et **bodycare** (mappés dans `rules-maestro.json`).
