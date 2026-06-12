@@ -1,5 +1,5 @@
 ---
-updated: 10-06-2026
+updated: 12-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-10-06-2026 — olis-lab : QA finale PDP Next avant event 13:00 — 3 micro-fixes (Sélection personnalisée Your Lab réactivée, cursor-pointer navbar MARQUES, unité livraison "2-3 jours" i18n) prêts + typecheck vert, non commités. Plus tôt : fix délai CRA→PDP (PR #1804).
+12-06-2026 — olis-lab : review de Kyle sur PR #1784 (announce bar) traitée — 3 fixes (RowLabel ul>li, isExternalLink vers shared/routing, target _blank liens externes) + conflits develop résolus par merge, PR MERGEABLE (reste re-approve Diego).
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 10-06-2026
-- Etat : **2 chantiers sur branche `fix/delay-between-cra-pdp`.** (1) QA finale PDP Next (`apps/web`, **non commité**) — 3 micro-fixes issus d'un thread Slack #tech : section "Sélection personnalisée" (Your Lab) réactivée (`navbarSections.ts`, retrait `sectionDisabled`+badge), `cursor-pointer` sur `NavItem` (curseur "MARQUES"), unité livraison localisée "2-3 days"→"2-3 jours" (`ShippingEstimate.tsx` + clé `daysUnit` dans `public/locales/{en,fr}.json`). Typecheck web vert, message PR rédigé, à relire par Rémy. Icônes non touchées (Kyle), bug switch-locale délégué à Kyle (cause : `NextIntlClientProvider` dans root layout cookie-based, pas re-rendu au `router.replace` ; fix = `router.refresh()`). (2) **PR #1804** fix délai clic→PDP : `isNavigatingAtom` + overlay racine `App.tsx` côté CRA, `loading.tsx` côté Next ; `cache()` getProduct reverté (Kyle valide plus tard). Vrai chemin PDP = `apps/web/app/[locale]/products/[id]/`. **Jamais de `Co-Authored-By: Claude`.** Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`, à commiter), bulk-add Products→Edit (append vs replace), RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A, announce bar #1784.
-- Prochaine etape : relecture Rémy des 3 micro-fixes → commit + push + PR (confirmer "brand"=item MARQUES, image Slack non vue) + vérif manuelle ; vérifier #1804 en vrai (`pnpm dev`, flag `isDevProductPageV2Enabled`) ; plus tard PR dedup `getProduct`. Puis reprendre les threads en attente.
+- Derniere session : 12-06-2026
+- Etat : **PR #1784 announce bar quasi prête.** Kyle approved, ses 3 commentaires traités (`70ff71c47`) ; conflits develop résolus par merge (`c9e9b4f19`) — `App.tsx` garde la refacto banner + reprend l'overlay navigation `isNavigatingAtom` de #1804. PR MERGEABLE mais BLOCKED (re-approve Diego manquant). Typechecks verts partout. Point ouvert : commentaire SEO ul>li de Kyle ancré sur le RowLabel admin (SEO sans objet), appliqué littéralement sur arbitrage Rémy, à clarifier sur le thread. Piège `engines.node` : Node 20.19.6 via nvm pour `pnpm install`. **Jamais de `Co-Authored-By: Claude`.** Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`), bulk-add Products→Edit, RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A.
+- Prochaine etape : répondre aux threads de Kyle + obtenir re-approve Diego pour merger #1784 ; vérif visuelle (row label admin, lien externe nouvel onglet).
 
 ### ingredient-manager
 - Derniere session : 08-06-2026

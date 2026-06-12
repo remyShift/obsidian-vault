@@ -64,6 +64,13 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/02-06-2026_18-10]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/03-06-2026_11-23]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/05-06-2026_15-55]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/04-06-2026_08-04]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/08-06-2026_17-33]]               |
+| ingredient-manager     | [[AI Generated/Sessions/ingredient-manager/08-06-2026_17-49]]     |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/09-06-2026_15-41]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/10-06-2026_12-03]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/12-06-2026_15-40]]               |
+
 ## Hot notes :
 
 | Projet          | Hot Notes                                     |
@@ -76,8 +83,3 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | seed4j          | [[AI Generated/Sessions/seed4j/hot]]          |
 | ts-seed         | [[AI Generated/Sessions/ts-seed/hot]]         |
 | ingredient-manager | [[AI Generated/Sessions/ingredient-manager/hot]] |
-| olis-lab               | [[AI Generated/Sessions/olis-lab/04-06-2026_08-04]]               |
-| olis-lab               | [[AI Generated/Sessions/olis-lab/08-06-2026_17-33]]               |
-| ingredient-manager     | [[AI Generated/Sessions/ingredient-manager/08-06-2026_17-49]]     |
-| olis-lab               | [[AI Generated/Sessions/olis-lab/09-06-2026_15-41]]               |
-| olis-lab               | [[AI Generated/Sessions/olis-lab/10-06-2026_12-03]]               |
