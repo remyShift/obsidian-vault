@@ -13,7 +13,7 @@ participants:
   - Patrick
   - Ante
   - Remy
-lien:
+lien: https://app.notion.com/p/olislab/Tech-Weekly-3724bf4c7fa1807f9243f88c56b470d7?source=copy_link
 ---
 
 # Tech Weekly - 1 juin 2026

@@ -11,10 +11,11 @@ participants:
   - Diego
   - Lucas
   - Remy
+  - Ante
 lien: https://www.notion.so/olislab/Tech-Weekly-36b4bf4c7fa1807d921fcd6254a2f3e5?source=copy_link
 ---
 
-# Tech Weekly - 26 mai 2026
+# Tech Weekly - 25 mai 2026
 
 ---
 
