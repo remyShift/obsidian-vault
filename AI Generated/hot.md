@@ -1,5 +1,5 @@
 ---
-updated: 12-06-2026
+updated: 13-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-12-06-2026 — olis-lab : review de Kyle sur PR #1784 (announce bar) traitée — 3 fixes (RowLabel ul>li, isExternalLink vers shared/routing, target _blank liens externes) + conflits develop résolus par merge, PR MERGEABLE (reste re-approve Diego).
+13-06-2026 — obsidian-vault : passe `/evolve` 13-06 appliquée (3 memory : olis-lab SKU corrigé + chantiers 12-06, build-traps enrichi, ingredient-manager créé) ; 4 audits A1-A4 tous résolus.
 
 ## Projets actifs
 
@@ -33,9 +33,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 08-06-2026
-- Etat : `/evolve` rapport 05-06 applique (memory olis-lab reecrite, ts-seed + build-traps documentes, style LinkedIn enrichi, note Hexagonal completee). 3 audits en attente.
-- Prochaine etape : traiter audits (A1 docs ts-seed perdus ?, A2 recap 22-05 mal range, A3 wikilinks Notes de Lecture/Code) ; prochain /evolve vendredi
+- Derniere session : 13-06-2026
+- Etat : `/evolve` rapport 13-06 applique (3 memory : project_olis_lab corrige SKU + chantiers 12-06, build-traps +2 pieges, project_ingredient_manager cree). Audits A1-A4 tous resolus (A1 suppression volontaire actee, A2 git mv staged, A3 deja fait, A4 fausse alerte chemin).
+- Prochaine etape : commit du git mv A2 (staged) ? ; resserrer /recap (chemins notes + frontmatter project) ; prochain /evolve vendredi 20-06
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
