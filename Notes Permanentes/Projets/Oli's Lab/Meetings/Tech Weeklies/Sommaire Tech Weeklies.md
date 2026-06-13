@@ -22,3 +22,4 @@ Réunions techniques hebdomadaires de l'équipe Oli's Lab.
 | [[08-10-2025 Tech Weekly]] |                                                                                                              |
 | [[25-04-2026 Tech Weekly]] | Dashboard Notion, event tracking Apple Pay, CMS PRs, INCI score, audit perf Shop All, rétrospective          |
 | [[25-05-2026 Tech Weekly]] | Consent mode / event tracking, SEO language repertoire, PDP finalisation, PLP staging, performance SSG       |
+| [[01-06-2026 Tech Weekly]] | Progression Notion auto, release PDP (LCP/AVIF/JSON-LD), filtres PLP 2 niveaux, sitemap multi-langue, workflow edits Payload, BigBlue rate limit |
