@@ -1,8 +1,4 @@
-# CLAUDE.md - Guide du vault
-
 Ce fichier oriente toute instance de Claude qui travaille dans ce vault Obsidian. Lis-le avant d'écrire, de déplacer ou de relier la moindre note.
-
-Propriétaire : Rémy. Langue du vault : français. Toute note écrite ici est en français, quelle que soit la langue de la conversation.
 
 ---
 
