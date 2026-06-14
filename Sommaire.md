@@ -8,6 +8,7 @@ Index principal du vault
 - [[AI Sommaire|🤖 AI Generated]]
 - [[Notes de Lecture/Sommaire|📖 Notes de Lecture]]
 - [[TODO|⌛ TODO !]]
+- [[CLAUDE]]
 
 ---
 ## Activité récente
