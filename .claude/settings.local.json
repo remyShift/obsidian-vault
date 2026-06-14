@@ -22,5 +22,8 @@
       "Bash(pnpm run *)",
       "mcp__lean-ctx__ctx_multi_read"
     ]
+  },
+  "enabledPlugins": {
+    "obsidian@obsidian-skills": false
   }
 }
