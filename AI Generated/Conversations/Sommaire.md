@@ -42,6 +42,7 @@ Synthèses de conversations générées via `/wrap`.
 | 31-05-2026 | [[AI Generated/Conversations/31-05-2026 - Ligne éditoriale LinkedIn et skill post]]          |
 | 31-05-2026 | [[AI Generated/Conversations/31-05-2026 - Notes Korea - démonstratifs, politesse, particule dative]] |
 | 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Notes Korea - expressions pour se débloquer]]       |
+| 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Création CLAUDE.md guide du vault]]                 |
 
 
 ---
