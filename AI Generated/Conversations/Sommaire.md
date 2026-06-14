@@ -41,6 +41,7 @@ Synthèses de conversations générées via `/wrap`.
 | 26-05-2026 | [[AI Generated/Conversations/26-05-2026 - Tech Weekly Oli's Lab - Ajout vault]]              |
 | 31-05-2026 | [[AI Generated/Conversations/31-05-2026 - Ligne éditoriale LinkedIn et skill post]]          |
 | 31-05-2026 | [[AI Generated/Conversations/31-05-2026 - Notes Korea - démonstratifs, politesse, particule dative]] |
+| 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Notes Korea - expressions pour se débloquer]]       |
 
 
 ---

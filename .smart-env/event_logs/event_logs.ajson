@@ -1,0 +1,13 @@
+
+"event_logs:source:initial_scan_started": {"key":"source:initial_scan_started","ct":1,"first_at":1781434072120,"last_at":1781434072120,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:source:initial_scan_completed": {"key":"source:initial_scan_completed","ct":1,"first_at":1781434072167,"last_at":1781434072167,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:settings:changed": {"key":"settings:changed","ct":11,"first_at":1781434072167,"last_at":1781434075222,"class_name":"EventLog"},
+"event_logs:collection:load_started": {"key":"collection:load_started","ct":5,"first_at":1781434075172,"last_at":1781434075175,"class_name":"EventLog"},
+"event_logs:collection:load_halted": {"key":"collection:load_halted","ct":4,"first_at":1781434075173,"last_at":1781434075175,"class_name":"EventLog"},
+"event_logs:collection:load_completed": {"key":"collection:load_completed","ct":1,"first_at":1781434075218,"last_at":1781434075218,"class_name":"EventLog"},
+"event_logs:sources:import_started": {"key":"sources:import_started","ct":1,"first_at":1781434075219,"last_at":1781434075219,"class_name":"EventLog","event_sources":{"process_source_import_queue":1}},
+"event_logs:sources:imported": {"key":"sources:imported","ct":1048,"first_at":1781434075220,"last_at":1781434075589,"class_name":"EventLog"},
+"event_logs:model:changed": {"key":"model:changed","ct":1,"first_at":1781434075222,"last_at":1781434075222,"class_name":"EventLog"},
+"event_logs:sources:import_progress": {"key":"sources:import_progress","ct":11,"first_at":1781434075266,"last_at":1781434075589,"class_name":"EventLog","event_sources":{"process_source_import_queue":11}},
+"event_logs:embedding:started": {"key":"embedding:started","ct":1,"first_at":1781434098634,"last_at":1781434098634,"class_name":"EventLog","event_sources":{"process_embed_queue":1}},
+"event_logs:embedding:progress": {"key":"embedding:progress","ct":6,"first_at":1781434099198,"last_at":1781434105968,"class_name":"EventLog","event_sources":{"process_embed_queue":6}},
