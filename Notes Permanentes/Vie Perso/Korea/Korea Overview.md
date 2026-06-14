@@ -1,7 +1,7 @@
 ---
 tags: [Korea]
 ---
-Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, je vais répertorié dans ces notes toutes les connaissances nécessaire que ça soit sur la [[Langue]] ou encore les [[Address to visit]].
+Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, je vais répertorié dans ces notes toutes les connaissances nécessaire que ça soit sur la [[Langue]], où trouver des [[Events]] ou encore les [[Address to visit]].
 
 
 [5 choses](https://www.instagram.com/reel/DTYHIBuAqet/?igsh=bmgyeDV1ZjM1Z2J0) à faire avant de partir
@@ -27,10 +27,12 @@ Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, 
 → [[Time Zone]] --> décalage horaire avec la France
 
 ## Apprentissage
-→ [[Langue]] --> progression coréen
-→ [[Questions de bases]] --> phrases pratiques
-→ [[문법 - Grammaire]] --> notions de grammaire étudiées
-→ [[Verbes - Adjectifs]] --> verbes et adjectifs courants
+- [[Langue]] --> progression coréen
+- [[Questions de bases]] --> phrases pratiques
+- [[문법 - Grammaire]] --> notions de grammaire étudiées
+- [[Verbes - Adjectifs]] --> verbes et adjectifs courants
+- [[Quand je bloque]] --> pour les phrases utiles quand on bloque
+
 
 ---
 
