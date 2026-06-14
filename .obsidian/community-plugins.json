@@ -25,5 +25,7 @@
   "pretty-properties",
   "sheets",
   "templater-obsidian",
-  "smart-connections"
+  "smart-connections",
+  "smart-lookup",
+  "smart-context"
 ]
