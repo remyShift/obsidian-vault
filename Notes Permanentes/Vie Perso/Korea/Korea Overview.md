@@ -22,7 +22,9 @@ Bon je décides de me lancer et d'entreprendre de m'expatrier en Corée du Sud, 
 ---
 
 ## Logistique
+
 → [[Address to visit]] --> lieux à explorer
+→ [[Time Zone]] --> décalage horaire avec la France
 
 ## Apprentissage
 → [[Langue]] --> progression coréen
