@@ -23,3 +23,4 @@ Une fois une amélioration appliquée par `/improve`, sa ligne est cochée `[x]`
 - [ ] [observation] L'outil Edit refuse d'éditer un fichier déjà lu via `Bash cat`/`git show` et exige un `Read` préalable — re-lecture redondante (SiteHeader, hot.md cette session). - 15-06-2026
 - [ ] [friction] Chaque appel Bash dans olis-lab doit re-sourcer nvm + `nvm use 20.19.6` (état shell non persistant entre tool calls) - répété 10+ fois - 16-06-2026
 - [ ] [friction] ExitPlanMode a échoué une fois sur "Tool permission stream closed before response received" (glitch harnais) - 16-06-2026
+- [ ] [observation] Écrire un escape unicode `̀-ͯ` dans une regex via Write/Edit : mon input rend les caractères combinants littéraux au lieu de la séquence ASCII `\u...`, 3 tentatives + workaround `printf` shell nécessaires - 17-06-2026

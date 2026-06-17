@@ -1,5 +1,5 @@
 ---
-updated: 16-06-2026
+updated: 17-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-16-06-2026 — olis-lab : diagnostic erreur prod sur le sync d'un Edit (`Product relationship is not populated`) — relation orpheline (produit supprimé, Payload renvoie l'ID string même à depth:1). Fix pensé, non implémenté (diagnostic seul demandé).
+17-06-2026 — olis-lab : fix du slugify Payload (accents perdus + tirets multiples) — util partagé + migration de recompute des slugs existants à changement minimal + WARN anti-trou. PR `fix/payload-slugs-generation` ouverte.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 16-06-2026
-- Etat : 2 branches en cours. **`feat/read-announcement-bar-next` (PR #1817)** : review Kyle traitée et commitée (pas poussée) — carousel Embla **local** (le TopBanner de `@olis-lab/ui` casse le SSR), logique dans `useTopBannerMessages`, liens via `<ExternalLink>`, classes inline, `useFeatureFlags` au typage simplifié ; **anim à confirmer en runtime** (structure DOM calquée sur `FooterTrustBar`, la réf Embla qui marche dans Next). **`feat/navbar-global`** : global Payload `navbar` hybride + read CRA gaté `dev_payload_navbar` (legacy conservée, seed manuel), PR à ouvrir (sortir le commit `.env.local` `0281f9d23` avant). #1784 mergée. Pièges : brancher depuis `origin/develop` puis `git push -u origin X` ; `@olis-lab/ui` TopBanner casse le SSR ; cms consomme le dist de shared. Node 20.19.6 via nvm.
-- Prochaine etape : **débloquer prod** — retrouver l'Edit référençant le produit supprimé `69e11655b772ed2f05ac8516` (API `?where[products][in]=` / mongosh), le retirer en admin, relancer le sync ; **fix durable de `edits.ts`** (filtrer l'orphelin comme `products.ts`, garder throw `legacyId`) en TDD quand demandé. Puis : vérif anim TopBanner + pousser #1817 ; ouvrir PR navbar (sortir `0281f9d23`) + remplir global admin (EN+FR).
+- Derniere session : 17-06-2026
+- Etat : **`fix/payload-slugs-generation` (PR ouverte)** : fix du slugify Payload (accents perdus + tirets multiples). Util partagé `apps/cms/src/lib/slugify.ts` (NFD + strip diacritiques + collapse + trim), branché Brands (option `slugify` native) + Products (slugify local supprimé). Migration `20260617_100000_fix_slugs.ts` : recompute à changement minimal (locale source + fallback préfixe brand) + WARN sur slug non reproductible depuis titre actuel. Inventaire : 26 produits + 1 brand = 27 redirects. **Misaj** = seul cassé non auto (titre prod réécrit) → re-save manuel. Autres branches en attente : `feat/read-announcement-bar-next` (#1817, anim TopBanner à confirmer) ; `feat/navbar-global` (PR à ouvrir, sortir commit `.env.local` `0281f9d23`). Pièges : Node 20 via nvm, rebuild dist de shared, brancher depuis `origin/develop`.
+- Prochaine etape : suivre review PR slugs ; séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration Payload prod → propagation legacy via sync (26 produits) → re-save manuel Misaj. Puis reprendre #1817 (vérif anim + push) et ouvrir PR navbar.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
