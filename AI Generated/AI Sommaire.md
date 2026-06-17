@@ -14,9 +14,13 @@ Hot context : [[AI Generated/hot|hot]]
 ## Evolve reports
 - [[Evolve Sommaire]]
 
+## Coaching
+- [[AI Generated/Coaching/Sommaire|Sommaire Coaching]]
+
 ## Skills
 - [[Skills/wrap/SKILL|wrap]]
 - [[Skills/post/SKILL|post]]
+- [[Skills/coach/SKILL|coach]]
 - [[Skills/defuddle/SKILL|defuddle]]
 - [[Skills/json-canvas/SKILL|json-canvas]]
 - [[Skills/obsidian-bases/SKILL|obsidian-bases]]

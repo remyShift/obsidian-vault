@@ -119,7 +119,8 @@ Commandes actives :
 - `/wrap` : synthèse conversation → `AI Generated/Conversations/` (+ MAJ du sommaire)
 - `/evolve` : analyse hebdo → `AI Generated/Evolve Reports/`
 - `/capture` : note rapide → `Notes de Lecture/Inbox/`
-- `/lint` : audit vault (orphelines, liens cassés), `--fix` interactif
+- `/coach` : sparring partner Radical Candor câblé sur le vault → séance dans `AI Generated/Coaching/`
+- `/improve` : traite le backlog de frictions du harnais (`Vie Perso/Harnais Backlog.md`) → propose et applique les améliorations
 - `/post` : assistant de création de post LinkedIn (charge la ligne éditoriale + 5 derniers posts)
 - `/normalize-frontmatter {dossier}` : migration callout → YAML
 
@@ -131,8 +132,22 @@ Autres skills présents : `defuddle`, `json-canvas`, `obsidian-bases`, `obsidian
 
 - Accès au vault via MCP. **Préférer les outils `vault:` pour toute lecture/écriture.** Ne basculer sur `obsidian:` que si `vault:` est indisponible.
 - Plugin **Dataview** installé : les sommaires l'utilisent (tables, listes d'orphelines, stats). Le frontmatter doit rester en YAML standard pour que les queries marchent.
-- Architecture : MCP entre Claude Code et Obsidian (plugin MCP Tools + Local REST API), config dans `~/.claude.json`. lean-ctx et symdex en MCPs globaux.
+- Architecture : MCP entre Claude Code et Obsidian (plugin MCP Tools + Local REST API), config dans `~/.claude.json`. symdex en MCP global.
 - Hook SessionStart : charge les 3 sessions AI Generated les plus récentes du projet courant.
+
+---
+
+## Recherche sémantique (RAG)
+
+Serveur MCP `vault-rag` (global, moteur local in-process, index sur tout le vault). Découpe chaque note en chunks par section et retrouve les passages les plus proches **par le sens** (pas par mot-clé). Marche en cross-lingue (question en français sur une note en anglais).
+
+Routing :
+- **Question sémantique / transverse** ("qu'est-ce que je sais sur X", "où ai-je parlé de Y") → `mcp__vault-rag__search_vault` d'abord, puis lire les notes remontées.
+- **Navigation exacte** (chemin connu, date précise) → `Read`, pas de RAG.
+- **Mot-clé exact** (nom propre, identifiant, slug) → `Grep`, pas de RAG.
+- Tools dispo : `search_vault`, `get_document`, `list_documents`, `vault_stats`, `reindex`. L'index se met à jour tout seul (watcher session ouverte + reindex incrémental au démarrage).
+
+**Fail-loud (non négociable) :** si les tools `vault-rag` sont indisponibles ou renvoient une erreur, le dire **explicitement** ("RAG indisponible, je ne peux pas interroger le vault") et **refuser** de répondre depuis la culture générale. Une réponse plausible mais hors-vault, en se faisant passer pour une réponse du vault, est pire qu'un échec annoncé.
 
 ---
 

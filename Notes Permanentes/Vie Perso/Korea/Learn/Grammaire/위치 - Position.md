@@ -2,15 +2,16 @@
 tags:
   - Korea
 ---
+
 En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas des prépositions** : ce sont des **noms**. On les place **après** le lieu de référence, puis on attache la particule de lieu **에** au mot de position (voir [[에-에서]]). Le verbe est 있다 (*se trouver, être quelque part*, à ne pas confondre avec 이다, *être / identité*).
 
 > [sujet]이/가 [lieu de référence] [position]**에** 있어요 / 있습니다
 
-**NB :** un seul 에 dans la phrase, et il se colle au mot de position, **pas** au lieu de référence. 나무 앞 = littéralement « le devant de l'arbre » ; on ajoute 에 pour situer : « à cet endroit ». Le verbe 있다 se met au registre voulu : 있어요 (poli) ou 있습니다 (formel, voir [[습니다-습니까]]).
+**NB :** un seul 에 dans la phrase, et il se colle au mot de position, **pas** au lieu de référence. 나무 앞 = littéralement " le devant de l'arbre " ; on ajoute 에 pour situer : " à cet endroit ". Le verbe 있다 se met au registre voulu : 있어요 (poli) ou 있습니다 (formel, voir [[습니다-습니까]]).
 
 ---
 
-### Les mots de position
+## Les mots de position
 
 | Coréen | Sens |
 | ------ | ---- |
@@ -37,7 +38,7 @@ En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas
 
 ---
 
-### 사이에 - Entre deux éléments
+## 사이에 - Entre deux éléments
 
 사이 = l'espace, l'intervalle entre deux choses. On relie les deux noms avec 과/와 (voir [[과-하고]]), puis 사이에.
 
@@ -48,7 +49,7 @@ En coréen, les mots de position (*devant*, *derrière*, *sur*…) ne sont **pas
 
 ---
 
-### 가운데 - Au milieu de
+## 가운데 - Au milieu de
 
 가운데 = le centre, le milieu. Il se place après le lieu de référence. Ici 에 est généralement **omis** (contrairement à 사이에, qui le garde).
 

@@ -2,6 +2,7 @@
 tags:
   - Korea
 ---
+
 Expressions utiles quand on bloque ou qu'on ne comprend pas, pour relancer la conversation au lieu de rester coincé.
 
 ---

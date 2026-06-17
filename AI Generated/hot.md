@@ -1,5 +1,5 @@
 ---
-updated: 13-06-2026
+updated: 16-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-13-06-2026 — obsidian-vault : passe `/evolve` 13-06 appliquée (3 memory : olis-lab SKU corrigé + chantiers 12-06, build-traps enrichi, ingredient-manager créé) ; 4 audits A1-A4 tous résolus.
+16-06-2026 — olis-lab : diagnostic erreur prod sur le sync d'un Edit (`Product relationship is not populated`) — relation orpheline (produit supprimé, Payload renvoie l'ID string même à depth:1). Fix pensé, non implémenté (diagnostic seul demandé).
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 12-06-2026
-- Etat : **PR #1784 announce bar quasi prête.** Kyle approved, ses 3 commentaires traités (`70ff71c47`) ; conflits develop résolus par merge (`c9e9b4f19`) — `App.tsx` garde la refacto banner + reprend l'overlay navigation `isNavigatingAtom` de #1804. PR MERGEABLE mais BLOCKED (re-approve Diego manquant). Typechecks verts partout. Point ouvert : commentaire SEO ul>li de Kyle ancré sur le RowLabel admin (SEO sans objet), appliqué littéralement sur arbitrage Rémy, à clarifier sur le thread. Piège `engines.node` : Node 20.19.6 via nvm pour `pnpm install`. **Jamais de `Co-Authored-By: Claude`.** Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`), bulk-add Products→Edit, RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A.
-- Prochaine etape : répondre aux threads de Kyle + obtenir re-approve Diego pour merger #1784 ; vérif visuelle (row label admin, lien externe nouvel onglet).
+- Derniere session : 16-06-2026
+- Etat : 2 branches en cours. **`feat/read-announcement-bar-next` (PR #1817)** : review Kyle traitée et commitée (pas poussée) — carousel Embla **local** (le TopBanner de `@olis-lab/ui` casse le SSR), logique dans `useTopBannerMessages`, liens via `<ExternalLink>`, classes inline, `useFeatureFlags` au typage simplifié ; **anim à confirmer en runtime** (structure DOM calquée sur `FooterTrustBar`, la réf Embla qui marche dans Next). **`feat/navbar-global`** : global Payload `navbar` hybride + read CRA gaté `dev_payload_navbar` (legacy conservée, seed manuel), PR à ouvrir (sortir le commit `.env.local` `0281f9d23` avant). #1784 mergée. Pièges : brancher depuis `origin/develop` puis `git push -u origin X` ; `@olis-lab/ui` TopBanner casse le SSR ; cms consomme le dist de shared. Node 20.19.6 via nvm.
+- Prochaine etape : **débloquer prod** — retrouver l'Edit référençant le produit supprimé `69e11655b772ed2f05ac8516` (API `?where[products][in]=` / mongosh), le retirer en admin, relancer le sync ; **fix durable de `edits.ts`** (filtrer l'orphelin comme `products.ts`, garder throw `legacyId`) en TDD quand demandé. Puis : vérif anim TopBanner + pousser #1817 ; ouvrir PR navbar (sortir `0281f9d23`) + remplir global admin (EN+FR).
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
@@ -33,9 +33,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 13-06-2026
-- Etat : `/evolve` rapport 13-06 applique (3 memory : project_olis_lab corrige SKU + chantiers 12-06, build-traps +2 pieges, project_ingredient_manager cree). Audits A1-A4 tous resolus (A1 suppression volontaire actee, A2 git mv staged, A3 deja fait, A4 fausse alerte chemin).
-- Prochaine etape : commit du git mv A2 (staged) ? ; resserrer /recap (chemins notes + frontmatter project) ; prochain /evolve vendredi 20-06
+- Derniere session : 15-06-2026
+- Etat : harnais enrichi depuis Kenjaku. RAG semantique local operationnel (`~/vault-rag/`, embedder in-process gratuit, serveur MCP `vault-rag` global, 1003 docs). Skill `/coach` (Radical Candor) cree. Boucle de friction auto-capture (regle globale) + commande `/improve`. Delegation sous-agents passee en regle globale (anti context-rot). `/lint` supprime. lean-ctx retire partout.
+- Prochaine etape : tester `/coach` en reel ; optionnel ajouter vault aux additionalDirectories + permissions mcp__vault-rag__* ; investiguer hook SessionStart qui plante ; prochain /evolve vendredi 20-06
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026

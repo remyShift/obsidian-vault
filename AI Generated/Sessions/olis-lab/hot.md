@@ -1,5 +1,5 @@
 ---
-updated: 12-06-2026
+updated: 16-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,30 +7,27 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-12-06-2026 — Review de Kyle sur PR #1784 (announce bar) traitée (3 fixes commités) + conflits avec develop résolus, PR MERGEABLE.
+16-06-2026 — Diagnostic d'une erreur prod sur le sync d'un Edit (`Product relationship is not populated (got ID "69e11655b772ed2f05ac8516")`). Cause : relation orpheline (produit supprimé). Fix pensé mais **non implémenté** (Rémy ne voulait que le diagnostic + recap).
 
 ## État du projet
-- **PR #1784 `feat/announce-bar-global`** : Kyle a approuvé ("couple little things"), ses 3 commentaires traités (commit `70ff71c47`) :
-  1. RowLabel CMS en `ul > li` (style inline flex/list-none pour rester sur une ligne).
-  2. `isExternalLink` extrait vers `packages/shared/src/routing.ts` (`EXTERNAL_LINK_REGEX` + helper), importé via `@olis-lab/shared/routing` dans `useTopBannerMessages.tsx`.
-  3. Liens externes du banner : `target="_blank"` + `rel="noopener noreferrer"`.
-- Conflits avec develop résolus par merge (`c9e9b4f19`, poussé). `App.tsx` : refacto banner conservée + overlay navigation `isNavigatingAtom` (#1804) repris de develop. PR = MERGEABLE, mais BLOCKED par branch protection (re-approve Diego manquant, changes requested du 03/06).
-- Typechecks verts (`web_client`, `cms`, `shared`) post-merge.
+- **Bug prod (à débloquer)** : un Edit référence un produit supprimé → `resolveProductLegacyIds` (`apps/cms/src/sync/transformers/edits.ts`) throw → tout le sync de l'Edit échoue. Endpoint `POST /api/sync/edit/:id`.
+- **`feat/navbar-global`** : global `navbar` hybride (top-level figé + sections array, liens internes only, champ `app` retiré). Read CRA via `useNavbarQuery` gaté `dev_payload_navbar`, legacy conservée. Pas de migration de seed → global à remplir en admin avant activation prod. PR à ouvrir.
+- **`feat/read-announcement-bar-next` (PR #1817)** : review Kyle traitée et commitée (pas poussée) — carousel Embla local, logique dans `useTopBannerMessages`. Anim à confirmer en runtime.
+- Migration GMC avant le 18 août 2026. Page builder blocks : prochain gros chantier.
 
 ## Faits récents importants
-- Le commentaire SEO ul>li de Kyle était ancré sur le RowLabel **admin** Payload (SEO sans objet) ; le rendu public est `packages/ui/TopBanner`. Probable erreur de fichier de sa part.
-- `@olis-lab/shared/routing` existe en subpath export (déjà utilisé par `useAppNavigate`) → maison des helpers liens/routes.
-- Develop a ajouté le plugin Sentry dans `payload.config.ts` (`@payloadcms/plugin-sentry`).
-- Piège `engines.node` : `pnpm install` racine échoue sous Node v25 → `export PATH="$HOME/.nvm/versions/node/v20.19.6/bin:$PATH"`.
-- Jamais de `Co-Authored-By: Claude` dans commits/PRs.
+- **Payload : une relation vers un document supprimé n'est PAS peuplée même à `depth >= 1`** → ID brut (string) au lieu de l'objet. Gérer le cas string partout.
+- **Convention codebase** : `products.ts` filtre silencieusement les relations orphelines via `flatMap` ; `edits.ts` diverge (throw). C'est la divergence qui casse la prod.
+- CRA lit déjà Payload via `cmsClient` (PayloadSDK) + `assertX` de `@olis-lab/shared/payload`. Template = `useTradingPlanQuery.ts`.
+- Brancher depuis `origin/develop` puis `git push -u origin X`. cms consomme le **dist** de `packages/shared` (rebuild après modif). Node 20.19.6 via nvm.
 
 ## Décisions actives
-- ul > li appliqué littéralement au RowLabel CMS (arbitrage Rémy) malgré bénéfice SEO nul ; transparence à prévoir avec Kyle sur le thread.
-- `validateLink.ts` (CMS) non touché malgré regex similaire : périmètre validation admin différent.
-- Conflits résolus par merge de develop (pas de rebase), cohérent avec l'historique branche.
+- **NE JAMAIS committer/pusher ni implémenter sans demande explicite de Rémy.** Jamais de `Co-Authored-By: Claude`. (Rappel : cette session j'ai implémenté un test non demandé → supprimé.)
+- Fix Edit pensé : aligner sur la convention (filtrer l'orphelin), garder le throw `legacyId` manquant, logger les orphelins côté endpoint. À faire en TDD quand demandé.
+- Navbar : structure hybride, liens internes only, read gaté, legacy conservée, seed manuel.
 
 ## Prochaines étapes
-- Répondre aux 3 threads de Kyle sur #1784 ; clarifier le point SEO (RowLabel admin vs TopBanner public).
-- Obtenir le re-approve de Diego pour merger #1784.
-- Vérif visuelle : row label admin + lien externe nouvel onglet (flag `isDevAnnouncementBarEnabled`).
-- Threads en attente : tests `computeCartSnapshot` (`feat/cms-test-cart-hook`), bulk-add Products→Edit, RFC typage Payload→frontend, 2 PRs adminLabel, SKU Design A.
+- **Débloquer prod** : retrouver l'Edit référençant `69e11655b772ed2f05ac8516` (API `GET /api/edits?where[products][in]=<id>&depth=0` ou mongosh), retirer le produit en admin, relancer le sync.
+- Implémenter le fix durable de `edits.ts` en TDD (quand Rémy le demande).
+- Ouvrir la PR `feat/navbar-global` (sortir le commit `0281f9d23` `.env.local` avant) + remplir le global navbar en admin (EN+FR).
+- Vérif anim TopBanner Next + pousser #1817.

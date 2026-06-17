@@ -1,5 +1,5 @@
 ---
-updated: 13-06-2026
+updated: 15-06-2026
 project: obsidian-vault
 tags: [meta, hot-cache]
 ---
@@ -7,24 +7,28 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Dernière mise à jour
-13-06-2026 — Passe `/evolve` complète + `--apply` : rapport 13-06 produit puis appliqué (3 items memory). 4 items d'audit (A1-A4) tous résolus avec Rémy.
+15-06-2026 — Inspiré du repo Kenjaku : ajout d'un RAG sémantique local, d'un skill `/coach`, d'une boucle de friction + `/improve`, généralisation de la délégation sous-agents. lean-ctx entièrement retiré.
 
 ## État du projet
-- Système mémoire/vault à jour. Memory olis-lab corrigée (SKU factuellement faux réparé), nouveau sous-projet `ingredient-manager` documenté.
-- Memory modifiés : `project_olis_lab.md` (M1 : 2 conventions + chantiers 12-06 + SKU Design A), `reference_olis_lab_build_traps.md` (M2 : Mongoose pluralise slug, pnpm shared→npx tsc), `MEMORY.md` (2 lignes), `project_ts_seed.md` (A1 : suppression volontaire actée).
-- Memory créé : `project_ingredient_manager.md` (M3).
+- **RAG opérationnel** : moteur Kenjaku dans `~/vault-rag/rag/`, embedder `in-process` local (gratuit), serveur MCP `vault-rag` global dans `~/.claude.json`. 1003 docs / 3389 chunks. Vérifié live (stats + recherche cross-lingue OK).
+- **`/coach`** : `Skills/coach/SKILL.md` (prep sous-agent + Radical Candor), logs dans `AI Generated/Coaching/`.
+- **`/improve`** : `~/.claude/commands/improve.md`, traite `Vie Perso/Harnais Backlog.md`.
+- **Capture de friction** + **délégation sous-agents** : règles passées en **global** dans `~/.claude/CLAUDE.md`.
+- **`/lint` supprimé** (redondant avec Axe C de `/evolve`).
 
 ## Faits récents importants
-- Filtre meetings `/evolve` : exclut tout meeting < dernier rapport. Dernier meeting = 01-06 < rapport 05-06 → 0 meeting ingéré cette passe.
-- Les 2 chemins vault sont un symlink → pas de faux négatif sur « note absente ».
-- Pattern récurrent à surveiller : recaps citant un mauvais chemin de note (A4) + frontmatter `project:` collé au cwd au lieu du contenu (A2).
+- User MCPs lus depuis `~/.claude.json` (pas `~/.claude/mcp.json`) → utiliser `claude mcp add --scope user`.
+- `~/.claude.json` réécrit en direct par Claude Code : relire avant Edit.
+- Moteur RAG résout ses chemins depuis `__dirname` (indépendant du cwd) ; serveur stdio = pas un démon (spawné/tué par session, reindex incrémental au démarrage).
+- Classifieur bloque l'exécution de code tiers + l'édition des permissions `settings.json` → Rémy le fait à la main.
 
 ## Décisions actives
-- Acter les non-problèmes en memory (ex : A1 suppression volontaire ts-seed) pour couper les carry-over d'audit.
-- Recaps méta vault → classés `obsidian-vault`, pas le cwd.
-- `git mv` du recap 22-05 (A2) laissé en staging, non commité.
+- RAG : tout le vault, moteur réutilisé, embedder local. Serveur en global.
+- Friction : auto-capture (global) + traitement manuel `/improve`.
+- Délégation sous-agents : principe global (recherche large → sous-agent ~500 tokens ; fetch 1-2 notes → direct).
 
 ## Prochaines étapes
-- Décider si on commit le `git mv` du A2 (staged).
-- Envisager de resserrer `/recap` pour fiabiliser chemins de notes + frontmatter `project:`.
-- Prochain `/evolve` : vendredi 20-06. La branche meetings ne se réactivera qu'avec un meeting daté après 05-06.
+- Tester `/coach` en usage réel (apparaît après relance).
+- Optionnel : ajouter le vault aux `additionalDirectories` global (capture friction sans prompt hors-vault) + permissions `mcp__vault-rag__*`.
+- Investiguer le hook SessionStart qui plante (`session-context.sh`).
+- Laisser le backlog de friction se remplir, puis `/improve`.

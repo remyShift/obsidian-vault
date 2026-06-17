@@ -11,6 +11,7 @@ Index principal du vault
 - [[CLAUDE]]
 
 ---
+
 ## Activité récente
 
 Notes modifiées ces 7 derniers jours (hors AI Generated) :
@@ -28,6 +29,7 @@ LIMIT 15
 ## Notes orphelines (zéro inlink)
 
 Notes que personne ne cite (zéro backlink entrant).
+
 ⚠️ Une note peut apparaître ici **tout en étant connectée dans la graphe** : si elle a des outlinks (elle pointe vers d'autres), la graphe la montre reliée, mais elle reste orpheline au sens "personne ne me cite". La chasse aux orphelines vise ce cas-là, c'est ce qui tue l'émergence d'un vrai graphe.
 
 ```dataview
@@ -51,7 +53,6 @@ WHERE length(file.inlinks) = 0 AND (length(file.outlinks) = 0 OR all(file.outlin
 SORT file.name ASC
 LIMIT 50
 ```
-
 
 ---
 

@@ -27,5 +27,6 @@
   "templater-obsidian",
   "smart-connections",
   "smart-lookup",
-  "smart-context"
+  "smart-context",
+  "obsidian-linter"
 ]
