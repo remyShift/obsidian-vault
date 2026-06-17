@@ -8,11 +8,19 @@ url:
 tags:
   - Linkedin
 ---
-En code review j'ai poussé pour qu'on teste mieux une partie sensible du code. Un senior m'a répondu que c'était pas de la dette technique, juste une question de process. Sur le moment, j'étais persuadé d'avoir raison.
+En code review j'ai poussé pour qu'on teste mieux une partie sensible du code, un senior m'a répondu que c'était pas de la dette technique, juste une question de process.
 
-Quand t'es junior, t'as deux réflexes faciles. Te taire sur tout, pour pas déranger. Ou mourir sur chaque colline, pour prouver que t'as un avis.
+Sur le moment, j'étais persuadé d'avoir raison.
 
-J'apprends le troisième, et c'est le plus dur. Poser ton argument clairement, le défendre une fois, et laisser le contexte trancher. On est une startup, livrer compte, une couverture de tests parfaite peut attendre. Et ça, c'est une décision légitime, pas une défaite qu'on me fait avaler.
+Quand t'es junior, t'as deux réflexes faciles, te taire sur tout, pour pas déranger, ou mourir sur chaque colline, pour prouver que t'as un avis.
+
+J'apprends le troisième, et c'est le plus dur.
+
+Poser ton argument clairement, le défendre une fois, et laisser le contexte trancher.
+
+On est une startup, livrer compte, une couverture de tests parfaite peut attendre, et ça, c'est une décision légitime, pas une défaite qu'on me fait avaler (même si c'est dur).
+
+Ça va un peu à l'encontre de ce que j'essaye de voir quand je me renseigne sur le Craft, ce qui le fait que cette option existe plus dur à accepter.
 
 Ce que je garde de l'échange, c'est pas qui a gagné. C'est que j'ai soulevé le truc, que je savais pourquoi je le soulevais, et que j'ai fini par comprendre pourquoi la réponse c'était "pas maintenant". Trois choses que le moi d'il y a un an aurait pas su faire en même temps.
 
