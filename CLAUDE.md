@@ -28,6 +28,7 @@ CLAUDE.md                    → ce fichier
 ```
 
 ### Notes Permanentes/
+
 ```
 Code/            → Agilité, Craft, Dev Knowledge, Programming Languages, Veille
 Contenu & Créatif/  → Linkedin (ligne éditoriale + Posts/), LyonCraft
@@ -36,6 +37,7 @@ Vie Perso/       → Daily, Finances, Korea, Ma vie, Quotes, Workflow Claude + O
 ```
 
 ### AI Generated/
+
 ```
 Sessions/{projet}/   → recaps Claude Code par projet (/recap)
 Conversations/       → synthèses de chat (/wrap)
@@ -49,6 +51,7 @@ Evolve Reports/      → rapports hebdo (/evolve)
 Chaque grande section a un fichier `Sommaire*.md` qui sert d'index. C'est la colonne vertébrale de la navigation. Le `Sommaire.md` racine pointe vers les sommaires de section, qui pointent vers les notes.
 
 Sommaires actifs à connaître :
+
 - `Sommaire.md` (racine, avec queries Dataview : activité récente, orphelines, stats)
 - `Notes Permanentes/Notes Permanentes Sommaire.md`
 - `AI Generated/AI Sommaire.md`
@@ -115,6 +118,7 @@ Une note orpheline (zéro backlink entrant) tue l'émergence du graphe. Quand tu
 Skills dans `Skills/<nom>/SKILL.md`, déclenchés par une commande slash décrite dans le frontmatter.
 
 Commandes actives :
+
 - `/recap` : résumé session Claude Code → `AI Generated/Sessions/{projet}/`
 - `/wrap` : synthèse conversation → `AI Generated/Conversations/` (+ MAJ du sommaire)
 - `/evolve` : analyse hebdo → `AI Generated/Evolve Reports/`
@@ -142,6 +146,7 @@ Autres skills présents : `defuddle`, `json-canvas`, `obsidian-bases`, `obsidian
 Serveur MCP `vault-rag` (global, moteur local in-process, index sur tout le vault). Découpe chaque note en chunks par section et retrouve les passages les plus proches **par le sens** (pas par mot-clé). Marche en cross-lingue (question en français sur une note en anglais).
 
 Routing :
+
 - **Question sémantique / transverse** ("qu'est-ce que je sais sur X", "où ai-je parlé de Y") → `mcp__vault-rag__search_vault` d'abord, puis lire les notes remontées.
 - **Navigation exacte** (chemin connu, date précise) → `Read`, pas de RAG.
 - **Mot-clé exact** (nom propre, identifiant, slug) → `Grep`, pas de RAG.
@@ -167,6 +172,7 @@ Routing :
 Point d'entrée : `Notes Permanentes/Projets/Oli's Lab/Intro Oli's Lab.md` (équipe, stack, archi DB, process, philosophie produit). À lire avant toute tâche liée à Oli's Lab.
 
 Repères rapides :
+
 - Stack legacy : CRA + React, Jotai, React Query, Node/Express, MongoDB, AWS Lambda
 - Cible : Next.js (App Router), API v2 TypeScript, Payload CMS
 - Pas de TypeScript ni de tests sur le legacy : dette technique réelle. Traiter "on ajoutera les tests plus tard" comme un drapeau rouge.
