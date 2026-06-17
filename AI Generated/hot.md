@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-17-06-2026 — olis-lab : fix du slugify Payload (accents perdus + tirets multiples) — util partagé + migration de recompute des slugs existants à changement minimal + WARN anti-trou. PR `fix/payload-slugs-generation` ouverte.
+17-06-2026 — olis-lab : plan validé pour une nouvelle global Payload `footer` (contenu éditorial du footer, image incluse) ; 2 questions laissées ouvertes sur le ticket. PR slugify toujours en review.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 17-06-2026
-- Etat : **`fix/payload-slugs-generation` (PR ouverte)** : fix du slugify Payload (accents perdus + tirets multiples). Util partagé `apps/cms/src/lib/slugify.ts` (NFD + strip diacritiques + collapse + trim), branché Brands (option `slugify` native) + Products (slugify local supprimé). Migration `20260617_100000_fix_slugs.ts` : recompute à changement minimal (locale source + fallback préfixe brand) + WARN sur slug non reproductible depuis titre actuel. Inventaire : 26 produits + 1 brand = 27 redirects. **Misaj** = seul cassé non auto (titre prod réécrit) → re-save manuel. Autres branches en attente : `feat/read-announcement-bar-next` (#1817, anim TopBanner à confirmer) ; `feat/navbar-global` (PR à ouvrir, sortir commit `.env.local` `0281f9d23`). Pièges : Node 20 via nvm, rebuild dist de shared, brancher depuis `origin/develop`.
-- Prochaine etape : suivre review PR slugs ; séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration Payload prod → propagation legacy via sync (26 produits) → re-save manuel Misaj. Puis reprendre #1817 (vérif anim + push) et ouvrir PR navbar.
+- Etat : **Footer global (plan validé, pas codé)** : nouvelle global Payload `footer` centralisant image de fond + newsletter + colonnes de liens + liens légaux + réseaux sociaux + tagline + copyright, calquée sur `AnnouncementBar`/`TradingPlan`. Liens INCLUS en CMS (choix Rémy), icônes/logo restent en code, section "More" via flag `visibility`. 2 questions OUVERTES sur le ticket (`target` éditable vs rôle vs dérivé du path ; année copyright). Seed non bloquant (feature flag). En parallèle **`fix/payload-slugs-generation` (PR ouverte)** : fix slugify (util `slugify.ts` + migration `20260617_100000_fix_slugs.ts`, 27 redirects, Misaj non auto). Autres branches en attente : `feat/read-announcement-bar-next` (#1817) ; `feat/navbar-global` (PR à ouvrir). Pièges : Node 20 via nvm, rebuild dist shared, brancher depuis `origin/develop`.
+- Prochaine etape : footer = attendre décisions review (2 questions) puis coder global + guard + fetch web/legacy. Slugs = suivre review PR ; séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration prod → propagation legacy via sync (26 produits) → re-save Misaj. Puis #1817 + PR navbar.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026

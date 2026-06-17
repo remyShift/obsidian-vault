@@ -7,26 +7,25 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-17-06-2026 — Fix du slugify Payload (accents perdus + tirets multiples) : util partagé + migration de recompute des slugs existants. Branche `fix/payload-slugs-generation`, PR ouverte.
+17-06-2026 — Plan validé pour une nouvelle global Payload `footer` (contenu éditorial du footer, image incluse). En parallèle, PR slugify toujours en review.
 
 ## État du projet
-- **`fix/payload-slugs-generation`** (PR ouverte) : `apps/cms/src/lib/slugify.ts` (NFD + strip diacritiques + collapse tirets + trim bords), branché sur Brands (option `slugify` du `slugField` natif) et Products (slugify local supprimé). Migration `20260617_100000_fix_slugs.ts` : recompute à changement minimal (locale source + fallback préfixe brand) + WARN sur slug non reproductible depuis le titre actuel. Typecheck vert. Pas committé par Claude (règle).
+- **Footer global (plan validé, pas encore codé)** : global Payload `footer` centralisant image de fond, newsletter, colonnes de liens, liens légaux, réseaux sociaux, tagline, copyright. Calquée sur `AnnouncementBar`/`TradingPlan` (`versions.drafts`, `access.read`, champs localisés EN/FR, `isValidLink`, type guard `assert.media`, fetch `cmsClient.findGlobal`). Plan : `~/.claude/plans/j-aimerais-cr-er-une-global-polished-flask.md`.
+- **`fix/payload-slugs-generation` (PR ouverte)** : fix slugify Payload (accents perdus + tirets multiples). Util `apps/cms/src/lib/slugify.ts`, migration `20260617_100000_fix_slugs.ts` (recompute à changement minimal + WARN). 27 redirects (26 produits + 1 brand). Misaj = seul cassé non auto.
 - Migrations antérieures : navbar global, announce-bar Next, backfill subcategory adminLabel.
 
 ## Faits récents importants
-- Inventaire complet : 233 produits → 206 conformes, 26 produits + 1 brand à changer = **27 redirections** (map = ticket Notion).
-- **Misaj** : seul slug cassé non auto-corrigeable (titre prod entièrement réécrit) → re-save manuel admin → `misaj-body-moisturiser-natural-repellent`.
-- Sync Payload→legacy `shop_products` est **manuelle** (bouton admin / `POST /api/sync/product/:id`), pas d'`afterChange`. Brands : pas de slug en legacy.
-- En JS `\w` inclut les chiffres → slugify ne supprime pas les nombres. Strip de `/` et `.` conservé volontairement.
-- Migration = **Node 20** obligatoire (nvm). Rebuild `packages/shared` requis si dist périmé (`pnpm --filter @olis-lab/shared build`).
-- `apps/server/utils/generateSlug.js` même bug mais hors scope (pas le chemin qui fait foi).
+- Footer : liens INCLUS en CMS (choix Rémy). Icônes (trust bar, paiement) + logo SVG restent en code. Section "More" auth → flag `visibility` (always/loggedOut/loggedIn), FE filtre selon auth.
+- Footer : seed pas bloquant car derrière feature flag → seed manuel avant de flipper. `apps/web/lib/api/cms.ts` n'a PAS de `findGlobal` (à ajouter). Users CMS = nu, aucun RBAC.
+- Footer Next a déjà un TODO "Pass image from CMS" (bg = URL S3 hardcodée).
+- Slugify : sync Payload→legacy manuelle (bouton / `POST /api/sync/product/:id`), Node 20 obligatoire (nvm), rebuild dist `@olis-lab/shared` si périmé. En JS `\w` inclut les chiffres. Misaj → `misaj-body-moisturiser-natural-repellent`.
 
 ## Décisions actives
-- Scope cms uniquement. Migration à changement minimal (jamais recompute en bloc). Misaj/titres disparus = warn + re-save manuel. `grown-alchemist-skin-renewal-toner` et `face-body-serum` : décisions figées (laisser / pas de préfixe brand).
-- Redirects CloudFront = Rémy + Michele/Diego, hors scope code, mais BLOQUANTS avant migration prod.
+- Footer : 2 questions laissées OUVERTES sur le ticket (non tranchées) : (1) `target` éditable par l'éditrice vs permission par rôle vs dérivation par path ; (2) année copyright figée vs préfixée en code. Ne rien coder sur ces points avant décision review.
+- Slugify : scope cms uniquement, migration à changement minimal (jamais recompute en bloc), Misaj/titres disparus = warn + re-save manuel. `grown-alchemist-skin-renewal-toner` / `face-body-serum` : décisions figées.
+- Redirects CloudFront = Rémy + Michele/Diego, hors scope code, BLOQUANTS avant migration prod.
 - NE JAMAIS committer/pusher sans demande explicite. Jamais de `Co-Authored-By: Claude`.
 
 ## Prochaines étapes
-- Suivre review PR `fix/payload-slugs-generation`.
-- Avant prod : redirections CloudFront live AVANT la migration (sinon liens cassés).
-- Séquence prod : redirects → migration Payload prod → propagation legacy via sync (26 produits) → re-save manuel Misaj.
+- Footer : attendre décisions review (2 questions) → puis coder `Footer.ts` + RowLabels + registre `payload.config` + `guardFooter` (shared) + `getGlobal` (web) + `useFooterQuery` (web_client).
+- Slugify : suivre review PR. Séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration Payload prod → propagation legacy via sync (26 produits) → re-save manuel Misaj.
