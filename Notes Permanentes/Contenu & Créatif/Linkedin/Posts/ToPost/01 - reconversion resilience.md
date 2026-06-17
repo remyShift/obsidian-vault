@@ -8,7 +8,7 @@ url:
 tags:
   - Linkedin
 ---
-La reconversion, c'est pas le courage d'un jour. C'est l'entêtement de tous les autres.
+La reconversion, c'est pas le courage d'un jour, c'est l'entêtement de tous les autres.
 
 Le saut, tu le décides une fois. Un matin tu te dis go, t'envoies le mail, tu signes la formation, tu fermes la porte derrière toi. C'est intense mais c'est court. Avec le recul c'est presque la partie facile, parce que ce jour-là t'es porté par l'élan.
 
