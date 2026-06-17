@@ -43,6 +43,7 @@ Synthèses de conversations générées via `/wrap`.
 | 31-05-2026 | [[AI Generated/Conversations/31-05-2026 - Notes Korea - démonstratifs, politesse, particule dative]] |
 | 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Notes Korea - expressions pour se débloquer]]       |
 | 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Création CLAUDE.md guide du vault]]                 |
+| 17-06-2026 | [[AI Generated/Conversations/17-06-2026 - Posts LinkedIn planifiés et post Tech'Work]]        |
 
 
 ---
