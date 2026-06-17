@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+
 Un invariant de domaine est une règle qui doit **toujours être vraie**, quel que soit le chemin d'exécution, quel que soit l'appelant.
 
 Pas "généralement vraie", pas "vraie si on y pense", toujours vraie.
@@ -162,7 +163,7 @@ Ces tests ne nécessitent aucune infrastructure. Pas de base de données, pas de
 
 ### Erreurs classiques
 
-**Invariants dans les services :** `if (order.items.length === 0) throw new Error(...)` dans un `OrderService`. Rien n'empêche un autre service de ne pas faire cette vérification. L'invariant doit être dans `Order.confirm()`.
+**Invariants dans les services :** `if (order.items.length === 0) throw new Error(…)` dans un `OrderService`. Rien n'empêche un autre service de ne pas faire cette vérification. L'invariant doit être dans `Order.confirm()`.
 
 **Validation du format confondue avec l'invariant métier :** valider qu'un email est bien formé c'est de la validation de format, elle va dans le [[Value Object]] `Email`. Valider qu'un client ne peut pas commander plus de X fois par jour c'est un invariant métier, il va dans l'Aggregate ou un [[Domain Service]].
 

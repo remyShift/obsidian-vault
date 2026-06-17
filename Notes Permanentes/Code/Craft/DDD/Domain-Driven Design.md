@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+
 Le **Domain-Driven Design** est une approche de conception qui place le **domaine métier** au centre de toutes les décisions techniques. Formalisé par Eric Evans en 2003.
 
 > La complexité d'un logiciel vient rarement de la technique. Elle vient de la **complexité du domaine métier** qu'il modélise.
@@ -8,9 +9,11 @@ Le **Domain-Driven Design** est une approche de conception qui place le **domain
 Le DDD propose de modéliser cette complexité explicitement dans le code sans la cacher derrière une architecture.
 
 Dans la plupart des projets, il existe un fossé entre ce que les experts métier comprennent et ce que les développeurs ont codé.
+
 - Résultat : logique métier dispersée dans des services, des controllers, des utils, et une base de données que personne ne peut expliquer à un non-développeur.
 
 Le DDD se compose de 2 niveaux :
+
 - **DDD Stratégique** : comment découper et organiser un système complexe à grande échelle.
 - **DDD Tactique** : comment modéliser le domaine dans le code.
 

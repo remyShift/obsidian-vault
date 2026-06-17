@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD]
 ---
+
 ## Pourquoi les combiner ?
 
 [[CQRS]] et [[Event Sourcing]] sont deux patterns indépendants, mais ils se complètent naturellement. Event Sourcing crée un problème que CQRS résout.
