@@ -21,7 +21,9 @@ Pas parce que quelqu'un a fait un sermon ou imposé un outil par le haut.
 
 Parce que les gens l'ont essayée sur de vrais problèmes du projet et ont vu de leurs yeux où ça aide et où ça raconte n'importe quoi.
 
-Récemment mon tech lead a fait une pr pour ajouter des skills, des claude.md par apps … Personne a tiqué. Quand j'ai commencé c'est moi qui ait fait les premières pr pour introduire ça, car je poussais pour, aujourd'hui mon tech lead demande ma review sur sa pr.
+Récemment mon tech lead a fait une pr pour ajouter des skills, des claude.md par apps … Personne a tiqué.
+
+Quand j'ai commencé c'est moi qui ait fait les premières pr pour introduire ça, car je poussais pour, aujourd'hui mon tech lead demande ma review sur sa pr.
 
 Le glissement, c'est pas "on adopte tout", c'est plus fin, et c'est ça qui me plaît. S'en servir comme outil sans la laisser penser à notre place.
 
