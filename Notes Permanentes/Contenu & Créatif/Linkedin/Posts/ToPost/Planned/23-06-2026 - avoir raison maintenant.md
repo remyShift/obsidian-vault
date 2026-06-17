@@ -1,10 +1,10 @@
 ---
-date: 
-likes: 
-comments: 
-reposts: 
-impressions: 
-url: 
+date: 23-06-2026
+likes:
+comments:
+reposts:
+impressions:
+url:
 tags:
   - Linkedin
 ---
