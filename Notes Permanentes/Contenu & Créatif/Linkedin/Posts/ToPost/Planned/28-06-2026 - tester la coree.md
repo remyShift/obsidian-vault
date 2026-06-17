@@ -1,15 +1,15 @@
 ---
-date: 
-likes: 
-comments: 
-reposts: 
-impressions: 
-url: 
+date: 28-06-2026
+likes:
+comments:
+reposts:
+impressions:
+url:
 tags:
   - Linkedin
 ---
 
-Cet automne je pars trois mois en Corée. Pas pour les vacances, pour tester si c'est là que je veux vivre.
+Cet automne je pars trois mois en Corée, non pas pour les vacances, pour tester si c'est là que je veux vivre.
 
 Je pourrais continuer à en rêver depuis mon canapé, lire sur Séoul, scroller des vidéos de quartiers, fantasmer une vie là-bas que j'ai construite entièrement dans ma tête.
 
