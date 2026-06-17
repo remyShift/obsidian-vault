@@ -8,6 +8,7 @@ url:
 tags:
   - Linkedin
 ---
+
 En code review j'ai poussé pour qu'on teste mieux une partie sensible du code, un senior m'a répondu que c'était pas de la dette technique, juste une question de process.
 
 Sur le moment, j'étais persuadé d'avoir raison.
@@ -22,7 +23,7 @@ On est une startup, livrer compte, une couverture de tests parfaite peut attendr
 
 Ça va un peu à l'encontre de ce que j'essaye de voir quand je me renseigne sur le Craft, et donc le fait que cette option existe est, pour moi, plus dur à accepter.
 
-Ce que je garde de l'échange, c'est pas qui a gagné. C'est que j'ai soulevé le truc, que je savais pourquoi je le soulevais, et que j'ai fini par comprendre pourquoi la réponse c'était "pas maintenant". 
+Ce que je garde de l'échange, c'est pas qui a gagné. C'est que j'ai soulevé le truc, que je savais pourquoi je le soulevais, et que j'ai fini par comprendre pourquoi la réponse c'était "pas maintenant".
 
 Trois choses que le moi d'il y a un an aurait pas su faire en même temps.
 
