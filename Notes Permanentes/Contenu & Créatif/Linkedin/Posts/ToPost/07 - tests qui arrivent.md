@@ -9,9 +9,7 @@ tags:
   - Linkedin
 ---
 
-Des tests commencent à apparaître dans notre code base.
-
-Alors dit comme ça c'est pas glamour, je sais.
+Des tests commencent à apparaître dans notre code base, alors dit comme ça c'est pas glamour, je sais.
 
 C'est un projet où pendant longtemps "on ajoutera les tests plus tard" était la norme.
 

@@ -1,19 +1,17 @@
 ---
-date: 
-likes: 
-comments: 
-reposts: 
-impressions: 
-url: 
+date: 22-06-2026
+likes:
+comments:
+reposts:
+impressions:
+url:
 tags:
   - Linkedin
 ---
 
 Le marché est dur pour les juniors en ce moment, te dire le contraire, ce serait te mentir, et t'as pas besoin qu'on te mente une fois de plus.
 
-Donc je te vendrai pas de rêve.
-
-Mais dur, c'est pas fermé, et la nuance est tout sauf cosmétique.
+Donc je te vendrai pas de rêve, mais dur, c'est pas fermé, et la nuance est tout sauf cosmétique.
 
 Ce que je vois marcher autour de moi, c'est jamais le certificat de formation tout seul.
 
