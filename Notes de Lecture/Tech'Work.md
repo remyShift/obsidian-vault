@@ -93,8 +93,8 @@
 			- identifiant qui indique le contraire de ce que l'entité contient
 		- Trouvaille scientifique de Anna Widova (à confirmer le nom) :
 			- 11% des setters retourne une valeur
-			- 2,5% ???
-			- 75% ???
+			- 2,5% des méthodes : noms & composants donnent des descriptions opposés a son fonctionnement
+			- 64% des identifiants commençants par `is` : ne sont pas des booléens
 		- Comment s'en prémunir ?
 			- les avoir dans notre MLT, et les travailler (katas, coding dojo..)
 			- automatiser leur détection (avec archUnit par exemple)
