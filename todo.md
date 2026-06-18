@@ -17,7 +17,8 @@ tags:
 	- [ ] Mots interrogatif --> app flashcard
 	- [ ] 지금
 - [x] Changer adresse EI
+- [ ] Supprimer abonnement TCL
 
 ## Work
 
-- [ ] Explorer le scientific project
+- [x] Explorer le scientific project
