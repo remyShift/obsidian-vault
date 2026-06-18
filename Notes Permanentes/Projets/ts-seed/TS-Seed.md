@@ -2,7 +2,8 @@
 tags:
   - TS-Seed
 ---
-TS-Seed est une web app Next.js fullstack pour bootstrapper des projets TypeScript. L'utilisateur choisit des briques depuis un catalogue, configure son projet (versions, package manager, nom ...), et l'outil génère les fichiers dans un dossier cible.
+
+TS-Seed est une web app Next.js fullstack pour bootstrapper des projets TypeScript. L'utilisateur choisit des briques depuis un catalogue, configure son projet (versions, package manager, nom …), et l'outil génère les fichiers dans un dossier cible.
 
 L'outil lui-même suit une architecture hexagonale DDD et produit un projet structuré similaire.
 
@@ -10,10 +11,11 @@ L'outil lui-même suit une architecture hexagonale DDD et produit un projet stru
 
 ## Les deux bounded contexts
 
-**`brick/`** : le moteur. 
+**`brick/`** : le moteur.
 - Ne connaît pas les briques en elle même, définis seulement leur abstraction.
 
 **`catalog/`** : les implémentations concrètes.
+
 - Contient une brique par technologie supportée, chaque brique sait quels fichiers créer et quelles dépendances npm installer.
 
 ```
@@ -45,7 +47,7 @@ src/
 | ----------------- | --------------------------------------------------------------------------------------- |
 | `BrickSlug`       | Identifiant unique d'une brique, ex: `"express"`                                        |
 | `BrickVersion`    | Version choisie, ex: `"5.x"`                                                            |
-| `BrickContext`    | Ce que l'utilisateur configure (dossier, version, package manager...)                   |
+| `BrickContext`    | Ce que l'utilisateur configure (dossier, version, package manager…)                   |
 | `Patch`           | Ce qu'une brique produit (fichiers, dépendances, scripts)                               |
 | `BrickDefinition` | Description d'une brique dans le catalogue (slug, versions dispo, dépendances requises) |
 | `BrickBuilder`    | Interface qui produit un `Patch` depuis un `BrickContext`                               |
@@ -136,4 +138,4 @@ src/
       secondary/
 ```
 
-Les briques qui supposent une archi hexagonale (ex: une brique `express` positionnée en adaptateur primaire) déclarent `hexagonal-structure` dans leurs `requiredBricks`. Les briques simples (ex: `docker`, `eslint`...) n'en ont pas besoin.
+Les briques qui supposent une archi hexagonale (ex: une brique `express` positionnée en adaptateur primaire) déclarent `hexagonal-structure` dans leurs `requiredBricks`. Les briques simples (ex: `docker`, `eslint`…) n'en ont pas besoin.
