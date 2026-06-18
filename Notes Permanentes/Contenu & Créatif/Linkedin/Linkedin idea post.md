@@ -2,6 +2,7 @@
 tags:
   - Linkedin
 ---
+
 - [x] Fonctionnalitées Linkedin
 - [x] Avis maquette portfolio
 - [x] Mise au sport / perte de poids suite à perte de motivation
@@ -9,7 +10,7 @@ tags:
 - [x] MDN Observatory
 - [x] Legacy Code
 - [x] Metadata
-- [x] Syndrome de l’imposteur que j’ai pas
+- [x] Syndrome de l'imposteur que j'ai pas
 - [x] Diplôme nécessaire ou pas ?
 - [x] Blender et BDD
 - [x] La simplicité
@@ -24,18 +25,20 @@ tags:
 - [x] illusion des séries (analogie basket)
 - [x] basilique de roko
 - [x] seoul
-- [x] truc bête que j’aime autocompletion console log
-- [x] pose des questions en reformulants l’intention
+- [x] truc bête que j'aime autocompletion console log
+- [x] pose des questions en reformulants l'intention
 - [x] Retour vacances / nouvelle anné📅
 - [ ] [Instagram](https://www.instagram.com/reel/DRfG2jNCMaw/?igsh=MXRsb3dqOXUxempydQ==)
 - [ ] Trouver nom de branche
-- [ ] App coréenne valide le mail pendant le signup
-- [x] Take sur le fait que l’ia va créer de l’emplois plutôt que l’inverse
+- [x] App coréenne valide le mail pendant le signup
+- [x] Take sur le fait que l'ia va créer de l'emplois plutôt que l'inverse
 - [x] Setup maison obsidian + claude
 - [x] claude-mem
 - [x] Lyon Craft
-- [x] réponse question entretien par rapport à l’ia
-- [x] le tiret de l’ia —
+- [x] réponse question entretien par rapport à l'ia
+- [x] le tiret de l'ia —
 - [x] fausse modestie et accepté les compliments suite à LyonCraft
 - [x] Parcours avec anecdote non romancés par rapport à LyonCraft
 - [ ] Café coworker qui bosse pas en full remote
+- [ ] On vit dans une ère génial, où sur un réseau social comme linkedin les gens ne prennent plus la peine de répondre à ton commentaire en le rédigeant eux même mais en te faisant une capture d'écran de la réponse d'une IA c'est quand même fou
+- [ ] Harnais Claude tellement puissant que aujourd'hui j'en aurais du mal à m'en détacher, mais manque MCP pour certaines apps pour le renforcer

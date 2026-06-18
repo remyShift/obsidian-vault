@@ -63,7 +63,7 @@
 	- Comment écrire du code chunkable du coup ? (segmenté en groupe logique)
 		- Revenir aux fondamentaux —> Design patterns
 		- Écrire des commentaires (de haut niveau, pas de bas niveau) —> ajoute de l'information et du contexte donc aide à créer des chunks, les commentaires de bas niveau vont surcharger la mémoire à court terme
-		- La MDT est en soit limitee de la même manière que la MCT, mais appliqué sur un problème donc sature plus vite, la capacité de la MDT = charge cognitive
+		- La MDT est en soit limité de la même manière que la MCT, mais appliqué sur un problème donc sature plus vite, la capacité de la MDT = charge cognitive
 		- Technique 1 : refactoring temporaire pour réduire la charge cognitive
 			- refactoring temporaire pour comprendre le code avec par exemple les outils de refactos automatisé 
 			- ce qui est facile à lire / comprendre dépend de nos connaissances préalables et donc de notre MLT et il n'y a donc pas de honte à transformer le code dans quelques choses de plus familier pour mieux le comprendre 
