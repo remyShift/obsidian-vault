@@ -1,7 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD, Architecture]
 ---
-
+s
 La Vertical Slice Architecture organise le code **par feature** plutôt que par couche technique. Chaque feature est un slice vertical qui traverse toutes les couches, de la requête HTTP jusqu'à la base de données.
 
 C'est une réponse à un problème réel des architectures en couches : pour ajouter ou modifier une feature, on touche des fichiers dans tous les dossiers du projet (`controllers/`, `services/`, `repositories/`). Le couplage horizontal entre features augmente progressivement, et comprendre ce que fait une feature nécessite de naviguer dans toute la codebase.
