@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD, Architecture]
 ---
+
 La Clean Architecture (Robert C. Martin, 2012) est une formalisation de l'[[Hexagonal Architecture]] avec des couches concentriques explicites et une règle de dépendance stricte : **les cercles intérieurs ne connaissent jamais les cercles extérieurs**.
 
 La différence principale avec l'hexagonale c'est la nomenclature et la formalisation des couches. Le principe fondamental est identique : l'infrastructure est un détail, le domaine est au centre.

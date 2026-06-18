@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, DDD, Architecture]
 ---
+
 L'architecture en couches est le point de départ de la plupart des codebases. Elle organise le code en **couches horizontales**, chacune ayant une responsabilité distincte. Une couche ne dépend que de la couche immédiatement en dessous.
 
 C'est l'architecture implicite de la plupart des projets Express : router, controller, service, modèle. Le problème c'est que sans discipline, les dépendances traversent les couches dans tous les sens et la logique métier finit dans les mauvais endroits.
