@@ -17,6 +17,9 @@ Hot context : [[AI Generated/hot|hot]]
 ## Coaching
 - [[AI Generated/Coaching/Sommaire|Sommaire Coaching]]
 
+## Harnais
+- [[AI Generated/Harnais Backlog|Backlog frictions harnais]]
+
 ## Skills
 - [[Skills/wrap/SKILL|wrap]]
 - [[Skills/post/SKILL|post]]

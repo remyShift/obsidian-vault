@@ -124,7 +124,7 @@ Commandes actives :
 - `/evolve` : analyse hebdo → `AI Generated/Evolve Reports/`
 - `/capture` : note rapide → `Notes de Lecture/Inbox/`
 - `/coach` : sparring partner Radical Candor câblé sur le vault → séance dans `AI Generated/Coaching/`
-- `/improve` : traite le backlog de frictions du harnais (`Vie Perso/Harnais Backlog.md`) → propose et applique les améliorations
+- `/improve` : traite le backlog de frictions du harnais (`AI Generated/Harnais Backlog.md`) → propose et applique les améliorations
 - `/post` : assistant de création de post LinkedIn (charge la ligne éditoriale + 5 derniers posts)
 - `/normalize-frontmatter {dossier}` : migration callout → YAML
 

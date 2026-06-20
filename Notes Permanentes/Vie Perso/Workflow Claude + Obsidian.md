@@ -17,7 +17,7 @@ tags:
 - `/evolve` : analyse hebdo AI Generated + Notes Permanentes → rapport `AI Generated/Evolve Reports/`
 - `/capture` : note rapide → `Notes de Lecture/Inbox/`
 - `/coach` : sparring partner Radical Candor câblé sur le vault → séance dans `AI Generated/Coaching/`
-- `/improve` : traite le backlog de frictions du harnais (`Vie Perso/Harnais Backlog.md`)
+- `/improve` : traite le backlog de frictions du harnais (`AI Generated/Harnais Backlog.md`)
 
 ## Structure AI Generated
 - `Sessions/{projet}/` : recaps par projet (auto-chargés au SessionStart)
