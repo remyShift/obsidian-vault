@@ -1,5 +1,5 @@
 ---
-updated: 17-06-2026
+updated: 19-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,25 +7,28 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-17-06-2026 — Plan validé pour une nouvelle global Payload `footer` (contenu éditorial du footer, image incluse). En parallèle, PR slugify toujours en review.
+19-06-2026 — fixé les tests d'intégration CMS `computeCartSnapshot` (branche `feat/cms-test-cart-hook`) : 19/19 verts, factory rendue réaliste (bilingue + legacyId). Plus tôt dans la journée : reviews navbar (#1822) et announcement bar (#1817).
 
 ## État du projet
-- **Footer global (plan validé, pas encore codé)** : global Payload `footer` centralisant image de fond, newsletter, colonnes de liens, liens légaux, réseaux sociaux, tagline, copyright. Calquée sur `AnnouncementBar`/`TradingPlan` (`versions.drafts`, `access.read`, champs localisés EN/FR, `isValidLink`, type guard `assert.media`, fetch `cmsClient.findGlobal`). Plan : `~/.claude/plans/j-aimerais-cr-er-une-global-polished-flask.md`.
-- **`fix/payload-slugs-generation` (PR ouverte)** : fix slugify Payload (accents perdus + tirets multiples). Util `apps/cms/src/lib/slugify.ts`, migration `20260617_100000_fix_slugs.ts` (recompute à changement minimal + WARN). 27 redirects (26 produits + 1 brand). Misaj = seul cassé non auto.
-- Migrations antérieures : navbar global, announce-bar Next, backfill subcategory adminLabel.
+- **`feat/cms-test-cart-hook`** : tests d'intégration `computeCartSnapshot` réparés. Fix dans `apps/cms/tests/factories/product.ts` (produit bilingue + `legacyId` via faker) + ajustement d'une assertion dans le spec. **Pas encore commité.** Hook et schéma non touchés (ce sont la spec).
+- **`feat/read-announcement-bar-next` (PR #1817)** : rename `onDismiss`→`handleDismiss` commité. Merge `BLOCKED` côté GitHub malgré « c'est merge » de Rémy → à reconfirmer (thread/CI).
+- **`feat/navbar-global` (PR #1822, OPEN)** : navbar en global Payload, siblingData typé via génériques + `TNavItem`, validateur scindé `isValidInternalLink`/`isValidLink`, `NAVBAR_STALE_TIME` 24h. À push + merge.
+- **Footer global** (plan validé, pas codé) : 2 questions review ouvertes.
+- **`fix/payload-slugs-generation`** : slugify + migration `20260617_100000_fix_slugs.ts`, 27 redirects, Misaj non auto.
 
 ## Faits récents importants
-- Footer : liens INCLUS en CMS (choix Rémy). Icônes (trust bar, paiement) + logo SVG restent en code. Section "More" auth → flag `visibility` (always/loggedOut/loggedIn), FE filtre selon auth.
-- Footer : seed pas bloquant car derrière feature flag → seed manuel avant de flipper. `apps/web/lib/api/cms.ts` n'a PAS de `findGlobal` (à ajouter). Users CMS = nu, aucun RBAC.
-- Footer Next a déjà un TODO "Pass image from CMS" (bg = URL S3 hardcodée).
-- Slugify : sync Payload→legacy manuelle (bouton / `POST /api/sync/product/:id`), Node 20 obligatoire (nvm), rebuild dist `@olis-lab/shared` si périmé. En JS `\w` inclut les chiffres. Misaj → `misaj-body-moisturiser-natural-repellent`.
+- `apps/cms` consomme `@olis-lab/shared` via le **dist buildé** (pas le src, aucun alias tsconfig). Toute modif du barrel `packages/shared/src` exige `pnpm turbo run build --filter=@olis-lab/shared` avant de tester en local. Dist gitignoré.
+- CI : le job `cms-int-tests` rebuild `shared` avant `pnpm test:int` → la cause « dist périmé » est purement locale, jamais en CI.
+- Hook `computeCartSnapshot` = `beforeChange` sur Products : écrit le snapshot **seulement sur update d'un produit publié sans `skipCartSnapshot`**. Create = TODO no-op. `legacyId` (ObjectId Mongo legacy posé par la sync) sert de `_id` au snapshot.
+- Convention : `handleX` (fonction définie) vs `onX` (nom de prop).
 
 ## Décisions actives
-- Footer : 2 questions laissées OUVERTES sur le ticket (non tranchées) : (1) `target` éditable par l'éditrice vs permission par rôle vs dérivation par path ; (2) année copyright figée vs préfixée en code. Ne rien coder sur ces points avant décision review.
-- Slugify : scope cms uniquement, migration à changement minimal (jamais recompute en bloc), Misaj/titres disparus = warn + re-save manuel. `grown-alchemist-skin-renewal-toner` / `face-body-serum` : décisions figées.
-- Redirects CloudFront = Rémy + Michele/Diego, hors scope code, BLOQUANTS avant migration prod.
+- Un snapshot cart **doit être bilingue** (en + fr) : schéma = spec, on corrige les fixtures.
 - NE JAMAIS committer/pusher sans demande explicite. Jamais de `Co-Authored-By: Claude`.
 
 ## Prochaines étapes
-- Footer : attendre décisions review (2 questions) → puis coder `Footer.ts` + RowLabels + registre `payload.config` + `guardFooter` (shared) + `getGlobal` (web) + `useFooterQuery` (web_client).
-- Slugify : suivre review PR. Séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration Payload prod → propagation legacy via sync (26 produits) → re-save manuel Misaj.
+- `feat/cms-test-cart-hook` : décider de committer les fixes (factory + spec).
+- Dette (optionnel) : `dependsOn: ["^build"]` sur la tâche turbo `test` ou un `pretest` qui build `shared`.
+- #1817 : reconfirmer le statut réel, résoudre le thread Kyle, débloquer, merger.
+- #1822 : push + résoudre threads + merge.
+- Footer : attendre les 2 décisions review puis coder.

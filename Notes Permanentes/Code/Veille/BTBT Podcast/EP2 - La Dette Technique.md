@@ -1,8 +1,10 @@
 ---
 tags:
   - CodeKnowledge
+  - Veille
 lien: https://youtu.be/Yl0q3k5HwYM?si=Yzr3Bc4xw-y0pFkm
 ---
+
 ## Idée brute
 
 La dette technique c'est une pression dont l'origine est le code, qui impacte la vitesse, la compréhension, la cohérence et le bien-être des développeurs. Elle peut être contractée volontairement (et documentée) ou accidentellement (et donc invisible, donc plus dangereuse).
@@ -29,6 +31,7 @@ Métaphore parlante : construire les Porsches VS construire l'usine qui fabrique
 Le point central du podcast : la dette technique se gère **au fil de l'eau, au quotidien**, pas par des sprints dédiés tous les 6 mois. Quand on attend trop, on tombe dans le piège du refactoring superficiel (on améliore les symptômes, pas la cause), ou de la branche de refonte qui ne merge jamais.
 
 **Règles évoquées :**
+
 - Boy Scout Rule (Uncle Bob, Clean Code) : laisser le code plus propre qu'on ne l'a trouvé (cf [[L'Exemplarité]])
 - Ygor Bugayenko : laisser le code avec plus de tests qu'on ne l'a trouvé
 
@@ -42,6 +45,7 @@ Le point central du podcast : la dette technique se gère **au fil de l'eau, au 
 ### Strangler Fig Pattern
 
 Méthode de refonte recommandée :
+
 - On écrit le nouveau code en parallèle de l'ancien
 - Les deux coexistent
 - Une fois le nouveau code couvrant les chemins visés, on supprime l'ancien

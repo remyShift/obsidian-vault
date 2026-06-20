@@ -1,8 +1,10 @@
 ---
 tags:
   - CodeKnowledge
+  - Veille
 lien: https://youtu.be/fUZQeChUfD4?si=1YIExSagzvebX96M
 ---
+
 ## Idée brute
 
 La question "faut-il bien coder dès le départ ?" est mal posée. Le vrai sujet c'est : au jour 1, tu ne devrais probablement pas coder du tout. Et quand tu commences à construire, "bien construire" dépend entièrement de l'horizon de vie du produit.
@@ -12,6 +14,7 @@ La question "faut-il bien coder dès le départ ?" est mal posée. Le vrai sujet
 ### La question est mal cadrée
 
 Le débat LinkedIn "faut-il bien coder dès le départ ?" suppose deux extrêmes :
+
 - L'extrême "construis d'abord, vends ensuite" avec TDD, DDD, Clean Code dès le jour 1
 - L'extrême "vends d'abord, construis après"
 
@@ -20,6 +23,7 @@ En pratique, personne ne défend vraiment le premier extrême en théorie, mais 
 ### Ce que "bien construire" veut vraiment dire au jour 1
 
 Au stade zéro (pas de clients, pas de product-market fit, pas d'équipe) :
+
 1. **Valider d'abord** : la première mission n'est pas de construire, c'est de confirmer qu'un problème existe vraiment
 2. **Coût de validation proche de zéro** : waiting list, no-code, no-scale (email manuel, formulaires), tout ce qui permet de répondre à la question sans construire
 3. **Ne pas confondre "j'ai vendu" avec "les gens en ont besoin"** : le churn post-achat est le vrai indicateur
@@ -46,6 +50,7 @@ Conclusion : on ne peut pas établir de règle absolue. Une équipe doit **se me
 Un exécutant pur (qui sait coder vite mais sans recul) n'est pas le bon profil. Il amène à un ralentissement inévitable dans les 6 à 12 mois.
 
 Le profil idéal réunit :
+
 - Une **sensibilité produit** (comprendre le problème qu'on résout)
 - Avoir **déjà lancé quelque chose** pour soi-même (side project, micro-SaaS)
 - La capacité de **reconnaître ce qu'il ne sait pas** et de poser les bonnes questions
@@ -57,7 +62,7 @@ Le fondateur lui-même ne peut souvent pas évaluer ces qualités, il est convai
 
 Point fort du podcast : les décisions de développement ne vivent pas dans une bulle. Elles doivent venir soutenir l'objectif business de l'entreprise. Avant de parler de Scrum, d'agile, d'architecture, il faut comprendre ce qui se passe autour.
 
-Chaque segment de la boîte (tech, sales, produit...) doit incarner l'objectif global. Si ce n'est pas explicité, chaque équipe l'interprète à sa façon et les trajectoires divergent.
+Chaque segment de la boîte (tech, sales, produit…) doit incarner l'objectif global. Si ce n'est pas explicité, chaque équipe l'interprète à sa façon et les trajectoires divergent.
 
 ### Sur-expliciter pour réduire le "cône de dispersion"
 

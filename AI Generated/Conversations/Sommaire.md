@@ -44,6 +44,8 @@ Synthèses de conversations générées via `/wrap`.
 | 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Notes Korea - expressions pour se débloquer]]       |
 | 14-06-2026 | [[AI Generated/Conversations/14-06-2026 - Création CLAUDE.md guide du vault]]                 |
 | 17-06-2026 | [[AI Generated/Conversations/17-06-2026 - Posts LinkedIn planifiés et post Tech'Work]]        |
+| 19-06-2026 | [[AI Generated/Conversations/19-06-2026 - Notes de veille Tech'Work]]                         |
+| 19-06-2026 | [[AI Generated/Conversations/19-06-2026 - Message équipe sur le talk lecture de code]]        |
 
 
 ---

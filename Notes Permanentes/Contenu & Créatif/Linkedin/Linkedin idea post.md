@@ -42,3 +42,4 @@ tags:
 - [ ] Café coworker qui bosse pas en full remote
 - [ ] On vit dans une ère génial, où sur un réseau social comme linkedin les gens ne prennent plus la peine de répondre à ton commentaire en le rédigeant eux même mais en te faisant une capture d'écran de la réponse d'une IA c'est quand même fou
 - [ ] Harnais Claude tellement puissant que aujourd'hui j'en aurais du mal à m'en détacher, mais manque MCP pour certaines apps pour le renforcer
+- [ ] session avec baptiste seed4t

@@ -13,9 +13,6 @@
   "obsidian-vault-statistics-plugin",
   "recent-files-obsidian",
   "univer",
-  "obsidian-local-rest-api",
-  "mcp-tools",
-  "obsidian-git",
   "obsidian-style-settings",
   "graph-banner",
   "sync-graph-settings",
@@ -28,5 +25,8 @@
   "smart-connections",
   "smart-lookup",
   "smart-context",
-  "obsidian-linter"
+  "obsidian-linter",
+  "mcp-tools",
+  "obsidian-local-rest-api",
+  "obsidian-git"
 ]

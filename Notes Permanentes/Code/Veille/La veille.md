@@ -3,9 +3,9 @@ tags: [CodeKnowledge, Veille]
 ---
 
 - Veille = temps investis à sa montée en compétences sur divers sujets tech. Néanmoins le temps est précieux donc nécessité de structurer et optimiser sa veille.
-- Veille = ensemble des habitudes et des processus qui permettent d’apprendre en continue
-- Analogie bûcheron —> entre chaque arbre reprendre son souffle et aiguiser sa hache 
-	- hache == nos outils du quotidien (ide, os ...) == nos compétences
+- Veille = ensemble des habitudes et des processus qui permettent d'apprendre en continue
+- Analogie bûcheron —> entre chaque arbre reprendre son souffle et aiguiser sa hache
+	- hache == nos outils du quotidien (ide, os …) == nos compétences
 
 - Tu trouveras également au fil de ta veille des citations intéressante à garder en mémoire dans [[Code Quotes]].
 
@@ -15,8 +15,10 @@ tags: [CodeKnowledge, Veille]
 - [[Valoriser]]
 
 Voici des notes prises lors de ma veille :
+
 - [[EP1 - Comment construire un début de produit en startup ?]]
 - [[EP2 - La Dette Technique]]
 - [[Théorie de la Résidualité]]
+- [[Notes Permanentes/Code/Veille/TechWork/Sommaire|Tech'Work (journée de conf)]]
 
 **Bonus :** quelques cheatsheet pour t'aider : [[Notes Permanentes/Code/Programming Languages/CheatSheets/Sommaire|sommaire]].

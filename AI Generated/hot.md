@@ -1,5 +1,5 @@
 ---
-updated: 17-06-2026
+updated: 20-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-17-06-2026 — olis-lab : plan validé pour une nouvelle global Payload `footer` (contenu éditorial du footer, image incluse) ; 2 questions laissées ouvertes sur le ticket. PR slugify toujours en review.
+20-06-2026 — obsidian-vault : extension du setup shell (+rg/fzf/xh/tldr/btop, helpers git gco/gbd basculés en fzf), tout versionné chezmoi.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 17-06-2026
-- Etat : **Footer global (plan validé, pas codé)** : nouvelle global Payload `footer` centralisant image de fond + newsletter + colonnes de liens + liens légaux + réseaux sociaux + tagline + copyright, calquée sur `AnnouncementBar`/`TradingPlan`. Liens INCLUS en CMS (choix Rémy), icônes/logo restent en code, section "More" via flag `visibility`. 2 questions OUVERTES sur le ticket (`target` éditable vs rôle vs dérivé du path ; année copyright). Seed non bloquant (feature flag). En parallèle **`fix/payload-slugs-generation` (PR ouverte)** : fix slugify (util `slugify.ts` + migration `20260617_100000_fix_slugs.ts`, 27 redirects, Misaj non auto). Autres branches en attente : `feat/read-announcement-bar-next` (#1817) ; `feat/navbar-global` (PR à ouvrir). Pièges : Node 20 via nvm, rebuild dist shared, brancher depuis `origin/develop`.
-- Prochaine etape : footer = attendre décisions review (2 questions) puis coder global + guard + fetch web/legacy. Slugs = suivre review PR ; séquence prod = redirects CloudFront (Michele/Diego) AVANT migration → migration prod → propagation legacy via sync (26 produits) → re-save Misaj. Puis #1817 + PR navbar.
+- Derniere session : 19-06-2026
+- Etat : **`feat/cms-test-cart-hook`** : tests d'intégration `computeCartSnapshot` réparés (19/19 verts, tsc clean), fix dans `apps/cms/tests/factories/product.ts` (produit bilingue + `legacyId` via faker) + assertion ajustée dans le spec ; **pas encore commité**, hook/schéma non touchés (= spec). **`feat/read-announcement-bar-next` (PR #1817)** : rename `onDismiss`→`handleDismiss` commité, merge `BLOCKED` côté GitHub malgré « c'est merge » de Rémy → à reconfirmer. **`feat/navbar-global` (PR #1822, OPEN)** : navbar en global Payload, siblingData typé via génériques + `TNavItem`, validateur scindé, `NAVBAR_STALE_TIME` 24h. **Footer global (plan validé, pas codé)**, 2 questions OUVERTES. **`fix/payload-slugs-generation`** : slugify + migration `20260617_100000_fix_slugs.ts`, 27 redirects, Misaj non auto. Pièges : `apps/cms` consomme `shared` via dist buildé → rebuild `shared` avant tests locaux ; Node 20 ; brancher depuis `origin/develop`. Convention : `handleX` (fonction) vs `onX` (prop). Hook cart : snapshot écrit seulement sur update d'un produit publié sans `skipCartSnapshot`.
+- Prochaine etape : `feat/cms-test-cart-hook` décider de committer les fixes (+ optionnel `dependsOn:["^build"]` sur tâche turbo `test`). #1817 confirmer statut + résoudre thread Kyle + merger. #1822 push + threads + merge. Footer = attendre 2 décisions review. Slugs = redirects CloudFront AVANT migration → migration prod → sync legacy (26 produits) → re-save Misaj.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
@@ -33,9 +33,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 15-06-2026
-- Etat : harnais enrichi depuis Kenjaku. RAG semantique local operationnel (`~/vault-rag/`, embedder in-process gratuit, serveur MCP `vault-rag` global, 1003 docs). Skill `/coach` (Radical Candor) cree. Boucle de friction auto-capture (regle globale) + commande `/improve`. Delegation sous-agents passee en regle globale (anti context-rot). `/lint` supprime. lean-ctx retire partout.
-- Prochaine etape : tester `/coach` en reel ; optionnel ajouter vault aux additionalDirectories + permissions mcp__vault-rag__* ; investiguer hook SessionStart qui plante ; prochain /evolve vendredi 20-06
+- Derniere session : 20-06-2026
+- Etat : **setup shell Mac complet + etendu**. Base 19/06 (Ghostty + fish + mise + starship + bat/lsd/zoxide/fd + gum + splashboard, chezmoi → `remyShift/dotfiles`, ~3,5 Go nettoyes). Couche 20/06 : `rg` (contenu), `fzf` (cable fish Ctrl+R/Ctrl+T), `xh` (HTTP), `tldr`, `btop` (moniteur Dracula) ; helpers git `gco`/`gbd` basculés gum→fzf (preview log), `gadd`/`gcim` restent gum. Tout au Brewfile. Harnais vault stable : `vault-rag` + `/coach` + `/improve`.
+- Prochaine etape : **/evolve → note "Setup Shell Mac" doit integrer la session 20/06** (outils + cablage fzf + bascule helpers git + btop.conf), pas que le recap 19/06. Reste sudo python.org + rotation mdp Mongo Atlas + suppr backup `~/shell-migration-backup-*` ; tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
@@ -58,7 +58,7 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : si mission acceptee — Sprint 1 bloquants secu ; sinon archiver
 
 ## Contexte personnel actif
-- Korea move : test de 3 mois a Seoul a planifier dans les prochains mois ; prevoit changer de PC a ce moment
+- Korea move : test de 3 mois a Seoul a planifier dans les prochains mois ; prevoit changer de PC a ce moment (→ dotfiles chezmoi = env reconstructible en 4 commandes)
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 - LinkedIn ghostwriting : 2 posts rediges (reconversion valide, coreen/React en attente validation)
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant

@@ -4,4 +4,4 @@ tags: [CodeKnowledge, Veille]
 
 - Sourcer = alimenter sa veille
 - Choisir des ressources diverses (livres, newsletter, article, conférence, podcast …)
-- ⚠️ A ne pas s’éparpiller et ne pas trop vouloir tout voir (syndrome de l’objet qui brille) risque de ne pas utiliser sa veille. A la place on se contente de sa Whitelist à laquelle on ajoute des ressources choisis avec soin. 
+- ⚠️ A ne pas s'éparpiller et ne pas trop vouloir tout voir (syndrome de l'objet qui brille) risque de ne pas utiliser sa veille. A la place on se contente de sa Whitelist à laquelle on ajoute des ressources choisis avec soin.

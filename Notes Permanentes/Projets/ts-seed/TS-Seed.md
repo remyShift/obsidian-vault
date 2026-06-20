@@ -12,6 +12,7 @@ L'outil lui-même suit une architecture hexagonale DDD et produit un projet stru
 ## Les deux bounded contexts
 
 **`brick/`** : le moteur.
+
 - Ne connaît pas les briques en elle même, définis seulement leur abstraction.
 
 **`catalog/`** : les implémentations concrètes.
@@ -47,7 +48,7 @@ src/
 | ----------------- | --------------------------------------------------------------------------------------- |
 | `BrickSlug`       | Identifiant unique d'une brique, ex: `"express"`                                        |
 | `BrickVersion`    | Version choisie, ex: `"5.x"`                                                            |
-| `BrickContext`    | Ce que l'utilisateur configure (dossier, version, package manager…)                   |
+| `BrickContext`    | Ce que l'utilisateur configure (dossier, version, package manager…)                     |
 | `Patch`           | Ce qu'une brique produit (fichiers, dépendances, scripts)                               |
 | `BrickDefinition` | Description d'une brique dans le catalogue (slug, versions dispo, dépendances requises) |
 | `BrickBuilder`    | Interface qui produit un `Patch` depuis un `BrickContext`                               |

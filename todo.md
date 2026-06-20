@@ -18,6 +18,9 @@ tags:
 	- [ ] 지금
 - [x] Changer adresse EI
 - [ ] Supprimer abonnement TCL
+- [ ] RDV Dentiste
+- [ ] Clean Archigonale : archi au croisement de l'architecture hexagonale / clean archi (cf code workshop)
+- [ ] Appeler impôt —> résident fiscal
 
 ## Work
 

@@ -76,6 +76,10 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/15-06-2026_14-21]]         |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/16-06-2026_14-50]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/17-06-2026_12-29]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/19-06-2026_13-35]]               |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/19-06-2026_18-17]]         |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/19-06-2026_22-01]]         |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/20-06-2026_10-58]]         |
 
 ## Hot notes :
 

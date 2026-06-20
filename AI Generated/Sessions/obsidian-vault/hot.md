@@ -1,5 +1,5 @@
 ---
-updated: 15-06-2026
+updated: 20-06-2026
 project: obsidian-vault
 tags: [meta, hot-cache]
 ---
@@ -7,28 +7,25 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Dernière mise à jour
-15-06-2026 — Inspiré du repo Kenjaku : ajout d'un RAG sémantique local, d'un skill `/coach`, d'une boucle de friction + `/improve`, généralisation de la délégation sous-agents. lean-ctx entièrement retiré.
+20-06-2026 — Extension du setup shell : +5 outils CLI (ripgrep, fzf, xh, tealdeer, btop) + bascule des helpers git `gco`/`gbd` de gum vers fzf. Recap dédié `20-06-2026_10-58`. Suite directe du setup du 19/06.
 
 ## État du projet
-- **RAG opérationnel** : moteur Kenjaku dans `~/vault-rag/rag/`, embedder `in-process` local (gratuit), serveur MCP `vault-rag` global dans `~/.claude.json`. 1003 docs / 3389 chunks. Vérifié live (stats + recherche cross-lingue OK).
-- **`/coach`** : `Skills/coach/SKILL.md` (prep sous-agent + Radical Candor), logs dans `AI Generated/Coaching/`.
-- **`/improve`** : `~/.claude/commands/improve.md`, traite `Vie Perso/Harnais Backlog.md`.
-- **Capture de friction** + **délégation sous-agents** : règles passées en **global** dans `~/.claude/CLAUDE.md`.
-- **`/lint` supprimé** (redondant avec Axe C de `/evolve`).
+- **Setup shell** étendu et stable. Stack du 19/06 (Ghostty/fish/mise/starship/bat/lsd/zoxide/fd/gum/splashboard/chezmoi) + couche du 20/06 : `rg` (contenu), `fzf` (fuzzy, câblé fish Ctrl+R/Ctrl+T avec previews bat/lsd), `xh` (HTTP lisible), `tldr` (aide par l'exemple), `btop` (moniteur live Dracula).
+- **Helpers git fish** : `gco`/`gbd` en fzf avec preview du log ; `gadd`/`gcim` restent en gum.
+- Dotfiles sous chezmoi → repo privé `remyShift/dotfiles`, tout dans le Brewfile (env reconstructible d'un `brew bundle`).
+- Harnais vault stable : `vault-rag` (sémantique local, ~1003 docs) + `/coach` + `/improve`. mgrep retiré (redondant + SaaS).
 
 ## Faits récents importants
-- User MCPs lus depuis `~/.claude.json` (pas `~/.claude/mcp.json`) → utiliser `claude mcp add --scope user`.
-- `~/.claude.json` réécrit en direct par Claude Code : relire avant Edit.
-- Moteur RAG résout ses chemins depuis `__dirname` (indépendant du cwd) ; serveur stdio = pas un démon (spawné/tué par session, reindex incrémental au démarrage).
-- Classifieur bloque l'exécution de code tiers + l'édition des permissions `settings.json` → Rémy le fait à la main.
+- Écriture vault : toujours `Write` (filesystem), jamais `mcp__obsidian__*` (bug encodage latin1).
+- **Jamais de `Co-Authored-By`/mention IA dans les commits** (4 commits chezmoi propres cette session).
+- `rg`/`xh` non aliasés sur grep/curl (commandes en plus, pas remplacements). Brewfile édité à la main (jamais `brew bundle dump --force`).
+- Alt+C fzf dormant sur Mac (Ghostty garde Option pour les accents) ; zoxide couvre le besoin. btop : thème dracula bundlé (pas de download).
 
 ## Décisions actives
-- RAG : tout le vault, moteur réutilisé, embedder local. Serveur en global.
-- Friction : auto-capture (global) + traitement manuel `/improve`.
-- Délégation sous-agents : principe global (recherche large → sous-agent ~500 tokens ; fetch 1-2 notes → direct).
+- fzf recouvre gum pour la sélection fuzzy → `gco`/`gbd` basculés ; gum gardé pour multi-select (`gadd`) et input (`gcim`).
+- Écartés à l'audit : direnv (mise), eza (lsd), dust/duf (ncdu), television (fzf), fastfetch/onefetch (splashboard). Sur la table : `yazi`, pimp `starship.toml`, `atuin`.
 
 ## Prochaines étapes
-- Tester `/coach` en usage réel (apparaît après relance).
-- Optionnel : ajouter le vault aux `additionalDirectories` global (capture friction sans prompt hors-vault) + permissions `mcp__vault-rag__*`.
-- Investiguer le hook SessionStart qui plante (`session-context.sh`).
-- Laisser le backlog de friction se remplir, puis `/improve`.
+- **/evolve : la note "Setup Shell Mac" doit intégrer CETTE session** (outils + câblage fzf + bascule helpers git + `btop.conf`), pas seulement le recap du 19/06. Refléter l'état FINAL du setup.
+- Reliquat 19/06 (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
+- Optionnel shell : `yazi` (+ câblage zoxide/fzf), ou pimper `starship.toml` Dracula avec icônes par langage.
