@@ -7,26 +7,26 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Dernière mise à jour
-20-06-2026 — Grosse journée en 3 temps (recap unique `20-06-2026_10-58`) : (1) couche d'outils shell + helpers git fzf, (2) passe `/evolve` appliquée + durcissement du skill, note Setup Shell détaillée, (3) **migration complète zsh → fish** (fish en login shell, pnpm câblé, `.zshrc`/oh-my-zsh supprimés).
+20-06-2026 - Session `/improve` : hook git anti co-author installé + tracké chezmoi, dotfiles commités/pushés (`remyShift/dotfiles`), backlog harnais déplacé dans `AI Generated/`. Suite directe de la migration zsh -> fish du matin (recap unique `20-06-2026_10-58`).
 
 ## État du projet
-- **Shell** : migration zsh → fish terminée. fish = login shell (`chsh`, ajouté à `/etc/shells`), `.zshrc` + oh-my-zsh + tous les reliquats zsh supprimés. Ne reste que `.zshenv` (cargo + shims mise). État final documenté dans `Notes Permanentes/Code/Setup Shell.md` (16 outils + alias/fonctions maison).
-- **Harnais vault** stable et durci : `vault-rag` + `/coach` + `/improve` + `/evolve` (audit renforcé) + `/wrap` (cadratins nettoyés).
-- Dotfiles sous chezmoi → repo privé `remyShift/dotfiles`, tout au Brewfile.
+- **Harnais stable et durci.** Migration full fish faite (login shell), zsh réduit à `.zshenv` (cargo + shims mise pour le non-interactif). `/evolve` durci (faux positifs A1/A4 clos), `/improve` opérationnel, backlog frictions désormais dans `AI Generated/Harnais Backlog.md` (`source: ai`).
+- Setup shell final dans `Notes Permanentes/Code/Setup Shell.md` (16 outils + alias/fonctions).
+- Dotfiles 100% reconstructibles : chezmoi (`remyShift/dotfiles`) + Brewfile (`brew bundle`).
 
 ## Faits récents importants
-- Écriture vault : toujours `Write` (filesystem), jamais `mcp__obsidian__*` (bug latin1).
-- **Jamais de `Co-Authored-By`/mention IA** dans les commits.
-- **Ne pas tout mettre en memory** (feedback Rémy) : un faux positif d'audit se reclasse dans le rapport `/evolve` (section `Audit clos`), pas dans un memory.
-- **`.zshenv` porte les shims mise** → l'outil Bash de Claude résout node par dossier (olis-lab → 20) sans `nvm use`. A résolu 2 pièges build olis-lab (Node 20 + `rm -i` qui hangeait via oh-my-zsh).
-- `chezmoi git -- <cmd>` = git dans la source chezmoi sans `cd`.
+- **Hook git global `commit-msg`** strippe `Co-Authored-By: …Claude/Anthropic` + `🤖 Generated with Claude Code`. Tracké chezmoi (`executable_commit-msg`) + `core.hooksPath` en `~/` portable dans `.gitconfig`. Limite : repos husky (hooksPath local) le bypassent -> mémoire = filet ; bodies de PR non couverts (passent par `gh`).
+- **Outil Bash de Claude = `/bin/zsh` figé via snapshot** (`~/.claude/shell-snapshots/`), pas de `cd` vivant. Node par-projet vient des shims mise dans `.zshenv` ; effectif au PROCHAIN snapshot (la session courante peut encore voir node 26 dans olis-lab).
+- Écriture vault : toujours `Write`, jamais `mcp__obsidian__*` (bug latin1). Mention IA dans les commits désormais aussi garantie absente par le hook.
 
 ## Décisions actives
-- Skill `/evolve` durci (4 patches) : Phase 1a relit les items `Audit clos` du dernier rapport (par sujet), Axe C croise les memory avant de crier « travail perdu ». À valider au prochain run.
-- A1 (docs ts-seed supprimés volontairement) et A4 (notes ingredient-manager dans `Scientific/Rating Tool/`) = faux positifs clos.
+- Backlog harnais dans `AI Generated/` (généré par Claude via capture passive), pas dans Notes Permanentes.
+- Hook déterministe > règle mémoire seule pour le co-author (mémoire reste le filet husky/PR).
+- Faux positif d'audit se reclasse dans le rapport `/evolve` (section `Audit clos`), pas en memory.
+- Pas de force-push pour nettoyer le commit `ecf8fe7` (body amputé par le hook v1, cosmétique) sans accord de Rémy.
 
 ## Prochaines étapes
-- **Commiter + pusher les dotfiles** (pas fait) : `chezmoi git -- add -A && commit && push`. 3 changements en attente (config.fish pnpm, suppr dot_zshrc, ajout dot_zshenv).
-- Au prochain `/evolve` : confirmer que A1/A4 ne remontent plus.
-- Reliquat Rémy (19/06) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
-- Optionnel shell : `yazi` ou pimper `starship.toml` Dracula. Vault : promouvoir `Notes de Lecture/Code/` (A3).
+- Prochaine session : constater que node 20 est bien résolu dans olis-lab (nouveau snapshot).
+- Prochain `/evolve` : confirmer que A1/A4 ne remontent plus.
+- Reliquat 19/06 (Rémy) : `sudo rm` python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
+- Optionnel : `yazi`, pimper `starship.toml` Dracula, promouvoir `Notes de Lecture/Code/` (A3), ou amender+force-push `ecf8fe7`.

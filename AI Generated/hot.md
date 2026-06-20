@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-06-2026 — obsidian-vault : migration complète zsh → fish (fish en login shell, pnpm câblé, `.zshrc`/oh-my-zsh supprimés) + passe /evolve appliquée + skill /evolve durci.
+20-06-2026 - obsidian-vault : session /improve - hook git anti co-author (tracké chezmoi), dotfiles commités/pushés, backlog harnais déplacé dans `AI Generated/`. Suite de la migration zsh -> fish du matin.
 
 ## Projets actifs
 
@@ -34,8 +34,8 @@ tags: [meta, hot-cache, global]
 
 ### obsidian-vault
 - Derniere session : 20-06-2026
-- Etat : **migration zsh → fish terminée** (fish = login shell via `chsh` + `/etc/shells`, pnpm câblé dans `config.fish`, `.zshrc`/oh-my-zsh + tous reliquats zsh supprimés ; reste `.zshenv` = cargo + shims mise). Effet de bord : 2 pièges build olis-lab résolus (Node 20 sans `nvm use`, `rm -i` qui hangeait). Setup shell final dans `Notes Permanentes/Code/Setup Shell.md`. **Harnais vault durci** : /evolve appliquée (memory olis-lab, build traps, note Setup Shell) + skill /evolve durci contre les faux positifs d'audit (A1/A4 reclassés via `Audit clos`, pas via memory) + `/wrap` nettoyé.
-- Prochaine etape : **commiter/pusher les dotfiles** (`chezmoi git -- add -A && commit && push`, 3 changements). Valider au prochain /evolve que A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`.
+- Etat : **migration zsh -> fish terminée** (fish = login shell via `chsh` + `/etc/shells` ; `.zshrc`/oh-my-zsh + reliquats zsh supprimés ; reste `.zshenv` = cargo + shims mise). **Session /improve** : hook git global `commit-msg` anti co-author installé + tracké chezmoi (`core.hooksPath` en `~/` portable) ; dotfiles commités/pushés (2 commits, `remyShift/dotfiles`) ; backlog frictions déplacé `Vie Perso` -> `AI Generated/Harnais Backlog.md` (+ refs MAJ, `source: ai`). Harnais déjà durci avant (/evolve appliquée + skill /evolve durci A1/A4, `/wrap` nettoyé). Découverte : outil Bash = zsh figé via snapshot, node par-projet via shims `.zshenv` effectif au prochain snapshot.
+- Prochaine etape : prochaine session, vérifier node 20 dans olis-lab (nouveau snapshot) ; prochain /evolve, A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`, amender+force-push `ecf8fe7`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
