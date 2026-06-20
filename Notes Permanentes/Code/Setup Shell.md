@@ -135,9 +135,8 @@ En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés 
 #### splashboard
 
 - splash screen de terminal customisable. Conf dans `~/.splashboard/`, thème `synthwave_84` dans `settings.toml`. Deux dashboards perso versionnés sous chezmoi : `home.dashboard.toml` (à chaque nouveau shell + cd : date figlet animée, citation, countdown Corée, world clock perso Montréal/Brésil/Portugal/Paris/Séoul, météo Lyon/Séoul, calendrier, système, Hacker News) et `project.dashboard.toml` (dans un repo git : nom du repo animé, git live status/commits/tag, mes PRs + reviews GitHub, analytics code LOC/commentaires/fichiers/churn/TODOs).
+
 - Clés : `splashboard catalog fetcher|renderer <nom>` (doc + options exactes d'un widget, fait autorité), `splashboard watch` (plein écran live), `splashboard cache list|clear` (cache disque, TTL par widget). Hook fish : fonction `__splashboard_run` dans `config.fish` (au démarrage via `fish_greeting`, à chaque cd via `--on-variable PWD`).
-- **Token GitHub (piège)** : les fetchers `github_*` ne lisent PAS `GH_TOKEN`/`GITHUB_TOKEN` depuis l'env du shell (sandbox réseau qui nettoie l'env). Seul canal qui marche : `~/.splashboard/secrets.toml` (`GH_TOKEN = "..."`), déjà chmod 600 + gitignore + chezmoiignore (jamais dans le repo dotfiles). Token gh en keyring → recopier via `gh auth token`. Scope `notifications` requis pour ce widget.
-- **Pièges rendu** : `animated_*` = intros one-shot ~2s puis figent (ok au splash de démarrage). Figlet `ansi_shadow` ~6 lignes → row `height = { length = 7 }` sinon clip vertical. Le wrapper `inner` des `animated_*` ne transmet pas align/style → hero centré = `animated_figlet_morph` (qui a `align`). `claude_subscription` inutilisable (lit `~/.claude/.credentials.json`, absent en keyring macOS).
 
 ## Câblage fish
 
@@ -151,18 +150,18 @@ Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés
 
 ### Alias
 
-| Alias | Étend vers | Note |
-|-------|-----------|------|
-| `cat` | `bat --plain --paging=never` | rend le comportement de cat (pas de pager, pas de déco) |
-| `ls` | `lsd` | |
-| `l` | `lsd -l` | |
-| `la` | `lsd -a` | |
-| `lla` | `lsd -la` | |
-| `lt` | `lsd --tree` | |
-| `find` | `fd` | ⚠ fd n'a PAS la syntaxe de find, c'est juste le nom qui est repris |
-| `code` | `zed` | ouvre dans Zed |
-| `cd` | `zoxide` | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
-| `gcd` *(abbr)* | `git checkout develop` | abréviation : s'étend en toutes lettres quand tu tapes |
+| Alias          | Étend vers                   | Note                                                                     |
+| -------------- | ---------------------------- | ------------------------------------------------------------------------ |
+| `cat`          | `bat --plain --paging=never` | rend le comportement de cat (pas de pager, pas de déco)                  |
+| `ls`           | `lsd`                        |                                                                          |
+| `l`            | `lsd -l`                     |                                                                          |
+| `la`           | `lsd -a`                     |                                                                          |
+| `lla`          | `lsd -la`                    |                                                                          |
+| `lt`           | `lsd --tree`                 |                                                                          |
+| `find`         | `fd`                         | ⚠ fd n'a PAS la syntaxe de find, c'est juste le nom qui est repris       |
+| `code`         | `zed`                        | ouvre dans Zed                                                           |
+| `cd`           | `zoxide`                     | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
+| `gcd` *(abbr)* | `git checkout develop`       | abréviation : s'étend en toutes lettres quand tu tapes                   |
 
 `rg` et `xh` ne sont volontairement pas aliasés, tu les tapes tels quels.
 
