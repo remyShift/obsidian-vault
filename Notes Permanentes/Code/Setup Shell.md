@@ -38,75 +38,103 @@ En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés 
 
 ### Naviguer et lister
 
-**zoxide** - `cd` qui apprend tes dossiers fréquents et y saute sur un bout de nom. Aliasé sur `cd`.
+#### zoxide
+
+- `cd` qui apprend tes dossiers fréquents et y saute sur un bout de nom
+	--> aliasé sur `cd`
 
 - Clés : `z partiel` (saute au meilleur match), `zi` (sélection interactive via fzf quand plusieurs candidats), `zoxide query partiel` (voir où ça irait sans bouger).
 - Ex. : `z olis` saute direct dans `Code/olis-lab/` depuis n'importe où.
 
-**lsd** - `ls` avec icônes par type de fichier, couleurs, et arbre. Aliasé sur `ls`.
+#### lsd
+
+- `ls` avec icônes par type de fichier, couleurs, et arbre
+	--> aliasé sur `ls`
 
 - Clés : `lsd -la` (tout + détails), `lsd --tree --depth 2` (arborescence limitée), `lsd -l --total-size` (taille cumulée des dossiers).
 - Ex. : `lsd --tree --depth 2` pour voir la structure d'un projet d'un coup d'oeil.
 
-**fd** - recherche de **fichiers**, rapide, syntaxe intuitive, respecte le `.gitignore` par défaut.
+#### fd
+
+- recherche de **fichiers**, rapide, syntaxe intuitive, respecte le `.gitignore` par défaut.
 
 - Clés : `fd motif` (par nom), `fd -e md` (par extension), `fd -H` (inclure les cachés), `fd -t d` (dossiers seulement), `fd motif -x commande` (exécuter sur chaque résultat).
 - Ex. : `fd -e ts src` liste tous les `.ts` sous `src/` ; `fd -e png -x optipng` optimise chaque PNG trouvé.
 
 ### Lire et chercher
 
-**bat** - `cat` avec coloration syntaxique, numéros de ligne, et pager intégré. Aliasé sur `cat`.
+#### bat
+
+- `cat` avec coloration syntaxique, numéros de ligne, et pager intégré. Aliasé sur `cat`.
 
 - Clés : `bat fichier`, `bat -A` (montre espaces/tabs/caractères invisibles), `bat -l json fichier` (forcer le langage si l'extension ment), `bat --list-themes`.
 - Ex. : `git show HEAD | bat -l diff` colore un diff ; sert aussi de pager pour les previews fzf.
 
-**rg (ripgrep)** - recherche de **contenu** récursive, très rapide, respecte le `.gitignore`.
+#### rg (ripgrep)
+
+- recherche de **contenu** récursive, très rapide, respecte le `.gitignore`.
 
 - Clés : `rg motif`, `rg -i` (insensible à la casse), `rg -l motif` (juste les fichiers), `rg -t ts motif` (filtrer par type), `rg -A 3 -B 3 motif` (3 lignes de contexte autour), `rg -w` (mot entier).
 - Ex. : `rg -t ts "useTradingPlan"` trouve tous les usages dans le TS ; `rg -l TODO` liste les fichiers qui en contiennent.
 
-**fzf** - fuzzy finder générique : filtre interactivement n'importe quelle liste passée en entrée. Câblé dans fish (voir plus bas).
+#### fzf
+
+- fuzzy finder générique : filtre interactivement n'importe quelle liste passée en entrée. Câblé dans fish (voir plus bas).
 
 - Clés : `commande | fzf` (filtrer la sortie), `fzf --preview 'bat {}'` (aperçu du fichier survolé), `--multi` (sélection multiple avec Tab).
 - Ex. : `zed (fzf)` ouvre dans Zed le fichier choisi à la volée ; `git branch | fzf` pour piocher une branche.
 
-**tldr (tealdeer)** - pages d'aide condensées en **exemples** concrets, au lieu du `man` exhaustif. Implémentation Rust (tealdeer), commande `tldr`.
+#### tldr (tealdeer)
+
+- pages d'aide condensées en **exemples** concrets, au lieu du `man` exhaustif. Implémentation Rust (tealdeer), commande `tldr`.
 
 - Clés : `tldr commande` (les exemples clés), `tldr --update` (rafraîchir le cache, à faire au premier lancement), `tldr -l` (lister les pages dispo).
 - Ex. : `tldr tar` rappelle les invocations utiles de tar sans lire 200 lignes de man.
 
 ### Système et réseau
 
-**btop** - moniteur système live (CPU, RAM, réseau, disques, process) en TUI. Conf `~/.config/btop/btop.conf`, thème dracula bundlé avec le binaire.
+#### btop
+
+- moniteur système live (CPU, RAM, réseau, disques, process) en TUI. Conf `~/.config/btop/btop.conf`, thème dracula bundlé avec le binaire.
 
 - Clés : lancer `btop` ; dans la TUI : `m` (focus mémoire), `p` (changer de preset de layout), `+`/`-` (intervalle de refresh), `q` ou `Esc` (quitter).
 - Ex. : `btop` quand un build fait chauffer le ventilo, pour voir quel process mange le CPU.
 
-**xh** - client HTTP en ligne de commande lisible (style HTTPie), sortie colorée, JSON par défaut.
+#### xh
+
+- client HTTP en ligne de commande lisible (style HTTPie), sortie colorée, JSON par défaut.
 
 - Clés : `xh GET url`, `xh POST url cle=valeur` (corps JSON), `xh url cle==valeur` (query string), `xh -h url` (headers seuls), `xh :3000/api` (raccourci localhost).
 - Ex. : `xh POST httpbin.org/post name=remy` envoie `{"name":"remy"}` et affiche la réponse colorée.
 
 ### Env, runtimes, dotfiles
 
-**mise** - gère les runtimes (node, python, etc.), variables d'env et tâches, par dossier. Remplace nvm/rbenv/asdf. **Ne lit PAS `.nvmrc`**, utilise `.mise.toml`. Active automatiquement le bon runtime au `cd`.
+#### mise
+
+- gère les runtimes (node, python, etc.), variables d'env et tâches, par dossier. Remplace nvm/rbenv/asdf. **Ne lit PAS `.nvmrc`**, utilise `.mise.toml`. Active automatiquement le bon runtime au `cd`.
 
 - Clés : `mise use node@20` (installe + épingle dans le `.mise.toml` local), `mise use -g node@lts` (version globale), `mise ls` (ce qui est installé/actif), `mise run tache`, `mise exec -- node -v`.
 - Ex. : `mise use node@20` dans un repo écrit `.mise.toml` ; en y entrant, mise bascule sur Node 20 tout seul.
 
-**chezmoi** - gère les dotfiles, versionnés sur git et reproductibles sur une autre machine. Source de vérité = repo privé `remyShift/dotfiles`.
+#### chezmoi
+
+- gère les dotfiles, versionnés sur git et reproductibles sur une autre machine. Source de vérité = repo privé `remyShift/dotfiles`.
 
 - Clés : `chezmoi add ~/.config/fish/config.fish` (suivre un fichier), `chezmoi re-add` (ré-importer les fichiers suivis modifiés en local), `chezmoi diff` (voir l'écart), `chezmoi apply` (appliquer la source vers le home), `chezmoi cd` (aller dans le repo source), `chezmoi update` (pull + apply).
 - Ex. : boucle type après avoir modifié une conf : `chezmoi re-add` puis `chezmoi git -- add -A && chezmoi git -- commit -m "fish: alias" && chezmoi git -- push`.
 
 ### Scripts et démarrage
 
-**gum** - briques pour rendre des scripts shell interactifs (Charm). Le coeur des helpers git maison.
+#### gum
+
+- briques pour rendre des scripts shell interactifs (Charm). Le coeur des helpers git maison.
 
 - Clés : `gum choose a b c` (menu), `gum confirm "texte"` (oui/non, code retour), `gum input --placeholder "…"` (saisie), `gum filter` (filtre fuzzy sur stdin), `gum spin -- commande` (spinner), `gum style` (encadrés stylés).
 - Ex. : `gum confirm "Push ?" && git push` ; `gum choose feat fix chore` pour piocher un type de commit (utilisé par `gcim`).
 
-**splashboard** - splash screen de terminal customisable : widgets (git, météo, système, big text) en config globale et par dossier. Conf dans `~/.splashboard/`, fichier `.splashboard.toml` par projet.
+#### splashboard
+
+- splash screen de terminal customisable : widgets (git, météo, système, big text) en config globale et par dossier. Conf dans `~/.splashboard/`, fichier `.splashboard.toml` par projet.
 
 - Clés : `splashboard init` (snippet à sourcer dans la conf fish, rend le splash aux nouveaux shells et au `cd`), `splashboard install` (onboarding interactif, choisit un template), `splashboard watch` (mode plein écran live), `splashboard catalog` (parcourir widgets et renderers).
 - Ex. : un `.splashboard.toml` à la racine d'un projet affiche son statut git + le dernier déploiement à chaque entrée dans le dossier.
@@ -146,9 +174,3 @@ Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés
 - **`gcim`** - commit : saisit le message dans un champ `gum input`, puis `git commit -m`.
 
 Logique de répartition : **fzf** pour choisir dans une liste (`gco`/`gbd`), **gum** pour le multi-select (`gadd`) et la saisie texte (`gcim`).
-
-## Décisions / outils écartés
-
-- **fzf recouvre gum** pour la sélection fuzzy → bascule `gco` / `gbd`. gum gardé pour le multi-select et l'input.
-- Écartés à l'audit : direnv (couvert par mise), eza (lsd), dust/duf (ncdu), television (fzf), fastfetch/onefetch (splashboard), atuin (pas adopté).
-- **fnox** retiré (un seul secret rare, pas justifié) - à reconsidérer si les secrets deviennent récurrents.
