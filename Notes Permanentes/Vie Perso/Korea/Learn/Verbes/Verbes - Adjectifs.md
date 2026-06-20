@@ -2,14 +2,19 @@
 tags:
   - Korea
 ---
+
 ## Verbes et adjectifs de base
 
 Tu pourras te reposer sur [[Formules de politesse]] pour tout ce qui est de la politesse quotidiennes.
 
 [[이다]] --> Le verbe *être*, pour décrire ou identifier quelque chose à l'aide d'un nom.
+
 [[이-가 아니다]] --> Sa négation : *ne pas être*, pour nier une identité ou une appartenance.
+
 [[있다]] --> Verbe-adjectif à double sens : *avoir* quelque chose, ou *se trouver* quelque part.
+
 [[없다]] --> Sa négation : *ne pas avoir* ou *ne pas se trouver*, à ne pas confondre avec 이/가 아니다.
+
 [[모르다]] --> *Ne pas savoir*, et l'usage de -겠- pour exprimer l'incertitude (잘 모르겠어요).
 
 ---
