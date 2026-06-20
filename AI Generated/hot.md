@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-06-2026 - obsidian-vault : session /improve - hook git anti co-author (tracké chezmoi), dotfiles commités/pushés, backlog harnais déplacé dans `AI Generated/`. Suite de la migration zsh -> fish du matin.
+20-06-2026 - obsidian-vault : deux dashboards splashboard custom (home + project), token GitHub résolu via `secrets.toml`. Même journée : outils shell, /evolve, migration zsh -> fish, /improve (hook anti co-author).
 
 ## Projets actifs
 
@@ -34,8 +34,8 @@ tags: [meta, hot-cache, global]
 
 ### obsidian-vault
 - Derniere session : 20-06-2026
-- Etat : **migration zsh -> fish terminée** (fish = login shell via `chsh` + `/etc/shells` ; `.zshrc`/oh-my-zsh + reliquats zsh supprimés ; reste `.zshenv` = cargo + shims mise). **Session /improve** : hook git global `commit-msg` anti co-author installé + tracké chezmoi (`core.hooksPath` en `~/` portable) ; dotfiles commités/pushés (2 commits, `remyShift/dotfiles`) ; backlog frictions déplacé `Vie Perso` -> `AI Generated/Harnais Backlog.md` (+ refs MAJ, `source: ai`). Harnais déjà durci avant (/evolve appliquée + skill /evolve durci A1/A4, `/wrap` nettoyé). Découverte : outil Bash = zsh figé via snapshot, node par-projet via shims `.zshenv` effectif au prochain snapshot.
-- Prochaine etape : prochaine session, vérifier node 20 dans olis-lab (nouveau snapshot) ; prochain /evolve, A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`, amender+force-push `ecf8fe7`.
+- Etat : **Splashboard** : 2 dashboards perso (home : date figlet animée, countdown Corée, world clock perso, météo, Hacker News ; project : repo animé, git live, mes PRs/reviews GitHub, analytics code). Token github via `~/.splashboard/secrets.toml` (l'env shell est strippé par le sandbox réseau ; doc dans `Code/Setup Shell.md`). **Migration zsh -> fish terminée** (fish = login shell ; reste `.zshenv` = cargo + shims mise). **Harnais durci** : hook git `commit-msg` anti co-author (tracké chezmoi), `/evolve` durci (A1/A4 clos), backlog dans `AI Generated/`. Dotfiles `remyShift/dotfiles`. Découverte : Bash de Claude = zsh figé sans TTY (ne rend pas les TUI/splashboard ; node par-projet via shims effectif au prochain snapshot).
+- Prochaine etape : **Rémy : régénérer le token GitHub** (compromis via screenshot, scope `notifications`) + réécrire `secrets.toml`. Prochaine session : node 20 dans olis-lab. Prochain /evolve : A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : widget PR titre-seul (ReadStore), `yazi`, pimp `starship.toml`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026

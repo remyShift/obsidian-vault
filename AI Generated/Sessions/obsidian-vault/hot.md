@@ -7,26 +7,24 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Dernière mise à jour
-20-06-2026 - Session `/improve` : hook git anti co-author installé + tracké chezmoi, dotfiles commités/pushés (`remyShift/dotfiles`), backlog harnais déplacé dans `AI Generated/`. Suite directe de la migration zsh -> fish du matin (recap unique `20-06-2026_10-58`).
+20-06-2026 - Grosse journée (recap unique `20-06-2026_10-58`) : outils shell + helpers git fzf, passe `/evolve`, migration zsh -> fish, `/improve` (hook anti co-author), et **après-midi : deux dashboards splashboard custom (home + project), token GitHub résolu via `secrets.toml`**.
 
 ## État du projet
-- **Harnais stable et durci.** Migration full fish faite (login shell), zsh réduit à `.zshenv` (cargo + shims mise pour le non-interactif). `/evolve` durci (faux positifs A1/A4 clos), `/improve` opérationnel, backlog frictions désormais dans `AI Generated/Harnais Backlog.md` (`source: ai`).
-- Setup shell final dans `Notes Permanentes/Code/Setup Shell.md` (16 outils + alias/fonctions).
-- Dotfiles 100% reconstructibles : chezmoi (`remyShift/dotfiles`) + Brewfile (`brew bundle`).
+- **Splashboard** : 2 dashboards perso opérationnels. `home` (date figlet animée, citation, countdown Corée, world clock perso, météo Lyon/Séoul, système, Hacker News) et `project` (repo animé, git live, mes PRs/reviews GitHub, analytics code). Thème synthwave_84. Token github via `~/.splashboard/secrets.toml` (seul canal qui marche, l'env est strippé par le sandbox réseau). Documenté dans `Notes Permanentes/Code/Setup Shell.md`.
+- **Harnais stable et durci.** Migration full fish faite (login shell), zsh réduit à `.zshenv` (shims mise). `/evolve` durci (A1/A4 clos), `/improve` opérationnel, hook git anti co-author. Dotfiles 100% reconstructibles : chezmoi (`remyShift/dotfiles`) + Brewfile.
 
 ## Faits récents importants
-- **Hook git global `commit-msg`** strippe `Co-Authored-By: …Claude/Anthropic` + `🤖 Generated with Claude Code`. Tracké chezmoi (`executable_commit-msg`) + `core.hooksPath` en `~/` portable dans `.gitconfig`. Limite : repos husky (hooksPath local) le bypassent -> mémoire = filet ; bodies de PR non couverts (passent par `gh`).
-- **Outil Bash de Claude = `/bin/zsh` figé via snapshot** (`~/.claude/shell-snapshots/`), pas de `cd` vivant. Node par-projet vient des shims mise dans `.zshenv` ; effectif au PROCHAIN snapshot (la session courante peut encore voir node 26 dans olis-lab).
-- Écriture vault : toujours `Write`, jamais `mcp__obsidian__*` (bug latin1). Mention IA dans les commits désormais aussi garantie absente par le hook.
+- Écriture vault : toujours `Write`, jamais `mcp__obsidian__*` (bug latin1). Mention IA dans les commits garantie absente par le hook `commit-msg`.
+- **Bash de Claude = `/bin/zsh` figé sans TTY** (snapshot `~/.claude/shell-snapshots/`) : ne peut PAS rendre les programmes terminal (splashboard, TUI) -> valider via parse TOML / `splashboard catalog` / logs, le visuel passe par les screenshots de Rémy. Node par-projet via shims mise (effectif au prochain snapshot).
+- splashboard : `catalog fetcher|renderer <nom>` fait autorité ; `animated_*` = intros ~2s qui figent ; figlet ansi_shadow ~6 lignes -> row `height = 7` ; `secrets.toml` déjà ignoré git+chezmoi.
 
 ## Décisions actives
-- Backlog harnais dans `AI Generated/` (généré par Claude via capture passive), pas dans Notes Permanentes.
-- Hook déterministe > règle mémoire seule pour le co-author (mémoire reste le filet husky/PR).
-- Faux positif d'audit se reclasse dans le rapport `/evolve` (section `Audit clos`), pas en memory.
-- Pas de force-push pour nettoyer le commit `ecf8fe7` (body amputé par le hook v1, cosmétique) sans accord de Rémy.
+- `secrets.toml` comme canal token github (refus env global / gh stockage fichier, pour la sécurité). Widgets retirés : Claude (keyring macOS), NASA (lent/KO), Notifications + todo_hotspots + Lobsters (place).
+- Backlog harnais dans `AI Generated/`. Faux positif d'audit se reclasse dans le rapport `/evolve` (section `Audit clos`), pas en memory.
+- Pas de force-push sur `ecf8fe7` (body amputé, cosmétique) sans accord.
 
 ## Prochaines étapes
-- Prochaine session : constater que node 20 est bien résolu dans olis-lab (nouveau snapshot).
-- Prochain `/evolve` : confirmer que A1/A4 ne remontent plus.
-- Reliquat 19/06 (Rémy) : `sudo rm` python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
-- Optionnel : `yazi`, pimper `starship.toml` Dracula, promouvoir `Notes de Lecture/Code/` (A3), ou amender+force-push `ecf8fe7`.
+- **Rémy : régénérer le token GitHub** (compromis via screenshot) avec scope `notifications`, puis réécrire `secrets.toml`.
+- Prochaine session : constater node 20 dans olis-lab (nouveau snapshot). Prochain `/evolve` : A1/A4 ne remontent plus.
+- Reliquats 19/06 (Rémy) : `sudo rm` python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
+- Optionnel : widget PR titre-seul via ReadStore ; `yazi` ; pimper `starship.toml` Dracula ; A3 (`Notes de Lecture/Code/`).
