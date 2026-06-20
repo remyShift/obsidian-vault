@@ -1,9 +1,3 @@
----
-source: ai
-tags:
-  - Perso
----
-
 Backlog des frictions du harnais Claude (CLAUDE.md, skills, commandes, hooks, structure du vault). Alimenté **automatiquement** en fin de session par la capture passive (règle dans le CLAUDE.md du vault), et traité manuellement par `/improve`.
 
 Format des entrées (append-only, ne pas réécrire les lignes existantes) :
