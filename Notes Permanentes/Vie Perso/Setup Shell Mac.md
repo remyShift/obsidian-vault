@@ -17,7 +17,7 @@ Voir aussi [[Workflow Claude + Obsidian]].
 
 ## Stack installée
 
-Note transverse : `fd` / `rg` et `xh` ne sont **pas** aliasés sur `find` / `grep` / `curl` (commandes en plus, pas remplacements). `bat`, `lsd` et `cd` (→ zoxide) le sont.
+Note transverse : `rg` et `xh` se tapent tels quels (pas d'alias sur `grep` / `curl`). En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés (détail dans **Alias et fonctions maison** plus bas).
 
 ### Terminal et shell
 
@@ -100,6 +100,36 @@ Note transverse : `fd` / `rg` et `xh` ne sont **pas** aliasés sur `find` / `gre
 - `config.fish` + `conf.d/aliases.fish` + `conf.d/gum.fish`.
 - **fzf** câblé : `Ctrl+R` (historique) et `Ctrl+T` (fichiers) avec previews bat/lsd. `Alt+C` (saut de dossier) dormant sur Mac car Ghostty réserve Option aux accents → zoxide (`cd`) couvre le besoin.
 - **Helpers git** : `gco` / `gbd` basculés en **fzf** (avec preview du log) ; `gadd` (multi-select) et `gcim` (input) restent en **gum**.
+
+## Alias et fonctions maison
+
+Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés automatiquement (tout `.fish` de `conf.d/` est sourcé par fish).
+
+### Alias
+
+| Alias | Étend vers | Note |
+|-------|-----------|------|
+| `cat` | `bat --plain --paging=never` | rend le comportement de cat (pas de pager, pas de déco) |
+| `ls` | `lsd` | |
+| `l` | `lsd -l` | |
+| `la` | `lsd -a` | |
+| `lla` | `lsd -la` | |
+| `lt` | `lsd --tree` | |
+| `find` | `fd` | ⚠ fd n'a PAS la syntaxe de find, c'est juste le nom qui est repris |
+| `code` | `zed` | ouvre dans Zed |
+| `cd` | `zoxide` | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
+| `gcd` *(abbr)* | `git checkout develop` | abréviation : s'étend en toutes lettres quand tu tapes |
+
+`rg` et `xh` ne sont volontairement pas aliasés, tu les tapes tels quels.
+
+### Fonctions git interactives
+
+- **`gco`** - switch de branche : liste les branches locales dans **fzf** avec preview du `git log -20`, puis `git switch`.
+- **`gbd`** - supprime une branche locale : même sélecteur **fzf** + preview, puis `git branch -d`.
+- **`gadd`** - stage des fichiers : multi-sélection **gum** sur `git status --short`, puis `git add`.
+- **`gcim`** - commit : saisit le message dans un champ `gum input`, puis `git commit -m`.
+
+Logique de répartition : **fzf** pour choisir dans une liste (`gco`/`gbd`), **gum** pour le multi-select (`gadd`) et la saisie texte (`gcim`).
 
 ## Décisions / outils écartés
 
