@@ -6,7 +6,10 @@ Le "code" désigne le texte écrit dans un [[Langages de Programmations]]. Ce te
 
 Un des enjeux majeurs du code pour assurer une maintienbilité de notre code, s'assurer de sa sécurité, de sa performance et si il marche ce sont les [[Tests]]. Comprendre l'[[Infra|infrastructure]] sur laquelle tourne ce code est une compétence qui devient incontournable à mesure qu'on prend en charge des projets plus complets.
 
-Dans cette idée de t'aider à être meilleur l'[[Notes Permanentes/Code/Agilité/Agilité|Agilité]] et ses valeurs & principes sont essentiels pour optimiser la création / développement d'un produit. 
+Dans cette idée de t'aider à être meilleur l'[[Notes Permanentes/Code/Agilité/Agilité|Agilité]] et ses valeurs & principes sont essentiels pour optimiser la création / développement d'un produit.
 
-Un bon développeur est un développeur à jour et pour être à jour il faut faire de [[La veille]] et ne pas s’arrêter d’être curieux et ne pas se contenter de juste son travail et ses technos.
+Un bon développeur est un développeur à jour et pour être à jour il faut faire de [[La veille]] et ne pas s'arrêter d'être curieux et ne pas se contenter de juste son travail et ses technos.
+
 Pour suivre ta progression pense à faire régulièrement des exos / katas ou mini projets pour savoir où te situer techniquement.
+
+J'ai aussi customiser tout mon shell tu pourras retrouver dans [[Setup Shell]] tout le setup !

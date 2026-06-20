@@ -69,7 +69,7 @@ Lisible, portable, efficace et performant, et joli.
 
 ## À faire
 
-Setup réalisé les 19-20 juin 2026, voir [[Setup Shell Mac]] pour l'état final (et bien au-delà du minimal : rg, fzf, xh, tldr, btop + câblage fish).
+Setup réalisé les 19-20 juin 2026, voir [[Setup Shell]] pour l'état final (et bien au-delà du minimal : rg, fzf, xh, tldr, btop + câblage fish).
 
 - [x] Confirmer les noms exacts de "Splash Board" et "Fnox" (= splashboard et fnox ; fnox finalement retiré, un seul secret rare)
 - [x] Setup minimal : fish + starship + bat + lsd + zoxide + fd
