@@ -1,19 +1,21 @@
 ---
-tags: [Perso, setup]
-type: reference
-date: 2026-06-20
+tags:
+  - Perso
 ---
 
-# Setup Shell Mac
+État final de mon environnement shell macOS, suite au talk [[Pimp my shell (Julien Wittouck)]] (Tech'Work).
 
-État final de mon environnement shell macOS, monté les 19-20 juin 2026 dans la foulée du talk [[Pimp my shell (Julien Wittouck)]] (Tech'Work). Tout est déclaré au Brewfile et versionné : `brew bundle` reconstruit l'environnement d'un coup. Critère portable = rebuild à l'identique sur une autre machine (utile pour le stage long à Séoul). Voir aussi [[Workflow Claude + Obsidian]].
+Tout est déclaré au Brewfile et versionné : `brew bundle` reconstruit l'environnement d'un coup. Critère portable = rebuild à l'identique sur une autre machine.
+
+Voir aussi [[Workflow Claude + Obsidian]].
 
 ## Principes
 
 - Rien en `curl | sh`. Tout passe par Homebrew, déclaré dans le **Brewfile** (édité à la main, jamais `brew bundle dump --force`).
-- Dotfiles sous **chezmoi** → repo privé `remyShift/dotfiles`. `chezmoi re-add` capture un changement local, push git pour synchroniser.
+- Dotfiles sous **chezmoi** → repo privé `remyShift/dotfiles`
+	- `chezmoi re-add` capture un changement local, push git pour synchroniser.
 
-## Stack installée (rôle)
+## Stack installée
 
 | Outil | Rôle |
 |-------|------|
@@ -47,8 +49,3 @@ date: 2026-06-20
 - **fzf recouvre gum** pour la sélection fuzzy → bascule `gco` / `gbd`. gum gardé pour le multi-select et l'input.
 - Écartés à l'audit : direnv (couvert par mise), eza (lsd), dust/duf (ncdu), television (fzf), fastfetch/onefetch (splashboard), atuin (pas adopté).
 - **fnox** retiré (un seul secret rare, pas justifié) - à reconsidérer si les secrets deviennent récurrents.
-
-## Sur la table
-
-- `yazi` (gestionnaire de fichiers TUI, à câbler avec zoxide/fzf).
-- Pimper `starship.toml` (thème Dracula, icônes par langage).
