@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-06-2026 — obsidian-vault : extension du setup shell (+rg/fzf/xh/tldr/btop, helpers git gco/gbd basculés en fzf), tout versionné chezmoi.
+20-06-2026 — obsidian-vault : passe /evolve appliquée (memory olis-lab rafraîchis, note Setup Shell créée + détaillée), skill /evolve durci contre les faux positifs d'audit.
 
 ## Projets actifs
 
@@ -34,8 +34,8 @@ tags: [meta, hot-cache, global]
 
 ### obsidian-vault
 - Derniere session : 20-06-2026
-- Etat : **setup shell Mac complet + etendu**. Base 19/06 (Ghostty + fish + mise + starship + bat/lsd/zoxide/fd + gum + splashboard, chezmoi → `remyShift/dotfiles`, ~3,5 Go nettoyes). Couche 20/06 : `rg` (contenu), `fzf` (cable fish Ctrl+R/Ctrl+T), `xh` (HTTP), `tldr`, `btop` (moniteur Dracula) ; helpers git `gco`/`gbd` basculés gum→fzf (preview log), `gadd`/`gcim` restent gum. Tout au Brewfile. Harnais vault stable : `vault-rag` + `/coach` + `/improve`.
-- Prochaine etape : **/evolve → note "Setup Shell Mac" doit integrer la session 20/06** (outils + cablage fzf + bascule helpers git + btop.conf), pas que le recap 19/06. Reste sudo python.org + rotation mdp Mongo Atlas + suppr backup `~/shell-migration-backup-*` ; tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`.
+- Etat : **setup shell Mac complet** (état final dans `Notes Permanentes/Code/Setup Shell.md` : 16 outils détaillés + alias/fonctions maison) et **harnais vault durci**. Passe /evolve appliquée : memory olis-lab rafraîchis (chantiers 20-06, conventions Payload), build traps (+importMap, +Tailwind @source), note Setup Shell créée. Skill /evolve durci (4 patches) pour que les faux positifs d'audit (A1 ts-seed, A4 ingredient-manager) cessent de revenir : reclassés via la section `Audit clos` du rapport, pas via memory. `/wrap` nettoyé de ses cadratins.
+- Prochaine etape : valider au prochain /evolve que A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : bloc PATH/env dans note Setup Shell, `yazi`, pimp `starship.toml`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026

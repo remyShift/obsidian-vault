@@ -7,25 +7,24 @@ tags: [meta, hot-cache]
 # Hot Cache — obsidian-vault
 
 ## Dernière mise à jour
-20-06-2026 — Extension du setup shell : +5 outils CLI (ripgrep, fzf, xh, tealdeer, btop) + bascule des helpers git `gco`/`gbd` de gum vers fzf. Recap dédié `20-06-2026_10-58`. Suite directe du setup du 19/06.
+20-06-2026 — Passe `/evolve` complète + appliquée (memory olis-lab rafraîchis, note Setup Shell créée), durcissement du skill evolve contre les faux positifs d'audit, et enrichissement détaillé de la note Setup Shell. Même journée que le setup shell du matin (recap unique `20-06-2026_10-58`).
 
 ## État du projet
-- **Setup shell** étendu et stable. Stack du 19/06 (Ghostty/fish/mise/starship/bat/lsd/zoxide/fd/gum/splashboard/chezmoi) + couche du 20/06 : `rg` (contenu), `fzf` (fuzzy, câblé fish Ctrl+R/Ctrl+T avec previews bat/lsd), `xh` (HTTP lisible), `tldr` (aide par l'exemple), `btop` (moniteur live Dracula).
-- **Helpers git fish** : `gco`/`gbd` en fzf avec preview du log ; `gadd`/`gcim` restent en gum.
-- Dotfiles sous chezmoi → repo privé `remyShift/dotfiles`, tout dans le Brewfile (env reconstructible d'un `brew bundle`).
-- Harnais vault stable : `vault-rag` (sémantique local, ~1003 docs) + `/coach` + `/improve`. mgrep retiré (redondant + SaaS).
+- **Setup shell** : état final consigné dans `Notes Permanentes/Code/Setup Shell.md` (renommée/déplacée par Rémy, ex « Setup Shell Mac » dans Vie Perso). 16 outils détaillés (commandes + exemples) + section « Alias et fonctions maison » tirée de la vraie conf fish (`aliases.fish` + `gum.fish`).
+- **Harnais vault** stable et durci : `vault-rag` (sémantique local ~1003 docs) + `/coach` + `/improve` + `/evolve` (audit renforcé) + `/wrap` (cadratins nettoyés).
+- Dotfiles sous chezmoi → repo privé `remyShift/dotfiles`, tout au Brewfile.
 
 ## Faits récents importants
-- Écriture vault : toujours `Write` (filesystem), jamais `mcp__obsidian__*` (bug encodage latin1).
-- **Jamais de `Co-Authored-By`/mention IA dans les commits** (4 commits chezmoi propres cette session).
-- `rg`/`xh` non aliasés sur grep/curl (commandes en plus, pas remplacements). Brewfile édité à la main (jamais `brew bundle dump --force`).
-- Alt+C fzf dormant sur Mac (Ghostty garde Option pour les accents) ; zoxide couvre le besoin. btop : thème dracula bundlé (pas de download).
+- Écriture vault : toujours `Write` (filesystem), jamais `mcp__obsidian__*` (bug latin1).
+- **Jamais de `Co-Authored-By`/mention IA** dans les commits.
+- **Ne pas tout mettre en memory** (feedback Rémy) : un faux positif d'audit se reclasse dans le rapport `/evolve` (section `Audit clos`), pas dans un memory. Les rapports SONT le registre d'état.
+- Alias réels : `find`→fd et `cat`→bat SONT aliasés ; `rg`/`xh` non (commandes en plus).
 
 ## Décisions actives
-- fzf recouvre gum pour la sélection fuzzy → `gco`/`gbd` basculés ; gum gardé pour multi-select (`gadd`) et input (`gcim`).
-- Écartés à l'audit : direnv (mise), eza (lsd), dust/duf (ncdu), television (fzf), fastfetch/onefetch (splashboard). Sur la table : `yazi`, pimp `starship.toml`, `atuin`.
+- Skill `/evolve` durci (4 patches `~/.claude/commands/evolve.md`) : Phase 1a relit les items `Audit clos` du dernier rapport (par sujet, pas par ID), Axe C croise les memory avant de crier « travail perdu ». À valider au prochain run.
+- A1 (docs ts-seed supprimés volontairement) et A4 (notes ingredient-manager dans `Scientific/Rating Tool/`) = faux positifs clos définitivement.
 
 ## Prochaines étapes
-- **/evolve : la note "Setup Shell Mac" doit intégrer CETTE session** (outils + câblage fzf + bascule helpers git + `btop.conf`), pas seulement le recap du 19/06. Refléter l'état FINAL du setup.
-- Reliquat 19/06 (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`.
-- Optionnel shell : `yazi` (+ câblage zoxide/fzf), ou pimper `starship.toml` Dracula avec icônes par langage.
+- Au prochain `/evolve` : confirmer que A1/A4 ne remontent plus.
+- Optionnel : ajouter le bloc PATH/env de `config.fish` à la note Setup Shell ; promouvoir `Notes de Lecture/Code/` (audit A3 manuel).
+- Optionnel shell : `yazi` (+ câblage zoxide/fzf) ou pimper `starship.toml` Dracula.
