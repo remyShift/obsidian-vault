@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-06-2026 — obsidian-vault : passe /evolve appliquée (memory olis-lab rafraîchis, note Setup Shell créée + détaillée), skill /evolve durci contre les faux positifs d'audit.
+20-06-2026 — obsidian-vault : migration complète zsh → fish (fish en login shell, pnpm câblé, `.zshrc`/oh-my-zsh supprimés) + passe /evolve appliquée + skill /evolve durci.
 
 ## Projets actifs
 
@@ -34,8 +34,8 @@ tags: [meta, hot-cache, global]
 
 ### obsidian-vault
 - Derniere session : 20-06-2026
-- Etat : **setup shell Mac complet** (état final dans `Notes Permanentes/Code/Setup Shell.md` : 16 outils détaillés + alias/fonctions maison) et **harnais vault durci**. Passe /evolve appliquée : memory olis-lab rafraîchis (chantiers 20-06, conventions Payload), build traps (+importMap, +Tailwind @source), note Setup Shell créée. Skill /evolve durci (4 patches) pour que les faux positifs d'audit (A1 ts-seed, A4 ingredient-manager) cessent de revenir : reclassés via la section `Audit clos` du rapport, pas via memory. `/wrap` nettoyé de ses cadratins.
-- Prochaine etape : valider au prochain /evolve que A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : bloc PATH/env dans note Setup Shell, `yazi`, pimp `starship.toml`.
+- Etat : **migration zsh → fish terminée** (fish = login shell via `chsh` + `/etc/shells`, pnpm câblé dans `config.fish`, `.zshrc`/oh-my-zsh + tous reliquats zsh supprimés ; reste `.zshenv` = cargo + shims mise). Effet de bord : 2 pièges build olis-lab résolus (Node 20 sans `nvm use`, `rm -i` qui hangeait). Setup shell final dans `Notes Permanentes/Code/Setup Shell.md`. **Harnais vault durci** : /evolve appliquée (memory olis-lab, build traps, note Setup Shell) + skill /evolve durci contre les faux positifs d'audit (A1/A4 reclassés via `Audit clos`, pas via memory) + `/wrap` nettoyé.
+- Prochaine etape : **commiter/pusher les dotfiles** (`chezmoi git -- add -A && commit && push`, 3 changements). Valider au prochain /evolve que A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : `yazi`, pimp `starship.toml`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026
