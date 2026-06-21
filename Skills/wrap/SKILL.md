@@ -1,6 +1,6 @@
 ---
 name: wrap
-description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at AI Generated/Conversations/DD-MM-YYYY - Title.md via MCP. Always use this skill when the user types "/wrap", without exception.
+description: Triggered exclusively by the command "/wrap". Generates a French synthesis of the current conversation and writes or updates it directly into the Obsidian vault at AI Generated/Conversations/DD-MM-YYYY - Title.md via MCP, then scans the session for Claude-harness frictions and appends them to AI Generated/Harnais Backlog.md. Always use this skill when the user types "/wrap", without exception.
 ---
 
 # Wrap Skill
@@ -67,7 +67,27 @@ Include only if relevant:
 - If updating an existing file, the entry should already exist - skip this step
 - Rewrite the sommaire with the updated table
 
-### Step 6 - Confirm
+### Step 6 - Capture harness frictions
+`/wrap` is a session-closure signal, so run the global passive friction-capture pass here, deterministically.
+
+Scan the conversation for real Claude-harness frictions:
+- repeated workarounds (same action done 2+ times)
+- questions the context/tools could not answer
+- skills/commands that failed or gave an unsatisfying result
+- searches that took too many round-trips
+
+For each **real** friction, **append** one line (never rewrite the file) to:
+`/Users/remy_mac/Desktop/everything/Obsidian Vault/AI Generated/Harnais Backlog.md`
+
+Under the `## Frictions` section, most recent at the bottom, exact format:
+`- [ ] [observation] description courte - DD-MM-YYYY`
+- Tag is `[observation]` or `[friction]`, description in French, date = today.
+- **Dedup**: before appending, read the existing `## Frictions` lines and skip any friction already logged (same root cause), so a `/wrap` after the passive end-of-session capture does not double-log.
+- This is a mechanical draft only - never fix the harness here (that stays manual via `/improve`).
+
+Then show, in one line, what was appended (or "rien à signaler"). If writing to the vault is blocked, print the friction line(s) so Rémy can capture them via `/improve ajouter`.
+
+### Step 7 - Confirm
 Tell the user whether the file was created or updated, with its exact name.
 
 ---
@@ -113,3 +133,4 @@ source: ai
 - When updating, always rewrite the full note - never just append
 - Never use the em-dash (long dash) in filenames, titles, or content; always use the simple hyphen '-'
 - Never reference or link an obsidian note in the wrap summary or in any AI Generated/ notes
+- The Harnais Backlog is append-only: never rewrite or reorder existing lines, only add new ones at the bottom of `## Frictions`, and dedup against what is already there

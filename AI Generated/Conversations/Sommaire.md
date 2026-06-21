@@ -46,6 +46,7 @@ Synthèses de conversations générées via `/wrap`.
 | 17-06-2026 | [[AI Generated/Conversations/17-06-2026 - Posts LinkedIn planifiés et post Tech'Work]]        |
 | 19-06-2026 | [[AI Generated/Conversations/19-06-2026 - Notes de veille Tech'Work]]                         |
 | 19-06-2026 | [[AI Generated/Conversations/19-06-2026 - Message équipe sur le talk lecture de code]]        |
+| 21-06-2026 | [[AI Generated/Conversations/21-06-2026 - Message a Julien Wittouck sur mon setup shell]]     |
 
 
 ---

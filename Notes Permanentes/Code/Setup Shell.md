@@ -134,9 +134,13 @@ En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés 
 
 #### splashboard
 
-- splash screen de terminal customisable. Conf dans `~/.splashboard/`, thème `synthwave_84` dans `settings.toml`. Deux dashboards perso versionnés sous chezmoi : `home.dashboard.toml` (à chaque nouveau shell + cd : date figlet animée, citation, countdown Corée, world clock perso Montréal/Brésil/Portugal/Paris/Séoul, météo Lyon/Séoul, calendrier, système, Hacker News) et `project.dashboard.toml` (dans un repo git : nom du repo animé, git live status/commits/tag, mes PRs + reviews GitHub, analytics code LOC/commentaires/fichiers/churn/TODOs).
+- splash screen de terminal customisable. Conf dans `~/.splashboard/`, thème `synthwave_84` dans `settings.toml`. Deux dashboards perso versionnés sous chezmoi : `home.dashboard.toml` (date figlet, citation, countdown Corée, world clock perso Montréal/Brésil/Portugal/Paris/Séoul, météo Lyon/Séoul, calendrier, système, Hacker News) et `project.dashboard.toml` (dans un repo git : nom du repo, git live status/commits/tag, mes PRs + reviews GitHub, analytics code LOC/commentaires/fichiers/churn/TODOs).
 
-- Clés : `splashboard catalog fetcher|renderer <nom>` (doc + options exactes d'un widget, fait autorité), `splashboard watch` (plein écran live), `splashboard cache list|clear` (cache disque, TTL par widget). Hook fish : fonction `__splashboard_run` dans `config.fish` (au démarrage via `fish_greeting`, à chaque cd via `--on-variable PWD`).
+- **Tout statique, par choix.** Dès qu'un seul widget est animé, splashboard gèle le terminal pendant une `ANIMATION_WINDOW` de **2s codée en dur** (aucun réglage pour la raccourcir ; `duration_ms` ne change que la vitesse de l'anim, pas le blocage). Donc hero en `text_ascii` (figlet `ansi_shadow` statique) et citation en `text_plain` : rendu instantané, on récupère la main tout de suite.
+- **Citation mono-ligne.** `random_quote` sort la citation d'un seul tenant et splashboard n'a aucun word-wrap (grep `wrap` sur tout le catalog = vide) : pas moyen de la passer sur 2 lignes. Affichée pleine largeur (`width = { fill = 1 }`) + `align = "center"`.
+- **Hook cd en `--on-cd`.** splashboard ne reconnaît un repo qu'à sa **racine** ; `splashboard` nu lancé dans un sous-dossier retombe sur le dashboard home (parasite). Avec `--on-cd` : splash project à la racine d'un repo, **silencieux** dans les sous-dossiers et hors-repo. Le splash home n'apparaît plus qu'au lancement d'un shell (via `fish_greeting`).
+
+- Clés : `splashboard catalog fetcher|renderer <nom>` (doc + options exactes d'un widget, fait autorité), `splashboard watch` (plein écran live), `splashboard cache list|clear` (cache disque, TTL par widget). Hook fish : `__splashboard_run` dans `config.fish` (démarrage via `fish_greeting`, cd via `--on-variable PWD` + `--on-cd`).
 
 ## Câblage fish
 

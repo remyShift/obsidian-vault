@@ -1,5 +1,5 @@
 ---
-updated: 20-06-2026
+updated: 21-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-20-06-2026 - obsidian-vault : deux dashboards splashboard custom (home + project), token GitHub résolu via `secrets.toml`. Même journée : outils shell, /evolve, migration zsh -> fish, /improve (hook anti co-author).
+21-06-2026 - obsidian-vault : polissage splashboard (dashboards 100% statiques pour tuer le blocage 2s, citation en entier mono-ligne, hook cd `--on-cd`), note Setup Shell.md + chezmoi push.
 
 ## Projets actifs
 
@@ -33,9 +33,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
 ### obsidian-vault
-- Derniere session : 20-06-2026
-- Etat : **Splashboard** : 2 dashboards perso (home : date figlet animée, countdown Corée, world clock perso, météo, Hacker News ; project : repo animé, git live, mes PRs/reviews GitHub, analytics code). Token github via `~/.splashboard/secrets.toml` (l'env shell est strippé par le sandbox réseau ; doc dans `Code/Setup Shell.md`). **Migration zsh -> fish terminée** (fish = login shell ; reste `.zshenv` = cargo + shims mise). **Harnais durci** : hook git `commit-msg` anti co-author (tracké chezmoi), `/evolve` durci (A1/A4 clos), backlog dans `AI Generated/`. Dotfiles `remyShift/dotfiles`. Découverte : Bash de Claude = zsh figé sans TTY (ne rend pas les TUI/splashboard ; node par-projet via shims effectif au prochain snapshot).
-- Prochaine etape : **Rémy : régénérer le token GitHub** (compromis via screenshot, scope `notifications`) + réécrire `secrets.toml`. Prochaine session : node 20 dans olis-lab. Prochain /evolve : A1/A4 ne remontent plus. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : widget PR titre-seul (ReadStore), `yazi`, pimp `starship.toml`.
+- Derniere session : 21-06-2026
+- Etat : **Splashboard stabilisé, tout statique**. 2 dashboards perso (home : date figlet, citation, countdown Corée, world clock, météo, calendrier, système, Hacker News ; project : nom repo, git live, mes PRs/reviews GitHub, analytics code). Hero `text_ascii` figlet `ansi_shadow` + citation `text_plain` centrée pleine largeur : rendu instantané car la fenêtre `ANIMATION_WINDOW` de 2s est codée en dur (tout widget animé gèle le terminal 2s, non réglable). Hook cd en `--on-cd` (splash project à la racine d'un repo, silencieux dans les sous-dossiers). `random_quote` mono-ligne (pas de word-wrap dans splashboard). Token github via `~/.splashboard/secrets.toml`. Doc `Code/Setup Shell.md`. Dotfiles `remyShift/dotfiles` (chezmoi). Découverte récurrente : Bash de Claude = zsh figé sans TTY (ne rend pas les TUI).
+- Prochaine etape : **Rémy : régénérer le token GitHub** (compromis via screenshot, scope `notifications`) + réécrire `secrets.toml`. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : splash home hors-repo (fish custom), widget PR titre-seul (ReadStore), `yazi`, pimp `starship.toml`.
 
 ### lyoncraft-2026
 - Derniere session : 12-05-2026

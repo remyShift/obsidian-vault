@@ -80,6 +80,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/19-06-2026_18-17]]         |
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/19-06-2026_22-01]]         |
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/20-06-2026_10-58]]         |
+| obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/21-06-2026_18-02]]         |
 
 ## Hot notes :
 
