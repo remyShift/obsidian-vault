@@ -10,23 +10,23 @@ Il existe **deux systèmes de nombres** en coréen. Ils ne sont pas interchangea
 
 Originaires du chinois. Utilisés pour compter des choses "abstraites" ou officielles.
 
-| Chiffre | Hangul | Romanisation |
-|---------|--------|--------------|
-| 0 | 영 / 공 | yeong / gong |
-| 1 | 일 | il |
-| 2 | 이 | i |
-| 3 | 삼 | sam |
-| 4 | 사 | sa |
-| 5 | 오 | o |
-| 6 | 육 | yuk |
-| 7 | 칠 | chil |
-| 8 | 팔 | pal |
-| 9 | 구 | gu |
-| 10 | 십 | sip |
-| 100 | 백 | baek |
-| 1000 | 천 | cheon |
-| 10 000 | 만 | man |
-| 100 000 000 | 억 | eok |
+| Chiffre     | Hangul |
+| ----------- | ------ |
+| 0           | 영 / 공  |
+| 1           | 일      |
+| 2           | 이      |
+| 3           | 삼      |
+| 4           | 사      |
+| 5           | 오      |
+| 6           | 육      |
+| 7           | 칠      |
+| 8           | 팔      |
+| 9           | 구      |
+| 10          | 십      |
+| 100         | 백      |
+| 1000        | 천      |
+| 10 000      | 만      |
+| 100 000 000 | 억      |
 
 **Formation des nombres composés :**
 - 11 = 십일 (sip-il)
@@ -68,26 +68,26 @@ Originaires du chinois. Utilisés pour compter des choses "abstraites" ou offici
 
 Le système "original" coréen. Utilisé pour compter des objets concrets et les heures.
 
-| Chiffre | Hangul | Romanisation |
-|---------|--------|--------------|
-| 1 | 하나 | hana |
-| 2 | 둘 | dul |
-| 3 | 셋 | set |
-| 4 | 넷 | net |
-| 5 | 다섯 | daseot |
-| 6 | 여섯 | yeoseot |
-| 7 | 일곱 | ilgop |
-| 8 | 여덟 | yeodeol |
-| 9 | 아홉 | ahop |
-| 10 | 열 | yeol |
-| 20 | 스물 | seumul |
-| 30 | 서른 | seoreun |
-| 40 | 마흔 | maheun |
-| 50 | 쉰 | swin |
-| 60 | 예순 | yesun |
-| 70 | 일흔 | ilheun |
-| 80 | 여든 | yeodeun |
-| 90 | 아흔 | aheun |
+| Chiffre | Hangul |
+| ------- | ------ |
+| 1       | 하나     |
+| 2       | 둘      |
+| 3       | 셋      |
+| 4       | 넷      |
+| 5       | 다섯     |
+| 6       | 여섯     |
+| 7       | 일곱     |
+| 8       | 여덟     |
+| 9       | 아홉     |
+| 10      | 열      |
+| 20      | 스물     |
+| 30      | 서른     |
+| 40      | 마흔     |
+| 50      | 쉰      |
+| 60      | 예순     |
+| 70      | 일흔     |
+| 80      | 여든     |
+| 90      | 아흔     |
 
 > Les natifs ne vont que jusqu'à 99. Au-delà, on passe aux sino-coréens.
 
