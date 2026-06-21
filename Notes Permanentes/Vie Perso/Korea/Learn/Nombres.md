@@ -29,8 +29,8 @@ Originaires du chinois. Utilisés pour compter des choses "abstraites" ou offici
 | 100 000 000 | 억      |
 
 **Formation des nombres composés :**
-- 11 = 십일 (sip-il)
-- 25 = 이십오 (i-sip-o)
+- 11 = 십일
+- 25 = 이십오
 - 200 = 이백, 300 = 삼백...
 - 15 000 = 만 오천
 
