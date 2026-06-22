@@ -15,3 +15,5 @@ Les [[Quotes|citations que je garde]] ne sont pas de la décoration, elles résu
 Le [[Workflow Claude + Obsidian|workflow Claude + Obsidian]] documente comment j'ai organisé mon système de pensée externe, entre IA et prise de notes.
 
 Les [[Daily/Daily Notes Intro|daily notes]] sont le journal de bord quotidien, ce qui s'est passé, ce que j'ai remarqué, ce qui doit avancer.
+
+Pour essayer de se retonifier et perdre du poids [[Routine Sport Full Body]].
