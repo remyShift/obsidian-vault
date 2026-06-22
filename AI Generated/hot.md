@@ -1,5 +1,5 @@
 ---
-updated: 21-06-2026
+updated: 22-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-21-06-2026 - obsidian-vault : polissage splashboard (dashboards 100% statiques pour tuer le blocage 2s, citation en entier mono-ligne, hook cd `--on-cd`), note Setup Shell.md + chezmoi push.
+22-06-2026 - olis-lab : read navbar CMS dans apps/web (Next) + infra PostHog server-side reutilisable (eval locale, gate serveur navbar + announcement bar), commite sur `feat/next-read-payload-navbar`.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 19-06-2026
-- Etat : **`feat/cms-test-cart-hook`** : tests d'intégration `computeCartSnapshot` réparés (19/19 verts, tsc clean), fix dans `apps/cms/tests/factories/product.ts` (produit bilingue + `legacyId` via faker) + assertion ajustée dans le spec ; **pas encore commité**, hook/schéma non touchés (= spec). **`feat/read-announcement-bar-next` (PR #1817)** : rename `onDismiss`→`handleDismiss` commité, merge `BLOCKED` côté GitHub malgré « c'est merge » de Rémy → à reconfirmer. **`feat/navbar-global` (PR #1822, OPEN)** : navbar en global Payload, siblingData typé via génériques + `TNavItem`, validateur scindé, `NAVBAR_STALE_TIME` 24h. **Footer global (plan validé, pas codé)**, 2 questions OUVERTES. **`fix/payload-slugs-generation`** : slugify + migration `20260617_100000_fix_slugs.ts`, 27 redirects, Misaj non auto. Pièges : `apps/cms` consomme `shared` via dist buildé → rebuild `shared` avant tests locaux ; Node 20 ; brancher depuis `origin/develop`. Convention : `handleX` (fonction) vs `onX` (prop). Hook cart : snapshot écrit seulement sur update d'un produit publié sans `skipCartSnapshot`.
-- Prochaine etape : `feat/cms-test-cart-hook` décider de committer les fixes (+ optionnel `dependsOn:["^build"]` sur tâche turbo `test`). #1817 confirmer statut + résoudre thread Kyle + merger. #1822 push + threads + merge. Footer = attendre 2 décisions review. Slugs = redirects CloudFront AVANT migration → migration prod → sync legacy (26 produits) → re-save Misaj.
+- Derniere session : 22-06-2026
+- Etat : **`feat/next-read-payload-navbar`** (commitée, branche du jour) : read navbar CMS dans **apps/web (Next)** gaté par `dev_payload_navbar` (fetch server-side `getNavbar` + gate) ; **infra PostHog server-side reutilisable** `apps/web/lib/posthog-server.ts` (`getServerFeatureFlag`, posthog-node eval LOCALE, `distinct_id` du cookie `ph_*`, `null` = defere au client) ; meme gate serveur sur l'announcement bar ; module partage `apps/web/lib/feature-flags.ts` (`TFeatureFlag` + `LOCAL_DEV_MOCKS`). Commits `df469abf9`/`975c1a550`/`a6b84e945`/`d73d28c2e`. **Working tree bascule sur `feat/cms-test-cart-hook`** (tests `computeCartSnapshot` 19/19 verts). Pieges : posthog-node pinné **`^4.18.0`** (v5 exige Node >=20.20, repo 20.19.5) ; pnpm refuse Node 21 → forcer node mise en PATH ; cle d'eval locale = **feature flags secure key `phs_`** (Project Settings → Feature Flags) dans env serveur **`NEXT_POSTHOG_PERSONAL_API_KEY`**, host EU `eu.i.posthog.com` ; config PostHog client cookieless `on_reject` + opt-out → cookie `ph_*` seulement pour consentis. Reste : Footer global (plan validé, pas codé), `fix/payload-slugs-generation` (slugify + migration + 27 redirects).
+- Prochaine etape : créer la secure key `phs_` côté PostHog + env Amplify stage/prod ; trancher `sendFeatureFlagEvents` (commenté → défaut true, events sans flush peu fiables en serverless) ; `build` + vérif live (CMS :4000, navbar publié, cookie consenti) ; push `feat/next-read-payload-navbar` + PR. Footer = attendre 2 décisions review. Slugs = redirects CloudFront AVANT migration prod.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
