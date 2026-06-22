@@ -59,7 +59,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/27-05-2026_12-03]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/28-05-2026_11-04]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/29-05-2026_11-47]]               |
-| ts-seed                | [[AI Generated/Sessions/ts-seed/29-05-2026_23-03]]                |
+| ts-seed                | [[29-05-2026_23-03]]                |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/01-06-2026_12-07]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/02-06-2026_18-10]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/03-06-2026_11-23]]               |
@@ -93,5 +93,5 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | lyoncraft-2026  | [[AI Generated/Sessions/lyoncraft-2026/hot]]  |
 | piqure          | [[AI Generated/Sessions/piqure/hot]]          |
 | seed4j          | [[AI Generated/Sessions/seed4j/hot]]          |
-| ts-seed         | [[AI Generated/Sessions/ts-seed/hot]]         |
+| ts-seed         | [[AI Generated/Sessions/seed4t/hot]]         |
 | ingredient-manager | [[AI Generated/Sessions/ingredient-manager/hot]] |
