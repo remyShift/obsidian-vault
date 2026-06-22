@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-22-06-2026 - olis-lab : read navbar CMS dans apps/web (Next) + infra PostHog server-side reutilisable (eval locale, gate serveur navbar + announcement bar), commite sur `feat/next-read-payload-navbar`.
+22-06-2026 - seed4t-perso : repo perso cree (copie isolee du mob), migre Jest->Vitest + ESLint/Prettier, README recentre sur le but, SPECS.md transforme en test-list vivante T1->T11.
 
 ## Projets actifs
 
@@ -22,10 +22,15 @@ tags: [meta, hot-cache, global]
 - Etat : back-office de notation produits Oli's Lab (matching INCI/COSING + scoring 10 regles R01-R10, sources shop/ewg/lancome). TS strict + Zod + Express 5 + Mongo + Next 14. Inspecte + documente en 4 notes de lecture. Dette : `ext-scoring.repo.ts` 3314 lignes (God file), abstraction par source qui fuit (`if shop else ext` dans le service), logique scoring dupliquee dans la couche data.
 - Prochaine etape : si refacto, sortir la logique scoring des repos vers le domaine (point 1 du plan note 03) ; trier les notes Inbox (to-process).
 
-### ts-seed
+### seed4t-perso
+- Derniere session : 22-06-2026
+- Etat : copie perso isolee de seed4t (ex ts-seed). GitHub prive `remyShift/seed4t`, branche `main`. Stack TS6 strict + Vitest 4 + ESLint 10 flat + Prettier, Node 20.19.5, CI verte. Domaine pur en place (Brick/Catalog/Cart, 4 tests verts). README recentre sur le but, SPECS.md = test-list vivante T1->T11. Posture mentor : Claude ne code jamais, Remy ecrit chaque test. Hexagone emergent : 1er port a la resolution version (T8), 2e a la sortie recette (T11), structure dossiers en Phase 4.
+- Prochaine etape : hygiene (renommer calc.test.ts -> Brick.test.ts, fixer nom package.json) ; commit+push docs + verif CI ; demarrer TDD T1 (dedup catalogue) red->green->refactor.
+
+### ts-seed (predecesseur, repo mob)
 - Derniere session : 29-05-2026
 - Etat : boilerplate Next.js + vitest, docs/skills en anglais, plan TDD premiere brique valide, zero code metier encore
-- Prochaine etape : implementer TypescriptBrickBuilder via TDD (strings brutes, laisser l'archi emerger du refactor)
+- Prochaine etape : remplace par seed4t-perso pour le travail solo
 
 ### piqure
 - Derniere session : 19-05-2026
