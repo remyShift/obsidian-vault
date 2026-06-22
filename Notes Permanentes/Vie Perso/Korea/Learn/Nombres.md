@@ -1,9 +1,11 @@
 ---
 tags: [Korea, coréen, grammaire]
 ---
+
 Il existe **deux systèmes de nombres** en coréen. Ils ne sont pas interchangeables — chaque contexte en impose un.
 
 - [[Numbers.pdf]]
+
 ---
 
 ## 1. Les nombres sino-coréens (한자어 수사)
@@ -29,9 +31,10 @@ Originaires du chinois. Utilisés pour compter des choses "abstraites" ou offici
 | 100 000 000 | 억      |
 
 **Formation des nombres composés :**
+
 - 11 = 십일
 - 25 = 이십오
-- 200 = 이백, 300 = 삼백...
+- 200 = 이백, 300 = 삼백…
 - 15 000 = 만 오천
 
 > [!important] Les grands nombres : on compte par paquets de 10 000
@@ -40,10 +43,11 @@ Originaires du chinois. Utilisés pour compter des choses "abstraites" ou offici
 > - 1 000 000 = 백만 (100 × 10 000)
 > - 10 000 000 = 천만
 > - 100 000 000 = 억
->
+> 
 > Réflexe à entraîner : penser en **"paquets de dix mille"**, pas en "mille". C'est ce qui ralentit le plus sur les prix au début.
 
 **Quand utiliser les sino-coréens :**
+
 - Les prix (돈) → 오천 원 (5 000 wons)
 - Les minutes (분) → 삼십 분 (30 minutes)
 - Les mois (월) → 삼월 (mars = 3e mois)
@@ -102,6 +106,7 @@ Le système "original" coréen. Utilisé pour compter des objets concrets et les
 | 스물 | 스무 (uniquement devant 살) |
 
 **Quand utiliser les natifs coréens :**
+
 - Les heures (시) → 두 시 (2h00)
 - Compter des objets avec un classificateur → 물 두 잔 (deux verres d'eau)
 - L'âge (살) → 스물다섯 살 (25 ans)
@@ -172,6 +177,7 @@ Structure : **Nom + Nombre (natif) + Classificateur**
 | [[장]] | feuilles, photos, billets | Tout ce qui est plat et fin |
 
 **Pour demander la quantité :**
+
 > 몇 + classificateur + 이에요?
 > 몇 개예요? / 몇 명이에요? / 몇 살이에요?
 
