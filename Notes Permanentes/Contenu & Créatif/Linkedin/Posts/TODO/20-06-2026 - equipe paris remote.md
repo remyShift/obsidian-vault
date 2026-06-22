@@ -4,7 +4,7 @@ likes:
 comments:
 reposts:
 impressions:
-url:
+url: https://www.linkedin.com/posts/remy-cassagne_la-semaine-derni%C3%A8re-jai-retrouv%C3%A9-une-partie-activity-7473989266394677248-rjqm?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---
