@@ -44,3 +44,4 @@ tags:
 - [ ] Harnais Claude tellement puissant que aujourd'hui j'en aurais du mal à m'en détacher, mais manque MCP pour certaines apps pour le renforcer
 - [ ] Session avec baptiste seed4t
 - [ ] Pimp My shell --> retour et mise en place
+- [ ] L'été le moins chaud du reste de notre vie
