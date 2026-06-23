@@ -1,5 +1,5 @@
 ---
-updated: 22-06-2026
+updated: 23-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-23-06-2026 - seed4t-perso : echafaudage de rigueur boucle (TS Strict+, ESLint type-checked, nommage T/I, alias @/, hooks robustes mise, protection main PR+squash+CI). Reste a demarrer le vrai TDD (T1).
+23-06-2026 - olis-lab : suppression complète du legacy checkout CRA (95 fichiers, −15.6k lignes, flag `dev_checkout_v2` retiré, redirect 100% Next) sur `chore/remove-legacy-cra-checkout`, 5 commits faits, PR à ouvrir. En parallèle : PR footer CMS `feat/footer-global-cra-read` toujours en attente de retours.
 
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 22-06-2026
-- Etat : **`feat/next-read-payload-navbar`** (commitée, branche du jour) : read navbar CMS dans **apps/web (Next)** gaté par `dev_payload_navbar` (fetch server-side `getNavbar` + gate) ; **infra PostHog server-side reutilisable** `apps/web/lib/posthog-server.ts` (`getServerFeatureFlag`, posthog-node eval LOCALE, `distinct_id` du cookie `ph_*`, `null` = defere au client) ; meme gate serveur sur l'announcement bar ; module partage `apps/web/lib/feature-flags.ts` (`TFeatureFlag` + `LOCAL_DEV_MOCKS`). Commits `df469abf9`/`975c1a550`/`a6b84e945`/`d73d28c2e`. **Working tree bascule sur `feat/cms-test-cart-hook`** (tests `computeCartSnapshot` 19/19 verts). Pieges : posthog-node pinné **`^4.18.0`** (v5 exige Node >=20.20, repo 20.19.5) ; pnpm refuse Node 21 → forcer node mise en PATH ; cle d'eval locale = **feature flags secure key `phs_`** (Project Settings → Feature Flags) dans env serveur **`NEXT_POSTHOG_PERSONAL_API_KEY`**, host EU `eu.i.posthog.com` ; config PostHog client cookieless `on_reject` + opt-out → cookie `ph_*` seulement pour consentis. Reste : Footer global (plan validé, pas codé), `fix/payload-slugs-generation` (slugify + migration + 27 redirects).
-- Prochaine etape : créer la secure key `phs_` côté PostHog + env Amplify stage/prod ; trancher `sendFeatureFlagEvents` (commenté → défaut true, events sans flush peu fiables en serverless) ; `build` + vérif live (CMS :4000, navbar publié, cookie consenti) ; push `feat/next-read-payload-navbar` + PR. Footer = attendre 2 décisions review. Slugs = redirects CloudFront AVANT migration prod.
+- Derniere session : 23-06-2026
+- Etat : **2 chantiers en cours.** (1) **`chore/remove-legacy-cra-checkout`** (5 commits faits, NON pushé) : legacy checkout CRA supprimé (95 fichiers, −15.6k lignes, 81 supprimés). `AddressCard` déplacé dans le profil, cart+rebuy redirigent en dur vers Next `/<locale>/secure-checkout`, flag `dev_checkout_v2` retiré, routes `/checkout`+`/success` supprimées, i18n `checkout.*` purgé (sauf `voucherErrors` utilisé par le cart), deps `@stripe/*` retirées. tsc+lint OK, message de PR rédigé. Next checkout = 100% prod confirmé → plus de rollback. (2) **`feat/footer-global-cra-read`** (PR ouverte, en attente) : Footer CMS de bout en bout côté CRA, rendu option A façon navbar, flag OFF = byte-identique, globals footer+navbar seedés en DB locale (data non versionnée). Autres en attente : `feat/next-read-payload-navbar`, `fix/payload-slugs-generation`. Pieges : `mise exec` ne prime pas sur node 21 système (forcer PATH), Node 20.19, lint-staged+prettier au pre-commit.
+- Prochaine etape : push checkout branch + ouvrir PR + test navigateur e2e + check CloudFront `/checkout` ; suivre retours PR footer ; rejouer seed footer+navbar stage/prod ; régénérer creds S3 locaux ; read footer côté Next (apps/web).
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
