@@ -121,10 +121,10 @@ En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés 
 - gère les dotfiles, versionnés sur git et reproductibles sur une autre machine. Source de vérité = repo privé `remyShift/dotfiles`.
 
 - Clés : `chezmoi add ~/.config/fish/config.fish` (suivre un fichier), `chezmoi re-add` (ré-importer les fichiers suivis modifiés en local), `chezmoi diff` (voir l'écart), `chezmoi apply` (appliquer la source vers le home), `chezmoi cd` (aller dans le repo source), `chezmoi update` (pull + apply).
-- Ex. : boucle type après avoir modifié une conf : 
+- Ex. : boucle type après avoir modifié une conf :
 	- `chezmoi re-add`
-	- `chezmoi git -- add -A` 
-	- `chezmoi git -- commit -m "fish: alias"` 
+	- `chezmoi git -- add -A`
+	- `chezmoi git -- commit -m "fish: alias"`
 	- `chezmoi git -- push`.
 
 ### Scripts et démarrage
