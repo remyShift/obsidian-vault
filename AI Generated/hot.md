@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-22-06-2026 - seed4t-perso : repo perso cree (copie isolee du mob), migre Jest->Vitest + ESLint/Prettier, README recentre sur le but, SPECS.md transforme en test-list vivante T1->T11.
+23-06-2026 - seed4t-perso : echafaudage de rigueur boucle (TS Strict+, ESLint type-checked, nommage T/I, alias @/, hooks robustes mise, protection main PR+squash+CI). Reste a demarrer le vrai TDD (T1).
 
 ## Projets actifs
 
@@ -23,9 +23,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : si refacto, sortir la logique scoring des repos vers le domaine (point 1 du plan note 03) ; trier les notes Inbox (to-process).
 
 ### seed4t-perso
-- Derniere session : 22-06-2026
-- Etat : copie perso isolee de seed4t (ex ts-seed). GitHub prive `remyShift/seed4t`, branche `main`. Stack TS6 strict + Vitest 4 + ESLint 10 flat + Prettier, Node 20.19.5, CI verte. Domaine pur en place (Brick/Catalog/Cart, 4 tests verts). README recentre sur le but, SPECS.md = test-list vivante T1->T11. Posture mentor : Claude ne code jamais, Remy ecrit chaque test. Hexagone emergent : 1er port a la resolution version (T8), 2e a la sortie recette (T11), structure dossiers en Phase 4.
-- Prochaine etape : hygiene (renommer calc.test.ts -> Brick.test.ts, fixer nom package.json) ; commit+push docs + verif CI ; demarrer TDD T1 (dedup catalogue) red->green->refactor.
+- Derniere session : 23-06-2026
+- Etat : monorepo pnpm `remyShift/seed4t` (prive), `packages/core` = domaine pur, **Node 26.3.1 via `.tool-versions`**, CI verte. **Echafaudage de rigueur complet** : TS Strict+ (noUncheckedIndexedAccess...), ESLint strictTypeChecked + prefer-readonly, **convention T/I (B)** (value objects = `type TBrick`, contrats = `interface I...`, `consistent-type-definitions: off`), alias **`@/`** (tsc-alias + vitest natif `resolve.tsconfigPaths`). Hooks husky+lint-staged+commitlint **qui prefixent `$(mise where node)/bin` au PATH** (sinon node 21 systeme -> crash listr2). `main` protege (PR obligatoire 0 review, check `build-and-test`, squash-only, bypass vide). Domaine inchange (Brick/Catalog/Cart, 4 tests). Posture mentor : Claude ne code jamais, Remy ecrit chaque test. Pieges : **mise ne lit pas `.nvmrc` par defaut** (-> `.tool-versions` source unique) ; une PR fermee ne se supprime pas (PR #1 garde un commit residuel). Regle "jamais de Co-Authored-By" gravee dans CLAUDE.md global.
+- Prochaine etape : **T1 — dedup catalogue** (1er cycle TDD red->green->refactor) dans une branche `feat/...` -> PR (1er passage du flux protege). Optionnel : check CI "semantic PR title" (squash commit = titre PR, hors commitlint).
 
 ### ts-seed (predecesseur, repo mob)
 - Derniere session : 29-05-2026

@@ -1,5 +1,5 @@
 ---
-updated: 22-06-2026
+updated: 23-06-2026
 project: seed4t-perso
 tags: [meta, hot-cache]
 ---
@@ -7,24 +7,26 @@ tags: [meta, hot-cache]
 # Hot Cache — seed4t-perso
 
 ## Dernière mise à jour
-22-06-2026 — Repo perso créé (copie isolée du mob), migré Jest→Vitest + ESLint/Prettier, README recentré sur le but, SPECS.md transformé en test-list vivante T1→T11.
+23-06-2026 — Échafaudage de rigueur bouclé : TS Strict+, ESLint type-checked, nommage T/I, alias `@/`, hooks robustes, protection `main` (PR + squash + CI). Reste à démarrer le vrai TDD (T1).
 
 ## État du projet
-- Générateur de scaffolding TS construit en TDD. Repo perso `seed4t-perso` (local) / `remyShift/seed4t` (GitHub privé, branche `main`). Stack : TS6 strict + Vitest 4 + ESLint 10 flat + Prettier, Node 20.19.5.
-- Domaine pur en place : `Brick`, `createBrick`, `CatalogBrick {brick, dependant}`, `CatalogBuilder`, `Cart`. 4 tests verts. Pas encore de TDD démarré sur la roadmap.
-- Posture : Claude ne code JAMAIS sur ce projet, il guide/revue. Rémy écrit chaque test.
+- Monorepo pnpm `remyShift/seed4t` (privé), `packages/core` = domaine pur. Node 26.3.1 via `.tool-versions`. CI verte.
+- Rigueur en place : TS Strict+ (noUncheckedIndexedAccess...), ESLint strictTypeChecked, `prefer-readonly`, convention **T/I (B)** (value objects = `type TBrick`, contrats = `interface I...`), `@/` alias (tsc-alias + vitest natif).
+- Hooks : husky + lint-staged + commitlint ; **les hooks prefixent `$(mise where node)/bin` au PATH** (sinon node système 21 → crash listr2).
+- `main` protégé : push direct bloqué, PR obligatoire (0 review), check `build-and-test` requis, squash-only, bypass vide. Template PR générisé.
+- Domaine inchangé (Brick/Catalog/Cart, 4 tests). TDD pas encore démarré.
 
 ## Faits récents importants
-- Dossier local = `seed4t-perso` car macOS case-insensitive (collision avec `seed4T`) ; repo GitHub = `seed4t`.
-- Pièges env : Homebrew node cassé (libllhttp) → node de mise ; Node 21 incompatible Vitest → épinglé 20.19.5.
-- Limites domaine à corriger en TDD : `dependant` unique mono-niveau, pas de dédup au `Cart.add`, `remove` ignore les deps, aucune sortie réelle.
+- **mise ne lit pas `.nvmrc` par défaut** → `.tool-versions` est la source node (l'avoir supprimé avait recassé les commits).
+- `consistent-type-definitions` mis à `off` (sinon force `interface`, casse Convention B).
+- Une PR fermée ne se supprime pas sur GitHub ; la PR #1 garde un commit co-signé résiduel (cosmétique).
+- Règle "jamais de Co-Authored-By" gravée dans le CLAUDE.md global.
 
 ## Décisions actives
-- Hexagone émergent : 1er port à la résolution de version (T8 `VersionResolver`), 2e à la sortie de recette (T11 `RecipeWriter`), structure dossiers en dernier (Phase 4).
-- Deps stockées par nom (`string[]`), catalogue = source de vérité.
-- Docs repo en anglais (README + SPECS). Phase 0 retirée de SPECS (test-list strictement comportementale).
+- Posture mentor : Claude ne code jamais le domaine, guide/revue ; Rémy écrit chaque test.
+- Custom rule "type-comme-contrat" → Phase 2 (1er port). boundaries/dependency-cruiser/import-no-cycle → Phase 4.
+- Repo non recréé malgré le résidu de PR fermée (pas la peine).
 
 ## Prochaines étapes
-- Hygiène : renommer `calc.test.ts` → `Brick.test.ts`, fixer nom `package.json` (résidu `ts-template-with-jest-tests`).
-- Commit + push docs (README + SPECS), vérifier CI verte sur GitHub.
-- Démarrer TDD T1 (dédup catalogue) red→green→refactor, montrer le cycle pour revue.
+- **T1 — dédup catalogue** : red → green → refactor dans une branche `feat/...` → PR (1er passage du flux protégé).
+- Trancher : forcer des titres de PR conventional (squash commit = titre PR, hors commitlint) via check "semantic PR title".
