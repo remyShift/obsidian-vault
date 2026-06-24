@@ -1,5 +1,5 @@
 ---
-updated: 23-06-2026
+updated: 24-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,24 +7,25 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-23-06-2026 — Deux chantiers : (1) Footer CMS de bout en bout côté CRA (PR `feat/footer-global-cra-read` ouverte, en attente de retours) ; (2) **suppression complète du legacy checkout CRA** sur `chore/remove-legacy-cra-checkout` (5 commits faits, pas de push).
+24-06-2026 — Cadrage de TASK-1115 (régénération du SKU) suite au revert de Diego : brief de décision EN écrit (template ticket), recommandation = découpler les besoins. Pas de code, à trancher en meeting.
 
 ## État du projet
-- **`chore/remove-legacy-cra-checkout`** (commits faits, NON pushé) : legacy checkout CRA supprimé. 95 fichiers, −15 653 lignes, 81 fichiers supprimés. `AddressCard` déplacé dans le profil, cart+rebuy redirigent en dur vers Next `/<locale>/secure-checkout`, flag `dev_checkout_v2` retiré, routes `/checkout`+`/success` supprimées, i18n `checkout.*` purgé (sauf `voucherErrors`), deps `@stripe/*` retirées. tsc + lint OK. PR à ouvrir (message déjà rédigé).
-- **`feat/footer-global-cra-read`** (PR ouverte) : global Payload `footer` (image, newsletter, trustBar, linkColumns, legalLinks, socialLinks, paymentIcons, `secureCheckoutLabel` required, tagline, copyright) ; read web_client (`guardFooter`, flag `dev_payload_footer`, `useFooterQuery`) ; rendu option A façon navbar (composants `@olis-lab/ui/Footer` data-injectables, `FooterSection` CMS vs legacy). **Flag OFF = byte-identique.**
-- En attente ailleurs : `feat/next-read-payload-navbar` (read navbar Next, PostHog server-side) ; `fix/payload-slugs-generation` (slugify + 27 redirects).
+- **TASK-1115 (SKU)** : la PR auto-regen-on-brand-change (`f3ab29959`) a été revertée (`46a14fbf`) car dangereuse. Brief de cadrage rédigé (plan `hier-on-a-fait-glimmering-flamingo.md` + recap du jour). Décision attendue en meeting Michele/Diego.
+- Chantiers checkout/footer (sessions précédentes) toujours en attente — voir recaps 22-23/06.
 
 ## Faits récents importants
-- Checkout Next `/secure-checkout` **à 100% en prod** (confirmé Rémy) → fallback CRA + flag supprimés, **plus de rollback**.
-- Code partagé GARDÉ : `deliveryApi`, `voucherUtils`, `mapboxApi`/`ordersApi`, stores `Bag`/`Shipping`, `react-apple-signin-auth` (sign-in, pas Apple Pay). Le cart utilise encore `checkout.voucherErrors` → i18n purgé chirurgicalement.
-- **Pièges environnement** : `mise exec node@X -- pnpm` ne prime pas sur `/usr/local/bin/node` v21 → forcer `PATH="$(mise where node@20.19.5)/bin:$PATH"`. Hook **lint-staged+prettier** au pre-commit. Node **20.19** obligatoire.
-- Crash de session a reverté tout le working tree (branche conservée) — refait depuis le plan.
-- Globals footer+navbar seedés en DB locale (vraies données EN+FR), seed direct `payload run`, pas de migration, **data locale non versionnée**. S3 creds locaux invalides.
+- **Le SKU = clé de jointure BigBlue** : `apps/server` lit l'inventaire BigBlue et matche par SKU (`inventoryMap[sku]`). Le repo ne pousse JAMAIS de SKU vers BigBlue (read-only). Changer un SKU live → out-of-stock.
+- **Aucun signal "live sur BigBlue"** ; proxys = `status` (Live/Staged/Offline) + `syncMetadata.lastSyncedAt` (= sync legacy MongoDB, pas BigBlue).
+- **Pas de RBAC** : `Users` en auth nu, tous = admin. Pattern `roles` documenté dans `apps/cms/AGENTS.md`, non implémenté.
+- Défaut de design : le gel du SKU se déclenche sur "valeur existe" (`generateProductSku.ts:20` + `readOnly`) au lieu de "produit engagé downstream".
+- Deux bugs distincts confondus : (A) duplicate ajoute ` - Copy` au SKU (malformé/collision/non éditable) ; (B) aucun moyen de corriger un SKU publié (DB edit ne versionne pas).
+- Patterns réutilisables : `syncButton` (`type: 'ui'` + `SyncProductButton`), `CreateOnlyTextField` (EAN). PR `feat/edits-product-picker-admin-label` déplace déjà `useAsTitle` sku → adminLabel.
 
 ## Décisions actives
-- Commits **sans scope entre parenthèses** (`refactor:`/`chore:` plats). NE JAMAIS committer/pusher sans demande explicite. Jamais de `Co-Authored-By: Claude`.
-- Footer : liens + trust bar + payment icons en CMS ; icônes via `select` validé. Mocks `dev_payload_footer`/`dev_payload_navbar` à `false` (passer à `true` pour rendu CMS local).
+- C'est l'**équipe contenu/client** qui édite les produits → action "régénérer" ouverte à tous = risque, gating par rôle pertinent à terme.
+- Reco : Option D (adminLabel + clear SKU au duplicate) pour le duplicate ; Option B (action manuelle confirmée downstream-aware) pour la correction ; Option C (RBAC) différée.
 
 ## Prochaines étapes
-- **Checkout** : push `chore/remove-legacy-cra-checkout` + ouvrir PR ; test navigateur e2e (cart→checkout, rebuy, AddressCard, voucher error) ; vérifier aucune behavior CloudFront vers `/checkout`.
-- **Footer** : suivre retours PR ; rejouer seed footer+navbar sur stage/prod ; régénérer creds S3 locaux ; read footer côté Next (apps/web).
+- Apporter le résumé EN au meeting ; trancher A (auto en zone sûre) vs B (100% manuel) + besoin RBAC, avec Michele/Diego.
+- Décider proxys vs vrai signal "live on BigBlue" ; définir le sort des legacy SKUs overridés.
+- Diego planifie l'implémentation post-décision.
