@@ -156,26 +156,37 @@ En revanche `cat`→bat, `ls`→lsd, `find`→fd et `cd`→zoxide sont aliasés 
 
 Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés automatiquement (tout `.fish` de `conf.d/` est sourcé par fish).
 
-### Alias
+### Alias - binaires boostés
 
-| Alias          | Étend vers                   | Note                                                                     |
-| -------------- | ---------------------------- | ------------------------------------------------------------------------ |
-| `cat`          | `bat --plain --paging=never` | rend le comportement de cat (pas de pager, pas de déco)                  |
-| `ls`           | `lsd`                        |                                                                          |
-| `l`            | `lsd -l`                     |                                                                          |
-| `la`           | `lsd -a`                     |                                                                          |
-| `lla`          | `lsd -la`                    |                                                                          |
-| `lt`           | `lsd --tree`                 |                                                                          |
-| `find`         | `fd`                         | ⚠ fd n'a PAS la syntaxe de find, c'est juste le nom qui est repris       |
-| `code`         | `zed`                        | ouvre dans Zed                                                           |
-| `cd`           | `zoxide`                     | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
-| `gcd` *(abbr)* | `git checkout develop`       | abréviation : s'étend en toutes lettres quand tu tapes                   |
-|                |                              |                                                                          |
+| Alias  | Étend vers                   | Note                                                                     |
+| ------ | ---------------------------- | ------------------------------------------------------------------------ |
+| `cat`  | `bat --plain --paging=never` | rend le comportement de cat (pas de pager, pas de déco)                  |
+| `ls`   | `lsd`                        |                                                                          |
+| `l`    | `lsd -l`                     |                                                                          |
+| `la`   | `lsd -a`                     |                                                                          |
+| `lla`  | `lsd -la`                    |                                                                          |
+| `lt`   | `lsd --tree`                 |                                                                          |
+| `find` | `fd`                         | ⚠ fd n'a PAS la syntaxe de find, c'est juste le nom qui est repris       |
+| `code` | `zed`                        | ouvre dans Zed                                                           |
+| `cd`   | `zoxide`                     | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
 
-**TODO :**
+### Alias git
 
-- add `gg` aliases check zsh aliases cf [Oh-My-Zsh Git - Dash Cheat Sheets - Kapeli](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index)
-- add other alisases.
+| Alias          | Étend vers             | Note                                                  |
+| -------------- | ---------------------- | ----------------------------------------------------- |
+| `gcd` *(abbr)* | `git checkout develop` | abréviation : s'étend en toutes lettres quand tu tapes |
+| `gaa`          | `git add .`            |                                                       |
+| `gp`           | `git push`             |                                                       |
+| `gcm`          | `git checkout main`    |                                                       |
+| `gcb`          | `git checkout -b`      |                                                       |
+| `gst`          | `git status`           |                                                       |
+| `gf`           | `git fetch`            |                                                       |
+| `gm`           | `git merge`            |                                                       |
+| `glgg`         | `git log --graph`      |                                                       |
+| `gsta`         | `git stash`            |                                                       |
+| `gstp`         | `git stash pop`        |                                                       |
+
+Pour en ajouter d'autres, référence : [Oh-My-Zsh Git - Dash Cheat Sheets - Kapeli](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index).
 
 `rg` et `xh` ne sont volontairement pas aliasés, tu les tapes tels quels.
 
