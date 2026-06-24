@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-24-06-2026 - seed4t-perso : domaine Brick/Catalog/Cart bien avance en TDD (resolution transitive recursive, Cart en modele roots, 11 tests verts) sur `feat/enhance-domain-resolve-dependant`. Bug latent : le getter `bricks` ne deduplique pas entre roots, masque par `arrayContaining`. Reste a commiter + PR.
+24-06-2026 - olis-lab : cadrage de TASK-1115 (regeneration du SKU) suite au revert de Diego. Brief de decision EN ecrit (template ticket). Reco = decoupler duplicate (adminLabel) et correction (action manuelle downstream-aware), RBAC differe. A trancher en meeting Michele/Diego.
 
 ## Projets actifs
 
