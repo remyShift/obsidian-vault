@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-24-06-2026 - olis-lab : **RFC "Role-based access in Payload CMS" redigee** (doc Notion EN, prete a coller) — constat verifie : tous les users CMS = admin, aucun field-level access, global `TradingPlan` + endpoints de sync ouverts a tout user authentifie ; reco = modele de roles minimal (`roles` sur `Users`) + helpers `apps/cms/src/access/`, migration incrementale (etape 1 = tout admin par defaut → zero lock-out), pilote = champ `slug`. Plus tot : fix slug livre (Products + Subcategories, int 20/20, PR pas poussee) ; planning top banner / bulk-add / SKU toujours ouverts.
+24-06-2026 - obsidian-vault : ajout de 5 alias git fish (`gf`, `gm`, `glgg`, `gsta`, `gstp`), note `Code/Setup Shell.md` recalée sur le contenu réel du fichier d'alias, push chezmoi `ac3b254`.
 
 ## Projets actifs
 
