@@ -13,9 +13,9 @@ tags: [meta, hot-cache, global]
 ## Projets actifs
 
 ### olis-lab
-- Derniere session : 23-06-2026
-- Etat : **2 chantiers en cours.** (1) **`chore/remove-legacy-cra-checkout`** (5 commits faits, NON pushé) : legacy checkout CRA supprimé (95 fichiers, −15.6k lignes, 81 supprimés). `AddressCard` déplacé dans le profil, cart+rebuy redirigent en dur vers Next `/<locale>/secure-checkout`, flag `dev_checkout_v2` retiré, routes `/checkout`+`/success` supprimées, i18n `checkout.*` purgé (sauf `voucherErrors` utilisé par le cart), deps `@stripe/*` retirées. tsc+lint OK, message de PR rédigé. Next checkout = 100% prod confirmé → plus de rollback. (2) **`feat/footer-global-cra-read`** (PR ouverte, en attente) : Footer CMS de bout en bout côté CRA, rendu option A façon navbar, flag OFF = byte-identique, globals footer+navbar seedés en DB locale (data non versionnée). Autres en attente : `feat/next-read-payload-navbar`, `fix/payload-slugs-generation`. Pieges : `mise exec` ne prime pas sur node 21 système (forcer PATH), Node 20.19, lint-staged+prettier au pre-commit.
-- Prochaine etape : push checkout branch + ouvrir PR + test navigateur e2e + check CloudFront `/checkout` ; suivre retours PR footer ; rejouer seed footer+navbar stage/prod ; régénérer creds S3 locaux ; read footer côté Next (apps/web).
+- Derniere session : 24-06-2026
+- Etat : **TASK-1115 (SKU)** cadré (pas de code) : la PR auto-regen-on-brand-change a été revertée car le SKU est la clé de jointure BigBlue (changer un SKU live → out-of-stock). Brief de décision EN écrit. Découvertes clés : repo ne pousse jamais de SKU vers BigBlue (read-only), aucun signal "live on BigBlue" (proxys `status`/`syncMetadata`), pas de RBAC (Users en auth nu). 2 bugs distincts : duplicate casse le SKU (` - Copy`) + pas de voie pour corriger un SKU publié. Reco : Option D (adminLabel) pour le duplicate, Option B (action manuelle) pour la correction, RBAC différé. **Chantiers en attente** : `chore/remove-legacy-cra-checkout` (5 commits, NON pushé) + `feat/footer-global-cra-read` (PR ouverte). Pieges : `mise exec` ne prime pas sur node 21 système (forcer PATH), Node 20.19, lint-staged+prettier au pre-commit.
+- Prochaine etape : apporter le brief EN au meeting + trancher A vs B + RBAC avec Michele/Diego ; puis Diego planifie l'implé. En parallèle : push checkout branch + PR + e2e ; suivre retours PR footer ; rejouer seed stage/prod ; régénérer creds S3.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
