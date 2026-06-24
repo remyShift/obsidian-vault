@@ -8,14 +8,14 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-24-06-2026 - olis-lab : cadrage de TASK-1115 (regeneration du SKU) suite au revert de Diego. Brief de decision EN ecrit (template ticket). Reco = decoupler duplicate (adminLabel) et correction (action manuelle downstream-aware), RBAC differe. A trancher en meeting Michele/Diego.
+24-06-2026 - olis-lab : plan bulk-add "Add selected Products to an Edit" affine (Approche B = composant + endpoint custom) + evaluation du `join` field suggere par Diego (verdict : ne fait pas le write, valeur = visibilite inverse decouplee). Plus tot : cadrage de TASK-1115 (regeneration SKU), a trancher en meeting Michele/Diego.
 
 ## Projets actifs
 
 ### olis-lab
 - Derniere session : 24-06-2026
-- Etat : **TASK-1115 (SKU)** cadré (pas de code) : la PR auto-regen-on-brand-change a été revertée car le SKU est la clé de jointure BigBlue (changer un SKU live → out-of-stock). Brief de décision EN écrit. Découvertes clés : repo ne pousse jamais de SKU vers BigBlue (read-only), aucun signal "live on BigBlue" (proxys `status`/`syncMetadata`), pas de RBAC (Users en auth nu). 2 bugs distincts : duplicate casse le SKU (` - Copy`) + pas de voie pour corriger un SKU publié. Reco : Option D (adminLabel) pour le duplicate, Option B (action manuelle) pour la correction, RBAC différé. **Chantiers en attente** : `chore/remove-legacy-cra-checkout` (5 commits, NON pushé) + `feat/footer-global-cra-read` (PR ouverte). Pieges : `mise exec` ne prime pas sur node 21 système (forcer PATH), Node 20.19, lint-staged+prettier au pre-commit.
-- Prochaine etape : apporter le brief EN au meeting + trancher A vs B + RBAC avec Michele/Diego ; puis Diego planifie l'implé. En parallèle : push checkout branch + PR + e2e ; suivre retours PR footer ; rejouer seed stage/prod ; régénérer creds S3.
+- Etat : **Bulk-add Products→Edit (en planification)** : plan EN (`~/.claude/plans/en-suivant-le-template-rustling-toucan.md`), `Edits.products` (`hasMany`) existe déjà → aucun changement de schéma, corps = Approche B (composant `admin.components` + endpoint custom). `join` field évalué (suggestion Diego) : virtuel/read-only (`create/update: never`) → ne fait PAS le write, valeur = visibilité inverse Produit→Edits sans duplication, gardé comme companion découplé (porte de décision YAGNI). **TASK-1115 (SKU)** cadré (pas de code) : PR auto-regen-on-brand-change revertée car SKU = clé BigBlue (changer un SKU live → out-of-stock) ; repo ne pousse jamais de SKU (read-only), pas de RBAC (Users auth nu) ; reco Option D (duplicate) + B (correction), RBAC différé. **Chantiers en attente** : `chore/remove-legacy-cra-checkout` (5 commits, NON pushé) + `feat/footer-global-cra-read` (PR ouverte). Pieges : `mise exec` ne prime pas sur node 21 système (forcer PATH), Node 20.19, lint-staged+prettier au pre-commit.
+- Prochaine etape : bulk-add — décider de lancer l'implé B + répondre à Diego sur le join + trancher si visibilité inverse = vrai besoin contenu ; SKU — brief EN au meeting, trancher A vs B + RBAC avec Michele/Diego. En parallèle : push checkout branch + PR + e2e ; suivre retours PR footer ; rejouer seed stage/prod ; régénérer creds S3.
 
 ### ingredient-manager
 - Derniere session : 08-06-2026
