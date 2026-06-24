@@ -172,7 +172,9 @@ Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés
 | `gcd` *(abbr)* | `git checkout develop`       | abréviation : s'étend en toutes lettres quand tu tapes                   |
 |                |                              |                                                                          |
 
-**TODO :** add `gg` aliases check zsh aliases cf [Oh-My-Zsh Git - Dash Cheat Sheets - Kapeli](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index)
+**TODO :** 
+- add `gg` aliases check zsh aliases cf [Oh-My-Zsh Git - Dash Cheat Sheets - Kapeli](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index)
+- add other alisases
 
 `rg` et `xh` ne sont volontairement pas aliasés, tu les tapes tels quels.
 
