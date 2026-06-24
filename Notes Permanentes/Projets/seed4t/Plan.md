@@ -1,10 +1,5 @@
 ## Roadmap
 
-### Phase 0 : hygiène (pas du TDD, ~15 min)
-
-- Renommer `src/calc.test.ts` en `src/Brick.test.ts` (résidu du template "calc"). - `package.json` : nom `seed4t`, description, author, license, repo.
-  - **Ajouter un linter/formatter maintenant, pas "plus tard"** (le "on ajoutera plus tard" est un red flag).
-
 ### Phase 1 : solidifier le domaine pur (aucun I/O, toujours pas de hexagone)
 
 - Séquence de tests rouges. Chacun avec la pression de conception qu'il crée :
@@ -64,6 +59,4 @@
 
 - **Stockage des deps** : par nom (`string[]`) plutôt que par référence `Brick`.
 	- Le catalogue est la source de vérité, ça évite les références dupliquées et les soucis d'égalité.
-- **Règle de `remove`** : GC des orphelins (retire les deps que plus rien n'utilise) **ou** interdiction si une autre brick en dépend (erreur).
-	- À encoder dans T7.
 - **Comportement sur cycle** (T6) : erreur explicite vs ignorer en s'arrêtant. - **"latest"** : vrai registry npm ou table figée pour le kata. Le fake suffit longtemps.
