@@ -170,6 +170,9 @@ Alias dans `conf.d/aliases.fish`, fonctions git dans `conf.d/gum.fish`. Chargés
 | `code`         | `zed`                        | ouvre dans Zed                                                           |
 | `cd`           | `zoxide`                     | via `zoxide init --cmd cd` (pas un alias classique, le saut intelligent) |
 | `gcd` *(abbr)* | `git checkout develop`       | abréviation : s'étend en toutes lettres quand tu tapes                   |
+|                |                              |                                                                          |
+
+**TODO :** add `gg` aliases check zsh aliases cf [Oh-My-Zsh Git - Dash Cheat Sheets - Kapeli](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index)
 
 `rg` et `xh` ne sont volontairement pas aliasés, tu les tapes tels quels.
 
