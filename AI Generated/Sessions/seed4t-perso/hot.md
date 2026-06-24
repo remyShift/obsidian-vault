@@ -7,30 +7,27 @@ tags: [meta, hot-cache]
 # Hot Cache — seed4t-perso
 
 ## Dernière mise à jour
-24-06-2026 — TDD bien avancé : résolution transitive (`Catalog.resolve` récursif), Cart passé au modèle roots, 11 tests verts. Reste un bug latent de dédup masqué par `arrayContaining`.
+24-06-2026 — Review subjective de la PR #2, 3 blockers corrigés (barrel + garde-fou CI, stockage des deps par nom, throw sur dep inconnue), SPECS recentré produit, PR mergée, CI réparée (lockfile).
 
 ## État du projet
-- Monorepo pnpm `remyShift/seed4t` (privé), `packages/core` = domaine pur. Node 26.3.1 via `.tool-versions`. CI verte. `main` protégé (PR obligatoire, check `build-and-test`, squash-only).
-- `packages/core/src` découpé : `Brick.ts` / `Catalog.ts` / `Cart.ts` / `index.ts` (barrel). Tests dans `src/tests/` (`Brick`/`Catalog`/`Cart` + `utils.ts`). 11/11 vert, lint + build OK.
-- `Catalog.resolve(name)` : DFS récursif pre-order, `Set visited` (anti-cycle + dédup intra-résolution).
-- `Cart` = **modèle roots** : `roots: string[]` source de vérité, `add`/`remove` éditent roots, `get bricks()` dérive via `flatMap(resolve)`.
-- Branche `feat/enhance-domain-resolve-dependant`, pas encore commitée/PR.
+- Monorepo pnpm `remyShift/seed4t` (privé), domaine pur dans **`packages/domain`** (renommé depuis `packages/core` ; mais le **nom du package est resté `@seed4t/core`** → à aligner). Node 26.3.1, `main` protégé (PR + squash + check `build-and-test`).
+- **PR #2 mergée** (branche `feat/enhance-domain-resolve-dependant`). 14 tests verts, lint + build OK.
+- `src` = `Brick.ts` / `Catalog.ts` / `Cart.ts` / `uniqueBy.ts` / `index.ts` (barrel) + `tests/`. Le domaine **résout** une grappe mais ne **produit rien** encore (pas d'output package.json).
+- CI : étape `verify:exports` (`scripts/check-entrypoints.mjs`) qui vérifie que le `main` de chaque package existe après build.
 
 ## Faits récents importants
-- **Bug latent** : `get bricks()` ne déduplique PAS entre roots → cas partagé sort un doublon (`[a,b,c,b]`). Vert seulement parce que les assertions sont en `arrayContaining` (aveugle aux doublons/longueur).
-- `arrayContaining` teste la présence, jamais l'absence ni l'unicité → faux ami, surtout pour `remove`.
-- Un test jamais vu rouge n'est pas fiable → mutation manuelle pour gagner la confiance.
-- Principe : stocker l'entrée irréductible (roots), dériver la sortie (bricks). `bricks→roots` non inversible.
-- Infra (rappel) : hooks préfixent `$(mise where node)/bin` au PATH ; `consistent-type-definitions: off` ; convention T/I.
+- **Deps stockées par nom** (`dependencies: string[]`) = le catalog est la source de vérité (clé étrangère, pas l'objet copié). Invariant : une dépendance DOIT être une entrée du catalog, sinon `build()` throw.
+- `uniqueBy(items, key)` factorise la dédup (build + Cart.bricks) ; le `Set` de `resolve` reste pour l'anti-cycle.
+- **Modèle acté** : brick = package npm individuel, grappe = brick + ses deps. La transitivité profonde / diamants / cycles = terrain TDD, **hors besoin produit** (les grappes réelles sont plates : peer deps, bundles outillage).
+- Rename de dossier pnpm → lockfile désynchronisé (indexé par chemin) → CI casse à `--frozen-lockfile`. Réflexe : `pnpm install` après tout rename.
 
 ## Décisions actives
-- `Catalog` classe concrète (option A), dédup dans `build`, résolution dans `Catalog.resolve`.
-- Pre-order = ordre de sélection (figé par les tests) ; post-order/topologique différé jusqu'à un vrai besoin d'install.
-- Cart = roots ; bricks = getter dérivé.
-- Posture mentor relâchée à la demande pour certaines tâches mécaniques.
+- Surface barrel assumée (Catalog/CatalogBuilder/Cart + types, pas CatalogBrick).
+- arrayContaining gardé tant que l'ordre n'est pas un besoin (posture TDD).
+- SPECS recentré produit, gitignoré (local-only) à `packages/domain/src/SPECS.md`.
 
 ## Prochaines étapes
-- Corriger le bug latent : dédup par `name` dans `get bricks()`.
-- Resserrer les assertions (`toHaveLength`) sur partagé/diamant/circulaire.
-- Commit + PR (1er passage du flux protégé).
-- Roadmap : versions en array + défaut « latest »/highest (bloc commenté `Brick.test.ts`).
+- **Phase 3 : output `package.json`** (`Recipe` + sérialisation) — le vrai cœur V1 manquant. Priorité.
+- Phase 2 : versions (défaut « latest » + ranges) → premier port `IVersionResolver`.
+- T12 : `dependencies` vs `devDependencies` (kind sur la brick).
+- Aligner `@seed4t/core` → `@seed4t/domain` ; trancher SPECS tracké vs gitignoré ; trancher le cycle (silence vs throw au build).

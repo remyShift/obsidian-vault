@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-24-06-2026 - obsidian-vault : ajout de 5 alias git fish (`gf`, `gm`, `glgg`, `gsta`, `gstp`), note `Code/Setup Shell.md` recalée sur le contenu réel du fichier d'alias, push chezmoi `ac3b254`.
+24-06-2026 - seed4t-perso : review subjective de la PR #2, 3 blockers corrigés (barrel + garde-fou CI, deps par nom = catalog source de vérité, throw sur dep inconnue), SPECS recentré produit, PR mergée, CI réparée (lockfile désync après rename core→domain).
 
 ## Projets actifs
 
@@ -24,8 +24,8 @@ tags: [meta, hot-cache, global]
 
 ### seed4t-perso
 - Derniere session : 24-06-2026
-- Etat : monorepo pnpm `remyShift/seed4t` (prive), `packages/core` domaine pur, Node 26.3.1 via `.tool-versions`, CI verte, `main` protege (PR + squash + check `build-and-test`). **TDD bien avance** sur branche `feat/enhance-domain-resolve-dependant` (pas encore commitee/PR). `src` decoupe en `Brick.ts`/`Catalog.ts`/`Cart.ts`/`index.ts`, tests dans `src/tests/`. 11 tests verts. `Catalog.resolve` = DFS recursif pre-order (`Set visited` anti-cycle + dedup intra). `Cart` = **modele roots** (`roots` source de verite, `bricks` getter derive via `flatMap(resolve)`). **Bug latent** : le getter ne deduplique pas entre roots (cas partage sort un doublon), masque par les assertions `arrayContaining`. Infra : hooks prefixent `$(mise where node)/bin` au PATH ; convention T/I ; `consistent-type-definitions: off`.
-- Prochaine etape : corriger la dedup du getter (`get bricks()` par name) ; resserrer les assertions (`toHaveLength`) sur partage/diamant/circulaire ; commit + PR (1er passage du flux protege) ; puis roadmap versions (array + defaut « latest »).
+- Etat : monorepo pnpm `remyShift/seed4t` (privé), domaine pur dans **`packages/domain`** (renommé depuis `core` ; nom de package resté `@seed4t/core` → à aligner). **PR #2 mergée**, 14 tests verts. Deps stockées **par nom** (`string[]`) → catalog = source de vérité ; `build()` throw sur dépendance inconnue ; helper `uniqueBy` ; garde-fou CI `verify:exports` (le `main` doit exister après build). **Modèle acté** : brick = package npm, grappe = brick + deps ; transitivité profonde/cycles = terrain TDD hors besoin produit (grappes réelles plates). Le domaine résout mais ne **produit rien** encore.
+- Prochaine etape : **Phase 3 = output `package.json`** (`Recipe` + sérialisation), le vrai cœur V1 manquant ; puis Phase 2 versions (latest + ranges, port `IVersionResolver`) ; T12 deps vs devDeps ; aligner `@seed4t/core`→`@seed4t/domain`.
 
 ### ts-seed (predecesseur, repo mob)
 - Derniere session : 29-05-2026
