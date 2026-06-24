@@ -1,5 +1,5 @@
 ---
-updated: 23-06-2026
+updated: 24-06-2026
 project: seed4t-perso
 tags: [meta, hot-cache]
 ---
@@ -7,26 +7,30 @@ tags: [meta, hot-cache]
 # Hot Cache — seed4t-perso
 
 ## Dernière mise à jour
-23-06-2026 — Échafaudage de rigueur bouclé : TS Strict+, ESLint type-checked, nommage T/I, alias `@/`, hooks robustes, protection `main` (PR + squash + CI). Reste à démarrer le vrai TDD (T1).
+24-06-2026 — TDD bien avancé : résolution transitive (`Catalog.resolve` récursif), Cart passé au modèle roots, 11 tests verts. Reste un bug latent de dédup masqué par `arrayContaining`.
 
 ## État du projet
-- Monorepo pnpm `remyShift/seed4t` (privé), `packages/core` = domaine pur. Node 26.3.1 via `.tool-versions`. CI verte.
-- Rigueur en place : TS Strict+ (noUncheckedIndexedAccess...), ESLint strictTypeChecked, `prefer-readonly`, convention **T/I (B)** (value objects = `type TBrick`, contrats = `interface I...`), `@/` alias (tsc-alias + vitest natif).
-- Hooks : husky + lint-staged + commitlint ; **les hooks prefixent `$(mise where node)/bin` au PATH** (sinon node système 21 → crash listr2).
-- `main` protégé : push direct bloqué, PR obligatoire (0 review), check `build-and-test` requis, squash-only, bypass vide. Template PR générisé.
-- Domaine inchangé (Brick/Catalog/Cart, 4 tests). TDD pas encore démarré.
+- Monorepo pnpm `remyShift/seed4t` (privé), `packages/core` = domaine pur. Node 26.3.1 via `.tool-versions`. CI verte. `main` protégé (PR obligatoire, check `build-and-test`, squash-only).
+- `packages/core/src` découpé : `Brick.ts` / `Catalog.ts` / `Cart.ts` / `index.ts` (barrel). Tests dans `src/tests/` (`Brick`/`Catalog`/`Cart` + `utils.ts`). 11/11 vert, lint + build OK.
+- `Catalog.resolve(name)` : DFS récursif pre-order, `Set visited` (anti-cycle + dédup intra-résolution).
+- `Cart` = **modèle roots** : `roots: string[]` source de vérité, `add`/`remove` éditent roots, `get bricks()` dérive via `flatMap(resolve)`.
+- Branche `feat/enhance-domain-resolve-dependant`, pas encore commitée/PR.
 
 ## Faits récents importants
-- **mise ne lit pas `.nvmrc` par défaut** → `.tool-versions` est la source node (l'avoir supprimé avait recassé les commits).
-- `consistent-type-definitions` mis à `off` (sinon force `interface`, casse Convention B).
-- Une PR fermée ne se supprime pas sur GitHub ; la PR #1 garde un commit co-signé résiduel (cosmétique).
-- Règle "jamais de Co-Authored-By" gravée dans le CLAUDE.md global.
+- **Bug latent** : `get bricks()` ne déduplique PAS entre roots → cas partagé sort un doublon (`[a,b,c,b]`). Vert seulement parce que les assertions sont en `arrayContaining` (aveugle aux doublons/longueur).
+- `arrayContaining` teste la présence, jamais l'absence ni l'unicité → faux ami, surtout pour `remove`.
+- Un test jamais vu rouge n'est pas fiable → mutation manuelle pour gagner la confiance.
+- Principe : stocker l'entrée irréductible (roots), dériver la sortie (bricks). `bricks→roots` non inversible.
+- Infra (rappel) : hooks préfixent `$(mise where node)/bin` au PATH ; `consistent-type-definitions: off` ; convention T/I.
 
 ## Décisions actives
-- Posture mentor : Claude ne code jamais le domaine, guide/revue ; Rémy écrit chaque test.
-- Custom rule "type-comme-contrat" → Phase 2 (1er port). boundaries/dependency-cruiser/import-no-cycle → Phase 4.
-- Repo non recréé malgré le résidu de PR fermée (pas la peine).
+- `Catalog` classe concrète (option A), dédup dans `build`, résolution dans `Catalog.resolve`.
+- Pre-order = ordre de sélection (figé par les tests) ; post-order/topologique différé jusqu'à un vrai besoin d'install.
+- Cart = roots ; bricks = getter dérivé.
+- Posture mentor relâchée à la demande pour certaines tâches mécaniques.
 
 ## Prochaines étapes
-- **T1 — dédup catalogue** : red → green → refactor dans une branche `feat/...` → PR (1er passage du flux protégé).
-- Trancher : forcer des titres de PR conventional (squash commit = titre PR, hors commitlint) via check "semantic PR title".
+- Corriger le bug latent : dédup par `name` dans `get bricks()`.
+- Resserrer les assertions (`toHaveLength`) sur partagé/diamant/circulaire.
+- Commit + PR (1er passage du flux protégé).
+- Roadmap : versions en array + défaut « latest »/highest (bloc commenté `Brick.test.ts`).

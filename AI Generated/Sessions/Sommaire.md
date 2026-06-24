@@ -85,6 +85,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | seed4t-perso           | [[AI Generated/Sessions/seed4t-perso/22-06-2026_23-38]]           |
 | seed4t-perso           | [[AI Generated/Sessions/seed4t-perso/23-06-2026_11-32]]           |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/23-06-2026_15-28]]               |
+| seed4t-perso           | [[AI Generated/Sessions/seed4t-perso/24-06-2026_10-57]]           |
 
 ## Hot notes :
 

@@ -1,5 +1,5 @@
 ---
-updated: 23-06-2026
+updated: 24-06-2026
 tags: [meta, hot-cache, global]
 ---
 
@@ -8,7 +8,7 @@ tags: [meta, hot-cache, global]
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
 ## Derniere activite
-23-06-2026 - olis-lab : suppression complète du legacy checkout CRA (95 fichiers, −15.6k lignes, flag `dev_checkout_v2` retiré, redirect 100% Next) sur `chore/remove-legacy-cra-checkout`, 5 commits faits, PR à ouvrir. En parallèle : PR footer CMS `feat/footer-global-cra-read` toujours en attente de retours.
+24-06-2026 - seed4t-perso : domaine Brick/Catalog/Cart bien avance en TDD (resolution transitive recursive, Cart en modele roots, 11 tests verts) sur `feat/enhance-domain-resolve-dependant`. Bug latent : le getter `bricks` ne deduplique pas entre roots, masque par `arrayContaining`. Reste a commiter + PR.
 
 ## Projets actifs
 
@@ -23,9 +23,9 @@ tags: [meta, hot-cache, global]
 - Prochaine etape : si refacto, sortir la logique scoring des repos vers le domaine (point 1 du plan note 03) ; trier les notes Inbox (to-process).
 
 ### seed4t-perso
-- Derniere session : 23-06-2026
-- Etat : monorepo pnpm `remyShift/seed4t` (prive), `packages/core` = domaine pur, **Node 26.3.1 via `.tool-versions`**, CI verte. **Echafaudage de rigueur complet** : TS Strict+ (noUncheckedIndexedAccess...), ESLint strictTypeChecked + prefer-readonly, **convention T/I (B)** (value objects = `type TBrick`, contrats = `interface I...`, `consistent-type-definitions: off`), alias **`@/`** (tsc-alias + vitest natif `resolve.tsconfigPaths`). Hooks husky+lint-staged+commitlint **qui prefixent `$(mise where node)/bin` au PATH** (sinon node 21 systeme -> crash listr2). `main` protege (PR obligatoire 0 review, check `build-and-test`, squash-only, bypass vide). Domaine inchange (Brick/Catalog/Cart, 4 tests). Posture mentor : Claude ne code jamais, Remy ecrit chaque test. Pieges : **mise ne lit pas `.nvmrc` par defaut** (-> `.tool-versions` source unique) ; une PR fermee ne se supprime pas (PR #1 garde un commit residuel). Regle "jamais de Co-Authored-By" gravee dans CLAUDE.md global.
-- Prochaine etape : **T1 — dedup catalogue** (1er cycle TDD red->green->refactor) dans une branche `feat/...` -> PR (1er passage du flux protege). Optionnel : check CI "semantic PR title" (squash commit = titre PR, hors commitlint).
+- Derniere session : 24-06-2026
+- Etat : monorepo pnpm `remyShift/seed4t` (prive), `packages/core` domaine pur, Node 26.3.1 via `.tool-versions`, CI verte, `main` protege (PR + squash + check `build-and-test`). **TDD bien avance** sur branche `feat/enhance-domain-resolve-dependant` (pas encore commitee/PR). `src` decoupe en `Brick.ts`/`Catalog.ts`/`Cart.ts`/`index.ts`, tests dans `src/tests/`. 11 tests verts. `Catalog.resolve` = DFS recursif pre-order (`Set visited` anti-cycle + dedup intra). `Cart` = **modele roots** (`roots` source de verite, `bricks` getter derive via `flatMap(resolve)`). **Bug latent** : le getter ne deduplique pas entre roots (cas partage sort un doublon), masque par les assertions `arrayContaining`. Infra : hooks prefixent `$(mise where node)/bin` au PATH ; convention T/I ; `consistent-type-definitions: off`.
+- Prochaine etape : corriger la dedup du getter (`get bricks()` par name) ; resserrer les assertions (`toHaveLength`) sur partage/diamant/circulaire ; commit + PR (1er passage du flux protege) ; puis roadmap versions (array + defaut « latest »).
 
 ### ts-seed (predecesseur, repo mob)
 - Derniere session : 29-05-2026
