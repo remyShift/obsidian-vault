@@ -45,3 +45,4 @@ tags:
 - [ ] Session avec baptiste seed4t
 - [ ] Pimp My shell --> retour et mise en place
 - [ ] L'été le moins chaud du reste de notre vie
+- [ ] Payload depth type issue ask for help
