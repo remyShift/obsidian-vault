@@ -7,34 +7,27 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-25-06-2026 — Fix bug navbar CMS labels (PR #1839) : labels d'onglets mobile ignoraient les overrides CMS ; `resolveNavLabel` extrait en fonction pure partagée desktop/mobile. Non commité. (Session précédente : fix slug PR #1850.)
+25-06-2026 — Feature unlock champs identité Products (PR ouverte, branche `refactor/unlock-availability-ean-sku-fields`) : SKU/EAN sur composant partagé `LockableTextField` (lock/unlock + Generate SKU), slug remonté hors sidebar, fix bug accents SKU. (Plus tôt aujourd'hui : fix navbar CMS labels PR #1839 + fix slug PR #1850.)
 
 ## État du projet
-- **Navbar CMS labels (PR #1839, branche `feat/next-read-payload-navbar`)** : bug Devin confirmé par Diego, fixé. `resolveNavLabel(item, cmsLabels, t)` extrait dans `cmsNavbarSections.ts`, consommé par `Navbar.tsx` (desktop) et `NavbarMenu.tsx` (mobile, prop `cmsLabels` ajouté). `tsc` + eslint clean. **3 fichiers non commités.** 2e commentaire Devin (revalidate 1h→24h) = faux positif écarté.
-- **Slug fix (PR #1850, commité `5a283e721`, fix CI non commité)** : génération via hooks collection `beforeValidate` (`ensureProductSlug`/`ensureSubcategorySlug`, comme `generateProductSku`). Stabilisé (génère au create, jamais de régen auto). Test int `productSlug.int.spec.ts`. Fix CI (nom brand unique) **pas encore commité**.
-- **Top banner (planif)** : reco Option 3 (token `{freeShippingThreshold}` + helper `@olis-lab/shared`).
-- **Bulk-add Products→Edit (planif)** : Approche B (composant + endpoint), `join` découplé (YAGNI).
-- **TASK-1115 (SKU)** : PR auto-regen revertée. Décision meeting Michele/Diego.
-- **RFC RBAC** : doc EN rédigé, à coller dans Notion + faire trancher l'équipe.
-- Chantiers checkout/footer toujours en attente.
+- **Feature unlock sku/ean/slug (PR ouverte, branche `refactor/unlock-availability-ean-sku-fields`)** : `LockableTextField` (`apps/cms/src/components/`) partagé sku+ean (verrouillé à l'ouverture, bouton Unlock, bouton Generate pour le SKU via `canGenerate`). `computeProductSku` (`hooks/sku/`) branché sur `field.custom.slugify` → réutilise `slugifyHandler` natif, zéro endpoint. Slug : `slugField` natif gardé, sorti de la sidebar (`delete field.admin.position`), placé sous l'identité. `CreateOnlyTextField` supprimé. Lock = `useState` éphémère (non persisté), relock au publish via `useFormProcessing`+`_status`. tsc+eslint clean, 31 tests unit verts. **Pas vérifié en live.**
+- **Navbar CMS labels (PR #1839)** : `resolveNavLabel` fonction pure partagée desktop/mobile. 3 fichiers non commités.
+- **Slug fix (PR #1850, `5a283e721`)** : génération en hooks collection `beforeValidate`. Fix CI (nom brand unique) non commité.
+- **Top banner (planif)** : reco Option 3. **Bulk-add Products→Edit (planif)** : Approche B. **TASK-1115 SKU** : auto-regen revertée, meeting. **RFC RBAC** : doc EN à coller dans Notion. Chantiers checkout/footer en attente.
 
 ## Faits récents importants
-- Résolution de label navbar = **fonction pure partagée**, pas closure inline → desktop et mobile alignés, une seule source de vérité. `'brands'` toujours en i18n.
-- next-intl non typé strict dans `apps/web` (`labelKey: string` passe dans `t()`) → threader `t: (key: string) => string` dans un helper pur est OK (pas de contravariance).
-- Bot Devin : commentaires inline avec sévérité (🟡 BUG / 🚩 ANALYSIS), tri humain requis ; Diego répond sur le commentaire pertinent.
-- **Slug = hook collection `beforeValidate`, JAMAIS hook de champ** : Payload valide les champs en parallèle (`Promise.all`) → générateur de champ async perd la course contre la validation `required` → `400 "Slug invalid"`. Générer en collection `beforeValidate` (séquentiel, avant validation).
-- `/app` dans une stacktrace = build standalone conteneurisé → un fix non redéployé reste périmé. Index Mongo `unique` parfois non appliqué en local mais appliqué en CI → divergence.
+- Lock SlugField natif = `useState(true)` **client non persisté** → pas de field de lock, pas de hook serveur "lock au publish".
+- `slugifyHandler` lit `field.custom.slugify` de **n'importe quel** champ → bouton Generate réutilisable (SKU) sans endpoint custom.
+- `sanitizeBrandSection` ne retirait pas les accents (bug `OLIS-MIMÉT…`) → `stripDiacritics` extrait de `@/lib/slugify`, partagé. Fix bouton + auto-gen.
+- `Button` Payload : prop `margin={false}` enlève le `margin-block` par défaut (sinon gros gap vertical). CSS global d'un composant client non bundlé par Next → style flex inline.
+- Slug = hook collection `beforeValidate` (jamais hook de champ : race validation parallèle → 400). next-intl non typé strict dans `apps/web`. Bot Devin : sévérité 🟡/🚩, tri humain.
+- Env local : shell Node 26 vs repo pin 20.19, `mise exec` tombe sur node Homebrew 25 cassé → `generate:importmap` KO en local. Index Mongo `unique` non appliqué en local mais en CI.
 
 ## Décisions actives
-- Navbar : `resolveNavLabel` fonction pure dans `cmsNavbarSections.ts`, consommée des deux côtés ; prop `cmsLabels` passé à `NavbarMenu`.
-- Slug stabilisé (`if (data.slug || originalDoc?.slug) return`, comme SKU) ; génération en collection `beforeValidate` ; checkbox neutralisée, arg `slugify` pour le bouton.
-- Tests de régression int conservés (seul filet pour ces classes de bug).
-- Migration subcategory non découplée — figer ou non = à trancher.
+- unlock champs : composant partagé `LockableTextField` sur FieldLabel/TextInput/Button natifs ; SKU regen via tuyau slug natif (`computeProductSku`, renommé depuis `slugifyProductSku`) ; lock éphémère, relock au publish, save draft = no-op ; EAN verrouillé même en draft ; pas de test sur `computeProductSku` (Rémy) mais tests `buildSku` gardés.
+- Slug : garder `slugField`, juste repositionner. Navbar : `resolveNavLabel` partagé. Slug gen : collection `beforeValidate`, checkbox neutralisée.
 
 ## Prochaines étapes
-- Commit du fix navbar (PR #1839, 3 fichiers) ; décider si répondre au thread Devin/Diego.
-- Commit + push du fix CI slug (test brand) → CI verte ; finaliser PR #1850.
-- Rebuild/redéployer le conteneur CMS depuis le HEAD corrigé.
-- Vérifier le bouton "Generate" en live dans le CMS.
-- Trancher : figer la migration subcategory ou non.
-- Reprendre banner / bulk-add / SKU / RFC RBAC.
+- Vérifier en live le rendu + comportement unlock/Generate/relock dans le CMS ; suivre la PR `refactor/unlock-availability-ean-sku-fields`.
+- Commit fix navbar (PR #1839, 3 fichiers) ; commit+push fix CI slug → finaliser PR #1850 ; rebuild conteneur CMS.
+- Trancher migration subcategory. Reprendre banner / bulk-add / SKU / RFC RBAC.
