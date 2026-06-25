@@ -47,3 +47,4 @@ tags:
 - [ ] L'été le moins chaud du reste de notre vie
 - [ ] Payload depth type issue ask for help
 - [ ] Cette note --> tout le monde devrait en avoir une
+- [ ] je suis le seul a supprimer mes conversations avec claude quand j'en ai plus besoins ?
