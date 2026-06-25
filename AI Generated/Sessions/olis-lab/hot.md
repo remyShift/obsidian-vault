@@ -1,5 +1,5 @@
 ---
-updated: 24-06-2026
+updated: 25-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,28 +7,31 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-24-06-2026 — Fix slug livré (Products + Subcategories, int 20/20). Nouveau fil : **RFC "Role-based access in Payload CMS"** rédigée (doc Notion, prête à coller). 3 fils en planif toujours ouverts (top banner, bulk-add, SKU).
+25-06-2026 — Fix slug **finalisé** : génération déplacée dans un hook collection `beforeValidate` (un hook de champ async ne marche pas, Payload valide les champs en parallèle), comportement stabilisé, test de régression int ajouté. CI debug (collision nom de brand unique). Reste à commit/push + redéployer le conteneur périmé.
 
 ## État du projet
-- **RFC RBAC Payload (rédigée, à coller)** : doc EN `~/.claude/plans/j-aimerais-crire-un-doc-squishy-dusk.md`, approuvé. RFC technique "case + direction" pour l'équipe dev. Reco = modèle de rôles minimal (`roles` sur `Users` : select hasMany saveToJWT) + helpers `apps/cms/src/access/` (`isAdmin`/`hasRole`) réutilisés collection/field access **et** endpoints, migration incrémentale (étape 1 = tout admin par défaut → zéro lock-out), pilote = champ `slug`.
-- **Slug fix (implémenté, à pousser)** : Products + Subcategories, double chemin (override hook async au save + arg `slugify` au bouton) via resolver partagé `slugifyProduct/Subcategory`. Int 20/20 + unit 29/29 verts. Message PR EN prêt, pas commité ni vérifié en live.
-- **Top banner montant dynamique (planif)** : plan EN approuvé, **option non tranchée**. Reco Option 3 = token `{freeShippingThreshold}` + helper pur `@olis-lab/shared`, injection front.
-- **Bulk-add Products→Edit (planif)** : plan EN, `Edits.products` (`hasMany`) existe → pas de schéma. Corps = Approche B (composant + endpoint). `join` = companion découplé (YAGNI).
-- **TASK-1115 (SKU)** : PR auto-regen revertée (SKU live → out-of-stock BigBlue). Brief EN prêt, décision attendue meeting Michele/Diego.
-- Chantiers checkout/footer (sessions 22-23/06) toujours en attente.
+- **Slug fix (commité `5a283e721`, fix CI non commité)** : génération via hooks collection `beforeValidate` (`ensureProductSlug`/`ensureSubcategorySlug`, comme `generateProductSku`). Checkbox slugField neutralisée, arg `slugify` gardé pour le bouton. Stabilisé (génère au create, jamais de régen auto). Test int `productSlug.int.spec.ts`. Fix CI (nom brand unique) dans le test, **pas encore commité**.
+- **Top banner (planif)** : option non tranchée ; reco Option 3 (token `{freeShippingThreshold}` + helper `@olis-lab/shared`).
+- **Bulk-add Products→Edit (planif)** : Approche B (composant + endpoint), `join` découplé (YAGNI).
+- **TASK-1115 (SKU)** : PR auto-regen revertée (SKU live → out-of-stock BigBlue). Décision meeting Michele/Diego.
+- **RFC RBAC** : doc EN rédigé, à coller dans Notion + faire trancher l'équipe.
+- Chantiers checkout/footer toujours en attente.
 
 ## Faits récents importants
-- **Pas de RBAC** : `Users` auth nu, tous = admin. Protections de champs ad-hoc UI-only (`sku` readOnly, `notionId`/`legacyId` hidden) — ne sécurisent PAS l'API. Global `TradingPlan` + endpoints de sync (`if (!req.user)` seul) ouverts à tout user authentifié. PostHog = couche end-user client-side, distincte de l'accès admin Payload.
-- **Slug** : `slugField` = 2 chemins (hook save + bouton via `slugifyHandler`/`field.custom.slugify`). Le `generateSlug` par défaut n'`await` PAS le slugify async → override obligatoire. `fieldToUse` déprécié → `useAsSlug`. Slug = clé URL PDP `/products/:slug`.
-- **SKU = clé BigBlue** (read-only, jamais poussé). Muter un SKU live → out-of-stock.
-- **Banner** : seuil = contexte client (Jotai), Payload sans templating → injection au render front.
+- **Slug = hook collection `beforeValidate`, JAMAIS hook de champ** : Payload valide les champs en parallèle (`Promise.all`), donc un générateur de champ **async** (résout marque/catégorie via `findByID`) perd la course contre la validation `required` du champ slug → `400 "Slug invalid"`. Le natif s'en sort car synchrone. Ordre Payload : collection beforeValidate → field beforeValidate → field beforeChange+validate (parallèle) → collection beforeChange.
+- `/app` dans une stacktrace = build standalone conteneurisé (Dockerfile) → un fix non redéployé reste périmé (la 1ʳᵉ erreur `Promise cast` venait de là, commit cassé `c1b516f18`).
+- Index Mongo `unique: true` parfois non appliqué en test local (DB fraîche) mais appliqué en CI → divergence (a causé la CI rouge : test créait 2 brands homonymes).
+- Angle mort tests : factory fournissait un slug + draft saute la validation `required` → la génération-au-create n'était pas testée.
 
 ## Décisions actives
-- RBAC : RFC = case+direction (design complet = ticket séparé) ; rôles minimaux, helpers réutilisables, incrémental ; honnêteté assumée = sûreté opérationnelle pas anti-malveillant.
-- Slug : les DEUX chemins (override async + arg), override NON redondant. Migration subcategory non découplée (figer ou non = à trancher).
-- Banner : ticket ouvert, Option 3 (token front). Bulk-add : Approche B, `join` découplé. SKU : découpler duplicate (D) / correction (B), RBAC différé.
+- Slug stabilisé (`if (data.slug || originalDoc?.slug) return`, comme SKU) ; changement = unlock + bouton Generate.
+- Génération en collection beforeValidate ; checkbox neutralisée ; arg `slugify` pour le bouton (awaité par `slugifyHandler`).
+- Test de régression int conservé (seul filet pour cette classe de bug).
+- Migration subcategory non découplée (slugify corrigé sur env neuf) — figer ou non = à trancher.
 
 ## Prochaines étapes
-- RFC RBAC : coller dans Notion (entre les marqueurs), faire trancher l'équipe (set de rôles, pilote slug vs collection), puis ouvrir le ticket d'implémentation (TDD).
-- Slug : ouvrir la PR + vérif live du bouton Generate ; décider figer la migration ou non.
-- Banner : trancher l'option. Bulk-add : décider l'implé B + répondre à Diego. SKU : meeting Michele/Diego.
+- Commit + push du fix CI (test brand) → CI verte ; finaliser PR #1850.
+- Rebuild/redéployer le conteneur CMS depuis le HEAD corrigé.
+- Vérifier le bouton "Generate" en live dans le CMS.
+- Trancher : figer la migration subcategory ou non.
+- Reprendre banner / bulk-add / SKU / RFC RBAC.

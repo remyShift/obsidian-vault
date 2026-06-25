@@ -88,6 +88,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/24-06-2026_11-15]]               |
 | seed4t-perso           | [[AI Generated/Sessions/seed4t-perso/24-06-2026_10-57]]           |
 | obsidian-vault         | [[AI Generated/Sessions/obsidian-vault/24-06-2026_22-03]]         |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/25-06-2026_15-42]]               |
 
 ## Hot notes :
 
