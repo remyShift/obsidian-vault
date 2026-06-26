@@ -1,5 +1,5 @@
 ---
-updated: 25-06-2026
+updated: 26-06-2026
 project: olis-lab
 tags: [meta, hot-cache]
 ---
@@ -7,27 +7,24 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-25-06-2026 — Feature unlock champs identité Products (PR ouverte, branche `refactor/unlock-availability-ean-sku-fields`) : SKU/EAN sur composant partagé `LockableTextField` (lock/unlock + Generate SKU), slug remonté hors sidebar, fix bug accents SKU. (Plus tôt aujourd'hui : fix navbar CMS labels PR #1839 + fix slug PR #1850.)
+26-06-2026 — Review de Diego traitée sur la PR #1853 (unlock sku/ean/slug) : 5 findings triés, corrigés (EAN éditable en draft, Generate SKU masqué si Live, `find` par type, classes Payload réutilisées, commentaire `@experimental`). Réponse EN à poster, à vérifier en live.
 
 ## État du projet
-- **Feature unlock sku/ean/slug (PR ouverte, branche `refactor/unlock-availability-ean-sku-fields`)** : `LockableTextField` (`apps/cms/src/components/`) partagé sku+ean (verrouillé à l'ouverture, bouton Unlock, bouton Generate pour le SKU via `canGenerate`). `computeProductSku` (`hooks/sku/`) branché sur `field.custom.slugify` → réutilise `slugifyHandler` natif, zéro endpoint. Slug : `slugField` natif gardé, sorti de la sidebar (`delete field.admin.position`), placé sous l'identité. `CreateOnlyTextField` supprimé. Lock = `useState` éphémère (non persisté), relock au publish via `useFormProcessing`+`_status`. tsc+eslint clean, 31 tests unit verts. **Pas vérifié en live.**
-- **Navbar CMS labels (PR #1839)** : `resolveNavLabel` fonction pure partagée desktop/mobile. 3 fichiers non commités.
-- **Slug fix (PR #1850, `5a283e721`)** : génération en hooks collection `beforeValidate`. Fix CI (nom brand unique) non commité.
-- **Top banner (planif)** : reco Option 3. **Bulk-add Products→Edit (planif)** : Approche B. **TASK-1115 SKU** : auto-regen revertée, meeting. **RFC RBAC** : doc EN à coller dans Notion. Chantiers checkout/footer en attente.
+- **PR #1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : composant partagé `LockableTextField` (sku+ean) sur FieldLabel/TextInput/Button natifs ; lock = `useState(_status === 'published')` éphémère, relock au publish, save draft no-op ; Generate SKU via `computeProductSku` (`field.custom.slugify` + `slugifyHandler` natif, zéro endpoint), **masqué si `status === 'Live'`** (SKU = clé BigBlue). Slug : `slugField` natif gardé, sorti de la sidebar, placé sous l'identité. `CreateOnlyTextField` supprimé. Fix accents SKU (`stripDiacritics` partagé). Review IA de Diego traitée (fixes commités côté working tree, **pas encore push/commit décidé**). tsc+eslint+31 unit verts. **Pas vérifié en live** (env Node cassé localement).
+- Autres : navbar PR #1839 (`resolveNavLabel` partagé, non commité) ; slug PR #1850 (`5a283e721`, fix CI non commité, rebuild conteneur à faire) ; top banner (Option 3), bulk-add (Approche B), TASK-1115 SKU (meeting), RFC RBAC (Notion), checkout/footer.
 
 ## Faits récents importants
-- Lock SlugField natif = `useState(true)` **client non persisté** → pas de field de lock, pas de hook serveur "lock au publish".
-- `slugifyHandler` lit `field.custom.slugify` de **n'importe quel** champ → bouton Generate réutilisable (SKU) sans endpoint custom.
-- `sanitizeBrandSection` ne retirait pas les accents (bug `OLIS-MIMÉT…`) → `stripDiacritics` extrait de `@/lib/slugify`, partagé. Fix bouton + auto-gen.
-- `Button` Payload : prop `margin={false}` enlève le `margin-block` par défaut (sinon gros gap vertical). CSS global d'un composant client non bundlé par Next → style flex inline.
-- Slug = hook collection `beforeValidate` (jamais hook de champ : race validation parallèle → 400). next-intl non typé strict dans `apps/web`. Bot Devin : sévérité 🟡/🚩, tri humain.
-- Env local : shell Node 26 vs repo pin 20.19, `mise exec` tombe sur node Homebrew 25 cassé → `generate:importmap` KO en local. Index Mongo `unique` non appliqué en local mais en CI.
+- Repo GitHub = `olis-lab/web-app`. Reviews IA de Diego = **issue comments** (`gh api repos/olis-lab/web-app/issues/<n>/comments`), signées "🤖 conducted by Claude".
+- Deux statuts produit : `_status` (Payload draft/published, sert au lock par défaut) vs `status` (commercial `Live`/`Staged`/`Offline`, sert au blocage regen SKU).
+- Classes scss du slug natif (`.slug-field-component .label-wrapper`, `.lock-button`) sont dans le bundle `@payloadcms/ui` → réutilisables sur un composant custom ; un `.scss` local importé dans un composant client est refusé par Next hors layout.
+- Lock du SlugField natif = `useState` client non persisté ; `slugifyHandler` lit `custom.slugify` de n'importe quel champ. `SlugField` est `@experimental`.
 
 ## Décisions actives
-- unlock champs : composant partagé `LockableTextField` sur FieldLabel/TextInput/Button natifs ; SKU regen via tuyau slug natif (`computeProductSku`, renommé depuis `slugifyProductSku`) ; lock éphémère, relock au publish, save draft = no-op ; EAN verrouillé même en draft ; pas de test sur `computeProductSku` (Rémy) mais tests `buildSku` gardés.
-- Slug : garder `slugField`, juste repositionner. Navbar : `resolveNavLabel` partagé. Slug gen : collection `beforeValidate`, checkbox neutralisée.
+- Lock par défaut basé sur `_status === 'published'` (draft/neuf éditable, publié verrouillé). SKU non régénérable quand `status === 'Live'` (Generate masqué) ; pas de migration des SKU accentués (réécrire = risque out-of-stock BigBlue).
+- Garder `LockableTextField` (fork contenu du SlugField `@experimental`, visibilité via commentaire d'en-tête) ; réutiliser composants/classes/props Payload plutôt que custom.
 
 ## Prochaines étapes
-- Vérifier en live le rendu + comportement unlock/Generate/relock dans le CMS ; suivre la PR `refactor/unlock-availability-ean-sku-fields`.
-- Commit fix navbar (PR #1839, 3 fichiers) ; commit+push fix CI slug → finaliser PR #1850 ; rebuild conteneur CMS.
-- Trancher migration subcategory. Reprendre banner / bulk-add / SKU / RFC RBAC.
+- Poster la réponse EN à Diego (PR #1853) ; vérif visuelle dans l'admin ; commit + push des fichiers (`LockableTextField.tsx`, `Products.ts`).
+- Trancher : sur produit Live, geler totalement le SKU (bloquer aussi l'Unlock) ou juste masquer Generate (actuel).
+- Optionnel selon Diego : test unitaire sur la logique de relock.
+- Reprendre navbar #1839 / slug #1850 / banner / bulk-add / SKU / RFC RBAC.
