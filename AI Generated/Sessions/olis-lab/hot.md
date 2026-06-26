@@ -7,24 +7,26 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-26-06-2026 — Deux chantiers ce jour : (1) review IA de Diego traitée sur PR #1853 (unlock sku/ean/slug) ; (2) fix du bug navbar/announcement bar CMS toujours `null` (apps/web, branche `feat/next-read-payload-navbar`, PR #1839).
+26-06-2026 — Enquête + plan validé pour réintroduire la PR cart hook revertée (#1801, `computeCartSnapshot`) avec un test d'intégration durci. Implémentation **reportée** par Rémy.
 
 ## État du projet
-- **Navbar PR #1839 (`feat/next-read-payload-navbar`, apps/web)** : bug `getServerFeatureFlag` → `null` → CMS jamais fetché, **corrigé**. Root cause = `distinctId` lu dans un cookie posthog jamais posé (posthog-js en `opt_out_capturing_by_default: true` + `cookieless_mode: 'on_reject'`). Fix : éval serveur avec id constant `'server-side'`, retrait de `onlyEvaluateLocally`, `sendFeatureFlagEvents: false` ; mock rebranché sur `NODE_ENV === 'development'` via helper partagé `getLocalFlagFallback` (serveur + client). Rémy a ajouté un early-return dev (court-circuite PostHog en local). 4 fichiers touchés, tsc+eslint verts, **pas vérifié en live** (env Node cassé). Pas commité.
-- **PR #1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : `LockableTextField` (sku+ean), lock = `_status === 'published'`, Generate SKU masqué si `status === 'Live'`. Review IA de Diego traitée (5 findings), réponse EN à poster, pas vérifié en live.
+- **Cart hook #1801 (TASK-1005, REVERTÉE par Diego `8f03cb807`)** : plan prêt (`~/.claude/plans/diego-a-revert-hier-lucky-truffle.md`), pas implémenté. Le revert était **par précaution** (QA manuelle impossible dans l'admin Payload dev, faute de legacyId→backsync→mongo dev), pas un bug. La PR contenait DÉJÀ le test d'intégration voulu (8 cas), qui **tourne en CI** (`ci.yml:101`, `mongo:7`, `pnpm test`). Plan : réappliquer le code prod manuellement (revert auto KO, conflit `shared/index.ts`) + skip explicite si legacyId absent + réintroduire test + 9ᵉ cas (publié sans legacyId → pas de snapshot, pas de log).
+- **Navbar PR #1839 (`feat/next-read-payload-navbar`, apps/web)** : bug navbar/announcement CMS = `null` permanent **corrigé** (éval flag serveur avec id constant `'server-side'`, retrait `onlyEvaluateLocally`, mock rebranché sur `NODE_ENV` via `getLocalFlagFallback`). 4 fichiers, tsc+eslint verts, **pas vérifié live** (env Node cassé), **pas commité**. Sécurité : `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` fuite la personal API key dans le bundle → renommer server-only + Amplify.
+- **PR #1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : `LockableTextField` (sku+ean), lock = `_status==='published'`, Generate SKU masqué si `status==='Live'`. Review IA de Diego traitée (5 findings), réponse EN à poster, pas vérifié live.
+- Autres ouverts : slug #1850 (fix CI + rebuild conteneur), top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC, checkout/footer.
 
 ## Faits récents importants
-- posthog-node + `onlyEvaluateLocally: true` → `undefined` si définitions pas encore pollées (race cold start). Retirer l'option = self-heal via endpoint distant.
-- Coupler un flag posthog au cookie de consentement = anti-pattern pour du contenu public ; éval serveur avec id constant = déterministe, idéal pour interrupteur on/off de migration.
-- `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` = personal API key **fuite dans le bundle client** (préfixe `NEXT_PUBLIC_`). À renommer server-only + coordonner Amplify.
-- Deux statuts produit : `_status` (Payload draft/published, lock) vs `status` (`Live`/`Staged`/`Offline`, blocage regen SKU). Repo = `olis-lab/web-app`, reviews IA de Diego en issue comments.
+- Repo = `olis-lab/web-app`. Reviews IA de Diego = **issue comments** (`gh api repos/olis-lab/web-app/issues/<n>/comments`).
+- `legacyId` = simple champ texte recopié dans `cartProduct._id` ; en test la factory le pose (`faker.database.mongodbObjectId()`). Rien à mocker côté backsync.
+- Deux statuts produit : `_status` (Payload draft/published, sert au lock) vs `status` (commercial `Live`/`Staged`/`Offline`, sert au blocage regen SKU).
+- `cartProductSchema._id` = regex 24-hex → produit non-backsyncé fait throw le `parse` → bug latent (skip implicite + log bruyant).
 
 ## Décisions actives
-- Navbar : Option 1 (découpler CMS du flag par-cookie, éval id constant). Mock = fallback dev only ; prod sans clé → `null`/defer legacy (plus de mock `true` en prod).
-- SKU non régénérable si `status === 'Live'` (Generate masqué) ; pas de migration des SKU accentués.
-- Garder `LockableTextField` (fork du `SlugField` `@experimental`, visibilité via commentaire d'en-tête).
+- Cart hook : réintroduire code prod #1801 + skip explicite si pas de legacyId + test 8+1 cas. Manuel, branche propre, pas de revert auto.
+- Lock par défaut basé sur `_status`. SKU non régénérable si `status==='Live'` (Generate masqué). Flag de migration = on/off serveur (id constant), pas de ciblage par-user.
 
 ## Prochaines étapes
-- Navbar #1839 : vérifier en live (Node 20), commit + push (`posthog-server.ts`, `feature-flags.ts`, `useFeatureFlags.ts`, `SiteHeader.tsx`), poster commentaire EN sur la PR, renommer la clé API exposée (avec Amplify).
-- PR #1853 : poster réponse EN à Diego, vérif visuelle admin, commit + push, trancher gel total SKU si Live.
-- En attente : slug #1850 (fix CI + rebuild conteneur), top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC, checkout/footer.
+- Cart hook : implémenter le plan quand Rémy le décide ; d'abord vérifier que `legacyId` n'est pas required au publish + confirmer le motif du revert avec Diego.
+- Navbar #1839 : vérif live (Node 20) + commit/push 4 fichiers + commentaire EN + renommer clé API exposée.
+- PR #1853 : poster réponse EN à Diego + vérif admin + commit/push + trancher gel total SKU si Live.
+- Reprendre slug #1850 / banner / bulk-add / SKU meeting / RFC RBAC.
