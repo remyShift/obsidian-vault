@@ -7,27 +7,31 @@ tags: [meta, hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-26-06-2026 — Enquête + plan (révisé après discussion Slack avec Diego) pour réintroduire la PR cart hook revertée (#1801, `computeCartSnapshot`) + un test de constat. Implémentation **reportée** par Rémy.
+26-06-2026 — Plan validé (implémentation reportée) : 4 améliorations sur les globals Payload (`apps/cms`) — validation path navbar, traductions IA des globals, live preview admin, "Brands" éditable.
 
 ## État du projet
-- **Cart hook #1801 (TASK-1005, REVERTÉE par Diego `8f03cb807`)** : plan prêt (`~/.claude/plans/diego-a-revert-hier-lucky-truffle.md`), pas implémenté. Le revert était **par précaution** (QA manuelle impossible dans l'admin Payload dev) — Rémy reconnaît qu'il n'était pas nécessaire. La PR contenait DÉJÀ le test d'intégration voulu (8 cas), qui **tourne en CI** (`ci.yml:101`, `mongo:7`, `pnpm test`). **Tranché avec Diego** : réappliquer #1801 **tel quel** (zéro modif du hook) + 8 cas + 9ᵉ cas de **constat** (publié sans legacyId → pas de snapshot, ne pas asserter le logger). Le « skip explicite » est **abandonné** → part dans le **follow-up guard**. Réapplication manuelle (revert auto KO, conflit `shared/index.ts`).
-- **Follow-up "soon" (PR séparée, acté Diego)** : guard `beforeValidate` empêchant de publier/passer `Live` un produit sans legacyId. Vrai fix du bug **déjà observé en prod** (signalé par Suze Laverack).
-- **Navbar PR #1839 (`feat/next-read-payload-navbar`, apps/web)** : bug navbar/announcement CMS = `null` permanent **corrigé** (éval flag serveur avec id constant `'server-side'`, retrait `onlyEvaluateLocally`, mock rebranché sur `NODE_ENV` via `getLocalFlagFallback`). 4 fichiers, tsc+eslint verts, **pas vérifié live** (env Node cassé), **pas commité**. Sécurité : `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` fuite la personal API key dans le bundle → renommer server-only + Amplify.
-- **PR #1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : `LockableTextField` (sku+ean), lock = `_status==='published'`, Generate SKU masqué si `status==='Live'`. Review IA de Diego traitée (5 findings), réponse EN à poster, pas vérifié live.
-- Autres ouverts : slug #1850 (fix CI + rebuild conteneur), top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC, checkout/footer.
+- **Plan globals validé (`~/.claude/plans/j-aimerais-faire-le-plan-cuddly-breeze.md`, NON implémenté)** :
+  - **Task 1** : path navbar requis si item ET section non-disabled (la validation actuelle ignore `sectionDisabled`). Helper pur `isNavItemPathRequired(data, path)` via `data`+`path` du `ValidateOptions`.
+  - **Task 2 (trivial)** : remplir `globals: ['navbar','announcement-bar','trading-plan']` dans le plugin `translator` (infra openAIResolver déjà là, bouton Translate fourni).
+  - **Task 3** : route preview **unique interne au CMS** (`/preview/header`, même origine, zéro CORS) rendant announcement+navbar ensemble via `useLivePreview` + composants `packages/ui` (`Navbar` + `TopBanner`).
+  - **Task 4** : groupe `brands` (label localisé + path validé) dans le global Navbar + wiring front (infra `getCmsNavLabels`/`resolveNavLabel` existe déjà, exclut juste brands). Remplace le hardcodé `ROUTES.hotBrands`.
+- **Cart hook #1801 (TASK-1005, revertée)** : plan prêt (`~/.claude/plans/diego-a-revert-hier-lucky-truffle.md`), non implémenté. Réappliquer #1801 tel quel + 8 cas + 9ᵉ de constat. Skip explicite abandonné → follow-up guard `beforeValidate` (vrai bug déjà en prod).
+- **Navbar PR #1839** : fix flag CMS=`null` fait (4 fichiers, verts), pas vérifié live ni commité. Sécu : `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` fuit la personal API key → renommer server-only.
+- **PR #1853 (TASK-1125, ouverte)** : `LockableTextField` sku/ean, review Diego traitée, réponse EN à poster, pas vérifié live.
+- Autres : slug #1850, top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC.
 
 ## Faits récents importants
-- Repo = `olis-lab/web-app`. Reviews IA de Diego = **issue comments** (`gh api repos/olis-lab/web-app/issues/<n>/comments`).
-- `legacyId` = simple champ texte recopié dans `cartProduct._id` ; en test la factory le pose (`faker.database.mongodbObjectId()`). Rien à mocker côté backsync.
-- Deux statuts produit : `_status` (Payload draft/published, sert au lock) vs `status` (commercial `Live`/`Staged`/`Offline`, sert au blocage regen SKU).
-- `cartProductSchema._id` = regex 24-hex → produit non-backsyncé fait throw le `parse` → bug latent (skip implicite + log bruyant).
+- 3 globals seulement (navbar, announcement-bar, trading-plan), **pas de Footer** → footer hors scope.
+- Navbar : composant dans `packages/ui` (legacy, props-driven) ET `apps/web` (vrai front, partiellement CMS). `packages/shared` = seulement `guardNavbar`.
+- `TopBanner` d'`apps/web` non portable (couplé), mais `packages/ui/.../TopBanner/index.tsx` réutilisable directement.
+- `validate` Payload donne `data`+`path` → accès aux ancêtres (section) que `siblingData` ne donne pas.
+- Repo = `olis-lab/web-app`. Reviews IA de Diego = issue comments. Deux statuts produit : `_status` vs `status`.
 
 ## Décisions actives
-- Cart hook : réintroduire code prod #1801 **tel quel** (pas de skip explicite) + test 8+1 cas de constat. Manuel, branche propre, pas de revert auto. Guard `beforeValidate` = follow-up séparé.
-- Lock par défaut basé sur `_status`. SKU non régénérable si `status==='Live'` (Generate masqué). Flag de migration = on/off serveur (id constant), pas de ciblage par-user.
+- Globals : live preview = route interne CMS (pas `apps/web`), une seule route pour les 2 globals. Traduction IA sur les 3 globals. Navbar preview via `packages/ui` (tradeoff UI legacy). Footer exclu. Pas de TDD imposé sur Task 1.
+- Cart hook : réintroduire #1801 tel quel + test 8+1, guard = follow-up. Lock par défaut sur `_status`, SKU non régénérable si Live.
 
 ## Prochaines étapes
-- Cart hook : implémenter le plan révisé quand Rémy le décide (réintro #1801 tel quel + 8+1 tests) ; vérifier d'abord que `legacyId` n'est pas required au publish. Puis follow-up guard `beforeValidate`.
-- Navbar #1839 : vérif live (Node 20) + commit/push 4 fichiers + commentaire EN + renommer clé API exposée.
-- PR #1853 : poster réponse EN à Diego + vérif admin + commit/push + trancher gel total SKU si Live.
+- Implémenter le plan globals. Ordre : Task 2 → Task 1 → Task 4 → Task 3. `sync-payload-types` après schéma. Vérif live (env Node local cassé).
+- PR #1853 : réponse Diego + vérif admin + commit/push. Navbar #1839 : vérif live + commit + renommer clé API exposée. Cart hook #1801 + follow-up guard.
 - Reprendre slug #1850 / banner / bulk-add / SKU meeting / RFC RBAC.
