@@ -21,6 +21,7 @@ tags:
 - [ ] RDV Dentiste
 - [ ] Clean Archigonale : archi au croisement de l'architecture hexagonale / clean archi (cf code workshop)
 - [ ] Appeler impôt —> résident fiscal
+- [ ] Note sur `fs` node
 
 ## Work
 
