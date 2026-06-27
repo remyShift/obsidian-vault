@@ -2,7 +2,6 @@
 tags: [LangagesDeProgs, Ruby, ManipArr]
 ---
 
-
 ## take
 
 Prend les premiers n éléments du tableau.
