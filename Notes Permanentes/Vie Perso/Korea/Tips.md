@@ -15,3 +15,4 @@ tags:
 - Lotte Tourist Membership Card : carte pour le shopping et loisir qui offre des réductions chez Lotte Mart, Lotte Duty Free et d'autres grands magasins.
 	- Avantages aussi dans Lotte World et Seoul Sky
 - Le dernier mercredi de chaque mois = entrée gratuite aux palais et lieux culturels
+- 거지맵 : app qui te montre tout les restaus pas cher autour de toi
