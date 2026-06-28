@@ -27,7 +27,7 @@ Le développement d'une fonctionnalité va se faire en itérations à savoir : [
 
 ⚠️ Il faut être le plus rigoureux possible lors de ces étapes et bien avancer pas à pas.
 
-**NB :** cf [[Anatomie d'un test]]
+**NB :** cf [[Anatomie d'un test]] et [[Les faux amis du test]] (pièges d'assertion : présence vs absence vs unicité).
 
 Pour résumer l'objectif du TDD est de définir un objectif / besoin sous la forme d'un test qu'on veut faire passer au vert avec le minimum de code possible avant de passer à essayer de rendre notre code plus lisible.
 
