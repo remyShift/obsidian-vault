@@ -5,6 +5,8 @@ tags: [Korea]
 - [ ] Lotte World
 	- Parc d'attraction
 - [ ] Namsan Tower
+- [ ] Namsangol Village (**free**)
+- [ ] Musée National de Corée (**free**)
 - [ ] Haebangchon (해방촌)
 	- Jazz night, bons cafés, à coté de la namsan tower et du namsan botanic garden
 - [ ] Hannam-dong (한남동)
@@ -17,7 +19,10 @@ tags: [Korea]
 - [ ] Startfield Library Suwon
 - [ ] Ihwa Mural Village
 	- Rue colorés et street art
-- [ ] National Folk Museum of Korea
+- [ ] National Folk Museum of Korea (**free**)
+- [ ] Temple Jogyesa (**free**)
+- [ ] Marché aux puces de Dongmyo (**free**)
+- [ ] Eunpyong Hanok Village (**free**)
 
 ## Nature
 
@@ -29,5 +34,6 @@ tags: [Korea]
 - [ ] Cheonggyecheon Stream
 - [ ] Changdeok Secret Garden
 - [ ] Seoul Forest
+- [ ] Parc Dream Forest
 - [ ] Namsan Botanic Garden
 - [ ] Heunginjimun Park
