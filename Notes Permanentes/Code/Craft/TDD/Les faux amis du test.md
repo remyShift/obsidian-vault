@@ -2,9 +2,6 @@
 tags: [Code, Craft, TDD]
 type: permanent
 ---
-
-# Les faux amis du test (présence, absence, unicité)
-
 Une assertion qui passe ne prouve pas ce qu'on croit. Le vrai filet de sécurité, c'est un test qu'on a **vu rouge au moins une fois** : un test jamais vu échouer ne garantit rien (il peut valider une tautologie).
 
 ## `arrayContaining` ne teste que la présence
