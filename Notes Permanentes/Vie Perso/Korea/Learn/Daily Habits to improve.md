@@ -2,6 +2,7 @@
 tags:
   - Korea
 ---
+
 1. 5 nouveau par jour en plus dans mon app flash cards
 2. 1 Vidéo minimum en coréen par jour
 3. Écrire quelques phrases en coréen à propos de ma journée
