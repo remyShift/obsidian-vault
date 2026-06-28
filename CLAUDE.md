@@ -139,6 +139,11 @@ Autres skills présents : `defuddle`, `json-canvas`, `obsidian-bases`, `obsidian
 - Architecture : MCP entre Claude Code et Obsidian (plugin MCP Tools + Local REST API), config dans `~/.claude.json`. symdex en MCP global.
 - Hook SessionStart : charge les 3 sessions AI Generated les plus récentes du projet courant.
 
+**Pièges outils (réflexes durs) :**
+
+- `vault:search_files` ne recurse PAS avec un glob simple (`*X*` cherche à la racine seulement). Toujours préfixer le pattern par `**/` : `**/*Wittouck*`.
+- Ne jamais éditer une note du vault via `str_replace`/`Edit` natif : ces outils opèrent sur le FS du conteneur, pas sur celui du MCP vault → "File not found". Passer par `vault:edit_file` (édition par lignes) ou `vault:write_file`.
+
 ---
 
 ## Recherche sémantique (RAG)
