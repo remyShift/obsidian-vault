@@ -28,7 +28,7 @@ Mon autorité ne vient pas de la maîtrise technique, elle vient du parcours. Je
 
 - Première personne, ton parlé, je tutoie souvent le lecteur.
 - Ouverture sur un hook : une question ou une affirmation qui pique.
-- Clôture sur une question ouverte qui invite au commentaire.
+- Clôture sur une question ouverte qui invite au commentaire, et surtout facile à répondre en réflexe. Une question trop coûteuse tue l'engagement même quand la portée est là.
 - Jamais de comparatif de langages ou de frameworks.
 - Jamais de post qui trahit mes valeurs.
 
@@ -50,6 +50,23 @@ Générer, tout le monde sait faire. Relire, digérer, virer ce qui ne sonne pas
 - Les micro-updates qui n'intéressent que moi.
 - Les recos de matériel, les "bon week-end à tous".
 - Les posts qui se plaignent de LinkedIn : en assaisonnement seulement, jamais en plat principal. Sinon je deviens exactement le mec que je moque.
+
+## Ce que les chiffres disent (REX juin 2026)
+
+Premier vrai batch publié : ~28k impressions sur 12 posts. Trois moteurs distincts, à ne pas confondre.
+
+- **Portée** : le fun fact / la curiosité (ex. les deux systèmes de nombres coréens) et la tension mise en scène (un désaccord, un dilemme). L'algo pousse ce qui se lit jusqu'au bout ou ce qui fait réagir.
+- **Commentaires** : ce qui demande quelque chose. Une vraie question technique où les gens montrent qu'ils savent, ou un dilemme où on a forcément un avis. Mes conclusions élégantes ne génèrent pas de commentaires, mes questions et mes conflits si. À lui seul, un post "vraie question" a fait un tiers de mes commentaires du mois.
+- **Likes** : la confession relatable (les tests, le courage aux juniors). Bien pour la marque, peu viral. Le hochement de tête, pas la conversation.
+
+Leçons que j'en tire :
+
+- **La question-aide est un levier en or, mais à rationner.** Une fois de temps en temps ça cartonne, trop souvent je passe pour le mec qui sait pas faire son taf.
+- **Pas d'insider pur.** Un post trop interne (claude.md, skills, PR du tech lead) parle à dix personnes dans une salle de mille. Si je parle de mon terrain, je traduis l'enjeu pour celui qui est pas dans ma boîte.
+- **Question de fin facile à répondre.** Je veux une réponse réflexe, pas une dissertation.
+- **Cadence : un post tous les 2-3 jours, pas tous les jours.** Le daily cannibalise ma propre portée et fatigue la même audience. La fin de mon streak de juin l'a montré (chute des likes en bout de série). Espacer = une tranche de réseau plus fraîche par post.
+- **La photo + tag seule ne voyage pas.** Format "on est là" assumé, mais zéro attente de portée dessus.
+- **Un 0 sec, c'est de la distribution, pas de l'écriture.** Avant de juger un texte qui fait zéro : créneau, lien externe, ou double post le même jour. Pas le contenu.
 
 ## Le risque à surveiller
 
