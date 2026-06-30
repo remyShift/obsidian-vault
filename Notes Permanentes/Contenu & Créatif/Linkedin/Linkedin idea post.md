@@ -28,8 +28,7 @@ tags:
 - [x] truc bête que j'aime autocompletion console log
 - [x] pose des questions en reformulants l'intention
 - [x] Retour vacances / nouvelle anné📅
-- [ ] [Instagram](https://www.instagram.com/reel/DRfG2jNCMaw/?igsh=MXRsb3dqOXUxempydQ==)
-- [ ] Trouver nom de branche
+- [x] [Instagram](https://www.instagram.com/reel/DRfG2jNCMaw/?igsh=MXRsb3dqOXUxempydQ==)
 - [x] App coréenne valide le mail pendant le signup
 - [x] Take sur le fait que l'ia va créer de l'emplois plutôt que l'inverse
 - [x] Setup maison obsidian + claude
@@ -48,4 +47,5 @@ tags:
 - [ ] Payload depth type issue ask for help
 - [ ] Cette note --> tout le monde devrait en avoir une
 - [ ] je suis le seul a supprimer mes conversations avec claude quand j'en ai plus besoins ?
-- [ ] Que se passe t il si j'ai pas les 3ans d'xp requis car je quitte ma mission plus tot ?
+- [ ] Que se passe t il si j'ai pas les 3ans d'xp requis car je quitte ma mission plus tot ? C'est quoi l'après première expérience ?
+- [ ] Trouver nom de branche
