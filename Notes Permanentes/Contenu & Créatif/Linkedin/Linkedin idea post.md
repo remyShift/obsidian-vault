@@ -46,4 +46,3 @@ tags:
 - [ ] Cette note --> tout le monde devrait en avoir une
 - [ ] je suis le seul a supprimer mes conversations avec claude quand j'en ai plus besoins ?
 - [ ] Que se passe t il si j'ai pas les 3ans d'xp requis car je quitte ma mission plus tot ? C'est quoi l'après première expérience ?
-- [ ] Trouver nom de branche

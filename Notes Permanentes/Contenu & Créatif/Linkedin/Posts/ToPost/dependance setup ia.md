@@ -8,6 +8,7 @@ url:
 tags:
   - Linkedin
 ---
+
 J'ai monté un setup autour de l'IA tellement efficace que, honnêtement, ça commence à me faire un peu peur.
 
 Pas peur de l'IA. Peur de moi sans elle.
