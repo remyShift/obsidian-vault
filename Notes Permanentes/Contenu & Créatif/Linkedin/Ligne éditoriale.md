@@ -2,7 +2,9 @@
 tags:
   - Linkedin
 ---
+
 Note de référence pour cadrer mes posts.
+
 - Index des posts : [[Sommaire LinkedIn]],
 - Idées en vrac : [[Linkedin idea post]].
 
@@ -37,6 +39,7 @@ Mon autorité ne vient pas de la maîtrise technique, elle vient du parcours. Je
 Mon principe n'est pas "j'écris tout à la main". J'utilise l'IA (reformulation, génération de code, brouillons) et c'est assumé. Le principe, c'est que rien ne sort sous mon nom que je n'aie relu, challengé et rendu mien, peu importe l'outil.
 
 Concrètement, pas de tics d'IA dans ce que je publie :
+
 - Pas de tiret cadratin, j'utilise "-".
 - Pas de conclusion moralisatrice ajoutée automatiquement.
 - Pas de phrase trop lisse qui ne me ressemble pas.

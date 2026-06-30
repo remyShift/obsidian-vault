@@ -1,3 +1,7 @@
+---
+tags: [Road2BeDev]
+---
+
 Index de tous mes posts LinkedIn archivés dans Posts/, qui ont ce [[LinkedIn Post|template]].
 
 Pour avoir des idées tu peux regarder cette note [[Linkedin idea post]].
@@ -7,9 +11,8 @@ Pour avoir des idées tu peux regarder cette note [[Linkedin idea post]].
 ## 🏆 Top 10 - Meilleurs posts
 
 > [!info]- Score pondéré
->  `impressions + likes × 30 + commentaires × 70`
-> Un like vaut 30 impressions, un commentaire vaut 70. 
-> 
+> `impressions + likes × 30 + commentaires × 70`
+> Un like vaut 30 impressions, un commentaire vaut 70.
 
 ```dataview
 TABLE
@@ -35,6 +38,7 @@ FROM "Notes Permanentes/Contenu & Créatif/Linkedin/Posts"
 SORT default(impressions, 0) DESC
 LIMIT 10
 ```
+
 ## 💩 Top 10 - Pires posts en termes d'impressions
 
 ```dataview
@@ -67,7 +71,7 @@ SORT date DESC
 | [[18-01-2024 - meetup lyonjs]]                    | Compte-rendu enthousiaste du premier meetup LyonJS de l'année                                                            |
 | [[24-07-2024 - premier post]]                     | 🚀 Salut à tous,                                                                                                         |
 | [[25-07-2024 - conference devoxx]]                | 🚀 Toujours dans ma quête de connaissance, j'ai regardé la conférence Devoxx "Voyage au centre de la                     |
-| [[29-07-2024 - un mois de react]]                 | 🚀 Après un mois intense à apprendre React (tout en travaillant dans l’alimentaire à côté), je suis r                    |
+| [[29-07-2024 - un mois de react]]                 | 🚀 Après un mois intense à apprendre React (tout en travaillant dans l'alimentaire à côté), je suis r                    |
 | [[29-07-2024 - lecture damon]]                    | Étant actuellement entrain de lire ce livre (recommandé par Colin Damon) 👇🏼                                            |
 | [[31-07-2024 - update semaine]]                   | 🚀 Toujours on my                                                                                                        |
 | [[02-08-2024 - prise de notes]]                   | Ne pas prendre de notes, c'est comme essayer de remplir une passoire d'eau : bon courage pour reteni                     |
@@ -77,7 +81,7 @@ SORT date DESC
 | [[11-08-2024 - reco clavier]]                     | Mon clavier commence à se faire vieux si vous avez des recommandations de bon claviers je dis pas no                     |
 | [[12-08-2024 - objectifs hebdo]]                  | Nouvelle semaine = Nouveaux objectifs ! 👇🏼                                                                             |
 | [[13-08-2024 - freelance liberte]]                | Je vois passer beaucoup de posts dissociant le 'Free' dans freelance comme de la liberté ultime… mai                     |
-| [[14-08-2024 - obsidian]]                         | C’est quoi ce nuage de 200 points ? Une nouvelle constellation à des années-lumière de chez nous ? P                     |
+| [[14-08-2024 - obsidian]]                         | C'est quoi ce nuage de 200 points ? Une nouvelle constellation à des années-lumière de chez nous ? P                     |
 | [[15-08-2024 - vitres brisees]]                   | Connaissez-vous la théorie des vitres brisées ? Laissez-moi vous expliquer et comment cela s'appliqu                     |
 | [[17-08-2024 - decouverte tests]]                 | Je sais enfin faire des tests, et c'est grâce aux vidéos de David Grammatico !                                           |
 | [[18-08-2024 - trunk based dev]]                  | Explication du Trunk-Based Development : développer sur le tronc pour itérer vite et réduire la dette de merge           |
@@ -87,19 +91,19 @@ SORT date DESC
 | [[22-08-2024 - nextjs routing]]                   | Découverte du routing file-based de Next.js : simplicité et magie des routes imbriquées                                  |
 | [[23-08-2024 - securite web]]                     | Vous voulez sécuriser votre site mais ne savez pas par où commencer ? Laissez-moi vous guider 👇🏼                       |
 | [[25-08-2024 - syndrome imposteur]]               | Dimanche confession : et si je vous disais que je n'ai jamais ressenti le syndrome de l'imposteur ?👇                    |
-| [[26-08-2024 - objectifs semaine]]                | 🚀 Nouvelle Semaine = Nouveaux objectifs ! Let’s go !                                                                    |
+| [[26-08-2024 - objectifs semaine]]                | 🚀 Nouvelle Semaine = Nouveaux objectifs ! Let's go !                                                                    |
 | [[27-08-2024 - discipline corps]]                 | Comment la discipline a transformé mon corps et boosté mon apprentissage ? 🏋‍💻                                         |
-| [[28-08-2024 - nextjs metadata]]                  | Toujours dans mon apprentissage de NextJS, aujourd’hui au menu c’est les Metadata 🍷                                     |
+| [[28-08-2024 - nextjs metadata]]                  | Toujours dans mon apprentissage de NextJS, aujourd'hui au menu c'est les Metadata 🍷                                     |
 | [[29-08-2024 - certif vs competences]]            | Être certifié ne rime pas avec compétences.                                                                              |
-| [[29-08-2024 - video interessante]]               | Je viens de regarder cette vidéo : https://lnkd.in/eSPsAFUy et c’était super interessant je te dis ç                     |
-| [[30-08-2024 - desinstall jeu]]                   | Je viens de désinstaller le dernier jeu que j’avais sur mon mac je t’explique le contexte 👇🏼                           |
+| [[29-08-2024 - video interessante]]               | Je viens de regarder cette vidéo : https://lnkd.in/eSPsAFUy et c'était super interessant je te dis ç                     |
+| [[30-08-2024 - desinstall jeu]]                   | Je viens de désinstaller le dernier jeu que j'avais sur mon mac je t'explique le contexte 👇🏼                           |
 | [[31-08-2024 - challenge landing]]                | J'ai voulu me challenger sur une landing page et je suis plutôt satisfait, je t'explique comment j'e                     |
-| [[01-09-2024 - confession sneakers]]              | Dimanche confession : et si je vous disais que la paire qu’il y a en photo est à moi ? 👇🏼                              |
+| [[01-09-2024 - confession sneakers]]              | Dimanche confession : et si je vous disais que la paire qu'il y a en photo est à moi ? 👇🏼                              |
 | [[02-09-2024 - learn in public]]                  | 🚀 Nouvelle semaine = Nouveaux objectifs ! Learn in public tel est mon nindo !                                           |
-| [[03-09-2024 - code legacy]]                      | Le code legacy ça te fait peur ? Aller viens je t’explique comment bien l’appréhender ! 👇🏼                             |
-| [[04-09-2024 - nextjs special file]]              | Toujours sur mon apprentissage de NextJS aujourd’hui on parle  special file  ! 👇🏼                                      |
-| [[05-09-2024 - apiculteur ours]]                  | Un apiculteur du nom de Ibrahim Sedef a gérer des ours qui s’en prenaient à ses ruches. Je t’expliqu                     |
-| [[06-09-2024 - racine carree inverse]]            | Vous savez comment faire une racine carrée inverse ? Et surtout, pourquoi c’est utile dans les jeux                      |
+| [[03-09-2024 - code legacy]]                      | Le code legacy ça te fait peur ? Aller viens je t'explique comment bien l'appréhender ! 👇🏼                             |
+| [[04-09-2024 - nextjs special file]]              | Toujours sur mon apprentissage de NextJS aujourd'hui on parle  special file  ! 👇🏼                                      |
+| [[05-09-2024 - apiculteur ours]]                  | Un apiculteur du nom de Ibrahim Sedef a gérer des ours qui s'en prenaient à ses ruches. Je t'expliqu                     |
+| [[06-09-2024 - racine carree inverse]]            | Vous savez comment faire une racine carrée inverse ? Et surtout, pourquoi c'est utile dans les jeux                      |
 | [[07-09-2024 - calculatrice react]]               | Réalisation d'une calculatrice UI iPhone en React + Zustand pour continuer à pratiquer                                   |
 | [[07-09-2024 - dilemme formation]]                | Dilemme : continuer à travailler pour financer une formation avec diplôme ou plonger dans le code à temps plein          |
 | [[08-09-2024 - bugs linkedin]]                    | Liste des fonctionnalités manquantes ou bugguées sur LinkedIn, avec un CTA humoristique                                  |
@@ -107,27 +111,27 @@ SORT date DESC
 | [[10-09-2024 - question emploi]]                  | Hello le réseau je me posais une question vous utilisez quoi comme plateforme pour trouver un emploi                     |
 | [[10-09-2024 - zevent side project]]              | Idée de side project inspirée d'un bug de classement des dons lors du ZEvent — une course visuelle interactive           |
 | [[11-09-2024 - utilite des tests]]                | Pour beaucoup les tests sont une perte de temps, mais laissez moi vous expliquer en quoi ils sont in                     |
-| [[12-09-2024 - nextjs intercepting routes]]       | Intercepter une route en NextJS, mais pourquoi et comment ? Je t’explique ça 👇🏼                                        |
+| [[12-09-2024 - nextjs intercepting routes]]       | Intercepter une route en NextJS, mais pourquoi et comment ? Je t'explique ça 👇🏼                                        |
 | [[13-09-2024 - le saviez vous]]                   | Vous saviez que     ? Je vous explique ça 👇🏼                                                                           |
-| [[14-09-2024 - nommage clean code]]               | Aujourd’hui je te donne les pièges à éviter pour améliorer le nommage dans ton code 👇🏼                                 |
+| [[14-09-2024 - nommage clean code]]               | Aujourd'hui je te donne les pièges à éviter pour améliorer le nommage dans ton code 👇🏼                                 |
 | [[15-09-2024 - template portfolio]]               | J'ai finis le template globale qui me servira sur la plupart de mes pages de mon portfolio ! 🎉                          |
-| [[16-09-2024 - objectifs semaine]]                | C’est Lundi et comme chaque Lundi —> Nouvelle semaine = nouveaux objectifs 🚀                                            |
-| [[17-09-2024 - retour experience]]                | J’ai     par   et voici ce que ça m’a apporté ! 👇🏼                                                                     |
+| [[16-09-2024 - objectifs semaine]]                | C'est Lundi et comme chaque Lundi —> Nouvelle semaine = nouveaux objectifs 🚀                                            |
+| [[17-09-2024 - retour experience]]                | J'ai     par   et voici ce que ça m'a apporté ! 👇🏼                                                                     |
 | [[18-09-2024 - projets qui degoute]]              | Est ce que vous aussi vos (side) projets finissent par vous dégoûter quand vous y passer trop de tem                     |
 | [[19-09-2024 - fond grainy threejs]]              | Non c'est pas la vidéo qui est de mauvaise qualité, le fond gris est bien granuleux et en mouvement                      |
 | [[20-09-2024 - commercial dev atout]]             | Comment mon expérience de commercial sera un plus en tant que développeur ? 👇🏼                                         |
-| [[21-09-2024 - interet nocode]]                   | Il y a quelques choses que j’ai du mal à saisir : l’intérêt du no code ?                                                 |
+| [[21-09-2024 - interet nocode]]                   | Il y a quelques choses que j'ai du mal à saisir : l'intérêt du no code ?                                                 |
 | [[24-09-2024 - portfolio termine]]                | Non j'ai pas quitté Linkedin, j'ai simplement passé la 4ème pour enfin finir ce projet qui traîne de                     |
-| [[24-09-2024 - bug portfolio]]                    | Bon j’ai un soucis sur mon portfolio et j’ai besoin d’aide ! 👇🏼                                                        |
+| [[24-09-2024 - bug portfolio]]                    | Bon j'ai un soucis sur mon portfolio et j'ai besoin d'aide ! 👇🏼                                                        |
 | [[25-09-2024 - breadcrumb nextjs]]                | J'ai fais un breadcrumb sans m'en rendre compte, je t'explique ça ! 👇🏼                                                 |
 | [[26-09-2024 - principes first tests]]            | Explication des principes FIRST pour écrire de bons tests unitaires (Fast, Isolated, Repeatable, Self-verifying, Timely) |
 | [[27-09-2024 - outil mockup]]                     | Découverte d'un outil de génération de mockups propres pour présenter ses projets sur différents devices                 |
 | [[28-09-2024 - formation maintenue]]              | Soulagement : la formation Le Wagon finalement maintenue malgré un problème de financement CPF                           |
 | [[29-09-2024 - accessibilite zoom]]               | Question ouverte sur la gestion du zoom navigateur dans l'accessibilité web                                              |
 | [[30-09-2024 - fin alimentaire]]                  | Dernier jour de travail alimentaire : objectifs de la semaine avant le début de la formation                             |
-| [[30-09-2024 - stagiaire instagram]]              | Le stagiaire d’instagram a encore fait des siennes :                                                                     |
-| [[01-10-2024 - clean code simplicite]]            | Un des piliers du Clean Code c’est la simplicité, mais c’est quoi un code simple pour vous ?                             |
-| [[02-10-2024 - prendre l air]]                    | Je me demande encore si prendre l’air fais plus de bien à lui qu’à moi ? 😂                                              |
+| [[30-09-2024 - stagiaire instagram]]              | Le stagiaire d'instagram a encore fait des siennes :                                                                     |
+| [[01-10-2024 - clean code simplicite]]            | Un des piliers du Clean Code c'est la simplicité, mais c'est quoi un code simple pour vous ?                             |
+| [[02-10-2024 - prendre l air]]                    | Je me demande encore si prendre l'air fais plus de bien à lui qu'à moi ? 😂                                              |
 | [[02-10-2024 - katas ruby]]                       | Ça fait seulement 2 jours que je pratique des Katas avec Ruby et j'avoue je commence à vraiment bien                     |
 | [[03-10-2024 - nextjs requetes http]]             | Au menu du jour la simplicité de mise en place de requêtes HTTP en NextJS ! 👇🏼                                         |
 | [[05-10-2024 - mock terme abus]]                  | Tu savais qu'on utilise le terme "mock" à tord et à travers ?                                                            |
@@ -154,7 +158,7 @@ SORT date DESC
 | [[11-11-2024 - trunk based dev v2]]               | Explication du Trunk-Based Development (version "tutoiement") — développer proche du tronc pour aller vite               |
 | [[12-11-2024 - classements suspects linkedin]]    | Observation dérangeante : tout le monde sur LinkedIn se dit "listé" dans des classements suspects                        |
 | [[13-11-2024 - retour sur twitter]]               | Réactivation du compte X (Twitter) et demande de suggestions de comptes tech à suivre                                    |
-| [[14-11-2024 - stage trouve]]                     | Annonce d'avoir trouvé un stage — étape clé dans le parcours #Road2BeDev                                                 |
+| [[14-11-2024 - stage trouve]]                     | Annonce d'avoir trouvé un stage — étape clé dans le parcours Road2BeDev                                                 |
 | [[15-11-2024 - erreur apres stage]]               | Malgré le stage trouvé, erreur importante remontée — retour honnête sur la gestion de l'erreur                           |
 | [[16-11-2024 - reprise posts objectifs]]          | Reprise des posts hebdomadaires avec objectifs du week-end                                                               |
 | [[17-11-2024 - questions katas]]                  | Questions soulevées après 5 katas — réflexions sur les bonnes pratiques et les patterns                                  |
@@ -267,7 +271,7 @@ SORT date DESC
 | [[30-07-2025 - plan vs realite semaine]]          | Semaine prévue pour avancer sur KicksFolio — ce qui a réellement eu lieu vs ce qui était planifié                        |
 | [[31-07-2025 - suppression dependances]]          | Enfin mis en pratique ce qui avait été annoncé — retrait de dépendances obsolètes                                        |
 | [[01-08-2025 - codebase respire]]                 | La base de code de KicksFolio commence à respirer — bilan du refacto en cours                                            |
-| [[02-08-2025 - grille alignee humour]]            | Bon week-end à tous, sauf... humour dev sur une image satisfaisante de grille parfaitement alignée                       |
+| [[02-08-2025 - grille alignee humour]]            | Bon week-end à tous, sauf… humour dev sur une image satisfaisante de grille parfaitement alignée                       |
 | [[03-08-2025 - journee tests coverage]]           | Pas de nouvelle feature — journée consacrée aux tests et à la couverture de code                                         |
 | [[04-08-2025 - ne pas postuler]]                  | La semaine dernière, choix de ne pas postuler — pourquoi et réflexions sur la recherche d'emploi                         |
 | [[05-08-2025 - ca marche pas]]                    | "Ça marche pas" — la phrase que tous les devs détestent, sans contexte ni info supplémentaire                            |
@@ -334,7 +338,7 @@ SORT date DESC
 | [[17-04-2026 - claude obsidian karpathy]]         | Adaptation du combo Claude + Obsidian popularisé par Karpathy — approche personnalisée plutôt que copiée                 |
 | [[19-04-2026 - obsidian contexte claude]]         | Utiliser des notes Obsidian comme contexte persistant pour Claude Code : stack, décisions d'archi, état actuel           |
 | [[21-04-2026 - speaker lyoncraft]]                | Annonce de sa participation comme speaker à LyonCraft — moins de 2 ans de dev, zéro diplôme technique                    |
-| [[24-04-2026 - cadratin ia detecteur]]            | Le tiret cadratin « — » comme marqueur visible d'un contenu IA copié-collé sans relecture ni appropriation               |
+| [[24-04-2026 - cadratin ia detecteur]]            | Le tiret cadratin " — " comme marqueur visible d'un contenu IA copié-collé sans relecture ni appropriation               |
 | [[29-04-2026 - ia destruction creatrice]]         | L'IA comme destruction créatrice (Schumpeter) : elle détruit des emplois mais en génère d'autres encore sans nom         |
 | [[04-05-2026 - s ecouter parler]]                 | Retour sur le fait de s'écouter sois même lors de la préparation de mon talk.                                            |
 | [[06-05-2026 - reconversion commerce dev]]        | Se reconvertir dans la tech quand on vient du commerce et le fait que je vais raconter ce parcours a LyonCraft.          |
