@@ -1,5 +1,5 @@
 ---
-date: 2026-06-08
+date: 2026-06-04
 likes: 21
 comments: 2
 reposts:
@@ -8,6 +8,7 @@ url: https://www.linkedin.com/posts/remy-cassagne_nous-y-est-alpescraft-2026-act
 tags:
   - Linkedin
 ---
+
 Nous y est [AlpesCraft](https://www.linkedin.com/company/alpescraft/) 2026 !
 
 ![[alpescraft.png]]

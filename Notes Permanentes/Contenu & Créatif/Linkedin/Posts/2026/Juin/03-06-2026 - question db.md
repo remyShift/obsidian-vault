@@ -1,5 +1,5 @@
 ---
-date: 2026-06-08
+date: 2026-06-03
 likes: 8
 comments: 38
 reposts:
@@ -8,8 +8,9 @@ url: https://www.linkedin.com/posts/remy-cassagne_petite-question-qui-vient-d%C3
 tags:
   - Linkedin
 ---
-Petite question qui vient d’émerger : est ce qu’une relation entre 2 collections dans une DB qui est many / many des 2 côtés est un smell ?  
-  
-Je sens qu’y a un truc qui cloche mais je saurais pas mettre de mots dessus.  
-  
+
+Petite question qui vient d'émerger : est ce qu'une relation entre 2 collections dans une DB qui est many / many des 2 côtés est un smell ?
+
+Je sens qu'y a un truc qui cloche mais je saurais pas mettre de mots dessus.
+
 Si vous avez des ressources sur le sujets et exemples je dis pas non ! 🙏🏼

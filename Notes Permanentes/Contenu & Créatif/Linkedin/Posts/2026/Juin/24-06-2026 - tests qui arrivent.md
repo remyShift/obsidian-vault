@@ -1,5 +1,5 @@
 ---
-date: 24-06-2026
+date: 2024-06-24
 likes: 14
 comments: 8
 reposts: 1
