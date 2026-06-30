@@ -9,14 +9,24 @@ tags:
   - Linkedin
 ---
 
-Question pour les gens qui font du Payload avec TypeScript.
+Petite question technique, mais je pose le décor d'abord pour ceux qui connaissent pas.
 
-Quand tu fais une requête avec un depth pour peupler tes relations, tu te retrouves avec un type où la relation est soit un simple ID, soit l'objet complet.
+Je bosse avec Payload, un CMS qu'on code en TypeScript.
 
-Du coup à chaque accès, tu dois vérifier "c'est un string ou un objet ?" avant de toucher au moindre champ.
+En gros, tu définis tes contenus et leurs relations, et il te génère une API et les types qui vont avec.
 
-Je sens que je m'y prends mal. Soit y'a un pattern propre pour typer ça selon le depth, soit je rate quelque chose dans ma façon de modéliser.
+Mon souci est sur les relations.
 
-Vous gérez ça comment, vous ? Type guards partout, un helper dédié, autre chose ?
+Quand tu fais une requête avec un "depth" pour aller chercher les données liées, le type que tu récupères dit que la relation est soit un simple ID, soit l'objet complet.
+
+Du coup, à chaque fois que je veux accéder à un champ de la relation, je dois d'abord vérifier "c'est un string ou un objet ?".
+
+Et ça finit par polluer tout mon code.
+
+Je sens que je m'y prends mal, soit y'a un pattern propre pour typer ça selon le depth, soit je rate un truc dans ma façon de modéliser.
+
+Vous gérez ça comment, ceux qui font du Payload ? Type guards partout, un helper dédié, autre chose ?
 
 Je prends toute ressource ou retour d'expérience.
+
+NB : je précise que c'est un soucis interne à Payload pas de ma configuration et que sur le repo de Payload une pr est ouverte depuis un moment visant à fix ça.

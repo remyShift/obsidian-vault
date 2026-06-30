@@ -9,7 +9,7 @@ tags:
   - Linkedin
 ---
 
-J'ai une note où je balance toutes mes idées de posts en vrac. Une ligne, parfois trois mots, dès qu'un truc me traverse.
+J'ai une note où je balance toutes mes idées de posts en vrac, une ligne, parfois trois mots, dès qu'un truc me traverse.
 
 C'est bête, mais c'est ce qui fait que je manque jamais de sujets.
 

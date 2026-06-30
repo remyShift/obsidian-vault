@@ -9,16 +9,26 @@ tags:
   - Linkedin
 ---
 
-Dans quelques semaines je pose tout pour partir trois mois en Corée. Et je suis dans un état bizarre : encore là, déjà à moitié parti.
+Dans quelques semaines je pars vivre trois mois en Corée, sans quitter ma mission actuelle.
 
-Le genre de moment où tu vis dans deux endroits à la fois. Ton corps est à ton bureau, ta tête est à Séoul.
+Je change de continent, pas d'équipe, mêmes projets, mêmes calls (quoique), même code.
 
-J'apprends une langue que je vais massacrer dès la première boulangerie. Je regarde des plans de quartiers où j'ai encore jamais mis les pieds. Je compte les semaines au lieu des jours, pour pas que ça paraisse trop réel.
+Juste quelques milliers de kilomètres et un gros décalage horaire en plus.
 
-Le truc que personne dit sur les grands départs, c'est que le plus dur c'est pas l'arrivée, c'est cet entre-deux. Tu t'investis plus tout à fait là où tu es, et tu peux pas encore t'investir là où tu vas.
+C'est le remote qui rend ça possible, et je réalise seulement maintenant à quel point c'est fou.
 
-Alors j'essaie de pas gâcher le présent à fixer le futur. Finir ma mission proprement, profiter des gens ici, tout en sachant que je remplis déjà des valises dans ma tête.
+Il y a pas si longtemps, "partir vivre à l'autre bout du monde" voulait dire tout plaquer.
 
-C'est inconfortable, et je signerais à nouveau sans hésiter.
+Aujourd'hui ça veut surtout dire réorganiser mes horaires et prévenir mon équipe.
 
-T'as déjà vécu cet entre-deux, le pied encore quelque part et la tête déjà ailleurs ?
+Mais y'a un truc que le remote règle pas, c'est l'entre-deux dans ma tête.
+
+Encore là, déjà à moitié parti, le corps à mon bureau, la tête à Séoul.
+
+J'apprends une langue que je vais massacrer dès la première boulangerie, je regarde des plans de quartiers où j'ai jamais mis les pieds et je compte les semaines au lieu des jours, pour pas que ça paraisse trop réel.
+
+Le pari, c'est de garder le boulot que j'aime tout en allant tester une vie ailleurs.
+
+Pas choisir entre les deux, on verra si les deux tiennent ensemble, fuseau horaire compris.
+
+Tu te verrais bosser pour ton équipe actuelle depuis l'autre bout du monde, toi ?

@@ -9,18 +9,28 @@ tags:
   - Linkedin
 ---
 
-Un type a répondu à mon commentaire sur LinkedIn avec une capture d'écran de ChatGPT. Pas une réponse. Une capture.
+Je vois un truc de plus en plus souvent sur LinkedIn, et il me met mal à l'aise.
 
-J'ai pris un moment pour réaliser ce que je regardais.
+Quelqu'un poste un avis. un autre, pas d'accord, répond, ça donne un débat jusque là classique.
 
-Quelqu'un a lu mon message, a ouvert une IA, a recopié ma question dedans, a screené le résultat, et me l'a renvoyé. Tout ça pour pas écrire trois phrases lui-même.
+Mais à un moment, l'un des deux au lieu d'écrire sa réponse va coller une capture d'écran de ChatGPT / Claude.
 
-Le truc, c'est que cette réponse, je l'avais déjà. Tout le monde l'a. Si je voulais l'avis d'une IA, je lui aurais demandé directement, pas à lui.
+Comme si "l'IA dit que" suffisait à clore le débat.
 
-Ce que je voulais, c'était son avis à lui. Sa façon de voir, même bancale, même incomplète. Le seul truc qu'il pouvait m'apporter que la machine pouvait pas, il l'a remplacé par la machine.
+Le truc, c'est que cette réponse, tout le monde l'a déjà.
 
-On a des outils qui peuvent penser à notre place. Le problème c'est pas l'outil, c'est qu'on commence à confondre "j'ai la réponse" avec "j'ai quelque chose à dire".
+Si je voulais l'avis d'une IA, je lui demanderais directement, pas à toi.
 
-Et entre les deux, y'a tout ce qui rend une conversation intéressante.
+Ce que je voulais, c'était ton avis à toi, ta façon de voir, même bancale, même incomplète.
 
-Ça t'est déjà arrivé, qu'on te réponde avec une capture d'IA ?
+Et là on glisse vers un truc bizarre, dans un débat, c'est plus celui qui argumente le mieux qui a raison, c'est celui qui dégaine la capture d'IA.
+
+La machine devient l'arbitre, et plus personne se mouille.
+
+On a des outils qui peuvent penser à notre place, le souci c'est pas l'outil, c'est qu'on commence à confondre "j'ai la réponse" avec "j'ai quelque chose à dire".
+
+Et entre les deux, y'a tout ce qui rend une discussion intéressante.
+
+Imagines un peut pendant les débats à la présidentielles si les candidats faisaient ça. 😂
+
+Tu le vois aussi, ce réflexe de répondre par capture d'IA ?
