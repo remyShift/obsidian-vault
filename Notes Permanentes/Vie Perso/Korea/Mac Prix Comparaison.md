@@ -12,9 +12,9 @@ marqueurs `DATA`) et le graphe se met à jour seul.
 
 <!-- DATA:START -->
 
-| Date | FX (₩/€) | Corée € | Corée → FR légal € | Prix FR € | Δ légal € | Prix KR ₩ |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-30 | 1760,80 | 3 558,04 € | 3 970,77 € | 4 224,00 € | 253,23 € | 6 265 000 ₩ |
+| Date | FX (₩/€) | Corée € | Corée → FR légal € | Corée → FR sans douane € | Prix FR € | Δ légal € | Prix KR ₩ |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-30 | 1760,80 | 3 558,04 € | 3 970,77 € | 3 308,98 € | 4 224,00 € | 253,23 € | 6 265 000 ₩ |
 
 <!-- DATA:END -->
 
@@ -38,9 +38,10 @@ const rows = data.map(line => {
     fx: toNum(c[1]),
     kr_eur: toNum(c[2]),
     coree_legale: toNum(c[3]),
-    P_fr: toNum(c[4]),
-    delta_legal: toNum(c[5]),
-    P_kr: toNum(c[6]),
+    coree_sans: toNum(c[4]),
+    P_fr: toNum(c[5]),
+    delta_legal: toNum(c[6]),
+    P_kr: toNum(c[7]),
   };
 }).filter(r => r.date && !isNaN(r.P_fr)).sort((a, b) => a.date.localeCompare(b.date));
 
@@ -56,6 +57,7 @@ if (!rows.length) {
       datasets: [
         { label: "Prix France (€)", data: rows.map(r => r.P_fr), borderColor: "#e06c75", backgroundColor: "#e06c75", tension: 0.2 },
         { label: "Corée → FR légal (€)", data: rows.map(r => r.coree_legale), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
+        { label: "Corée → FR sans douane (€)", data: rows.map(r => r.coree_sans), borderColor: "#98c379", backgroundColor: "#98c379", tension: 0.2 },
       ],
     },
     options: {
