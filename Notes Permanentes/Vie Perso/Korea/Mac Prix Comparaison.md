@@ -4,8 +4,11 @@ tags:
 ---
 
 Comparaison du prix d'un Mac **France vs Corée** (achat sur place, détaxe touriste,
+
 puis dédouanement à l'entrée en France). **Le tableau Source ci-dessous est la
+
 vérité éditable** : tu y saisis seulement les valeurs brutes. Le tableau Dataview
+
 et le graphe en dessous sont calculés et se mettent à jour seuls.
 
 ## Source (édite ici)
