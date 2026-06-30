@@ -12,9 +12,9 @@ et le graphe en dessous sont calculés et se mettent à jour seuls.
 
 <!-- DATA:START -->
 
-| Date | FX (₩/€) | Corée € | Corée → FR légal € | Corée → FR sans douane € | Prix FR € | Prix KR ₩ |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-30 | 1760,80 | 3 558,04 € | 3 970,77 € | 3 308,98 € | 4 224,00 € | 6 265 000 ₩ |
+| Date       | FX (₩/€) | Corée €    | Corée → FR légal € | Corée → FR sans douane € | Prix FR €  | Prix KR ₩   |
+| ---------- | -------- | ---------- | ------------------ | ------------------------ | ---------- | ----------- |
+| 2026-06-30 | 1760,80  | 3 558,04 € | 3 970,77 €         | 3 308,98 €               | 4 224,00 € | 6 265 000 ₩ |
 
 <!-- DATA:END -->
 
