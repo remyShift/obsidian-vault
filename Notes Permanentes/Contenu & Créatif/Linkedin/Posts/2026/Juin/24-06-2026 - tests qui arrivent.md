@@ -1,10 +1,10 @@
 ---
 date: 24-06-2026
-likes:
-comments:
-reposts:
-impressions:
-url:
+likes: 14
+comments: 8
+reposts: 1
+impressions: 1093
+url: https://www.linkedin.com/posts/remy-cassagne_malgr%C3%A9-le-post-dhier-des-tests-commencent-activity-7475438863315025920-rkYj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---

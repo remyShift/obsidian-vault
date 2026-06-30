@@ -1,9 +1,9 @@
 ---
 date: 23-06-2026
-likes:
-comments:
+likes: 7
+comments: 18
 reposts:
-impressions:
+impressions: 4957
 url: https://www.linkedin.com/posts/remy-cassagne_en-code-review-jai-pouss%C3%A9-pour-quon-teste-activity-7475076489508601857-TbQx?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin

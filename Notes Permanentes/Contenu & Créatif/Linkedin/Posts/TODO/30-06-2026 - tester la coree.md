@@ -1,10 +1,10 @@
 ---
 date: 28-06-2026
-likes:
-comments:
+likes: 7
+comments: 6
 reposts:
-impressions:
-url:
+impressions: 507
+url: https://www.linkedin.com/posts/remy-cassagne_dans-presque-2-mois-je-pars-trois-mois-en-activity-7477613154517172224-RtQ0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---

@@ -1,10 +1,10 @@
 ---
 date: 25-06-2026
-likes:
-comments:
+likes: 9
+comments: 5
 reposts:
-impressions:
-url:
+impressions: 1154
+url: https://www.linkedin.com/posts/remy-cassagne_ya-encore-des-%C3%A9coles-qui-vendent-la-reconversion-activity-7475801288178470912-h90g?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---

@@ -1,10 +1,10 @@
 ---
 date: 27-06-2026
-likes:
-comments:
+likes: 3
+comments: 5
 reposts:
-impressions:
-url:
+impressions: 2088
+url: https://www.linkedin.com/posts/remy-cassagne_l%C3%A9quipe-avec-laquelle-je-bosse-%C3%A9tait-franchement-activity-7477250808389120001-rIyP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
 ---

@@ -1,9 +1,9 @@
 ---
 date: 2026-06-19
-likes:
-comments:
+likes: 14
+comments: 9
 reposts:
-impressions:
+impressions: 1041
 url: https://www.linkedin.com/posts/remy-cassagne_une-journ%C3%A9e-enti%C3%A8re-%C3%A0-techwork-le-cerveau-share-7473502943007371264-MJ77/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin

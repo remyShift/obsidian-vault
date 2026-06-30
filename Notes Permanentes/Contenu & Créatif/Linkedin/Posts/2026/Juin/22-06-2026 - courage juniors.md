@@ -1,9 +1,9 @@
 ---
 date: 22-06-2026
-likes:
-comments:
-reposts:
-impressions:
+likes: 12
+comments: 5
+reposts: 1
+impressions: 2491
 url: https://www.linkedin.com/posts/remy-cassagne_le-march%C3%A9-est-dur-pour-les-juniors-en-ce-activity-7474714041857433600-D3KU?utm_source=share&utm_medium=member_ios&rcm=ACoAAEe2QnwBdGCTQ_9nepGZI7rLcUupSImAgo8
 tags:
   - Linkedin
