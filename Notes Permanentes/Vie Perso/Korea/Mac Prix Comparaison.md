@@ -4,24 +4,24 @@ tags:
 ---
 
 Comparaison du prix d'un Mac **France vs Corée** (achat sur place, détaxe touriste,
-puis dédouanement à l'entrée en France). **Le tableau ci-dessous est la source de
-vérité** : pour ajouter un relevé, ajoute une ligne dans le tableau (entre les
-marqueurs `DATA`) et le graphe se met à jour seul.
+puis dédouanement à l'entrée en France). **Le tableau Source ci-dessous est la
+vérité éditable** : tu y saisis seulement les valeurs brutes. Le tableau Dataview
+et le graphe en dessous sont calculés et se mettent à jour seuls.
 
-## Relevés
+## Source (édite ici)
 
 <!-- DATA:START -->
 
-| Date | FX (₩/€) | Corée € | Corée → FR légal € | Corée → FR sans douane € | Prix FR € | Δ légal € | Prix KR ₩ |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-30 | 1760,80 | 3 558,04 € | 3 970,77 € | 3 308,98 € | 4 224,00 € | 253,23 € | 6 265 000 ₩ |
+| Date | FX (₩/€) | Corée € | Corée → FR légal € | Corée → FR sans douane € | Prix FR € | Prix KR ₩ |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-30 | 1760,80 | 3 558,04 € | 3 970,77 € | 3 308,98 € | 4 224,00 € | 6 265 000 ₩ |
 
 <!-- DATA:END -->
 
-## Évolution dans le temps
+## Tableau
 
 ```dataviewjs
-// --- Lecture du tableau Markdown ci-dessus (source unique) ---
+// --- Lecture du tableau Source (seul endroit éditable) ---
 const raw = await dv.io.load(dv.current().file.path);
 const block = raw.split("DATA:START")[1]?.split("DATA:END")[0] ?? "";
 const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
@@ -33,37 +33,50 @@ const rows = data.map(line => {
   const c = line.split("|").map(x => x.trim());
   if (c[0] === "") c.shift();
   if (c[c.length - 1] === "") c.pop();
-  return {
+  const r = {
     date: c[0],
     fx: toNum(c[1]),
     kr_eur: toNum(c[2]),
     coree_legale: toNum(c[3]),
     coree_sans: toNum(c[4]),
     P_fr: toNum(c[5]),
-    delta_legal: toNum(c[6]),
-    P_kr: toNum(c[7]),
+    P_kr: toNum(c[6]),
   };
+  r.delta_legal = r.P_fr - r.coree_legale; // économie import légal vs France
+  r.delta_sans = r.P_fr - r.coree_sans;    // économie sans douane vs France
+  return r;
 }).filter(r => r.date && !isNaN(r.P_fr)).sort((a, b) => a.date.localeCompare(b.date));
+
+const eur = v => v.toLocaleString("fr-FR", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " €";
+const won = v => v.toLocaleString("fr-FR") + " ₩";
+const fxf = v => v.toLocaleString("fr-FR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
 if (!rows.length) {
   dv.paragraph("Aucune ligne de données trouvée entre les marqueurs `DATA`.");
-} else if (typeof window.renderChart !== "function") {
-  dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : impossible de tracer le graphe.");
 } else {
-  const chart = {
-    type: "line",
-    data: {
-      labels: rows.map(r => r.date),
-      datasets: [
-        { label: "Prix France (€)", data: rows.map(r => r.P_fr), borderColor: "#e06c75", backgroundColor: "#e06c75", tension: 0.2 },
-        { label: "Corée → FR légal (€)", data: rows.map(r => r.coree_legale), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
-        { label: "Corée → FR sans douane (€)", data: rows.map(r => r.coree_sans), borderColor: "#98c379", backgroundColor: "#98c379", tension: 0.2 },
-      ],
-    },
-    options: {
-      scales: { y: { title: { display: true, text: "€" } } },
-    },
-  };
-  window.renderChart(chart, this.container);
+  dv.table(
+    ["Date", "Prix FR", "Corée légal", "Δ légal", "Corée sans douane", "Δ sans douane", "FX ₩/€", "Prix KR"],
+    rows.map(r => [r.date, eur(r.P_fr), eur(r.coree_legale), eur(r.delta_legal), eur(r.coree_sans), eur(r.delta_sans), fxf(r.fx), won(r.P_kr)])
+  );
+
+  if (typeof window.renderChart !== "function") {
+    dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
+  } else {
+    const chart = {
+      type: "line",
+      data: {
+        labels: rows.map(r => r.date),
+        datasets: [
+          { label: "Prix France (€)", data: rows.map(r => r.P_fr), borderColor: "#e06c75", backgroundColor: "#e06c75", tension: 0.2 },
+          { label: "Corée → FR légal (€)", data: rows.map(r => r.coree_legale), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
+          { label: "Corée → FR sans douane (€)", data: rows.map(r => r.coree_sans), borderColor: "#98c379", backgroundColor: "#98c379", tension: 0.2 },
+        ],
+      },
+      options: {
+        scales: { y: { title: { display: true, text: "€" } } },
+      },
+    };
+    window.renderChart(chart, this.container);
+  }
 }
 ```
