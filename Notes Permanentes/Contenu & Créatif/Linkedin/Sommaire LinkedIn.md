@@ -352,5 +352,14 @@ SORT date DESC
 | [[31-05-2026 - meme mrbeast]]                     |                                                                                                                          |
 | [[02-06-2026 - ia fait code senior]]              | L'IA donne l'illusion que le code est senior.                                                                            |
 | [[03-06-2026 - question db]]                      | Question sur les relations db many - many                                                                                |
-| [[04-06-2026 - AlpesCraft]]                       | Début de journée AlpesCraft                                                                                              |
+| [[04-06-2026 - AlpesCraft]]                       | Début de journée AlpesCraft |
+| [[19-06-2026 - retour techwork]] | Retour de Tech'Work : une journée de talks, reparti avec des convictions plutôt que des notes mortes. |
+| [[20-06-2026 - equipe paris remote]] | Retrouver son équipe en vrai quand on bosse en full remote, et ce que ça change pour les prochaines code reviews. |
+| [[21-06-2026 - coreen compter deux fois]] | Le coréen et ses deux systèmes de nombres : le plus dur, c'est de désapprendre les automatismes qu'on avait sans le savoir. |
+| [[22-06-2026 - courage juniors]] | Le marché est dur pour les juniors mais pas fermé : la vraie valeur s'est déplacée là où personne peut accélérer à ta place. |
+| [[23-06-2026 - avoir raison maintenant]] | En code review, la différence entre avoir raison et avoir raison maintenant, et apprendre à choisir ses batailles de junior. |
+| [[24-06-2026 - tests qui arrivent]] | Les tests débarquent dans la code base : tester le comportement métier plutôt que le détail d'implémentation. |
+| [[25-06-2026 - ecoles vendent facile]] | Les écoles qui vendent la reconversion comme facile : un mensonge par omission sur les années d'après le diplôme. |
+| [[26-06-2025 - kata seed4t]] | Un kata en pair sur un projet perso : il révèle mon réflexe de sur-réfléchir avant d'écrire le moindre test. |
+| [[29-06-2026 - equipe souvre ia]] | L'équipe réfractaire à l'IA s'ouvre peu à peu, jusqu'au tech lead qui demande ma review sur sa PR.                                                                                              |
 |                                                   |                                                                                                                          |
