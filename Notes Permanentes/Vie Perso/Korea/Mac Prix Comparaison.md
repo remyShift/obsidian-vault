@@ -27,7 +27,7 @@ const block = raw.split("DATA:START")[1]?.split("DATA:END")[0] ?? "";
 const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
 const data = lines.slice(2); // saute l'en-tête + la ligne de séparation
 
-const toNum = s => Number(String(s).replace(/[€₩\s  ]/g, "").replace(",", "."));
+const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
 
 const rows = data.map(line => {
   const c = line.split("|").map(x => x.trim());
