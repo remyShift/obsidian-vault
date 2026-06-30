@@ -33,7 +33,6 @@ Commençant mon app dans 2 semaines après ma formation j’aimerais que ça acc
 - - -
 
 🚀 De noob à expert suis mon parcours pour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

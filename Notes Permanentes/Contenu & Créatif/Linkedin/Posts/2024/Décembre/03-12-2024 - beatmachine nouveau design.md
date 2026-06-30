@@ -16,6 +16,5 @@ Glow up ou glow down donne moi ton avis en commentaires !
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -

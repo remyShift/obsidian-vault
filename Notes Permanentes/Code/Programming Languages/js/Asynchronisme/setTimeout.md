@@ -1,10 +1,13 @@
 ---
-tags: [LangagesDeProgs, JS, Async]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## setTimeout(callback, delay)
 
 Exécute une fonction après un délai spécifié (en millisecondes).
+
 ```js
 setTimeout(() => {
     console.log('Cette fonction est exécutée après 2 secondes');

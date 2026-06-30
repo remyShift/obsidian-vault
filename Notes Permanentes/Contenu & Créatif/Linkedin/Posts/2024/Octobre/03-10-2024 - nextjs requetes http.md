@@ -5,8 +5,7 @@ comments: 8
 reposts: 0
 impressions: 552
 url: https://www.linkedin.com/feed/update/urn:li:activity:7247493148111687680/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Au menu du jour la simplicité de mise en place de requêtes HTTP en NextJS ! 👇🏼
@@ -15,15 +14,12 @@ J'ai essayer de faire un carousel avec une DA bien connue. 😎
 
 👉🏼 N'hésite pas à me dire ce que t'en pense et aussi si tu as des tips pour des images de meilleurs qualités je suis preneurs !
 
-
-#NextJS 
-#Code
-
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -

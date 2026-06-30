@@ -1,7 +1,8 @@
 ---
-tags: [LangagesDeProgs, JS, ManipObj]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
-
 
 ## Object.defineProperty(prop)
 

@@ -5,25 +5,18 @@ comments: 4
 reposts: 0
 impressions: 472
 url: https://www.linkedin.com/feed/update/urn:li:activity:7221957837369786368/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 🚀 Salut à tous,
 
-Je veux partager une expérience d’il y a quelques mois, quand j’étais encore en formation, et qui m'a beaucoup appris.
+Je veux partager une expérience d'il y a quelques mois, quand j'étais encore en formation, et qui m'a beaucoup appris.
 
-J’étais pris dans l’effervescence de ma formation et pensais être capable de réussir à être le premier recruté de ma promo, alors j’ai décidé de postuler dans une entreprise que j’admire.
+J'étais pris dans l'effervescence de ma formation et pensais être capable de réussir à être le premier recruté de ma promo, alors j'ai décidé de postuler dans une entreprise que j'admire.
 
+✅ J'ai envoyé mon CV : j'ai réussi à avoir un entretien.
 
-
-✅ J’ai envoyé mon CV : j’ai réussi à avoir un entretien.
-
-
-
-✅ J’ai passé leur premier entretien : succès.
-
-
+✅ J'ai passé leur premier entretien : succès.
 
 ❌ Puis est venu le moment du test technique. Résultat : échec.
 
@@ -37,22 +30,16 @@ Voici ce que j'en retiens :
 2. 🏋️ Pratique continue: La théorie ne suffit pas. Il faut pratiquer sur des problèmes variés.
 3. 💪🏼Persévérance : Cet échec m'a poussé à approfondir mes connaissances et à m'améliorer et surtout ne pas abandonner à ce premier échec.
 
-
-Quoi de mieux qu’un échec pour mieux se relever ? Je suis maintenant mieux préparé pour les défis à venir. Chaque échec est une occasion d'apprendre et de grandir. 💡
+Quoi de mieux qu'un échec pour mieux se relever ? Je suis maintenant mieux préparé pour les défis à venir. Chaque échec est une occasion d'apprendre et de grandir. 💡
 
 Vos conseils, ressources et exos sur la récursivité sont les bienvenus !
 
-
-#Développement 
-#Apprentissage 
-#Échec 
-#Road2BeDev
-
 ————————————
 
-Je suis Rémy, 24 ans, passionné de développement informatique depuis que j’ai découvert ça il y 2 ans. 
+Je suis Rémy, 24 ans, passionné de développement informatique depuis que j'ai découvert ça il y 2 ans.
 
-Suivez mon aventure avec 
-#Road2BeDev mon aventure pour un jour rejoindre le monde des développeurs ! 🚀
+Suivez mon aventure avec
+
+Road2BeDev mon aventure pour un jour rejoindre le monde des développeurs ! 🚀
 
 ————————————

@@ -1,9 +1,9 @@
 ---
 tags:
   - LyonCraft
-  - Work
   - Perso
 ---
+
 Les slides sont dans un repo dédié hors du vault.
 
 ## Liens
@@ -44,7 +44,7 @@ git push          # redéploie automatiquement sur GitHub Pages
 - Faire pipi avant
 - Ne pas chercher à tout justifier --> légèreté
 
-## TODO :
+## TODO
 
 - [x] Les todos in code
 - [ ] Slide sur les 2 offres en meme temps

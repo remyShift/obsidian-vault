@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, JS, ManipStr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 Les méthodes de manipulations de strings permettent d'interagir / modifier / influer directement sur une string, on retrouve notamment :
+
 - [[chatAt]],
 - [[Notes Permanentes/Code/Programming Languages/JS/concat]],
 - [[includes]],

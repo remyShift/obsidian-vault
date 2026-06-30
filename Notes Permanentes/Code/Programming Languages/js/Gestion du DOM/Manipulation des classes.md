@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipDOM]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## element.classList.add(className)
@@ -28,7 +30,6 @@ Ajoute une classe si elle n'est pas présente, la supprime si elle l'est.
 const element = document.getElementById('myId');
 element.classList.toggle('toggleClasse');
 ```
-
 
 ## element.classList.contains(className)
 

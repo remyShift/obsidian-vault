@@ -61,17 +61,17 @@ class Order {
 
 Ajouter un état = nouvelle classe. Les transitions invalides sont explicitement gérées par état, pas dans un if/else central.
 
-### Sur Oli's Lab
+## Sur Oli's Lab
 
 Le cycle de vie d'une commande (`pending` → `paid` → `shipped` → `delivered` / `cancelled` → `refunded`) est un cas parfait. Sans State, ce code devient rapidement ingérable.
 
-### Signal d'usage
+## Signal d'usage
 
 - Machine à états avec des règles de transition différentes par état
 - if/else ou switch sur un `status` qui grandit dans plusieurs méthodes
 - Lien avec le [[Code Smells|smell Divergent Change]] : si chaque nouveau statut force à modifier plusieurs méthodes
 
-### Erreur classique
+## Erreur classique
 
 Implémenter State alors qu'il n'y a que 2-3 états simples et stables. Un switch/case reste lisible et suffisant dans ce cas. State vaut son coût quand la machine à états est réellement complexe.
 

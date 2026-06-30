@@ -39,6 +39,5 @@ Alors s’il vous plaît mon réseau si un jour je poste un projet qui vous piqu
 - - -
 
 🚀 De noob à expert suis mon aventure pour un jour rejoindre le monde des développeurs au travers des mes posts et avec 
-#Road2BeDev !
 
 - - -

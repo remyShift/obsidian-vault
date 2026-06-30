@@ -9,6 +9,6 @@ tags:
   - Linkedin
 ---
 
-Le stagiaire d’instagram a encore fait des siennes :
+Le stagiaire d'instagram a encore fait des siennes :
 
 ![](https://media.licdn.com/dms/image/v2/D4E22AQEn6h7rPyjF9w/feedshare-image-high-res/feedshare-image-high-res/0/1727690060986?e=1779321600&v=beta&t=V5VyBPSKhGvmk2F92xqByFchLvA_3WX-ZHtlVWrYzFQ)

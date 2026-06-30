@@ -28,13 +28,13 @@ const ui = buildUI(new DarkThemeFactory());
 
 Changer de thème = passer une autre factory. Zéro modification ailleurs.
 
-### Différence avec Factory Method
+## Différence avec Factory Method
 
 [[Factory Method]] crée **un** type d'objet. Abstract Factory crée **plusieurs types liés** qui doivent être compatibles entre eux. Si tu as un seul type à créer, Factory Method suffit.
 
-### Signal d'usage
+## Signal d'usage
 
-Tu crées des groupes d'objets qui doivent être cohérents ensemble : themes UI, drivers de base de données (avec connection + query builder + migrator), providers cloud...
+Tu crées des groupes d'objets qui doivent être cohérents ensemble : themes UI, drivers de base de données (avec connection + query builder + migrator), providers cloud…
 
 ---
 

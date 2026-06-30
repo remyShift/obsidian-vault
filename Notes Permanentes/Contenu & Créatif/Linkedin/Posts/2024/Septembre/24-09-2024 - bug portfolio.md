@@ -5,37 +5,32 @@ comments: 8
 reposts: 0
 impressions: 635
 url: https://www.linkedin.com/feed/update/urn:li:activity:7244333902440337408/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Bon j’ai un soucis sur mon portfolio et j’ai besoin d’aide ! 👇🏼
+Bon j'ai un soucis sur mon portfolio et j'ai besoin d'aide ! 👇🏼
 
-Tu vois sur l’image ou il y a écrit « développeur fullstack » ?
+Tu vois sur l'image ou il y a écrit " développeur fullstack " ?
 
-Et bien c’est censé être en gras italique 💀
+Et bien c'est censé être en gras italique 💀
 
-Le soucis c’est que sur arc mobile et safari (mobile et laptop) il ne reconnaît pas ma font.
+Le soucis c'est que sur arc mobile et safari (mobile et laptop) il ne reconnaît pas ma font.
 
-Sauf que j’utilise des variable font fournis par next js (comme la police du texte du menu et du titre qui pour le coup elle elle marche très bien).
+Sauf que j'utilise des variable font fournis par next js (comme la police du texte du menu et du titre qui pour le coup elle elle marche très bien).
 
-Tout est bien définis et configuré mais rien y fait :( 
+Tout est bien définis et configuré mais rien y fait :(
 
-De plus j’ai l’impression que j’ai ce soucis qu’à cet endroit, car ailleurs ça marche bien, est ce que c’est l’effet de stroke qui gêne le fait que ça soit en bold italic ?
+De plus j'ai l'impression que j'ai ce soucis qu'à cet endroit, car ailleurs ça marche bien, est ce que c'est l'effet de stroke qui gêne le fait que ça soit en bold italic ?
 
-Si tu as a une piste pour m’aider ou à été déjà confronté à ce même soucis je suis preneur ! Dit le moi en commentaires ! 👇🏼
-
-
-#Next 
-#Font 
-#Portfolio
+Si tu as a une piste pour m'aider ou à été déjà confronté à ce même soucis je suis preneur ! Dit le moi en commentaires ! 👇🏼
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy et ça fais 2ans que je suis passionné de développement informatique.
+🚀 Si tu me découvres moi c'est Rémy et ça fais 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin ou avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin ou avec
+
+Road2BeDev !
 
 - - -
 

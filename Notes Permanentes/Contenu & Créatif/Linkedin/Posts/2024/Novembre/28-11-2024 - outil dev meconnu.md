@@ -25,7 +25,6 @@ Et évidemment ils sont customisables à souhait.
 - - -
 
 🚀 De noob à expert suis mon parcours pour rejoindre le monde des développeurs à travers mes posts et avec 
-#Road2BeDev !
 
 - - -
 

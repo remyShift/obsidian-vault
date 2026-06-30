@@ -3,9 +3,10 @@ created: 2026-06-08
 type: project-notes
 status: to-process
 tags:
-  - OlisLab
   - IngredientManager
+  - olis-lab
 ---
+
 > Verdict global : **base saine, intention archi correcte, mais l'implémentation des repos a dérivé en God files et l'abstraction par source fuit.** Rien de bloquant, mais des points à traiter avant que ça devienne ingérable.
 
 ## ✅ Ce qui est bien
@@ -44,6 +45,7 @@ if (source === SourceKeyEnum.SHOP) {
 ```
 
 Le `if/else` par source **remonte dans la couche service**. Du coup :
+
 - La factory ne tient pas sa promesse (le service connaît encore les détails de chaque source).
 - Cette logique de gate est **dupliquée** : même intention, deux branches presque identiques.
 

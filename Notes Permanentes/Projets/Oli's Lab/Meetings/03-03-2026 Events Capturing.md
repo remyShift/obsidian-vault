@@ -1,10 +1,8 @@
 ---
 date: 2026-03-03
 type: meeting
-projet: Oli's Lab
+projet: "Oli's Lab"
 tags:
-  - analytics
-  - event-tracking
   - olis-lab
 participants:
   - Michele
@@ -13,17 +11,17 @@ participants:
 lien: https://www.notion.so/olislab/Events-Capturing-3184bf4c7fa18081b304e967cf9cad58
 ---
 
-# Events Capturing
+## Events Capturing
 
 ---
 
-## Contexte et objectif
+### Contexte et objectif
 
 Michele a initié cette réunion pour définir une **architecture de tracking d'événements**, pas juste régler le bug du purchase event. Le vrai sujet : entre Rémy et Diego, la décision avait été de tracker tous les events le plus proche possible du clic utilisateur. Ce pattern est bon pour les events comportementaux, mais inadapté pour les events transactionnels.
 
 ---
 
-## Pourquoi on ne peut pas tout mettre sur PostHog
+### Pourquoi on ne peut pas tout mettre sur PostHog
 
 Trois plateformes en parallèle sont nécessaires, chacune avec un rôle distinct :
 
@@ -35,15 +33,17 @@ Mettre tout sur PostHog puis passer par Google Tag Manager pour GA et Meta est t
 
 ---
 
-## Deux patterns d'events à distinguer
+### Deux patterns d'events à distinguer
 
-### Pattern 1 : Events comportementaux (client-side, proche du clic)
+#### Pattern 1 : Events comportementaux (client-side, proche du clic)
+
 - Recherches, navigation, usage du profil, démarrage du skin quiz, feature interactions
 - Ces events n'ont pas besoin de confirmation backend
 - Peuvent rester uniquement sur PostHog si on veut simplifier
 - Exemples : `view_item`, `begin_checkout`, `add_address`, `add_payment_details`
 
-### Pattern 2 : Events transactionnels (besoin de confirmation)
+#### Pattern 2 : Events transactionnels (besoin de confirmation)
+
 - Purchase, modifications du cart (add/remove)
 - Actuellement trackés trop tôt : l'event se déclenche au clic, avant que le backend confirme. Si la commande échoue, l'event est quand même envoyé.
 - Doivent refléter la vérité : seuls les achats réellement confirmés doivent être trackés
@@ -51,7 +51,7 @@ Mettre tout sur PostHog puis passer par Google Tag Manager pour GA et Meta est t
 
 ---
 
-## Problèmes actuels
+### Problèmes actuels
 
 1. **Purchase event déclenché trop tôt** : fire au clic, pas à la confirmation. Si l'ordre échoue, l'event part quand même.
 2. **Logistic order ID manquant** : Louis et Suze (warehouse) ne peuvent pas réconcilier les transactions GA avec ce qu'ils voient dans l'entrepôt. L'ID interne DB qu'on envoie ne leur est pas accessible.
@@ -59,7 +59,7 @@ Mettre tout sur PostHog puis passer par Google Tag Manager pour GA et Meta est t
 
 ---
 
-## Solution court terme : success page (hotfix, 2 semaines max)
+### Solution court terme : success page (hotfix, 2 semaines max)
 
 - Tracker le purchase event sur la **success page**, juste avant le redirect
 - À ce moment-là on a le `logistic_order_id` et les items de la commande
@@ -68,14 +68,15 @@ Mettre tout sur PostHog puis passer par Google Tag Manager pour GA et Meta est t
 - Rémy explore aussi côté documentation GA s'il y a un mécanisme natif d'évitement des events dupliqués
 - Cette solution couvre plus de scénarios d'achat que l'état actuel, même avec le risque du refresh. Beaucoup d'implémentations GTM font pareil ou pire.
 
-### Cas Apple Pay (Express Checkout)
+#### Cas Apple Pay (Express Checkout)
+
 - Au moment du redirect success page, on n'a pas les items du cart dans le contexte du fichier ApplePay
 - Solution : tracker le purchase event sans les items pour Express Checkout, mais avec le `logistic_order_id` et la valeur
 - On peut ajouter le `payment_method` comme metadata pour distinguer les deux flows
 
 ---
 
-## Solution long terme : backend
+### Solution long terme : backend
 
 - Tracker les events transactionnels côté serveur : source de vérité, toutes les données disponibles, pas de risque de double trigger
 - **Blockers actuels :**
@@ -85,14 +86,15 @@ Mettre tout sur PostHog puis passer par Google Tag Manager pour GA et Meta est t
   - Estimation Rémy : 1-2 jours d'évaluation et de fixes pour mettre ça en place
 - **Quand :** entre la phase 0 et la phase 1 de la migration Next.js, améliorer l'analytics service de Rémy et définir l'architecture pour Next.js. La CRA n'a pas besoin d'être mise à jour.
 
-### Vision future (très long terme)
+#### Vision future (très long terme)
+
 - Quand le cart API sera implémenté, les events de modification du cart (add/remove) devraient aussi passer côté backend
 - La consultation du cart (open cart) reste client-side
 - Nécessaire quand on aura de la concurrence sur le stock : si deux users essaient d'acheter le dernier item, le backend doit gérer ça, et les events doivent refléter ce qui s'est réellement passé
 
 ---
 
-## Actions
+### Actions
 
 - [ ] **Rémy** - Hotfix : tracker le purchase event sur la success page avec un guard (local storage) pour éviter les duplicates au refresh
 - [ ] **Rémy** - Explorer la doc GA pour les méthodes natives d'évitement d'events dupliqués

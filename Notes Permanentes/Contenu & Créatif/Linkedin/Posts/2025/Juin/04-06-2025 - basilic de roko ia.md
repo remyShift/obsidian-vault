@@ -54,7 +54,6 @@ Est-ce que le Basilic de Roko te motive ou te terrorise ? 😅
 - - -
 
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

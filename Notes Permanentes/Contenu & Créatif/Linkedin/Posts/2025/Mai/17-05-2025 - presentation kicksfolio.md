@@ -30,7 +30,6 @@ Notamment le trie de la collection selon les attributs, l'estimation de la valeu
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

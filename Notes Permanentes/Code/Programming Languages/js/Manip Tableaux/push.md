@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## push()
@@ -10,4 +12,3 @@ Ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle
 let arr = [1, 2, 3];
 arr.push(4); // [1, 2, 3, 4]
 ```
-

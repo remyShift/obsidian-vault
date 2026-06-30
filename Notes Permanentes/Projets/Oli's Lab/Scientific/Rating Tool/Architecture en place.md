@@ -3,9 +3,10 @@ created: 2026-06-08
 type: project-notes
 status: to-process
 tags:
-  - OlisLab
   - IngredientManager
+  - olis-lab
 ---
+
 ## Architecture en couches (Layered)
 
 Le backend suit une **architecture en couches** classique, bien découpée par dossiers
@@ -39,6 +40,7 @@ export function productsRepoFactory(source: SourceKey): ProductRepo {
 ```
 
 Il existe une factory par domaine :
+
 - `product.repo.factory.ts`
 - `match.repo.factory.ts`
 - `scoring.repo.factory.ts`

@@ -17,7 +17,7 @@ const copy = [...myCollection];
 const [first, ...rest] = myCollection;
 ```
 
-### Implémenter un Iterator custom
+## Implémenter un Iterator custom
 
 ```js
 class ProductCatalog {
@@ -47,7 +47,7 @@ for (const product of catalog) {
 }
 ```
 
-### Generators — Iterator idiomatique en JS
+## Generators — Iterator idiomatique en JS
 
 ```js
 class ProductCatalog {
@@ -61,9 +61,10 @@ class ProductCatalog {
 
 Les generators (`function*` / `yield`) sont la façon la plus lisible d'implémenter Iterator en JavaScript. Ils gèrent automatiquement l'état de l'itération.
 
-### Quand l'implémenter
+## Quand l'implémenter
 
 En JS, rarement nécessaire sur des tableaux simples — `map`, `filter`, `forEach` suffisent. Iterator vaut le coup quand :
+
 - Tu as une structure de données custom (arbre, graphe, pagination lazy)
 - Tu veux une interface uniforme sur des collections hétérogènes
 - Tu travailles avec des séquences infinies (generators + lazy evaluation)

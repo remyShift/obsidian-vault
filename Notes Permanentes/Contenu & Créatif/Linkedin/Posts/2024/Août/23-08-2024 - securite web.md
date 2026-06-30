@@ -5,43 +5,36 @@ comments: 11
 reposts: 0
 impressions: 1308
 url: https://www.linkedin.com/feed/update/urn:li:activity:7232648888069861377/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Vous voulez sécuriser votre site mais ne savez pas par où commencer ? Laissez-moi vous guider 👇🏼
 
-
 Mozilla Observatory est un outil incontournable à ajouter à votre "toolbox" !
 
-Il vous suffit de lui fournir l’URL d’un site, et il vous attribue une note à l’américaine, accompagnée d’un score. L’objectif ? Se rapprocher au maximum du A+.
+Il vous suffit de lui fournir l'URL d'un site, et il vous attribue une note à l'américaine, accompagnée d'un score. L'objectif ? Se rapprocher au maximum du A+.
 
-Pour tester, j’ai essayé avec le site des impôts français. On s’attend à ce qu’il soit bien sécurisé, non ? 
+Pour tester, j'ai essayé avec le site des impôts français. On s'attend à ce qu'il soit bien sécurisé, non ?
 
-Détrompez-vous ! Avec une note de C et un score de 50/100, il est loin d’être aussi sécurisé qu’on pourrait le croire.
+Détrompez-vous ! Avec une note de C et un score de 50/100, il est loin d'être aussi sécurisé qu'on pourrait le croire.
 
-Heureusement, Mozilla Observatory ne se contente pas de pointer les faiblesses. Il propose des recommandations d’amélioration, étape par étape, avec toute la documentation nécessaire pour booster votre score.
+Heureusement, Mozilla Observatory ne se contente pas de pointer les faiblesses. Il propose des recommandations d'amélioration, étape par étape, avec toute la documentation nécessaire pour booster votre score.
 
-Alors, plus d’excuses pour ne pas viser au moins un A !
+Alors, plus d'excuses pour ne pas viser au moins un A !
 
 Et vous, quelle note vous a surpris pour un site connu ? Ou peut-être celle de votre propre site ?
 
-Fun fact : Dans l'onglet "statistics", vous pouvez voir la répartition des sites selon leur note… et c’est assez effrayant.
+Fun fact : Dans l'onglet "statistics", vous pouvez voir la répartition des sites selon leur note… et c'est assez effrayant.
 
 Le lien pour essayer : https://lnkd.in/enEN5zD6
-
-
-#CyberSecurity 
-#Code 
-#Development 
-#Mozilla
 
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans, et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec 
-#Road2BeDev.
+Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec
+
+Road2BeDev.
 
 - - -
 

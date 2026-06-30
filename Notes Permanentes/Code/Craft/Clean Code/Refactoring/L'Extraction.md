@@ -1,9 +1,12 @@
 ---
-tags: [SoftwareCraft, CleanCode, Refacto]
+tags:
+  - SoftwareCraft
+  - CleanCode
+  - Refactoring
 ---
 
-
 L'extraction permet de pallier à plusieurs besoins comme :
+
 - découper le code en plus petites portions,
 - permettre de nommer un bloc de code,
 - renforcer les abstractions,
@@ -15,7 +18,7 @@ Lorsqu'on extrait il faut faire attention aux raccourcis de nommage faits par no
 
 Comme on a vu depuis le début et cela s'applique aussi à l'extraction c'est un processus itératif.
 
-#### Code dupliqué :
+## Code dupliqué
 
 Il est courant de trouver des portions de code qui se répètent ou qui sont ressemblantes. Si on doit en changer la logique à un endroit est-ce qu'on doit le faire partout ? Si oui il faut alors refactorer et extraire cette portion de code pour réduire la duplication.
 
@@ -29,7 +32,7 @@ Il se peut aussi que des morceaux de code soient identiques mais agissent à des
 
 On ne veut pas réduire la duplication au maximum (/ réduire les lignes de code) mais avoir un ensemble compréhensible et évolutif.
 
-#### Cas particulier : magic value
+## Cas particulier : magic value
 
 Dans notre code on ne devrait pas avoir de valeurs arbitraires qui viennent rajouter du bruit à la compréhension plutôt qu'autre chose.
 

@@ -1,5 +1,7 @@
 ---
-tags: [CodeKnowledge, Quotes, Veille]
+tags:
+  - Quotes
+  - Veille
 ---
 
 - " La veille est l'ensemble des habitudes et des processus qui permettent d'apprendre en continue. " *David Franck, Devoxx 2023*

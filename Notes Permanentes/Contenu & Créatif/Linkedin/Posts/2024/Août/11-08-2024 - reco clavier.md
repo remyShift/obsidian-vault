@@ -10,9 +10,3 @@ tags:
 ---
 
 Mon clavier commence à se faire vieux si vous avez des recommandations de bon claviers je dis pas non (de préférence qui fait bluetooth et filaire et transportable aisément) ! 👇🏼
-
-
-#Keyboard 
-#Clavier 
-#Code 
-#Development

@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipDOM]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## element.getAttribute(attributeName)

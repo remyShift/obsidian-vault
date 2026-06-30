@@ -5,11 +5,14 @@ tags: [LangagesDeProgs, React, Hooks]
 - Les Hooks de React sont une fonctionnalité incroyablement puissante qui a révolutionné la façon dont nous construisons des composants dans React. Plutôt que de dépendre uniquement des classes, les Hooks permettent d'ajouter des fonctionnalités d'état et de cycle de vie aux composants fonctionnels. Cela simplifie le code, le rendant plus lisible et plus facile à maintenir. Avec les Hooks, tu peux gérer l'état local, effectuer des effets de manière plus propre et même créer des fonctionnalités réutilisables avec des Hooks personnalisés. En bref, les Hooks de React ouvrent de nouvelles possibilités passionnantes pour les développeurs React, offrant une approche plus fonctionnelle et expressive pour construire des interfaces utilisateur dynamiques.
 
 - Cependant, il y a des règles strictes à suivre pour garantir qu'ils fonctionnent correctement. Voici les règles d'utilisation des hooks en React :
-### Règles Fondamentales
+
+## Règles Fondamentales
+
 1. **Appeler les hooks uniquement au niveau supérieur** :
    - N'appelez jamais les hooks à l'intérieur de boucles, de conditions ou de fonctions imbriquées. Les hooks doivent toujours être appelés au même endroit dans le cycle de rendu de React.
    - **Correct** :
-     ```jsx
+
+	 ```jsx
      import { useState, useEffect } from 'react';
 
      function MyComponent() {
@@ -29,8 +32,10 @@ tags: [LangagesDeProgs, React, Hooks]
        );
      }
      ```
+
    - **Incorrect** :
-     ```jsx
+
+	 ```jsx
      import { useState, useEffect } from 'react';
 
      function MyComponent() {
@@ -57,7 +62,8 @@ tags: [LangagesDeProgs, React, Hooks]
 2. **Appeler les hooks uniquement dans les composants fonctionnels de React ou les hooks personnalisés** :
    - N'appelez jamais les hooks dans des fonctions JavaScript ordinaires.
    - **Correct** :
-     ```jsx
+
+	 ```jsx
      import { useState } from 'react';
 
      function MyComponent() {
@@ -73,8 +79,10 @@ tags: [LangagesDeProgs, React, Hooks]
        );
      }
      ```
+
    - **Incorrect** :
-     ```jsx
+
+	 ```jsx
      import { useState } from 'react';
 
      // Incorrect: useState is called in a regular function
@@ -83,30 +91,36 @@ tags: [LangagesDeProgs, React, Hooks]
      }
      ```
 
-### Règles Additionnelles
-3. **Utiliser des noms de hooks commençant par `use`** :
+## Règles Additionnelles
+
+1. **Utiliser des noms de hooks commençant par `use`** :
    - Les hooks doivent toujours commencer par `use`. C'est une convention importante qui permet à React de savoir que cette fonction suit les règles des hooks.
    - **Correct** :
-     ```jsx
+
+	 ```jsx
      function useCustomHook() {
        // ...
      }
      ```
+
    - **Incorrect** :
-     ```jsx
+
+	 ```jsx
      function customHook() {
        // ...
      }
      ```
 
-### Best Practices et Conseils
+## Best Practices et Conseils
+
 - **Déclaration au début du composant** :
   - Déclarez toujours vos hooks au début du composant fonctionnel avant tout autre logique ou retour (return). Cela garantit que les hooks sont appelés dans le même ordre à chaque rendu.
 
 - **Utilisation de plusieurs hooks** :
   - Vous pouvez utiliser plusieurs hooks dans un composant. Assurez-vous simplement qu'ils sont appelés dans le même ordre à chaque rendu.
   - **Exemple** :
-    ```jsx
+
+	```jsx
     import { useState, useEffect } from 'react';
 
     function MyComponent() {

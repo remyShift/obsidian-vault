@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, TS, Framework]
+tags:
+  - LangagesDeProgs
+  - TS
 ---
 
 [[Le type map]]

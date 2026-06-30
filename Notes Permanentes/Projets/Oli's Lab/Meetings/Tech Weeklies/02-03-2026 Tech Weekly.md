@@ -1,7 +1,7 @@
 ---
 date: 2026-03-02
 type: meeting
-projet: Oli's Lab
+projet: "Oli's Lab"
 tags:
   - tech-weekly
   - olis-lab
@@ -16,20 +16,22 @@ participants:
 lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 ---
 
-# Tech Weekly - 2 mars 2026
+## Tech Weekly - 2 mars 2026
 
 ---
 
-## Organisation de l'équipe
+### Organisation de l'équipe
 
-### Split de focus : Next.js vs Create React App
+#### Split de focus : Next.js vs Create React App
+
 - L'équipe se divise officiellement en deux axes de travail :
   - **Next.js (migration)** : Diego, Kyle, Rémy
   - **Create React App (maintenance, bugs, améliorations)** : Patrick, Lucas
 - Patrick reste aussi sur le projet scientifique et touche la CRA pour la feature recommendation
 - Kyle est **owner** du projet "Next.js Foundation"
 
-### Notion / Process
+#### Notion / Process
+
 - Michele réorganise Notion (suite à la discussion de la semaine dernière avec Kyle et Diego), pas encore terminé
 - Règle PR : mettre l'ID de la tâche Notion dans le titre de la PR pour que l'automation fonctionne. Un lien direct dans la PR n'est pas possible sans être membre payant.
 - Pour les cas limites : commenter avec le lien dans la PR, Michele peut ajouter manuellement.
@@ -37,9 +39,10 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## Milestones Next.js
+### Milestones Next.js
 
-### SEO Controls & CRUD (priorité 2 semaines)
+#### SEO Controls & CRUD (priorité 2 semaines)
+
 - Objectif : pouvoir éditer meta title, meta description et autres propriétés SEO pour produits, bundles, articles, actives, brand pages
 - **Deux approches en parallèle :**
   - Option 1 (prioritaire) : tout amener dans Payload CMS, qui sert à la fois Next.js et la CRA
@@ -50,7 +53,8 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 - **Point de décision Make/Payload : 16 mars.** Si Payload avance bien, Make est phased out. Sinon on maintient Notion comme point d'entrée avec Make.
 - D'ici là : Notion reste utilisable pour les mises à jour, avec corrections manuelles si les traductions sont écrasées (Michele prend en charge)
 
-### Next.js Foundation (Kyle owner)
+#### Next.js Foundation (Kyle owner)
+
 - Objectif : identifier les dépendances core à refactoriser pour Next.js, pas encore de flows visibles en prod
 - Composants core doivent devenir **stateless** pour le server-side rendering
 - Dépendance clé identifiée : le cart endpoint + stockage du cart en DB (au lieu du local storage uniquement)
@@ -58,7 +62,8 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
   - Risque : flush de cart ou vérification de disponibilité complexe
 - **Tests :** inclus dans la foundation, mais focalisés sur les flows critiques (pas de tests triviaux genre "le header render"). Approche end-to-end sur le checkout principalement. Kyle et Diego avaient déjà aligné sur ça.
 
-### Milestones suivants Next.js
+#### Milestones suivants Next.js
+
 - **Première/deuxième semaine d'avril :** Product Display Page sur Next.js
   - Design v1.5 doit être prêt pour dev le **20 mars** (Ante)
   - Focus UI, surtout mobile. Pas de nouveaux champs majeurs.
@@ -69,9 +74,10 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## Checkout
+### Checkout
 
-### Statut
+#### Statut
+
 - Quasi prêt pour release du MVP cette semaine
 - **Blockers pour la release guest checkout :**
   1. **Pickup points selection + MapBox rendering** : réassigné à Rémy (Diego switch sur déploiement en échange). Diego brief Rémy en 10 min après le meeting.
@@ -83,7 +89,7 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## CMS (Payload)
+### CMS (Payload)
 
 - Catégories et sous-catégories shop migrées dans le CMS, déployées sur Lightsail (phase exploratoire)
 - Prochaine étape : déploiement production avec stage lisant depuis live + fallback Lightsail
@@ -93,7 +99,7 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## Event Tracking / Purchase Event
+### Event Tracking / Purchase Event
 
 - Problème : on veut tracker le `logistic_order_id` côté analytics et PostHog pour un meilleur suivi des transactions
 - Avant : l'event était capturé au moment du redirect de la success page (juste après confirmation paiement), donc le `logistic_order_id` était disponible
@@ -104,29 +110,34 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## Autres projets
+### Autres projets
 
-### Publishing status sur les collections
+#### Publishing status sur les collections
+
 - Terminé et hookup : si un article passe offline, il est offline. Michele confirme.
 
-### QA Product Recommendation (Patrick)
+#### QA Product Recommendation (Patrick)
+
 - Patrick a vérifié tous les tickets. Quasi tout est fait.
 - Patrick doit faire un dernier passage : déplacer les tickets terminés ou non pertinents, ne laisser que ce qui est actif.
 - Michele et Patrick font une session QA produit (pas revue de code) après le meeting.
 
-### QA Search (Lucas)
+#### QA Search (Lucas)
+
 - Tickets ouverts, Ante en a ajouté. Lucas va regarder aujourd'hui.
 - Lucas doit ajouter des acceptance criteria et un plan rough dans les tâches.
 
-### Skin type translations (Rémy)
+#### Skin type translations (Rémy)
+
 - Seuls les icônes manquent. Rémy avait oublié, peut le faire demain.
 
-### Scientific tasks (Patrick)
+#### Scientific tasks (Patrick)
+
 - Chaque semaine / chaque vendredi : avancer le projet sur la semaine courante dans Notion.
 
 ---
 
-## Actions
+### Actions
 
 - [ ] **Michele** - Finir la réorganisation Notion (suite discussion Kyle + Diego)
 - [ ] **Michele** - Finir la mise en place de tous les outils (paiement, etc.)
@@ -152,7 +163,7 @@ lien: https://www.notion.so/olislab/Tech-Weekly-3174bf4c7fa180e6b8f4f4828f606bf8
 
 ---
 
-## Notes complémentaires
+### Notes complémentaires
 
 - Kyle est officiellement intégré à l'équipe (onboarding terminé). Il prend ownership du projet Next.js Foundation.
 - Le split CRA / Next.js est un vrai changement d'organisation : à partir de maintenant, Rémy est principalement sur Next.js, pas sur la CRA.

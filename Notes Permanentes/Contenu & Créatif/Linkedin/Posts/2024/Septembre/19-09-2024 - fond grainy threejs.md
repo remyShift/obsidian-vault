@@ -5,8 +5,7 @@ comments: 5
 reposts: 0
 impressions: 765
 url: https://www.linkedin.com/feed/update/urn:li:activity:7242427194977697792/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Non c'est pas la vidéo qui est de mauvaise qualité, le fond gris est bien granuleux et en mouvement ! Je t'explique comment j'ai fait ça 👇🏼
@@ -19,7 +18,7 @@ Déjà j'ai été surpris de voir que c'était pas possible nativement d'ajouter
 
 Après quelques recherche avec mon meilleur ami Google j'ai compris l'astuce et comment il fallait ruser !
 
-Il suffit de mettre un png qui à cet effet granuleux en fond de l'écran gris. 
+Il suffit de mettre un png qui à cet effet granuleux en fond de l'écran gris.
 
 D'ailleurs je te mets en commentaire le lien vers un générateur de noise que j'ai trouvé dans le dédale de mes recherches.
 
@@ -35,17 +34,12 @@ Je suis né en 2000 et oui j'ai connu les télés cathodiques donc quoi de mieux
 
 PS: Je viens de remarquer que la qualité sur linkedin était vraiment mauvaise any ideas de comment upload des vidéos de bonne qualité ?
 
-
-#Portfolio 
-#CSS 
-#Code 
-#Animation
-
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -

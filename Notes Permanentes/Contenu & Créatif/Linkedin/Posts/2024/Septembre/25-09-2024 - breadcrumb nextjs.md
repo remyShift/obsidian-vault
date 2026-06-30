@@ -5,16 +5,14 @@ comments: 7
 reposts: 0
 impressions: 1930
 url: https://www.linkedin.com/feed/update/urn:li:activity:7244613837386125312/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 J'ai fais un breadcrumb sans m'en rendre compte, je t'explique ça ! 👇🏼
 
-
 Déjà c'est quoi un breadcrumb ?
 
-C'est un fil d’Ariane littéralement il permets à l'utilisateur de voir où il en est et revenir facilement sur ses pas.
+C'est un fil d'Ariane littéralement il permets à l'utilisateur de voir où il en est et revenir facilement sur ses pas.
 
 Fun fact : je ne savais pas ce que c'était et que c'était une pratique répandue avant de voir les libs de composant tailwind qui en proposait et je l'ai donc fais car je m'étais dis que ça serait intéressant en terme d'UX.
 
@@ -26,25 +24,21 @@ Cette fonction me permets de générer un tableau d'objet contenant le path sur 
 
 Je n'ai plus qu'à map sur ce tableau d'objet pour me créer mes liens tout en rajoutant un séparateur pour rajouter de la lisibilité.
 
-Un petit bonus : j’affiche aussi l’état de la "batterie" en fonction de la validité de la route, pour ajouter une touche UX amusante.
+Un petit bonus : j'affiche aussi l'état de la "batterie" en fonction de la validité de la route, pour ajouter une touche UX amusante.
 
 👉🏼 Dis moi ce que t'en penses en commentaires et des axes pour l'améliorer ?
 
 PS : Je sais il faudrait que j'extrait la fonction de mon composant pour avoir un composant pur,
+
 PS2 : Les commentaires hautains et pète-sec je vous vois arriver et vous pouvez déjà arrêter d'écrire, oui j'apprends, oui je fais des erreurs.
-
-
-#NextJS 
-#WebDevelopment 
-#React 
-#UX
 
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

@@ -1,5 +1,7 @@
 ---
-tags: [SoftwareCraft, DDD, Architecture]
+tags:
+  - SoftwareCraft
+  - DDD
 ---
 
 s

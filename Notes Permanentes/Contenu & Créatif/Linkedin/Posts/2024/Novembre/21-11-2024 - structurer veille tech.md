@@ -65,7 +65,6 @@ Et si voir cette conférence t’intéresse le lien de la vidéo est en descript
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs à travers mes posts et avec 
-#Road2BeDev !
 
 - - -
 

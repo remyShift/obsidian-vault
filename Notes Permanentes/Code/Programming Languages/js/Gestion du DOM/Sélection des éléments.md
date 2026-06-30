@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, JS, ManipDOM]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## document.getElementBy
+
 ### document.getElementById(id)
 
 Retourne l'élément avec l'ID spécifié.

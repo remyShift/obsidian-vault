@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## sub(replace, by)
@@ -9,7 +11,6 @@ Remplace la première occurence d'un motif ou d'un caractère par autre chose.
 ```ruby
 "hello".sub("l", "r") # => "herlo"
 ```
-
 
 ## gsub(replace, by)
 

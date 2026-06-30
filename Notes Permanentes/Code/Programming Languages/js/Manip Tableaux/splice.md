@@ -1,10 +1,12 @@
 ---
-tags: [LangagesDeProgs, JS, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
-## splice(start, deleteCount, item1, item2, ..., itemN)
+## splice(start, deleteCount, item1, item2, …, itemN)
 
-Modifie le contenu d'un tableau en supprimant ou en remplaçant des éléments existants et/ou en ajoutant de nouveaux éléments. `start` étant l'index de départ, `deleteCount` le nombre d'éléments à supprimer et `item1, item2, ..., itemN` : Éléments à ajouter au tableau à partir de l'indice `start` (optionnel). Si aucun élément n'est spécifié, `splice()` ne fera que supprimer des éléments.
+Modifie le contenu d'un tableau en supprimant ou en remplaçant des éléments existants et/ou en ajoutant de nouveaux éléments. `start` étant l'index de départ, `deleteCount` le nombre d'éléments à supprimer et `item1, item2, …, itemN` : Éléments à ajouter au tableau à partir de l'indice `start` (optionnel). Si aucun élément n'est spécifié, `splice()` ne fera que supprimer des éléments.
 
 Suppression d'éléments :
 

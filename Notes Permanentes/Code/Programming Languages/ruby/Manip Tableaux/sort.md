@@ -1,15 +1,16 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipArr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## sort
 
-Trie les éléments du tableau dans l’ordre croissant.
+Trie les éléments du tableau dans l'ordre croissant.
 
 ```ruby
 [3, 1, 2].sort # => [1, 2, 3]
 ```
-
 
 ## sort_by
 

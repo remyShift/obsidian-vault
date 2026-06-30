@@ -1,30 +1,34 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 ThreeJS est une librairie Javascript qui permets de créer des expériences 3D dans le web.
+
 - Sous le capot ça utilise WebGL qui est une API Javascript permettant justement de faire de la 3D
 	- WebGL va juste render des triangles à des vitesses différentes et extrêmement rapide afin de donner l'aspect de différentes textures et shapes en utilisant notre GPU. Néanmoins WebGL peut être verbeux, compliqué et nécessité beaucoup de configuration et d'optimisation.
 		- ThreeJS vient permettre de s'abstraire de ça tout en gardant une flexibilité, ThreeJS est juste au dessus de WebGL ce qui nous permets de créer nos propres shaders etc.
 	- **NB :** On peut aussi très bien faire de la 2D avec WebGL aussi.
 - [[Roadmap ThreeJS|Roadmap]] avec projets et validations des connaissances à avoir.
-## Setup :
+
+## Setup
 
 ```
 npm install three
 ```
 
 Pour créer une scène basique on a besoin de plusieurs éléments essentiels :
+
 - Une scène,
 - Un / Des objet(s) => **un mesh**,
-	- **Un mesh** est la combinaison de 2 choses : une géométrie (pour sa forme) et un material (pour sa texture / ce quoi il ressemble), 
+	- **Un mesh** est la combinaison de 2 choses : une géométrie (pour sa forme) et un material (pour sa texture / ce quoi il ressemble),
 		- On peut aussi [[Import Modèle|importer des modèles]] pour ne pas avoir à créer la geometry et le material et avoir des formes complexes déjà faites facilement,
 - Une camera,
 	- C'est le point de vue théorique utilisé lors du rendu (POV),
 - Un renderer
 	- C'est la vue qui va être affiché depuis notre caméra, cette dernière va être rendu dans un *canva*,
 		- Le renderer peut gérer lui la création de canva ou alors on peut les créer nous même.
-
 
 ```js
 import * as THREE from 'three'
@@ -69,6 +73,7 @@ renderer.render(scene, camera)
 ```
 
 De plus pour avoir un cube avec des faces de couleurs différentes et les arrêtes marquées :
+
 ```js
 /**
 * Object
@@ -99,6 +104,7 @@ scene.add(line);
 Lorsqu'on code en ThreeJS on va souvent avoir des valeurs avec lesquelles on aimerait jouer afin d'avoir un rendu qui nous plait, pour ce faire on peut utiliser une [[Debug UI]] pour nous simplifier la tâche. Ça permettra même d'avoir des rendus insoupçonné.
 
 En ThreeJS on va avoir différents objets comme [[Les Caméras]] ou des formes qu'on va pouvoir [[Manip d'Objet|manipuler]] et [[Animation Intro|animer]].
+
 - Ces formes sont appelées [[Geometries]] et il en existe différente avec chacune leur propriétés.
 	- On peut appliquer sur ces dernières des [[Textures]] qui va être une image appliquée sur notre geometry.
 	- Les textures n'étant qu'une image ne réagissant pas à son environnement on va pouvoir être plus précis que ça afin d'avoir des rendus selon un style particulier que l'on souhaite grâce aux [[Materials]].

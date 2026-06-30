@@ -33,6 +33,5 @@ Pas un objectif.
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev ! 
 
 - - -

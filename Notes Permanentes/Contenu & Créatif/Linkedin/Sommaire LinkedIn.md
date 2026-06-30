@@ -1,5 +1,5 @@
 ---
-tags: [Road2BeDev]
+tags: []
 ---
 
 Index de tous mes posts LinkedIn archivés dans Posts/, qui ont ce [[LinkedIn Post|template]].

@@ -1,5 +1,7 @@
 ---
-tags: [Code, Craft, TDD]
+tags:
+  - Tests
+  - SoftwareCraft
 type: permanent
 ---
 

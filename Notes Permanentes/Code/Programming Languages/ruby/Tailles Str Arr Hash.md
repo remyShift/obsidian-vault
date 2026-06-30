@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr, ManipArr, ManipObj]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## count

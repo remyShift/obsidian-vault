@@ -1,11 +1,12 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
-
 
 ## index
 
-Renvoie l’index de la première occurrence d’une sous-chaîne.
+Renvoie l'index de la première occurrence d'une sous-chaîne.
 
 ```ruby
 "hello".index("e") # => 1

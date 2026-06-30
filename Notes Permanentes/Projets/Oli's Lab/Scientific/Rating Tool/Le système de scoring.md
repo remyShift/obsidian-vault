@@ -3,9 +3,10 @@ created: 2026-06-08
 type: project-notes
 status: to-process
 tags:
-  - OlisLab
   - IngredientManager
+  - olis-lab
 ---
+
 ## Le principe
 
 Un produit part d'un score et on lui applique **10 règles**. Les unes ajoutent (bonus), les autres retirent (malus). Le total = la note du produit. Les barèmes diffèrent entre **skincare** et **bodycare** (mappés dans `rules-maestro.json`).
@@ -64,6 +65,7 @@ POST /api/scoring/:source/skin-type-suitability       → adéquation type de pe
 ```
 
 ## À retenir
+
 - 10 règles = **6 bonus + 4 malus**, barème skincare/bodycare distinct.
 - Le cœur de la valeur : **bucketing par position** (R01) + **modulation par position** des toxicités.
 - Chaque score est **auditable** (`observed_inputs` + versions de datasets).

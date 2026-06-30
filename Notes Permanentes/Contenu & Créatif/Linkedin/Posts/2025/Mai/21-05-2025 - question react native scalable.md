@@ -27,6 +27,5 @@ Merci d'avance pour vos réponses.
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -

@@ -25,7 +25,7 @@ orderService.on('order:created', (order) => inventoryService.reserve(order));
 
 Ajouter une réaction à la création d'une commande = ajouter un `.on()`. Aucune modification de `OrderService`.
 
-### En JavaScript — c'est partout
+## En JavaScript — c'est partout
 
 - `addEventListener` dans le DOM
 - `EventEmitter` Node.js
@@ -35,15 +35,15 @@ Ajouter une réaction à la création d'une commande = ajouter un `.on()`. Aucun
 
 Connaître le pattern permet de lire ces APIs avec clarté plutôt que de les utiliser comme des boîtes noires.
 
-### Lien avec DDD
+## Lien avec DDD
 
 En [[Domain-Driven Design]], les **Domain Events** (`OrderCreated`, `PaymentFailed`) sont une implémentation d'Observer au niveau domaine. Le domaine émet des faits, l'infrastructure réagit. C'est ce qui permet de découpler les side effects (email, stock, analytics) du core domain.
 
-### Erreur classique
+## Erreur classique
 
 Observer sans gestion des désabonnements. En Node, les listeners qui ne sont jamais retirés créent des memory leaks. Toujours penser au `removeListener` / `off()` dans les contextes longs.
 
-### Signal d'usage
+## Signal d'usage
 
 Réactions en cascade à un événement. Couplage fort entre une source et ses conséquences. Si `OrderService` appelle directement `emailService`, `analyticsService` et `inventoryService` — c'est le signal.
 

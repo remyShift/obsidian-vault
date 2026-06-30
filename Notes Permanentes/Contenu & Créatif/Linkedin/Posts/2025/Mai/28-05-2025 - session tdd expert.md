@@ -53,6 +53,5 @@ Si vous avez des katas sympas à me recommander ou des tips TDD qui vous ont mar
 - - -
 
 🚀 Suis mon parcours pour un jour rejoindre le monde des développeurs au travers des mes posts et avec 
-#Road2BeDev !
 
 - - -

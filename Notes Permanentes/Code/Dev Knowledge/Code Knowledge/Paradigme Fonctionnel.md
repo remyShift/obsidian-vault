@@ -2,9 +2,11 @@
 tags: [CodeKnowledge]
 ---
 
-#### Introduction à la Programmation Fonctionnelle
+## Introduction à la Programmation Fonctionnelle
+
 La programmation fonctionnelle est un paradigme de programmation qui traite le calcul comme l'évaluation de fonctions mathématiques et évite les changements d'état et les données mutables. Ce paradigme favorise l'expression des opérations en termes de fonctions, d'application de fonctions et de composition de fonctions.
-#### Caractéristiques Clés
+
+## Caractéristiques Clés
 
 1. **Fonctions Pures**
    - **Définition** : Une fonction pure est une fonction où la sortie est uniquement déterminée par ses entrées, sans effets de bord.
@@ -30,7 +32,7 @@ La programmation fonctionnelle est un paradigme de programmation qui traite le c
    - **Définition** : Une fonction n'interagit pas avec l'extérieur (pas de lecture ou d'écriture de fichiers, pas de modification de variables globales).
    - **Avantages** : Facilité de test et de débogage, fonctions prévisibles.
 
-#### Concepts Avancés
+## Concepts Avancés
 
 1. **Fonctions d'Ordre Supérieur**
    - **Définition** : Fonctions qui prennent des fonctions comme arguments ou retournent des fonctions.
@@ -52,7 +54,8 @@ La programmation fonctionnelle est un paradigme de programmation qui traite le c
    - **Définition** : Les expressions ne sont évaluées que lorsqu'elles sont nécessaires.
    - **Avantages** : Efficacité, capacité à travailler avec des structures de données infinies.
 
-#### Langages Fonctionnels
+## Langages Fonctionnels
+
 Certains langages de programmation sont spécifiquement conçus pour la programmation fonctionnelle, bien que d'autres prennent en charge les concepts fonctionnels.
 
 - **Haskell** : Langage purement fonctionnel, connu pour sa rigueur et son système de types avancé.
@@ -62,16 +65,18 @@ Certains langages de programmation sont spécifiquement conçus pour la programm
 - **F#** : Langage fonctionnel pour la plateforme .NET.
 - **Erlang** : Connu pour sa tolérance aux pannes et ses applications télécom.
 
-#### Avantages de la Programmation Fonctionnelle
+## Avantages de la Programmation Fonctionnelle
 
 - **Code plus concis et expressif** : Les programmes fonctionnels sont souvent plus courts et plus faciles à lire.
 - **Moins de bugs liés à l'état** : En éliminant l'état mutable, les erreurs courantes des programmes impératifs sont réduites.
 - **Facilité de parallélisation** : Les fonctions pures peuvent être exécutées en parallèle sans risque de conflits d'état.
 
-#### Inconvénients et Défis
+## Inconvénients et Défis
 
 - **Courbe d'apprentissage** : La programmation fonctionnelle peut être difficile à maîtriser pour ceux habitués aux paradigmes impératifs.
 - **Performance** : Certaines opérations peuvent être moins performantes sans l'utilisation d'états mutables.
 - **Interopérabilité** : Travailler avec des API ou des bibliothèques impératives peut nécessiter des adaptations.
-### Conclusion
+
+## Conclusion
+
 La programmation fonctionnelle est un paradigme puissant et expressif qui favorise la création de logiciels robustes, maintenables et facilement parallélisables. Bien que sa courbe d'apprentissage puisse être raide, les avantages en termes de clarté du code et de réduction des erreurs en valent souvent la peine. En adoptant des concepts comme les fonctions pures, l'immuabilité et les fonctions d'ordre supérieur, les développeurs peuvent écrire des programmes plus prévisibles et plus fiables.

@@ -4,20 +4,26 @@ tags: [CodeKnowledge]
 
 ==> Outils mis à disposition par un langage pour programmer volontairement en asynchrone
 
-#### Fonctions callback / Fonctions de Rappel :
+## Fonctions callback / Fonctions de Rappel
+
 - Fonction qui prends en paramètre une autre fonction.
-#### Listeners / Events :
+
+## Listeners / Events
+
 - Rappel d'évènements / conditions de déclenchements d'évènements,
 	- généralement un "event" : actions d'un utilisateurs qui vont pouvoir lieu à une interactivité.
+
 ```js
 button.addEventListener("onClick", () => {
 	console.log("Hello world !")
 })
 ```
 
-#### Promise :
+## Promise
+
 - Objet utilisé pour exécuter des actions asynchrones,
 	- Représente l'achèvement ou l'échec d'une opération asynchrone et retourne en fonction l'opération résultante.
+
 ```js
 fetch("https://API_RANDOM.com")
 	.then((response) => res.json())

@@ -4,10 +4,11 @@ tags: [LangagesDeProgs, React, Hooks]
 
 En React, les "clean up functions" (fonctions de nettoyage) sont des fonctions utilisées pour nettoyer ou annuler des effets secondaires lorsqu'un composant est démonté ou lorsque certains paramètres changent. Elles sont souvent utilisées avec le hook `useEffect`.
 
-### Pourquoi utiliser des clean up functions ?
+## Pourquoi utiliser des clean up functions ?
 
 Lorsque vous utilisez des effets secondaires (comme des abonnements, des timers, ou des écouteurs d'événements), il est important de nettoyer ces effets pour éviter les fuites de mémoire et les comportements inattendus.
-### Exemple simple
+
+## Exemple simple
 
 Imaginons que nous avons un composant React qui utilise un intervalle pour mettre à jour un compteur toutes les secondes. Voici comment nous pouvons le mettre en œuvre et nettoyer l'intervalle lorsqu'on démonte le composant.
 
@@ -38,7 +39,8 @@ function Compteur() {
 
 export default Compteur;
 ```
-### Explication de l'exemple
+
+## Explication de l'exemple
 
 1. **État du compteur** : Nous utilisons `useState` pour créer un état local `compteur` initialisé à 0.
 2. **Effet avec `useEffect`** : Nous utilisons `useEffect` pour démarrer un intervalle lorsque le composant est monté.

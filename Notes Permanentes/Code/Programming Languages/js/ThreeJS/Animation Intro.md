@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 Faire de l'animation en ThreeJS est comme faire du *stop motion* --> les animations seront 60 images qui se succéderont en 1 seconde (// FPS | fréquence gérer par notre ordinateur)
+
 - Le but est que nos animations soient les mêmes peu importe le framerate.
 - On a besoin donc de render nos objets et camera sur chaque frame, ce qui va nous être permis grâce à `window.requestAnimationFrame()`.
 	- **NB :** Cette fonction va exécuter une callback sur la prochaine frame uniquement, il faut donc un peu de recursion pour avoir une boucle infini qui s'exécute toutes les ms.
@@ -28,6 +31,7 @@ tick();
 ```
 
 ⚠️ Le problème ici est que plus un ordinateur aura un framerate élevé plus l'animation sera rapide.
+
 - Pour pallier à ça on va utiliser la différence entre le temps de la première frame avec celle qui suis afin de multiplier ce delta avec la valeur par laquelle on va déplacer nos objets et donc lisser la vitesse d'animation indépendamment du framerate.
 
 ```js
@@ -56,7 +60,6 @@ const tick = () => {
 
 tick();
 ```
-
 
 - On peut utiliser aussi une `Clock` qui est un outil built-in de ThreeJS nous permettant de pallier à ce problème qui est une solution plus courante et propre.
 
@@ -92,6 +95,7 @@ tick();
 	- Les 2 combinés permettre de faire faire des cercles à notre cube.
 
 Une alternative à la `Clock` est le `Timer` :
+
 ```js
 import { Timer } from 'three/addons/misc/Timer.js'
 
@@ -103,12 +107,14 @@ const tick = () => {
 	const elapsedTime = timer.getElapsedTime();
 }
 ```
+
 - Le timer fait sensiblement la même chose que la clock, mais viens régler quelques soucis qu'il pouvait y avoir avec la clock
-### GSAP :
+
+## GSAP
 
 GSAP est une librairie qui permets de gérer des animations et qui en plus possède son propre tick ce qui simplifie grandement les choses.
 
-#### Setup :
+### Setup
 
 ```
 npm install --save gsap@3.5.1
@@ -119,6 +125,7 @@ import { gsap } from 'gsap'
 ```
 
 Pour animer avec GSAP on peut simplement utiliser `gsap.to` avec différents arguments :
+
 - l'objet qu'on veut animer par exemple `mesh.position`,
 - ensuite un objet avec différents attributs possible comme la durée, le délai et la destination (sur un axe donné) :
 	- `duration`,
@@ -126,6 +133,7 @@ Pour animer avec GSAP on peut simplement utiliser `gsap.to` avec différents arg
 	- `x`
 
 Exemple :
+
 ```js
 gsap.to(mesh.position, { duration: 1, delay: 1, x: 2})
 ```

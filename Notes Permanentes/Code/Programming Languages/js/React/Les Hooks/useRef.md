@@ -10,6 +10,7 @@ const ref = useRef(defaultValue)
 console.log(ref)
 // {current.defaultValue}
 ```
+
 - **NB :** Une référence en JS est soit un objet soit un tableau soit une classe personnalisé. D'où le fait que notre ref dans l'exemple du dessus est un objet et que pour accéder à sa valeur (dans notre exemple `defaultValue`) il faudra faire `ref.current`.
 
 ```jsx

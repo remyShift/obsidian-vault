@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## upcase

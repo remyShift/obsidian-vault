@@ -5,42 +5,36 @@ comments: 4
 reposts: 0
 impressions: 442
 url: https://www.linkedin.com/feed/update/urn:li:activity:7229794887070605315/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Connaissez-vous la théorie des vitres brisées ? Laissez-moi vous expliquer et comment cela s'applique à notre métier. 👇🏼
 
-En sociologie, cette théorie dit que si des dégradations sur un bâtiment ne sont pas rapidement réparées, le lieu finira par être encore plus dégradé, jusqu’à avoir les vitres brisées.
+En sociologie, cette théorie dit que si des dégradations sur un bâtiment ne sont pas rapidement réparées, le lieu finira par être encore plus dégradé, jusqu'à avoir les vitres brisées.
 
 Mais qu'est-ce que ça signifie pour nous ?
 
-Que nous avons tous tendance à négliger ce qui n’est pas entretenu. 
+Que nous avons tous tendance à négliger ce qui n'est pas entretenu.
 
-Et c’est la même chose pour une base de code : moins on en prend soin, plus elle se dégrade.
+Et c'est la même chose pour une base de code : moins on en prend soin, plus elle se dégrade.
 
-À l’inverse, il y a la théorie des vitres réparées : si un lieu est bien entretenu, les gens sont moins enclins à le détériorer. 
+À l'inverse, il y a la théorie des vitres réparées : si un lieu est bien entretenu, les gens sont moins enclins à le détériorer.
 
-Pour une base de code, c’est pareil : plus les développeurs en prennent soin, plus elle reste propre.
+Pour une base de code, c'est pareil : plus les développeurs en prennent soin, plus elle reste propre.
 
 Même si une équipe ne fait pas attention à la qualité du code, une seule personne peut, par son exemple, entraîner les autres à devenir plus consciencieux.
 
-La citation d’Uncle Bob prends pleinement son sens désormais !
+La citation d'Uncle Bob prends pleinement son sens désormais !
 
-(J’essaye un nouveau style pour mes posts, qu’en pensez-vous ? Dites-le moi en commentaire !)
-
-
-#CleanCode 
-#Code 
-#Development 
-#Sociologie 
+(J'essaye un nouveau style pour mes posts, qu'en pensez-vous ? Dites-le moi en commentaire !)
 
 - - -
 
 🚀 Si vous me découvrez, je m'appelle Rémy, j'ai 24 ans, et je suis passionné de développement informatique depuis 2 ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev
 
 - - -
 

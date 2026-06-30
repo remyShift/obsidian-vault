@@ -1,8 +1,8 @@
 ---
-created: {{date:YYYY-MM-DD HH:mm}}
+created:
+  "{ date:YYYY-MM-DD HH:mm }":
 type: fleeting
 status: to-process
-tags: [inbox]
 ---
 
 # {{title}}

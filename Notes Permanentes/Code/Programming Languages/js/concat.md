@@ -1,8 +1,10 @@
 ---
-tags: [LangagesDeProgs, JS, ManipStr, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
-## concat(...strings)
+## concat(…strings)
 
 Concatène une ou plusieurs chaînes de caractères à la chaîne d'origine.
 

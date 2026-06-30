@@ -28,7 +28,7 @@ class ProductTemplate {
 }
 ```
 
-### Attention à la copie superficielle
+## Attention à la copie superficielle
 
 Le spread ne fait qu'une copie de surface. Les objets imbriqués sont partagés par référence :
 
@@ -40,11 +40,11 @@ copy.config.region = 'DE'; // modifie aussi base.config.region !
 
 Pour une vraie copie profonde : `structuredClone()` (natif depuis Node 17) ou une lib dédiée.
 
-### Signal d'usage
+## Signal d'usage
 
 - Objets coûteux à initialiser (connexions, parsers, configs)
 - Fixtures de test avec des variantes légères d'un objet de base
-- Création de templates dans un éditeur (cloner une slide, un composant...)
+- Création de templates dans un éditeur (cloner une slide, un composant…)
 
 ---
 

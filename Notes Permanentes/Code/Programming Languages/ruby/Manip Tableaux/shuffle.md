@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipArr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## shuffle

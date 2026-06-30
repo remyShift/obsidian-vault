@@ -1,13 +1,8 @@
 ---
 date: 2026-01-08
 type: meeting
-projet: Oli's Lab
+projet: "Oli's Lab"
 tags:
-  - marketing
-  - meta
-  - product-feed
-  - google-merchant
-  - tiktok
   - olis-lab
 participants:
   - Michele
@@ -19,17 +14,17 @@ participants:
 lien: https://www.notion.so/olislab/Marketing-x-IT-2e24bf4c7fa180fb8d56f8f9de5bf328?pvs=189#2e24bf4c7fa180a48e3ec9c96ff6d4ee
 ---
 
-# Meeting : Marketing x IT - Meta Product Feed
+## Meeting : Marketing x IT - Meta Product Feed
 
 ---
 
-## Contexte
+### Contexte
 
 Meeting initié pour traiter un problème de Google Analytics avec Nicolas et Rémy. Juliette a été ajoutée pour une question sur les produits Facebook Shop, puis le scope s'est élargi avec Suze et Diego.
 
 ---
 
-## Problème 1 : tags produits perdus sur Meta
+### Problème 1 : tags produits perdus sur Meta
 
 Juliette rencontre deux problèmes avec ses posts Meta (Facebook / Instagram) :
 
@@ -38,7 +33,7 @@ Juliette rencontre deux problèmes avec ses posts Meta (Facebook / Instagram) :
 
 ---
 
-## Cause racine : feed produit statique et obsolète
+### Cause racine : feed produit statique et obsolète
 
 La connexion entre Meta et le feed produit automatique a lâché il y a environ 1 à 1,5 mois. En attendant, l'équipe a mis en place un Google Sheet statique exporté en novembre comme solution temporaire.
 
@@ -46,13 +41,13 @@ Résultat : Meta dispose de 157 produits alors que le site en liste environ 180.
 
 ---
 
-## Problème 2 : incohérence de langue dans le catalogue
+### Problème 2 : incohérence de langue dans le catalogue
 
 Le catalogue Meta actuel est entièrement en français (mis en place par Nicolas pour ses campagnes ads). Juliette crée ses posts en anglais mais les produits linkés sont en français, ce qui crée une incohérence visible.
 
 ---
 
-## Solution court terme (2 mois)
+### Solution court terme (2 mois)
 
 Rémy exporte deux feeds séparés depuis Google Merchant Center (qui est à jour avec 180 produits) :
 
@@ -67,13 +62,13 @@ Rémy enregistre également un tutoriel sur la procédure de mise à jour du fee
 
 ---
 
-## Solution long terme
+### Solution long terme
 
 Automatisation complète du feed produit, similaire à ce qui existe déjà sur Google Merchant Center. Michele mentionne la réactivation de l'endpoint sitemap côté backend (généré depuis MongoDB) comme brique de base pour cette automatisation. Cible : dans les 2 mois.
 
 ---
 
-## Discussion : TikTok Shop (roadmap 2026)
+### Discussion : TikTok Shop (roadmap 2026)
 
 Nicolas explore TikTok Shop comme projet 2026. Points clés :
 
@@ -86,13 +81,13 @@ Nicolas explore TikTok Shop comme projet 2026. Points clés :
 
 ---
 
-## Signature email
+### Signature email
 
 L'équipe souhaite une signature email professionnelle avec le branding Oli's Lab. L'ancienne version ne fonctionnait pas bien sur tous les clients mail. Michele va créer un template simple (logo à gauche, infos à droite) compatible avec la majorité des clients, et l'envoyer à toute l'équipe.
 
 ---
 
-## Actions
+### Actions
 
 - [ ] **Rémy** - Exporter les produits depuis Google Merchant Center et mettre à jour le Google Sheet français existant avec les nouveaux produits
 - [ ] **Rémy** - Créer un nouveau Google Sheet avec le feed anglais et envoyer le lien à Nicolas

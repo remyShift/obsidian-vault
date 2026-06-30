@@ -19,7 +19,6 @@ Bon pas encore trouvé une police qui me plaise pour le mail et le lien du portf
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

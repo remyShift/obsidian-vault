@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipStr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## trim()

@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring, DDD]
 ---
+
 Une classe qui ne contient que des getters et setters, sans aucun comportement. Les données sont là, mais toute la logique qui devrait leur appartenir est dispersée dans des services externes qui la manipulent. C'est le modèle anémique décrit par Martin Fowler, et la matérialisation d'une violation du SRP et du principe "Tell, Don't Ask". Cf. [[Domain-Driven Design]].
 
 ```js

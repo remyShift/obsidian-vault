@@ -1,7 +1,7 @@
 ---
 updated: 26-05-2026
 project: seed4j
-tags: [meta, hot-cache]
+tags: [hot-cache]
 ---
 
 # Hot Cache — seed4j

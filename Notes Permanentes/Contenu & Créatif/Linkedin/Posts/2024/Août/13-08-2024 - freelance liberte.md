@@ -5,28 +5,21 @@ comments: 0
 reposts: 0
 impressions: 299
 url: https://www.linkedin.com/feed/update/urn:li:activity:7229051595739533312/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Je vois passer beaucoup de posts dissociant le 'Free' dans freelance comme de la liberté ultime… mais parlons un peu du 'Lance' ! 🏹
 
-Parce qu’être freelance, c’est pas juste être libre, c’est surtout savoir où lancer ses efforts et compétences. Il faut être prêt à 'lancer' des devis, des mails, des nuits blanches… et parfois des appels de relance ! 🎯
+Parce qu'être freelance, c'est pas juste être libre, c'est surtout savoir où lancer ses efforts et compétences. Il faut être prêt à 'lancer' des devis, des mails, des nuits blanches… et parfois des appels de relance ! 🎯
 
-Donc oui, vous êtes 'Free', mais surtout vous 'Lancez' vos factures en espérant qu’elles reviennent aussi vite que vos inspirations du matin. Parce qu’au final, être freelance, c’est un peu comme jouer au frisbee : il faut bien lancer pour espérer recevoir. 😅
-
-
-#Freelance 
-#Humour 
-#Code 
-#Dev 
-#Developer
+Donc oui, vous êtes 'Free', mais surtout vous 'Lancez' vos factures en espérant qu'elles reviennent aussi vite que vos inspirations du matin. Parce qu'au final, être freelance, c'est un peu comme jouer au frisbee : il faut bien lancer pour espérer recevoir. 😅
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy, 24ans, passionné de développement informatique depuis 2ans.
+🚀 Si tu me découvres moi c'est Rémy, 24ans, passionné de développement informatique depuis 2ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeur avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeur avec
+
+Road2BeDev !
 
 - - -

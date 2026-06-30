@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## flat(deepth)
@@ -10,7 +12,6 @@ Crée un nouveau tableau avec tous les éléments des sous-tableaux concaténés
 let arr = [1, [2, [3, 4], 5]];
 let flat = arr.flat(2); // [1, 2, 3, 4, 5]
 ```
-
 
 ### flatMap(callback)
 

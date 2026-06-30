@@ -11,10 +11,9 @@ tags:
 
 Pour commencer 2025 un petit throwback sur notre présentation de fin de batch 👇🏼
 
-
 Ce projet c'est Drum'n Learn réalisé avec Léa Gau, @Wael Nasri (https://lnkd.in/earMteEv) et @Rémi ROSET(https://lnkd.in/e-AJ9AKe) et moi même.
 
-(désolé pour les liens pas beau j’arrivais pas à les tags 🤓)
+(désolé pour les liens pas beau j'arrivais pas à les tags 🤓)
 
 Pour rappel Drum'n Learn c'est le projet de fin de batch réalisé sur les 2 dernières semaines de notre formation chez Le Wagon France.
 
@@ -24,7 +23,8 @@ La présentation qui suit à été admirablement faites par Wael et Rémi et ref
 
 - - -
 
-🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -

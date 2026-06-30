@@ -44,7 +44,6 @@ D'une paralysie du sommeil à un rêve éveillé c'est ce que j'ai réalisé ces
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

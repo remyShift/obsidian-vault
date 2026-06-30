@@ -1,7 +1,7 @@
 ---
 updated: 19-05-2026
 project: piqure
-tags: [meta, hot-cache]
+tags: [hot-cache]
 ---
 
 # Hot Cache — piqure

@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, Maths]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## Math.abs(x)
@@ -36,13 +38,14 @@ console.log(Math.round(4.4)); // 4
 ```
 
 ## Math.trunc(x)
+
 Retourne la partie entière de `x`, en supprimant toute partie décimale.
 
 ```javascript
 console.log(Math.trunc(4.9)); // 4
 ```
 
-## Math.min(x, y, ...)
+## Math.min(x, y, …)
 
 Retourne la valeur la plus petite .
 

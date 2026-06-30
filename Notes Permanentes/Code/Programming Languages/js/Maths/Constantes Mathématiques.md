@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, Maths]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## Math.PI

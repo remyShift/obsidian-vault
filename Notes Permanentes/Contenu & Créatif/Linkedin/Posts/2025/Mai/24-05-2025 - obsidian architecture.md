@@ -51,7 +51,6 @@ Pas pour publier. Pas pour briller. Juste pour toi.
 - - -
 
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au fil de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

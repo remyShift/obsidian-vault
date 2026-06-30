@@ -5,28 +5,26 @@ comments: 2
 reposts: 0
 impressions: 324
 url: https://www.linkedin.com/feed/update/urn:li:activity:7241335731246235648/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-C’est Lundi et comme chaque Lundi —> Nouvelle semaine = nouveaux objectifs 🚀
+C'est Lundi et comme chaque Lundi —> Nouvelle semaine = nouveaux objectifs 🚀
 
 On revient déjà sur ceux de la semaine dernière :
 
-- J’ai pu finir le template qui me servira sur la plupart de mes pages pour mon portfolio comme le montre mon post précédent,
+- J'ai pu finir le template qui me servira sur la plupart de mes pages pour mon portfolio comme le montre mon post précédent,
 
-- J’ai finis le chapitre sur le kata fraction j’attaque le suivant aujourd’hui,
+- J'ai finis le chapitre sur le kata fraction j'attaque le suivant aujourd'hui,
 
-- Je pense arrêter les 1 katas / soir pour me concentrer pleinement sur mon portfolio et je reprendrais quand je l’aurais finis,
+- Je pense arrêter les 1 katas / soir pour me concentrer pleinement sur mon portfolio et je reprendrais quand je l'aurais finis,
 
+Pour cette semaine voici les objectifs :
 
-Pour cette semaine voici les objectifs : 
+☑️ J'ai peut être trouver une nouvelle formation et elle me demande d'obtenir différents badge sur codeacademy ainsi que faire un site particulier donc ça va être le plan de cette semaine, (j'ai un entretien le 2 octobre)
 
-☑️ J’ai peut être trouver une nouvelle formation et elle me demande d’obtenir différents badge sur codeacademy ainsi que faire un site particulier donc ça va être le plan de cette semaine, (j’ai un entretien le 2 octobre)
+☑️ Je continue mon apprentissage de Next en ce moment je suis sur les possibilités côté serveur que permets Next et c'est très intéressant,
 
-☑️ Je continue mon apprentissage de Next en ce moment je suis sur les possibilités côté serveur que permets Next et c’est très intéressant,
-
-☑️ Je continue mon portfolio dans l’idéal à la fin de semaine j’ai finis la page d’accueil + la page de contact,
+☑️ Je continue mon portfolio dans l'idéal à la fin de semaine j'ai finis la page d'accueil + la page de contact,
 
 ☑️ Finir le nouveaux chapitre de SoftwareCraft (je me suis pas encore spoil),
 
@@ -34,18 +32,13 @@ Et ça sera déjà pas mal !
 
 👉🏼 Et toi quoi de prévu cette semaine ? Dit le moi en commentaires !
 
-
-#Objectifs 
-#LearnInPublic 
-#Code 
-#Development
-
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy et ça fait 2ans que je suis passionné de développement informatique.
+🚀 Si tu me découvres moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -
 

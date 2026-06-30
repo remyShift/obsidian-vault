@@ -2,7 +2,7 @@
 tags: [CodeKnowledge]
 ---
 
-- Langage compilé : JS, Ruby … 
+- Langage compilé : JS, Ruby …
 - Compilation faites ligne par ligne du code directement lors de l'exécution,
 - **Avantages :**
 	- Pas de temps de compilation,

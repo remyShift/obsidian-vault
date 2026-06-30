@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipDOM]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## document.createElement(tagName)

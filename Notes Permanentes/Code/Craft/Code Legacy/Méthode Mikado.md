@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CodeLegacy]
 ---
+
 Créée par **Ola Ellnestam et Daniel Brolund**, formalisée dans leur livre *The Mikado Method* (Manning). Le nom vient du jeu de mikado (pick-up sticks) : tu ne peux pas attraper un bâton sans faire bouger les autres. Si tu forces, tu perds. La bonne approche c'est de comprendre ce qui bloque, et de commencer par là.
 
 ---
@@ -20,6 +21,7 @@ On veut faire une modification. On commence, et très vite on réalise que ça t
 Comme le décrit Martin Reigosa : *"whenever we fixed 1 problem, 2 more arose. We found ourselves sinking into quicksand."*
 
 Les réponses habituelles sont mauvaises :
+
 - Continuer quand même et espérer que ça tienne
 - Committer dans un état intermédiaire bancal
 - Tout annuler à la main en espérant ne rien oublier

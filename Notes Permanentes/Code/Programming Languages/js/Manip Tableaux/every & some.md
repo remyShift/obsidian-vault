@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## every(callback)

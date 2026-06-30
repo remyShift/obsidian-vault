@@ -42,7 +42,6 @@ La semaine prochaine on attaque notre projet de fin de batch : BeatMachine.
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

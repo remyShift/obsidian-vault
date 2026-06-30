@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipArr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## select
@@ -9,7 +11,6 @@ Filtre les éléments selon une condition donnée --> **retourne un nouveau tabl
 ```ruby
 [1, 2, 3, 4].select { |x| x.even? } # => [2, 4]
 ```
-
 
 ## reject
 

@@ -31,6 +31,5 @@ Merci d’avance !
 - - -
 
 🚀 Suis mon aventure pour un jour rejoindre le monde des développeurs au fil de mes posts et avec 
-#Road2BeDev !
 
 - - -

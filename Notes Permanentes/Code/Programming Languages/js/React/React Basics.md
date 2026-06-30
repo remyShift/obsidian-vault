@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, React, Framework]
+tags:
+  - LangagesDeProgs
+  - React
 ---
 
 - React est une librairie de JS le plus utilisé.
@@ -11,6 +13,7 @@ tags: [LangagesDeProgs, React, Framework]
 			- Un Component peut contenir un ou plusieurs autres component(s) et on peut passer à ces components des arguments qu'ils vont utiliser en leur sein. Ces arguments de components sont appelés [[Les Props]].
 
 - Pour se setup cf la [React doc](https://fr.react.dev/).
+
 ```
 npm create vite@latest
 ```
@@ -32,8 +35,10 @@ npm create vite@latest
 
 - Attention où on place les SEO components ne pas confondre (cf [[SEO dans Layout vs Page]]).
 
-- **NB :** Un component React lors de sa création est généralement une div, le soucis peut être qu'une accumulation de div entraine des soucis de performances. La solution pour palier à ça sont [[Les Fragments]] qui sont la majorité du temps utilisé plutôt que des divs. 
-### Créer une liste :
+- **NB :** Un component React lors de sa création est généralement une div, le soucis peut être qu'une accumulation de div entraine des soucis de performances. La solution pour palier à ça sont [[Les Fragments]] qui sont la majorité du temps utilisé plutôt que des divs.
+
+## Créer une liste
+
 ```jsx
 export default function Container() {
 	const data = [
@@ -66,7 +71,8 @@ export default function Container() {
 
 **NB :** Chaque éléments créer ainsi se doit d'avoir une **key** unique.
 
-### Utiliser des Images :
+## Utiliser des Images
+
 ```jsx
 import fuji from "./assets/fuji.jpg";
 import triangle from "./assets/triangle.svg"
@@ -93,7 +99,8 @@ export default function Container() {
 }
 ```
 
-### Short Circuit :
+## Short Circuit
+
 ```jsx
 export default function Container() {
 

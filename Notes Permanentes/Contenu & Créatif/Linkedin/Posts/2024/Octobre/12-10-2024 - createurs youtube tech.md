@@ -5,8 +5,7 @@ comments: 16
 reposts: 0
 impressions: 1065
 url: https://www.linkedin.com/feed/update/urn:li:activity:7250754676998991873/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Aujourd'hui je vous partage une liste non exhaustives de 𝗽𝗲𝗿𝘀𝗼𝗻𝗻𝗲𝘀 𝗮̀ 𝘀𝘂𝗶𝘃𝗿𝗲 𝘀𝘂𝗿 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 qui parle de tech et la vulgarise pour nous les noobs ! 👇🏼
@@ -59,18 +58,13 @@ Des tutos simple sur à peu près tout, que dire de plus ?
 
 👉🏼 Si tu en vois d'autres n'hésite pas à les partager en commentaires !
 
-
-#Youtube 
-#Dev 
-#Code 
-#Learn
-
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

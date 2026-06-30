@@ -5,8 +5,7 @@ comments: 39
 reposts: 0
 impressions: 6899
 url: https://www.linkedin.com/feed/update/urn:li:activity:7238226197292208128/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Bon au delà du dilemme auquel je suis confronté (cf mon post précédent) c'est pas pour autant que je vais arrêter de grind !
@@ -21,18 +20,13 @@ Aussi, j'ai pris en compte le fait de limiter le nombre de digit afficher et pas
 
 👉🏼 N'hésitez pas à me faire vos retours et remonter tout potentiels bug et me dire ce que vous en pensez en commentaires !
 
-
-#PracticeMakesPerfect 
-#Code 
-#ReactJS 
-#Zustand
-
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans, et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure pour un jour rejoindre le monde de développeurs avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde de développeurs avec
+
+Road2BeDev !
 
 - - -
 

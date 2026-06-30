@@ -1,6 +1,9 @@
 ---
-tags: [DevKnowledge, Webdev]
+tags:
+  - DevKnowledge
+  - WebDevKnowledge
 ---
+
 Un SDK (Software Development Kit) est un ensemble d'outils, de bibliothèques, de documentation et d'exemples fournis par un service ou une plateforme pour permettre aux développeurs de l'intégrer plus facilement dans leur propre code.
 
 ---
@@ -12,9 +15,9 @@ Un SDK (Software Development Kit) est un ensemble d'outils, de bibliothèques, d
 | Nature | Contrat d'interface (endpoints, formats) | Implémentation prête à l'emploi |
 | Utilisation | Appels HTTP directs | Import d'une librairie dans le code |
 | Abstraction | Basse | Haute |
-| Exemple | `POST /v1/messages` | `anthropic.messages.create(...)` |
+| Exemple | `POST /v1/messages` | `anthropic.messages.create(…)` |
 
-Un SDK wrappe une API. Il gère pour toi : l'authentification, la sérialisation/désérialisation, la gestion des erreurs, la pagination, le retry, les types TypeScript... Tout ce que tu aurais à coder si tu appelais l'API à la main.
+Un SDK wrappe une API. Il gère pour toi : l'authentification, la sérialisation/désérialisation, la gestion des erreurs, la pagination, le retry, les types TypeScript… Tout ce que tu aurais à coder si tu appelais l'API à la main.
 
 ---
 
@@ -71,11 +74,13 @@ Le SDK gère l'auth, les headers, les erreurs HTTP, les types TypeScript, la ges
 ## Quand utiliser un SDK vs appeler l'API directement
 
 Utiliser le SDK quand :
+
 - Il en existe un maintenu officiellement pour ton langage
 - La logique d'intégration est récurrente ou complexe
 - Tu veux les types TypeScript sans les écrire toi-même
 
 Appeler l'API directement quand :
+
 - Pas de SDK disponible pour ton langage
 - L'intégration est ponctuelle et très simple
 - Tu as besoin d'un contrôle fin que le SDK n'offre pas

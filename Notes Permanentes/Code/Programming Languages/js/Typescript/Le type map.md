@@ -1,4 +1,5 @@
 ---
-tags: [LangagesDeProgs, TS, Framework]
+tags:
+  - LangagesDeProgs
+  - TS
 ---
-

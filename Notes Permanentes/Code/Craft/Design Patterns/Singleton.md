@@ -25,7 +25,7 @@ const connection = createConnection(config);
 module.exports = connection;
 ```
 
-### Pourquoi c'est controversé
+## Pourquoi c'est controversé
 
 Uncle Bob le classe souvent parmi les anti-patterns. Les problèmes :
 
@@ -33,7 +33,7 @@ Uncle Bob le classe souvent parmi les anti-patterns. Les problèmes :
 - **Tests difficiles** — impossible de remplacer l'instance par un mock entre deux tests, l'état persiste
 - **Couplage fort** — le code qui consomme le Singleton dépend directement de lui, viole le [[Les Principes SOLID|DIP]]
 
-### L'alternative
+## L'alternative
 
 **Injection de dépendances.** Tu crées l'instance une fois au démarrage (ex: dans `app.js`) et tu l'injectes partout où c'est nécessaire. Le comportement est identique, mais le code reste testable et les dépendances sont explicites.
 
@@ -45,7 +45,7 @@ const userRepo = new UserRepository(db); // db injecté, pas récupéré globale
 const orderRepo = new OrderRepository(db);
 ```
 
-### Signal pour reconsidérer
+## Signal pour reconsidérer
 
 Si tu te retrouves à appeler `.getInstance()` depuis 15 endroits différents, c'est le signe que tu as un problème d'architecture, pas un problème de pattern.
 

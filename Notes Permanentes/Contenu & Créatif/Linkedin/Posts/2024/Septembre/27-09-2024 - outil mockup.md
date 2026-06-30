@@ -30,7 +30,6 @@ Désormais tu n'as plus d'excuse pour ne pas avoir une belle image d'un projet l
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
 Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

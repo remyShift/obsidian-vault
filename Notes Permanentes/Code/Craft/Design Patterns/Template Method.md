@@ -35,20 +35,21 @@ class JsonExporter extends DataExporter {
 }
 ```
 
-### Où c'est massif en pratique
+## Où c'est massif en pratique
 
 Les **frameworks** utilisent Template Method partout :
+
 - Hooks de lifecycle React (`componentDidMount`, `componentWillUnmount`) — tu surcharges des étapes d'un cycle fixé par React
 - Pipelines CI/CD — chaque step override des hooks prédéfinis
 - ORM hooks (`beforeCreate`, `afterSave` dans Sequelize / Mongoose)
 
-### Différence avec Strategy
+## Différence avec Strategy
 
 [[Strategy]] = **l'algorithme entier** est remplacé via composition. Template Method = **des étapes** d'un algorithme fixe sont surchargées via héritage.
 
 Template Method couple les sous-classes à la classe de base (héritage). Strategy est plus flexible (composition). Si tu peux choisir, préfère Strategy. Template Method est justifié quand le squelette doit être strictement respecté et partagé.
 
-### Signal d'usage
+## Signal d'usage
 
 Même séquence d'étapes dans plusieurs contextes, avec des variations à des points précis. Si les variations concernent l'algorithme entier, c'est [[Strategy]] qui convient mieux.
 

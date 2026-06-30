@@ -1,11 +1,15 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 Pour faire du texte en 3D avec ThreeJS nous devons utiliser la classe `TextBufferGeometry` ainsi qu'un type de font en particulier appelée *typeface*.
+
 - **NB :** On peut convertir la plupart des font en font typeface.
 
 On peut aussi utiliser les fonts fournis par ThreeJS qu'on peut trouver dans `/node_modules/three/examples/fonts/`, on peut ensuite soit les importer directement soit les mettre dans notre dossier `static`.
+
 ```js
 import typefaceFont from 'three/examples/fonts/helvetiker_regular.typeface.json'
 ```
@@ -40,12 +44,14 @@ fontLoader.load(
 ```
 
 Ceci nous permets d'avoir un texte en 3D (dans notre cas *Hello Three.JS*) avec un `bevel` qui est un effet de bord arrondi.
-- `bevelThickness` : Contrôle l’**épaisseur du chanfrein** vers l’intérieur. Plus la valeur est grande, plus la transition entre le bord extérieur et la face du texte est prononcée.
-- `bevelSize` : Définit à quel point le chanfrein **déborde vers l’extérieur** du contour du texte. Cela donne du relief visible sur les arêtes du texte.
-- `bevelOffset` : Décale le chanfrein **vers l’intérieur ou l’extérieur**. C’est comme un ajustement de position du biseau par rapport au contour du texte d’origine.
+
+- `bevelThickness` : Contrôle l'**épaisseur du chanfrein** vers l'intérieur. Plus la valeur est grande, plus la transition entre le bord extérieur et la face du texte est prononcée.
+- `bevelSize` : Définit à quel point le chanfrein **déborde vers l'extérieur** du contour du texte. Cela donne du relief visible sur les arêtes du texte.
+- `bevelOffset` : Décale le chanfrein **vers l'intérieur ou l'extérieur**. C'est comme un ajustement de position du biseau par rapport au contour du texte d'origine.
 - `bevelSegments` : Le **nombre de segments** utilisés pour créer le chanfrein, ce qui influe sur sa **douceur**. Plus la valeur est élevée, plus le biseau sera lisse.
 
 Le soucis qu'on a est que notre text est pas centré. On peut dans un premier temps s'afficher les axes pour nous aider à le centrer.
+
 ```js
 const axesHelper = new THREE.AxesHelper()  
 
@@ -53,10 +59,12 @@ scene.add(axesHelper)
 ```
 
 Par le centrer permets j'entends **redéfinir** son centre, pour que si à terme on a envie de faire des rotations, ses dernières soient autour d'un axe bien placé (plutôt que juste décaler notre mesh).
+
 - Pour ce faire on va utiliser le **bounding** de notre texte.
 	- Le **bounding** est l'information associé à l'espace pris par notre geometry. Ça permets à ThreeJS de savoir quels objets sont visible et doivent être calculés / affichés.
 		- **NB :** Par défaut ThreeJS utilise une sphère en tant que bounding.
 - Pour avoir accès à la bounding box de notre objet il nous faut la calculer :
+
 ```js
 const textGeometry = new TextGeometry(
 	debugObject.text,
@@ -66,7 +74,8 @@ const textGeometry = new TextGeometry(
 textGeometry.computeBoundingBox();
 ```
 
-Plutôt que de déplacer le mesh on va déplacer la geometry avec `translate(...)`.
+Plutôt que de déplacer le mesh on va déplacer la geometry avec `translate(…)`.
+
 ```js
 textGeometry.translate(
 	- textGeometry.boundingBox.max.x / 2,
@@ -87,7 +96,7 @@ textGeometry.translate(
 ```
 
 Sinon on peut juste utiliser la méthode `.center()` qui le fait pour nous.
+
 ```js
 textGeometry.center()
 ```
-

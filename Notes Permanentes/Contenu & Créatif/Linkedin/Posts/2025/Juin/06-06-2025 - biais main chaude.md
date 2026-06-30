@@ -66,6 +66,5 @@ Tu vis ce yo-yo aussi ? Raconte-moi ça en commentaire 👇🏼
 - - -
 
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -

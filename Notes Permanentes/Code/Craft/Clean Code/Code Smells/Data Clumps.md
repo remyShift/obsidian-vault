@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Des données qui apparaissent toujours ensemble sans être regroupées dans une structure commune. Si tu vois les mêmes 3-4 variables voyager ensemble à travers plusieurs fonctions, elles constituent probablement un concept qui mérite son propre nom.
 
 ```js

@@ -9,29 +9,28 @@ tags:
   - Linkedin
 ---
 
-KicksFolio ne sortira pas ce week-end comme c’était prévu mais …
+KicksFolio ne sortira pas ce week-end comme c'était prévu mais …
 
+De base j'avais comme deadline ce week-end pour sortir KicksFolio.
 
-De base j’avais comme deadline ce week-end pour sortir KicksFolio.
+Mais je risque d'être un peu en retard et ça devrait être sur l'app store plutôt début de semaine prochaine.
 
-Mais je risque d’être un peu en retard et ça devrait être sur l’app store plutôt début de semaine prochaine.
+En plus Apple avait déjà accepté mes précédents builds et j'avais juste à cliquer sur un bouton pour que ça soit sur les stores.
 
-En plus Apple avait déjà accepté mes précédents builds et j’avais juste à cliquer sur un bouton pour que ça soit sur les stores.
+Mais j'ai découvert des petits bugs par ci par là de dernière minutes que j'ai réglé et j'ai fait un dernier build hier soir.
 
-Mais j’ai découvert des petits bugs par ci par là de dernière minutes que j’ai réglé et j’ai fait un dernier build hier soir.
+Le temps qu'il soit accepté je doute que l'app puisse sortir ce week-end.
 
-Le temps qu’il soit accepté je doute que l’app puisse sortir ce week-end.
+Donc c'est juste une question de temps ahah !
 
-Donc c’est juste une question de temps ahah !
-
-Pour ce qui est du google play store j’avais carrément oublié que Google demandais qu’on ait 12 bêtas testeurs qui ont installé l’app pendant 14j.
+Pour ce qui est du google play store j'avais carrément oublié que Google demandais qu'on ait 12 bêtas testeurs qui ont installé l'app pendant 14j.
 
 Et tout mes bêtas testeurs étaient évidemment sur un Iphone.
 
-J’ai donc trouvé des bêtas testeurs de dernière minute et pour que l’app soit disponible sur le Google Play Store ça attendre 2 semaines.
+J'ai donc trouvé des bêtas testeurs de dernière minute et pour que l'app soit disponible sur le Google Play Store ça attendre 2 semaines.
 
 Ça me laisse un petit délais pour corriger les quelques soucis de layout spécifique à Android que je pouvais avoir de différent avec mon iphone, mais rien de bien méchant.
 
-Bref j’en vois le bout ! 🙇🏻‍♂️
+Bref j'en vois le bout ! 🙇🏻‍♂️
 
 ![](https://media.licdn.com/dms/image/v2/D4E22AQGIdCeh_qOggg/feedshare-image-high-res/B4EZj4C6uKGYAs-/0/1756508172079?e=1779321600&v=beta&t=en_1Qp0cISsBJ_wiIxWcH4kXdy9tb_VafHyAPVZXxSk)

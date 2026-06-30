@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, ReactNative, Framework]
+tags:
+  - LangagesDeProgs
+  - ReactNative
 ---
 
 Le `<Switch />` component fonctionne comme un interrupteur on/off (// checkbox), c'est un component controlé et aura donc besoins d'un state pour gérer son état.

@@ -21,7 +21,6 @@ Le tout soupoudrer des conseils de Lucien pour bien appréhender l’audience à
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

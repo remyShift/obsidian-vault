@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipArr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## each
@@ -9,7 +11,6 @@ Itère sur chaque élément du tableau.
 ```ruby
 [1, 2, 3].each { |x| puts x }
 ```
-
 
 ## each_with_index
 

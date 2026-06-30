@@ -3,6 +3,7 @@ tags: [LangagesDeProgs, React, Hooks]
 ---
 
 ## Container
+
 ```jsx
 import Calculation from "./Calculation"
 import { useState } from "react"
@@ -19,7 +20,9 @@ export default function Container() {
 	)
 }
 ```
+
 ## Calculation
+
 ```jsx
 import { useState, useMemo } from "react"
 
@@ -50,6 +53,7 @@ Le hook `useMemo` en React est utilisé pour mémoriser des valeurs calculées d
 ### Fonctionnement de `useMemo`
 
 `useMemo` prend deux arguments :
+
 1. Une fonction qui retourne la valeur à mémoriser.
 2. Un tableau de dépendances.
 

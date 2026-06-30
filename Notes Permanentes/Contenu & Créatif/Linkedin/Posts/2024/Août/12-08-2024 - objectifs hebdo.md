@@ -5,44 +5,40 @@ comments: 1
 reposts: 0
 impressions: 231
 url: https://www.linkedin.com/feed/update/urn:li:activity:7228701637018603520/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Nouvelle semaine = Nouveaux objectifs ! 👇🏼
 
+🚀 Toujours sur mon apprentissage et on my
 
-🚀 Toujours sur mon apprentissage et on my 
-#Road2BeDev, voici mes objectifs de cette semaine !
+Road2BeDev, voici mes objectifs de cette semaine !
 
-Déjà revenons sur ceux de la semaine dernière (lien du post en commentaire) je les ai tous fait sauf de voir les tests en React j’ai sous estimé le temps que ça me prendrais.
+Déjà revenons sur ceux de la semaine dernière (lien du post en commentaire) je les ai tous fait sauf de voir les tests en React j'ai sous estimé le temps que ça me prendrais.
 
-C’est pourquoi cette semaine mon MVP est :
+C'est pourquoi cette semaine mon MVP est :
 
 ☑️Finir de voir les tests en React,
+
 ☑️Je vais augmenter le nombre de Kata par jour et passer à 2 / jours
- ☑️Je vais surtout diversifier les plateformes sur lesquelles j’en fait (actuellement j’en faisait uniquement sur Codewars), 
+
+ ☑️Je vais surtout diversifier les plateformes sur lesquelles j'en fait (actuellement j'en faisait uniquement sur Codewars),
+
 ☑️Aller la salle de sport 3 fois dans la semaine,
-☑️Continuer de lire Software Craft, dans l’idéal finir le chapitre sur la collaboration
+
+☑️Continuer de lire Software Craft, dans l'idéal finir le chapitre sur la collaboration
 
 Et ça sera déjà bien !
 
 Et toi cette semaine tu fais quoi ?
 
+- - -
 
-#LearnInPublic 
-#Code 
-#Development 
-#Kata 
-#Work 
-#Sport
+🚀 Si tu me découvres moi c'est Rémy j'ai 24ans et suis passionnée de développement informatique depuis 2ans.
 
-- - - 
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
 
-🚀 Si tu me découvres moi c’est Rémy j’ai 24ans et suis passionnée de développement informatique depuis 2ans.
-
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Road2BeDev !
 
 - - -
 

@@ -5,43 +5,34 @@ comments: 0
 reposts: 0
 impressions: 127
 url: https://www.linkedin.com/feed/update/urn:li:activity:7227297875506991104/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Si vous pensez qu'un bon développeur travaille mieux seul, c'est que vous n'avez jamais réellement collaboré. Je t’explique pourquoi 👇🏼
+Si vous pensez qu'un bon développeur travaille mieux seul, c'est que vous n'avez jamais réellement collaboré. Je t'explique pourquoi 👇🏼
 
+🚀 Toujours on my
 
-🚀 Toujours on my 
-#Road2BeDev et toujours dans la lecture de « Software Craft » une citation qui m’a marqué est : « Collaborer c’est réussir à plusieurs ce qu’on ne saurait faire seul. »
+Road2BeDev et toujours dans la lecture de " Software Craft " une citation qui m'a marqué est : " Collaborer c'est réussir à plusieurs ce qu'on ne saurait faire seul. "
 
 En effet, la vraie magie du développement naît de la collaboration. Le code n'est pas seulement une affaire de compétences individuelles, c'est un effort collectif où le partage d'idées et la résolution de problèmes ensemble font toute la différence.
 
-Prenons le pair programming : deux têtes valent mieux qu'une. Travailler côte à côte sur le même code permet non seulement de repérer les erreurs plus rapidement, mais aussi de renforcer les compétences mutuelles. C’est un apprentissage en temps réel qui améliore la qualité du code et favorise une meilleure compréhension des concepts.
+Prenons le pair programming : deux têtes valent mieux qu'une. Travailler côte à côte sur le même code permet non seulement de repérer les erreurs plus rapidement, mais aussi de renforcer les compétences mutuelles. C'est un apprentissage en temps réel qui améliore la qualité du code et favorise une meilleure compréhension des concepts.
 
-Et que dire du mob programming ? Imaginez une équipe entière travaillant ensemble sur une seule tâche, chacun apportant son expertise unique. Ce n'est pas seulement un moyen de s’assurer que chaque ligne de code est examinée sous tous les angles, c'est aussi une façon de créer une dynamique d'équipe inégalée.
+Et que dire du mob programming ? Imaginez une équipe entière travaillant ensemble sur une seule tâche, chacun apportant son expertise unique. Ce n'est pas seulement un moyen de s'assurer que chaque ligne de code est examinée sous tous les angles, c'est aussi une façon de créer une dynamique d'équipe inégalée.
 
-Ces 2 pratiques favorisent également le partage de connaissances qui durent au sein d’une équipe.
+Ces 2 pratiques favorisent également le partage de connaissances qui durent au sein d'une équipe.
 
-La collaboration n’est pas un luxe, c’est une nécessité. Travailler ensemble n'est pas seulement plus efficace, c'est aussi la meilleure manière d'apprendre et de progresser en tant que développeur.
+La collaboration n'est pas un luxe, c'est une nécessité. Travailler ensemble n'est pas seulement plus efficace, c'est aussi la meilleure manière d'apprendre et de progresser en tant que développeur.
 
 N'oubliez jamais : le développement est un sport d'équipe.
 
-
-#Collaboration 
-#Développement 
-#PairProgramming 
-#MobProgramming 
-#TeamWork 
-#Productivité 
-#Craft
-
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans et suis passionné de développement informatique depuis 2ans.
+🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans et suis passionné de développement informatique depuis 2ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeur avec 
-#Road2BeDev
+Suis mon aventure pour un jour rejoindre le monde des développeur avec
+
+Road2BeDev
 
 - - -
 

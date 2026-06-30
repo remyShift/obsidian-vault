@@ -1,6 +1,8 @@
 ---
-tags: [next-js, architecture, seo, components]
+tags:
+  - NextJS
 ---
+
 ## Le pattern
 
 Dans une app Next.js avec l'App Router, la responsabilité est séparée selon le type :

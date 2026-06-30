@@ -5,8 +5,7 @@ comments: 16
 reposts: 0
 impressions: 1091
 url: https://www.linkedin.com/feed/update/urn:li:activity:7259470765677297664/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Ça y est, le projet final de notre formation à Le Wagon France est lancé ! 👇🏼
@@ -17,13 +16,13 @@ Hier soir, nous avons pitché nos idées devant nos camarades et dressé une lis
 
 Une fois que tout le monde a fait sa wishlist l'algo du Wagon nous à sortis les 3 projets les plus votés et nous à assigné à celui qui était le plus haut dans notre liste.
 
-Et le projet que je vais avoir le plaisir de réaliser avec mes camarades ... 🥁
+Et le projet que je vais avoir le plaisir de réaliser avec mes camarades … 🥁
 
-Celui que je trouvais le plus challengeant techniquement ... 🥁
+Celui que je trouvais le plus challengeant techniquement … 🥁
 
-Et ce même si c'est pas le projet que j'ai présenté moi ... 🥁
+Et ce même si c'est pas le projet que j'ai présenté moi … 🥁
 
-Mais qui à été présenté par mon homonyme Rémi ROSET ... 🥁
+Mais qui à été présenté par mon homonyme Rémi ROSET … 🥁
 
 C'est BeatMachine ! 🎉
 
@@ -43,18 +42,13 @@ Vendredi on commence la maquette et à brainstormer un peu sur les features de l
 
 👉🏼 Dit moi en commentaires si ce projet t'inspire et si t'as des pistes de librairie JS musicale qui peuvent nous aider !
 
-
-#Project 
-#Team 
-#Code 
-#LeWagon
-
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

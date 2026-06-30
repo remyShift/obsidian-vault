@@ -41,6 +41,5 @@ Je vous partage asap la maquette figma que j’ai bien retravaillé (on partait 
  - - -
 
 🚀 De noob à expert suis mon aventure pour un jour rejoindre le monde des développeurs à travers mes posts et avec 
-#Road2BeDev !
 
 - - -

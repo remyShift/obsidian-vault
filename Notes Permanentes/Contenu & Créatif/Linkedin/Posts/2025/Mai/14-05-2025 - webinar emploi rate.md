@@ -64,7 +64,6 @@ Et toi, t’as déjà assisté à ce genre de faux webinars ? Je suis curieux de
 - - -
 
 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

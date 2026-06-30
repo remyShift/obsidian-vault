@@ -5,8 +5,7 @@ comments: 4
 reposts: 0
 impressions: 3770
 url: https://www.linkedin.com/feed/update/urn:li:activity:7223676740106137600/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Étant actuellement entrain de lire ce livre (recommandé par Colin Damon) 👇🏼
@@ -18,24 +17,22 @@ Les tests sont essentiels pour assurer la qualité et la robustesse de notre cod
 Voici pourquoi le TDD est indispensable :
 
 1.🛡️ Qualité : Écrire les tests avant le code garantit que chaque fonctionnalité répond aux attentes et ce sans code superflu,
-2.⚙️ Maintenabilité : Ne pas avoir de code en trop permets qu’il soit plus propre et mieux structuré, facilitant les futures modifications.
+
+2.⚙️ Maintenabilité : Ne pas avoir de code en trop permets qu'il soit plus propre et mieux structuré, facilitant les futures modifications.
+
 3.🚀 Confiance : Les tests automatisés offrent une assurance constante que le code fonctionne correctement.
 
 Le TDD transforme la manière dont nous développons en nous faisant écrire du code qui fonctionne dès le départ. 🔧💡
 
 Adoptez le TDD pour améliorer la qualité de vos projets et gagnez en sérénité lors des déploiements.
 
-
-#Développement 
-#TDD 
-#QualitéLogicielle 
-
 ---
 
-Moi c’est Rémy, 24 ans, passionné de développement informatique depuis 2 ans. 
+Moi c'est Rémy, 24 ans, passionné de développement informatique depuis 2 ans.
 
-Suivez mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev. 🚀
+Suivez mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev. 🚀
 
 ---
 

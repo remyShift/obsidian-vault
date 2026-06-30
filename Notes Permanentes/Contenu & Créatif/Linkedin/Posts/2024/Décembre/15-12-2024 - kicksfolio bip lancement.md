@@ -5,12 +5,10 @@ comments: 1
 reposts: 0
 impressions: 986
 url: https://www.linkedin.com/feed/update/urn:li:activity:7273962515208851456/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Et non ce n'est pas un eniéme post qui parle de Chris Scholly ... 👇🏼
-
+Et non ce n'est pas un eniéme post qui parle de Chris Scholly … 👇🏼
 
 Build In Public - KicksFolio - Jour 1 👟
 
@@ -26,21 +24,17 @@ Enfin le formulaire pour récolter de la data sur ma cible et leur attentes a é
 
 Dans la semaine je relance des formulaires et fait quelques calls.
 
-Je continuerais demain, aujourd’hui je vais au ski !⛷️
+Je continuerais demain, aujourd'hui je vais au ski !⛷️
 
-Objectif : le backend de finis d’ici mercredi !
+Objectif : le backend de finis d'ici mercredi !
 
 👉🏼 Hésite pas à me dire ce que tu penses de la maquette en commentaires !
 
-
-#BuildInPublic 
-#KicksFolio 
-#Figma 
-#TDD
 - - -
 
-🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 Pour faire en sorte que notre canva prenne toute la taille de notre écran / de notre page on peut faire comme suis :
+
 ```js
 /**
 * Sizes
@@ -15,6 +18,7 @@ const sizes = {
 ```
 
 Mais faire juste cela va crée une espèce de bordure blanche ainsi que de l'overflow à cause du style par défaut des pages web. Il suffit donc de supprimer la margin et le padding par défaut qui sont sur nos objets html :
+
 ```css
 * {
 	margin: 0;
@@ -30,6 +34,7 @@ Mais faire juste cela va crée une espèce de bordure blanche ainsi que de l'ove
 ```
 
 C'est presque ça, mais on a toujours de l'overflow et on peut scroll en dehors des limites de la page :
+
 ```css
 html, body {
 	overflow: hidden;
@@ -37,6 +42,7 @@ html, body {
 ```
 
 Maintenant il faut s'occuper du resizing :
+
 ```js
 const sizes = {
 	width: window.innerWidth,
@@ -57,11 +63,12 @@ window.addEventListener("resize", () => {
 });
 ```
 
-### Pixel ratio pour toutes les tailles d'écrans :
+## Pixel ratio pour toutes les tailles d'écrans
 
 On veut la même qualité d'image peu importe le pixel ratio du device sur lequel on est.
 
 Pour ce faire on a juste après notre render a lui préciser qu'on veut un pixel ratio définis :
+
 ```js
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 ```
@@ -70,11 +77,12 @@ Cela sélectionnera le pixelRation minimum entre celui de notre device et 2.
 
 ⚠️ **NB :** ne pas oublier de le mettre aussi dans notre fonction d'update du resize pour que si la personne change la fenêtre de device (dans le cas où elle a plusieurs écrans) le pixel ratio change en fonction.
 
-### Fullscreen :
+## Fullscreen
 
 Il faut déjà pouvoir toggle le fullscreen que ça soit un bouton ou autre.
 
 Par exemple avec un double click :
+
 ```js
 window.addEventListener('dblclick', () => {
 	if (!document.fullscreenElement) {

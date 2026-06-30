@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, JS, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 Les méthodes de manipulations de strings permettent d'interagir / modifier / influer directement sur un tableau, on retrouve notamment :
+
 - [[push]],
 - [[pop & shift]],
 - [[Notes Permanentes/Code/Programming Languages/JS/concat|concat]],

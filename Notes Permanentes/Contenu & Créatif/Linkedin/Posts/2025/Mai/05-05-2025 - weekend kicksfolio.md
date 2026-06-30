@@ -45,7 +45,6 @@ Hésite pas à me donner tes conseils en commentaires sur comment aborder la sui
 - - - 
 
 🚀 De noob à expert suis mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

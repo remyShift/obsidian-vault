@@ -1,6 +1,9 @@
 ---
-tags: [SoftwareCraft, Architecture]
+tags:
+  - SoftwareCraft
+  - DDD
 ---
+
 Un DTO (Data Transfer Object) est un objet dont le seul rôle est de **transporter des données d'un contexte à un autre**, sans logique métier.
 
 Il définit un contrat explicite entre deux couches ou deux systèmes, indépendamment de leurs représentations internes respectives.

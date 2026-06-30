@@ -42,15 +42,15 @@ sorter.setStrategy(new MergeSort()); // changer d'algo sans toucher Sorter
 
 Lien [[Les Principes SOLID|SOLID]] : [[Les Principes SOLID|OCP]] direct. Ajouter un algorithme = nouvelle classe, zéro modification de l'existant.
 
-### Sur Oli's Lab
+## Sur Oli's Lab
 
 Calcul de frais de livraison selon le transporteur, stratégies de pricing selon le client (particulier, pro, influencer), règles de validation selon le type de produit. Tous ces cas sont des Strategy.
 
-### Erreur classique
+## Erreur classique
 
 Utiliser Strategy quand il n'y a que 2 algorithmes qui ne changeront jamais. Un if/else reste alors plus lisible. Le pattern justifie son coût quand la liste est amenée à grandir.
 
-### Différence avec Template Method
+## Différence avec Template Method
 
 [[Template Method]] = seulement certaines **étapes** d'un algorithme varient, via héritage. Strategy = **l'algorithme entier** est interchangeable, via composition. Préférer Strategy : la composition est plus flexible que l'héritage.
 

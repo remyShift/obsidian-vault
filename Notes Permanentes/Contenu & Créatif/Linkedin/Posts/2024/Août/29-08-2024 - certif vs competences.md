@@ -41,6 +41,5 @@ Et toi tu vois d’autres choses qui rime pas ? Dit le moi en commentaire ! 👇
 🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans, et suis passionné de développement informatique depuis 2ans.
 
 Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec 
-#Road2BeDev.
 
 - - -

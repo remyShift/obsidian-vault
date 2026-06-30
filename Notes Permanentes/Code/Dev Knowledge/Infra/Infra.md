@@ -1,11 +1,12 @@
 ---
 tags: [DevKnowledge, Infra]
 ---
+
 L'infrastructure désigne tout ce qui fait tourner une application sans être du code applicatif : serveurs, réseaux, bases de données, services cloud, pipelines de déploiement.
 
 On distingue plusieurs grandes familles :
 
-- **Hébergement** : où tourne le code ce sont les serveurs physiques, VPS, instances cloud (EC2, Cloud Run...), serverless
+- **Hébergement** : où tourne le code ce sont les serveurs physiques, VPS, instances cloud (EC2, Cloud Run…), serverless
 - **Réseau** : DNS, CDN, load balancers, firewalls, VPN
 - **Conteneurisation** : Docker, container registries --> packager l'application et ses dépendances en unités portables
 - **Orchestration** : Kubernetes, ECS --> piloter des flottes de conteneurs à grande échelle

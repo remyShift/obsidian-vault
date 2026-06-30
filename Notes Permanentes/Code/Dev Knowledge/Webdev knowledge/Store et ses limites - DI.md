@@ -1,9 +1,13 @@
 ---
-tags: [SoftwareCraft, Webdev]
+tags:
+  - SoftwareCraft
+  - WebDevKnowledge
 ---
-Un Store (Redux, Zustand, NgRx, Pinia...) est avant tout une manière de **centraliser l'état dans un seul endroit**. Vision améliorée des variables globales du passé.
+
+Un Store (Redux, Zustand, NgRx, Pinia…) est avant tout une manière de **centraliser l'état dans un seul endroit**. Vision améliorée des variables globales du passé.
 
 Cas d'usage légitimes :
+
 - Passer des propriétés à un composant sans traverser toute la hiérarchie (prop drilling)
 - Partager un état mutable entre plusieurs composants
 - Opérations avec cycle de vie global : thème, login, utilisateur connecté

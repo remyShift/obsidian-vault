@@ -1,15 +1,18 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 On pourrait se coder la physique à la main et faire nous même nos calculs etc, mais si on veut un résultat plus réaliste avec de la friction, de la tension, des contraintes etc etc c'est plus pratique d'utiliser une librairie.
 
 Mais il faut déjà comprendre comment marche la physique :
+
 - Le principe est d'avoir une réplique de notre scène 3D non visible à laquelle la physique est existante (gérée par la librairie) et où sur chaque frame la position de nos objets s'update. Il nous reste plus qu'à prendre la position de notre objet update du rendu avec physique pour l'appliquer dans notre scène threejs.
-  
+
 Il faut se demander dans un premier temps si on a besoin d'un librairie **3D** ou **2D**, sachant que de la **2D** sera moins gourmandes en performances et si on a l'occasion de le faire c'est souvent la meilleure solution.
 
-En **3D** on a le choix entre `Ammo.js` (la plus utilisée), `Cannon.js` (plus facile à implémenter et comprendre), `Oimo.js` et en **2D** `Matter.js`, `P2.js`, `Planck.js`, `Box2D.js` ...  plein d'autres sur le net.
+En **3D** on a le choix entre `Ammo.js` (la plus utilisée), `Cannon.js` (plus facile à implémenter et comprendre), `Oimo.js` et en **2D** `Matter.js`, `P2.js`, `Planck.js`, `Box2D.js` … plein d'autres sur le net.
 
 On va donc utiliser **Cannon.js** !
 
@@ -34,9 +37,11 @@ world.gravity.set(0, -9.82, 0);
 ```
 
 **NB :** dans ce cas la gravité est un vec3 et `9.82` est une approximation de la constante de gravité.
+
 - vec3 = cannonjs || vecteur3 = threejs
-  
+
 Il faut désormais ajouter les objets qu'on a dans notre rendu ThreeJS dans notre `world` ainsi crée.
+
 - Contrairement au rendu ThreeJS composé de mesh, le `world` CANNON sera lui composé de `Body`.
 	- Un `body` est un objet qui peut tomber et rentrer en collision avec les autres `body`.
 
@@ -58,7 +63,7 @@ const sphereBody = new CANNON.Body({
 world.addBody(sphereBody)
 ```
 
-**NB :** `mass: 0` veut dire que l'objet est statique, utile pour un sol, mur ...
+**NB :** `mass: 0` veut dire que l'objet est statique, utile pour un sol, mur …
 
 Pour update notre `world` ainsi créer il va nous falloir utiliser la méthode `step` qui prends 3 paramètres, dans notre tick function :
 
@@ -110,6 +115,7 @@ Pour ce faire on a différentes méthodes qui viennent avec `CannonJS` :
 ```js
 sphereBody.applyLocalForce(new CANNON.Vec3(150, 0, 0), new CANNON.Vec3(0, 0, 0))
 ```
+
 - 1er paramètres la direction dans laquelle pousser (+ la valeur sera élevé plus l'intensité le sera),
 - 2nd paramètre depuis où pousser (0,0,0 étant le centre du body dans le cas de localforce)
 
@@ -117,8 +123,7 @@ sphereBody.applyLocalForce(new CANNON.Vec3(150, 0, 0), new CANNON.Vec3(0, 0, 0))
 sphereBody.applyForce(new CANNON.Vec3(-0.5, 0, 0), sphereBody.position)
 ```
 
-
-## Optimisation 
+## Optimisation
 
 ```js
 world.broadphase = new CANNON.SAPBroadphase(world)

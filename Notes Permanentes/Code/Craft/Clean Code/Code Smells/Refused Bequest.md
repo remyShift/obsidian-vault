@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Une sous-classe qui hérite d'une classe parent mais refuse une partie de l'héritage, en général en levant une exception sur des méthodes héritées qu'elle ne supporte pas. C'est une violation du LSP : si on peut substituer le parent par l'enfant partout, une exception surprise brise cette garantie. Cf. [[Les Principes SOLID]].
 
 ```js

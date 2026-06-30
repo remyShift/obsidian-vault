@@ -9,36 +9,31 @@ tags:
   - Linkedin
 ---
 
-Un des piliers du Clean Code c’est la simplicité, mais c’est quoi un code simple pour vous ? 
+Un des piliers du Clean Code c'est la simplicité, mais c'est quoi un code simple pour vous ?
 
 Je te laisse me le dire en commentaire et avec le plus de précisions possible.
 
-Je conçois qu’il doit être facile à lire, éviter la duplication et ne pas faire de choses inutile.
+Je conçois qu'il doit être facile à lire, éviter la duplication et ne pas faire de choses inutile.
 
-Mais la simplicité c’est subjectif, non ?
+Mais la simplicité c'est subjectif, non ?
 
-Un junior n’aura pas la même notion de simplicité de code qu’un quelqu’un d’expérimenté.
+Un junior n'aura pas la même notion de simplicité de code qu'un quelqu'un d'expérimenté.
 
-C’est pourquoi je fais ce post pour me rendre compte techniquement et précisément de ce qu’on attends d’un code simple.
+C'est pourquoi je fais ce post pour me rendre compte techniquement et précisément de ce qu'on attends d'un code simple.
 
-Même si le livre que je lis actuellement me donne pas mal d’outil pour y arriver je trouve que ça manque un peu de cet définition.
+Même si le livre que je lis actuellement me donne pas mal d'outil pour y arriver je trouve que ça manque un peu de cet définition.
 
-Merci d’avance pour vos précieux retours 🙏🏼 
+Merci d'avance pour vos précieux retours 🙏🏼
 
-Comme a dit Uncle Ben « Clean code always looks like it was written by someone who care. » et déjà aujourd’hui alors que je ne suis qu’au début de mon apprentissage j’aspire à acquérir les bons réflexes pour écrire du code pour mes futurs collègues.
-
-
-#CleanCode 
-#Code 
-#Craft 
-#Simple
+Comme a dit Uncle Ben " Clean code always looks like it was written by someone who care. " et déjà aujourd'hui alors que je ne suis qu'au début de mon apprentissage j'aspire à acquérir les bons réflexes pour écrire du code pour mes futurs collègues.
 
 - - -
 
-🚀 Moi c’est Rémy et ça fais 2ans que je suis passionné d’informatique.
+🚀 Moi c'est Rémy et ça fais 2ans que je suis passionné d'informatique.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

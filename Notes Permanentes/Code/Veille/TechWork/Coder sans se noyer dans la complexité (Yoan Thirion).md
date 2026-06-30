@@ -1,6 +1,5 @@
 ---
 tags:
-  - CodeKnowledge
   - Veille
 event: "Tech'Work"
 date: 2026-06-18

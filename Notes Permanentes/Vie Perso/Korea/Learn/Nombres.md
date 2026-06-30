@@ -1,5 +1,6 @@
 ---
-tags: [Korea, coréen, grammaire]
+tags:
+  - Korea
 ---
 
 Il existe **deux systèmes de nombres** en coréen. Ils ne sont pas interchangeables — chaque contexte en impose un.

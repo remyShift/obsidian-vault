@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## empty?
+
 Vérifie si la chaîne est vide.
 
 ```ruby

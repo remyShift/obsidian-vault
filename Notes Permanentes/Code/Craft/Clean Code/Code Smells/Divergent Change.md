@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Une classe qui change pour plusieurs raisons distinctes. À chaque sprint, des modifications la touchent pour des motifs complètement différents. C'est la violation la plus directe du SRP : une classe devrait avoir une seule raison de changer. Cf. [[Les Principes SOLID]].
 
 ```js

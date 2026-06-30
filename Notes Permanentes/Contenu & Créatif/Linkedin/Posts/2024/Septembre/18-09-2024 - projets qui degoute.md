@@ -5,50 +5,44 @@ comments: 13
 reposts: 0
 impressions: 1073
 url: https://www.linkedin.com/feed/update/urn:li:activity:7242065888961544195/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Est ce que vous aussi vos (side) projets finissent par vous dégoûter quand vous y passer trop de temps ? 👇🏼
 
+Je m'explique, dans mon cas le portfolio que je fais actuellement la maquette je l'ai faite il y a presque 1an.
 
-Je m’explique, dans mon cas le portfolio que je fais actuellement la maquette je l’ai faite il y a presque 1an.
+J'avais commencer à le faire en VueJS mais de part mon manque d'expérience et connaissance je partais dans tout les sens et ça ressemblait à rien.
 
-J’avais commencer à le faire en VueJS mais de part mon manque d’expérience et connaissance je partais dans tout les sens et ça ressemblait à rien.
+Aujourd'hui alors que je l'ai recommencé en NextJS et TailwindCSS et que je vais clairement plus vite et bien je sais que quand je l'aurais finis je pourrais plus me le voir.
 
-Aujourd’hui alors que je l’ai recommencé en NextJS et TailwindCSS et que je vais clairement plus vite et bien je sais que quand je l’aurais finis je pourrais plus me le voir.
+J'adore le design, j'adore l'idée, ça me représente bien moi et ma singularité mais je sais pertinemment qu'il va me lasser.
 
-J’adore le design, j’adore l’idée, ça me représente bien moi et ma singularité mais je sais pertinemment qu’il va me lasser.
+Pourtant il y a plein d'aspect que j'ai envie d'explorer et de features que je veux mettre dans ce portfolio qui me motivent :
 
-Pourtant il y a plein d’aspect que j’ai envie d’explorer et de features que je veux mettre dans ce portfolio qui me motivent :
-
-- Animation pour faire éteindre l’écran,
+- Animation pour faire éteindre l'écran,
 - Animation des divers personnages,
 - Parrallax pour avoir plus de profondeur,
-- Ajouter de l’intérêt aux boutons du bas,
+- Ajouter de l'intérêt aux boutons du bas,
 - Animation au changement de page,
 - etc …
 
-Il n’empêche que le design en lui même je sais que je pourrais plus me le voir.
+Il n'empêche que le design en lui même je sais que je pourrais plus me le voir.
 
-👉🏼 Est ce que ça t’as déjà ressentis ça ? Si oui comment tu as fais pour éviter cette étape ou limiter cette effet ?
+👉🏼 Est ce que ça t'as déjà ressentis ça ? Si oui comment tu as fais pour éviter cette étape ou limiter cette effet ?
 
-Je me demande aussi si parce que j’ai vu d’autres design inspirant ça peut me donner moins envie de bosser sur celui ci et d’explorer d’autres choses ? 
+Je me demande aussi si parce que j'ai vu d'autres design inspirant ça peut me donner moins envie de bosser sur celui ci et d'explorer d'autres choses ?
 
 Fait moi ton retour en commentaires !
 
-Pour la peine je vous mets la page d’accueil faites hier soir 😎
-
-
-#Design 
-#Code 
-#Portfolio
+Pour la peine je vous mets la page d'accueil faites hier soir 😎
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy et ça fait 2ans que je suis passionné de développement informatique.
+🚀 Si tu me découvres moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -

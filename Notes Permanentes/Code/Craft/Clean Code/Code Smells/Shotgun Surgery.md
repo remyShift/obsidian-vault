@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Un seul changement conceptuel t'oblige à modifier plein d'endroits différents dans le code. Chaque fois que tu touches à cette fonctionnalité, tu dois ouvrir 5, 6, 7 fichiers. C'est l'inverse de [[Divergent Change]] : une raison de changer, beaucoup de classes à modifier.
 
 ```js

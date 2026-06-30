@@ -1,13 +1,8 @@
 ---
 date: 2026-04-29
 type: meeting
-projet: Oli's Lab
+projet: "Oli's Lab"
 tags:
-  - search
-  - cra
-  - next-js
-  - ux
-  - analytics
   - olis-lab
 participants:
   - Diego
@@ -18,11 +13,11 @@ participants:
 lien: https://www.notion.so/olislab/34a4bf4c7fa1806b8f5cd0042a130a8d?pvs=189#34a4bf4c7fa1804ab585e477b28884b2
 ---
 
-# Huddle : Search Page - Stratégie & Décision
+## Huddle : Search Page - Stratégie & Décision
 
 ---
 
-## Contexte
+### Contexte
 
 La search est une dépendance de la navbar, déjà migrée sur Next.js. La migration des PDP est presque terminée, les PLP sont la prochaine étape. Sur deux pages aussi importantes, ne pas avoir la search disponible devient problématique. L'équipe se réunit pour décider comment la porter proprement.
 
@@ -30,39 +25,44 @@ Le sujet : page dédiée vs modal, et dans quelle app le faire.
 
 ---
 
-## Décision principale : page de recherche dans le CRA
+### Décision principale : page de recherche dans le CRA
 
 L'équipe choisit de construire une **page de recherche dédiée dans le CRA** plutôt que de porter l'expérience modale vers Next.js.
 
-### Pourquoi
+#### Pourquoi
+
 - Le CRA a déjà tous les endpoints, la logique de recherche, et le bon shape de données
 - Aucune dépendance sur Payload pour l'instant (toutes les collections ne sont pas encore dessus, mixer deux bases serait compliqué)
 - Path of least resistance : évite de réécrire la search avec le shape Payload alors que ce n'est pas encore stabilisé
 - Le code de la modale actuelle est très messy (notamment `expand.tsx` lié au checkout), mieux vaut construire from scratch
 
-### Comportement attendu
+#### Comportement attendu
+
 - Les deux navbars (CRA et Next.js) linkeront vers cette page search du CRA
 - Au clic sur l'icône search, redirection vers la page (pas d'ouverture d'une modale)
 - La page sera construite from scratch, pas en modifiant la modale existante
 
 ---
 
-## Fonctionnalités requises
+### Fonctionnalités requises
 
-### Entités searchables
+#### Entités searchables
+
 - Minimum 3 entités : products, bundles, brands
 - Articles à ajouter rapidement après (priorité haute)
 - Actives à ajouter ensuite (priorité plus basse)
 - Les résultats doivent être segmentés par type
 - L'utilisateur doit pouvoir filtrer par type d'entité
 
-### Champs de recherche
+#### Champs de recherche
+
 - Titre (priorité haute dans le compound index)
 - Description
 - Ingredient list (cas d'usage important : rechercher par ingrédient)
 - L'index compound MongoDB gère déjà la pondération par ordre de déclaration
 
-### UX
+#### UX
+
 - Input auto-focus au chargement de la page
 - Input centré initialement, remonte quand l'utilisateur tape
 - Suggestions affichées pendant la frappe
@@ -72,7 +72,7 @@ L'équipe choisit de construire une **page de recherche dédiée dans le CRA** p
 
 ---
 
-## Analytics & monitoring
+### Analytics & monitoring
 
 - Events search à intégrer selon la documentation Google Analytics existante
 - Historique des recherches à tracker pour comprendre ce que cherchent les utilisateurs
@@ -80,7 +80,7 @@ L'équipe choisit de construire une **page de recherche dédiée dans le CRA** p
 
 ---
 
-## Hors scope pour ce projet
+### Hors scope pour ce projet
 
 - POC search via Payload (à explorer plus tard)
 - Migration vers Next.js de la search
@@ -88,7 +88,7 @@ L'équipe choisit de construire une **page de recherche dédiée dans le CRA** p
 
 ---
 
-## Organisation
+### Organisation
 
 - **Rémy** lead l'implémentation
 - Prochaine étape avant de coder : Rémy construit un skeleton / plan de haut niveau
@@ -98,7 +98,7 @@ L'équipe choisit de construire une **page de recherche dédiée dans le CRA** p
 
 ---
 
-## Actions
+### Actions
 
 - [ ] **Rémy** - Construire un skeleton / high-level plan avant l'implémentation
 - [ ] **Rémy** - Mener l'implémentation de la page search

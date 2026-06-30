@@ -1,3 +1,5 @@
 ---
-tags: [LangagesDeProgs, Framework, TailwindCSS]
+tags:
+  - LangagesDeProgs
+  - TailwindCSS
 ---

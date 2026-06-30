@@ -16,6 +16,5 @@ Un gros coup de front s'impose et régler 2-3 soucis mais on a quelque chose qui
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -

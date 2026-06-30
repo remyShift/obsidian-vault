@@ -5,41 +5,40 @@ comments: 27
 reposts: 0
 impressions: 2701
 url: https://www.linkedin.com/feed/update/urn:li:activity:7235189187228962816/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Je viens de désinstaller le dernier jeu que j’avais sur mon mac je t’explique le contexte 👇🏼
+Je viens de désinstaller le dernier jeu que j'avais sur mon mac je t'explique le contexte 👇🏼
 
+Déjà revenons à la genèse de pourquoi j'ai pris un macbook.
 
-Déjà revenons à la genèse de pourquoi j’ai pris un macbook.
+Je venais d'échouer à la première piscine de 42 et j'ai décider de revendre mon setup gaming pour un macbook.
 
-Je venais d’échouer à la première piscine de 42 et j’ai décider de revendre mon setup gaming pour un macbook.
-
-L’écosystème d’Apple étant limité en terme de jeux vidéo je savais que j’aurais le moins de distraction possible.
+L'écosystème d'Apple étant limité en terme de jeux vidéo je savais que j'aurais le moins de distraction possible.
 
 Mais il y a 1 jeu qui était bien disponible sur mac auquel je jouais : League Of Legends.
 
-Si tu connais pas tant mieux pour toi vraiment. Commencer à y jouer c’est comme signer un pacte avec le diable.
+Si tu connais pas tant mieux pour toi vraiment. Commencer à y jouer c'est comme signer un pacte avec le diable.
 
 Mon petit plaisir était de lancer 2-3 parties en rentrant du travail.
 
 Sauf que je me suis rendu compte le ratio dopamine généré / frustration ainsi que la perte de temps sur mes objectifs étaient pas compatible avec mes ambitions.
 
-C’est pourquoi je l’ai supprimer et maintenant c’est juste une ex toxique.
+C'est pourquoi je l'ai supprimer et maintenant c'est juste une ex toxique.
 
-Objectif de ce mois de septembre faire mon portfolio, faire les quelques mini projets en react que je me suis noté et « apprendre » NextJs.
+Objectif de ce mois de septembre faire mon portfolio, faire les quelques mini projets en react que je me suis noté et " apprendre " NextJs.
 
-Maintenant j’ai plus aucune raison d’être distrait, si j’ai envie de me divertir je ferais des parties d’échecs, il faut que je m'améliore.
+Maintenant j'ai plus aucune raison d'être distrait, si j'ai envie de me divertir je ferais des parties d'échecs, il faut que je m'améliore.
 
 👉🏼 Et toi comment tu parviens à gérer les sources de distractions ? Dit le moi en commentaire je serais curieux de te lire !
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans, et je suis passionné depuis 2ans de développement informatique.
+🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans, et je suis passionné depuis 2ans de développement informatique.
 
-Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec 
-#Road2BeDev !
+Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec
+
+Road2BeDev !
 
 - - -
 

@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 Les méthodes de manipulations de strings permettent d'interagir / modifier / influer directement sur une string, on retrouve notamment :
+
 - [[capitalize]],
 - [[Notes Permanentes/Code/Programming Languages/Ruby/Manip Strings/reverse|reverse]],
 - [[upcase - downcase]],

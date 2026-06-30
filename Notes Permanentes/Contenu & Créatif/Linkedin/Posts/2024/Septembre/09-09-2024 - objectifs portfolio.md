@@ -5,11 +5,11 @@ comments: 4
 reposts: 0
 impressions: 500
 url: https://www.linkedin.com/feed/update/urn:li:activity:7238799542777761793/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 🚀 Nouvelle semaine = nouveaux objectifs !
+
 On continue !
 
 Déjà revenons sur la semaine passée où j'ai pu réaliser la plupart de mes objectifs :
@@ -36,19 +36,13 @@ Cette semaine je vais surtout devoir me battre face a ma motivation qui j'ai sen
 
 Comme toujours la photo du chat.
 
-
-#LearnInPublic 
-#Code 
-#Development
-
-#Motivation
-
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans, et ça fait 2ans que je passionné de développement informatique.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -
 

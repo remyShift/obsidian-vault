@@ -5,17 +5,13 @@ comments: 14
 reposts: 0
 impressions: 1107
 url: https://www.linkedin.com/feed/update/urn:li:activity:7248946402779631616/
-tags:
-  - Linkedin
 ---
 
-C'est le grand jour ! Je rentre (à nouveau) en formation ! 🎉 
-#BackToSchool
+C'est le grand jour ! Je rentre (à nouveau) en formation ! 🎉
 
+Après m'être pris de passion pour le dev il y a 2ans de ça …
 
-Après m'être pris de passion pour le dev il y a 2ans de ça ...
-
-Ayant fais 2 fois la piscine de 42 et une autre formation qui n'a pas aboutis ...
+Ayant fais 2 fois la piscine de 42 et une autre formation qui n'a pas aboutis …
 
 Aujourd'hui je rentre en formation chez Le Wagon France ! 🚀
 
@@ -27,7 +23,7 @@ Plus sérieusement, ça va être l'occasion de consolider les bases et découvri
 
 Après une petite semaine de "vacances" qui m'a paru être une éternité j'y suis enfin.
 
-J'ai sortis un top outfit, un nouveau sac à dos, un mac tout propre et une nouvelle paire au pieds ... comme on dit : bien dans ses baskets bien dans sa tête. (ou l'inverse)
+J'ai sortis un top outfit, un nouveau sac à dos, un mac tout propre et une nouvelle paire au pieds … comme on dit : bien dans ses baskets bien dans sa tête. (ou l'inverse)
 
 Gaëtan Redin 👨🏼‍💻 désolé de te décevoir mais ça sera un bob et pas une casquette pour ce premier jour !
 
@@ -35,16 +31,17 @@ Gaëtan Redin 👨🏼‍💻 désolé de te décevoir mais ça sera un bob et p
 
 PS : Les détracteurs de bootcamp je vous vois arriver et vous invite à regarder un peu plus mes posts pour vous rendre compte que je me contente pas juste de ce genre de formation pour apprendre. ;)
 
+Formation
 
-#Formation 
-#Rentrée
+Rentrée
 
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

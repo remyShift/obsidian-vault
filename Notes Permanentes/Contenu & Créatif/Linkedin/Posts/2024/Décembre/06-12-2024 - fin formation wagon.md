@@ -41,7 +41,6 @@ Le responsive étant douteux et vu qu’à 4j de la fin on a du switcher toute n
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

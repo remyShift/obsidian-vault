@@ -33,7 +33,6 @@ T’as déjà eu le syndrome de la page blanche ? Et sinon c’est quoi la derni
 🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans, et je suis passionné de développement informatique depuis 2ans.
 
 Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec 
-#Road2BeDev !
 
 - - -
 

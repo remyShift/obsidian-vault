@@ -1,6 +1,7 @@
 ---
 tags: [DevKnowledge, Infra]
 ---
+
 Terraform est un outil d'**Infrastructure as Code (IaC)** créé par HashiCorp en 2014. Il permet de définir, provisionner et gérer des infrastructures cloud dans des fichiers de configuration texte, versionnables comme du code source.
 
 ---
@@ -10,6 +11,7 @@ Terraform est un outil d'**Infrastructure as Code (IaC)** créé par HashiCorp e
 Avant IaC : on clique dans des interfaces graphiques (AWS Console, etc.) pour créer des serveurs, des réseaux, des bases de données. C'est manuel, non reproductible, et impossible à versionner.
 
 Avec IaC : l'infrastructure est décrite dans des fichiers de code. On peut :
+
 - La versionner dans Git
 - La reproduire identiquement dans plusieurs environnements (dev, staging, prod)
 - La faire reviewer comme n'importe quel changement de code

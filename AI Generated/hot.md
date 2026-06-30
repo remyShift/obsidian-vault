@@ -1,74 +1,86 @@
 ---
 updated: 30-06-2026
-tags: [meta, hot-cache, global]
 ---
 
-# Hot Cache — Global
+## Hot Cache — Global
 
 > Vue cross-projets. Max 500 mots. Chaque projet a une entree courte.
 
-## Derniere activite
+### Derniere activite
+
 30-06-2026 - olis-lab : session exploration + planning (zero code). Cartographie PLP Next (`apps/web`), trace du curated-first legacy (ShopAll → `apps/server`), **plan valide** d'un endpoint CMS custom `/products-curated` qui place les produits curated en tete (`~/.claude/plans/peppy-whistling-mist.md`, NON implemente — Remy diffère l'implementation).
 
-## Projets actifs
+### Projets actifs
 
-### olis-lab
+#### olis-lab
+
 - Derniere session : 30-06-2026
-- Etat : **Plan curated PLP valide (NON implemente, `~/.claude/plans/peppy-whistling-mist.md`)** : endpoint Payload custom `/products-curated` dans `apps/cms` (in-process Local API `req.payload.find`, pattern `apps/cms/src/endpoints/sync/brands.ts`, public car `products` a `access.read:()=>true`), appele via `cms.request()` (SDK) par un nouveau `getProductsCurated` (`apps/web/lib/api/cms.ts`) drop-in de `getProducts` dans la PLP `page.tsx`. Source curation = global `trading-plan.curationSettings.homepage` (`brandsOfTheMonth` relation→brands ordre signifiant, `prioritySkus` relation→products, `maxPerBrand` ; deja migre, miroir de l'ancien Mongo `curation_settings`). Decisions : **ordre deterministe** (interleave round-robin + cap `maxPerBrand`, PAS de `$sample`), section `homepage`, curated en tete **seulement si `sort`==defaut** et **toujours filtres par le `where` actif** (tri explicite → find pur). Helper pur `buildCuratedList` testable, int.spec ecrit avant (TDD). Decouvertes PLP : pure `URL→HTML` (URL = source de verite, `optimisticFilters` = cache via `router.replace`, pas de React Query/Jotai pour filtres) ; pagination "Show More" = accumulation de `limit` (+20, `page`=1) → refetch from scratch O(n²) ; `buildWhereClause` force `status:'Live'`+`_status:'published'`. Bugs notes : commentaire faux `data.ts:11` (SDK = HTTP REST, pas Local API) ; double `useFilters` (desktop+mobile, 2 states optimistes) ; legacy ShopAll utilise par erreur section `homepage` pas `shop` ; pagination legacy cassee si multi-requetes ($sample+shuffle). **Plan globals valide (NON implemente, `~/.claude/plans/j-aimerais-faire-le-plan-cuddly-breeze.md`)** : 4 ameliorations sur `apps/cms`. **T1** path navbar requis si item ET section non-disabled (validation actuelle ignore `sectionDisabled` ; helper pur `isNavItemPathRequired(data, path)` via `data`+`path` du `ValidateOptions`). **T2 (trivial)** remplir `globals:['navbar','announcement-bar','trading-plan']` du plugin `translator` (infra openAIResolver deja la, bouton Translate fourni). **T3** route preview UNIQUE interne au CMS (`/preview/header`, meme origine -> zero CORS, pas besoin que `apps/web` tourne) rendant announcement+navbar ensemble via `useLivePreview` + composants `packages/ui` (`Navbar` props-driven + `TopBanner`). **T4** groupe `brands` (label localise + path valide) dans le global Navbar + wiring front (infra `getCmsNavLabels`/`resolveNavLabel` existe deja, exclut juste brands ; remplace le hardcode `ROUTES.hotBrands`). Faits : 3 globals seulement (pas de Footer) ; Navbar existe dans `packages/ui` (legacy props-driven) ET `apps/web` (partiellement CMS) ; `TopBanner` apps/web non portable mais `packages/ui/.../TopBanner/index.tsx` reutilisable ; `validate` Payload donne `data`+`path` (acces aux ancetres). Tradeoff navbar preview = UI `packages/ui` legacy, pas `apps/web` au pixel. **(0) Cart hook — PR #1859 OUVERTE** (`feat/test-cms-computeCartSnapshot-expanded`, reintroduit #1801/TASK-1005 reverte `8f03cb807`) : implementee + verifiee. Reexport valeur `cartProductSchema` (`shared/payload/index.ts`), hook remis en version #1801 TEL QUEL, `validate` Zod sur le champ `cartProduct` (`Products.ts`), factory `legacyId?:string|null`, `computeCartSnapshot.int.spec.ts` recree (8 cas + 9e de constat « publie sans legacyId → pas de snapshot », logger non asserte). Typecheck shared+cms, eslint, **9/9 int verts en local** (mongo pid 886 ; env Node 26 vs pin 20.19 contourne via `npm_config_engine_strict=false`). `legacyId` confirme non-required au publish. Pas commite par Claude. Reste : CI verte + review Diego + merge. **Follow-up separe "soon"** : guard `beforeValidate` empechant de publier/passer Live sans legacyId — vrai fix d'un bug deja en prod (signale par Suze) ET **remonte a Sentry** a chaque publication pre-backsync (`reportError`→`captureException`), bruit visible dans `productSlug.int.spec.ts`. Plan : `~/.claude/plans/diego-a-revert-hier-lucky-truffle.md`. **(1) Navbar PR #1839 (`feat/next-read-payload-navbar`, apps/web)** : bug navbar/announcement bar CMS = `null` permanent **corrige**. `getServerFeatureFlag` sortait avant son log (ligne `!distinctId`) ; le `distinctId` venait d'un cookie posthog `ph_<key>_posthog` jamais pose car posthog-js est en `opt_out_capturing_by_default: true` + `cookieless_mode: 'on_reject'` (pas de cookie tant que pas d'opt-in). Fix dans `posthog-server.ts` : eval avec id constant `SERVER_FLAG_DISTINCT_ID='server-side'`, retrait `onlyEvaluateLocally: true` (self-heal via endpoint distant au cold start), `sendFeatureFlagEvents: false`, suppr `getDistinctId`. Mock rebranche sur `NODE_ENV==='development'` via helper partage `getLocalFlagFallback` (`feature-flags.ts`), symetrique serveur + client (`useFeatureFlags.ts`) ; Remy a ajoute un early-return dev (court-circuite PostHog en local). Trou d'archi note : si serveur defere (`null`), le client ne peut pas refetch le CMS (prop deja `null`). 4 fichiers, tsc+eslint verts, **pas verifie en live** (env Node casse), **pas commite**. **Securite** : `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` = personal API key fuitee dans le bundle client, a renommer server-only + coordonner Amplify. **(2) PR #1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : `LockableTextField` (sku+ean), lock = `_status==='published'`, Generate SKU masque si `status==='Live'`, review IA de Diego traitee (5 findings, repo en issue comments), reponse EN a poster, pas verifie en live. En attente : slug #1850 (fix CI + rebuild conteneur), top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC, checkout/footer. Decouvertes : deux statuts produit `_status` (lock) vs `status` Live (regen) ; `NODE_ENV` = signal local/deploye fiable ; coupler flag a un cookie de consentement = anti-pattern pour contenu public. Pieges env : shell Node 26 vs pin 20.19.
-- Prochaine etape : **curated PLP** = implementer `peppy-whistling-mist.md` quand Remy lance (int.spec → helper `buildCuratedList` → handler `curatedProducts.ts` → enregistrement `payload.config.ts` → `getProductsCurated`+qs-esm → swap `page.tsx`). globals = implementer le plan valide quand Remy decide (ordre Task 2 -> 1 -> 4 -> 3 ; `sync-payload-types` apres schema ; verif live). cart hook = PR #1859 ouverte (implementee, 9/9 int verts) → faire passer la CI + review Diego + merge, puis follow-up guard `beforeValidate` (urgent : bruit Sentry/CI). Navbar #1839 = verif live (Node 20) + commit/push (`posthog-server.ts`, `feature-flags.ts`, `useFeatureFlags.ts`, `SiteHeader.tsx`) + commentaire EN sur PR + renommer cle API exposee (avec Amplify). PR #1853 = poster reponse Diego + verif admin + commit/push + trancher gel total SKU si Live. En parallele : slug #1850, banner / bulk-add / SKU meeting / RFC RBAC.
+- Etat : **Plan curated PLP valide (NON implemente, `~/.claude/plans/peppy-whistling-mist.md`)** : endpoint Payload custom `/products-curated` dans `apps/cms` (in-process Local API `req.payload.find`, pattern `apps/cms/src/endpoints/sync/brands.ts`, public car `products` a `access.read:()=>true`), appele via `cms.request()` (SDK) par un nouveau `getProductsCurated` (`apps/web/lib/api/cms.ts`) drop-in de `getProducts` dans la PLP `page.tsx`. Source curation = global `trading-plan.curationSettings.homepage` (`brandsOfTheMonth` relation→brands ordre signifiant, `prioritySkus` relation→products, `maxPerBrand` ; deja migre, miroir de l'ancien Mongo `curation_settings`). Decisions : **ordre deterministe** (interleave round-robin + cap `maxPerBrand`, PAS de `$sample`), section `homepage`, curated en tete **seulement si `sort`==defaut** et **toujours filtres par le `where` actif** (tri explicite → find pur). Helper pur `buildCuratedList` testable, int.spec ecrit avant (TDD). Decouvertes PLP : pure `URL→HTML` (URL = source de verite, `optimisticFilters` = cache via `router.replace`, pas de React Query/Jotai pour filtres) ; pagination "Show More" = accumulation de `limit` (+20, `page`=1) → refetch from scratch O(n²) ; `buildWhereClause` force `status:'Live'`+`_status:'published'`. Bugs notes : commentaire faux `data.ts:11` (SDK = HTTP REST, pas Local API) ; double `useFilters` (desktop+mobile, 2 states optimistes) ; legacy ShopAll utilise par erreur section `homepage` pas `shop` ; pagination legacy cassee si multi-requetes ($sample+shuffle). **Plan globals valide (NON implemente, `~/.claude/plans/j-aimerais-faire-le-plan-cuddly-breeze.md`)** : 4 ameliorations sur `apps/cms`. **T1** path navbar requis si item ET section non-disabled (validation actuelle ignore `sectionDisabled` ; helper pur `isNavItemPathRequired(data, path)` via `data`+`path` du `ValidateOptions`). **T2 (trivial)** remplir `globals:['navbar','announcement-bar','trading-plan']` du plugin `translator` (infra openAIResolver deja la, bouton Translate fourni). **T3** route preview UNIQUE interne au CMS (`/preview/header`, meme origine -> zero CORS, pas besoin que `apps/web` tourne) rendant announcement+navbar ensemble via `useLivePreview` + composants `packages/ui` (`Navbar` props-driven + `TopBanner`). **T4** groupe `brands` (label localise + path valide) dans le global Navbar + wiring front (infra `getCmsNavLabels`/`resolveNavLabel` existe deja, exclut juste brands ; remplace le hardcode `ROUTES.hotBrands`). Faits : 3 globals seulement (pas de Footer) ; Navbar existe dans `packages/ui` (legacy props-driven) ET `apps/web` (partiellement CMS) ; `TopBanner` apps/web non portable mais `packages/ui/…/TopBanner/index.tsx` reutilisable ; `validate` Payload donne `data`+`path` (acces aux ancetres). Tradeoff navbar preview = UI `packages/ui` legacy, pas `apps/web` au pixel. **(0) Cart hook — PR 1859 OUVERTE** (`feat/test-cms-computeCartSnapshot-expanded`, reintroduit dans la pr 1801/TASK-1005 reverte `8f03cb807`) : implementee + verifiee. Reexport valeur `cartProductSchema` (`shared/payload/index.ts`), hook remis en version 1801 TEL QUEL, `validate` Zod sur le champ `cartProduct` (`Products.ts`), factory `legacyId?:string|null`, `computeCartSnapshot.int.spec.ts` recree (8 cas + 9e de constat " publie sans legacyId → pas de snapshot ", logger non asserte). Typecheck shared+cms, eslint, **9/9 int verts en local** (mongo pid 886 ; env Node 26 vs pin 20.19 contourne via `npm_config_engine_strict=false`). `legacyId` confirme non-required au publish. Pas commite par Claude. Reste : CI verte + review Diego + merge. **Follow-up separe "soon"** : guard `beforeValidate` empechant de publier/passer Live sans legacyId — vrai fix d'un bug deja en prod (signale par Suze) ET **remonte a Sentry** a chaque publication pre-backsync (`reportError`→`captureException`), bruit visible dans `productSlug.int.spec.ts`. Plan : `~/.claude/plans/diego-a-revert-hier-lucky-truffle.md`. **(1) Navbar PR 1839 (`feat/next-read-payload-navbar`, apps/web)** : bug navbar/announcement bar CMS = `null` permanent **corrige**. `getServerFeatureFlag` sortait avant son log (ligne `!distinctId`) ; le `distinctId` venait d'un cookie posthog `ph_<key>_posthog` jamais pose car posthog-js est en `opt_out_capturing_by_default: true` + `cookieless_mode: 'on_reject'` (pas de cookie tant que pas d'opt-in). Fix dans `posthog-server.ts` : eval avec id constant `SERVER_FLAG_DISTINCT_ID='server-side'`, retrait `onlyEvaluateLocally: true` (self-heal via endpoint distant au cold start), `sendFeatureFlagEvents: false`, suppr `getDistinctId`. Mock rebranche sur `NODE_ENV==='development'` via helper partage `getLocalFlagFallback` (`feature-flags.ts`), symetrique serveur + client (`useFeatureFlags.ts`) ; Remy a ajoute un early-return dev (court-circuite PostHog en local). Trou d'archi note : si serveur defere (`null`), le client ne peut pas refetch le CMS (prop deja `null`). 4 fichiers, tsc+eslint verts, **pas verifie en live** (env Node casse), **pas commite**. **Securite** : `NEXT_PUBLIC_FEATURE_FLAGS_SECURE_API_KEY` = personal API key fuitee dans le bundle client, a renommer server-only + coordonner Amplify. **(2) PR 1853 (`refactor/unlock-availability-ean-sku-fields`, TASK-1125, OUVERTE)** : `LockableTextField` (sku+ean), lock = `_status==='published'`, Generate SKU masque si `status==='Live'`, review IA de Diego traitee (5 findings, repo en issue comments), reponse EN a poster, pas verifie en live. En attente : slug 1850 (fix CI + rebuild conteneur), top banner, bulk-add, TASK-1115 SKU (meeting), RFC RBAC, checkout/footer. Decouvertes : deux statuts produit `_status` (lock) vs `status` Live (regen) ; `NODE_ENV` = signal local/deploye fiable ; coupler flag a un cookie de consentement = anti-pattern pour contenu public. Pieges env : shell Node 26 vs pin 20.19.
+- Prochaine etape : **curated PLP** = implementer `peppy-whistling-mist.md` quand Remy lance (int.spec → helper `buildCuratedList` → handler `curatedProducts.ts` → enregistrement `payload.config.ts` → `getProductsCurated`+qs-esm → swap `page.tsx`). globals = implementer le plan valide quand Remy decide (ordre Task 2 -> 1 -> 4 -> 3 ; `sync-payload-types` apres schema ; verif live). cart hook = PR 1859 ouverte (implementee, 9/9 int verts) → faire passer la CI + review Diego + merge, puis follow-up guard `beforeValidate` (urgent : bruit Sentry/CI). Navbar 1839 = verif live (Node 20) + commit/push (`posthog-server.ts`, `feature-flags.ts`, `useFeatureFlags.ts`, `SiteHeader.tsx`) + commentaire EN sur PR + renommer cle API exposee (avec Amplify). PR 1853 = poster reponse Diego + verif admin + commit/push + trancher gel total SKU si Live. En parallele : slug 1850, banner / bulk-add / SKU meeting / RFC RBAC.
 
-### ingredient-manager
+#### ingredient-manager
+
 - Derniere session : 08-06-2026
 - Etat : back-office de notation produits Oli's Lab (matching INCI/COSING + scoring 10 regles R01-R10, sources shop/ewg/lancome). TS strict + Zod + Express 5 + Mongo + Next 14. Inspecte + documente en 4 notes de lecture. Dette : `ext-scoring.repo.ts` 3314 lignes (God file), abstraction par source qui fuit (`if shop else ext` dans le service), logique scoring dupliquee dans la couche data.
 - Prochaine etape : si refacto, sortir la logique scoring des repos vers le domaine (point 1 du plan note 03) ; trier les notes Inbox (to-process).
 
-### seed4t-perso
+#### seed4t-perso
+
 - Derniere session : 24-06-2026
-- Etat : monorepo pnpm `remyShift/seed4t` (privé), domaine pur dans **`packages/domain`** (renommé depuis `core` ; nom de package resté `@seed4t/core` → à aligner). **PR #2 mergée**, 14 tests verts. Deps stockées **par nom** (`string[]`) → catalog = source de vérité ; `build()` throw sur dépendance inconnue ; helper `uniqueBy` ; garde-fou CI `verify:exports` (le `main` doit exister après build). **Modèle acté** : brick = package npm, grappe = brick + deps ; transitivité profonde/cycles = terrain TDD hors besoin produit (grappes réelles plates). Le domaine résout mais ne **produit rien** encore.
+- Etat : monorepo pnpm `remyShift/seed4t` (privé), domaine pur dans **`packages/domain`** (renommé depuis `core` ; nom de package resté `@seed4t/core` → à aligner). **PR 2 mergée**, 14 tests verts. Deps stockées **par nom** (`string[]`) → catalog = source de vérité ; `build()` throw sur dépendance inconnue ; helper `uniqueBy` ; garde-fou CI `verify:exports` (le `main` doit exister après build). **Modèle acté** : brick = package npm, grappe = brick + deps ; transitivité profonde/cycles = terrain TDD hors besoin produit (grappes réelles plates). Le domaine résout mais ne **produit rien** encore.
 - Prochaine etape : **Phase 3 = output `package.json`** (`Recipe` + sérialisation), le vrai cœur V1 manquant ; puis Phase 2 versions (latest + ranges, port `IVersionResolver`) ; T12 deps vs devDeps ; aligner `@seed4t/core`→`@seed4t/domain`.
 
-### ts-seed (predecesseur, repo mob)
+#### ts-seed (predecesseur, repo mob)
+
 - Derniere session : 29-05-2026
 - Etat : boilerplate Next.js + vitest, docs/skills en anglais, plan TDD premiere brique valide, zero code metier encore
 - Prochaine etape : remplace par seed4t-perso pour le travail solo
 
-### piqure
+#### piqure
+
 - Derniere session : 19-05-2026
 - Etat : PR has() prete a merger (squash a faire), PR circular deps a ouvrir
 - Prochaine etape : squash + merge has(), puis ouvrir circular deps
 
-### obsidian-vault
+#### obsidian-vault
+
 - Derniere session : 24-06-2026
 - Etat : **Harnais shell stable** (fish + dotfiles 100% chezmoi `remyShift/dotfiles` + Brewfile). Ajout de 5 alias git fish (`gf`, `gm`, `glgg`, `gsta`, `gstp`) dans `~/.config/fish/conf.d/aliases.fish` ; note `Code/Setup Shell.md` recalée sur le contenu réel (2 tables : binaires boostés + git, 11 alias git) ; push chezmoi `ac3b254`. Workflow dotfile = éditer la source chezmoi → `chezmoi apply <fichier>` → `chezmoi git -- add/commit/push`. **Splashboard stabilisé, tout statique** (2 dashboards home/project, `ANIMATION_WINDOW` 2s codée en dur, hook cd `--on-cd`, token github via `~/.splashboard/secrets.toml`). Découverte récurrente : Bash de Claude = zsh figé sans TTY (ne rend pas les TUI).
 - Prochaine etape : **Rémy : régénérer le token GitHub** (compromis via screenshot, scope `notifications`) + réécrire `secrets.toml`. Reste (Rémy) : sudo python.org, rotation mdp Mongo Atlas, suppr backup `~/shell-migration-backup-*`, tester `/coach`. Optionnel : splash home hors-repo (fish custom), widget PR titre-seul (ReadStore), `yazi`, pimp `starship.toml`.
 
-### lyoncraft-2026
+#### lyoncraft-2026
+
 - Derniere session : 12-05-2026
 - Etat : theming dark/light operationnel, slides en cours de finalisation
 - Prochaine etape : remplacer placeholders (KicksFolio slide 19, LinkedIn slide 22), chronometrer les actes
 
-### claude-obsidian
+#### claude-obsidian
+
 - Derniere session : 02-05-2026
 - Etat : infra vault stabilisee (PostCompact, hot cache deux niveaux, /recap, /autoresearch, Sommaire)
 - Prochaine etape : tester /autoresearch sur sujet reel
 
-### portfolio-gameboy-next
+#### portfolio-gameboy-next
+
 - Derniere session : 28-04-2026
-- Etat : migration pnpm done (PR #37), PageTitle RSC extrait avec tests
+- Etat : migration pnpm done (PR 37), PageTitle RSC extrait avec tests
 - Prochaine etape : Tailwind 4 + ESLint 10 flat-config (backlog)
 
-### winalia
+#### winalia
+
 - Derniere session : 28-04-2026
 - Etat : audit tech + produit livre, prospection envoyee, en attente de retour
 - Prochaine etape : si mission acceptee — Sprint 1 bloquants secu ; sinon archiver
 
-## Contexte personnel actif
+### Contexte personnel actif
+
 - Korea move : test de 3 mois a Seoul a planifier dans les prochains mois ; prevoit changer de PC a ce moment (→ dotfiles chezmoi = env reconstructible en 4 commandes)
 - Freelance : mission Oli's Lab long terme, deadline migration GMC le 18 aout 2026
 - LinkedIn ghostwriting : 2 posts rediges (reconversion valide, coreen/React en attente validation)
 - LyonCraft 2026 : theming done, contenu finalise, script + timing restant
 
-## Threads ouverts cross-projets
+### Threads ouverts cross-projets
+
 - PostHog olis-lab : flag `dev_search_page` retire du code, a archiver cote dashboard. Flickering trading plan fixe (3 etats flag + fetch eager), verif runtime fenetre privee a faire avant commit.
 - XML feed olis-lab : feeds GMC + Klaviyo faits, automatisation planifiee (CRON), bug S3 bloquant
 - Feed Meta olis-lab : pas encore implemente

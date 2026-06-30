@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring, DDD]
 ---
+
 Utiliser des types primitifs (`string`, `number`, `boolean`) pour représenter des concepts métier qui ont leurs propres règles de validité, leur propre comportement, ou leur propre signification dans le domaine. En DDD, c'est exactement ce que résolvent les [[Value Object|Value Objects]].
 
 ```js

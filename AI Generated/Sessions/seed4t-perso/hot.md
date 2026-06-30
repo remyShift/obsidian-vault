@@ -1,7 +1,7 @@
 ---
 updated: 24-06-2026
 project: seed4t-perso
-tags: [meta, hot-cache]
+tags: [hot-cache]
 ---
 
 # Hot Cache — seed4t-perso

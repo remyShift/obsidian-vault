@@ -5,46 +5,42 @@ comments: 2
 reposts: 0
 impressions: 326
 url: https://www.linkedin.com/feed/update/urn:li:activity:7226181593868972032/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Nouvel semaine = Nouveaux objectifs !
 
+Toujours dans mon apprentissage et on the
 
-Toujours dans mon apprentissage et on the 
-#Road2BeDev 🚀 cette semaine je me fixe quelques objectifs :
+Road2BeDev 🚀 cette semaine je me fixe quelques objectifs :
 
 ☑️ Voir les tests en React (grâce aux vidéos de David Grammatico)
-☑️ Commencer l’apprentissage de Next (d’ailleurs si vous avez des ressources pour bien commencer je dis pas non),
+
+☑️ Commencer l'apprentissage de Next (d'ailleurs si vous avez des ressources pour bien commencer je dis pas non),
+
 ☑️ 1 kata minimum par soir en TDD,
+
 ☑️ Faire au moins 3 mini projets JS de ma liste Practice Makes Perfect,
+
 ☑️Sortir 2 fois mon chat au parc,
+
 ☑️Aller 3 fois à la salle de sport,
-☑️Continuer la lecture de « Software Craft », avoir finis le chapitre BDD
+
+☑️Continuer la lecture de " Software Craft ", avoir finis le chapitre BDD
 
 Le tout en prenant des notes sur les nouveaux concepts vu !
 
-Let’s do it !
+Let's do it !
 
-Oui j’ai mis une photo de mon chat trop mignon juste pour te catch 🐈
-
-
-
-#Objectifs 
-#WeekPlan 
-#Code 
-#NextJS 
-#Cat 
-#Development 
-#IT
+Oui j'ai mis une photo de mon chat trop mignon juste pour te catch 🐈
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans et suis passionné de développement informatique depuis 2ans.
+🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans et suis passionné de développement informatique depuis 2ans.
 
-Suis mon aventure avec 
-#Road2BeDev pour un jour rejoindre le monde des développeurs !
+Suis mon aventure avec
+
+Road2BeDev pour un jour rejoindre le monde des développeurs !
 
 - - -
 

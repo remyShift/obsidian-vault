@@ -47,7 +47,7 @@ auth.setNext(rateLimit).setNext(route);
 const response = auth.handle(request);
 ```
 
-### En JavaScript — Express est un Chain of Responsibility
+## En JavaScript — Express est un Chain of Responsibility
 
 ```js
 app.use(authMiddleware);
@@ -57,13 +57,13 @@ app.get('/orders', orderHandler);
 
 C'est exactement le même pattern. `next()` = `super.handle(request)`. Comprendre Chain of Responsibility, c'est comprendre le coeur d'Express.
 
-### Signal d'usage
+## Signal d'usage
 
 - Pipelines de traitement : validation, transformation, autorisation
 - Plusieurs règles à appliquer en séquence avec possibilité de court-circuit
 - Quand la liste des traiteurs peut varier selon le contexte
 
-### Erreur classique
+## Erreur classique
 
 Chaînes trop longues sans visibilité sur l'ordre. Documenter l'ordre des middlewares et le rendre explicite, surtout quand les dépendances entre maillons existent (auth avant rate limit, pas l'inverse).
 

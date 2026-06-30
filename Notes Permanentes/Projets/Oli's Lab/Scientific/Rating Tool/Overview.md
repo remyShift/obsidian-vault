@@ -3,9 +3,10 @@ created: 2026-06-08
 type: project-notes
 status: to-process
 tags:
-  - OlisLab
   - IngredientManager
+  - olis-lab
 ---
+
 ## Le but du projet
 
 C'est l'outil **interne** d'Oli's Lab qui note les produits cosmétiques à partir de leur liste d'ingrédients (INCI). Concrètement il répond à une question : **"ce produit est-il bien formulé, oui ou non, et avec quel score ?"**
@@ -60,6 +61,7 @@ Intérêt business : pouvoir **comparer** le score des produits maison à des r�
 - **Scripts** : toute une batterie de scripts batch (`script:ext:*`) pour migrer, re-matcher, re-classifier, recalculer les scores en masse.
 
 ## À retenir
+
 - Outil interne = pipeline **données → matching → scoring**, pas une app client.
 - La donnée la plus précieuse n'est pas le score, c'est le **matching INCI ↔ COSING** correct.
 - Voir [[Architecture en place]], [[Le système de scoring]], [[Critique archi - Clean Code & DDD]].

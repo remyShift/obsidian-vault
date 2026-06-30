@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, JS, ManipStr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## chartAt(index)
+
 Retourne le caractère à l'index spécifié.
 
 ```js
@@ -11,6 +14,7 @@ let char = str.charAt(1); // "e"
 ```
 
 ## charCodeAt(index)
+
 Retourne le code Unicode du caractère à l'index spécifié.
 
 ```js

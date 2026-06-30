@@ -5,12 +5,10 @@ comments: 2
 reposts: 0
 impressions: 393
 url: https://www.linkedin.com/feed/update/urn:li:activity:7275053438760062976/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Build in Public - KicksFolio - Jour 3 👟
-
 
 Et voici le coeur de mes routes API est fait ! 🎉
 
@@ -26,16 +24,11 @@ And last but not least il me faut trouver une API pour avoir le prix estimé des
 
 👉🏼 Si t'as envie de voir un bout de code que j'ai pu faire hésite pas à me le dire en commentaires ! J'ai envie de partager du code que j'ai pu faire mais ne sait pas trop ce qui serait pertinent 🤔
 
-
-#BuildInPublic 
-#KicksFolio 
-#Backend 
-#RubyOnRails
-
 - - -
 
-🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

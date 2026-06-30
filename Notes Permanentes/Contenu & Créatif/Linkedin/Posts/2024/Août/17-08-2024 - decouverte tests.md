@@ -5,14 +5,14 @@ comments: 11
 reposts: 0
 impressions: 2459
 url: https://www.linkedin.com/feed/update/urn:li:activity:7230489053677178880/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Je sais enfin faire des tests, et c'est grâce aux vidéos de David Grammatico !
 
-Toujours on my 
-#Road2BeDev, j'ai appris React en un peu plus d'un mois. Avant de passer à Next, je voulais maîtriser les tests en React. Voici ce que j'ai retenu :
+Toujours on my
+
+Road2BeDev, j'ai appris React en un peu plus d'un mois. Avant de passer à Next, je voulais maîtriser les tests en React. Voici ce que j'ai retenu :
 
 - Tester un hook et simuler des actions avec "act".
 
@@ -25,21 +25,15 @@ Toujours on my
 
 Je peux maintenant passer sereinement à l'apprentissage de Next pour créer mon portfolio !
 
-D’ailleurs, si vous avez des recommandations de cours ou tutoriels sur Next, je suis preneur.👇🏼
-
-
-#Code 
-#React 
-#NextJs 
-#Development 
-#Developpeur
+D'ailleurs, si vous avez des recommandations de cours ou tutoriels sur Next, je suis preneur.👇🏼
 
 - - -
 
-🚀 Si tu me découvres, moi c’est Rémy, 24 ans, passionné de développement informatique depuis 2 ans.
+🚀 Si tu me découvres, moi c'est Rémy, 24 ans, passionné de développement informatique depuis 2 ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -
 

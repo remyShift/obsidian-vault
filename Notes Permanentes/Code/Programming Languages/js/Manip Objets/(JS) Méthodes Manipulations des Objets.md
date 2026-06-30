@@ -1,8 +1,11 @@
 ---
-tags: [LangagesDeProgs, JS, ManipObj]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 En JavaScript, les objets sont des structures de données composées de propriétés, qui sont des paires clé-valeur. Les méthodes de manipulations d'objets permettent d'interagir / modifier / influer directement sur un objet, on retrouve notamment :
+
 - [[keys]],
 - [[values]],
 - [[entries]],
@@ -14,7 +17,8 @@ En JavaScript, les objets sont des structures de données composées de proprié
 
 De plus on peut boucler sur des objets :
 
-`for ... in` :
+`for … in` :
+
 Parcourt les propriétés énumérables d'un objet (héritées et propres).
 
 ```js
@@ -24,8 +28,8 @@ for (const key in obj) {
 }
 ```
 
+`for … of`
 
-`for ... of`
 Parcourt les paires clé-valeur d'un objet.
 
 ```js

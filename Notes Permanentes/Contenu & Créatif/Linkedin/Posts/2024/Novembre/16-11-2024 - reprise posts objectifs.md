@@ -51,7 +51,6 @@ Et à chaque itérations sur un même katas je rajouterais la nouvelle solution 
 - - - 
 
 🚀 De noob à expert suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -
 

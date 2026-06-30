@@ -9,39 +9,24 @@ tags:
   - Linkedin
 ---
 
-Ne pas prendre de notes, c'est comme essayer de remplir une passoire d'eau : bon courage pour retenir quoi que ce soit. Je t’explique pourquoi 👇🏼
+Ne pas prendre de notes, c'est comme essayer de remplir une passoire d'eau : bon courage pour retenir quoi que ce soit. Je t'explique pourquoi 👇🏼
 
+Laissez-moi vous poser une question : si vous lisez un article aujourd'hui, combien de détails pourrez-vous en restituer dans une semaine sans prendre de notes ? Probablement seulement les grandes lignes, et encore… Prendre des notes est indispensable.
 
-Laissez-moi vous poser une question : si vous lisez un article aujourd'hui, combien de détails pourrez-vous en restituer dans une semaine sans prendre de notes ? Probablement seulement les grandes lignes, et encore... Prendre des notes est indispensable.
+En effet, prendre des notes est essentiel pour bien mémoriser les informations. Comme j'aime le dire : " Écrire, c'est lire deux fois ".
 
-
-En effet, prendre des notes est essentiel pour bien mémoriser les informations. Comme j'aime le dire : « Écrire, c’est lire deux fois ».
-
-
-Écrire renforce l'apprentissage et la rétention d'informations. Vos notes deviennent des ressources précieuses pour réviser rapidement avant une réunion, un examen ou une présentation. Prendre des notes vous oblige aussi à reformuler l'information dans vos propres mots, ce qui améliore la compréhension et aide à organiser vos pensées. 
-
+Écrire renforce l'apprentissage et la rétention d'informations. Vos notes deviennent des ressources précieuses pour réviser rapidement avant une réunion, un examen ou une présentation. Prendre des notes vous oblige aussi à reformuler l'information dans vos propres mots, ce qui améliore la compréhension et aide à organiser vos pensées.
 
 Cela permet aussi d'éviter de rechercher sur internet une information que vous avez déjà notée. Avec un bon outil de prise de notes et une organisation efficace, retrouver l'information que vous cherchez devient un jeu d'enfant.
 
-
 N'oubliez pas, les notes sont vos alliées pour une productivité maximale et un apprentissage continu ! Et toi quel outil tu utilises pour prendre tes notes ?
-
-
-#Productivité 
-#Efficacité 
-#PriseDeNotes 
-#Apprentissage 
-#Mindset 
-#Mémoire 
-#Code 
-#Development 
-
 
 - - -
 
-🚀 Si tu me découvres, moi c’est Rémy, j’ai 24ans et je suis passionné de développement informatique depuis 2ans.
+🚀 Si tu me découvres, moi c'est Rémy, j'ai 24ans et je suis passionné de développement informatique depuis 2ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev
 
 - - -

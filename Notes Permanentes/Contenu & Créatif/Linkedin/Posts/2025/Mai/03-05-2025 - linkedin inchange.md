@@ -35,7 +35,6 @@ Dit moi si t’as vu Linkedin évoluer ces derniers moi et ce que j’ai rater (
 - - -
 
 🚀 De noob à expert suis mon aventure pour un jour rejoindre le monde des développeurs au travers des mes posts et avec 
-#Road2BeDev !
 
 - - -
 

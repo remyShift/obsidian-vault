@@ -33,6 +33,5 @@ Partage moi tes astuces en commentaires et comment avoir ce déclic.
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -

@@ -10,7 +10,7 @@ tags:
 ---
 
 J'ai fais un pas de plus sur ma 
-#Road2BeDev ! J'ai 𝘁𝗿𝗼𝘂𝘃𝗲́ 𝘂𝗻 𝘀𝘁𝗮𝗴𝗲 à enchaîner après ma formation chez Le Wagon Lyon ! 👇🏼
+J'ai 𝘁𝗿𝗼𝘂𝘃𝗲́ 𝘂𝗻 𝘀𝘁𝗮𝗴𝗲 à enchaîner après ma formation chez Le Wagon Lyon ! 👇🏼
 
 Il se déroulera 𝗱𝗲 𝗷𝗮𝗻𝘃𝗶𝗲𝗿 𝗮̀ 𝗳𝗲́𝘃𝗿𝗶𝗲𝗿 𝟮𝟬𝟮𝟱, le temps d'obtenir ma certification et de laisser passer les fêtes.
 
@@ -29,6 +29,5 @@ L'équipe à l'air vraiment top et ça va être un bon moyen de mettre en pratiq
 - - -
 
 🚀 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -

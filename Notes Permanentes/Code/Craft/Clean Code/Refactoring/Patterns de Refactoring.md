@@ -1,5 +1,8 @@
 ---
-tags: [SoftwareCraft, CleanCode, Refacto]
+tags:
+  - SoftwareCraft
+  - CleanCode
+  - Refactoring
 ---
 
 Cette note est le sommaire des techniques de refactoring disponibles. Chaque pattern est une brique, on les utilise seuls ou combinés selon ce que le code demande.

@@ -5,43 +5,36 @@ comments: 2
 reposts: 0
 impressions: 711
 url: https://www.linkedin.com/feed/update/urn:li:activity:7234105892927946752/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Comment la discipline a transformé mon corps et boosté mon apprentissage ? 🏋️‍♂️💻
 
+Il y a environ 3 mois, lassé de voir mon corps s'engraisser, j'ai décidé de prendre les choses en main et de me remettre au sport.
 
-Il y a environ 3 mois, lassé de voir mon corps s’engraisser, j’ai décidé de prendre les choses en main et de me remettre au sport.
+J'ai aussi radicalement changé mon alimentation :
 
-J’ai aussi radicalement changé mon alimentation : 
+Avant, dès que j'avais la flemme de cuisiner ou une petite faim, Uber Eats venait me sauver.
 
-Avant, dès que j’avais la flemme de cuisiner ou une petite faim, Uber Eats venait me sauver.
+Aujourd'hui, je mange deux salades par jour, et si j'ai un creux, je cuisine moi-même (mon poulet curry est exceptionnel !).
 
-Aujourd’hui, je mange deux salades par jour, et si j’ai un creux, je cuisine moi-même (mon poulet curry est exceptionnel !). 
+J'ai également arrêté de boire toute boissons sucrées et gazeuses, ne buvant désormais que de l'eau.
 
-J’ai également arrêté de boire toute boissons sucrées et gazeuses, ne buvant désormais que de l’eau.
-
-Au début, il a été difficile de jongler entre mes séances de sport et l’apprentissage du code, mais j’ai dû m’imposer une routine et m’y tenir.
+Au début, il a été difficile de jongler entre mes séances de sport et l'apprentissage du code, mais j'ai dû m'imposer une routine et m'y tenir.
 
 Trois mois plus tard, la balance affiche 8 kg de moins, et je me sens mieux à la fois dans mon corps et dans ma tête.
 
-J’ai les idée plus clair et reste plus facilement concentré longtemps.
+J'ai les idée plus clair et reste plus facilement concentré longtemps.
 
 👉🏼 Et vous, quels changements de routine ont eu un impact positif sur votre vie ? Partagez vos expériences, je serais ravi de les lire !
 
+- - -
 
-#Sport 
-#Workout 
-#Code 
-#Motivation
+🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans, et je suis passsionné de développement informatique depuis 2ans.
 
-- - - 
+Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec
 
-🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans, et je suis passsionné de développement informatique depuis 2ans.
-
-Suis mon aventure pour rejoindre le monde des développeurs début 2025 avec 
-#Road2BeDev !
+Road2BeDev !
 
 - - -
 

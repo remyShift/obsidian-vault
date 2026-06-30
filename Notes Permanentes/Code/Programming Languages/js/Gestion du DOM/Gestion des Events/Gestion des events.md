@@ -1,8 +1,10 @@
 ---
-tags: [LangagesDeProgs, JS, ManipDOM]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
-Les événements sont des actions qui sont déclenché lors d'une interaction avec le user depuis notre page web *(clique sur un bouton, envoie d'un formulaire etc ...)*.
+Les événements sont des actions qui sont déclenché lors d'une interaction avec le user depuis notre page web *(clique sur un bouton, envoie d'un formulaire etc …)*.
 
 ## element.addEventListener(event, callback)
 

@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipObj]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## Object.assign(target, source)

@@ -52,7 +52,7 @@ class QueryBuilder {
 }
 ```
 
-### En pratique sur Oli's Lab
+## En pratique sur Oli's Lab
 
 Les **fixtures de test** sont un cas d'usage direct. Plutôt qu'un `new Product(null, null, null, 'active', null, 12)` illisible :
 
@@ -64,11 +64,11 @@ const product = new ProductBuilder()
   .build();
 ```
 
-### Signal d'usage
+## Signal d'usage
 
 Constructeur avec 4+ paramètres, surtout s'ils sont optionnels. Dans l'écosystème JS/Node : Knex.js, Mongoose query API, jest.fn() — tous utilisent Builder.
 
-### Erreur classique
+## Erreur classique
 
 Oublier que `.build()` doit valider l'objet avant de le retourner. Si certains champs sont obligatoires, c'est là que tu lèves l'erreur, pas à l'usage.
 

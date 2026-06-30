@@ -1,15 +1,18 @@
 ---
-tags: [LangagesDeProgs, ReactNative, Framework]
+tags:
+  - LangagesDeProgs
+  - ReactNative
 ---
 
-
 Le components `<Pressable>` permets de gérer les interactions tactiles dans une app ReactNative.
+
 - Il permets de créer des boutons ou des zones interactives adapter à nos besoins que ça soit visuel et comportementale.
 	- ==> Plus flexible que le [[CC - Button]],
 
-Il fonctionne similairement à une `<View>` : container, même option de style ...
+Il fonctionne similairement à une `<View>` : container, même option de style …
 
 Par exemple pour un bouton validez :
+
 ```tsx
 < Pressable>
 	<Ionicons
@@ -22,5 +25,6 @@ Par exemple pour un bouton validez :
 ```
 
 Il peut gérer différentes actions comme :
+
 - `onPress`,
 - `onLongPress`,

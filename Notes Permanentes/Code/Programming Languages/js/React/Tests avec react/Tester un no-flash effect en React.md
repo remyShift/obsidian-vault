@@ -1,16 +1,20 @@
 ---
-tags: [react, tests, vitest, ssr]
+tags:
+  - React
+  - LangagesDeProgs
+  - Tests
 ---
 
-# Tester un no-flash effect en React
-
 ## Le piège
+
 Un test qui interroge le DOM final (`expect(queryByText('boot')).toBeNull()`) **masque** les bugs de flash visuel. Si l'overlay s'affiche 1 frame avant d'être masqué par `useLayoutEffect`, l'utilisateur le voit, mais le test passe car au moment de l'assertion l'overlay est déjà retiré.
 
 ## La cause
+
 `useLayoutEffect` est synchrone après le DOM update mais **après** le commit. Cycle render → commit → effect. L'utilisateur peut voir 1 frame entre commit et re-render.
 
 ## La fix code
+
 `useState(initializer)` lit la valeur initiale **avant** le premier render :
 
 ```ts
@@ -27,6 +31,7 @@ const [showBoot] = useState(() =>
 ```
 
 ## La fix test
+
 Spy sur le composant lui-même (mocké) pour capturer s'il a été monté **du tout**, pas juste son état final dans le DOM.
 
 ```ts

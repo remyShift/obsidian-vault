@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Une suite d'appels enchaînés où chaque appel retourne un objet sur lequel on appelle une autre méthode : `a.getB().getC().doSomething()`. C'est une violation de la [[Loi de Déméter]] : le code connaît la structure interne de toute la chaîne, pas juste son voisin direct.
 
 ```js

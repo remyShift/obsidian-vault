@@ -22,11 +22,11 @@ payment.process();
 
 Ajouter un nouveau type de paiement = nouvelle classe + nouveau `case`. Aucune modification du code existant. C'est l'[[Les Principes SOLID|OCP]] à l'état pur.
 
-### Erreur classique
+## Erreur classique
 
 Mettre la logique métier dans la factory. La factory crée, elle ne décide pas.
 
-### Différence avec Abstract Factory
+## Différence avec Abstract Factory
 
 Factory Method crée **un** type d'objet. [[Abstract Factory]] crée **une famille** d'objets cohérents.
 

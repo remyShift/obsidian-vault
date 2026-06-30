@@ -9,30 +9,31 @@ tags:
   - Linkedin
 ---
 
-La semaine dernière j’ai omis ce post pour sortir mon portfolio mais cette semaine on reprends les bonnes habitudes !
-
+La semaine dernière j'ai omis ce post pour sortir mon portfolio mais cette semaine on reprends les bonnes habitudes !
 
 En plus attaquant ma formation dans 1 semaine ça sera sans doute le dernier post de ce type.
 
-
 Nouvelle semaine = nouveaux objectifs ! Lessgo 🚀
 
-Aujourd’hui c’est mon dernier jour de travail alimentaire et j’espère par la meme occasion la dernière fois que j’en ferais un.
+Aujourd'hui c'est mon dernier jour de travail alimentaire et j'espère par la meme occasion la dernière fois que j'en ferais un.
 
-Ce qui veut dire que cette semaine j’ai du temps.
+Ce qui veut dire que cette semaine j'ai du temps.
 
 Au programme :
 
 ☑️ On reprends les katas je pense en faire 2/jour
+
  Dont 1 sur ruby (étant un langage que je connais pas mais que je vais voir en formation pour être familier avec),
- Et l’autre en POO car il faut vraiment que je practice la POO,
+
+ Et l'autre en POO car il faut vraiment que je practice la POO,
 
 ☑️ Continuer (~finir) mon apprentissage de NextJS,
 
-☑️ Avoir presque finis SoftwareCraft, si je m’y mets un bon coup ça devrait le faire et je devrais en être plus très loin,
- J’enchaîne après la lecture de ce livre avec celui de Colin Damon : Itérations Product(ives) !
+☑️ Avoir presque finis SoftwareCraft, si je m'y mets un bon coup ça devrait le faire et je devrais en être plus très loin,
 
-☑️ Repasser sur tout mes projets jusqu’à présent et vérifier qu’ils soient tous fonctionnel et ont un readme clean,
+ J'enchaîne après la lecture de ce livre avec celui de Colin Damon : Itérations Product(ives) !
+
+☑️ Repasser sur tout mes projets jusqu'à présent et vérifier qu'ils soient tous fonctionnel et ont un readme clean,
 
 ☑️ Approfondir mes connaissances typescript et les différentes possibilités,
 
@@ -44,18 +45,13 @@ Et ça sera pas mal !
 
 👉🏼 Et toi quoi de prévu ? Dit le moi en commentaires !
 
-
-#Motivation 
-#Code 
-#Kata 
-#NextJS
-
 - - -
 
-🚀 Moi c’est Rémy et ça fait 2ans que je suis passionné de développement informatique.
+🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

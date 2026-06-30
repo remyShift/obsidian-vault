@@ -1,12 +1,15 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
-Les particules peuvent être utilisées pour créer des étoiles, de la fumée, de la pluie, de la poussière, du feu, etc etc ... On peut en avoir des milliers avec un frame rate raisonnable et donc elles impactent peu les performances si elles sont bien implements.
+Les particules peuvent être utilisées pour créer des étoiles, de la fumée, de la pluie, de la poussière, du feu, etc etc … On peut en avoir des milliers avec un frame rate raisonnable et donc elles impactent peu les performances si elles sont bien implements.
 
 Chaque particules est composées d'un `plane` (donc 2 triangles) qui regarde toujours la caméra.
 
 Créer des particules ressemble grandement à créer un `Mesh`.
+
 - Il nous faut une `geometry` et un `material` qui seront utilisés pour créer un `Points` plutôt qu'un `Mesh`.
 	- **NB :** Chaque geometry à un nombre de vertex et donc chacun de ses vertex deviendra une particules.
 

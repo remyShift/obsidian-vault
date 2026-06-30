@@ -1,15 +1,16 @@
 ---
 date: 2026-04-14
 type: chantier
-projet: Oli's Lab
-tags: [cms, payload, chantier, olis-lab]
+projet: "Oli's Lab"
+tags:
+  - olis-lab
 ---
 
-# Chantier : Migration CMS Payload
+## Chantier : Migration CMS Payload
 
 ---
 
-## Pourquoi
+### Pourquoi
 
 Notion + Make (automation) comme CMS atteint ses limites : gestion des traductions complexe, pas de CRUD natif propre, couplage fort avec l'automation qui peut écraser des données, difficile à maintenir à mesure que le catalogue grossit.
 
@@ -17,13 +18,13 @@ Payload CMS est **code-first** : le schéma est en code, l'UI admin en est le re
 
 ---
 
-## Objectif
+### Objectif
 
 Remplacer Notion + Make par Payload comme source de vérité pour le contenu éditable (produits, marques, catégories, articles, actives, concerns, skin types). La migration se fait en parallèle de la CRA qui continue de fonctionner, avec un bridge script qui synchronise Payload → MongoDB legacy pendant la transition.
 
 ---
 
-## Infrastructure & hébergement
+### Infrastructure & hébergement
 
 L'infrastructure a été posée par Diego. Tout tourne dans `eu-west-3` (Paris). Deux targets de déploiement :
 
@@ -40,9 +41,10 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 
 ---
 
-## Collections implémentées
+### Collections implémentées
 
-### `Media`
+#### `Media`
+
 - Upload **AVIF uniquement** (les autres formats sont rejetés)
 - Si l'image source n'est pas AVIF, elle est convertie via Sharp avant upload
 - Une taille définie : `thumbnail` (64×64, position centre)
@@ -50,12 +52,14 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 - Hook `afterRead` : réécrit les URLs vers le CDN (`CDN_URL/media/<filename>`) au lieu de l'URL interne Payload
 - Versioning activé
 
-### `LogoMedia`
+#### `LogoMedia`
+
 - Collection séparée de `Media` pour les logos SVG uniquement (`image/svg+xml`)
 - Même hook CDN que Media (prefix `logoMedia`)
 - Pas de resize ni de focal point (SVG = vectoriel)
 
-### `Brands`
+#### `Brands`
+
 - Champ `notionId` : unique, indexé, sidebar, read-only (identifiant de liaison avec le legacy)
 - Champ `syncMetadata` : groupe en sidebar avec `lastSyncedAt`, `lastSyncedBy`, `syncStatus` (`success`/`failed`). Mis à jour automatiquement après chaque sync.
 - Bouton `SyncBrandButton` en sidebar : déclenche le sync Payload → MongoDB via l'endpoint `/api/sync/brand/:id`
@@ -66,7 +70,8 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 - Versions/drafts activés
 - Delete désactivé depuis l'UI
 
-### `Categories`
+#### `Categories`
+
 - Champ `legacyId` : string contenant le MongoDB `_id` (pas un ObjectId cross-DB, string suffisant pour la transition)
 - Nom localisé, image obligatoire, slug auto
 - Create et delete désactivés depuis l'UI (les catégories ne se créent pas depuis Payload)
@@ -74,7 +79,8 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 - SEO plugin activé (tab SEO dans l'UI)
 - Versions/drafts activés
 
-### `Subcategories`
+#### `Subcategories`
+
 - Relation vers `categories` (champ `category` requis)
 - Validation d'unicité composite (name + category, slug + category) gérée **par query Payload** car MongoDB ne supporte pas les contraintes composites nativement
 - Slug avec `unique: false` au niveau DB (la contrainte est dans la validation custom)
@@ -82,10 +88,12 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 - SEO plugin activé
 - Versions/drafts activés
 
-### `Users`
+#### `Users`
+
 - Collection standard Payload pour l'authentification admin
 
-### Config globale
+#### Config globale
+
 - Locales : `['en', 'fr', 'it', 'es']`, defaultLocale `en`, fallback activé
 - SEO plugin activé sur `categories`, `subcategories`, `brands` (pas encore sur products)
 - S3 plugin configuré avec deux prefixes distincts : `media` et `logo-media`
@@ -94,9 +102,9 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 
 ---
 
-## Architecture sync : Payload → MongoDB legacy
+### Architecture sync : Payload → MongoDB legacy
 
-### Flow complet pour les brands
+#### Flow complet pour les brands
 
 ```
 Éditeur clique "Sync" dans l'UI Payload
@@ -107,13 +115,13 @@ Les secrets ne sont jamais dans le code ni dans les env files : ils sont stocké
 → Update syncMetadata sur le document Payload (lastSyncedAt, status)
 ```
 
-### Validation à la frontière legacy (Zod)
+#### Validation à la frontière legacy (Zod)
 
 Le schéma Zod `LegacyBrandSchema` valide les documents lus depuis `olis_lab.notion_brands` **avant** toute transformation. Si un document ne passe pas la validation, il est skippé avec un warning (jamais une erreur silencieuse).
 
 Zod vit uniquement à la **frontière de lecture legacy**, pas côté écriture Payload.
 
-### Transformer bidirectionnel
+#### Transformer bidirectionnel
 
 `src/sync/transformers/brands.ts` contient deux fonctions :
 
@@ -124,7 +132,7 @@ La direction Payload → legacy préserve les champs que Payload ne gère pas (`
 
 ---
 
-## Seed script : legacy MongoDB → Payload
+### Seed script : legacy MongoDB → Payload
 
 `src/scripts/seed/brands.ts` — idempotent, dry-run par défaut.
 
@@ -141,6 +149,7 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 ```
 
 **Fonctionnement :**
+
 1. Fetch les brands depuis `olis_lab.notion_brands` via `fetchLegacyBrands()`
 2. Validation Zod de chaque document
 3. Skip si `notionId` déjà présent dans Payload (idempotence)
@@ -152,7 +161,7 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 
 ---
 
-## Collections à implémenter
+### Collections à implémenter
 
 | Collection | Statut | Notes |
 |---|---|---|
@@ -167,7 +176,7 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 | `Articles` | Non démarré | |
 | `Bundles` | Non démarré | |
 
-### Règles de migration produits
+#### Règles de migration produits
 
 - Produit complet (title + images + description + how-to-use + brand) → `published` ou `offline`
 - Produit incomplet → `draft`
@@ -175,7 +184,7 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 
 ---
 
-## Décisions techniques notables
+### Décisions techniques notables
 
 **Deux collections Media séparées** (`media` et `logo-media`) : les logos SVG et les images raster ont des contraintes trop différentes (format, resize, focal point) pour partager une même collection.
 
@@ -187,7 +196,7 @@ pnpm --filter cms payload run src/scripts/seed/brands.ts -- --exclude 507f1f77
 
 ---
 
-## Réunions source
+### Réunions source
 
 - [[11-02-2026 Payload CMS POC Premier Etat des Lieux]]
 - [[17-02-2026 CMS Infrastructure Image Upload]]

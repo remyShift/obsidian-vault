@@ -1,5 +1,6 @@
 ---
-tags: [CodeKnowledge, Veille]
+tags:
+  - Veille
 ---
 
 - Sourcer = alimenter sa veille

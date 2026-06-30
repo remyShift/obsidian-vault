@@ -5,58 +5,36 @@ comments: 2
 reposts: 0
 impressions: 555
 url: https://www.linkedin.com/feed/update/urn:li:activity:7226583046680948736/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Toujours on my 
-#Road2BeDev, hier j’ai fait un kata et ça c’est mal passé …
+Toujours on my
 
+Road2BeDev, hier j'ai fait un kata et ça c'est mal passé …
 
+Toujours dans mon optique d'apprentissage continue et de " practice makes perfect " je me suis fixé comme objectif de faire 1 kata (minimum) tout les soirs.
 
-Toujours dans mon optique d’apprentissage continue et de « practice makes perfect » je me suis fixé comme objectif de faire 1 kata (minimum) tout les soirs.
+Hier soir en me rendant sur Codewars je lis l'énoncé d'un kata suggérer et me dis que ça a l'air assez simple et que j'aurais même le temps d'en faire plusieurs.
 
+La consigne était : " Dans un tableau d'entier retourner celui qui apparaît un nombre impaire de fois ", sachant qu'il y aura que 1 qui apparaîtras un nombre impaire de fois.
 
-
-Hier soir en me rendant sur Codewars je lis l’énoncé d’un kata suggérer et me dis que ça a l’air assez simple et que j’aurais même le temps d’en faire plusieurs.
-
-
-La consigne était : « Dans un tableau d’entier retourner celui qui apparaît un nombre impaire de fois », sachant qu’il y aura que 1 qui apparaîtras un nombre impaire de fois.
-
-
-Je commence en approche TDD et me rends compte arriver à la dernière étape que je me suis compliqué la vie car j’étais partis à faire 2 boucles for imbriquées. Je commence à bloquer un petit moment et cherche à faire passer mon dernier test …
-
-
+Je commence en approche TDD et me rends compte arriver à la dernière étape que je me suis compliqué la vie car j'étais partis à faire 2 boucles for imbriquées. Je commence à bloquer un petit moment et cherche à faire passer mon dernier test …
 
 Je prends un peu de recul et quelques caresses au chat.
 
+Je finis par me dire qu'il serait bien que je regarde mes notes car à tout les coups une méthode JS permets de faire ce que je veux. Et en effet … je cherche dans un tableau une valeur (donc la méthode find) qui correspond à une condition spécifique (donc la méthode filter) et on arrive au résultat en photo plutôt que ma grosse fonction toute moche.
 
+Morale de l'histoire ? Réfléchir un peu plus avant de coder bêtement et décomposer ce que je veux faire, et surtout KISS.
 
-Je finis par me dire qu’il serait bien que je regarde mes notes car à tout les coups une méthode JS permets de faire ce que je veux. Et en effet … je cherche dans un tableau une valeur (donc la méthode find) qui correspond à une condition spécifique (donc la méthode filter) et on arrive au résultat en photo plutôt que ma grosse fonction toute moche.
-
-
-Morale de l’histoire ? Réfléchir un peu plus avant de coder bêtement et décomposer ce que je veux faire, et surtout KISS.
-
-
-
-Si vous avez des ressources pour pratiquer le TDD je suis preneur n’hésitez pas ! Des suggestions d'amélioration pour le nommage ?
-
-
-
-#Kata 
-#TDD 
-#Code 
-#Javascrip 
-#Development 
-#Developeur 
-
+Si vous avez des ressources pour pratiquer le TDD je suis preneur n'hésitez pas ! Des suggestions d'amélioration pour le nommage ?
 
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy, j’ai 24ans et suis passionné de développement informatique depuis 2ans.
+🚀 Si tu me découvres moi c'est Rémy, j'ai 24ans et suis passionné de développement informatique depuis 2ans.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -
 

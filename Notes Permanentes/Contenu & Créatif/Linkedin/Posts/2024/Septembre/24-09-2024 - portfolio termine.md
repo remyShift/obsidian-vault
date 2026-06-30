@@ -5,8 +5,7 @@ comments: 28
 reposts: 0
 impressions: 2674
 url: https://www.linkedin.com/feed/update/urn:li:activity:7244239141352222722/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 Non j'ai pas quitté Linkedin, j'ai simplement passé la 4ème pour enfin finir ce projet qui traîne depuis trop longtemps ! 👇🏼
@@ -15,7 +14,7 @@ Mais de quel projet je parle ?
 
 De ce fichu portfolio !
 
-Ça fait 1 an ... 1 an que la maquette est faites.
+Ça fait 1 an … 1 an que la maquette est faites.
 
 Je l'avais directement commencé en VueJS en apprenant ce dernier sur le tas (spoiler: pas la meilleure idée).
 
@@ -36,18 +35,13 @@ Oui je dis MVP car il y a plein de chose à rajouter :
 
 👉🏼 Le lien est en commentaire et aussi sur mon profil dis moi ce que t'en pense ! Fais moi remonter aussi tout potentiel bug / soucis de responsive et je m'en occuperais au plus vite !
 
-
-#Portfolio 
-#NextJs 
-#Code 
-#Tailwind
-
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy et ça fais 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin ou avec 
-#Road2BeDev !
+Suis mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin ou avec
+
+Road2BeDev !
 
 - - -
 

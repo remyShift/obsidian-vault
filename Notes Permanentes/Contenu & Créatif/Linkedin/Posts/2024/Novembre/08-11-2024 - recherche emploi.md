@@ -27,7 +27,6 @@ Je parle plus pour trouver un CDI que de trouver des leads/clients en tant que f
 Merci d’avance pour vos retours précieux qui seront écoutés et appliqués dans ce contexte difficile 🙏🏼
 
 
-#Road2BeDev
 
 - - -
 

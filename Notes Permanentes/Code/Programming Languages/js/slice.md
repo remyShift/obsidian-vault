@@ -1,5 +1,7 @@
 ---
-tags: [LangagesDeProgs, JS, ManipStr, ManipArr]
+tags:
+  - LangagesDeProgs
+  - JS
 ---
 
 ## slice(beginIndex, endIndex)

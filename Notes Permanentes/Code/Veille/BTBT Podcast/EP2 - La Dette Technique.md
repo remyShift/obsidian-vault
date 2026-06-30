@@ -1,6 +1,5 @@
 ---
 tags:
-  - CodeKnowledge
   - Veille
 lien: https://youtu.be/Yl0q3k5HwYM?si=Yzr3Bc4xw-y0pFkm
 ---

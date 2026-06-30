@@ -1,14 +1,18 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 Pour le moment on a seulement un cube avec des couleurs pour chaque face mais sans texture particulière.
 
 Textures = images qui vont couvrir la surface de nos geometry,
+
 - différentes types de textures et différents effets,
 - on peut aussi évidemment créer nos propres textures,
 
 Les textures principales courantes sont :
+
  - **Color Texture (Albedo)**
 	 - Texture la plus simple car c'est juste une couleur appliqué à notre geometry,
 - **Alpha**
@@ -33,22 +37,25 @@ Les textures principales courantes sont :
 	- Grayscale image qui fonctionne généralement de paire avec la texture **metalness**,
 	- Le blanc est "rough" (granuleux ? texturé ? // opaque) et le noir est "smooth" (lisse ?),
 	- Utile pour la dissipation de la lumière,
-- ...
+- …
 
 Toutes ces textures suivent le principe **PBR** :
+
 - **P**hysically **B**ased **R**endering,
 	- Plusieurs techniques et calculs qui tendent à avoir un résultat réaliste,
 	- Le PBR est devenu le standard pour des rendus réalistes,
 	- Utilisé dans beaucoup de domaines et donc ainsi pas de surprise lorsqu'on importe une texture de blender,
 
-
 Les textures comme dit précédemment sont des images mais comment avoir l'url de cette image ?
+
 - On peut avoir les images dans le dossier `src` de nos projets puis les importer dans notre js,
 - Ou alors on peut les mettre dans le dossier `static` et y importer aussi,
 - Is up to you
 
 Une fois qu'on accès à l'url de l'image on peut les importer dans notre JS, et il y a différentes manière de faire :
+
 - Soit avec du JS vanilla et en créant notre texture `onload` :
+
 ```js
 const image = new Image();  
 const texture = new THREE.Texture(image);  
@@ -60,6 +67,7 @@ image.src = '/textures/door/color.jpg'
 ```
 
 - Soit avec le `TextureLoader`de ThreeJS qui simplifie ce process :
+
 ```js
 const textureLoader = new THREE.TextureLoader()  
 const colorTexture = textureLoader.load('/textures/door/color.jpg')

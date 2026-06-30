@@ -5,8 +5,7 @@ comments: 15
 reposts: 0
 impressions: 2766
 url: https://www.linkedin.com/feed/update/urn:li:activity:7241091673991049217/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
 J'ai finis le template globale qui me servira sur la plupart de mes pages de mon portfolio ! 🎉
@@ -21,17 +20,12 @@ Je te remets le lien vers mon post où tu trouveras la maquette de mon portfolio
 
 👉🏼 N'hésite pas à me faire ton retour ! Et toi t'as fait quoi de ton week-end ? Dit le moi en commentaire.
 
-
-#Portfolio 
-#Code 
-#NextJS 
-#Tailwind
-
 - - -
 
 🚀 Si tu me découvres moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec 
-#Road2BeDev !
+Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs avec
+
+Road2BeDev !
 
 - - -

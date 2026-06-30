@@ -11,29 +11,29 @@ tags:
 
 Vous saviez que 𝗕𝗹𝗲𝗻𝗱𝗲𝗿 𝗳𝗮𝗶𝘁 𝗱𝘂 𝗕𝗗𝗗 ? Je vous explique ça 👇🏼
 
-Non Blender n’est pas le mixeur que vous avez dans votre cuisine ! C’est un 𝗹𝗼𝗴𝗶𝗰𝗶𝗲𝗹 𝗼𝗽𝗲𝗻 𝘀𝗼𝘂𝗿𝗰𝗲 qui fait beaucoup de choses.
+Non Blender n'est pas le mixeur que vous avez dans votre cuisine ! C'est un 𝗹𝗼𝗴𝗶𝗰𝗶𝗲𝗹 𝗼𝗽𝗲𝗻 𝘀𝗼𝘂𝗿𝗰𝗲 qui fait beaucoup de choses.
 
-À la base, c’est un outil de 𝗺𝗼𝗱𝗲́𝗹𝗶𝘀𝗮𝘁𝗶𝗼𝗻 𝟯𝗗, il est open source et gratuit et la communauté autour du logiciel est très investie. 
+À la base, c'est un outil de 𝗺𝗼𝗱𝗲́𝗹𝗶𝘀𝗮𝘁𝗶𝗼𝗻 𝟯𝗗, il est open source et gratuit et la communauté autour du logiciel est très investie.
 
-Il existe aujourd’hui 𝘂𝗻𝗲 𝗺𝘂𝗹𝘁𝗶𝘁𝘂𝗱𝗲 𝗱𝗲 𝗽𝗹𝘂𝗴𝗶𝗻𝘀 𝗲𝘁 𝗱𝗲 𝗳𝗼𝗻𝗰𝘁𝗶𝗼𝗻𝗻𝗮𝗹𝗶𝘁𝗲́𝘀 pour tous les usages.
+Il existe aujourd'hui 𝘂𝗻𝗲 𝗺𝘂𝗹𝘁𝗶𝘁𝘂𝗱𝗲 𝗱𝗲 𝗽𝗹𝘂𝗴𝗶𝗻𝘀 𝗲𝘁 𝗱𝗲 𝗳𝗼𝗻𝗰𝘁𝗶𝗼𝗻𝗻𝗮𝗹𝗶𝘁𝗲́𝘀 pour tous les usages.
 
-Cela va d’un 𝗲́𝗱𝗶𝘁𝗲𝘂𝗿 𝗱𝗲 𝗰𝗼𝗱𝗲 directement intégré dans Blender, à un plugin pour faire de la 𝗺𝗼𝗱𝗲́𝗹𝗶𝘀𝗮𝘁𝗶𝗼𝗻 𝗮𝘃𝗲𝗰 𝗱𝗲𝘀 𝗟𝗲𝗴𝗼𝘀, en passant par la 𝗴𝗲́𝗻𝗲́𝗿𝗮𝘁𝗶𝗼𝗻 𝗽𝗿𝗼𝗰𝗲́𝗱𝘂𝗿𝗮𝗹𝗲, et même un plugin qui, selon votre localisation, vous permet de 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝗲𝗿 𝗱𝗲𝘀 𝗽𝗶𝘇𝘇𝗮𝘀 𝘀𝗮𝗻𝘀 𝘀𝗼𝗿𝘁𝗶𝗿 𝗱𝘂 𝗹𝗼𝗴𝗶𝗰𝗶𝗲𝗹 !
+Cela va d'un 𝗲́𝗱𝗶𝘁𝗲𝘂𝗿 𝗱𝗲 𝗰𝗼𝗱𝗲 directement intégré dans Blender, à un plugin pour faire de la 𝗺𝗼𝗱𝗲́𝗹𝗶𝘀𝗮𝘁𝗶𝗼𝗻 𝗮𝘃𝗲𝗰 𝗱𝗲𝘀 𝗟𝗲𝗴𝗼𝘀, en passant par la 𝗴𝗲́𝗻𝗲́𝗿𝗮𝘁𝗶𝗼𝗻 𝗽𝗿𝗼𝗰𝗲́𝗱𝘂𝗿𝗮𝗹𝗲, et même un plugin qui, selon votre localisation, vous permet de 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝗲𝗿 𝗱𝗲𝘀 𝗽𝗶𝘇𝘇𝗮𝘀 𝘀𝗮𝗻𝘀 𝘀𝗼𝗿𝘁𝗶𝗿 𝗱𝘂 𝗹𝗼𝗴𝗶𝗰𝗶𝗲𝗹 !
 
-Aujourd’hui, Blender 𝗿𝗶𝘃𝗮𝗹𝗶𝘀𝗲 avec les plus grands logiciels qui ont pourtant des millions de dollars en budget R&D, et cela grâce à sa 𝗰𝗼𝗺𝗺𝘂𝗻𝗮𝘂𝘁𝗲́ 𝗱𝗲́𝘃𝗼𝘂𝗲́𝗲.
+Aujourd'hui, Blender 𝗿𝗶𝘃𝗮𝗹𝗶𝘀𝗲 avec les plus grands logiciels qui ont pourtant des millions de dollars en budget R&D, et cela grâce à sa 𝗰𝗼𝗺𝗺𝘂𝗻𝗮𝘂𝘁𝗲́ 𝗱𝗲́𝘃𝗼𝘂𝗲́𝗲.
 
-Blender, en raison de sa croissance importante, a dû se structurer. C’est pourquoi ils ont créé la 𝗕𝗹𝗲𝗻𝗱𝗲𝗿 𝗙𝗼𝘂𝗻𝗱𝗮𝘁𝗶𝗼𝗻, qui gère les différents investissements tout en garantissant un logiciel open source et gratuit.
+Blender, en raison de sa croissance importante, a dû se structurer. C'est pourquoi ils ont créé la 𝗕𝗹𝗲𝗻𝗱𝗲𝗿 𝗙𝗼𝘂𝗻𝗱𝗮𝘁𝗶𝗼𝗻, qui gère les différents investissements tout en garantissant un logiciel open source et gratuit.
 
 La Blender Foundation est divisée en deux sous-entités :
 
 - 𝗟𝗲 𝗕𝗹𝗲𝗻𝗱𝗲𝗿 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗲 : qui embauche et gère les développeurs travaillant à temps plein sur Blender.
- 
+
 - 𝗟𝗲 𝗕𝗹𝗲𝗻𝗱𝗲𝗿 𝗦𝘁𝘂𝗱𝗶𝗼 : qui produit des films entièrement réalisés avec Blender, ce qui permet de générer des revenus pour soutenir le projet.
 
 Ok, mais le 𝗹𝗶𝗲𝗻 𝗮𝘃𝗲𝗰 𝗹𝗲 𝗕𝗗𝗗 dans tout ça ?
 
 𝗟𝗲 𝗕𝗗𝗗 est une méthodologie de développement qui vise à établir une collaboration étroite entre les équipes de développeurs et les utilisateurs métiers pour créer des fonctionnalités qui répondent directement aux besoins réels des utilisateurs.
 
-Dans le cas de Blender, cette philosophie est appliquée de manière très concrète : le Blender Institute et le Blender Studio sont situés 𝗱𝗮𝗻𝘀 𝗹𝗲 𝗺𝗲̂𝗺𝗲 𝗯𝗮̂𝘁𝗶𝗺𝗲𝗻𝘁, dans la même ville. 
+Dans le cas de Blender, cette philosophie est appliquée de manière très concrète : le Blender Institute et le Blender Studio sont situés 𝗱𝗮𝗻𝘀 𝗹𝗲 𝗺𝗲̂𝗺𝗲 𝗯𝗮̂𝘁𝗶𝗺𝗲𝗻𝘁, dans la même ville.
 
 Cette proximité permets aux développeurs d'être au plus proche des artistes et ainsi avoir des 𝗳𝗲𝗲𝗱𝗯𝗮𝗰𝗸 𝗽𝗲𝗿𝘁𝗶𝗻𝗲𝗻𝘁𝘀 pour une 𝗮𝗺𝗲́𝗹𝗶𝗼𝗿𝗮𝘁𝗶𝗼𝗻 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗲 𝗱𝘂 𝗹𝗼𝗴𝗶𝗰𝗶𝗲𝗹.
 
@@ -43,15 +43,9 @@ PS : Oui j'extrapole sans doute sur le fait qu'ils font du BDD mais cette proxim
 
 👉 Et vous, saviez-vous que Blender fonctionnait de cette manière ?
 
-
-#Blender 
-#OpenSource 
-#BDD 
-#Development
-
 - - -
 
-🚀 Si tu me découvres moi c’est Rémy et ça fait 2ans que je suis passionné de développement informatique.
+🚀 Si tu me découvres moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
 Suis mon aventure au travers de mes posts Linkedin pour un jour rejoindre le monde des développeurs.
 

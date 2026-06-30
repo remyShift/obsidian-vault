@@ -1,7 +1,7 @@
 ---
 updated: 12-05-2026
 project: lyoncraft-2026
-tags: [meta, hot-cache]
+tags: [hot-cache]
 ---
 
 # Hot Cache — lyoncraft-2026

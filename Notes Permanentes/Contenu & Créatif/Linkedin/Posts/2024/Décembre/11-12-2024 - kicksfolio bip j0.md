@@ -31,6 +31,5 @@ L’objectif est d’avoir mon backend de fait au plus tard mercredi prochain.
 - - -
 
 🚀 De noob à expert qui mon parcours pour un jour rejoindre le monde des développeurs au travers de mes posts et avec 
-#Road2BeDev !
 
 - - -

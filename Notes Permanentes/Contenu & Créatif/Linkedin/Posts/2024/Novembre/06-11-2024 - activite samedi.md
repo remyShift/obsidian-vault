@@ -5,44 +5,38 @@ comments: 7
 reposts: 0
 impressions: 643
 url: https://www.linkedin.com/feed/update/urn:li:activity:7259833164578091008/
-tags:
-  - Linkedin
+tags: [Linkedin]
 ---
 
-Tu cherches une idée d’activité pour ce samedi ? J’ai trouvé pour toi ! 👇🏼
+Tu cherches une idée d'activité pour ce samedi ? J'ai trouvé pour toi ! 👇🏼
 
+Ce 9 novembre, c'est le ✨Global Day of CodeRetreat✨ !
 
-Ce 9 novembre, c’est le ✨Global Day of CodeRetreat✨ !
+Mais c'est quoi au juste ?
 
-Mais c’est quoi au juste ?
+Il s'agit d'un événement mondial qui réunit des développeurs de tous niveaux pour une journée 100% dédiée à l'amélioration des compétences techniques.
 
-Il s’agit d’un événement mondial qui réunit des développeurs de tous niveaux pour une journée 100% dédiée à l’amélioration des compétences techniques.
-
-Pendant cette journée, on met en pause le quotidien pour se concentrer sur des pratiques essentielles : pair programming, TDD (Test-Driven Development), refactoring, et plus encore. 
+Pendant cette journée, on met en pause le quotidien pour se concentrer sur des pratiques essentielles : pair programming, TDD (Test-Driven Development), refactoring, et plus encore.
 
 Le tout dans un cadre collaboratif et inspirant !
 
 Cette année, je participerai à celui de Lyon, organisé par notre formidable communauté des Crafters Lyonnais 🫶🏼
 
-Moi qui pensais avoir plus de temps pour participer à des événements durant ma formation, je me suis laissé emporter dans son rythme intense. 
+Moi qui pensais avoir plus de temps pour participer à des événements durant ma formation, je me suis laissé emporter dans son rythme intense.
 
-Ce sera donc mon premier événement en présentiel depuis un moment, et j’ai hâte de retrouver ces personnes inspirantes que sont les crafters Lyonnais !
+Ce sera donc mon premier événement en présentiel depuis un moment, et j'ai hâte de retrouver ces personnes inspirantes que sont les crafters Lyonnais !
 
-Tu trouveras le lien de l’évent en commentaire !
+Tu trouveras le lien de l'évent en commentaire !
 
 👉🏼 Et toi, vous participez où à ce Global Day of CodeRetreat ? Dis-le-moi en commentaires !
 
-
-#GDC 
-#Craft 
-#Lyon
-
 - - -
 
-🚀 Moi c’est Rémy et ça fais 2ans que je suis passionné de développement informatique.
+🚀 Moi c'est Rémy et ça fais 2ans que je suis passionné de développement informatique.
 
-De noob à expert suis mon aventure pour rejoindre le monde des développeurs au travers de mes posts Likedin et avec 
-#Road2BeDev !
+De noob à expert suis mon aventure pour rejoindre le monde des développeurs au travers de mes posts Likedin et avec
+
+Road2BeDev !
 
 - - -
 

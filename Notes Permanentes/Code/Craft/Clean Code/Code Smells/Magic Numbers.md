@@ -1,6 +1,7 @@
 ---
 tags: [SoftwareCraft, CleanCode, Refactoring]
 ---
+
 Des valeurs littérales numériques ou textuelles utilisées directement dans le code sans être nommées. Le lecteur ne peut pas savoir ce que représente `0.2`, `86400`, ou `'ROLE_ADMIN'` sans lire le contexte ou fouiller la doc.
 
 ```js

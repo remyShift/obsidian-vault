@@ -9,9 +9,9 @@ tags:
   - Linkedin
 ---
 
-Ça fait seulement 2 jours que je pratique des Katas avec Ruby et j'avoue je commence à vraiment bien aimer ce langage ...
+Ça fait seulement 2 jours que je pratique des Katas avec Ruby et j'avoue je commence à vraiment bien aimer ce langage …
 
-Ce qui me séduis ? 
+Ce qui me séduis ?
 
 La simplicité d'écriture de part la légèreté syntaxique qui je trouve coule de source.
 
@@ -23,23 +23,19 @@ Hâte d'attaquer la POO en Ruby ça promets d'être sympas !
 
 Sur l'image tu pourras voir un programme simple :
 
-Je fais la somme de tout les multiplicateurs de 3 et 5 inférieurs à 1000. C'est un exercice classique connu sous le nom de "Problème 1" du Project Euler. 
+Je fais la somme de tout les multiplicateurs de 3 et 5 inférieurs à 1000. C'est un exercice classique connu sous le nom de "Problème 1" du Project Euler.
 
 La simplicité et l'élégance de la solution en Ruby m'ont vraiment impressionné.
 
 👉🏼 Partage moi ton avis sur Ruby en commentaires ou le dernier langage qui t'as agréablement surpris que j'y jette un oeil !
 
-
-#Ruby 
-#Katas 
-#Code
-
 - - -
 
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
-Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
+Suis mon apprentissage et mon aventure pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec
+
+Road2BeDev !
 
 - - -
 

@@ -1,11 +1,15 @@
 ---
-tags: [LangagesDeProgs, ThreeJS, Framework]
+tags:
+  - LangagesDeProgs
+  - ThreeJS
 ---
 
 Les **Materials** servent a mettre de la couleur sur chaque *pixel* visible de notre `geometry`. Les algos qui permettent de calculer et savoir quelle couleur mettre sur chaque pixel sont appelés **shaders**.
+
 - ThreeJS vient déjà avec plusieurs **shaders** built-in.
-  
+
 Ils existent de nombreux `materials` différents comme :
+
 - **MeshBasicMaterial** : le material le plus basique qui dispose de plusieurs options,
 	- `map` : qui permets d'appliquer une texture comme une "carte" et donc qui risque d'être étiré si la geometry ne correspond pas,
 	- `color` : qui applique une couleur de manière uniforme sur toutes les faces,
@@ -33,6 +37,7 @@ Ils existent de nombreux `materials` différents comme :
 - **MeshStandardMaterial** : Utilise un rendu physiquement basé sur les *PBR* (cf textures). Il réagit aux lumières de manière plus réaliste utilisant des algos pour et de meilleurs paramètres comme la *roughness* et la *metalness*.
 	- **NB :** il est appelé *standard* car le PBR est devenu un standard aujourd'hui dans la plupart des logiciels / libraries. Ça permets qu'avec les mêmes inputs d'entrée on à le même résultat de sortie peu importe le logiciel.
 	- Sans lumière on ne peux rien voir.
+
 ```js
 const material = new THREE.MeshStandardMaterial();
 material.side = THREE.DoubleSide
@@ -50,7 +55,8 @@ gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 	- `iridescence` : permets de créer des artéfacts de couleurs comme lorsque de l'essence coule sur le sol etc.
 	- `transmission` : permets de faire en sorte que les lumières passent à travers notre material mais plus détaillé que juste de la transparence avec l'opacité car les objets / environnement derrière notre objet seront déformés.
 	- **NB :** IOR = **I**ndex **O**f **R**efraction et il dépends sur le type de material que je veux simuler. (Diamant = 2.417 // Eau = 1.333 // Air = 1.000293). De plus ce mesh est le pire en terme de performances.
-### Environment map
+
+## Environment map
 
 Environment map est une image de ce qui entoure notre scène, ça permets d'ajouter de la réflection, réfraction et de la lumière à nos objets en plus de nos actuels `DirectionLight`et `AmbientLight`.
 

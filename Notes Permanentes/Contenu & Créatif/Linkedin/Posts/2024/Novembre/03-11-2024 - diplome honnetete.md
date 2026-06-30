@@ -41,7 +41,6 @@ Au final si je fais cette formation c'est surtout pour être droit dans mes bask
 🚀 Moi c'est Rémy et ça fait 2ans que je suis passionné de développement informatique.
 
 De noob à expert suis mon apprentissage pour un jour rejoindre le monde des développeurs au travers de mes posts Linkedin et avec 
-#Road2BeDev !
 
 - - -
 

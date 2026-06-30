@@ -1,10 +1,12 @@
 ---
-tags: [LangagesDeProgs, Ruby, ManipStr]
+tags:
+  - LangagesDeProgs
+  - Ruby
 ---
 
 ## scan(motif)
 
-Trouve toutes les correspondances d’un motif et les renvoie sous forme de tableau.
+Trouve toutes les correspondances d'un motif et les renvoie sous forme de tableau.
 
 ```ruby
 "hello".scan(/\w/) # => ["h", "e", "l", "l", "o"]
