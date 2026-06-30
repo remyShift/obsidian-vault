@@ -4,8 +4,11 @@ tags:
 ---
 
 Comparaison du prix d'un Mac **France vs Corée** (achat sur place, détaxe touriste,
+
 puis dédouanement à l'entrée en France). Le tableau ci-dessous est une simple sheet
+
 que je remplis à chaque relevé que tu m'envoies. Le graphe en dessous se trace tout
+
 seul à partir de ce tableau.
 
 ## Relevés

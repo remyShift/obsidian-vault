@@ -31,6 +31,8 @@ On a des outils qui peuvent penser à notre place, le souci c'est pas l'outil, c
 
 Et entre les deux, y'a tout ce qui rend une discussion intéressante.
 
+Le pire c'est que j'ai déjà vu des seniors, coach en craft en j'en passe qui font ça, ça me désole un peu.
+
 Imagines un peut pendant les débats à la présidentielles si les candidats faisaient ça. 😂
 
 Tu le vois aussi, ce réflexe de répondre par capture d'IA ?

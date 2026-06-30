@@ -49,6 +49,7 @@ Synthèses de conversations générées via `/wrap`.
 | 21-06-2026 | [[AI Generated/Conversations/21-06-2026 - Message a Julien Wittouck sur mon setup shell]]     |
 | 22-06-2026 | [[AI Generated/Conversations/22-06-2026 - Routine sport full body]]                           |
 | 23-06-2026 | [[AI Generated/Conversations/23-06-2026 - Mails logements Corée Séoul]]                       |
+| 30-06-2026 | [[AI Generated/Conversations/30-06-2026 - Analyse stats LinkedIn et nouveau batch de posts]]                       |
 
 
 ---
