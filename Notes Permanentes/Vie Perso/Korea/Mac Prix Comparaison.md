@@ -17,45 +17,47 @@ coup (une ligne par table), sinon les courbes divergent.
 
 <!-- CURRENCY:START -->
 
-| Date | FX (₩/€) |
-| --- | --- |
+| Date       | FX (₩/€) |
+| ---------- | -------- |
 | 30-06-2026 | 1 760,80 |
 | 01-07-2026 | 1 767,08 |
 
 <!-- CURRENCY:END -->
 
 ```dataviewjs
-// Graph du taux de change ₩/€.
-const raw = await dv.io.load(dv.current().file.path);
-const block = raw.split("CURRENCY:START")[1]?.split("CURRENCY:END")[0] ?? "";
-const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
-const data = lines.slice(2);
+{
+  // Graph du taux de change ₩/€.
+  const raw = await dv.io.load(dv.current().file.path);
+  const block = raw.split("CURRENCY:START")[1]?.split("CURRENCY:END")[0] ?? "";
+  const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
+  const data = lines.slice(2);
 
-const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
-const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
+  const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+  const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
-const rows = data.map(line => {
-  const c = line.split("|").map(x => x.trim());
-  if (c[0] === "") c.shift();
-  if (c[c.length - 1] === "") c.pop();
-  return { date: c[0], fx: toNum(c[1]) };
-}).filter(r => r.date && !isNaN(r.fx)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
+  const rows = data.map(line => {
+    const c = line.split("|").map(x => x.trim());
+    if (c[0] === "") c.shift();
+    if (c[c.length - 1] === "") c.pop();
+    return { date: c[0], fx: toNum(c[1]) };
+  }).filter(r => r.date && !isNaN(r.fx)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
-if (!rows.length) {
-  dv.paragraph("Aucune ligne trouvée entre les marqueurs `CURRENCY`.");
-} else if (typeof window.renderChart !== "function") {
-  dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
-} else {
-  window.renderChart({
-    type: "line",
-    data: {
-      labels: rows.map(r => r.date),
-      datasets: [
-        { label: "Taux ₩/€", data: rows.map(r => r.fx), borderColor: "#c678dd", backgroundColor: "#c678dd", tension: 0.2 },
-      ],
-    },
-    options: { scales: { y: { title: { display: true, text: "₩ pour 1 €" } } } },
-  }, this.container);
+  if (!rows.length) {
+    dv.paragraph("Aucune ligne trouvée entre les marqueurs `CURRENCY`.");
+  } else if (typeof window.renderChart !== "function") {
+    dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
+  } else {
+    window.renderChart({
+      type: "line",
+      data: {
+        labels: rows.map(r => r.date),
+        datasets: [
+          { label: "Taux ₩/€", data: rows.map(r => r.fx), borderColor: "#c678dd", backgroundColor: "#c678dd", tension: 0.2 },
+        ],
+      },
+      options: { scales: { y: { title: { display: true, text: "₩ pour 1 €" } } } },
+    }, this.container);
+  }
 }
 ```
 
@@ -69,47 +71,49 @@ rapatrié par la voie légale (dédouanement + TVA).
 
 <!-- MAC:START -->
 
-| Date | Prix FR € | Corée sur place € | Corée → FR légal € |
-| --- | --- | --- | --- |
-| 30-06-2026 | 4 224,00 € | 3 558,04 € | 3 970,77 € |
-| 01-07-2026 | 4 224,00 € | 3 545,40 € | 3 956,66 € |
+| Date       | Prix FR €  | Corée sur place € | Corée → FR légal € |
+| ---------- | ---------- | ----------------- | ------------------ |
+| 30-06-2026 | 4 224,00 € | 3 558,04 €        | 3 970,77 €         |
+| 01-07-2026 | 4 224,00 € | 3 545,40 €        | 3 956,66 €         |
 
 <!-- MAC:END -->
 
 ```dataviewjs
-// Graph prix Mac : France vs Corée (sur place + rapatrié légal).
-const raw = await dv.io.load(dv.current().file.path);
-const block = raw.split("MAC:START")[1]?.split("MAC:END")[0] ?? "";
-const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
-const data = lines.slice(2);
+{
+  // Graph prix Mac : France vs Corée (sur place + rapatrié légal).
+  const raw = await dv.io.load(dv.current().file.path);
+  const block = raw.split("MAC:START")[1]?.split("MAC:END")[0] ?? "";
+  const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
+  const data = lines.slice(2);
 
-const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
-const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
+  const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+  const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
-const rows = data.map(line => {
-  const c = line.split("|").map(x => x.trim());
-  if (c[0] === "") c.shift();
-  if (c[c.length - 1] === "") c.pop();
-  return { date: c[0], fr: toNum(c[1]), place: toNum(c[2]), legal: toNum(c[3]) };
-}).filter(r => r.date && !isNaN(r.fr)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
+  const rows = data.map(line => {
+    const c = line.split("|").map(x => x.trim());
+    if (c[0] === "") c.shift();
+    if (c[c.length - 1] === "") c.pop();
+    return { date: c[0], fr: toNum(c[1]), place: toNum(c[2]), legal: toNum(c[3]) };
+  }).filter(r => r.date && !isNaN(r.fr)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
-if (!rows.length) {
-  dv.paragraph("Aucune ligne trouvée entre les marqueurs `MAC`.");
-} else if (typeof window.renderChart !== "function") {
-  dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
-} else {
-  window.renderChart({
-    type: "line",
-    data: {
-      labels: rows.map(r => r.date),
-      datasets: [
-        { label: "Prix France (€)", data: rows.map(r => r.fr), borderColor: "#e06c75", backgroundColor: "#e06c75", tension: 0.2 },
-        { label: "Corée sur place (€)", data: rows.map(r => r.place), borderColor: "#e5c07b", backgroundColor: "#e5c07b", tension: 0.2 },
-        { label: "Corée → FR légal (€)", data: rows.map(r => r.legal), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
-      ],
-    },
-    options: { scales: { y: { title: { display: true, text: "€" } } } },
-  }, this.container);
+  if (!rows.length) {
+    dv.paragraph("Aucune ligne trouvée entre les marqueurs `MAC`.");
+  } else if (typeof window.renderChart !== "function") {
+    dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
+  } else {
+    window.renderChart({
+      type: "line",
+      data: {
+        labels: rows.map(r => r.date),
+        datasets: [
+          { label: "Prix France (€)", data: rows.map(r => r.fr), borderColor: "#e06c75", backgroundColor: "#e06c75", tension: 0.2 },
+          { label: "Corée sur place (€)", data: rows.map(r => r.place), borderColor: "#e5c07b", backgroundColor: "#e5c07b", tension: 0.2 },
+          { label: "Corée → FR légal (€)", data: rows.map(r => r.legal), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
+        ],
+      },
+      options: { scales: { y: { title: { display: true, text: "€" } } } },
+    }, this.container);
+  }
 }
 ```
 
@@ -133,37 +137,39 @@ déclarant pas, à mettre en face du risque.
 <!-- VOIE:END -->
 
 ```dataviewjs
-// Graph voie légale vs sans contrôle.
-const raw = await dv.io.load(dv.current().file.path);
-const block = raw.split("VOIE:START")[1]?.split("VOIE:END")[0] ?? "";
-const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
-const data = lines.slice(2);
+{
+  // Graph voie avec douane vs sans contrôle.
+  const raw = await dv.io.load(dv.current().file.path);
+  const block = raw.split("VOIE:START")[1]?.split("VOIE:END")[0] ?? "";
+  const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|"));
+  const data = lines.slice(2);
 
-const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
-const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
+  const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+  const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
-const rows = data.map(line => {
-  const c = line.split("|").map(x => x.trim());
-  if (c[0] === "") c.shift();
-  if (c[c.length - 1] === "") c.pop();
-  return { date: c[0], legal: toNum(c[1]), sans: toNum(c[2]) };
-}).filter(r => r.date && !isNaN(r.legal)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
+  const rows = data.map(line => {
+    const c = line.split("|").map(x => x.trim());
+    if (c[0] === "") c.shift();
+    if (c[c.length - 1] === "") c.pop();
+    return { date: c[0], douane: toNum(c[1]), sans: toNum(c[2]) };
+  }).filter(r => r.date && !isNaN(r.douane)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
-if (!rows.length) {
-  dv.paragraph("Aucune ligne trouvée entre les marqueurs `VOIE`.");
-} else if (typeof window.renderChart !== "function") {
-  dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
-} else {
-  window.renderChart({
-    type: "line",
-    data: {
-      labels: rows.map(r => r.date),
-      datasets: [
-        { label: "Corée → FR légal (€)", data: rows.map(r => r.legal), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
-        { label: "Corée → FR sans douane (€)", data: rows.map(r => r.sans), borderColor: "#98c379", backgroundColor: "#98c379", tension: 0.2 },
-      ],
-    },
-    options: { scales: { y: { title: { display: true, text: "€" } } } },
-  }, this.container);
+  if (!rows.length) {
+    dv.paragraph("Aucune ligne trouvée entre les marqueurs `VOIE`.");
+  } else if (typeof window.renderChart !== "function") {
+    dv.paragraph("⚠️ Plugin **Charts** (obsidian-charts) non installé ou désactivé : pas de graphe.");
+  } else {
+    window.renderChart({
+      type: "line",
+      data: {
+        labels: rows.map(r => r.date),
+        datasets: [
+          { label: "Corée → FR avec douane (€)", data: rows.map(r => r.douane), borderColor: "#61afef", backgroundColor: "#61afef", tension: 0.2 },
+          { label: "Corée → FR sans douane (€)", data: rows.map(r => r.sans), borderColor: "#98c379", backgroundColor: "#98c379", tension: 0.2 },
+        ],
+      },
+      options: { scales: { y: { title: { display: true, text: "€" } } } },
+    }, this.container);
+  }
 }
 ```
