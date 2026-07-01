@@ -17,10 +17,16 @@ coup (une ligne par table), sinon les courbes divergent.
 
 <!-- CURRENCY:START -->
 
-| Date       | FX (₩/€) |
-| ---------- | -------- |
+```sheet
+{
+    classes: {}
+}
+---
+| Date | FX (₩/€) |
+| --- | --- |
 | 30-06-2026 | 1 760,80 |
 | 01-07-2026 | 1 767,08 |
+```
 
 <!-- CURRENCY:END -->
 
@@ -71,10 +77,16 @@ rapatrié par la voie légale (dédouanement + TVA).
 
 <!-- MAC:START -->
 
-| Date       | Prix FR €  | Corée sur place € | Corée → FR légal € |
-| ---------- | ---------- | ----------------- | ------------------ |
-| 30-06-2026 | 4 224,00 € | 3 558,04 €        | 3 970,77 €         |
-| 01-07-2026 | 4 224,00 € | 3 545,40 €        | 3 956,66 €         |
+```sheet
+{
+    classes: {}
+}
+---
+| Date | Prix FR € | Corée sur place € | Corée → FR légal € |
+| --- | --- | --- | --- |
+| 30-06-2026 | 4 224,00 € | 3 558,04 € | 3 970,77 € |
+| 01-07-2026 | 4 224,00 € | 3 545,40 € | 3 956,66 € |
+```
 
 <!-- MAC:END -->
 
@@ -129,10 +141,16 @@ déclarant pas, à mettre en face du risque.
 
 <!-- VOIE:START -->
 
-| Date       | Corée → FR avec douane € | Corée → FR sans douane € |
-| ---------- | ------------------------ | ------------------------ |
-| 30-06-2026 | 3 970,77 €               | 3 308,98 €               |
-| 01-07-2026 | 3 956,66 €               | 3 297,22 €               |
+```sheet
+{
+    classes: {}
+}
+---
+| Date | Corée → FR avec douane € | Corée → FR sans douane € |
+| --- | --- | --- |
+| 30-06-2026 | 3 970,77 € | 3 308,98 € |
+| 01-07-2026 | 3 956,66 € | 3 297,22 € |
+```
 
 <!-- VOIE:END -->
 
