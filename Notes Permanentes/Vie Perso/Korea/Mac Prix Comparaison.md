@@ -18,10 +18,6 @@ coup (une ligne par table), sinon les courbes divergent.
 <!-- CURRENCY:START -->
 
 ```sheet
-{
-    classes: {}
-}
----
 | Date | FX (₩/€) |
 | --- | --- |
 | 30-06-2026 | 1 760,80 |
@@ -78,10 +74,6 @@ rapatrié par la voie légale (dédouanement + TVA).
 <!-- MAC:START -->
 
 ```sheet
-{
-    classes: {}
-}
----
 | Date | Prix FR € | Corée sur place € | Corée → FR légal € |
 | --- | --- | --- | --- |
 | 30-06-2026 | 4 224,00 € | 3 558,04 € | 3 970,77 € |
@@ -142,10 +134,6 @@ déclarant pas, à mettre en face du risque.
 <!-- VOIE:START -->
 
 ```sheet
-{
-    classes: {}
-}
----
 | Date | Corée → FR avec douane € | Corée → FR sans douane € |
 | --- | --- | --- |
 | 30-06-2026 | 3 970,77 € | 3 308,98 € |
