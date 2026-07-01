@@ -16,3 +16,5 @@ tags:
 	- Avantages aussi dans Lotte World et Seoul Sky
 - Le dernier mercredi de chaque mois = entrée gratuite aux palais et lieux culturels
 - 거지맵 : app qui te montre tout les restaus pas cher autour de toi
+
+- Retirer de l'argent dans la Wooribank
