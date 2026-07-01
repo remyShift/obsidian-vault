@@ -19,8 +19,8 @@ coup (une ligne par table), sinon les courbes divergent.
 
 | Date | FX (₩/€) |
 | --- | --- |
-| 2026-06-30 | 1 760,80 |
-| 2026-07-01 | 1 767,08 |
+| 30-06-2026 | 1 760,80 |
+| 01-07-2026 | 1 767,08 |
 
 <!-- CURRENCY:END -->
 
@@ -32,13 +32,14 @@ const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|")
 const data = lines.slice(2);
 
 const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
 const rows = data.map(line => {
   const c = line.split("|").map(x => x.trim());
   if (c[0] === "") c.shift();
   if (c[c.length - 1] === "") c.pop();
   return { date: c[0], fx: toNum(c[1]) };
-}).filter(r => r.date && !isNaN(r.fx)).sort((a, b) => a.date.localeCompare(b.date));
+}).filter(r => r.date && !isNaN(r.fx)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
 if (!rows.length) {
   dv.paragraph("Aucune ligne trouvée entre les marqueurs `CURRENCY`.");
@@ -70,8 +71,8 @@ rapatrié par la voie légale (dédouanement + TVA).
 
 | Date | Prix FR € | Corée sur place € | Corée → FR légal € |
 | --- | --- | --- | --- |
-| 2026-06-30 | 4 224,00 € | 3 558,04 € | 3 970,77 € |
-| 2026-07-01 | 4 224,00 € | 3 545,40 € | 3 956,66 € |
+| 30-06-2026 | 4 224,00 € | 3 558,04 € | 3 970,77 € |
+| 01-07-2026 | 4 224,00 € | 3 545,40 € | 3 956,66 € |
 
 <!-- MAC:END -->
 
@@ -83,13 +84,14 @@ const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|")
 const data = lines.slice(2);
 
 const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
 const rows = data.map(line => {
   const c = line.split("|").map(x => x.trim());
   if (c[0] === "") c.shift();
   if (c[c.length - 1] === "") c.pop();
   return { date: c[0], fr: toNum(c[1]), place: toNum(c[2]), legal: toNum(c[3]) };
-}).filter(r => r.date && !isNaN(r.fr)).sort((a, b) => a.date.localeCompare(b.date));
+}).filter(r => r.date && !isNaN(r.fr)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
 if (!rows.length) {
   dv.paragraph("Aucune ligne trouvée entre les marqueurs `MAC`.");
@@ -125,8 +127,8 @@ déclarant pas, à mettre en face du risque.
 
 | Date | Corée → FR légal € | Corée → FR sans douane € |
 | --- | --- | --- |
-| 2026-06-30 | 3 970,77 € | 3 308,98 € |
-| 2026-07-01 | 3 956,66 € | 3 297,22 € |
+| 30-06-2026 | 3 970,77 € | 3 308,98 € |
+| 01-07-2026 | 3 956,66 € | 3 297,22 € |
 
 <!-- VOIE:END -->
 
@@ -138,13 +140,14 @@ const lines = block.split("\n").map(l => l.trim()).filter(l => l.startsWith("|")
 const data = lines.slice(2);
 
 const toNum = s => Number(String(s).replace(/[€₩\s]/g, "").replace(",", "."));
+const sortKey = s => String(s).split("-").reverse().join("-"); // DD-MM-YYYY -> YYYY-MM-DD
 
 const rows = data.map(line => {
   const c = line.split("|").map(x => x.trim());
   if (c[0] === "") c.shift();
   if (c[c.length - 1] === "") c.pop();
   return { date: c[0], legal: toNum(c[1]), sans: toNum(c[2]) };
-}).filter(r => r.date && !isNaN(r.legal)).sort((a, b) => a.date.localeCompare(b.date));
+}).filter(r => r.date && !isNaN(r.legal)).sort((a, b) => sortKey(a.date).localeCompare(sortKey(b.date)));
 
 if (!rows.length) {
   dv.paragraph("Aucune ligne trouvée entre les marqueurs `VOIE`.");
