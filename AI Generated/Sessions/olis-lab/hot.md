@@ -7,23 +7,27 @@ tags: [hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-02-07-2026 — `ProductActives.name` localisé + migration EN→FR (PR #1870). Review Diego traitée (driver natif → `payload.find`), désaccord read/write tranché par test d'intégration jetable. **Bug détecté sur la branche : le find a perdu `pagination:false, limit:0` → 10 docs max.**
+02-07-2026 — Navbar CTA "Shop All" rendu éditable via le global Payload `navbar` (groupe "Bottom CTA"), branché dans les deux fronts. PR #1874 ouverte.
 
 ## État du projet
-- **PR #1870 ouverte** (`refactor/cms-add-localized-name-products-actives` → develop) : `localized: true` sur `ProductActives.name` + migration `20260702_110143` (normalise EN puis traduit/écrit FR via resolver `openai`, logs mapping par doc). Commits poussés par Rémy : `b606a27ad` (rewrite payload.find), `772ae8a5f` (logs). Rémy est repassé sur `develop` en local. Migration **pas exécutée**.
-- Verdict empirique (test int 3 cas, supprimé) : un read localisé sert le scalaire legacy tel quel ; un write `fr` en premier **droppe l'original** (`{fr}` seul en base) ; en-first puis fr = OK. L'ordre EN-d'abord est load-bearing et commenté.
+- **PR #1874 ouverte** (`refactor/add-bottom-cta-to-navbar-global` → develop) : groupe `cta` top-level dans le global `navbar` (label localisé required + path required validé interne), consommé par web_client (`useNavbarQuery`/`HomepageNavbar`) ET apps/web (`Navbar.tsx` desktop + `NavbarMenu.tsx` mobile, navigation `app: 'legacy'`). `packages/ui` inchangé. Typecheck vert.
+- **Pas de migration de seed** (choix Rémy, seed à la main). cms_dev déjà seedé (EN/FR + path `/shopAll`, publié) — path à passer en `/products` dans l'admin.
+- **PR #1870 (ProductActives localisé)** toujours en attente : bug `limit` à corriger (find sans `pagination:false, limit:0` → 10 docs max), gotcha faux dans le PR body, migration pas exécutée.
 
 ## Faits récents importants
-- **À corriger avant d'exécuter : réintroduire `pagination: false, limit: 0` dans le `find` de la migration** (limite Payload par défaut = 10).
-- Le PR body contient un gotcha faux (« reads return empty everywhere ») à réécrire ; 2 réponses EN pour les threads Diego rédigées, à poster.
-- Write localisé = `mergeLocaleActions` reconstruit `{en,fr}` en indexant la valeur stockée ; une locale par `payload.update`.
-- Harnais : trancher les internals Payload par spec int jetable (`tests/int`, `initPayload`, `.env.test` → `cms_test`) ; jamais `import('mongodb')` (bson 7 vs 6) → `payload.db.connection.base.Types.ObjectId`.
+- **`.env.local` prime sur `.env` pour `payload migrate`** : une migration test est partie sur cms_dev (Atlas) au lieu de cms_local. Nettoyé (record supprimé, data cta laissée). Toujours vérifier la base ciblée avant `migrate`.
+- Guard `assertNavbar` **sans fallback** sur `cta` (champ required, fail fast) : doc non seedé → throw → apps/web retombe sur legacy (catch `getNavbar`), web_client flag ON = menus vides. Seeder chaque env AVANT d'activer `dev_payload_navbar`.
+- Le CTA s'affiche sous les 3 menus (footer du dropdown) → champ top-level, pas dans `shop`.
+- `packages/shared` consommé via `dist/` → rebuild obligatoire avant typecheck après modif.
+- `cmsClient` REST non authentifié ne lit que la version publiée des globals.
 
 ## Décisions actives
-- Auto-traduction OpenAI malgré le risque INCI ; FR à relire dans l'admin (bouton translate dispo par doc).
-- `down` no-op ; rollback réel = retirer `localized:true`. Collision d'unicité FR = warn + skip.
+- Seed manuel des globals plutôt que migrations (navbar cta).
+- Fail fast dans les guards pour les champs required du CMS.
+- Items/CTA CMS navigués en `app: 'legacy'` (full reload) dans apps/web tant que la migration des routes n'est pas finie.
 
 ## Prochaines étapes
-- **Fix `pagination/limit` de la migration**, corriger le PR body, poster les réponses Diego.
-- Exécuter la migration sur `cms_local` localhost (`OPENAI_API_KEY` chargée), contrôler mapping + `skipped`, puis review/merge #1870.
-- Curated PLP : backfiller `cartProduct` + drop-post-pagination + review/merge. Cart #1859 : CI + review Diego + merge, puis guard `beforeValidate` legacyId. Navbar #1839 : vérif live + commit + renommer clé API exposée. PR #1853 : réponse Diego + vérif admin. Plan globals (T2→1→4→3).
+- PR #1874 : review + merge ; path `/products` dans l'admin cms_dev ; seeder stage/prod avant flag.
+- PR #1870 : fix `pagination/limit`, corriger le PR body, poster les réponses Diego, exécuter la migration sur cms_local (vérifier la base !), review + merge.
+- Curated PLP : backfiller `cartProduct` + trancher drop-post-pagination.
+- Cart #1859 → CI + review Diego + merge ; navbar #1839 ; PR #1853 SKU/EAN ; plan globals apps/cms.
