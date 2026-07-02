@@ -7,27 +7,25 @@ tags: [hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-02-07-2026 — Navbar CTA "Shop All" rendu éditable via le global Payload `navbar` (groupe "Bottom CTA"), branché dans les deux fronts. PR #1874 ouverte.
+02-07-2026 — PR #1870 mergée mais migration exécutée (local + prod) avec le bug limit → 10 actives traduits seulement ; fix `pagination/limit` fait, PR ouverte par Rémy, re-run à orchestrer. Navbar Bottom CTA : PR #1874 ouverte.
 
 ## État du projet
-- **PR #1874 ouverte** (`refactor/add-bottom-cta-to-navbar-global` → develop) : groupe `cta` top-level dans le global `navbar` (label localisé required + path required validé interne), consommé par web_client (`useNavbarQuery`/`HomepageNavbar`) ET apps/web (`Navbar.tsx` desktop + `NavbarMenu.tsx` mobile, navigation `app: 'legacy'`). `packages/ui` inchangé. Typecheck vert.
-- **Pas de migration de seed** (choix Rémy, seed à la main). cms_dev déjà seedé (EN/FR + path `/shopAll`, publié) — path à passer en `/products` dans l'admin.
-- **PR #1870 (ProductActives localisé)** toujours en attente : bug `limit` à corriger (find sans `pagination:false, limit:0` → 10 docs max), gotcha faux dans le PR body, migration pas exécutée.
+- **Migration ProductActives (#1870, mergée `8e4f39d12`) incomplète en prod ET local** : `payload.find` sans `pagination:false, limit:0` → 10 docs traités. Les autres actives : rien d'écrit, "fr = en" apparent = fallback sur scalaire legacy intact. **Fix fait** sur `fix/product-actives-migration-limit`, PR ouverte par Rémy. Re-run = Rémy supprime le record `payload-migrations` (local + prod) puis `pnpm migrate` ; le re-run écrasera les 10 FR déjà écrits (accepté, aucune correction manuelle faite).
+- **PR #1874 ouverte** (navbar Bottom CTA) : groupe `cta` top-level dans le global `navbar`, consommé par web_client ET apps/web. `packages/ui` inchangé. Pas de migration : seed manuel (cms_dev seedé, path à passer en `/products` ; stage/prod à faire avant flag).
 
 ## Faits récents importants
-- **`.env.local` prime sur `.env` pour `payload migrate`** : une migration test est partie sur cms_dev (Atlas) au lieu de cms_local. Nettoyé (record supprimé, data cta laissée). Toujours vérifier la base ciblée avant `migrate`.
-- Guard `assertNavbar` **sans fallback** sur `cta` (champ required, fail fast) : doc non seedé → throw → apps/web retombe sur legacy (catch `getNavbar`), web_client flag ON = menus vides. Seeder chaque env AVANT d'activer `dev_payload_navbar`.
-- Le CTA s'affiche sous les 3 menus (footer du dropdown) → champ top-level, pas dans `shop`.
-- `packages/shared` consommé via `dist/` → rebuild obligatoire avant typecheck après modif.
-- `cmsClient` REST non authentifié ne lit que la version publiée des globals.
+- **`payload.find` sans pagination explicite = 10 docs max** — toute migration qui balaye une collection doit porter `pagination: false, limit: 0`.
+- **`.env.local` prime sur `.env` pour `payload migrate`** (une migration test navbar est partie sur cms_dev Atlas ; nettoyée). Vérifier la base ciblée avant chaque run.
+- Détection "fr manquant" : uniquement via `locale: 'all'` ou `fallbackLocale: 'none'` — un read fr normal sert EN par fallback.
+- Guard `assertNavbar` **fail fast** sur `cta` (required, pas de fallback) : doc non seedé → apps/web retombe sur legacy, web_client flag ON = menus vides. Seeder AVANT d'activer `dev_payload_navbar`.
+- `packages/shared` consommé via `dist/` → rebuild avant typecheck après modif.
 
 ## Décisions actives
-- Seed manuel des globals plutôt que migrations (navbar cta).
-- Fail fast dans les guards pour les champs required du CMS.
-- Items/CTA CMS navigués en `app: 'legacy'` (full reload) dans apps/web tant que la migration des routes n'est pas finie.
+- Re-run #1870 en Option A (fix en place + delete record + re-run), pas de migration corrective.
+- Seed manuel des globals plutôt que migrations (navbar cta) ; fail fast dans les guards pour les champs required.
+- Items/CTA CMS navigués en `app: 'legacy'` (full reload) dans apps/web.
 
 ## Prochaines étapes
+- Merger la PR du fix limit → delete records `payload-migrations` (local + prod, par Rémy) → re-run `pnpm migrate` → contrôler le mapping EN→FR, relire les trads INCI.
 - PR #1874 : review + merge ; path `/products` dans l'admin cms_dev ; seeder stage/prod avant flag.
-- PR #1870 : fix `pagination/limit`, corriger le PR body, poster les réponses Diego, exécuter la migration sur cms_local (vérifier la base !), review + merge.
-- Curated PLP : backfiller `cartProduct` + trancher drop-post-pagination.
-- Cart #1859 → CI + review Diego + merge ; navbar #1839 ; PR #1853 SKU/EAN ; plan globals apps/cms.
+- Curated PLP : backfiller `cartProduct` ; cart #1859 ; navbar #1839 ; PR #1853 ; plan globals apps/cms.
