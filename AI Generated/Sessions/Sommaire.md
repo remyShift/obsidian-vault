@@ -92,6 +92,7 @@ Recaps de sessions de travail, organises par projet et generes par la commande `
 | olis-lab               | [[AI Generated/Sessions/olis-lab/26-06-2026_14-58]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/30-06-2026_11-45]]               |
 | olis-lab               | [[AI Generated/Sessions/olis-lab/01-07-2026_17-26]]               |
+| olis-lab               | [[AI Generated/Sessions/olis-lab/02-07-2026_12-12]]               |
 
 ## Hot notes :
 

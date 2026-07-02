@@ -1,5 +1,5 @@
 ---
-updated: 01-07-2026
+updated: 02-07-2026
 project: olis-lab
 tags: [hot-cache]
 ---
@@ -7,25 +7,25 @@ tags: [hot-cache]
 # Hot Cache — olis-lab
 
 ## Dernière mise à jour
-01-07-2026 — Endpoint curated `/products-curated` **implémenté** (CMS + web, TDD) et **PR ouverte**. Debug live : PLP vide car produits `cms_dev` sans `cartProduct` → échouent `assertProduct` → droppés.
+02-07-2026 — Localisation du champ `name` de `ProductActives` (en/fr) + migration d'auto-traduction EN→FR via resolver OpenAI. PR #1870 ouverte, migration **pas encore exécutée**.
 
 ## État du projet
-- **Curated PLP implémenté, PR ouverte.** CMS : `apps/cms/src/lib/curation/` (interleave, orderCuratedProducts, resolveCurationSection, buildCuratedList, `getCuratedProducts`, keepValidProducts, CuratedQuerySchema) + handler `endpoints/read/curatedProducts.ts` + enregistré `payload.config.ts`. Web : `getProductsCurated` (`cms.request()` SDK) swap dans `page.tsx`.
-- **Validation 1× côté serveur** : `keepValidProducts` → `assertProduct` retourne `TProduct` ; web = enveloppe Zod (`z.custom<TProduct>`) + `response.ok`, pas de re-assert.
-- **Offline actif** (Rémy) : `keepValidProducts` passe les invalides en `status:'Offline'`. **Destructeur sur données imparfaites** → Rémy a basculé `.env.local` sur localhost `cms_local` (au lieu d'Atlas `cms_dev` partagée) pour contenir.
-- Shuffle du reste non-curated = assumé (effet fraîcheur). `totalDocs` corrigé (`+ mainResult.totalDocs`).
-- Autres chantiers : cart #1859, navbar #1839, PR #1853, plan globals (`~/.claude/plans/j-aimerais-faire-le-plan-cuddly-breeze.md`).
+- **ProductActives.name localisé, PR #1870 ouverte** (`refactor/cms-add-localized-name-products-actives` → develop). 3 fichiers : `ProductActives.ts` (`localized: true`), migration `20260702_110143_localize_product_active_name.ts`, `migrations/index.ts`. Typecheck + eslint verts, `payload-types.ts` inchangé.
+- Migration = lecture brute Mongo natif → normalisation EN → traduction batch EN→FR (resolver `openai`) → écriture FR. Fallback copie EN si échec OpenAI ; try/catch par doc pour collisions d'unicité ; logs mapping `[fr] "EN" -> "FR"` par doc + compteurs.
+- **Pas exécutée** : aucune écriture DB ni appel OpenAI faits par Claude.
 
 ## Faits récents importants
-- **Bloqueur = données** : quasi tous les produits `cms_dev` n'ont pas `cartProduct` (calculé par hook `computeCartSnapshot`, #1801/#1859) → PLP vide ET panier cassé. L'ancienne PLP planterait pareil (même `assertProduct`).
-- **Drop-post-pagination** : les invalides sont droppés APRÈS la pagination → page 1 invalide = 0 produit, pas de backfill. À revoir (filtrer en amont ou over-fetch).
-- `assertProduct` = validateur ET mapper raw→`TProduct` (mainImage.url, tags, cartProduct). Valide le produit ENTIER (PDP) alors que la PLP n'a besoin que des champs carte — mais `cartProduct` reste requis par la carte.
-- PLP = RSC dynamique → chaque hard refresh / filtre = 1 requête CMS (rien de caché).
+- Après flip `localized: true`, l'ancien scalaire est **orphelin, illisible via l'API dans TOUTES les locales (en compris)** → migration obligatoire, lecture brute `payload.db.collections['product-actives'].collection.find().toArray()`.
+- `translateOperation` inutilisable (lit la source depuis la base orpheline) → appel `resolver.resolve({localeFrom, localeTo, req:{payload}, texts})` direct, batché. Resolvers dans `payload.config.custom.translator.resolvers`, key `'openai'`.
+- Fallback `true` + defaultLocale `en` : read `fr` vide → sert `en` (aussi sur relations `depth>0`). Déclencheur = null/absent, pas `""`. `fallbackLocale:'none'` désactive ; `locale:'all'` → `{en,fr}` brut.
 
 ## Décisions actives
-- Valider 1× serveur (→ TProduct), web = enveloppe Zod. Tests = comportement en intégration, suppr unitaires sur fonctions pures internes. Shuffle assumé. Offline gardé + env localhost.
+- Auto-traduction OpenAI (choix Rémy) malgré risque INCI ; FR à corriger dans l'admin ensuite.
+- `down` = no-op documenté (champ `required` → vider FR échoue) ; vrai rollback = retirer `localized:true`.
+- Unicité par locale ; collision FR = warn + skip, jamais d'abort.
 
 ## Prochaines étapes
-- **Backfiller `cartProduct`** (re-save via hook / cart #1859) — prérequis pour que la PLP affiche quoi que ce soit.
-- Trancher le drop-post-pagination (filtrer en amont / over-fetch).
-- PR curated : review + merge. Reprendre cart #1859, navbar #1839, PR #1853, globals.
+- **Exécuter la migration sur `cms_local` localhost** (`migrate:status` → `migrate`, `OPENAI_API_KEY` chargée), lire le mapping, vérifier admin EN/FR, traiter les `skipped`, corriger les trads douteuses. Puis review + merge #1870.
+- Curated PLP : backfiller `cartProduct` (prérequis PLP) + trancher drop-post-pagination + review/merge PR curated.
+- Cart #1859 (9/9 int verts) → CI + review Diego + merge, puis guard `beforeValidate` legacyId (bruit Sentry/CI).
+- Navbar #1839 (fix posthog server flag) : vérif live Node 20 + commit/push + renommer clé API exposée. PR #1853 SKU/EAN : réponse Diego + vérif admin + commit. Plan globals `apps/cms` (Task 2→1→4→3).
