@@ -13,7 +13,7 @@ tags:
 	- [ ] intégrer le portfolio dans ce repo : [Instagram](https://www.instagram.com/reel/DX4tCxTuh4d/?igsh=MWJ2cDY4b3FpYXg2bg==)
 - [ ] [Un développeur sous couverture parmi les utilisateurs - YouTube](https://youtu.be/C-zaS_5sGz0)
 - [ ] Coréen
-	- [ ] Nombres
+	- [x] Nombres
 	- [ ] Mots interrogatif --> app flashcard
 	- [ ] 지금
 - [x] Changer adresse EI
