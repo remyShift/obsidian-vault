@@ -12,7 +12,7 @@ Pour la conjugaison et la nature des adjectifs coréens (형용사), voir [[Adje
 
 [[습니다-습니까]] --> Les terminaisons formelles du coréen, pour s'exprimer de manière soutenue et polie.
 [[-겠-]] --> S'insère entre la base du verbe et la terminaison finale, exprime l'état mental du locuteur.
-[[Négation - 안 et 지 않다]] --> Négation d'un verbe ou d'un adjectif.
+[[안 et 지 않다 - Négation]] --> Négation d'un verbe ou d'un adjectif.
 
 ---
 

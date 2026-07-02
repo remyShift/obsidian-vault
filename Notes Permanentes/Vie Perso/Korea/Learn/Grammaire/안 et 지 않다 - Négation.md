@@ -2,6 +2,7 @@
 tags:
   - Korea
 ---
+
 Il existe deux façons de nier un verbe ou un adjectif en coréen. Même sens, même usage, légère différence de registre.
 
 ---
